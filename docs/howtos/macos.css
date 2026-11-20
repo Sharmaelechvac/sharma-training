@@ -1,0 +1,19 @@
+/* Sharma macOS wide-screen look — Education (2026-11-19, Sanjay's order).
+   Polish-only: Education is a hub of cards with no persistent navigation,
+   so there is no sidebar to build — on viewport >= 960px the hub widens
+   to ~1100px and the lesson cards flow into a multi-column grid.
+   Below 960px nothing in this file applies — the phone look is unchanged.
+   Colours come from kit variables only, so the real dark mode behind the
+   Appearance switch (data-scheme="dark") keeps working. No content, data,
+   link or script changes. */
+@media (min-width:960px){
+  .wrap{max-width:1100px;padding:28px 24px 48px}
+  .cards{grid-template-columns:1fr 1fr;gap:16px}
+  a.card{transition:border-color .15s ease,background-color .15s ease}
+  a.card:hover{border-color:var(--sk-tint);background:var(--sk-surface-2)}
+  .sk-row:hover{background:var(--sk-fill-2)}
+  ::selection{background:rgba(38,67,135,.16)}
+}
+@media (min-width:1280px){
+  .cards{grid-template-columns:repeat(3,1fr)}
+}

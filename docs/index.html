@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" class="sk" data-scheme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Training — Sharma Electric &amp; HVAC</title>
+<link rel="icon" href="assets/logo.png">
+<meta name="theme-color" content="#264387">
+<meta name="color-scheme" content="light">
+<script>(function(){try{if(localStorage.getItem("sk-scheme")==="dark"){var d=document.documentElement;d.setAttribute("data-scheme","dark");var m=document.querySelector('meta[name="theme-color"]');if(m)m.content=d.getAttribute("data-theme")==="track"?"#1C1C1E":"#1a2f61"}}catch(e){}})()</script>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Training">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="https://sharma-kit.sharma-crew.workers.dev/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://sharma-kit.sharma-crew.workers.dev/assets/favicon-32.png">
+<link rel="stylesheet" href="https://sharma-kit.sharma-crew.workers.dev/sharma-kit.css">
+<script src="https://sharma-kit.sharma-crew.workers.dev/sharma-kit.js" defer></script>
+<link rel="stylesheet" href="app.css?v=1">
+</head>
+<body class="sk">
+<header class="sk-header"><div class="sk-header__bar">
+  <div class="sk-header__lead"><a class="sk-header__logo" href="#/course"><img src="https://sharma-kit.sharma-crew.workers.dev/assets/logo-white-header.png" alt="Sharma Electric &amp; HVAC" width="103" height="20"></a></div>
+  <div class="sk-header__title">Training</div>
+  <div class="sk-header__trail"><button class="sk-header__btn" type="button" data-sheet-open="moreSheet" aria-label="More"><svg class="sk-icon"><use href="#i-more"/></svg></button><a class="sk-header__btn" href="tel:+14078819076" aria-label="Call Sharma"><svg class="sk-icon"><use href="#i-phone"/></svg></a></div>
+</div></header>
+<div class="sk-offline"></div>
+<main id="app" class="sk-stackview"><div class="sk-skel" style="margin:14px"></div><div class="sk-skel" style="margin:14px"></div><div class="sk-skel" style="margin:14px"></div></main>
+<section class="sk-sheet" id="moreSheet" aria-label="More"><div class="sk-sheet__grab"></div><div class="sk-sheet__head"><div></div><div class="sk-sheet__title">More</div><button class="sk-sheet__x" type="button" data-sheet-close aria-label="Close"><svg class="sk-icon"><use href="#i-close"/></svg></button></div><div class="sk-sheet__body">
+  <div class="sk-sectionlabel"><span>Display</span></div><div class="sk-list" id="appearance"></div>
+  <div class="sk-sectionlabel"><span>About</span></div>
+  <div class="sk-list">
+    <div class="sk-row"><div class="sk-row__body"><div class="sk-row__title">Training</div><div class="sk-row__sub">Rough-in course · Code lookup · How-tos · Quizzes</div></div></div>
+    <div class="sk-row"><div class="sk-row__body"><div class="sk-row__title">Code basis</div><div class="sk-row__sub">NEC 2020 · Florida Building Code, 8th Edition</div></div></div>
+    <div class="sk-row"><div class="sk-row__body"><div class="sk-row__title">Licenses</div><div class="sk-row__sub">EC13013924 · CAC1823596</div></div></div>
+  </div>
+  <p class="tr-sheetnote">Plain-language summaries in our own words — always confirm against the official NEC, the plans, and your AHJ.</p>
+</div></section>
+<nav class="sk-tabbar" aria-label="Sections"><div class="sk-tabbar__in">
+  <a class="sk-tab" href="#/course" data-tab="course"><svg class="sk-icon"><use href="#i-doc"/></svg>Course</a>
+  <a class="sk-tab" href="#/code" data-tab="code"><svg class="sk-icon"><use href="#i-search"/></svg>Code</a>
+  <a class="sk-tab" href="#/howtos" data-tab="howtos"><svg class="sk-icon"><use href="#i-tools"/></svg>How-Tos</a>
+  <a class="sk-tab" href="#/quizzes" data-tab="quizzes"><svg class="sk-icon"><use href="#i-edit"/></svg>Quizzes</a>
+</div></nav>
+<script type="module" src="app.js?v=1"></script>
+<script>
+(function(){
+  function reg(){ if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) { try { navigator.serviceWorker.register("sw.js", { scope: "/sharma-training/" }).catch(function(){}); } catch(e){} } }
+  if (document.readyState === "complete") reg(); else addEventListener("load", reg);
+  if (window.SK && SK.scheme && document.getElementById("appearance")) SK.scheme.mountToggle(document.getElementById("appearance"));
+  document.addEventListener("sk:ready", function(){ if (window.SK && SK.scheme) SK.scheme.mountToggle(document.getElementById("appearance")); });
+})();
+</script>
+</body>
+</html>
