@@ -1,0 +1,881 @@
+[
+  {
+    "id": "C2-L-001",
+    "question": "¿Qué color de aislamiento identifica un conductor puesto a tierra (neutro)?",
+    "aliases": [
+      "blanco o gris neutro",
+      "color del neutro",
+      "identificación del conductor puesto a tierra"
+    ],
+    "answer_plain": "Los conductores puestos a tierra aislados pequeños se identifican por un acabado exterior continuo blanco o gris, o blanco o gris con franjas de color distintas del verde a lo largo del aislamiento. Los conductores más grandes también pueden identificarse en sus terminaciones y en puntos accesibles donde la sección permite ese método. El verde y el desnudo están reservados para la puesta a tierra, nunca para el neutro.",
+    "nec_ref": "200.6",
+    "nec_edition": "2020",
+    "tags": [
+      "identification",
+      "neutral",
+      "residential"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "diagram_hint": "neutral-colors"
+  },
+  {
+    "id": "C2-L-002",
+    "question": "¿Un cable blanco puede usarse alguna vez como conductor activo (hot)?",
+    "aliases": [
+      "cable blanco como hot",
+      "blanco reidentificado",
+      "blanco en lazo de interruptor"
+    ],
+    "answer_plain": "Sí, en los casos limitados que permite 200.7, como el conductor activo de un lazo de interruptor o un circuito de 240V en un conjunto de cable, y solo cuando el conductor se reidentifica permanentemente en los lugares requeridos. La reidentificación debe mostrarse dondequiera que ese conductor sea visible en una caja. Un cable blanco que no ha sido reidentificado se trata como un conductor puesto a tierra (neutro).",
+    "nec_ref": "200.7",
+    "nec_edition": "2020",
+    "tags": [
+      "identification",
+      "switch loop"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C2-L-003",
+    "question": "¿Un conductor blanco es alguna vez una tierra de equipo?",
+    "aliases": [
+      "cable blanco de tierra",
+      "color neutro vs tierra"
+    ],
+    "answer_plain": "No. Los conductores de puesta a tierra de equipos se identifican como verdes, verdes con una o más franjas amarillas, o desnudos. Un conductor blanco o gris es un conductor de circuito puesto a tierra, y confundir los dos pone corriente del neutro en partes metálicas o deja una falla sin una ruta adecuada.",
+    "nec_ref": "200.6 / 250.119",
+    "nec_edition": "2020",
+    "tags": [
+      "identification",
+      "grounding"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C2-L-004",
+    "question": "¿Cómo se identifican los neutros de alimentadores grandes en un tablero?",
+    "aliases": [
+      "marcado de neutro grande",
+      "cinta neutro alimentador"
+    ],
+    "answer_plain": "En conductores más grandes el Código permite la identificación en las terminaciones y en otros puntos accesibles, usando marcado blanco o gris que rodea el aislamiento donde se usa ese método. Cada punto accesible debe mostrarlo, no solo la terminal donde conecta hoy. Los conductores pequeños de circuitos ramales no tienen esta opción; usan aislamiento blanco o gris de fábrica.",
+    "nec_ref": "200.6",
+    "nec_edition": "2020",
+    "tags": [
+      "identification",
+      "feeders"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C2-L-005",
+    "question": "¿Qué hace que un circuito sea un circuito ramal multiconductor (MWBC)?",
+    "aliases": [
+      "definición MWBC",
+      "circuito de neutro compartido"
+    ],
+    "answer_plain": "Un circuito ramal multiconductor usa dos o tres conductores no puestos a tierra de fases o ramales diferentes que comparten un solo conductor puesto a tierra (neutro). El neutro compartido lleva solo la corriente desbalanceada cuando los activos están colocados correctamente en ramales opuestos. Conectar ambos activos en el mismo ramal puede sobrecargar ese neutro, y ningún breaker vigila el neutro solo.",
+    "nec_ref": "210.4",
+    "nec_edition": "2020",
+    "tags": [
+      "branch circuits",
+      "shared neutral"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "diagram_hint": "mwbc"
+  },
+  {
+    "id": "C2-L-006",
+    "question": "¿Dónde necesita protección GFCI un trabajo comercial?",
+    "aliases": [
+      "lista GFCI comercial",
+      "lugares 210.8(B)"
+    ],
+    "answer_plain": "Los lugares GFCI que no son vivienda incluyen baños, cocinas, azoteas, áreas exteriores, lugares cerca de fregaderos, lugares interiores húmedos o mojados, vestuarios con duchas, garajes, edificios accesorios y bahías de servicio, espacios de acceso bajo el piso a nivel o por debajo del nivel del suelo, áreas de sótano sin terminar, áreas de lavandería, y tomacorrientes a menos de 6 ft de una bañera o cabina de ducha — dentro de los límites de voltaje y clasificación que indica esa subsección. La lista comercial no es la lista de vivienda, así que un taller u oficina se revisa contra 210.8(B) en sus propios términos. Los tomacorrientes de azotea y de bahía de servicio son los lugares que más se pasan por alto en un diseño comercial.",
+    "nec_ref": "210.8(B)",
+    "nec_edition": "2020",
+    "tags": [
+      "GFCI",
+      "commercial"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "sharma_rule_id": "S-01"
+  },
+  {
+    "id": "C2-L-007",
+    "question": "¿Qué electrodomésticos tienen su propia regla GFCI según 210.8(D)?",
+    "aliases": [
+      "210.8(D) electrodomésticos",
+      "lista GFCI electrodomésticos"
+    ],
+    "answer_plain": "La Sección 210.8(D) remite a los electrodomésticos listados en 422.5(A): máquinas aspiradoras automotrices, enfriadores de agua potable y estaciones para llenar botellas, lavadoras de alta presión a chorro conectadas con cordón y enchufe, máquinas infladoras de llantas, máquinas expendedoras, bombas de sumidero y lavavajillas. La regla aplica por electrodoméstico y clasificación (150 volts o menos a tierra, 60 amps o menos) en cualquier ocupación, no por habitación. Revise la lista de electrodomésticos contra 422.5(A) siempre que se agregue o reemplace un electrodoméstico listado.",
+    "nec_ref": "210.8(D)",
+    "nec_edition": "2020",
+    "tags": [
+      "GFCI",
+      "appliances"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "sharma_rule_id": "S-07"
+  },
+  {
+    "id": "C2-L-008",
+    "question": "¿Un condensador cableado directamente cuenta como salida exterior para GFCI?",
+    "aliases": [
+      "salida condensador 210.8(F)",
+      "salida exterior cableada directamente"
+    ],
+    "answer_plain": "Una salida es el punto donde se toma corriente para alimentar un equipo, así que una unidad exterior cableada directamente puede ser una salida aunque no haya tomacorriente en la unidad. La Sección 210.8(F) trata las salidas exteriores distintas de tomacorrientes dentro de sus límites de clasificación. Cómo un AHJ de Florida aplica esa sección para condensadores ha variado, así que la posición local debe confirmarse para el trabajo.",
+    "nec_ref": "210.8(F)",
+    "nec_edition": "2020",
+    "tags": [
+      "GFCI",
+      "outdoor",
+      "HVAC"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "fl_note": "NO VERIFICADO en cuanto a la aplicación local para condensadores — confirme el AHJ, según el elemento 2 del README v1."
+  },
+  {
+    "id": "C2-L-009",
+    "question": "¿Extender un circuito en un dormitorio activa el AFCI?",
+    "aliases": [
+      "regla extensión AFCI",
+      "modificar circuito AFCI"
+    ],
+    "answer_plain": "Modificar, reemplazar o extender un circuito ramal en un área listada en 210.12(A) por lo general incorpora la protección contra fallas de arco para ese circuito, y un cambio de tablero o dispositivo puede tener el mismo efecto. Hay una excepción vinculada a una extensión corta cuya longitud exacta y condiciones deben revisarse en el texto impreso de 2020 antes de confiar en ella. Ante la duda en un trabajo de servicio, planifique proporcionar la protección y cotícela así.",
+    "nec_ref": "210.12(D)",
+    "nec_edition": "2020",
+    "tags": [
+      "AFCI",
+      "service work"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "fl_note": "NO VERIFICADO: la longitud de la extensión corta en 210.12(D) está marcada en el README v1 como no revisada en esta pasada."
+  },
+  {
+    "id": "C2-L-010",
+    "question": "Una carga continua es de 32A. ¿Cuál es la clasificación mínima del circuito?",
+    "aliases": [
+      "cálculo carga continua",
+      "dimensionamiento 125 por ciento"
+    ],
+    "answer_plain": "Una carga continua se cuenta al 125 por ciento cuando se dimensionan conductores y dispositivos de sobrecorriente, a menos que el conjunto esté listado para operación continua a su clasificación. 32A por 1.25 es 40A, así que el circuito se dimensiona a 40A como mínimo. Tanto la ampacidad del conductor como el breaker deben cumplir esa cifra.",
+    "nec_ref": "210.19(A)(1) / 210.20(A)",
+    "nec_edition": "2020",
+    "tags": [
+      "continuous load",
+      "sizing"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C2-L-011",
+    "question": "¿Cuánto de un circuito de 20A puede usar un calefactor portátil enchufable?",
+    "aliases": [
+      "regla 80 por ciento cordón y enchufe",
+      "límite 210.23"
+    ],
+    "answer_plain": "Un solo electrodoméstico con cordón y enchufe que no está fijo en su lugar no puede exceder el 80 por ciento de la clasificación del circuito ramal cuando el circuito también alimenta otras salidas. En un circuito de 20A ese techo es 16A. Un calefactor con placa de datos por encima de eso no pertenece a un circuito general compartido.",
+    "nec_ref": "210.23(A)(1)",
+    "nec_edition": "2020",
+    "tags": [
+      "loads",
+      "branch circuits"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C2-L-012",
+    "question": "¿Cuándo un vestíbulo (foyer) necesita más de un tomacorriente?",
+    "aliases": [
+      "cantidad tomacorrientes vestíbulo",
+      "área 210.52(I)"
+    ],
+    "answer_plain": "Cuando el vestíbulo no es parte de un pasillo y es mayor de 60 sq ft — entonces 210.52(I) exige una salida de tomacorriente en cada espacio de pared de 3 ft o más de ancho. Un vestíbulo más pequeño, o uno que forma parte de un pasillo, se juzga según 210.52(H) o la regla general de espaciamiento en paredes para la habitación a la que abre. Mida el espacio tal como el plano realmente lo separa antes de decidir qué regla aplica.",
+    "nec_ref": "210.52(I)",
+    "nec_edition": "2020",
+    "tags": [
+      "receptacles",
+      "foyer"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C2-L-013",
+    "question": "¿En qué se diferencia un alimentador de un circuito ramal y de una acometida?",
+    "aliases": [
+      "definición de alimentador",
+      "alimentador vs ramal"
+    ],
+    "answer_plain": "Un alimentador va entre el equipo de acometida, u otra fuente de energía, y los dispositivos finales de sobrecorriente de circuitos ramales — en una casa, típicamente entre el tablero de acometida y un subtablero. Los conductores de acometida terminan en la desconexión de acometida, y los circuitos ramales comienzan en el dispositivo final de sobrecorriente y van hasta las salidas. El nombre importa porque las reglas de dimensionamiento, protección y puesta a tierra difieren para cada uno de los tres.",
+    "nec_ref": "215.1 / Art. 100",
+    "nec_edition": "2020",
+    "tags": [
+      "feeders",
+      "definitions"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "diagram_hint": "one-line-feeder"
+  },
+  {
+    "id": "C2-L-014",
+    "question": "¿Qué protege un alimentador contra sobrecorriente?",
+    "aliases": [
+      "dimensionamiento breaker alimentador",
+      "215.3"
+    ],
+    "answer_plain": "Un alimentador está protegido por un dispositivo de sobrecorriente en su inicio, clasificado no por encima de la ampacidad de los conductores del alimentador excepto donde el Artículo 240 lo permite específicamente de otro modo. Si un breaker es mayor que la ampacidad del conductor, la autorización que se usa debe nombrarse y sus condiciones deben cumplirse. Las derivaciones de alimentador se juzgan según las reglas de derivación en 240.21, no según la autorización general de redondeo.",
+    "nec_ref": "215.3 / 240.4",
+    "nec_edition": "2020",
+    "tags": [
+      "feeders",
+      "overcurrent"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C2-L-015",
+    "question": "¿Qué cargas van en el primer bloque de un cálculo de carga de vivienda?",
+    "aliases": [
+      "punto de partida cálculo de carga",
+      "220 cargas generales"
+    ],
+    "answer_plain": "El cálculo de vivienda comienza con la iluminación general a 3 VA por pie cuadrado de área de piso medida desde las dimensiones exteriores. Luego agrega los circuitos nombrados a sus valores indicados y las cargas de electrodomésticos a su placa de datos. Los factores de demanda se aplican solo después de que existe ese inventario completo; saltarse el inventario subestima la acometida.",
+    "nec_ref": "220.12 / 220.82(B)",
+    "nec_edition": "2020",
+    "tags": [
+      "load calculations",
+      "residential"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C2-L-016",
+    "question": "¿La calefacción y el aire acondicionado se suman en el método opcional?",
+    "aliases": [
+      "220.82(C) calefacción vs AC",
+      "método opcional HVAC"
+    ],
+    "answer_plain": "No. La parte de calefacción y enfriamiento del método opcional toma la mayor de sus opciones indicadas en lugar de la suma, porque los dos sistemas no se tratan como funcionando a plena carga al mismo tiempo. Las bombas de calor con calefacción suplementaria tienen sus propios subcasos en esa parte. Esos subcasos solo se resumieron en v1 y deben revisarse contra el código impreso antes de que una calculadora o una respuesta de examen se base en ellos.",
+    "nec_ref": "220.82(C)",
+    "nec_edition": "2020",
+    "tags": [
+      "load calculations",
+      "HVAC"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "fl_note": "NO VERIFICADO en parte: los subcasos de bomba de calor en 220.82(C) no se revisaron elemento por elemento (elemento 4 del README v1)."
+  },
+  {
+    "id": "C2-L-017",
+    "question": "¿Puedo llevar dos alimentadores separados a un garaje independiente?",
+    "aliases": [
+      "dos alimentadores un edificio",
+      "225.30"
+    ],
+    "answer_plain": "Por lo general no. Un edificio se alimenta con un solo alimentador o circuito ramal, o un solo conjunto de alimentadores, aparte de las excepciones que 225.30 lista para cosas como sistemas de emergencia y de reserva y bombas contra incendios. La solución común es un alimentador más grande a un subtablero en el garaje. Si realmente se usa una excepción, una placa o directorio en cada lugar de desconexión debe mostrar las otras alimentaciones.",
+    "nec_ref": "225.30",
+    "nec_edition": "2020",
+    "tags": [
+      "outside feeders",
+      "detached buildings"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C2-L-018",
+    "question": "¿Un garaje independiente alimentado desde la casa necesita su propia desconexión?",
+    "aliases": [
+      "desconexión edificio independiente",
+      "225.31"
+    ],
+    "answer_plain": "Sí. Un alimentador o circuito ramal que alimenta un edificio separado necesita un medio de desconexión en ese edificio, agrupado y ubicado como exige el Artículo 225 y clasificado como establecen sus secciones siguientes. Su propósito es cortar la energía del edificio en el edificio. El sistema de electrodos de puesta a tierra en ese edificio es un requisito separado del Artículo 250 cubierto en 250.32.",
+    "nec_ref": "225.31",
+    "nec_edition": "2020",
+    "tags": [
+      "outside feeders",
+      "disconnects"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C2-L-019",
+    "question": "¿Una acometida aérea puede pasar directamente frente a una ventana?",
+    "aliases": [
+      "distancia acometida aérea ventana",
+      "230.9"
+    ],
+    "answer_plain": "Los conductores de acometida deben mantener las distancias que 230.9 fija respecto a ventanas, puertas, porches y elementos similares del edificio, con una autorización indicada para conductores que pasan por encima del nivel superior de una ventana. La distancia se juzga contra el edificio terminado y que se puede abrir, no contra la estructura desnuda. Las normas propias de la compañía de servicio pueden agregar requisitos en el mismo lugar.",
+    "nec_ref": "230.9(A)",
+    "nec_edition": "2020",
+    "tags": [
+      "services",
+      "clearances"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "fl_note": "Las normas de acometida de la compañía de servicio también aplican en Florida y pueden ser más estrictas."
+  },
+  {
+    "id": "C2-L-020",
+    "question": "¿La desconexión de acometida debe estar fuera de la casa?",
+    "aliases": [
+      "ubicación desconexión de acometida",
+      "230.70 dentro o fuera"
+    ],
+    "answer_plain": "No necesariamente. La desconexión debe ser fácilmente accesible y estar ubicada fuera, o dentro cerca del punto donde los conductores de acometida entran, según la redacción de 2020 y la práctica del AHJ sobre la longitud del conductor dentro de un edificio. Una regla separada de 2020 también exige una desconexión de emergencia exterior para viviendas de una y dos familias, que es un requisito diferente. No confunda cumplir una de esas reglas con cumplir la otra.",
+    "nec_ref": "230.70 / 230.85",
+    "nec_edition": "2020",
+    "tags": [
+      "services",
+      "disconnects"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "fl_note": "Los AHJ de Florida difieren en cuánto conductor de acometida aceptan dentro antes de la desconexión; confirme la práctica local en diseños no estándar."
+  },
+  {
+    "id": "C2-L-021",
+    "question": "¿45A es una clasificación estándar de breaker?",
+    "aliases": [
+      "clasificaciones estándar de amperaje",
+      "lista 240.6"
+    ],
+    "answer_plain": "Sí. Las clasificaciones estándar en 240.6(A) avanzan por valores que incluyen 45A, junto con los tamaños familiares de 15, 20, 25, 30, 35, 40 y 50A y pasos mayores por encima de ellos. Una carga calculada entre dos clasificaciones estándar se resuelve con las reglas de protección, no especificando un breaker no estándar. Los fusibles tienen clasificaciones estándar adicionales nombradas en la misma sección.",
+    "nec_ref": "240.6(A)",
+    "nec_edition": "2020",
+    "tags": [
+      "overcurrent",
+      "ratings"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C2-L-022",
+    "question": "¿La tierra misma puede ser la ruta de retorno de una falla a tierra?",
+    "aliases": [
+      "tierra como ruta a tierra",
+      "250.4 ruta de falla"
+    ],
+    "answer_plain": "No. La Sección 250.4 establece que la tierra no debe usarse como el único conductor de puesta a tierra de equipos, y el sistema de puesta a tierra debe proporcionar en cambio una ruta efectiva y de baja impedancia para la corriente de falla. Esa ruta es la que lleva suficiente corriente para abrir el dispositivo de sobrecorriente rápidamente. Las varillas de tierra sirven para la conexión a tierra y para fines de sobretensión y rayos; no despejan una falla a tierra por sí solas.",
+    "nec_ref": "250.4(A)",
+    "nec_edition": "2020",
+    "tags": [
+      "grounding",
+      "bonding"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C2-L-023",
+    "question": "¿Por qué los neutros de los subtableros deben estar aislados?",
+    "aliases": [
+      "neutro subtablero aislado",
+      "250.24 unión aguas abajo"
+    ],
+    "answer_plain": "La unión neutro-tierra se hace en la acometida, y aguas abajo de ella el conductor puesto a tierra (neutro) debe mantenerse separado de las tierras de equipos y las envolventes. Unir de nuevo en un subtablero pone la corriente normal del neutro en partes metálicas y conductores de puesta a tierra. También divide la corriente de falla entre rutas, lo que va en contra de una operación rápida y confiable del breaker.",
+    "nec_ref": "250.24(A)(5) / 250.142(B)",
+    "nec_edition": "2020",
+    "tags": [
+      "grounding",
+      "subpanels"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "diagram_hint": "service-vs-subpanel"
+  },
+  {
+    "id": "C2-L-024",
+    "question": "¿Qué dimensiona el puente de unión principal?",
+    "aliases": [
+      "tamaño puente de unión principal",
+      "dimensionamiento 250.28"
+    ],
+    "answer_plain": "El puente de unión principal se dimensiona por referencia a la Tabla 250.66, según el tamaño de los conductores de entrada de acometida, bajo las reglas y límites en 250.28. Puede ser un cable, una barra, o una conexión listada suministrada con el equipo, pero debe estar realmente instalado. En un cambio de acometida, trate su presencia y tamaño como un elemento de inspección, no como una suposición.",
+    "nec_ref": "250.28(D)",
+    "nec_edition": "2020",
+    "tags": [
+      "bonding",
+      "services"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C2-L-025",
+    "question": "¿Un garaje independiente necesita varillas de tierra si tiene un subtablero?",
+    "aliases": [
+      "electrodos edificio separado",
+      "250.32 varillas"
+    ],
+    "answer_plain": "Sí, en el caso común. Un edificio alimentado por un alimentador necesita su propio sistema de electrodos de puesta a tierra según 250.32, además del conductor de puesta a tierra de equipos llevado con el alimentador. El neutro en ese edificio no se vuelve a unir en el trabajo moderno; la unión permanece en la acometida. Existe una excepción para instalaciones existentes con condiciones que deben verificarse todas antes de usarla.",
+    "nec_ref": "250.32",
+    "nec_edition": "2020",
+    "tags": [
+      "grounding",
+      "detached buildings"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C2-L-026",
+    "question": "Si una casa tiene un Ufer, una tubería de agua y varillas, ¿cuáles deben conectarse?",
+    "aliases": [
+      "todos los electrodos unidos",
+      "sistema 250.50"
+    ],
+    "answer_plain": "Todos. La Sección 250.50 exige que cada electrodo de puesta a tierra presente en el edificio se una entre sí en un solo sistema de electrodos de puesta a tierra. Un electrodo no puede saltarse porque otro era más fácil de alcanzar. El electrodo encerrado en concreto es el que debe coordinarse antes de que se vierta la cimentación.",
+    "nec_ref": "250.50",
+    "nec_edition": "2020",
+    "tags": [
+      "grounding",
+      "electrodes"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C2-L-027",
+    "question": "¿Una tubería metálica de gas puede usarse como electrodo de puesta a tierra?",
+    "aliases": [
+      "electrodo tubería de gas prohibido",
+      "250.52(B)"
+    ],
+    "answer_plain": "No. La tubería subterránea metálica de gas está en la lista de cosas que no pueden usarse como electrodo de puesta a tierra, y los electrodos de aluminio están en esa misma lista de prohibidos. La tubería de gas aún puede necesitar unión equipotencial según 250.104 porque es probable que se energice, lo cual es un trabajo diferente. Unir una tubería y usarla como electrodo no son intercambiables.",
+    "nec_ref": "250.52(B)",
+    "nec_edition": "2020",
+    "tags": [
+      "grounding",
+      "electrodes",
+      "gas piping"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C2-L-028",
+    "question": "¿Dónde en una tubería de agua se hace la conexión de puesta a tierra?",
+    "aliases": [
+      "punto de conexión tubería de agua",
+      "250.68"
+    ],
+    "answer_plain": "La conexión a un electrodo de tubería subterránea metálica de agua se hace en un punto accesible dentro de los primeros 5 ft de la tubería cuando entra al edificio, según la regla en 250.68(C). La tubería interior de agua más allá de ese punto se trata como un asunto de unión equipotencial más que como la conexión del electrodo. Cualquier puente necesario para mantener la ruta continua alrededor de un medidor o dispositivo similar también debe instalarse.",
+    "nec_ref": "250.68(C)",
+    "nec_edition": "2020",
+    "tags": [
+      "grounding",
+      "water piping"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C2-L-029",
+    "question": "¿Quién usa la terminación de unión entre sistemas?",
+    "aliases": [
+      "IBT quién la usa",
+      "propósito 250.94"
+    ],
+    "answer_plain": "Los instaladores de teléfono, cable, antena y otras comunicaciones la usan para unir sus sistemas al sistema de puesta a tierra eléctrico en un punto listado y accesible. Se instala en el equipo de acometida o de medición, o cerca de ellos. Proporcionarla evita que esos instaladores se sujeten a una tubería cualquiera o a la varilla más cercana.",
+    "nec_ref": "250.94",
+    "nec_edition": "2020",
+    "tags": [
+      "bonding",
+      "communications"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "diagram_hint": "ibt"
+  },
+  {
+    "id": "C2-L-030",
+    "question": "¿Unir la tubería de gas es lo mismo que ponerla a tierra a una varilla?",
+    "aliases": [
+      "unión gas vs electrodo",
+      "250.104(B)"
+    ],
+    "answer_plain": "No. El gas y otras tuberías metálicas que probablemente se energicen se unen con un puente dimensionado desde el circuito que podría energizarlas, para que una falla en esa tubería dispare un breaker. Esa unión normalmente llega al equipo de acometida, al conductor puesto a tierra (neutro), u otro punto que la sección permite. No convierte la tubería en un electrodo, y el CSST tiene instrucciones separadas de unión del fabricante y del código de gas combustible.",
+    "nec_ref": "250.104(B)",
+    "nec_edition": "2020",
+    "tags": [
+      "bonding",
+      "gas piping"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "fl_note": "La unión de CSST no está cubierta por completo aquí; siga las instrucciones del fabricante y el código FBC Fuel Gas."
+  },
+  {
+    "id": "C2-L-031",
+    "question": "Mi salida de secadora tiene solo tres ranuras. ¿Es legal dejarla así?",
+    "aliases": [
+      "secadora 3 cables existente",
+      "consejo 250.140"
+    ],
+    "answer_plain": "Puede serlo, para una instalación existente que cumple todas las condiciones en 250.140, donde se permitía poner a tierra el bastidor de la secadora a través del neutro. Nunca es la forma en que se instala el trabajo nuevo: los circuitos nuevos de secadora son de 4 cables con una tierra de equipo separada, y se retira la correa de unión del electrodoméstico. Las condiciones detalladas para instalaciones existentes no se revisaron en esta pasada, así que un caso límite va al código impreso y a Mike antes de dejarlo en su lugar.",
+    "nec_ref": "250.140",
+    "nec_edition": "2020",
+    "tags": [
+      "dryer",
+      "existing work"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "fl_note": "NO VERIFICADO como declaración detallada — solo consejo, según el elemento 3 del README v1."
+  },
+  {
+    "id": "C2-L-032",
+    "question": "¿Cuál es el breaker más grande permitido en un alimentador cuya ampacidad es 55A?",
+    "aliases": [
+      "redondear hacia arriba breaker alimentador",
+      "ejemplo 240.4(B)"
+    ],
+    "answer_plain": "Cuando se cumplen todas las condiciones en 240.4(B), un conductor con ampacidad de 55A puede protegerse con la siguiente clasificación estándar mayor, 60A. La autorización no está disponible para un circuito ramal de salidas múltiples que alimenta tomacorrientes, y se detiene en el techo que indica esa subsección. Si alguna condición falla, el conductor se protege a su ampacidad o por debajo de ella.",
+    "nec_ref": "240.4(B)",
+    "nec_edition": "2020",
+    "tags": [
+      "overcurrent",
+      "feeders"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C2-L-033",
+    "question": "¿Un tomacorriente de garaje para un elevador de autos o una soldadora necesita GFCI?",
+    "aliases": [
+      "GFCI garaje 240V",
+      "210.8(A) 250V"
+    ],
+    "answer_plain": "En un garaje de vivienda, la versión 2020 de 210.8(A) alcanza a los tomacorrientes clasificados de 125V a 250V, así que un tomacorriente de 240V en el garaje está dentro de la regla en lugar de fuera de ella. Eso fue un cambio respecto a la práctica anterior y es una omisión común en equipos agregados después de que se construyó la casa. Revise el voltaje a tierra y la clasificación del circuito contra la subsección antes de suponer una exención. La protección en este punto es un breaker GFCI de 2 polos — el breaker de doble función S-07 es un dispositivo de 120 volts y no puede cubrir un punto de 240V.",
+    "nec_ref": "210.8(A)",
+    "nec_edition": "2020",
+    "tags": [
+      "GFCI",
+      "garage"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "sharma_rule_id": null
+  },
+  {
+    "id": "C2-L-034",
+    "question": "¿Los circuitos de pasillo están en la lista AFCI?",
+    "aliases": [
+      "AFCI pasillo",
+      "210.12(A) pasillo"
+    ],
+    "answer_plain": "Sí, los pasillos están entre las áreas de vivienda listadas en 210.12(A) para circuitos ramales de 120V, 15A y 20A que alimentan salidas o dispositivos. Un circuito que solo pasa por un pasillo es una pregunta diferente de un circuito que alimenta una salida o dispositivo en él. En Sharma el punto es académico en el trabajo estándar, porque cada breaker de 120V es de doble función según S-07.",
+    "nec_ref": "210.12(A)",
+    "nec_edition": "2020",
+    "tags": [
+      "AFCI",
+      "hallways"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "sharma_rule_id": "S-07"
+  },
+  {
+    "id": "C2-L-035",
+    "question": "¿Cuántos tomacorrientes pueden ponerse en un circuito general de 20A en una casa?",
+    "aliases": [
+      "límite cantidad tomacorrientes vivienda",
+      "210.11 / 220"
+    ],
+    "answer_plain": "El NEC no fija una cantidad máxima de tomacorrientes para circuitos de uso general en una vivienda; la cantidad sale del cálculo de carga y de una buena división de circuitos. El trabajo comercial es diferente, porque las cargas de tomacorrientes allí se calculan al valor en volt-amperes que el Código asigna por yugo de tomacorriente. Sobrecargar un circuito de casa con demasiadas cargas probablemente simultáneas sigue siendo un mal diseño aunque no se indique una cantidad. La práctica de Sharma es mantener modestos los circuitos de área y dar a las cargas pesadas conocidas sus propios circuitos.",
+    "nec_ref": "210.11(A) / 220.14",
+    "nec_edition": "2020",
+    "tags": [
+      "branch circuits",
+      "design"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C2-L-036",
+    "question": "¿Qué cuenta como una carga continua?",
+    "aliases": [
+      "carga continua tres horas",
+      "Art. 100 / 210.19"
+    ],
+    "answer_plain": "Una carga continua es una donde se espera que la corriente máxima funcione durante tres horas o más. La calefacción eléctrica fija de espacios, la carga de vehículos eléctricos y muchas cargas de iluminación comercial cumplen esa prueba en la práctica. El estado continuo cambia el cálculo de dimensionamiento al 125 por ciento para conductores y dispositivos de sobrecorriente, a menos que se use un conjunto listado con clasificación continua.",
+    "nec_ref": "210.19(A)(1)",
+    "nec_edition": "2020",
+    "tags": [
+      "continuous load",
+      "definitions"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C2-L-037",
+    "question": "Una acometida de 200A tiene conductores de acometida de cobre 2/0. ¿Qué GEC de cobre da la Tabla 250.66?",
+    "aliases": [
+      "ejemplo desarrollado 250.66",
+      "GEC acometida 2/0"
+    ],
+    "answer_plain": "La Tabla 250.66 da un conductor de electrodo de puesta a tierra de cobre 4 AWG para conductores de entrada de acometida de cobre 2/0. Límites separados limitan luego lo que debe ser una corrida a un solo tipo de electrodo, como los máximos para varilla y encerrado en concreto cubiertos en los elementos v1. Dimensione desde el conductor realmente instalado, no solo desde la clasificación de la desconexión.",
+    "nec_ref": "250.66",
+    "nec_edition": "2020",
+    "tags": [
+      "grounding",
+      "GEC"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C2-L-038",
+    "question": "Si aumento el tamaño de un circuito por caída de voltaje, ¿la tierra también debe hacerse más grande?",
+    "aliases": [
+      "conductores aumentados proporción EGC",
+      "250.122(B)"
+    ],
+    "answer_plain": "Sí. Cuando los conductores del circuito aumentan de tamaño, el conductor de puesta a tierra de equipos aumenta proporcionalmente por área en mils circulares según 250.122(B). Una corrida larga tirada en cable más grande con una tierra de tamaño estándar no lleva el mismo desempeño ante fallas que la tabla supone. Los conjuntos de cable con una tierra de fábrica dimensionada para el cable aumentado son la forma sencilla de cumplir en corridas NM.",
+    "nec_ref": "250.122(B)",
+    "nec_edition": "2020",
+    "tags": [
+      "grounding",
+      "voltage drop"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C2-L-039",
+    "question": "¿Cada tomacorriente de bomba de sumidero o eyector de aguas residuales necesita GFCI?",
+    "aliases": [
+      "ubicación GFCI bomba de sumidero",
+      "210.8 por ubicación"
+    ],
+    "answer_plain": "Una bomba de sumidero está listada específicamente en 422.5(A), así que dentro de sus límites de clasificación (150 volts o menos a tierra, 60 amps o menos) su tomacorriente necesita GFCI dondequiera que se instale la bomba — incluso en un área terminada fuera de cada lugar de 210.8(A). Otros tomacorrientes siguen las listas por ubicación: un sótano sin terminar, un espacio de acceso bajo el piso, o dentro de la distancia indicada de un fregadero o bañera. Las preocupaciones por disparos molestos no eliminan un requisito listado; resuelva en cambio las preocupaciones de acceso y alarma en lugar de eliminar la protección.",
+    "nec_ref": "210.8(A)",
+    "nec_edition": "2020",
+    "tags": [
+      "GFCI",
+      "basement"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "sharma_rule_id": "S-07"
+  },
+  {
+    "id": "C2-L-040",
+    "question": "¿Cuál es la acometida mínima para una casa con una carga calculada de 87A?",
+    "aliases": [
+      "tamaño acometida carga calculada",
+      "220 / 230.79"
+    ],
+    "answer_plain": "El cálculo fija el piso para la instalación, y una desconexión de acometida de vivienda unifamiliar no puede estar clasificada por debajo de 100A en ningún caso. Una carga calculada de 87A por lo tanto llega al menos a una acometida de 100A, y cualquier crecimiento que el propietario y el diseñador pretendan debe discutirse antes de pedir el equipo. Nunca presente el mínimo de código de 100A como si el cálculo lo hubiera producido.",
+    "nec_ref": "220.82 / 230.79(C)",
+    "nec_edition": "2020",
+    "tags": [
+      "load calculations",
+      "services"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C2-L-041",
+    "question": "¿Cómo se dimensiona el cable de aluminio revestido de cobre (CCA) para ampacidad?",
+    "aliases": [
+      "ampacidad CCA",
+      "CCA un tamaño más grande",
+      "dimensionamiento aluminio revestido de cobre"
+    ],
+    "answer_plain": "El CCA se clasifica desde la columna de aluminio de la Tabla 310.16, al límite de temperatura del cable (60°C para cable NM), y luego lo limita 240.4(D) — así que un circuito CCA va un tamaño más grande que el cobre: 12 AWG en un breaker de 15A, 10 AWG en 20A, 8 en 30A, 6 en 40A y 4 en 50A. No hay CCA 14 AWG en el trabajo de Florida de Sharma. Cuando un plano nombra un tamaño de breaker, elija el tamaño CCA de esta tabla, nunca el calibre de cobre del mismo número.",
+    "nec_ref": "310.16 / 240.4(D)",
+    "nec_edition": "2020",
+    "tags": [
+      "cca",
+      "ampacity",
+      "sizing"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "diagram_hint": "CCA chart: breaker size -> CCA AWG, one up from copper"
+  },
+  {
+    "id": "C2-L-042",
+    "question": "¿Cómo se hace un cálculo de caída de voltaje para cable CCA?",
+    "aliases": [
+      "caída de voltaje CCA",
+      "resistencia CCA",
+      "caída de voltaje aluminio revestido de cobre"
+    ],
+    "answer_plain": "La Tabla 8 del Capítulo 9 lista la resistencia DC solo para cobre y aluminio — no hay una fila para CCA, así que nunca haga una verificación de caída de voltaje de CCA con la resistencia del cobre o el valor K del cobre. Use la resistencia publicada por el fabricante del cable CCA para el tamaño en mano (el CCA de Sharma es Copperweld); hasta que esa hoja de datos esté en archivo para el cable específico, trate cualquier número de caída de voltaje de CCA como una estimación, no como un cálculo verificado.",
+    "nec_ref": "Ch. 9 Table 8",
+    "nec_edition": "2020",
+    "tags": [
+      "cca",
+      "voltage-drop",
+      "calculation"
+    ],
+    "verified": false,
+    "unverified_reason": "Aún no hay en archivo un valor de resistencia de fabricante citado para CCA. Según la regla de Sanjay, la caída de voltaje de CCA usa datos citados del fabricante/UL y se marca verified=false hasta que esos datos estén en archivo; aquí no se indica ningún valor de resistencia de CCA."
+  },
+  {
+    "id": "C2-L-043",
+    "question": "¿Dónde pueden terminarse los conductores CCA?",
+    "aliases": [
+      "terminaciones CCA",
+      "tuercas para cable CCA",
+      "backstab CCA",
+      "marcado AL/CU"
+    ],
+    "answer_plain": "Las terminales de tornillo estándar de dispositivos de 15A y 20A aceptan CCA — no se requiere una marca CO/ALR en esos dispositivos — pero los dispositivos de 30A y mayores deben estar marcados AL/CU. Los conectores de empalme y las terminales son más estrictos: las tuercas para cable y las terminales deben estar marcadas para el conductor (AL/CU, o conectores marcados CC/CC-CU), y un conector solo para cobre no está listado para CCA. Las terminales a presión (backstab) están listadas solo para cobre sólido 14 AWG — el CCA nunca va en un orificio backstab, y Sharma no hace backstab en absoluto.",
+    "nec_ref": "110.14",
+    "nec_edition": "2020",
+    "tags": [
+      "cca",
+      "terminations"
+    ],
+    "sharma_rule_id": "S-10",
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "diagram_hint": "Termination matrix: device screw OK, AL/CU connector, backstab crossed out"
+  },
+  {
+    "id": "C2-L-044",
+    "question": "¿El llenado de caja o el llenado de canalización cambia cuando el cable es CCA en lugar de cobre?",
+    "aliases": [
+      "llenado de caja CCA",
+      "llenado de canalización CCA",
+      "llenado por tamaño no por metal"
+    ],
+    "answer_plain": "No — el llenado de caja según 314.16 y el llenado de canalización según las Tablas 4 y 5 del Capítulo 9 se calculan desde el tamaño AWG del conductor y el tipo de aislamiento, y el metal interior nunca entra en el cálculo, así que el resultado es idéntico para cobre, aluminio y CCA del mismo tamaño y aislamiento. El detalle práctico en un trabajo CCA es la regla de un tamaño más grande: un circuito de 20A lleva 10 AWG, así que la caja se calcula al volumen de 10 AWG (2.50 cu in por conductor), no al volumen de 12 AWG que usaría una corrida de cobre.",
+    "nec_ref": "314.16 / Ch. 9 Tables 4-5",
+    "nec_edition": "2020",
+    "tags": [
+      "cca",
+      "box-fill",
+      "conduit-fill"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "diagram_hint": "Same box, three metals, same fill number"
+  },
+  {
+    "id": "C2-L-045",
+    "question": "¿Cómo cambia un cálculo de carga cuando la acometida o el alimentador se hará en CCA?",
+    "aliases": [
+      "cálculo de carga CCA",
+      "dimensionamiento acometida CCA",
+      "dimensionamiento alimentador CCA"
+    ],
+    "answer_plain": "No cambia — los Artículos 220 y 220.82 producen una carga en VA y amps, y ese número es el mismo sea cual sea el metal elegido. El material solo entra en el último paso, cuando se elige el conductor: un conductor CCA de acometida o alimentador se elige desde la columna de aluminio de la Tabla 310.16, un tamaño más grande que la elección en cobre para los mismos amps. Haga todo el cálculo primero, luego haga la elección del material — nunca reduzca la carga calculada porque cambió el cable.",
+    "nec_ref": "220.82 / 310.16",
+    "nec_edition": "2020",
+    "tags": [
+      "cca",
+      "load-calc",
+      "service"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "diagram_hint": "Load calc funnel: VA/amps unchanged, conductor pick changes at the end"
+  },
+  {
+    "id": "C2-L-046",
+    "question": "¿Los tomacorrientes para elevadores de botes necesitan protección GFCI?",
+    "aliases": [],
+    "answer_plain": "Sí. 210.8(C) exige protección GFCI para tomacorrientes instalados para alimentar elevadores de botes, en cualquier ocupación. Es una subsección corta sin división vivienda/comercial — si el tomacorriente alimenta un elevador de botes, lleva protección GFCI.",
+    "nec_ref": "210.8(C)",
+    "sharma_rule_id": null,
+    "verified": true,
+    "verified_by": "Master audit reconciliation 2026-11-12 (external audit gap claim verified)",
+    "verified_date": "2026-11-12"
+  },
+  {
+    "id": "C2-L-047",
+    "question": "¿Una luz en un espacio de acceso bajo el piso necesita protección GFCI?",
+    "aliases": [],
+    "answer_plain": "Sí. 210.8(E) exige protección GFCI para salidas de iluminación en espacios de acceso bajo el piso (la salida de iluminación del espacio bajo el piso es el caso para el que se escribió esta subsección). Está junto a 210.8(C) como una de las subsecciones de 210.8 dirigidas a una salida específica en lugar de a una lista de habitaciones.",
+    "nec_ref": "210.8(E)",
+    "sharma_rule_id": null,
+    "verified": true,
+    "verified_by": "Master audit reconciliation 2026-11-12 (external audit gap claim verified)",
+    "verified_date": "2026-11-12"
+  },
+  {
+    "id": "C2-L-048",
+    "question": "¿Qué límites aplican a un conductor de electrodo de puesta a tierra de aluminio?",
+    "aliases": [],
+    "answer_plain": "250.64(A): un GEC de aluminio (o aluminio revestido de cobre) no debe estar en contacto directo con mampostería o la tierra, no debe usarse donde esté sujeto a condiciones corrosivas, y donde se instale en exteriores no debe terminar a menos de 18 in de la tierra. La práctica de Sharma es más sencilla: lleve el GEC en cobre y toda la pregunta desaparece.",
+    "nec_ref": "250.64(A)",
+    "sharma_rule_id": null,
+    "verified": true,
+    "verified_by": "Master audit reconciliation 2026-11-12 (external audit gap claim verified)",
+    "verified_date": "2026-11-12"
+  },
+  {
+    "id": "C2-L-049",
+    "question": "¿Dónde están las reglas de derivación de alimentadores, y qué juzgan?",
+    "aliases": [],
+    "answer_plain": "Las derivaciones de alimentador se juzgan según las reglas de derivación en 240.21 — principalmente la regla de derivación de 10 ft en 240.21(B)(1) y la regla de 25 ft en 240.21(B)(2). Cada regla vincula la ampacidad del conductor de derivación a la carga que alimenta y al dispositivo de sobrecorriente en su extremo de alimentación, y limita la longitud de la derivación; una derivación nunca se juzga solo por el tamaño del breaker del alimentador. Esta tarjeta es el puntero — trabaje la derivación real desde la subsección para la longitud involucrada.",
+    "nec_ref": "240.21",
+    "sharma_rule_id": null,
+    "verified": true,
+    "verified_by": "Master audit reconciliation 2026-11-12 (external audit gap claim verified)",
+    "verified_date": "2026-11-12"
+  },
+  {
+    "id": "C2-L-050",
+    "question": "¿Dónde se cubren los dispositivos de protección contra sobretensiones (SPD) además de 230.67?",
+    "aliases": [],
+    "answer_plain": "El Artículo 242 es el artículo del NEC sobre protección contra sobretensiones: cubre los SPD mismos — las clasificaciones Tipo 1, Tipo 2 y Tipo 3 y dónde puede instalarse cada tipo. 230.67 es la regla separada de acometida que EXIGE un dispositivo de protección contra sobretensiones en acometidas de vivienda; el Artículo 242 es donde están las reglas propias del dispositivo.",
+    "nec_ref": "Article 242",
+    "sharma_rule_id": null,
+    "verified": true,
+    "verified_by": "Master audit reconciliation 2026-11-12 (external audit gap claim verified)",
+    "verified_date": "2026-11-12"
+  },
+  {
+    "id": "C2-L-051",
+    "question": "¿Qué pueden alimentar los dos circuitos ramales para electrodomésticos pequeños?",
+    "aliases": [],
+    "answer_plain": "210.52(B): los dos (o más) circuitos ramales de 20A para electrodomésticos pequeños alimentan los tomacorrientes en la cocina, la despensa, el desayunador, el comedor y áreas similares — y ninguna otra salida, con excepciones limitadas (un tomacorriente para reloj, y el encendido para una estufa u horno a gas). El refrigerador puede ir en un circuito para electrodomésticos pequeños o estar en su propio circuito ramal individual clasificado de 15A o más.",
+    "nec_ref": "210.52(B)",
+    "sharma_rule_id": null,
+    "verified": true,
+    "verified_by": "Master audit reconciliation 2026-11-12 (external audit gap claim verified)",
+    "verified_date": "2026-11-12"
+  },
+  {
+    "id": "C2-L-052",
+    "question": "¿Cuál es el 'método estándar' para un cálculo de carga de vivienda?",
+    "aliases": [],
+    "answer_plain": "El Artículo 220 ofrece dos caminos para vivienda. El método estándar (Parte III, la serie 220.40) cuenta las cargas elemento por elemento — iluminación general a 3 VA por sq ft, los circuitos de electrodomésticos nombrados, luego factores de demanda aplicados carga por carga. El método opcional (220.82, cubierto en su propia página en este capítulo) es la alternativa para la que califican la mayoría de las casas de producción. Cualquiera de los dos métodos es legal; el método opcional no es un atajo alrededor del estándar, solo un conjunto diferente de reglas de demanda.",
+    "nec_ref": "220 Part III",
+    "sharma_rule_id": null,
+    "verified": true,
+    "verified_by": "Master audit reconciliation 2026-11-12 (external audit gap claim verified)",
+    "verified_date": "2026-11-12"
+  }
+]

@@ -1,0 +1,988 @@
+[
+  {
+    "id": "C4-L-001",
+    "question": "¿Cómo funciona un circuito de interruptor de 3 vías, en palabras simples?",
+    "aliases": [
+      "interruptores de 3 vías",
+      "dos interruptores una luz",
+      "viajeros"
+    ],
+    "answer_plain": "Dos interruptores de 3 vías controlan una carga. La alimentación y la pata conmutada llegan a las terminales comunes de los dos interruptores, y un par de conductores viajeros conecta los interruptores entre sí, de modo que cualquiera de los dos puede completar o interrumpir el camino. El neutro no se conmuta; corre directo a la carga.",
+    "nec_ref": "404.2(A)",
+    "nec_edition": "2020",
+    "tags": [
+      "switches",
+      "residential"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "diagram_hint": "Dibujo lineal original: común/viajeros/pata conmutada etiquetados; sin diagrama de libro de texto."
+  },
+  {
+    "id": "C4-L-002",
+    "question": "¿Cuándo necesito también un interruptor de 4 vías?",
+    "aliases": [
+      "interruptor de 4 vías",
+      "tres interruptores una luz",
+      "interruptor desde tres lugares"
+    ],
+    "answer_plain": "Agrega un interruptor de 4 vías entre los dos de 3 vías siempre que una carga deba controlarse desde tres o más lugares. El de 4 vías simplemente intercambia el par de viajeros, así que cualquier número de interruptores de 4 vías puede ir entre los mismos dos de 3 vías. Cada extremo del recorrido es siempre uno de 3 vías; solo los dispositivos del medio son de 4 vías.",
+    "nec_ref": "404.2(A)",
+    "nec_edition": "2020",
+    "tags": [
+      "switches",
+      "residential"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-003",
+    "question": "¿Puedo usar un interruptor de acción rápida para controlar un motor directamente?",
+    "aliases": [
+      "interruptor en motor",
+      "interruptor de acción rápida con carga de motor",
+      "capacidad del interruptor para motor"
+    ],
+    "answer_plain": "Solo si el interruptor tiene capacidad para esa carga de motor. La sección 404.14 vincula un interruptor de acción rápida de uso general con el tipo de carga que controla, y el servicio de motor castiga los contactos más de lo que sugiere la capacidad simple en amperios. Para cualquier cosa más allá de un motor pequeño para el que el interruptor esté marcado, usa un interruptor con capacidad en caballos de fuerza o controla el motor por medio de un contactor con la capacidad adecuada.",
+    "nec_ref": "404.14",
+    "nec_edition": "2020",
+    "tags": [
+      "switches",
+      "motors"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-004",
+    "question": "¿Toda caja de interruptor necesita un neutro?",
+    "aliases": [
+      "neutro en caja de interruptor",
+      "neutro para interruptor inteligente",
+      "excepciones de 404.2(C)"
+    ],
+    "answer_plain": "En la mayoría de los lugares con interruptor, sí — 404.2(C) exige un conductor puesto a tierra (neutro) en la caja para que los controles electrónicos puedan alimentarse. Existen excepciones listadas, incluidos los sistemas en canalización donde un neutro se puede agregar después y ciertas situaciones de modernización. La práctica de instalación en bruto de Sharma es pasar el neutro por cada caja de interruptor sin excepción.",
+    "nec_ref": "404.2(C)",
+    "nec_edition": "2020",
+    "tags": [
+      "switches",
+      "residential"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-005",
+    "question": "¿A qué altura máxima se puede montar un interruptor?",
+    "aliases": [
+      "altura máxima del interruptor",
+      "interruptor a 6 ft 7 in",
+      "404.8"
+    ],
+    "answer_plain": "El Artículo 404 pone un tope a la accesibilidad: el centro de la manija del interruptor en su posición más alta no puede exceder 6 ft 7 in. sobre el piso o la plataforma, y eso es un máximo, no una altura de montaje. La altura de trabajo por defecto de Sharma es 48 in. hasta el centro de la caja cuando el plano no dice nada (S-05).",
+    "nec_ref": "404.8(A)",
+    "nec_edition": "2020",
+    "tags": [
+      "switches"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "sharma_rule_id": "S-05"
+  },
+  {
+    "id": "C4-L-006",
+    "question": "¿Las terminales de los interruptores aceptan aluminio revestido de cobre (CCA)?",
+    "aliases": [
+      "CCA en interruptor",
+      "terminales de interruptor y CCA",
+      "CO/ALR"
+    ],
+    "answer_plain": "Según la información de la guía NEMA/UL citada en las notas v1, las terminales de tornillo de los interruptores de acción rápida de 15A y 20A aceptan cobre y CCA salvo que se marque lo contrario, y el marcado CO/ALR es lo que agrega el aluminio simple. El número de sección que NEMA citó para esto no se verificó contra el texto impreso del código, así que verifica el marcado en el dispositivo real. Nunca uses terminales de inserción (backstab) con CCA.",
+    "nec_ref": "404.15(C) — UNVERIFIED citation",
+    "nec_edition": "2020",
+    "tags": [
+      "CCA",
+      "switches",
+      "UNVERIFIED"
+    ],
+    "verified": false,
+    "unverified_reason": "Número de sección citado por NEMA (404.15(C)) no verificado contra el texto impreso de 2020."
+  },
+  {
+    "id": "C4-L-007",
+    "question": "¿Qué cambia cuando reemplazo un tomacorriente en una casa vieja?",
+    "aliases": [
+      "reemplazo de tomacorriente",
+      "cambiar un tomacorriente viejo",
+      "406.4(D)"
+    ],
+    "answer_plain": "El reemplazo debe cumplir las reglas de protección de hoy para ese lugar: GFCI, AFCI, contra manipulación o contra la intemperie donde el código actual las exige ahí. Si la caja no tiene tierra del equipo, los caminos permitidos son un reemplazo sin puesta a tierra, un reemplazo GFCI marcado 'sin tierra del equipo', o un tomacorriente con puesta a tierra protegido por un dispositivo GFCI y marcado en consecuencia. Un tomacorriente estándar con puesta a tierra en un circuito sin tierra, dejado sin marcar, no es una de las opciones.",
+    "nec_ref": "406.4(D)",
+    "nec_edition": "2020",
+    "tags": [
+      "receptacles",
+      "service"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-008",
+    "question": "¿Puedo instalar un tomacorriente con puesta a tierra donde no hay cable de tierra?",
+    "aliases": [
+      "tomacorriente sin tierra",
+      "reemplazo de dos patas",
+      "GFCI sin tierra del equipo"
+    ],
+    "answer_plain": "Sí, por medio de un dispositivo GFCI, con el marcado requerido de que no hay tierra del equipo. El GFCI protege a las personas contra descargas; no crea una tierra del equipo para protectores contra sobretensiones ni probadores que la necesitan. El marcado es parte de la instalación, no una etiqueta opcional.",
+    "nec_ref": "406.4(D)(2)",
+    "nec_edition": "2020",
+    "tags": [
+      "receptacles",
+      "service"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-009",
+    "question": "TR frente a WR — ¿cuál es la diferencia?",
+    "aliases": [
+      "contra manipulación frente a resistente a la intemperie",
+      "tomacorriente TR WR"
+    ],
+    "answer_plain": "Resuelven problemas distintos y un tomacorriente puede necesitar ser ambos. TR (con protección contra manipulación) tiene obturadores internos que mantienen los objetos fuera de las ranuras, exigido por 406.12 en viviendas y ocupaciones similares. WR (resistente a la intemperie) está construido para sobrevivir en lugares húmedos y mojados y se exige con la tapa correcta en esos lugares bajo 406.9.",
+    "nec_ref": "406.9 / 406.12",
+    "nec_edition": "2020",
+    "tags": [
+      "receptacles"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-010",
+    "question": "¿Qué tapa necesita un tomacorriente exterior en Florida?",
+    "aliases": [
+      "tapa de tomacorriente exterior",
+      "tapa tipo burbuja",
+      "tapa de uso en servicio (in-use)"
+    ],
+    "answer_plain": "Un tomacorriente en lugar mojado necesita un gabinete que se mantenga a prueba de intemperie mientras una clavija está en uso — la tapa de uso en servicio (in-use) o tipo burbuja — y un tomacorriente WR detrás de ella. Una tapa plana abatible solo protege el dispositivo mientras no hay nada enchufado. La lluvia y el riego de Florida hacen que la mayoría de los tomacorrientes exteriores sean lugares mojados en la práctica.",
+    "nec_ref": "406.9(B)",
+    "nec_edition": "2020",
+    "tags": [
+      "receptacles",
+      "outdoor"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "fl_note": "Florida aplica el NEC 2020 por medio del FBC 8.ª Ed. (2023); mandan las enmiendas locales de la AHJ."
+  },
+  {
+    "id": "C4-L-011",
+    "question": "¿A qué distancia de una tina puede estar un tomacorriente?",
+    "aliases": [
+      "tomacorriente cerca de la tina",
+      "zona de 406.9(C)",
+      "distancia del tomacorriente a la ducha"
+    ],
+    "answer_plain": "Ningún tomacorriente se puede instalar dentro de la zona medida 3 ft en horizontal y 8 ft en vertical desde la parte superior del borde de la tina o el umbral del cubículo de ducha. Los tomacorrientes del tocador deben trazarse fuera de esa zona, lo que hay que revisar en el plano en la instalación en bruto. La misma zona de 3 ft por 8 ft también controla las luminarias bajo 410.10(D).",
+    "nec_ref": "406.9(C)",
+    "nec_edition": "2020",
+    "tags": [
+      "receptacles",
+      "bathroom"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-012",
+    "question": "¿Se exigen tomacorrientes GFCI, o el interruptor puede proporcionar el GFCI?",
+    "aliases": [
+      "interruptor GFCI frente a tomacorriente",
+      "puntos GFI con interruptor DFN"
+    ],
+    "answer_plain": "El código exige protección GFCI en el lugar; no exige que la protección viva en el propio tomacorriente. Un interruptor listado que proporciona protección GFCI la satisface. El estándar de Sharma (S-07) es un interruptor AFCI/GFCI de doble función en el tablero con un tomacorriente TR estándar en un punto marcado GFI en el plano.",
+    "nec_ref": "406 / 210.8",
+    "nec_edition": "2020",
+    "tags": [
+      "receptacles",
+      "GFCI"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "sharma_rule_id": "S-07"
+  },
+  {
+    "id": "C4-L-013",
+    "question": "¿Qué debe decir realmente el directorio del tablero?",
+    "aliases": [
+      "directorio del tablero",
+      "redacción del directorio de circuitos",
+      "408.4(A)"
+    ],
+    "answer_plain": "Cada circuito debe identificarse con suficiente especificidad para distinguirlo de los demás y describir su propósito o uso real en ese edificio. 'Luces' y 'enchufes' copiados de otra casa no hacen eso. Los interruptores de reserva se marcan como reservas, y el directorio se actualiza siempre que los circuitos cambian.",
+    "nec_ref": "408.4(A)",
+    "nec_edition": "2020",
+    "tags": [
+      "panelboard"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-014",
+    "question": "¿Un subtablero necesita decir desde dónde se alimenta?",
+    "aliases": [
+      "etiqueta de fuente del subtablero",
+      "408.4(B)",
+      "marcado de alimentado desde"
+    ],
+    "answer_plain": "Sí, donde la fuente no es obvia — un tablero alimentado por un alimentador debe marcarse para identificar su fuente de alimentación para que una persona en el tablero pueda encontrar la desconexión que lo alimenta. Etiqueta el interruptor del alimentador en el tablero fuente para que coincida. Las dos etiquetas deben coincidir palabra por palabra en la ubicación.",
+    "nec_ref": "408.4(B)",
+    "nec_edition": "2020",
+    "tags": [
+      "panelboard"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-015",
+    "question": "¿Puedo cubrir un espacio de interruptor sin usar con cinta?",
+    "aliases": [
+      "abertura sin usar en el tablero",
+      "placa de relleno",
+      "408.7"
+    ],
+    "answer_plain": "No. Las aberturas sin usar deben cerrarse con cierres listados que protejan más o menos igual que la propia pared del gabinete — para un tablero, la placa de relleno del fabricante para ese tablero. Cinta, cartón y placas casi iguales de otra marca son todos correcciones esperando suceder.",
+    "nec_ref": "408.7",
+    "nec_edition": "2020",
+    "tags": [
+      "panelboard"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-016",
+    "question": "¿Puede un tablero de 100A estar detrás de un interruptor de 200A?",
+    "aliases": [
+      "protección del tablero",
+      "408.36",
+      "interruptor y capacidad del bus"
+    ],
+    "answer_plain": "No. El tablero mismo debe estar protegido a no más de su propia capacidad, por un dispositivo en el tablero o antes de él, aparte de las excepciones listadas. Revisa juntos la capacidad del bus, la ampacidad del alimentador y el interruptor que lo alimenta; el límite aplicable más pequeño manda.",
+    "nec_ref": "408.36",
+    "nec_edition": "2020",
+    "tags": [
+      "panelboard"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-017",
+    "question": "¿Qué interruptores pueden ir en un tablero existente?",
+    "aliases": [
+      "mezcla de marcas de interruptores",
+      "interruptores listados para el tablero",
+      "interruptores clasificados"
+    ],
+    "answer_plain": "Solo interruptores listados (o clasificados, donde realmente aplique y esté documentado) para ese tablero, siguiendo el etiquetado propio del tablero bajo 110.3(B). Regla S-03 de Sharma: en un tablero Square D existente, usa interruptores Square D listados para él; S-02: todo el equipo nuevo de Sharma es Siemens. Un interruptor que cabe físicamente no es lo mismo que un interruptor listado para el tablero.",
+    "nec_ref": "408 / 110.3(B)",
+    "nec_edition": "2020",
+    "tags": [
+      "panelboard"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "sharma_rule_id": "S-03"
+  },
+  {
+    "id": "C4-L-018",
+    "question": "¿Qué luminarias están permitidas sobre una tina o dentro de una zona de ducha?",
+    "aliases": [
+      "luz sobre la tina",
+      "410.10(D)",
+      "clasificación de la luz de ducha"
+    ],
+    "answer_plain": "Dentro de la zona de 3 ft en horizontal y 8 ft en vertical desde el borde de la tina o el umbral de la ducha, una luminaria debe estar listada para lugares húmedos, y para lugares mojados donde el rocío de la ducha la alcanza. Las luminarias colgantes, los pendants y los ventiladores suspendidos del techo no están permitidos en la zona en absoluto. Revisa la clasificación en la etiqueta de la luminaria contra donde realmente queda.",
+    "nec_ref": "410.10(D)",
+    "nec_edition": "2020",
+    "tags": [
+      "luminaires",
+      "bathroom"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-019",
+    "question": "¿Puedo colgar una luz pendant en un clóset de ropa?",
+    "aliases": [
+      "reglas de luz de clóset",
+      "pendant en 410.16"
+    ],
+    "answer_plain": "Las luminarias colgantes y las lámparas expuestas son los tipos problemáticos en los clósets porque quedan dentro del espacio de almacenamiento y pueden romperse o quedar enterradas en material guardado. Usa una luminaria cerrada, apta para clóset, colocada libre del espacio de almacenamiento. Las distancias libres exactas en 410.16 están marcadas NO VERIFICADAS en las notas v1, así que confírmalas en el libro impreso o con la AHJ en vez de trabajar de memoria.",
+    "nec_ref": "410.16 — UNVERIFIED clearances",
+    "nec_edition": "2020",
+    "tags": [
+      "luminaires",
+      "closet",
+      "UNVERIFIED"
+    ],
+    "verified": false,
+    "unverified_reason": "Distancias libres de 410.16 no verificadas contra el texto impreso de 2020."
+  },
+  {
+    "id": "C4-L-020",
+    "question": "¿Cómo se dimensiona el circuito de un calentador de agua de almacenamiento?",
+    "aliases": [
+      "tamaño del interruptor del calentador de agua",
+      "amperios de un calentador de 4500 vatios",
+      "422.13"
+    ],
+    "answer_plain": "Trátalo como un dimensionamiento tipo continuo: el circuito derivado debe ser al menos el 125 por ciento de la capacidad nominal de la placa. Un calentador de 4500W, 240V consume 18.75A, así que el cálculo mínimo es unos 23.4A y el resultado convencional es un circuito de 30A con 10 AWG de cobre. Haz la aritmética para la placa del trabajo real, no desde la última casa.",
+    "nec_ref": "422.13",
+    "nec_edition": "2020",
+    "tags": [
+      "appliances",
+      "water heater"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-021",
+    "question": "¿Un calentador de agua necesita una desconexión?",
+    "aliases": [
+      "desconexión del calentador de agua",
+      "desconexión de aparato 422.31"
+    ],
+    "answer_plain": "Un aparato conectado permanentemente necesita un medio de desconexión que cumpla 422.31 para su tamaño, para que el técnico pueda cortar la energía y mantenerla cortada. Según el aparato y su capacidad, eso puede ser un interruptor dedicado o un arreglo de interruptor termomagnético que la sección permite. Decide su ubicación en la instalación en bruto, no en la inspección final.",
+    "nec_ref": "422.31",
+    "nec_edition": "2020",
+    "tags": [
+      "appliances",
+      "water heater"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-022",
+    "question": "¿Una campana extractora puede conectarse con cordón y clavija?",
+    "aliases": [
+      "cordón de campana extractora",
+      "422.16(B)(4)",
+      "tomacorriente de la campana"
+    ],
+    "answer_plain": "Sí, donde la campana está listada y marcada para conexión con cordón y la instalación cumple las condiciones de 422.16(B)(4), incluyendo el arreglo del tomacorriente. Si las instrucciones de la campana dicen solo conexión fija, el listado manda y se conecta fija. La práctica de Sharma (no una regla del código) a menudo coloca la campana en el circuito del lavavajillas/triturador; el microondas conserva su propio circuito de 20A bajo S-06. El cable en ese circuito está PENDIENTE (12 AWG de cobre frente a 10 AWG CCA).",
+    "nec_ref": "422.16(B)(4)",
+    "nec_edition": "2020",
+    "tags": [
+      "appliances",
+      "kitchen"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "sharma_rule_id": "S-06"
+  },
+  {
+    "id": "C4-L-023",
+    "question": "¿Qué aparatos necesitan protección GFCI bajo 422.5?",
+    "aliases": [
+      "aparatos con GFCI en 422.5",
+      "GFCI del lavavajillas en el NEC"
+    ],
+    "answer_plain": "La sección 422.5 nombra aparatos específicos para protección GFCI para el personal, incluyendo el lavavajillas de la vivienda, y va encima de las reglas del cuarto en 210.8 — ambas deben revisarse. La protección puede proporcionarse en el interruptor, que es como un interruptor DFN de Sharma (S-07) cubre un circuito de aparato de 120V. Confirma que el interruptor realmente proporciona GFCI y no solo AFCI.",
+    "nec_ref": "422.5",
+    "nec_edition": "2020",
+    "tags": [
+      "appliances",
+      "GFCI"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "sharma_rule_id": "S-07"
+  },
+  {
+    "id": "C4-L-024",
+    "question": "¿Cómo se dimensionan eléctricamente las tiras de calor eléctricas?",
+    "aliases": [
+      "circuito de tiras de calor al 125%",
+      "dimensionamiento en 424",
+      "amperios del calefactor de ducto"
+    ],
+    "answer_plain": "La calefacción fija eléctrica de espacios se trata como una carga continua, así que los conductores y la protección contra sobrecorriente se dimensionan en no menos del 125 por ciento de la carga total conectada, incluyendo el motor del soplador en el mismo equipo. El número de sección de 2020 para esta regla está marcado NO VERIFICADO en las notas v1 (era 424.3(B) en 2017); el fondo del 125 por ciento no está en duda. El tamaño de tira instalado también es un dato para el cálculo de carga de la oficina.",
+    "nec_ref": "424.4(B) — UNVERIFIED section number",
+    "nec_edition": "2020",
+    "tags": [
+      "heating",
+      "HVAC",
+      "UNVERIFIED"
+    ],
+    "verified": false,
+    "unverified_reason": "Número de sección de 2020 (424.4(B)) no verificado contra el texto impreso; el fondo del 125 por ciento está confirmado."
+  },
+  {
+    "id": "C4-L-025",
+    "question": "¿Cuál es la diferencia entre el FLC de tabla y el FLA de placa para un motor?",
+    "aliases": [
+      "FLC frente a FLA",
+      "corriente de motor en 430.6",
+      "valores de tabla de motores"
+    ],
+    "answer_plain": "Se usan para trabajos distintos. La corriente de plena carga de tabla (de las tablas del Artículo 430, por caballos de fuerza y voltaje) dimensiona los conductores, la desconexión, el controlador y la protección contra cortocircuito, porque un motor de reemplazo puede ser distinto. Los amperios de plena carga de la placa dimensionan la protección contra sobrecarga, porque la sobrecarga protege el motor específico instalado. Etiqueta ambos números en cada hoja de trabajo de motor.",
+    "nec_ref": "430.6",
+    "nec_edition": "2020",
+    "tags": [
+      "motors"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-026",
+    "question": "¿Cómo dimensiono los conductores para un motor?",
+    "aliases": [
+      "calibre de cable de motor al 125%",
+      "430.22"
+    ],
+    "answer_plain": "Toma la corriente de plena carga de tabla para la potencia y el voltaje del motor y multiplícala por 1.25, y luego elige el conductor de las tablas de ampacidad usando la columna de temperatura de terminación que aplica. No dimensiones desde los amperios de la placa. Los motores de servicio intermitente siguen sus propias partes de 430.22, así que revisa primero el servicio en la placa.",
+    "nec_ref": "430.22",
+    "nec_edition": "2020",
+    "tags": [
+      "motors"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-027",
+    "question": "¿Por qué el interruptor en un circuito de motor es más grande de lo que el cable parece permitir?",
+    "aliases": [
+      "interruptor de motor sobredimensionado",
+      "explicación de 430.52"
+    ],
+    "answer_plain": "Porque en un circuito de motor el interruptor es el dispositivo que despeja fallas, dimensionado desde la Tabla 430.52 para que soporte la corriente de arranque, mientras el dispositivo de sobrecarga dimensionado desde la placa hace la protección de funcionamiento. Esa división es el sistema del Artículo 430 y solo aplica dentro de ese sistema. Nunca tomes prestada la idea para un circuito de uso general.",
+    "nec_ref": "430.52",
+    "nec_edition": "2020",
+    "tags": [
+      "motors"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-028",
+    "question": "¿A qué distancia debe estar una desconexión de motor?",
+    "aliases": [
+      "desconexión de motor a la vista",
+      "430.102 a 50 ft"
+    ],
+    "answer_plain": "A la vista desde el motor y su controlador: visible y a no más de 50 ft de distancia, salvo que el arreglo de desconexión cumpla las disposiciones bloqueables del artículo. Párate junto al motor y señala la desconexión. Si no puedes verla, la instalación necesita una desconexión local o un arreglo bloqueable documentado.",
+    "nec_ref": "430.102",
+    "nec_edition": "2020",
+    "tags": [
+      "motors"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-029",
+    "question": "¿Qué significan MCA y MOCP en la placa de un condensador?",
+    "aliases": [
+      "significado de MCA y MOCP",
+      "placa del condensador",
+      "440.4(B)"
+    ],
+    "answer_plain": "MCA (ampacidad mínima del circuito) es la ampacidad de conductor más pequeña que el circuito puede tener. MOCP (protección máxima contra sobrecorriente) es el fusible o interruptor más grande permitido. Cablea en o por encima del MCA, protege en o por debajo del MOCP — un interruptor más pequeño que el MOCP está bien, un cable más pequeño que el MCA no.",
+    "nec_ref": "440.4(B)",
+    "nec_edition": "2020",
+    "tags": [
+      "HVAC",
+      "nameplate"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-030",
+    "question": "El condensador nuevo tiene un MCA más alto que el viejo. ¿Puedo reutilizar el cable?",
+    "aliases": [
+      "MCA más alto en el cambio",
+      "reutilizar el cable del condensador"
+    ],
+    "answer_plain": "No hasta que se revisen los números: la ampacidad del conductor existente debe ser al menos el MCA de la unidad nueva y el interruptor existente no mayor que su MOCP. Si cualquiera falla, el circuito cambia con la unidad, lo que es una conversación de alcance con la oficina antes del arranque. Nunca lo resuelvas subiendo el interruptor por encima del MOCP.",
+    "nec_ref": "440.4(B)",
+    "nec_edition": "2020",
+    "tags": [
+      "HVAC",
+      "change-out"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-031",
+    "question": "¿Dónde debe estar la desconexión de HVAC?",
+    "aliases": [
+      "ubicación de la desconexión de AC",
+      "440.14 a la vista"
+    ],
+    "answer_plain": "A la vista desde el equipo y fácilmente accesible: visible, dentro de 50 ft, y alcanzable donde se para el técnico de servicio, con espacio de trabajo frente a ella. El interruptor en el tablero de la casa por sí solo no lo cumple. En un cambio sin una desconexión que cumpla, agregarla o reubicarla es parte del trabajo.",
+    "nec_ref": "440.14",
+    "nec_edition": "2020",
+    "tags": [
+      "HVAC"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-032",
+    "question": "¿Un condensador necesita un interruptor GFCI?",
+    "aliases": [
+      "GFCI del condensador 210.8(F)",
+      "interruptor GFCI de AC en Florida"
+    ],
+    "answer_plain": "Este es el punto no resuelto: los requisitos GFCI de 210.8(F) para salidas y equipo exteriores han sido afectados por una TIA y por enmiendas locales, y la aplicación varía según la AHJ. La práctica de Sharma es un interruptor estándar de 2 polos dimensionado al MOCP de la placa, mostrada como un consejo y no como una regla. Confirma la posición de la AHJ en el trabajo específico; la discusión completa vive en las páginas del Capítulo 2. Actualización de Florida (2026-11-12): para viviendas de una y dos familias, FBC-R §E3408.1 Excepción N.º 2 a 210.8(F) resuelve el caso común — no se exige protección GFCI para equipo de HVAC listado y etiquetado.",
+    "nec_ref": "440 / 210.8(F)",
+    "nec_edition": "2020",
+    "tags": [
+      "HVAC",
+      "GFCI"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "fl_note": "Manda la posición local de la AHJ; no supongas una respuesta para todo el estado."
+  },
+  {
+    "id": "C4-L-033",
+    "question": "¿Cómo se dimensionan los conductores de alimentación del generador?",
+    "aliases": [
+      "calibre de cable del generador al 115%",
+      "445.13"
+    ],
+    "answer_plain": "Los conductores desde el generador hasta su primer dispositivo de distribución se dimensionan en no menos del 115 por ciento de la corriente de la placa del generador, sujeto a las disposiciones propias de la sección donde el diseño evita la sobrecarga. El dimensionamiento del neutro tiene sus propios párrafos en la sección. Si el sistema es derivado por separado cambia el neutro y la puesta a tierra, y esa decisión se toma con el equipo de transferencia, no solo en el generador.",
+    "nec_ref": "445.13",
+    "nec_edition": "2020",
+    "tags": [
+      "generators"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-034",
+    "question": "¿Un generador de casa necesita un apagado exterior?",
+    "aliases": [
+      "apagado de emergencia del generador afuera",
+      "445.18(D)"
+    ],
+    "answer_plain": "Bajo la disposición de 2020 en 445.18(D), un generador instalado en el exterior en una vivienda de una o dos familias necesita un dispositivo de apagado/desconexión fácilmente accesible ubicado fuera de la vivienda, además de las reglas generales de apagado de generadores en 445.18. Colócalo donde los ocupantes o los primeros respondedores lo buscarían, identifícalo y pruébalo en el arranque. El dimensionamiento del interruptor de transferencia mismo vive en el Artículo 702 (Capítulo 7).",
+    "nec_ref": "445.18(D)",
+    "nec_edition": "2020",
+    "tags": [
+      "generators"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-035",
+    "question": "¿Cómo se protege un transformador pequeño tipo seco?",
+    "aliases": [
+      "protección de transformador 450.3",
+      "interruptor de transformador tipo seco"
+    ],
+    "answer_plain": "Por medio de las tablas en 450.3, usando la tabla para 1000V y menos, con la respuesta según el voltaje, la impedancia del transformador donde la tabla la pide, y si la protección es solo primaria o en ambos lados. La solo primaria está permitida solo dentro de los límites de la tabla. No reutilices un porcentaje recordado de un voltaje o impedancia distinta.",
+    "nec_ref": "450.3",
+    "nec_edition": "2020",
+    "tags": [
+      "transformers",
+      "commercial"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-036",
+    "question": "¿Qué es el SCCR en un tablero de control industrial?",
+    "aliases": [
+      "significado de SCCR",
+      "corriente de falla en tablero 409"
+    ],
+    "answer_plain": "SCCR es la capacidad de corriente de cortocircuito del tablero: la mayor corriente de falla a la que el tablero puede estar sometido. El Artículo 409 exige el marcado, y un tablero no se puede instalar donde la corriente de falla disponible lo exceda. Si la corriente de falla disponible es desconocida, eso es una verificación de ingeniería antes de instalar el tablero, no una suposición de campo.",
+    "nec_ref": "409 — SCCR marking; exact subsection UNVERIFIED",
+    "nec_edition": "2020",
+    "tags": [
+      "industrial control panels",
+      "commercial"
+    ],
+    "verified": false,
+    "unverified_reason": "Subsección exacta del Artículo 409 para el marcado del SCCR no confirmada contra el texto impreso."
+  },
+  {
+    "id": "C4-L-037",
+    "question": "¿Se puede usar cordón flexible en vez de tender tubería (conduit) a una máquina fija?",
+    "aliases": [
+      "cordón en vez de tubería",
+      "400.8 equipo fijo"
+    ],
+    "answer_plain": "No. La sección 400.12 prohíbe usar un cordón flexible (el número de 2020, marcado para verificación contra el texto impreso — era 400.8 en el código de 2017) como sustituto del cableado fijo de una estructura, pasarlo por paredes o techos, u ocultarlo. Un cordón es para equipo que se mueve o que debe quitarse para servicio, bajo los usos permitidos en 400.10. Una máquina fija lleva un método de cableado del Capítulo 3.",
+    "nec_ref": "400.12 — numbering flagged (was 400.8 in 2017)",
+    "nec_edition": "2020",
+    "tags": [
+      "flexible cords"
+    ],
+    "verified": false,
+    "unverified_reason": "Numeración de 400.12 (400.8 en el código de 2017) marcada pendiente de confirmación contra el texto impreso."
+  },
+  {
+    "id": "C4-L-038",
+    "question": "¿Un sistema de baterías es solo un trabajo del Artículo 480?",
+    "aliases": [
+      "batería artículo 480 frente a 706",
+      "reglas de baterías de almacenamiento"
+    ],
+    "answer_plain": "No. El Artículo 480 cubre la instalación de la batería misma — desconexiones, protección contra sobrecorriente, cableado, y preocupaciones de cuarto según la química. Un sistema de almacenamiento de energía como un todo también se rige por el Artículo 706 en el Capítulo 7. Identifica la química y el listado del sistema antes de cablear, y etiqueta la desconexión como exigen las reglas del sistema.",
+    "nec_ref": "480",
+    "nec_edition": "2020",
+    "tags": [
+      "batteries"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-039",
+    "question": "¿Qué debo hacer cuando un trabajo involucra equipo de más de 1000 voltios?",
+    "aliases": [
+      "media tensión en Sharma",
+      "equipo de 490"
+    ],
+    "answer_plain": "Reconócelo y detente. El equipo del Artículo 490 está fuera del alcance de instalación residencial y comercial ligera de Sharma bajo este libro. Mantente alejado de él, nunca lo abras ni lo pruebes, y lleva el trabajo a Sanjay y a Mike el mismo día para que pueda referirse a un contratista calificado de media tensión.",
+    "nec_ref": "490",
+    "nec_edition": "2020",
+    "tags": [
+      "safety",
+      "commercial"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-040",
+    "question": "¿Qué desconexión necesita un motor además del interruptor del tablero?",
+    "aliases": [
+      "desconexión local del motor",
+      "tipo de desconexión 430.109"
+    ],
+    "answer_plain": "El medio de desconexión mismo debe ser un tipo que el Artículo 430 permite para servicio de motor — por ejemplo un interruptor con capacidad en caballos de fuerza o un interruptor termomagnético listado apto para el motor — y debe satisfacer por separado la regla de a la vista en 430.102. Un interruptor común de iluminación no es automáticamente una desconexión de motor. Revisa la capacidad en caballos de fuerza en el dispositivo, no solo su capacidad en amperios.",
+    "nec_ref": "430.109",
+    "nec_edition": "2020",
+    "tags": [
+      "motors",
+      "disconnects"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-041",
+    "question": "¿Puedo ensamblar un sistema de iluminación de bajo voltaje con piezas sueltas?",
+    "aliases": [
+      "piezas de iluminación de bajo voltaje 411",
+      "sistema de iluminación de 30 voltios"
+    ],
+    "answer_plain": "No — un sistema bajo el Artículo 411 se instala como un conjunto listado: fuente de alimentación listada, luminarias listadas, y el cableado secundario que especifica el fabricante. Ensamblar uno en campo con piezas sin relación lo saca del listado sobre el que se construye el artículo. No extiendas un secundario de 30V con métodos de cableado de circuitos derivados que el listado no permite.",
+    "nec_ref": "411",
+    "nec_edition": "2020",
+    "tags": [
+      "low-voltage lighting"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-042",
+    "question": "¿Importa el SCCR de un tablero si los voltios y los amperios coinciden?",
+    "aliases": [
+      "SCCR del tablero y corriente de falla",
+      "capacidad de cortocircuito 408.6"
+    ],
+    "answer_plain": "Sí. La sección 408.6 exige que la capacidad de corriente de cortocircuito del tablero, tablero de distribución o equipo de conmutación sea al menos la corriente de falla disponible en su ubicación. Un tablero de 200A con un SCCR bajo puede ser el tablero equivocado en un servicio que puede entregar más corriente de falla de la que está clasificado para soportar. Obtén la corriente de falla disponible de la compañía eléctrica o del diseño y registra ambos números.",
+    "nec_ref": "408.6",
+    "nec_edition": "2020",
+    "tags": [
+      "panelboard",
+      "commercial"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-043",
+    "question": "¿Pueden dos neutros compartir una terminal en un tablero?",
+    "aliases": [
+      "neutros doblados",
+      "terminal de neutro 408.41",
+      "dos neutros en un tornillo"
+    ],
+    "answer_plain": "No, salvo que la terminal esté específicamente identificada para más de un conductor. La sección 408.41 le da a cada conductor puesto a tierra su propia terminal en un tablero. Compartir una terminal significa que dar servicio a un circuito puede abrir el neutro de otro circuito con corriente, y por eso los inspectores lo buscan en cada cambio de tablero.",
+    "nec_ref": "408.41",
+    "nec_edition": "2020",
+    "tags": [
+      "panelboard"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-044",
+    "question": "¿Qué significa Tipo IC en una luz empotrada?",
+    "aliases": [
+      "lata de luz con clasificación IC",
+      "aislamiento en empotradas 410.116"
+    ],
+    "answer_plain": "Tipo IC significa que la luminaria empotrada está listada para contacto directo con el aislamiento. Una luminaria no IC debe mantener la distancia libre del aislamiento y los combustibles que exigen su marcado y 410.116, y las luminarias empotradas llevan protección térmica contra sobrecalentamiento. La clasificación pertenece a la carcasa específica — revisa su etiqueta antes de aislar el techo.",
+    "nec_ref": "410.116",
+    "nec_edition": "2020",
+    "tags": [
+      "luminaires"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-045",
+    "question": "¿Cómo dimensiono un alimentador que alimenta tres motores?",
+    "aliases": [
+      "alimentador de varios motores",
+      "cálculo de 430.24"
+    ],
+    "answer_plain": "Toma el 125 por ciento de la corriente de plena carga de tabla del motor más grande, y luego suma los demás motores al 100 por ciento de sus corrientes de plena carga de tabla, más cualquier otra carga bajo sus propias reglas. Solo el motor más grande recibe el margen del 125 por ciento. Presenta la suma en una columna etiquetada para que pueda revisarse.",
+    "nec_ref": "430.24",
+    "nec_edition": "2020",
+    "tags": [
+      "motors"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-046",
+    "question": "¿Qué tan grande debe ser una desconexión de motor?",
+    "aliases": [
+      "capacidad de desconexión de motor al 115%",
+      "tamaño de desconexión 430.110"
+    ],
+    "answer_plain": "Un interruptor de uso general que sirve como desconexión de motor debe tener capacidad de al menos el 115 por ciento de la corriente de plena carga del motor según las tablas del Artículo 430. Una desconexión con capacidad en caballos de fuerza en cambio se iguala por su capacidad en caballos de fuerza al motor servido. La desconexión también debe ser un tipo permitido (430.109) y estar a la vista (430.102).",
+    "nec_ref": "430.110",
+    "nec_edition": "2020",
+    "tags": [
+      "motors",
+      "disconnects"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-047",
+    "question": "¿El equipo de HVAC también tiene un SCCR?",
+    "aliases": [
+      "SCCR de aire acondicionado 440.10",
+      "capacidad de corriente de falla del condensador"
+    ],
+    "answer_plain": "Sí — 440.10 exige que la capacidad de corriente de cortocircuito de los controladores de motor y el equipo de control usados con equipo de aire acondicionado y refrigeración sea apta para la corriente de falla disponible, con la capacidad marcada. En trabajo comercial, fotografía el SCCR junto con el MCA y el MOCP. Una incompatibilidad es una pregunta de ingeniería antes de instalar la unidad.",
+    "nec_ref": "440.10",
+    "nec_edition": "2020",
+    "tags": [
+      "HVAC",
+      "commercial"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-048",
+    "question": "¿Un generador estacionario tiene que estar listado?",
+    "aliases": [
+      "listado de generador 445.6",
+      "generador de reserva listado"
+    ],
+    "answer_plain": "Bajo 445.6, agregada en la edición 2020, un generador estacionario que opera a 600 voltios o menos debe estar listado. Confirma que el modelo exacto está listado y mete su manual de instalación en el archivo del trabajo en la etapa de cotización. Una unidad sin listar es una detención, no un descuento.",
+    "nec_ref": "445.6",
+    "nec_edition": "2020",
+    "tags": [
+      "generators"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-049",
+    "question": "¿Puedo guardar material encima de un transformador tipo seco?",
+    "aliases": [
+      "almacenamiento sobre el transformador",
+      "ventilación 450.9"
+    ],
+    "answer_plain": "No. La sección 450.9 exige ventilación para que el transformador pueda deshacerse del calor, y sus disposiciones de marcado prohíben usar las superficies superiores de los transformadores tipo seco cubiertos para almacenamiento. Trata la parte superior del transformador como espacio de equipo. Reporta el material guardado en vez de moverlo en silencio.",
+    "nec_ref": "450.9",
+    "nec_edition": "2020",
+    "tags": [
+      "transformers",
+      "commercial"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-050",
+    "question": "¿Un transformador necesita su propia desconexión?",
+    "aliases": [
+      "desconexión de transformador 450.14",
+      "desconexión de transformador bloqueable"
+    ],
+    "answer_plain": "Sí, 450.14 exige un medio de desconexión para un transformador, aparte de las excepciones de la sección para tipos pequeños limitados. Puede estar a la vista del transformador o remota; una desconexión remota debe poder bloquearse en la posición abierta y el transformador debe marcarse con la ubicación de la desconexión. Decide su ubicación cuando se decide la ubicación del transformador.",
+    "nec_ref": "450.14",
+    "nec_edition": "2020",
+    "tags": [
+      "transformers",
+      "commercial"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-051",
+    "question": "¿Puedo usar un interruptor con capacidad para CA en un circuito de batería?",
+    "aliases": [
+      "interruptor de CC para batería",
+      "desconexión de CC 480.7"
+    ],
+    "answer_plain": "No solo por su capacidad en amperios. La interrupción de CC es más difícil que la de CA porque no hay un cero de corriente natural, así que 480.7 exige métodos de desconexión con capacidad para el servicio de CC. Lee la capacidad de voltaje y corriente de CC del dispositivo y sus marcas de polaridad; si la placa nunca menciona CC, no va en un circuito de batería.",
+    "nec_ref": "480.7",
+    "nec_edition": "2020",
+    "tags": [
+      "batteries"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-052",
+    "question": "¿Qué cambió para las interconexiones de baterías en 2020?",
+    "aliases": [
+      "interconexiones de baterías 480.12",
+      "conectores entre celdas en el NEC"
+    ],
+    "answer_plain": "La edición 2020 movió los requisitos de interconexión de baterías desde el Artículo 706 a 480.12. Los conductores de interconexión se dimensionan para la corriente máxima que el banco puede entregar, con terminales y métodos aptos para el sistema. Aprieta la tornillería con torque según la especificación del fabricante de la batería y regístralo.",
+    "nec_ref": "480.12",
+    "nec_edition": "2020",
+    "tags": [
+      "batteries"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C4-L-053",
+    "question": "¿Qué columna de ampacidad se usa para el aluminio revestido de cobre (CCA)?",
+    "aliases": [
+      "columna de ampacidad del CCA",
+      "el CCA se dimensiona como cobre o como aluminio",
+      "CCA en 310.16"
+    ],
+    "answer_plain": "Usa la columna de aluminio o aluminio revestido de cobre de la Tabla 310.16 — nunca la columna de cobre — con el límite de 60 °C para cable NM y los topes para conductores pequeños haciendo el resto. En la práctica eso es un calibre AWG más grande que el cobre: 12 AWG CCA en 15 A, 10 AWG en 20 A, 8 AWG en 30 A. No hay CCA de 14 AWG en trabajo NM bajo el Código 2020; 334.104 empieza el CCA en 12 AWG.",
+    "nec_ref": "310.16",
+    "nec_edition": "2020",
+    "tags": [
+      "CCA",
+      "ampacity",
+      "conductors"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "diagram_hint": null
+  },
+  {
+    "id": "C4-L-054",
+    "question": "¿Dónde puede conectarse el CCA — y dónde nunca puede conectarse?",
+    "aliases": [
+      "terminaciones de CCA",
+      "se puede conectar CCA por inserción trasera",
+      "tuercas para cable AL/CU y CCA"
+    ],
+    "answer_plain": "Los interruptores y tomacorrientes estándar de 15 y 20 A aceptan CCA en sus terminales de tornillo; el marcado CO/ALR no se exige en ese tamaño, pero los dispositivos de 30 A y más grandes deben estar marcados AL/CU. Los empalmes son distintos: solo los conectores marcados CC, CC-CU o AL/CU están listados para CCA, y una tuerca para cable solo de cobre (CU) no lo está. Nunca conectes CCA por inserción trasera (backstab) — las terminales de inserción están listadas solo para cobre sólido de 14 AWG.",
+    "nec_ref": "110.14",
+    "nec_edition": "2020",
+    "tags": [
+      "CCA",
+      "terminations",
+      "devices"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "diagram_hint": null
+  },
+  {
+    "id": "C4-L-055",
+    "question": "¿Qué valor de resistencia se usa para la caída de voltaje en un recorrido de CCA?",
+    "aliases": [
+      "resistencia del CCA para caída de voltaje",
+      "CCA en la Tabla 8"
+    ],
+    "answer_plain": "La Tabla 8 del Capítulo 9 enumera la resistencia para cobre y para aluminio solamente — no hay una fila de aluminio revestido de cobre de donde leer un valor, así que no tomes prestado un número ni adivines uno. Usa los datos publicados por el fabricante del conductor (para Sharma, Copperweld) o los datos de UL para el producto exacto, y guarda esa hoja con el cálculo. Hasta que esos datos citados estén adjuntos, trata cualquier número de caída de voltaje de CCA como no verificado.",
+    "nec_ref": "Chapter 9, Table 8",
+    "nec_edition": "2020",
+    "tags": [
+      "CCA",
+      "voltage drop"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "diagram_hint": null,
+    "verified": false,
+    "unverified_reason": "La Tabla 8 del Capítulo 9 (2020) no tiene fila de CCA; todavía no se tiene en mano ningún valor de resistencia citado del fabricante/UL, según la regla de Sanjay — nunca inventes un valor."
+  },
+  {
+    "id": "C4-L-056",
+    "question": "¿Usar CCA cambia el llenado de caja o el llenado de tubería (conduit)?",
+    "aliases": [
+      "llenado de caja con CCA 314.16",
+      "llenado de tubería con CCA igual"
+    ],
+    "answer_plain": "No — el llenado de caja de 314.16 y el llenado de tubería de las Tablas 4 y 5 del Capítulo 9 van por tamaño del conductor y tipo de aislamiento, nunca por el metal de adentro. El mismo AWG con el mismo aislamiento llena exactamente igual sea cobre, aluminio o CCA. El detalle práctico es que un circuito de CCA corre un AWG más grande, así que el número de llenado sigue al cable más grande realmente instalado — un conductor de 10 AWG cuenta 2.50 pulgadas cúbicas en una caja, esté hecho de lo que esté hecho.",
+    "nec_ref": "314.16",
+    "nec_edition": "2020",
+    "tags": [
+      "CCA",
+      "box fill",
+      "conduit fill"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "diagram_hint": null
+  },
+  {
+    "id": "C4-L-057",
+    "question": "¿Cómo se pone a tierra y se une (bonding) el equipo de aire acondicionado?",
+    "aliases": [
+      "440.9",
+      "puesta a tierra de HVAC"
+    ],
+    "answer_plain": "440.9 es la sección de puesta a tierra y unión (bonding) del Artículo 440: el camino de puesta a tierra del equipo para equipo de aire acondicionado y refrigeración se dimensiona y se tiende bajo las reglas del Artículo 250 (el conductor de puesta a tierra del equipo dimensionado desde la Tabla 250.122 contra el dispositivo contra sobrecorriente del circuito). Marcado no verificado — la ubicación de la sección está confirmada, su texto exacto espera la verificación impresa de Mike.",
+    "nec_ref": "440.9",
+    "sharma_rule_id": null,
+    "verified": false,
+    "unverified_reason": "Agregado el 2026-11-12 en la pasada de correcciones de la segunda auditoría para cerrar una brecha confirmada; texto todavía no verificado contra el libro impreso de 2020."
+  }
+]

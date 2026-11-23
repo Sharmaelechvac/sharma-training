@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "basis": "NEC 2020 (Código de Construcción de Florida, 8.ª edición). Resúmenes en lenguaje sencillo con nuestras propias palabras — no es el texto de NFPA.",
+    "status": "Entradas PROVISIONALES — los archivos de contenido de Mike Holt reemplazan estas; cada entrada es un borrador hasta que él la revise.",
+    "version": "placeholder-v1"
+  },
+  "topics": [
+    {
+      "id": "box-fill",
+      "title": "Llenado de cajas",
+      "cite": "NEC 314.16",
+      "front": true,
+      "summary": "Cada conductor, abrazadera, dispositivo y tierra ocupa espacio en la caja, contado en pulgadas cúbicas según el calibre del cable. Cuente cada conductor aislado una vez. Según la regla de 2020 en 314.16(B)(5), hasta cuatro conductores de puesta a tierra de equipos cuentan como un solo volumen basado en la tierra más grande, y cada tierra adicional después de cuatro suma un cuarto de ese volumen. Las abrazaderas internas cuentan como uno, y cada yugo de dispositivo cuenta como dos, basado en el cable más grande de ese dispositivo. Compare el total con el volumen marcado en la caja. El cobre, el aluminio y el aluminio revestido de cobre no cambian el volumen — lo que manda es el AWG.",
+      "flag": "Borrador — Mike debe revisarlo"
+    },
+    {
+      "id": "ampacity",
+      "title": "Ampacidad de los conductores",
+      "cite": "NEC Table 310.16 · 240.4(D)",
+      "front": true,
+      "summary": "La ampacidad sale de la Tabla 310.16 según el calibre del cable, el material y la columna de temperatura. El aluminio revestido de cobre se lee en la columna de aluminio — la tabla no tiene columna para CCA (regla S-10 de Sharma). 110.14(C) mantiene muchas terminaciones en la columna de 60°C a menos que estén marcadas para 75°C, y 334.80 impide que el cable NM termine por encima de la columna de 60°C. 240.4(D) sigue limitando el interruptor: 14/12/10 AWG de cobre a 15/20/30A, y 12/10 AWG de aluminio o CCA a 15/25A.",
+      "flag": "Borrador — Mike debe revisarlo"
+    },
+    {
+      "id": "conduit-fill",
+      "title": "Llenado de tuberías (conduit)",
+      "cite": "NEC Chapter 9, Tables 1, 4, 5",
+      "front": true,
+      "summary": "Los conductores pueden ocupar como máximo el 53% del área interna de una tubería para un conductor, el 31% para dos y el 40% para tres o más. Use las áreas de los conductores de la Tabla 5 y las áreas de las tuberías de la Tabla 4. Las tierras de equipos cuentan como conductores para el llenado.",
+      "flag": "Borrador — Mike debe revisarlo"
+    },
+    {
+      "id": "voltage-drop",
+      "title": "Caída de voltaje",
+      "cite": "NEC 210.19 / 215.2 informational notes",
+      "front": true,
+      "summary": "No es un límite estricto del código, pero las notas informativas del código recomiendan no más del 3% de caída en un circuito derivado y 5% en total para alimentador más circuito derivado. Los tramos largos necesitan cable más grande: VD = 2 × K × I × L ÷ circular mils (K = 12.9 cobre, 21.2 aluminio). Use la calculadora de esta app.",
+      "flag": "Borrador — Mike debe revisarlo"
+    },
+    {
+      "id": "branch-210",
+      "title": "Circuitos derivados y separación de receptáculos",
+      "cite": "NEC 210.52 · 210.11",
+      "front": true,
+      "summary": "A lo largo de una pared, ningún punto puede estar a más de 6 ft de un receptáculo, así que la separación máxima es de 12 ft, y todo tramo de pared de 2 ft o más de ancho lleva uno. Los pasillos de 10 ft o más necesitan al menos un receptáculo. Cocinas, baños, lavandería y garajes tienen cada uno sus propios circuitos requeridos — vea las listas de verificación por cuarto.",
+      "flag": "Borrador — Mike debe revisarlo"
+    },
+    {
+      "id": "afci-gfci",
+      "title": "Protección AFCI y GFCI",
+      "cite": "NEC 210.8 · 210.12",
+      "front": true,
+      "summary": "El GFCI protege a las personas contra descargas en lugares húmedos y de riesgo: baños, cocinas, garajes, exteriores, lavandería, sótanos y más. El AFCI protege contra fallas de arco en áreas habitables — dormitorios, salas, cocinas, lavandería y cuartos similares. Regla de Sharma: todo interruptor de 120V es de doble función AFCI/GFCI, así que ambas protecciones están en el interruptor.",
+      "flag": "Borrador — Mike debe revisarlo"
+    },
+    {
+      "id": "clearances",
+      "title": "Espacios libres de trabajo para servicio y tableros",
+      "cite": "NEC 110.26",
+      "front": true,
+      "summary": "El equipo eléctrico necesita espacio de trabajo: al menos 3 ft de profundidad al frente, 30 in de ancho (o el ancho del equipo si es más ancho) y 6.5 ft de altura libre. Ese espacio se mantiene despejado — no es para almacenamiento. En las viviendas, los tableros tampoco pueden ir en baños ni sobre escalones.",
+      "flag": "Borrador — Mike debe revisarlo"
+    },
+    {
+      "id": "grounding",
+      "title": "Puesta a tierra y unión",
+      "cite": "NEC Article 250",
+      "front": true,
+      "summary": "La puesta a tierra conecta el sistema a la tierra física por medio del sistema de electrodos de puesta a tierra (varillas, tubería de agua, electrodo empotrado en concreto); la unión conecta las partes metálicas entre sí para que las fallas disparen el interruptor rápido. El puente de unión principal une el neutro con la tierra solo en el servicio — nunca aguas abajo. Mantenga tierras y neutros separados en los subtableros.",
+      "flag": "Borrador — Mike debe revisarlo"
+    },
+    {
+      "id": "load-calc",
+      "title": "Dimensionamiento de servicio y alimentadores",
+      "cite": "NEC Article 220 (220.82 optional method)",
+      "front": true,
+      "summary": "Para una casa, el método opcional de 220.82 suma la iluminación general a 3 VA por pie cuadrado, 1,500 VA por cada circuito de electrodomésticos pequeños y de lavandería, y el valor de placa de los aparatos fijos. Los primeros 10 kVA de esa suma van al 100% y el resto al 40%. Luego sume la opción mayor entre calefacción o enfriamiento según 220.82(C). La calefacción por resistencias va al 65% cuando hay menos de cuatro unidades controladas por separado, y al 40% cuando hay cuatro o más. Calefacción y enfriamiento no se suman entre sí. Use la calculadora de carga y luego confirme contra la sección impresa.",
+      "flag": "Borrador — Mike debe revisarlo"
+    },
+    {
+      "id": "pools",
+      "title": "Piscinas y spas",
+      "cite": "NEC Article 680",
+      "front": true,
+      "summary": "Las piscinas tienen su propio mundo: unión equipotencial de todo el metal cerca del agua, protección GFCI para receptáculos y equipos, distancias estrictas para receptáculos (6 ft mínimo desde el borde del agua para receptáculos de uso general) y para líneas aéreas. Nunca trate el trabajo de piscinas como un trabajo exterior común.",
+      "flag": "Borrador — Mike debe revisarlo"
+    },
+    {
+      "id": "solar",
+      "title": "Energía solar fotovoltaica",
+      "cite": "NEC Article 690",
+      "front": true,
+      "summary": "Los sistemas solares necesitan medios de desconexión aprobados (listados), apagado rápido para arreglos en techos y etiquetas en el medio de desconexión y en el servicio. Cuando el interruptor solar queda en el extremo opuesto de la barra respecto al principal, 705.12(B)(3)(2) permite que el 125% de la corriente de salida del inversor más el interruptor que protege la barra sumen hasta el 120% de la capacidad de la barra, y ese interruptor de retroalimentación necesita una etiqueta de que no debe moverse. Un método diferente, 705.12(B)(3)(3), limita la suma de las capacidades de los interruptores a la capacidad de la barra misma, no al 120%.",
+      "flag": "Borrador — Mike debe revisarlo"
+    },
+    {
+      "id": "ev",
+      "title": "Cargadores de vehículos eléctricos (EV)",
+      "cite": "NEC Article 625 · 220.57",
+      "front": true,
+      "summary": "La carga de vehículos eléctricos es una carga continua — dimensione el circuito derivado al 125% de la capacidad del cargador. Un cargador de 48A necesita un circuito de 60A. La carga también cuenta al 100% (o 7,200 VA mínimo) en los cálculos de carga del servicio.",
+      "flag": "Borrador — Mike debe revisarlo"
+    },
+    {
+      "id": "generators",
+      "title": "Generadores e interruptores de transferencia",
+      "cite": "NEC Article 702",
+      "front": true,
+      "summary": "Los sistemas de respaldo opcionales deben usar un interruptor de transferencia o un enclavamiento (interlock) para que el generador nunca pueda retroalimentar a la red pública. Los generadores instalados permanentemente necesitan un medio de desconexión y etiquetado claro; las conexiones de generadores portátiles necesitan una entrada aprobada (listada) y equipo de enclavamiento o transferencia. Nunca un cable macho a macho, jamás.",
+      "flag": "Borrador — Mike debe revisarlo"
+    },
+    {
+      "id": "smokes",
+      "title": "Alarmas de humo y CO",
+      "cite": "NFPA 72 · Florida Building Code R314/R315",
+      "front": true,
+      "summary": "Florida requiere alarmas de humo dentro de cada dormitorio, fuera de cada área de dormir y en cada nivel; alarmas de CO donde existan aparatos que queman combustible o garajes adjuntos. En obra nueva van cableadas, interconectadas y con respaldo de batería. Se colocan en techos o en alto en las paredes, lejos de cocinas y baños que causan falsas alarmas.",
+      "flag": "Borrador — Mike debe revisarlo"
+    },
+    {
+      "id": "hvac440",
+      "title": "Medios de desconexión de HVAC",
+      "cite": "NEC Article 440",
+      "front": true,
+      "summary": "El equipo de aire acondicionado necesita un medio de desconexión a la vista de la unidad, dimensionado según la placa de características: la protección del circuito derivado sigue el fusible/interruptor MÁXIMO de la placa, y los conductores siguen la ampacidad MÍNIMA de circuito de la placa. La placa manda sobre las tablas genéricas — lea siempre el MCA y el MOCP de la unidad.",
+      "flag": "Borrador — Mike debe revisarlo"
+    }
+  ]
+}

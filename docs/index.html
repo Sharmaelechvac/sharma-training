@@ -17,7 +17,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="https://sharma-kit.sharma-crew.workers.dev/assets/favicon-32.png">
 <link rel="stylesheet" href="https://sharma-kit.sharma-crew.workers.dev/sharma-kit.css">
 <script src="https://sharma-kit.sharma-crew.workers.dev/sharma-kit.js" defer></script>
-<link rel="stylesheet" href="app.css?v=1">
+<link rel="stylesheet" href="app.css?v=2">
 </head>
 <body class="sk">
 <header class="sk-header"><div class="sk-header__bar">
@@ -42,8 +42,41 @@
   <a class="sk-tab" href="#/code" data-tab="code"><svg class="sk-icon"><use href="#i-search"/></svg>Code</a>
   <a class="sk-tab" href="#/howtos" data-tab="howtos"><svg class="sk-icon"><use href="#i-tools"/></svg>How-Tos</a>
   <a class="sk-tab" href="#/quizzes" data-tab="quizzes"><svg class="sk-icon"><use href="#i-edit"/></svg>Quizzes</a>
+  <button class="tr-langbtn" id="langToggle" type="button" aria-label="Language / Idioma">Español</button>
 </div></nav>
-<script type="module" src="app.js?v=1"></script>
+<script>
+/* Language toggle (EN/ES). The choice lives in localStorage "tr-lang";
+   app.js + i18n.js read the same key. This script translates the static
+   shell (tabs, sheet) and wires the button; content comes from app.js. */
+(function(){
+  var es = false;
+  try { es = localStorage.getItem("tr-lang") === "es"; } catch (e) {}
+  var btn = document.getElementById("langToggle");
+  if (btn) {
+    btn.textContent = es ? "English" : "Español";
+    btn.addEventListener("click", function(){
+      try { localStorage.setItem("tr-lang", es ? "en" : "es"); } catch (e) {}
+      location.reload();
+    });
+  }
+  if (!es) return;
+  document.documentElement.setAttribute("lang", "es");
+  document.title = "Capacitación — Sharma Electric & HVAC";
+  var MAP = {
+    "Training": "Capacitación", "Course": "Curso", "Code": "Código", "How-Tos": "Guías", "Quizzes": "Cuestionarios",
+    "More": "Más", "Display": "Pantalla", "About": "Acerca de", "Code basis": "Base del código", "Licenses": "Licencias",
+    "Rough-in course · Code lookup · How-tos · Quizzes": "Curso de instalación preliminar · Consulta del código · Guías · Cuestionarios",
+    "NEC 2020 · Florida Building Code, 8th Edition": "NEC 2020 · Código de Construcción de Florida, 8.ª edición",
+    "Plain-language summaries in our own words — always confirm against the official NEC, the plans, and your AHJ.": "Resúmenes en lenguaje sencillo, con nuestras propias palabras — confirme siempre con el NEC oficial, los planos y su autoridad competente (AHJ)."
+  };
+  document.querySelectorAll(".sk-tab, .sk-header__title, .sk-sheet__title, .sk-sectionlabel span, .sk-row__title, .sk-row__sub, .tr-sheetnote").forEach(function(el){
+    el.childNodes.forEach(function(n){
+      if (n.nodeType === 3) { var k = n.textContent.trim(); if (MAP[k]) n.textContent = n.textContent.replace(k, MAP[k]); }
+    });
+  });
+})();
+</script>
+<script type="module" src="app.js?v=2"></script>
 <script>
 (function(){
   function reg(){ if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) { try { navigator.serviceWorker.register("sw.js", { scope: "/sharma-training/" }).catch(function(){}); } catch(e){} } }
