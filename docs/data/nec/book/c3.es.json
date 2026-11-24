@@ -123,8 +123,28 @@
       "florida_note": "El propio NEC 300.5(D)(3) requiere una cinta de advertencia — esa parte es código, no preferencia local — pero solo para conductores de acometida subterráneos que no estén encajados en concreto y estén enterrados a 18 in o más bajo el nivel del terreno: su ubicación debe identificarse con una cinta de advertencia colocada en la zanja al menos 12 in por encima de la instalación subterránea. El NEC no impone esa regla de la cinta a alimentadores y circuitos ramales comunes. Las AHJ locales pueden agregar requisitos de cama o cinta más allá de eso — confírmalo en el permiso, y no supongas que la tabla es todo el trabajo.",
       "verified": true,
       "prev_id": "C3-300.4(G)",
-      "next_id": "C3-300.11",
+      "next_id": "C3-300.7",
       "chapter": 3
+    },
+    {
+      "id": "C3-300.7",
+      "chapter": 3,
+      "article": "300",
+      "section": "300.7",
+      "title": "Sellado de canalizaciones que pasan entre temperaturas diferentes",
+      "plain_explanation": "Donde parte de una canalización está a una temperatura mucho menor que otra parte — un tramo desde un edificio cálido hacia un cuarto de almacenamiento frío es el caso de libro — el aire más cálido dentro de la canalización circula hacia la parte fría y su humedad se condensa ahí, mojando conductores que se instalaron secos. Esta sección requiere que la canalización se llene con un material de sellado aprobado en el límite de temperatura, para detener esa circulación de aire. Es un sello contra condensación, no un sello de impermeabilización: la regla separada para sellar una canalización de modo que la humedad no pueda alcanzar partes vivas es 300.5(G), y los accesorios de sellado a prueba de explosión son un tema de lugares peligrosos (clasificados) en el Artículo 501, no de esta sección.",
+      "on_the_job": "El caso de Florida es cualquier conduit que sale de un ático caliente o de una pared exterior asoleada y entra a un espacio con aire acondicionado o a un cuarto frío (walk-in cooler): ponga el sellador de ducto (duct seal) en el tramo donde cambia la temperatura, del lado cálido del límite, antes de tender los conductores o como indique el método de la sección. Un tramo que gotea en el tablero en agosto suele ser esta regla, pasada por alto.",
+      "sharma_note": "",
+      "figure_idea": "Un conduit cruzando una pared desde un exterior iluminado por el sol hacia un interior frío, con un sello dibujado dentro del conduit en la línea de la pared y gotas de condensación mostradas en la versión sin sellar a su lado.",
+      "related_ids": [
+        "C3-300.5",
+        "C3-ART-300"
+      ],
+      "florida_note": "",
+      "verified": false,
+      "prev_id": "C3-300.5",
+      "next_id": "C3-300.11",
+      "sharma_rule_ids": []
     },
     {
       "id": "C3-300.11",
@@ -140,7 +160,7 @@
       ],
       "florida_note": "",
       "verified": true,
-      "prev_id": "C3-300.5",
+      "prev_id": "C3-300.7",
       "next_id": "C3-300.14",
       "chapter": 3
     },
@@ -258,7 +278,7 @@
       "article": "310",
       "section": "310.12",
       "title": "La regla del 83% para vivienda en acometidas y alimentadores de carga total",
-      "plain_explanation": "Para una acometida monofásica de vivienda de 100A a 400A que lleva toda la carga de la casa, los conductores de acometida pueden dimensionarse al 83% del valor de la acometida, en lugar de la ampacidad completa de la Tabla 310.16. La misma idea aplica a un alimentador que lleva toda la carga de la vivienda, como el alimentador desde un medidor-principal exterior hasta el tablero principal interior. No aplica a un alimentador de carga parcial, y no aplica cuando está en juego la corrección por temperatura o el ajuste por agrupamiento.",
+      "plain_explanation": "Para una acometida monofásica de vivienda de 100A a 400A que lleva toda la carga de la casa, los conductores de acometida pueden dimensionarse al 83% del valor de la acometida, en lugar de la ampacidad completa de la Tabla 310.16. La misma idea aplica a un alimentador que lleva toda la carga de la vivienda, como el alimentador desde un medidor-principal exterior hasta el tablero principal interior. No aplica a un alimentador de carga parcial, y no aplica cuando está en juego la corrección por temperatura o el ajuste por agrupamiento.\n\nLa Tabla 310.12 completa — la capacidad de la acometida o del alimentador de carga total, luego el conductor que permite:\n• 100A — 4 AWG de cobre / 2 AWG de aluminio\n• 110A — 3 AWG de cobre / 1 AWG de aluminio\n• 125A — 2 AWG de cobre / 1/0 de aluminio\n• 150A — 1 AWG de cobre / 2/0 de aluminio\n• 175A — 1/0 de cobre / 3/0 de aluminio\n• 200A — 2/0 de cobre / 4/0 de aluminio\n• 225A — 3/0 de cobre / 250 kcmil de aluminio\n• 250A — 4/0 de cobre / 300 kcmil de aluminio\n• 300A — 250 kcmil de cobre / 350 kcmil de aluminio\n• 350A — 350 kcmil de cobre / 500 kcmil de aluminio\n• 400A — 400 kcmil de cobre / 600 kcmil de aluminio",
       "on_the_job": "El par que Sharma usa a diario: una acometida de casa de 200A es 2/0 de cobre o 4/0 de aluminio cuando aplica esta regla. Un alimentador a un subtablero de garaje que lleva solo parte de la carga de la casa se dimensiona al valor completo de la Tabla 310.16 — sin el 83%.",
       "sharma_note": "",
       "figure_idea": "Diagrama unifilar de una casa: medidor-principal afuera, tablero principal adentro, el alimentador entre ellos etiquetado 'carga total — puede aplicar el 83%'; un segundo alimentador a un garaje etiquetado 'carga parcial — tamaño completo'.",
@@ -271,7 +291,7 @@
         "C3-L-008"
       ],
       "florida_note": "",
-      "verified": true,
+      "verified": false,
       "prev_id": "C3-ART-310",
       "next_id": "C3-310.15",
       "chapter": 3
@@ -281,8 +301,8 @@
       "article": "310",
       "section": "310.15",
       "title": "Corrección de ampacidad (temperatura) y ajuste (agrupamiento)",
-      "plain_explanation": "La Tabla 310.16 supone no más de tres conductores portadores de corriente juntos y una temperatura ambiente de 30°C (86°F). Cuando la realidad es más caliente, o más conductores comparten una canalización o un cable, la ampacidad baja: un factor de corrección ambiental por temperatura y un factor de ajuste por la cantidad de conductores portadores de corriente — 80% para 4 a 6, 70% para 7 a 9, 50% para 10 a 20, 45% para 21 a 30, 40% para 31 a 40 y 35% para 41 o más. Los conductores de puesta a tierra de equipo no cuentan, y un neutro que lleva solo la carga desbalanceada de su circuito por lo general tampoco cuenta. Puedes empezar el cálculo desde el valor del aislamiento del conductor (por ejemplo, la columna de 90°C para conductores THHN o NM), siempre que el número final no supere lo que permitan la columna de terminación y el límite propio del método.",
-      "on_the_job": "Cuenta con honestidad los conductores portadores de corriente en un manojo de circuitos derivados: tres cables NM 12/2 agrupados por más de 24 in son seis conductores portadores de corriente, no tres circuitos a ampacidad completa. Los áticos calientes de Florida son el caso ambiental que Sharma encuentra más seguido — ve el consejo de ático AH-07, cuya cita de 310.15(B)(1) Mike debe volver a revisar contra la numeración de 2020.",
+      "plain_explanation": "La Tabla 310.16 supone no más de tres conductores portadores de corriente juntos y una temperatura ambiente de 30°C (86°F). Cuando la realidad es más caliente, o más conductores comparten una canalización o un cable, la ampacidad baja: un factor de corrección ambiental por temperatura y un factor de ajuste por la cantidad de conductores portadores de corriente — 80% para 4 a 6, 70% para 7 a 9, 50% para 10 a 20, 45% para 21 a 30, 40% para 31 a 40 y 35% para 41 o más. Los conductores de puesta a tierra de equipo no cuentan, y un neutro que lleva solo la carga desbalanceada de su circuito por lo general tampoco cuenta. Puedes empezar el cálculo desde el valor del aislamiento del conductor (por ejemplo, la columna de 90°C para conductores THHN o NM), siempre que el número final no supere lo que permitan la columna de terminación y el límite propio del método.\n\nLos factores de corrección ambiental en sí (Tabla 310.15(B)(1)), para las bandas de temperatura sobre la base de 30°C:\n• A 36–40°C — 0.82 para un conductor de 60°C, 0.88 para 75°C, 0.91 para 90°C\n• A 41–45°C — 0.71 / 0.82 / 0.87\n• A 46–50°C — 0.58 / 0.75 / 0.82\n• A 51–55°C — 0.41 / 0.67 / 0.76\n• A 56–60°C — la columna de 60°C ya no corrige (se muestra como — en la tabla) / 0.58 / 0.71\n• A 61–70°C — — / 0.33 / 0.58\nDonde aplican ambos, los dos factores se multiplican: un tramo agrupado en un ático caliente toma el factor de conteo y el factor de temperatura juntos.",
+      "on_the_job": "Cuenta con honestidad los conductores portadores de corriente en un manojo de circuitos derivados: tres cables NM 12/2 agrupados por más de 24 in son seis conductores portadores de corriente, no tres circuitos a ampacidad completa. Los áticos calientes de Florida son el caso ambiental que Sharma encuentra más seguido — ve el consejo de ático AH-07, cuya cita de 310.15(B)(1) Mike debe volver a revisar contra la numeración de 2020.\n\nEjemplo desarrollado: el THHN 12 AWG empieza en 30A en la columna de 90°C. En un ático a 50°C la corrección es 0.82, dando 24.6A — todavía suficiente para su breaker de 20A. Tendido como cable NM, el mismo conductor tiene tope en su valor de tabla de 60°C de 20A antes de que siquiera se alcance el tope de 240.4(D), así que un solo circuito de ático rara vez cambia; un manojo de circuitos derivados, donde el factor de conteo se suma al factor de temperatura, es donde la respuesta se mueve.",
       "sharma_note": "",
       "figure_idea": "Gráfico de barras: una canalización con 3, 6 y 9 conductores portadores de corriente, con los factores de 100%, 80% y 70% marcados.",
       "related_ids": [
@@ -293,7 +313,7 @@
         "C3-L-010"
       ],
       "florida_note": "Los áticos de Florida normalmente superan por mucho los 30°C en verano; eso aquí es una condición de diseño, no un caso extremo.",
-      "verified": true,
+      "verified": false,
       "prev_id": "C3-310.12",
       "next_id": "C3-310.16",
       "chapter": 3
@@ -303,7 +323,7 @@
       "article": "310",
       "section": "310.16",
       "title": "Tabla 310.16 — cómo leer la tabla de ampacidad",
-      "plain_explanation": "La Tabla 310.16 da la ampacidad permitida de un conductor aislado por tamaño, material y columna de temperatura: 60°C, 75°C y 90°C, para cobre a la izquierda y para aluminio y aluminio revestido de cobre juntos a la derecha. Léela en cuatro pasos. Uno, encuentra el tamaño. Dos, elige la columna del material — CCA se lee en las columnas de aluminio, nunca en las de cobre. Tres, elige la columna de temperatura que permitan tus terminaciones según 110.14(C); la mayoría del equipo de casa es de 75°C, y la columna de 90°C es principalmente un punto de partida para corrección y ajuste. Cuatro, aplica 310.15 y después revisa los topes para conductores pequeños en 240.4(D): el cobre 14/12/10 AWG tiene tope de 15/20/30A, y el aluminio/CCA 12/10 AWG tiene tope de 15/25A, sin importar lo que diga la fila de la tabla.",
+      "plain_explanation": "La Tabla 310.16 da la ampacidad permitida de un conductor aislado por tamaño, material y columna de temperatura: 60°C, 75°C y 90°C, para cobre a la izquierda y para aluminio y aluminio revestido de cobre juntos a la derecha. Léela en cuatro pasos. Uno, encuentra el tamaño. Dos, elige la columna del material — CCA se lee en las columnas de aluminio, nunca en las de cobre. Tres, elige la columna de temperatura que permitan tus terminaciones según 110.14(C); la mayoría del equipo de casa es de 75°C, y la columna de 90°C es principalmente un punto de partida para corrección y ajuste. Cuatro, aplica 310.15 y después revisa los topes para conductores pequeños en 240.4(D): el cobre 14/12/10 AWG tiene tope de 15/20/30A, y el aluminio/CCA 12/10 AWG tiene tope de 15/25A, sin importar lo que diga la fila de la tabla.\n\nLas filas que Sharma lee a diario, expresadas como 60°C / 75°C / 90°C. Cobre:\n• 14 AWG — 15 / 20 / 25 A\n• 12 AWG — 20 / 25 / 30 A\n• 10 AWG — 30 / 35 / 40 A\n• 8 AWG — 40 / 50 / 55 A\n• 6 AWG — 55 / 65 / 75 A\n• 4 AWG — 70 / 85 / 95 A\n• 3 AWG — 85 / 100 / 115 A\n• 2 AWG — 95 / 115 / 130 A\n• 1/0 AWG — 125 / 150 / 170 A\n• 2/0 AWG — 145 / 175 / 195 A\n• 3/0 AWG — 165 / 200 / 225 A\n• 4/0 AWG — 195 / 230 / 260 A\n• 250 kcmil — 215 / 255 / 290 A\nAluminio y aluminio revestido de cobre, mismo formato:\n• 12 AWG — 15 / 20 / 25 A\n• 10 AWG — 25 / 30 / 35 A\n• 8 AWG — 30 / 40 / 45 A\n• 6 AWG — 40 / 50 / 60 A\n• 4 AWG — 55 / 65 / 75 A\n• 2 AWG — 75 / 90 / 100 A\n• 1/0 AWG — 100 / 120 / 135 A\n• 2/0 AWG — 115 / 135 / 150 A\n• 3/0 AWG — 130 / 155 / 175 A\n• 4/0 AWG — 150 / 180 / 205 A\n• 250 kcmil — 170 / 205 / 230 A\nEstos son valores de tabla antes de la corrección y el ajuste de 310.15, y antes de los topes para conductores pequeños de 240.4(D) — los topes, no la columna de 90°C, fijan el breaker en los conductores pequeños.",
       "on_the_job": "Lecturas trabajadas de la tabla v1: el cobre 12 AWG es 20/25/30A a 60/75/90°C. El CCA 12 AWG es 15/20/25A en las columnas de aluminio — y 240.4(D) le pone tope de un breaker de 15A. El CCA 10 AWG es 25/30/35A, con tope de 25A. Ese cambio de una columna es exactamente por lo que un circuito de CCA sube un tamaño desde el cobre para el mismo breaker.",
       "sharma_note": "S-10: los circuitos ramales son de cobre por defecto — 14 AWG en 15A, 12 AWG en 20A. Cuando se usa CCA, sube un AWG (12 en 15A, 10 en 20A) porque la Tabla 310.16 clasifica CCA en la columna de aluminio. Las terminaciones deben estar marcadas para el conductor (110.14); los conectores de cable y las terminales necesitan marcado AL-CU / CU-AL, los conectores solo CU no están clasificados para CCA, y los terminales de presión son solo para cobre sólido 14 AWG. Nunca uses conexión por presión trasera (backstab). El cable del circuito del microondas está PENDING según S-06 (12 AWG de cobre contra 10 AWG de CCA).",
       "figure_idea": "Un extracto impreso de la Tabla 310.16 con las filas de 12 AWG y 10 AWG resaltadas, una flecha desde 'CCA' hacia las columnas de aluminio, y los topes de 240.4(D) escritos debajo de las filas.",
@@ -319,7 +339,7 @@
         "C3-Q-006"
       ],
       "florida_note": "",
-      "verified": true,
+      "verified": false,
       "sharma_rule_ids": [
         "S-10"
       ],
@@ -405,7 +425,7 @@
       "article": "312",
       "section": "312.6",
       "title": "Espacio para doblar y desviar conductores en gabinetes",
-      "plain_explanation": "Los conductores grandes no se pueden doblar alrededor de un pulgar. Esta sección fija el espacio mínimo dentro de gabinetes, cajas de corte y gabinetes de medidor para que los conductores se desvíen y se doblen donde entran y terminan — calculado desde tablas de la sección por tamaño de conductor, cantidad de conductores por terminal y si el conductor gira o pasa recto. Un gabinete puede ser suficientemente grande en la pared y aun así demasiado pequeño para el 4/0 o el 250 kcmil que tiene que terminar en él.",
+      "plain_explanation": "Los conductores grandes no se pueden doblar alrededor de un pulgar. Esta sección fija el espacio mínimo dentro de gabinetes, cajas de corte y gabinetes de medidor para que los conductores se desvíen y se doblen donde entran y terminan — calculado desde tablas de la sección por tamaño de conductor, cantidad de conductores por terminal y si el conductor gira o pasa recto. Un gabinete puede ser suficientemente grande en la pared y aun así demasiado pequeño para el 4/0 o el 250 kcmil que tiene que terminar en él.\n\nValores de trabajo de la Tabla 312.6(B) — espacio mínimo para doblar cables en terminales, un conductor por terminal:\n• 4/0 AWG — 5-1/2 in\n• 250 kcmil — 6 in\n• 300 kcmil — 6-1/2 in\n• 350 kcmil — 7 in\n• 400 kcmil — 8 in\n• 500 kcmil — 8 in\n• 600 kcmil — 9 in\n• 750 kcmil — 10 in\n• 1000 kcmil — 12 in\nDos conductores que terminan en un solo terminal necesitan más que la cifra de un conductor — las columnas siguientes de la tabla. El espacio de desviación para conductores que entran y giran dentro de la canaleta (gutter) es la Tabla 312.6(A), calculado por separado.",
       "on_the_job": "Dimensiona el gabinete desde el conductor, no desde el espacio en la pared: revisa la tabla de espacio para doblar para el conductor más grande y la dirección de entrada (arriba, abajo, lado) antes de pedir el equipo. Forzar un alimentador en una curva demasiado cerrada es aislamiento dañado y una inspección fallida en un solo movimiento.",
       "sharma_note": "",
       "figure_idea": "Interior de un tablero con un conductor alimentador grande doblándose desde una entrada inferior hasta su terminal, con el espacio requerido para doblar sombreado y dimensionado desde la tabla de la sección (los valores se dejan a la tabla, no se repiten).",
@@ -413,7 +433,7 @@
         "C3-ART-312"
       ],
       "florida_note": "",
-      "verified": true,
+      "verified": false,
       "prev_id": "C3-ART-312",
       "next_id": "C3-312.8",
       "chapter": 3
@@ -463,7 +483,7 @@
       "article": "314",
       "section": "314.16",
       "title": "Llenado de caja — volumen, asignaciones y conteo",
-      "plain_explanation": "Una caja no puede llenarse más allá de su volumen. Empieza con el volumen de la caja: para una caja metálica estándar usa la Tabla 314.16(A); para una caja no metálica o marcada usa el volumen marcado en la propia caja. Después carga el contenido usando las asignaciones de la Tabla 314.16(B) — 2.00 cu in por cada 14 AWG, 2.25 por cada 12 AWG, 2.50 por cada 10 AWG. Las reglas de conteo en 314.16(B)(1) a (5) deciden cuántas asignaciones cuesta cada cosa — incluida la regla de tierras de 2020 de la página siguiente (hasta cuatro tierras cuentan una vez, cada una después de cuatro agrega un cuarto) — y el cargo total no puede superar el volumen de la caja.",
+      "plain_explanation": "Una caja no puede llenarse más allá de su volumen. Empieza con el volumen de la caja: para una caja metálica estándar usa la Tabla 314.16(A); para una caja no metálica o marcada usa el volumen marcado en la propia caja. Después carga el contenido usando las asignaciones de la Tabla 314.16(B) — 2.00 cu in por cada 14 AWG, 2.25 por cada 12 AWG, 2.50 por cada 10 AWG. Las reglas de conteo en 314.16(B)(1) a (5) deciden cuántas asignaciones cuesta cada cosa — incluida la regla de tierras de 2020 de la página siguiente (hasta cuatro tierras cuentan una vez, cada una después de cuatro agrega un cuarto) — y el cargo total no puede superar el volumen de la caja.\n\nVolúmenes de caja de la Tabla 314.16(A) para las cajas que Sharma almacena:\n• 4 in cuadrada × 1-1/2 in de profundidad — 21.0 cu in\n• 4 in cuadrada × 2-1/8 in de profundidad — 30.3 cu in\n• 4-11/16 in cuadrada × 1-1/2 in de profundidad — 25.5 cu in\n• 4-11/16 in cuadrada × 2-1/8 in de profundidad — 42.0 cu in\n• 4 in octagonal × 1-1/4 in de profundidad — 12.5 cu in\n• 4 in octagonal × 1-1/2 in de profundidad — 15.0 cu in\n• 4 in octagonal × 2-1/8 in de profundidad — 21.5 cu in\nUn anillo de yeso o anillo de extensión marcado con su volumen agrega ese volumen; uno sin marcar no agrega nada que puedas contar.",
       "on_the_job": "Los cinco conteos, en orden de campo: (1) cada conductor que entra desde afuera y termina o se empalma en la caja cuenta una vez, y un conductor que pasa sin romperse también cuenta una vez, mientras que un chicote corto que empieza y termina en la caja cuenta cero; (2) [ve la página de (B) para la lista completa en orden]. Ejemplo trabajado de las tablas v1: una caja cuadrada de 4 x 1-1/2 es 21.0 cu in. Tres cables NM 12/2, un tomacorriente y abrazaderas internas cargan 6 conductores x 2.25 = 13.50, tierras 2.25, yugo de dispositivo 4.50, abrazaderas 2.25 — total 22.50 cu in. No pasa. La cuadrada de 4 x 2-1/8, con 30.3 cu in, sí pasa.",
       "sharma_note": "La altura de la caja en la pared no es una regla de 314 — Sharma S-04 (tomacorrientes a 18 in hasta la parte inferior de la caja, si el plano no dice nada) y S-05 (interruptores a 48 in hasta el centro) gobiernan la colocación; 314 gobierna si la caja que colocaste es suficientemente grande y está bien puesta.",
       "figure_idea": "Figura tipo hoja de trabajo: a la izquierda un sello de volumen de caja '30.3 cu in', a la derecha una lista de conteo que suma 22.50, con una marca verde de aprobación.",
@@ -482,7 +502,7 @@
         "C3-Q-003"
       ],
       "florida_note": "",
-      "verified": true,
+      "verified": false,
       "prev_id": "C3-ART-314",
       "next_id": "C3-314.16(B)",
       "chapter": 3
@@ -711,7 +731,7 @@
       "article": "330",
       "section": "330",
       "title": "Cable con revestimiento metálico — Tipo MC",
-      "plain_explanation": "El Tipo MC es un conjunto de fábrica de conductores aislados dentro de una funda metálica — armadura lisa, corrugada o entrelazada — con su propio arreglo de puesta a tierra de equipo. Es el equivalente comercial de NM: puede usarse expuesto u oculto, en lugares secos y en los demás lugares que permita su listado, pasado en paredes existentes, y corrido donde NM no puede ir, como muchos techos y paredes comerciales. No puede usarse donde estará sujeto a daño físico, en lugares mojados a menos que el cable específico esté listado para ello, ni en los demás usos prohibidos que lista su artículo.",
+      "plain_explanation": "El Tipo MC es un conjunto de fábrica de conductores aislados dentro de una funda metálica — armadura lisa, corrugada o entrelazada — con su propio arreglo de puesta a tierra de equipo. Es el equivalente comercial de NM: puede usarse expuesto u oculto, en lugares secos y en los demás lugares que permita su listado, pasado en paredes existentes, y corrido donde NM no puede ir, como muchos techos y paredes comerciales. No puede usarse donde estará sujeto a daño físico, en lugares mojados a menos que el cable específico esté listado para ello, ni en los demás usos prohibidos que lista su artículo.\n\nLos números de soporte (330.30): MC debe sujetarse dentro de 12 in de cada caja, gabinete y accesorio, y soportarse a intervalos que no excedan 6 ft. Los tramos cortos a luminarias y los tramos pasados en paredes existentes tienen sus propias excepciones en esa sección — las cifras de 12 in y 6 ft son el ritmo por defecto.",
       "on_the_job": "Corta MC con la herramienta correcta y usa conectores listados para MC — un conector de Romex no es un conector de MC. La sujeción y el soporte siguen 330.30 (ve la consulta complementaria), con el patrón familiar de sujetar cerca de las cajas y soportar a intervalos regulares, más excepciones para tramos pasados y tramos cortos a luminarias.",
       "sharma_note": "S-01 aplica en trabajo comercial, donde MC se usa más: circuitos ramales de 20A mínimo, 12 AWG de cobre mínimo.",
       "figure_idea": "Tramo de cable MC a través de montantes comerciales con un conector listado en una caja cuadrada de 4, mostrando la armadura y la tierra verde.",
@@ -721,7 +741,7 @@
         "S-01"
       ],
       "florida_note": "",
-      "verified": true,
+      "verified": false,
       "sharma_rule_ids": [
         "S-01"
       ],
@@ -1007,7 +1027,7 @@
       "article": "342",
       "section": "342",
       "title": "Tubo conduit metálico intermedio — IMC",
-      "plain_explanation": "IMC es la canalización de acero de peso intermedio: pared más delgada que el tubo conduit metálico rígido, más pesada y más fuerte que EMT, roscada como RMC y usable en la mayoría de los mismos lugares, incluidos muchos lugares mojados y expuestos con los accesorios correctos. Sharma lo encuentra principalmente en trabajo comercial y de acometida donde EMT no es suficientemente resistente y no se necesita rígido completo.",
+      "plain_explanation": "IMC es la canalización de acero de peso intermedio: pared más delgada que el tubo conduit metálico rígido, más pesada y más fuerte que EMT, roscada como RMC y usable en la mayoría de los mismos lugares, incluidos muchos lugares mojados y expuestos con los accesorios correctos. Sharma lo encuentra principalmente en trabajo comercial y de acometida donde EMT no es suficientemente resistente y no se necesita rígido completo.\n\nLos números de soporte (342.30): IMC debe sujetarse dentro de 3 ft de cada caja, gabinete, cuerpo de conduit u otra terminación. Para tramos rectos, la Tabla 342.30(B)(2) espacia los soportes por tamaño:\n• 1/2 in y 3/4 in — cada 10 ft\n• 1 in — cada 12 ft\n• 1-1/4 in y 1-1/2 in — cada 14 ft\n• 2 in — cada 16 ft\n• 2-1/2 in y mayores — cada 20 ft",
       "on_the_job": "Una nota de tamaño comercial que importa en campo: IMC y RMC comparten el mismo diámetro exterior, pero la pared más delgada de IMC le da un área interior mayor, así que sus valores de llenado de la Tabla 4 del Capítulo 9 son propios — no uses la fila de RMC para un tramo de IMC. Enlaza al Capítulo 9 para los números reales; no los vuelvas a derivar aquí.",
       "sharma_note": "",
       "figure_idea": "Tres trozos cortos de canalización lado a lado — EMT, IMC, RMC — con el espesor de pared mostrado en corte transversal.",
@@ -1016,7 +1036,7 @@
         "C3-L-034"
       ],
       "florida_note": "",
-      "verified": true,
+      "verified": false,
       "prev_id": "C3-ART-340",
       "next_id": "C3-ART-344",
       "chapter": 3
@@ -1026,7 +1046,7 @@
       "article": "344",
       "section": "344",
       "title": "Tubo conduit metálico rígido — RMC",
-      "plain_explanation": "RMC es la canalización de acero roscada de pared gruesa — la canalización común más resistente de este capítulo. Puede usarse en casi todos los lugares, incluido bajo tierra (donde su cobertura de 6 in en la fila general de terreno abierto de la Tabla 300.5 es el beneficio de su resistencia. Bajo una entrada de autos de una vivienda de una o dos familias, ese mismo tubo conduit metálico rígido necesita 18 in, igual que PVC y el cable de entierro directo. Calles, caminos y otras entradas de autos y estacionamientos exigen 24 in para todos los métodos), lugares mojados y lugares sujetos a daño físico, con accesorios y soportes hechos para él. Bajo tierra, la protección contra corrosión y las condiciones del suelo gobiernan cuánto dura.",
+      "plain_explanation": "RMC es la canalización de acero roscada de pared gruesa — la canalización común más resistente de este capítulo. Puede usarse en casi todos los lugares, incluido bajo tierra (donde su cobertura de 6 in en la fila general de terreno abierto de la Tabla 300.5 es el beneficio de su resistencia. Bajo una entrada de autos de una vivienda de una o dos familias, ese mismo tubo conduit metálico rígido necesita 18 in, igual que PVC y el cable de entierro directo. Calles, caminos y otras entradas de autos y estacionamientos exigen 24 in para todos los métodos), lugares mojados y lugares sujetos a daño físico, con accesorios y soportes hechos para él. Bajo tierra, la protección contra corrosión y las condiciones del suelo gobiernan cuánto dura.\n\nLos números de soporte (344.30): RMC debe sujetarse dentro de 3 ft de cada caja, gabinete, cuerpo de conduit u otra terminación — con los permisos de la sección donde los acoplamientos roscados lo hacen impracticable. Para tramos rectos, la Tabla 344.30(B)(2) espacia los soportes por tamaño:\n• 1/2 in y 3/4 in — cada 10 ft\n• 1 in — cada 12 ft\n• 1-1/4 in y 1-1/2 in — cada 14 ft\n• 2 in — cada 16 ft\n• 2-1/2 in y mayores — cada 20 ft",
       "on_the_job": "La profundidad de entierro de 6 in es la razón por la que RMC todavía gana su costo en terreno abierto y en zanjas de roca poco profunda que no están bajo una entrada de autos. No es una profundidad de 6 in bajo una entrada de autos de una vivienda de una o dos familias — esa fila es 18 in para RMC y para PVC. Bajo calles, caminos, callejones y otras entradas de autos o estacionamientos, la Tabla 300.5 requiere 24 in de cobertura para todos los métodos, RMC incluido.",
       "sharma_note": "",
       "figure_idea": "Corte transversal de terreno abierto: RMC a 6 in junto a un tramo de PVC a 18 in. Una entrada de autos de una vivienda de una o dos familias es una fila diferente de la Tabla 300.5 — 18 in para ambos.",
@@ -1036,7 +1056,7 @@
         "C3-L-035"
       ],
       "florida_note": "",
-      "verified": true,
+      "verified": false,
       "prev_id": "C3-ART-342",
       "next_id": "C3-ART-348",
       "chapter": 3
@@ -1082,7 +1102,7 @@
       "article": "352",
       "section": "352",
       "title": "Tubo conduit rígido de cloruro de polivinilo — PVC",
-      "plain_explanation": "PVC es la canalización rígida no metálica que Sharma usa bajo tierra y en puntos mojados y corrosivos: acometidas y alimentadores en el patio, tramos en área de piscina y fundas. Schedule 40 es la pared estándar; Schedule 80 es la pared más gruesa usada donde el tramo está expuesto a daño físico. PVC no puede usarse donde el calor ambiente o del conductor supere su clasificación de temperatura, en los lugares peligrosos y tipo teatro que prohíbe su artículo, ni como soporte para accesorios y equipo colgando de él. La cobertura subterránea para PVC es 18 in en el caso general de la Tabla 300.5. Dos comportamientos en campo definen el método: se expande y se contrae mucho con la temperatura, y sus uniones se sueldan con solvente, no se roscan (excepto en accesorios y adaptadores roscados listados). PVC es no metálico, así que la canalización misma nunca es el camino de tierra — un conductor de puesta a tierra de equipo va en el tramo donde se requiera uno.",
+      "plain_explanation": "PVC es la canalización rígida no metálica que Sharma usa bajo tierra y en puntos mojados y corrosivos: acometidas y alimentadores en el patio, tramos en área de piscina y fundas. Schedule 40 es la pared estándar; Schedule 80 es la pared más gruesa usada donde el tramo está expuesto a daño físico. PVC no puede usarse donde el calor ambiente o del conductor supere su clasificación de temperatura, en los lugares peligrosos y tipo teatro que prohíbe su artículo, ni como soporte para accesorios y equipo colgando de él. La cobertura subterránea para PVC es 18 in en el caso general de la Tabla 300.5. Dos comportamientos en campo definen el método: se expande y se contrae mucho con la temperatura, y sus uniones se sueldan con solvente, no se roscan (excepto en accesorios y adaptadores roscados listados). PVC es no metálico, así que la canalización misma nunca es el camino de tierra — un conductor de puesta a tierra de equipo va en el tramo donde se requiera uno.\n\nLos números de soporte (Tabla 352.30) — PVC se soporta mucho más seguido que la canalización metálica, porque se pandea:\n• 1/2 in a 1 in — cada 3 ft\n• 1-1/4 in a 2 in — cada 5 ft\n• 2-1/2 in a 3 in — cada 6 ft\n• 3-1/2 in a 5 in — cada 7 ft\n• 6 in — cada 8 ft\nY los números de expansión (Tabla 352.44): un tramo de 100 ft de PVC cambia de largo unas 2 in con una oscilación de temperatura de 50°F, y unas 4.1 in con una oscilación de 100°F. Se requiere un accesorio de expansión donde el cambio de largo esperado alcance 1/4 in — un umbral que un tubo ascendente corto expuesto de Florida puede cruzar entre una mañana de invierno y una tarde de verano.",
       "on_the_job": "La expansión es el punto de inspección que los aprendices olvidan: un tramo recto y largo bajo el sol de Florida se mueve. Donde el cambio de largo esperado llegue a 1/4 in, un accesorio de expansión pertenece en el tramo — el disparador exacto y el cálculo de movimiento están señalados para revisión de Mike en la consulta complementaria, y las separaciones de soporte vienen de la tabla de soporte de este artículo, no de la costumbre.",
       "sharma_note": "",
       "figure_idea": "Tramo largo de PVC bajando por una pared de bloque con un accesorio de expansión a mitad del tramo, flechas de sol en la pared y una nota de separación de abrazaderas de soporte.",
@@ -1094,7 +1114,7 @@
         "C3-L-040"
       ],
       "florida_note": "El sol de Florida sobre un tubo ascendente de PVC expuesto es el caso de libro de expansión — revisa cada tramo largo en pared sur y oeste.",
-      "verified": true,
+      "verified": false,
       "prev_id": "C3-ART-350",
       "next_id": "C3-ART-353",
       "chapter": 3
@@ -1644,6 +1664,11 @@
           "title": "Cableado subterráneo — cobertura, protección y sellado"
         },
         {
+          "id": "C3-300.7",
+          "section": "300.7",
+          "title": "Sellado de canalizaciones que pasan entre temperaturas diferentes"
+        },
+        {
           "id": "C3-300.11",
           "section": "300.11",
           "title": "Sujeción y soporte — general"
@@ -2095,100 +2120,100 @@
   ],
   "index": [
     {
-      "term": "Regla del 83%, acometida/alimentador de vivienda",
+      "term": "83% rule, dwelling service/feeder",
       "ids": [
         "C3-310.12"
       ]
     },
     {
-      "term": "Cable AC, referencia cruzada de ático",
+      "term": "AC cable, attic cross-reference",
       "ids": [
         "C3-ART-320",
         "C3-334.23"
       ]
     },
     {
-      "term": "Tabla de ampacidad, cómo leerla",
+      "term": "Ampacity table, how to read",
       "ids": [
         "C3-310.16"
       ]
     },
     {
-      "term": "Ampacidad, ajuste (agrupamiento)",
+      "term": "Ampacity, adjustment (bundling)",
       "ids": [
         "C3-310.15"
       ]
     },
     {
-      "term": "Ampacidad, corrección (temperatura ambiente)",
+      "term": "Ampacity, correction (ambient temperature)",
       "ids": [
         "C3-310.15"
       ]
     },
     {
-      "term": "Ampacidad, límite de 60°C del cable NM",
+      "term": "Ampacity, NM cable 60°C limit",
       "ids": [
         "C3-334.80"
       ]
     },
     {
-      "term": "Ático, NM cerca de la escotilla (regla de Sharma)",
+      "term": "Attic, NM near scuttle (Sharma rule)",
       "ids": [
         "C3-334.23"
       ]
     },
     {
-      "term": "Curvas, EMT — 360 grados",
+      "term": "Bends, EMT — 360 degrees",
       "ids": [
         "C3-358.24-26"
       ]
     },
     {
-      "term": "Perforaciones, retiro de 1-1/4 in",
+      "term": "Bored holes, 1-1/4 in setback",
       "ids": [
         "C3-300.4",
         "C3-300.4(A)(1)"
       ]
     },
     {
-      "term": "Paralelo a miembros de la estructura, retiro de 1-1/4 in",
+      "term": "Parallel to framing members, 1-1/4 in setback",
       "ids": [
         "C3-300.4(D)"
       ]
     },
     {
-      "term": "Llenado de caja, reglas de conteo",
+      "term": "Box fill, counting rules",
       "ids": [
         "C3-314.16",
         "C3-314.16(B)"
       ]
     },
     {
-      "term": "Llenado de caja, tablas de volumen",
+      "term": "Box fill, volume tables",
       "ids": [
         "C3-314.16"
       ]
     },
     {
-      "term": "Retiro de caja en la pared",
+      "term": "Box setback in wall",
       "ids": [
         "C3-314.20"
       ]
     },
     {
-      "term": "Caja, accesible",
+      "term": "Box, accessible",
       "ids": [
         "C3-314.29"
       ]
     },
     {
-      "term": "Caja, clasificada para ventilador",
+      "term": "Box, fan-rated",
       "ids": [
         "C3-314.27(C)"
       ]
     },
     {
-      "term": "Profundidad de entierro / cobertura, subterráneo",
+      "term": "Burial depth / cover, underground",
       "ids": [
         "C3-300.5",
         "C3-ART-340",
@@ -2196,19 +2221,19 @@
       ]
     },
     {
-      "term": "Vías de barras (busways)",
+      "term": "Busways",
       "ids": [
         "C3-ART-368"
       ]
     },
     {
-      "term": "Gabinetes y gabinetes de medidor",
+      "term": "Cabinets and meter enclosures",
       "ids": [
         "C3-ART-312"
       ]
     },
     {
-      "term": "Bandeja de cables",
+      "term": "Cable tray",
       "ids": [
         "C3-ART-392"
       ]
@@ -2220,99 +2245,99 @@
       ]
     },
     {
-      "term": "CCA en cálculos (ampacidad, caída de voltaje, llenado, tamaño)",
+      "term": "CCA in calculations (ampacity, voltage drop, fill, sizing)",
       "ids": [
         "C3-310.16-CCA"
       ]
     },
     {
-      "term": "CCA, columna de aluminio",
+      "term": "CCA, aluminum column",
       "ids": [
         "C3-310.16",
         "C3-334.80"
       ]
     },
     {
-      "term": "CCA, un tamaño arriba (S-10)",
+      "term": "CCA, one size up (S-10)",
       "ids": [
         "C3-310.16"
       ]
     },
     {
-      "term": "Largo de conductor, libre — 6 in / 3 in",
+      "term": "Conductor length, free — 6 in / 3 in",
       "ids": [
         "C3-300.14"
       ]
     },
     {
-      "term": "EMT, llenado de conductores (entrega al Capítulo 9)",
+      "term": "EMT, conductor fill (Chapter 9 handoff)",
       "ids": [
         "C3-358.22"
       ]
     },
     {
-      "term": "EMT, acoplamientos — mojados / herméticos al concreto",
+      "term": "EMT, couplings — wet / concrete-tight",
       "ids": [
         "C3-358.42"
       ]
     },
     {
-      "term": "EMT, sujeción — 3 ft / 10 ft",
+      "term": "EMT, securing — 3 ft / 10 ft",
       "ids": [
         "C3-358.30"
       ]
     },
     {
-      "term": "EMT, usos",
+      "term": "EMT, uses",
       "ids": [
         "C3-ART-358"
       ]
     },
     {
-      "term": "ENT (tubo smurf)",
+      "term": "ENT (smurf tube)",
       "ids": [
         "C3-ART-362"
       ]
     },
     {
-      "term": "Recintos de salida, cableado en",
+      "term": "Exit enclosures, wiring in",
       "ids": [
         "C3-300.25"
       ]
     },
     {
-      "term": "Caja para ventilador",
+      "term": "Fan box",
       "ids": [
         "C3-314.27(C)"
       ]
     },
     {
-      "term": "Sellado cortafuego, penetraciones con clasificación",
+      "term": "Firestopping, rated penetrations",
       "ids": [
         "C3-300.21"
       ]
     },
     {
-      "term": "FMC / LFMC, látigo del condensador",
+      "term": "FMC / LFMC, condenser whip",
       "ids": [
         "C3-ART-348",
         "C3-ART-350"
       ]
     },
     {
-      "term": "Tierras, conteo de llenado de caja",
+      "term": "Grounds, box-fill count",
       "ids": [
         "C3-314.16(B)"
       ]
     },
     {
-      "term": "Tierras, asignación de un cuarto después de cuatro (2020)",
+      "term": "Grounds, quarter allowance past four (2020)",
       "ids": [
         "C3-314.16(B)"
       ]
     },
     {
-      "term": "Tubo conduit HDPE",
+      "term": "HDPE conduit",
       "ids": [
         "C3-ART-353"
       ]
@@ -2324,138 +2349,150 @@
       ]
     },
     {
-      "term": "Placas protectoras / placas contra clavos",
+      "term": "Kick plates / nail plates",
       "ids": [
         "C3-300.4"
       ]
     },
     {
-      "term": "Cableado de perilla y tubo (knob-and-tube)",
+      "term": "Knob-and-tube wiring",
       "ids": [
         "C3-ART-394"
       ]
     },
     {
-      "term": "Cable MC",
+      "term": "MC cable",
       "ids": [
         "C3-ART-330"
       ]
     },
     {
-      "term": "Conductores de media tensión (Art. 311)",
+      "term": "Medium-voltage conductors (Art. 311)",
       "ids": [
         "C3-ART-311"
       ]
     },
     {
-      "term": "Cable MI",
+      "term": "MI cable",
       "ids": [
         "C3-ART-332"
       ]
     },
     {
-      "term": "Conjunto de salidas múltiples",
+      "term": "Multioutlet assembly",
       "ids": [
         "C3-ART-380"
       ]
     },
     {
-      "term": "NM, ampacidad",
+      "term": "NM, ampacity",
       "ids": [
         "C3-334.80"
       ]
     },
     {
-      "term": "NM, sujeción — 12 in / 4-1/2 ft",
+      "term": "NM, securing — 12 in / 4-1/2 ft",
       "ids": [
         "C3-334.30"
       ]
     },
     {
-      "term": "NM, funda dentro de la caja — 1/4 in",
+      "term": "NM, sheath into box — 1/4 in",
       "ids": [
         "C3-314.17"
       ]
     },
     {
-      "term": "NM, usos permitidos / no permitidos",
+      "term": "NM, uses permitted / not permitted",
       "ids": [
         "C3-334.10",
         "C3-334.12"
       ]
     },
     {
-      "term": "Plenos y ductos, cableado en",
+      "term": "Plenums and ducts, wiring in",
       "ids": [
         "C3-300.22"
       ]
     },
     {
-      "term": "Tamaño de caja de paso, 4 AWG y mayores (8x / 6x + suma)",
+      "term": "Pull box sizing, 4 AWG and larger (8x / 6x + sum)",
       "ids": [
         "C3-314.28"
       ]
     },
     {
-      "term": "Tubo conduit de PVC, expansión",
+      "term": "PVC conduit, expansion",
       "ids": [
         "C3-ART-352"
       ]
     },
     {
-      "term": "RMC, cobertura de 6 in",
+      "term": "RMC, 6 in cover",
       "ids": [
         "C3-ART-344",
         "C3-300.5"
       ]
     },
     {
-      "term": "Tubo conduit RTRC",
+      "term": "RTRC conduit",
       "ids": [
         "C3-ART-355"
       ]
     },
     {
-      "term": "Cable SE",
+      "term": "SE cable",
       "ids": [
         "C3-ART-338",
         "C3-338.10(B)(4)"
       ]
     },
     {
-      "term": "Cable para bandeja, Tipo TC",
+      "term": "Tray cable, Type TC",
       "ids": [
         "C3-ART-336"
       ]
     },
     {
-      "term": "Cable Tipo P",
+      "term": "Type P cable",
       "ids": [
         "C3-ART-337"
       ]
     },
     {
-      "term": "Cable UF, entierro directo",
+      "term": "UF cable, direct burial",
       "ids": [
         "C3-ART-340"
       ]
     },
     {
-      "term": "Caída de voltaje — resistencia de CCA (sin fila en la Tabla 8)",
+      "term": "Voltage drop — CCA resistance (no Table 8 row)",
       "ids": [
         "C3-310.16-CCA"
       ]
     },
     {
-      "term": "Canaletas (wireways), metálicas",
+      "term": "Wireways, metal",
       "ids": [
         "C3-ART-376"
       ]
     },
     {
-      "term": "Yugo, conteo de llenado de caja (cuenta como dos)",
+      "term": "Yoke, box-fill count (counts as two)",
       "ids": [
         "C3-314.16(B)"
+      ]
+    },
+    {
+      "term": "Sealing raceways, different temperatures (300.7)",
+      "ids": [
+        "C3-300.7"
+      ]
+    },
+    {
+      "term": "Condensation in raceways",
+      "ids": [
+        "C3-300.7"
       ]
     }
   ]

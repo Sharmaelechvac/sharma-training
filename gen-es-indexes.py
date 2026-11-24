@@ -10,7 +10,7 @@ def clean(s): return WS.sub(" ", str(s or "")).strip()
 def load(p):
     with open(p) as f: return json.load(f)
 def bookpath(n, es=False):
-    base = "data/nec/book-c2" if n == 2 else f"data/nec/book/c{n}"
+    base = "data/nec/book/c2" if n == 2 else f"data/nec/book/c{n}"
     return base + (".es.json" if es else ".json")
 
 # ---------- book-index.es.json ----------

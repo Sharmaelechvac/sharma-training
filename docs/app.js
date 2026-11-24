@@ -20,7 +20,7 @@ const backBtn = (href, label) => `<a class="sk-header__btn sk-header__back" data
 const NEC_BASE = "data/nec/";
 const CHAP_DEFS = [
   { book: "book/c1", lookup: "book/c1-lookup", quiz: "book/c1-quiz", checklists: "book/c1-checklists" },
-  { book: "book-c2", lookup: "book/c2-lookup", quiz: "book/c2-quiz", checklists: "book/c2-checklists" },
+  { book: "book/c2", lookup: "book/c2-lookup", quiz: "book/c2-quiz", checklists: "book/c2-checklists" },
   { book: "book/c3", lookup: "book/c3-lookup", quiz: "book/c3-quiz", checklists: "book/c3-checklists" },
   { book: "book/c4", lookup: "book/c4-lookup", quiz: "book/c4-quiz", checklists: "book/c4-checklists" },
   { book: "book/c5", lookup: "book/c5-lookup", quiz: "book/c5-quiz", checklists: "book/c5-checklists" },
@@ -31,8 +31,8 @@ const CHAP_DEFS = [
 ];
 const NEC = { index: null, books: {}, top: null, v1: null, _p: {} };
 async function loadJSON(name) {
-  if (LANG === "es") { try { const r = await fetch(NEC_BASE + name + ".es.json?v=1"); if (r.ok) return await r.json(); } catch (e) {} }
-  try { const r = await fetch(NEC_BASE + name + ".json?v=1"); if (r.ok) return await r.json(); } catch (e) {}
+  if (LANG === "es") { try { const r = await fetch(NEC_BASE + name + ".es.json?v=2"); if (r.ok) return await r.json(); } catch (e) {} }
+  try { const r = await fetch(NEC_BASE + name + ".json?v=2"); if (r.ok) return await r.json(); } catch (e) {}
   return null;
 }
 function lightEntry(ix) {
@@ -100,7 +100,7 @@ function sectionHtml(sec) {
 }
 const blocksHtml = (page) => (page.sections || []).map(sectionHtml).join("");
 const trimAt = (s, n) => { const t = String(s || ""); return t.length <= n ? t : t.slice(0, n).replace(/\s+\S*$/, "") + "…"; };
-const askCard = `<a class="tr-ask" href="#/ask"><b>${t("Ask the NEC")}</b><span>${t("Type a question or a section number — it searches the Field Book's 577 pages, the look-ups and the guides, right on this device.")}</span><div class="go">${t("Ask a question")}</div></a>`;
+const askCard = `<a class="tr-ask" href="#/ask"><b>${t("Ask the NEC")}</b><span>${t("Type a question or a section number — it searches the Field Book's 594 pages, the look-ups and the guides, right on this device.")}</span><div class="go">${t("Ask a question")}</div></a>`;
 
 /* ---------------- Course (Rough-In Guide + training curriculum) ---------------- */
 function courseRootHtml() {
@@ -150,7 +150,7 @@ async function codeRootFill(page) {
     const done = secs.filter(s => learned.has(s.id)).length;
     return `<a class="tr-card" href="#/code/ch/${e.book.chapter}"><span class="tr-card__t">${tf("Chapter {n} — {title}", { n: e.book.chapter, title: $esc(e.book.chapter_title) })}</span><span class="tr-card__s">${tf("{n} pages", { n: secs.length })}${done ? tf(" · {d} learned", { d: done }) : ""}</span></a>`;
   }).join("");
-  page.html(`<div class="tr-wrap"><div class="sk-pagehead"><div><h1 class="sk-title">${t("Code Lookup")}</h1><p class="sk-note">${t("NEC 2020 · Florida Building Code, 8th Edition — the Sharma Field Book, 577 pages")}</p></div></div>
+  page.html(`<div class="tr-wrap"><div class="sk-pagehead"><div><h1 class="sk-title">${t("Code Lookup")}</h1><p class="sk-note">${t("NEC 2020 · Florida Building Code, 8th Edition — the Sharma Field Book, 594 pages")}</p></div></div>
   ${askCard}
   <div class="tr-sec">${t("Field Book — chapter by chapter")}</div>${chCards}
   <div class="tr-sec">${t("Fast answers")}</div>
@@ -167,7 +167,28 @@ function chHtml(n) {
   const rows = e.book.sections.map(s => `<a class="tr-card" href="#/code/page/${s.id}"><span class="tr-card__t">${$esc(s.title)}</span><span class="tr-card__s">NEC ${$esc(s.section || "")}${learned.has(s.id) ? " · " + t("Learned") : ""}</span></a>`).join("");
   return `<div class="tr-wrap"><h1 class="tr-h1">${tf("Chapter {n} — {title}", { n, title: $esc(e.book.chapter_title) })}</h1><p class="tr-note">${tf("{n} pages · {j}", { n: e.book.sections.length, j: $esc(e.book.jurisdiction || "") })}</p>${rows}</div>`;
 }
+function paras(text, lead) {
+  const blocks = String(text || "").split(/\n\s*\n/).map(x => x.trim()).filter(Boolean);
+  let first = true;
+  return blocks.map(b => {
+    const lines = b.split(/\n/).map(x => x.trim()).filter(Boolean);
+    let out = "", run = [];
+    const flushP = () => { if (run.length) { out += `<p${lead && first ? ` class="tr-lead"` : ""}>${run.map(l => $esc(l)).join("<br>")}</p>`; run = []; first = false; } };
+    let i = 0;
+    while (i < lines.length) {
+      if (lines[i].startsWith("• ")) {
+        flushP();
+        const items = [];
+        while (i < lines.length && lines[i].startsWith("• ")) { items.push(lines[i].slice(2)); i++; }
+        out += `<ul class="tr-vals">${items.map(x => `<li>${$esc(x)}</li>`).join("")}</ul>`;
+      } else { run.push(lines[i]); i++; }
+    }
+    flushP();
+    return out;
+  }).join("");
+}
 async function bookPageFill(page, id) {
+  await ensureIndex();
   const hit = await bookSectionFull(id);
   if (!hit) { page.html(`<div class="tr-wrap"><h1 class="tr-h1">${t("Page not found")}</h1><p class="tr-note">${t("That Field Book page is not loaded.")}</p></div>`); return; }
   const s = hit.s;
@@ -175,10 +196,10 @@ async function bookPageFill(page, id) {
   page.html(`<div class="tr-wrap">
   <div class="tr-kicker">${tf("Chapter {n} · NEC {s}", { n: hit.ch, s: $esc(s.section || "") })}</div>
   <h1 class="tr-h1">${$esc(s.title)}${s.verified === false ? `<span class="tr-pill tr-pill--warn">${t("Not yet verified")}</span>` : `<span class="tr-pill tr-pill--ok">${t("Verified")}</span>`}</h1>
-  <div class="tr-body"><p class="tr-lead">${$esc(s.plain_explanation || "")}</p>
-  ${s.on_the_job ? `<div class="tr-job"><b>${t("On the job")}</b>${$esc(s.on_the_job)}</div>` : ""}
-  ${s.sharma_note ? `<div class="tr-notebox"><b>${t("Sharma note")}</b><br>${$esc(s.sharma_note)}</div>` : ""}
-  ${s.florida_note ? `<div class="tr-fla"><b>${t("Florida")}</b>${$esc(s.florida_note)}</div>` : ""}
+  <div class="tr-body">${paras(s.plain_explanation, true)}
+  ${s.on_the_job ? `<div class="tr-job"><b>${t("On the job")}</b>${paras(s.on_the_job)}</div>` : ""}
+  ${s.sharma_note ? `<div class="tr-notebox"><b>${t("Sharma note")}</b>${paras(s.sharma_note)}</div>` : ""}
+  ${s.florida_note ? `<div class="tr-fla"><b>${t("Florida")}</b>${paras(s.florida_note)}</div>` : ""}
   </div>
   <div class="tr-rowbtns">
     <button class="tr-markbtn ${learned.has(s.id) ? "on" : ""}" data-learned="${s.id}">${learned.has(s.id) ? t("Learned") : t("Mark as learned")}</button>
@@ -395,14 +416,14 @@ async function toolsFill(page) {
 /* ---------------- Ask the NEC — on-device search over the book's own data ----------------
    The old feature POSTed to /api/ask on a worker that no longer exists, so on
    the GitHub edition the route was stubbed off / dead. This version needs no
-   server: it searches the Field Book's 577 pages plus the look-up topics,
+   server: it searches the Field Book's 594 pages plus the look-up topics,
    quick answers and guides (data/ask-index.json + the guide modules). */
 let ASK_IDX = null;
 async function ensureAskIdx() {
   if (ASK_IDX) return ASK_IDX;
   let base = [];
-  if (LANG === "es") { try { const r = await fetch("data/ask-index.es.json?v=1"); if (r.ok) base = await r.json(); } catch (e) {} }
-  if (!base.length) { try { const r = await fetch("data/ask-index.json?v=1"); if (r.ok) base = await r.json(); } catch (e) {} }
+  if (LANG === "es") { try { const r = await fetch("data/ask-index.es.json?v=2"); if (r.ok) base = await r.json(); } catch (e) {} }
+  if (!base.length) { try { const r = await fetch("data/ask-index.json?v=2"); if (r.ok) base = await r.json(); } catch (e) {} }
   const guide = [];
   TOPICS.forEach(t => guide.push({ k: "guide", id: t.id, t: t.title, r: LANG === "es" ? "Guía de instalación preliminar" : "Rough-In Guide", x: (t.blurb || "") + " " + (t.tags || []).join(" "), tags: t.tags || [], h: "#/howtos/topic/" + t.id }));
   ROUGHIN_PAGES.forEach(p => guide.push({ k: "guide", id: p.id, t: p.title, r: LANG === "es" ? "Curso de instalación preliminar" : "Rough-In Course", x: (p.blurb || "") + " " + (p.tags || []).join(" "), tags: p.tags || [], h: "#/course/page/" + p.id }));
@@ -446,7 +467,7 @@ function askSnippet(e, raw) {
 const KIND_LABEL = { book: "Field Book", lookup: "Look Up", topic: "Look Up", rule: "Sharma Rule", guide: "Guide", answer: "Quick answer" };
 async function buildAsk(page) {
   page.html(`<div class="tr-wrap"><h1 class="tr-h1">${t("Ask the NEC")}</h1>
-  <p class="tr-note">${t("Answers come from Sharma's own Field Book — all 577 pages — plus the look-ups, quick answers and guides. It runs on this device; nothing is sent anywhere. Always confirm against the official NEC, the plans and your foreman.")}</p>
+  <p class="tr-note">${t("Answers come from Sharma's own Field Book — all 594 pages — plus the look-ups, quick answers and guides. It runs on this device; nothing is sent anywhere. Always confirm against the official NEC, the plans and your foreman.")}</p>
   <input class="tr-search" id="ask-q" type="search" placeholder="${t("Try: GFCI bathroom, box fill, 210.52, smoke alarms…")}" autocomplete="off">
   <button class="tr-btn" id="ask-go">${t("Search the book")}</button>
   <div class="tr-chiprow">${(LANG === "es" ? ["GFCI baño", "llenado de caja", "310.16 ampacidad", "ubicación de detectores de humo", "desconectador del servicio", "unión equipotencial de piscina"] : ["GFCI bathroom", "box fill", "310.16 ampacity", "smoke alarm placement", "service disconnect", "pool bonding"]).map(x => `<button class="tr-chip" data-chip="${x}">${x}</button>`).join("")}</div>
