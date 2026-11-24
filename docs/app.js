@@ -164,8 +164,37 @@ async function codeRootFill(page) {
 function chHtml(n) {
   const e = (NEC.index || []).find(x => x.book.chapter === n);
   if (!e) return skel;
-  const rows = e.book.sections.map(s => `<a class="tr-card" href="#/code/page/${s.id}"><span class="tr-card__t">${$esc(s.title)}</span><span class="tr-card__s">NEC ${$esc(s.section || "")}${learned.has(s.id) ? " · " + t("Learned") : ""}</span></a>`).join("");
-  return `<div class="tr-wrap"><h1 class="tr-h1">${tf("Chapter {n} — {title}", { n, title: $esc(e.book.chapter_title) })}</h1><p class="tr-note">${tf("{n} pages · {j}", { n: e.book.sections.length, j: $esc(e.book.jurisdiction || "") })}</p>${rows}</div>`;
+  const full = NEC.books[n];
+  const qaCount = full ? (full.lookup || []).length : 0;
+  const top = `<div class="tr-sec">${t("Chapter topics")}</div>
+  ${qaCount ? `<a class="tr-card" href="#/code/chlookup/${n}"><span class="tr-card__t">${t("Chapter Q&A")}</span><span class="tr-card__s">${tf("{n} questions", { n: qaCount })}</span></a>` : ""}
+  <a class="tr-card" href="#/quiz/ch${n}"><span class="tr-card__t">${tf("Chapter {n} quiz", { n })}</span><span class="tr-card__s">${tf("{n} questions", { n: e._quizCount || 0 })}</span></a>
+  <a class="tr-card" href="#/code/checklists"><span class="tr-card__t">${t("Checklists")}</span><span class="tr-card__s">${tf("{n} checks", { n: e._ckCount || 0 })}</span></a>
+  <div class="tr-sec">${t("Field Book pages")}</div>`;
+  // Group the pages under their article, the way the book's own TOC does.
+  const groups = []; const byKey = new Map();
+  const artTitle = {};
+  for (const s of e.book.sections) { if (/^C\d+-ART-\d+$/.test(s.id)) artTitle[s.id.split("-").pop()] = s.title; }
+  for (const s of e.book.sections) {
+    let key, label;
+    const m = s.id.match(/^C\d+-(?:ART-)?(\d{3})/);
+    if (m) { key = "a" + m[1]; label = artTitle[m[1]] || tf("Article {n}", { n: +m[1] }); }
+    else if (/-ANNEX/.test(s.id)) { key = "annex"; label = t("Annexes"); }
+    else if (/-FILL-/.test(s.id)) { key = "fill"; label = t("Worked examples"); }
+    else if (n === 9 || /-Table/.test(s.id)) { key = "tables"; label = t("Tables"); }
+    else { key = "more"; label = t("More pages"); }
+    if (!byKey.has(key)) { const g = { label, rows: [] }; byKey.set(key, g); groups.push(g); }
+    byKey.get(key).rows.push(s);
+  }
+  const body = groups.map(g => `<div class="tr-sec">${$esc(g.label)}</div>` + g.rows.map(s => `<a class="tr-card" href="#/code/page/${s.id}"><span class="tr-card__t">${$esc(s.title)}</span><span class="tr-card__s">NEC ${$esc(s.section || "")}${learned.has(s.id) ? " · " + t("Learned") : ""}</span></a>`).join("")).join("");
+  return `<div class="tr-wrap"><h1 class="tr-h1">${tf("Chapter {n} — {title}", { n, title: $esc(e.book.chapter_title) })}</h1><p class="tr-note">${tf("{n} pages · {j}", { n: e.book.sections.length, j: $esc(e.book.jurisdiction || "") })}</p>${top}${body}</div>`;
+}
+async function chapterLookupFill(page, n) {
+  const e = await ensureChapter(n);
+  const ix = (NEC.index || []).find(x => x.book.chapter === n);
+  if (!e || !(e.lookup || []).length) { page.html(`<div class="tr-wrap"><h1 class="tr-h1">${t("Topic not found")}</h1></div>`); return; }
+  const cards = e.lookup.map(x => `<a class="tr-card" href="#/code/lookup/${x.id}"><span class="tr-card__t">${$esc(x.question || "")}</span><span class="tr-card__s">${tf("Chapter {n} · NEC {r}", { n, r: $esc(x.nec_ref || "") })}</span></a>`).join("");
+  page.html(`<div class="tr-wrap"><h1 class="tr-h1">${tf("Chapter {n} — {title}", { n, title: $esc(ix ? ix.book.chapter_title : (e.book.chapter_title || "")) })}</h1><p class="tr-note">${tf("{n} questions", { n: e.lookup.length })}</p>${cards}</div>`);
 }
 function paras(text, lead) {
   const blocks = String(text || "").split(/\n\s*\n/).map(x => x.trim()).filter(Boolean);
@@ -221,7 +250,8 @@ async function lookupListFill(page) {
   const topicCards = topics.map(t => `<a class="tr-card" href="#/code/topic/${t.id}"><span class="tr-card__t">${$esc(t.title || t.question || "")}</span><span class="tr-card__s">${$esc(t.cite || t.nec_ref || "")}</span></a>`).join("");
   let qa = "";
   for (const n of [1, 2, 3, 4, 5, 6, 7, 8, 9]) {
-    const e = NEC.books[n]; if (!e) continue;
+    const e = NEC.books[n]; if (!e || !(e.lookup || []).length) continue;
+    qa += `<div class="tr-sec">${tf("Chapter {n} — {title}", { n, title: $esc(e.book.chapter_title || "") })} · ${e.lookup.length}</div>`;
     qa += e.lookup.map(x => `<a class="tr-card" href="#/code/lookup/${x.id}"><span class="tr-card__t">${$esc(x.question || "")}</span><span class="tr-card__s">${tf("Chapter {n} · NEC {r}", { n, r: $esc(x.nec_ref || "") })}</span></a>`).join("");
   }
   page.html(`<div class="tr-wrap"><h1 class="tr-h1">${t("Look Up")}</h1><p class="tr-note">${t("Start with Ask the NEC for anything specific — these are the standing answers.")}</p>${askCard}<div class="tr-sec">${t("Most-used topics")}</div>${topicCards}<div class="tr-sec">${t("Questions by chapter")}</div>${qa}</div>`);
@@ -643,7 +673,8 @@ function buildScreen(page, parts) {
   const [a, b, c] = parts;
   if (a === "course" && b === "page") page.html(coursePageHtml(c));
   else if (a === "course" && b === "module") page.html(courseModuleHtml(c));
-  else if (a === "code" && b === "ch") { ensureIndex().then(() => page.html(chHtml(+c))); page.html(skel); }
+  else if (a === "code" && b === "ch") { Promise.all([ensureIndex(), ensureChapter(+c)]).then(() => page.html(chHtml(+c))); page.html(skel); }
+  else if (a === "code" && b === "chlookup") { page.html(skel); chapterLookupFill(page, +c); }
   else if (a === "code" && b === "page") { page.html(skel); bookPageFill(page, c); }
   else if (a === "code" && b === "lookup" && !c) { page.html(skel); lookupListFill(page); }
   else if (a === "code" && b === "lookup" && c) { page.html(skel); lookupFill(page, c); }
