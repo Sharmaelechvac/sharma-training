@@ -877,5 +877,204 @@
     "verified": true,
     "verified_by": "Master audit reconciliation 2026-11-12 (external audit gap claim verified)",
     "verified_date": "2026-11-12"
+  },
+  {
+    "id": "C2-L-053",
+    "question": "¿Puedo tomar prestado el neutro de un circuito cercano para terminar una tirada?",
+    "aliases": [
+      "neutro prestado",
+      "neutro compartido circuito equivocado",
+      "neutro de otro circuito"
+    ],
+    "answer_plain": "No. Un neutro pertenece al circuito con el que fue instalado. El único arreglo de neutro compartido que el Código construye es el circuito derivado multiconductor, con sus propias reglas (patas opuestas, desconexión agrupada, todos los conductores en la misma canalización o cable). Un neutro tomado de otro circuito deja corriente en un conductor que permanece vivo cuando el breaker del circuito prestado está apagado.",
+    "nec_ref": "200.4",
+    "nec_edition": "2020",
+    "tags": [
+      "neutral",
+      "troubleshooting"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-25"
+  },
+  {
+    "id": "C2-L-054",
+    "question": "¿En qué terminal se conecta el neutro en un tomacorriente?",
+    "aliases": [
+      "tornillo plateado neutro",
+      "terminales de polaridad tomacorriente",
+      "terminal del cable blanco"
+    ],
+    "answer_plain": "En el terminal identificado: el tornillo de color plateado, o un terminal marcado WHITE. El caliente va en el tornillo de latón (oscuro) y la tierra de equipo en el tornillo verde. En la cara, eso pone el neutro en la ranura más larga. Blanco en plateado, negro en latón, verde en verde.",
+    "nec_ref": "200.10",
+    "nec_edition": "2020",
+    "tags": [
+      "devices",
+      "polarity"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-25"
+  },
+  {
+    "id": "C2-L-055",
+    "question": "¿Qué tomacorrientes pueden alimentar los dos circuitos de pequeños electrodomésticos?",
+    "aliases": [
+      "tomacorrientes circuito pequeños electrodomésticos",
+      "qué puede ir en los circuitos de cocina",
+      "tomacorrientes 210.52(B)"
+    ],
+    "answer_plain": "Solo los tomacorrientes de la cocina, la despensa, el desayunador y el comedor — más un tomacorriente para equipo de refrigeración en esas áreas. Los únicos otros tomacorrientes permitidos son un tomacorriente para reloj y los de equipo suplementario de una estufa, horno o parrilla de gas. Nada de sala, baño ni alumbrado.",
+    "nec_ref": "210.52(B)",
+    "nec_edition": "2020",
+    "tags": [
+      "kitchen",
+      "branch circuits"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-25"
+  },
+  {
+    "id": "C2-L-056",
+    "question": "¿Cómo funciona la demanda de la Tabla 220.42 sobre una carga general de 18,000 VA?",
+    "aliases": [
+      "ejemplo resuelto 220.42",
+      "cálculo factor de demanda vivienda",
+      "primeros 3000 VA 35 por ciento"
+    ],
+    "answer_plain": "Primeros 3,000 VA al 100 por ciento = 3,000 VA. Los 15,000 VA restantes al 35 por ciento = 5,250 VA. Carga general demandada total = 8,250 VA. Sobre 120,000 VA la tasa baja al 25 por ciento. Las demandas de electrodomésticos, secadora y estufa se calculan en sus propias secciones y se suman después.",
+    "nec_ref": "220.42",
+    "nec_edition": "2020",
+    "tags": [
+      "load calculations",
+      "demand"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-25"
+  },
+  {
+    "id": "C2-L-057",
+    "question": "¿Cuántos voltio-amperios cuentan los circuitos de pequeños electrodomésticos y de lavandería en un cálculo por el método estándar?",
+    "aliases": [
+      "1500 VA pequeños electrodomésticos",
+      "lavandería 1500 VA cálculo",
+      "valores 220.52"
+    ],
+    "answer_plain": "1,500 VA por cada circuito derivado de 20A para pequeños electrodomésticos (mínimo dos, así que 3,000 VA) y 1,500 VA por el circuito derivado de lavandería — un mínimo de 4,500 VA en la carga general antes de aplicar el factor de demanda de la Tabla 220.42 al total.",
+    "nec_ref": "220.52",
+    "nec_edition": "2020",
+    "tags": [
+      "load calculations",
+      "kitchen",
+      "laundry"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-25"
+  },
+  {
+    "id": "C2-L-058",
+    "question": "¿Cuántos interruptores de desconexión puede tener un edificio alimentado por un alimentador?",
+    "aliases": [
+      "seis interruptores edificio separado",
+      "225.33 número de interruptores",
+      "interruptores agrupados edificio"
+    ],
+    "answer_plain": "Hasta seis interruptores o breakers, en un solo gabinete o en un grupo de gabinetes separados, todos agrupados juntos en el edificio. Cada interruptor debe estar marcado para mostrar exactamente qué desconecta. Una séptima palanca significa que el diseño cambia — no se resuelve con otro gabinete al otro lado del cuarto.",
+    "nec_ref": "225.33",
+    "nec_edition": "2020",
+    "tags": [
+      "disconnects",
+      "separate buildings"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-25"
+  },
+  {
+    "id": "C2-L-059",
+    "question": "¿Qué puede fijarse a un mástil de acometida?",
+    "aliases": [
+      "fijaciones al mástil",
+      "qué puede sujetarse al mástil de acometida",
+      "mástil 230.28"
+    ],
+    "answer_plain": "Solo los conductores de la acometida aérea (service drop o service lateral). Ningún otro conductor, ninguna antena, ningún equipo ajeno. El mástil debe soportar la tensión de la acometida con su propia resistencia o estar arriostrado o con tirantes, con accesorios listados para acometida.",
+    "nec_ref": "230.28",
+    "nec_edition": "2020",
+    "tags": [
+      "services",
+      "overhead"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-25"
+  },
+  {
+    "id": "C2-L-060",
+    "question": "¿Qué es un bucle de goteo y dónde va?",
+    "aliases": [
+      "propósito del bucle de goteo",
+      "bucle del cabezal",
+      "bucle de goteo 230.54"
+    ],
+    "answer_plain": "Un bucle formado en los conductores de acometida justo debajo del cabezal contra intemperie: cada conductor baja en curva y vuelve a subir antes de entrar al cabezal, de modo que la lluvia corre hasta el fondo del bucle y gotea en vez de seguir el cable hasta dentro de la canalización. El cabezal queda a la altura del punto de fijación o por encima de él siempre que sea practicable.",
+    "nec_ref": "230.54",
+    "nec_edition": "2020",
+    "tags": [
+      "services",
+      "overhead"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-25"
+  },
+  {
+    "id": "C2-L-061",
+    "question": "¿Qué puede conectarse antes del interruptor de acometida (del lado de línea)?",
+    "aliases": [
+      "conexiones del lado de alimentación",
+      "lado de línea del principal",
+      "lista 230.82"
+    ],
+    "answer_plain": "Una lista cerrada: gabinetes de medidor e interruptores de medidor, gabinetes de transformadores de corriente, el dispositivo de protección contra sobretensiones requerido, conexiones de bombas contra incendios y de reserva legalmente requeridas bajo sus propios artículos, e interconexiones del lado de la alimentación como la solar bajo el Artículo 705. Todo lo que no esté en la lista se conecta del lado de la carga.",
+    "nec_ref": "230.82",
+    "nec_edition": "2020",
+    "tags": [
+      "services",
+      "solar"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-25"
+  },
+  {
+    "id": "C2-L-062",
+    "question": "¿Puede usarse un breaker de capacidad dividida 120/240V en la pata alta de un tablero delta de 240V?",
+    "aliases": [
+      "breaker slash pata alta",
+      "breaker 120/240 con 208 a tierra",
+      "capacidad dividida 240.85"
+    ],
+    "answer_plain": "No. Un breaker de capacidad dividida (120/240V) puede usarse solo donde el voltaje a tierra de cada conductor sea el número menor o menos — 120V. La pata alta está a unos 208V a tierra, así que necesita un breaker de capacidad plena (240V), diga lo que diga la capacidad en amperios.",
+    "nec_ref": "240.85",
+    "nec_edition": "2020",
+    "tags": [
+      "breakers",
+      "commercial"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-25"
+  },
+  {
+    "id": "C2-L-063",
+    "question": "¿El neutro de un generador siempre se une en el generador?",
+    "aliases": [
+      "unión del neutro del generador",
+      "interruptor de transferencia con neutro conmutado",
+      "generador derivado separadamente"
+    ],
+    "answer_plain": "No — el interruptor de transferencia decide. Si el interruptor no conmuta el neutro, el generador por lo general no es derivado separadamente y el neutro permanece unido solo en la acometida. Si el interruptor sí conmuta el neutro, el generador es un sistema derivado separadamente y recibe su puente de unión del sistema en el generador (o en su primer interruptor) — un punto de unión, nunca ambos.",
+    "nec_ref": "250.30",
+    "nec_edition": "2020",
+    "tags": [
+      "generators",
+      "grounding"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-25"
   }
 ]
