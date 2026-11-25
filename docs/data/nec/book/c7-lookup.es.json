@@ -973,5 +973,126 @@
     "verified": true,
     "verified_by": "Master audit reconciliation 2026-11-12 (external audit gap claim verified)",
     "verified_date": "2026-11-12"
+  },
+  {
+    "id": "C7-L-057",
+    "question": "¿Qué decide si mi interruptor de transferencia debe conmutar el neutro para un generador portátil?",
+    "aliases": [
+      "unión neutro generador",
+      "conmutar el neutro"
+    ],
+    "answer_plain": "Si el neutro del generador está unido a su bastidor (702.11 le envía a la documentación del equipo). Un equipo con neutro unido es una fuente derivada separadamente al conectarse, así que el equipo de transferencia debe conmutar el neutro; un equipo con neutro flotante no. Lea el manual del generador, no la costumbre.",
+    "nec_ref": "702.11",
+    "nec_edition": "2020",
+    "tags": [
+      "generator",
+      "transfer switch",
+      "neutral"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-25"
+  },
+  {
+    "id": "C7-L-058",
+    "question": "¿Qué es el cable Tipo LP?",
+    "aliases": [
+      "cable LP",
+      "marcación cable potencia limitada"
+    ],
+    "answer_plain": "El Tipo LP (potencia limitada) es un cable Clase 2 cuya marcación en la chaqueta declara la ampacidad que puede llevar cuando transmite energía, según 725.144. La marcación saca la pregunta del calentamiento del mazo de la tabla y la pone en el propio cable.",
+    "nec_ref": "725.144",
+    "nec_edition": "2020",
+    "tags": [
+      "Class 2",
+      "PoE",
+      "cable types"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-25"
+  },
+  {
+    "id": "C7-L-059",
+    "question": "¿La fibra óptica puede compartir canalización con conductores de energía?",
+    "aliases": [
+      "fibra en conduit con energía",
+      "fibra compartiendo canalización"
+    ],
+    "answer_plain": "A veces. Bajo 770.133, la fibra no conductiva puede compartir canalización o envolvente con conductores de alumbrado, energía y Clase 1 bajo las condiciones de la sección. La fibra conductiva — con miembro de resistencia metálico, armadura o cubierta — está restringida porque su metal puede llevar una falla a la envolvente.",
+    "nec_ref": "770.133",
+    "nec_edition": "2020",
+    "tags": [
+      "fiber",
+      "separation"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-25"
+  },
+  {
+    "id": "C7-L-060",
+    "question": "¿Qué significan OFNP, OFNR y OFN?",
+    "aliases": [
+      "tipos cable fibra",
+      "OFNP OFNR OFN"
+    ],
+    "answer_plain": "Letras de tipo de fibra óptica: OFN es no conductiva, OFC es conductiva (miembro metálico). La última letra gradúa el listado: P para plénum (OFNP/OFCP), R para montante (OFNR/OFCR), y sin letra de sufijo más allá del tipo base para uso general (OFN/OFC). Los grados mayores sustituyen hacia abajo, nunca al revés (770.179).",
+    "nec_ref": "770.179",
+    "nec_edition": "2020",
+    "tags": [
+      "fiber",
+      "cable types"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-25"
+  },
+  {
+    "id": "C7-L-061",
+    "question": "¿Puedo retroalimentar un tablero de casa desde un generador portátil por un receptáculo de secadora?",
+    "aliases": [
+      "retroalimentación generador",
+      "cordón suicida generador"
+    ],
+    "answer_plain": "Nunca. 702 exige equipo de transferencia listado que impida la interconexión inadvertida de las fuentes (702.5), con una entrada de energía adecuada: 702.11 para equipos portátiles exteriores y 702.12(C) para entradas de 100 A en adelante. Un arreglo de cordón que puede energizar el tablero — o las líneas de la compañía — sin equipo de transferencia está prohibido y es letal.",
+    "nec_ref": "702.5",
+    "nec_edition": "2020",
+    "tags": [
+      "generator",
+      "safety"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-25"
+  },
+  {
+    "id": "C7-L-062",
+    "question": "¿Por qué importa un mazo grande de cable PoE si cada cable es solo Clase 2?",
+    "aliases": [
+      "calentamiento mazo PoE",
+      "mazo 725.144"
+    ],
+    "answer_plain": "El calor se suma. 725.144 limita la corriente que los conductores de cables Clase 2 pueden llevar para entregar energía según el calibre, la clasificación de temperatura y la cantidad de cables en el mazo, porque el centro de un mazo energizado grande se calienta mucho más que un cable solo al aire libre.",
+    "nec_ref": "725.144",
+    "nec_edition": "2020",
+    "tags": [
+      "Class 2",
+      "PoE"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-25"
+  },
+  {
+    "id": "C7-L-063",
+    "question": "¿Cómo sé si un cable de fibra es conductivo?",
+    "aliases": [
+      "verificar fibra conductiva",
+      "marcación OFC"
+    ],
+    "answer_plain": "Lea la chaqueta: las letras del tipo lo responden. OFC (y OFCP/OFCR) significa que un miembro metálico forma parte del cable; los tipos OFN son no conductivos. La respuesta decide cómo 770.133 permite que el cable se mezcle con conductores de energía.",
+    "nec_ref": "770.179",
+    "nec_edition": "2020",
+    "tags": [
+      "fiber",
+      "cable types"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-25"
   }
 ]

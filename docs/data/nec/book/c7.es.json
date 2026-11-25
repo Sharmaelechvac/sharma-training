@@ -591,8 +591,30 @@
       "florida_note": "",
       "verified": true,
       "prev_id": "C7-702.7",
-      "next_id": "C7-702.12",
+      "next_id": "C7-702.11",
       "sharma_rule_ids": []
+    },
+    {
+      "id": "C7-702.11",
+      "chapter": 7,
+      "article": "702",
+      "section": "702.11",
+      "title": "Generadores portátiles exteriores",
+      "plain_explanation": "702.11 cubre el generador portátil que vive en el garaje y sale rodando a la entrada cuando se va la energía. Un generador portátil ubicado en el exterior obtiene alivio de algunos de los requisitos de desconexión escritos para los equipos instalados permanentemente: el propio equipo responde gran parte de la pregunta de desconexión, porque simplemente se apaga y se desenchufa. La conexión a la casa sigue siendo mediante equipo de transferencia listado y una entrada de energía adecuada (702.12(C) cubre las entradas de 100 A en adelante); un cordón por una ventana a un receptáculo de secadora es retroalimentación, no un método de conexión. La pregunta del neutro decide el equipo de transferencia: si el neutro del generador portátil está unido a su bastidor determina si el interruptor de transferencia debe conmutar el neutro, y la documentación del generador — no la costumbre — lo responde.",
+      "on_the_job": "Preparación para huracanes: caja de entrada en la pared exterior, equipo de transferencia listado o interruptor con enclavamiento adentro, generador afuera y alejado de ventanas y puertas mientras funciona. Verifique la unión del neutro del equipo antes de elegir el interruptor de transferencia, y rotule la entrada para el tamaño de generador que acepta.",
+      "sharma_note": "",
+      "florida_note": "",
+      "figure_idea": "Elevación de la casa: entrada exterior, ubicación del generador alejada de aberturas, recorrido del cordón.",
+      "related_ids": [
+        "C7-702.5",
+        "C7-702.12",
+        "C7-702.12(C)",
+        "C7-L-057"
+      ],
+      "sharma_rule_ids": [],
+      "verified": false,
+      "prev_id": "C7-702.10",
+      "next_id": "C7-702.12"
     },
     {
       "id": "C7-702.12",
@@ -611,7 +633,7 @@
       ],
       "florida_note": "",
       "verified": true,
-      "prev_id": "C7-702.10",
+      "prev_id": "C7-702.11",
       "next_id": "C7-702.12(C)",
       "sharma_rule_ids": []
     },
@@ -1270,8 +1292,29 @@
       "florida_note": "",
       "verified": true,
       "prev_id": "C7-725.136",
-      "next_id": "C7-ART-727",
+      "next_id": "C7-725.144",
       "sharma_rule_ids": []
+    },
+    {
+      "id": "C7-725.144",
+      "chapter": 7,
+      "article": "725",
+      "section": "725.144",
+      "title": "Energía y datos en el mismo cable — 725.144 y el calentamiento PoE",
+      "plain_explanation": "Cuando un cable Clase 2 lleva energía y datos juntos — Power over Ethernet alimentando cámaras, puntos de acceso e iluminación — cada par energizado agrega calor al mazo, y un mazo grande de cables energizados se calienta más que el mismo mazo llevando solo datos. 725.144 responde con límites de ampacidad para los conductores de cables Clase 2 usados para transmitir energía: la corriente permitida depende del calibre del conductor, la clasificación de temperatura del cable y cuántos cables van agrupados. Los cables Tipo LP (potencia limitada) llevan su ampacidad permitida en la marcación del cable, lo que saca la pregunta del mazo de la tabla y la pone en la chaqueta. Un cable bueno para datos no es automáticamente bueno como cable de entrega de energía en un mazo completo.",
+      "on_the_job": "Sesenta salidas PoE llegando en un solo mazo a un rack: ese mazo es un problema de calentamiento, no solo de jalado. Divida los mazos, respete la marcación LP donde se especifica cable LP, y no prometa una cantidad de dispositivos alimentados que la planta de cable no pueda llevar sin calentarse.",
+      "sharma_note": "",
+      "florida_note": "",
+      "figure_idea": "Corte de un mazo: pares energizados calentando el centro de un mazo grande; detalle de la marcación LP.",
+      "related_ids": [
+        "C7-725.121",
+        "C7-725.130",
+        "C7-L-058"
+      ],
+      "sharma_rule_ids": [],
+      "verified": false,
+      "prev_id": "C7-725.136(I)",
+      "next_id": "C7-ART-727"
     },
     {
       "id": "C7-ART-727",
@@ -1286,7 +1329,7 @@
       "related_ids": [],
       "florida_note": "",
       "verified": true,
-      "prev_id": "C7-725.136(I)",
+      "prev_id": "C7-725.144",
       "next_id": "C7-ART-728",
       "sharma_rule_ids": []
     },
@@ -1484,8 +1527,52 @@
       "florida_note": "",
       "verified": true,
       "prev_id": "C7-760.135",
-      "next_id": null,
+      "next_id": "C7-770.133",
       "sharma_rule_ids": []
+    },
+    {
+      "id": "C7-770.133",
+      "chapter": 7,
+      "article": "770",
+      "section": "770.133",
+      "title": "Instalación de cables de fibra óptica",
+      "plain_explanation": "770.133 gobierna cómo se instalan los cables de fibra óptica junto a otros sistemas. La línea divisoria es si el cable de fibra es conductivo — con miembro de resistencia metálico, armadura o cubierta metálica — o no conductivo. La fibra no conductiva puede compartir canalización, envolvente o bandeja con conductores de alumbrado, energía y Clase 1 bajo las condiciones que establece la sección, porque la fibra misma no trae una trayectoria conductiva a la caja. La fibra conductiva se trata con más sospecha: su miembro metálico puede llevar una falla o un potencial extraño a la envolvente, así que la sección restringe cómo se mezcla con conductores de energía. De cualquier modo, el listado propio del cable de fibra para el espacio (770.179) sigue aplicando, y la fibra abandonada se retira bajo la misma disciplina que el resto del Capítulo 7.",
+      "on_the_job": "Al jalar fibra hacia una canalización junto a un tablero: la primera pregunta es conductiva o no conductiva — lea la chaqueta. La fibra dieléctrica no conductiva es la compañera fácil; una fibra con armadura de acero cambia la respuesta y lleva su propio camino.",
+      "sharma_note": "",
+      "florida_note": "",
+      "figure_idea": "Dos cortes de canalización: fibra no conductiva compartiendo con energía; fibra conductiva separada.",
+      "related_ids": [
+        "C7-ART-770",
+        "C7-770.179",
+        "C8-ART-840",
+        "C7-L-059"
+      ],
+      "sharma_rule_ids": [],
+      "verified": false,
+      "prev_id": "C7-ART-770",
+      "next_id": "C7-770.179"
+    },
+    {
+      "id": "C7-770.179",
+      "chapter": 7,
+      "article": "770",
+      "section": "770.179",
+      "title": "Tipos de cable de fibra óptica — cómo leer las letras",
+      "plain_explanation": "Las letras del tipo en un cable de fibra óptica dicen dos cosas: si el cable es conductivo, y dónde su listado de fuego y humo le permite correr. OFN es fibra óptica no conductiva; OFC es fibra óptica conductiva: la C significa que un miembro metálico forma parte del cable. El sufijo gradúa el listado como la escalera de comunicaciones del Capítulo 8: OFNP y OFCP son grado plénum, OFNR y OFCR son grado montante (riser), y OFN y OFC sin sufijo son de uso general. Un grado mayor puede sustituir a uno menor; uno menor nunca sustituye hacia arriba. Haga coincidir las letras con el espacio — plénum, montante o general — igual que hace coincidir CMP, CMR y CM.",
+      "on_the_job": "La especificación pide OFNR para un ducto vertical y el camión tiene OFN: ese jalado no se hace. La fibra grado plénum (OFNP u OFCP) en el camión también cubre el montante: la escalera solo baja.",
+      "sharma_note": "",
+      "florida_note": "",
+      "figure_idea": "Decodificador de letras: OF + C/N + P/R, con la escalera de sustitución.",
+      "related_ids": [
+        "C7-ART-770",
+        "C7-770.133",
+        "C8-800.179",
+        "C7-L-060"
+      ],
+      "sharma_rule_ids": [],
+      "verified": false,
+      "prev_id": "C7-770.133",
+      "next_id": null
     }
   ],
   "toc": [
@@ -1632,6 +1719,11 @@
           "id": "C7-702.10",
           "section": "702.10",
           "title": "Cableado — el cableado de reserva opcional puede compartir canalizaciones"
+        },
+        {
+          "id": "C7-702.11",
+          "section": "702.11",
+          "title": "Generadores portátiles exteriores"
         },
         {
           "id": "C7-702.12",
@@ -1810,6 +1902,11 @@
           "id": "C7-725.136(I)",
           "section": "725.136(I)",
           "title": "Otras aplicaciones — la regla de espaciamiento de 2 pulgadas"
+        },
+        {
+          "id": "C7-725.144",
+          "section": "725.144",
+          "title": "Energía y datos en el mismo cable — 725.144 y el calentamiento PoE"
         }
       ]
     },
@@ -1872,7 +1969,18 @@
       "id": "C7-ART-770",
       "article": "770",
       "title": "Cables de fibra óptica",
-      "children": []
+      "children": [
+        {
+          "id": "C7-770.133",
+          "section": "770.133",
+          "title": "Instalación de cables de fibra óptica"
+        },
+        {
+          "id": "C7-770.179",
+          "section": "770.179",
+          "title": "Tipos de cable de fibra óptica — cómo leer las letras"
+        }
+      ]
     }
   ],
   "index": [
@@ -1882,6 +1990,12 @@
         "C7-705.12(B)(3)(2)",
         "C7-705.12(B)(3)(4)",
         "C7-705.12"
+      ]
+    },
+    {
+      "term": "Article 722, not in NEC 2020",
+      "ids": [
+        "C7-ART-722"
       ]
     },
     {
@@ -2048,6 +2162,13 @@
       ]
     },
     {
+      "term": "Generators, portable (outdoor)",
+      "ids": [
+        "C7-702.11",
+        "C7-L-057"
+      ]
+    },
+    {
       "term": "Inadvertent interconnection",
       "ids": [
         "C7-702.5(D)",
@@ -2101,9 +2222,23 @@
       ]
     },
     {
+      "term": "Optical fiber cable types",
+      "ids": [
+        "C7-770.179",
+        "C7-L-060"
+      ]
+    },
+    {
       "term": "Optical fiber cables",
       "ids": [
         "C7-ART-770"
+      ]
+    },
+    {
+      "term": "Optical fiber, installation with other systems",
+      "ids": [
+        "C7-770.133",
+        "C7-L-059"
       ]
     },
     {
@@ -2124,6 +2259,22 @@
         "C7-702.7",
         "C7-702.12",
         "C7-702.12(C)"
+      ]
+    },
+    {
+      "term": "Power over Ethernet (PoE), cable heating",
+      "ids": [
+        "C7-725.144",
+        "C7-L-058"
+      ]
+    },
+    {
+      "term": "Power-limited cables, where the 2020 rules live",
+      "ids": [
+        "C7-ART-722",
+        "C7-ART-725",
+        "C7-ART-760",
+        "C7-ART-770"
       ]
     },
     {
@@ -2194,21 +2345,6 @@
       "term": "Under 50 volts, circuits",
       "ids": [
         "C7-ART-720"
-      ]
-    },
-    {
-      "term": "Article 722, not in NEC 2020",
-      "ids": [
-        "C7-ART-722"
-      ]
-    },
-    {
-      "term": "Power-limited cables, where the 2020 rules live",
-      "ids": [
-        "C7-ART-722",
-        "C7-ART-725",
-        "C7-ART-760",
-        "C7-ART-770"
       ]
     }
   ]
