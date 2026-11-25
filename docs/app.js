@@ -31,8 +31,8 @@ const CHAP_DEFS = [
 ];
 const NEC = { index: null, books: {}, top: null, v1: null, _p: {} };
 async function loadJSON(name) {
-  if (LANG === "es") { try { const r = await fetch(NEC_BASE + name + ".es.json?v=2"); if (r.ok) return await r.json(); } catch (e) {} }
-  try { const r = await fetch(NEC_BASE + name + ".json?v=2"); if (r.ok) return await r.json(); } catch (e) {}
+  if (LANG === "es") { try { const r = await fetch(NEC_BASE + name + ".es.json?v=3"); if (r.ok) return await r.json(); } catch (e) {} }
+  try { const r = await fetch(NEC_BASE + name + ".json?v=3"); if (r.ok) return await r.json(); } catch (e) {}
   return null;
 }
 function lightEntry(ix) {
@@ -452,8 +452,8 @@ let ASK_IDX = null;
 async function ensureAskIdx() {
   if (ASK_IDX) return ASK_IDX;
   let base = [];
-  if (LANG === "es") { try { const r = await fetch("data/ask-index.es.json?v=2"); if (r.ok) base = await r.json(); } catch (e) {} }
-  if (!base.length) { try { const r = await fetch("data/ask-index.json?v=2"); if (r.ok) base = await r.json(); } catch (e) {} }
+  if (LANG === "es") { try { const r = await fetch("data/ask-index.es.json?v=3"); if (r.ok) base = await r.json(); } catch (e) {} }
+  if (!base.length) { try { const r = await fetch("data/ask-index.json?v=3"); if (r.ok) base = await r.json(); } catch (e) {} }
   const guide = [];
   TOPICS.forEach(t => guide.push({ k: "guide", id: t.id, t: t.title, r: LANG === "es" ? "Guía de instalación preliminar" : "Rough-In Guide", x: (t.blurb || "") + " " + (t.tags || []).join(" "), tags: t.tags || [], h: "#/howtos/topic/" + t.id }));
   ROUGHIN_PAGES.forEach(p => guide.push({ k: "guide", id: p.id, t: p.title, r: LANG === "es" ? "Curso de instalación preliminar" : "Rough-In Course", x: (p.blurb || "") + " " + (p.tags || []).join(" "), tags: p.tags || [], h: "#/course/page/" + p.id }));

@@ -254,15 +254,57 @@
       "figure_idea": "Corte transversal de un conductor con flechas de calor saliendo de él: la ampacidad la fija el calor que el aislamiento puede soportar, no el cobre solo.",
       "related_ids": [
         "C1-L-014",
-        "S-10"
+        "S-10",
+        "C1-L-063"
       ],
       "florida_note": "Las temperaturas de los áticos de Florida hacen que la corrección por temperatura ambiente sea un paso real de diseño, no un trámite de papeleo.",
       "verified": true,
       "prev_id": "C1-100-ACCESSIBLE",
-      "next_id": "C1-100-APPLIANCE",
+      "next_id": "C1-100-CONDUCTORS",
       "sharma_rule_ids": [
         "S-10"
       ]
+    },
+    {
+      "id": "C1-100-CONDUCTORS",
+      "chapter": 1,
+      "article": "100",
+      "section": "100",
+      "title": "Conductores — desnudo, cubierto, aislado y el neutro",
+      "plain_explanation": "El Artículo 100 clasifica los conductores por lo que lleva el metal. Un conductor desnudo no tiene cubierta ni aislamiento. Un conductor cubierto tiene una cubierta que no se reconoce como aislamiento — puede proteger contra el clima o la abrasión, pero no le da al cable una clasificación de aislamiento. Un conductor aislado tiene un aislamiento reconocido para el uso, que es el cable normal de construcción que maneja la cuadrilla. El conductor neutro es el conductor conectado al punto neutro del sistema, destinado a llevar corriente en condiciones normales; el punto neutro es el punto común de una conexión en estrella (Y), o el punto medio de un sistema monofásico o de DC, desde el cual se referencian los conductores del circuito.",
+      "on_the_job": "No trate un conductor cubierto como aislado cuando una regla exige aislamiento — la cubierta de la bajada de acometida es el ejemplo clásico. Y el neutro es un conductor de trabajo que lleva corriente, no una tierra de repuesto: va a la barra de neutros y solo se une a tierra donde el Código permite la unión.",
+      "sharma_note": "",
+      "figure_idea": "Tres cortes de cable lado a lado: metal desnudo, una cubierta contra el clima y aislamiento completo, con el punto neutro de una estrella (Y) dibujado al lado.",
+      "related_ids": [
+        "C1-L-071",
+        "C1-100-AMPACITY",
+        "C1-100-GROUNDED-GROUNDING"
+      ],
+      "florida_note": "",
+      "verified": false,
+      "prev_id": "C1-100-AMPACITY",
+      "next_id": "C1-100-VOLTAGE-FAMILY",
+      "sharma_rule_ids": []
+    },
+    {
+      "id": "C1-100-VOLTAGE-FAMILY",
+      "chapter": 1,
+      "article": "100",
+      "section": "100",
+      "title": "Voltaje — voltaje nominal, voltaje a tierra y voltaje del circuito",
+      "plain_explanation": "Tres términos de voltaje recorren todo el Código. El voltaje de un circuito es la mayor diferencia de potencial entre dos conductores cualesquiera de ese circuito. El voltaje nominal es el valor con el que se nombra el sistema — 120, 240, 480 — usado para clasificar circuitos y equipos aunque el voltaje real varíe un poco por encima y por debajo. El voltaje a tierra es el voltaje entre un conductor y la tierra o el punto puesto a tierra del sistema: en una acometida de casa de 120/240V es 120V, y en un sistema 208Y/120V es 120V, por lo que tantas reglas de distancias y espacio de trabajo se basan en él y no en el número entre fases.",
+      "on_the_job": "Cuando una tabla pide el voltaje a tierra, responda con el número de fase a tierra, no con el de la placa de la acometida. Un tablero de 120/240V queda en la fila de 0–150V a tierra aunque aparezcan 240V a través de su bus.",
+      "sharma_note": "",
+      "figure_idea": "Un diagrama de tablero de 120/240V con flechas de 120V de cada fase a tierra y una flecha de 240V entre fases, cada una rotulada con su término.",
+      "related_ids": [
+        "C1-110.4",
+        "C1-110.26(A)(1)"
+      ],
+      "florida_note": "",
+      "verified": false,
+      "prev_id": "C1-100-CONDUCTORS",
+      "next_id": "C1-100-APPLIANCE",
+      "sharma_rule_ids": []
     },
     {
       "id": "C1-100-APPLIANCE",
@@ -280,7 +322,7 @@
       ],
       "florida_note": "",
       "verified": true,
-      "prev_id": "C1-100-AMPACITY",
+      "prev_id": "C1-100-VOLTAGE-FAMILY",
       "next_id": "C1-100-APPROVAL-FAMILY",
       "sharma_rule_ids": [
         "S-06"
@@ -306,11 +348,31 @@
       "florida_note": "",
       "verified": true,
       "prev_id": "C1-100-APPLIANCE",
-      "next_id": "C1-100-BONDING",
+      "next_id": "C1-100-EQUIPMENT-FAMILY",
       "sharma_rule_ids": [
         "S-02",
         "S-03"
       ]
+    },
+    {
+      "id": "C1-100-EQUIPMENT-FAMILY",
+      "chapter": 1,
+      "article": "100",
+      "section": "100",
+      "title": "Equipo, equipo de utilización, envolventes y accesorios",
+      "plain_explanation": "Equipo es la palabra general del Código para los aparatos de una instalación — accesorios, dispositivos, electrodomésticos, luminarias, máquinas y similares, lleven corriente o solo sostengan las partes que la llevan. El equipo de utilización es la parte más reducida que realmente usa la energía eléctrica para trabajar: calefacción, iluminación, enfriamiento, procesamiento de datos y trabajos parecidos. Una envolvente es la caja o carcasa alrededor del aparato que mantiene a las personas alejadas de las partes vivas y protege el contenido; envuelto describe el aparato que tiene esa caja. Un accesorio (fitting) es una pieza — una contratuerca, un buje o similar — que hace un trabajo mecánico y no eléctrico. Una envolvente tipo handhole es una pequeña envolvente de acceso bajo el nivel del suelo, colocada a ras o enterrada, cuya tapa el trabajador retira a mano para llegar a los conductores de adentro.",
+      "on_the_job": "Llamar algo «equipo» es lo que trae consigo las reglas del Artículo 110 — aprobación, espacio de trabajo, protección. Los handholes son los puntos de empalme enterrados en el trabajo de sitio: son envolventes, así que los empalmes de adentro deben hacerse con métodos listados y la tapa debe mantenerse accesible, no pavimentada encima.",
+      "sharma_note": "",
+      "figure_idea": "Un tablero, una luminaria y un handhole a nivel del suelo, cada uno rotulado con el término que lo cubre.",
+      "related_ids": [
+        "C1-110.28",
+        "C1-110.3"
+      ],
+      "florida_note": "",
+      "verified": false,
+      "prev_id": "C1-100-APPROVAL-FAMILY",
+      "next_id": "C1-100-BONDING",
+      "sharma_rule_ids": []
     },
     {
       "id": "C1-100-BONDING",
@@ -327,7 +389,28 @@
       ],
       "florida_note": "",
       "verified": true,
-      "prev_id": "C1-100-APPROVAL-FAMILY",
+      "prev_id": "C1-100-EQUIPMENT-FAMILY",
+      "next_id": "C1-100-GROUNDING-FAMILY",
+      "sharma_rule_ids": []
+    },
+    {
+      "id": "C1-100-GROUNDING-FAMILY",
+      "chapter": 1,
+      "article": "100",
+      "section": "100",
+      "title": "Conductores y electrodos de puesta a tierra — EGC, GEC y puentes de unión",
+      "plain_explanation": "La familia de puesta a tierra se divide por trabajo. El conductor de puesta a tierra de equipos (EGC) conecta las partes metálicas de los equipos de vuelta a la fuente para que una falla a tierra se convierta en una corriente de falla grande que dispare el breaker — es el cable verde o desnudo de cada circuito derivado. El conductor del electrodo de puesta a tierra (GEC) conecta el sistema al electrodo de puesta a tierra — la varilla, placa, electrodo embebido en concreto u otra conexión a tierra reconocida. El puente de unión principal es la conexión en la acometida entre el conductor puesto a tierra y el lado del EGC; un puente de unión del sistema hace el mismo trabajo en un sistema derivado separadamente. Las páginas existentes de Unión (Bonding) y Puesto a tierra / Puesta a tierra cubren las palabras base; esta página es el mapa conductor por conductor.",
+      "on_the_job": "Confundir el EGC con el GEC es la trampa clásica de examen e inspección: el EGC protege a las personas del metal energizado, el GEC conecta el sistema a tierra, y se dimensionan con tablas distintas (250.122 para el EGC, 250.66 para el GEC). La única unión neutro-tierra en una casa es el puente de unión principal en la acometida — los tableros aguas abajo los mantienen separados.",
+      "sharma_note": "",
+      "figure_idea": "Un diagrama de acometida de casa que traza tres caminos en tres colores: el EGC de vuelta al tablero, el GEC hacia abajo a la varilla, y el puente de unión principal uniendo el neutro a la envolvente solo en la acometida.",
+      "related_ids": [
+        "C1-L-074",
+        "C1-100-BONDING",
+        "C1-100-GROUNDED-GROUNDING"
+      ],
+      "florida_note": "",
+      "verified": false,
+      "prev_id": "C1-100-BONDING",
       "next_id": "C1-100-GROUNDED-GROUNDING",
       "sharma_rule_ids": []
     },
@@ -348,7 +431,27 @@
       ],
       "florida_note": "",
       "verified": true,
-      "prev_id": "C1-100-BONDING",
+      "prev_id": "C1-100-GROUNDING-FAMILY",
+      "next_id": "C1-100-GROUND-FAULT-FAMILY",
+      "sharma_rule_ids": []
+    },
+    {
+      "id": "C1-100-GROUND-FAULT-FAMILY",
+      "chapter": 1,
+      "article": "100",
+      "section": "100",
+      "title": "Falla a tierra, GFCI y protección de falla a tierra de equipos",
+      "plain_explanation": "Una falla a tierra es una conexión no intencional entre un conductor no puesto a tierra y el metal que normalmente no lleva corriente, o la tierra — la falla que el EGC existe para convertir en un disparo del breaker. Dos términos de protección se basan en ella y no son intercambiables. Un interruptor de circuito por falla a tierra (GFCI) protege a las personas: vigila la corriente que se fuga fuera del camino previsto y abre el circuito a unos pocos miliamperios, el nivel de protección personal (los dispositivos Clase A disparan en el rango de 4–6 mA). La protección de falla a tierra de equipos (GFPE) protege equipos y conductores contra corrientes de falla dañinas a niveles mucho más altos — cientos de amperios en acometidas grandes — y no está destinada a proteger a una persona de una descarga.",
+      "on_the_job": "Un breaker con GFPE en una acometida grande no salvará a un ayudante que toque una parte viva, y un GFCI de receptáculo no es protección de equipos para una acometida. Cuando una especificación o un inspector dice «protección de falla a tierra», pregunte cuál de las dos se quiere decir antes de pedir el equipo.",
+      "sharma_note": "",
+      "figure_idea": "Dos curvas de disparo lado a lado: un GFCI que abre a unos pocos miliamperios para el personal, y un GFPE que abre a cientos de amperios para los equipos.",
+      "related_ids": [
+        "C1-L-070",
+        "C1-100-GROUNDING-FAMILY"
+      ],
+      "florida_note": "",
+      "verified": false,
+      "prev_id": "C1-100-GROUNDED-GROUNDING",
       "next_id": "C1-100-BRANCH-CIRCUIT",
       "sharma_rule_ids": []
     },
@@ -368,11 +471,53 @@
       ],
       "florida_note": "",
       "verified": true,
-      "prev_id": "C1-100-GROUNDED-GROUNDING",
-      "next_id": "C1-100-FEEDER",
+      "prev_id": "C1-100-GROUND-FAULT-FAMILY",
+      "next_id": "C1-100-BRANCH-CIRCUIT-TYPES",
       "sharma_rule_ids": [
         "S-01"
       ]
+    },
+    {
+      "id": "C1-100-BRANCH-CIRCUIT-TYPES",
+      "chapter": 1,
+      "article": "100",
+      "section": "100",
+      "title": "Tipos de circuitos derivados — de electrodomésticos, de uso general, individual y multiconductor (multiwire)",
+      "plain_explanation": "El Artículo 100 nombra cuatro tipos de circuitos derivados. Un circuito derivado de electrodomésticos alimenta equipos que usan energía, distintos de las luminarias. Un circuito derivado de uso general alimenta dos o más receptáculos o salidas para iluminación y electrodomésticos. Un circuito derivado individual alimenta una sola pieza de equipo de utilización. Un circuito derivado multiconductor (multiwire) usa dos o más conductores no puestos a tierra con un voltaje entre ellos, compartiendo un solo conductor puesto a tierra (neutro) que lleva solo la diferencia desequilibrada entre ellos — el circuito de neutro compartido que la cuadrilla encuentra en cocinas y homeruns. La página base de Circuito derivado cubre dónde empieza y termina un circuito derivado; esta página es el árbol familiar.",
+      "on_the_job": "El neutro compartido es lo que hace eficiente y a la vez peligroso a un circuito multiwire: si ese neutro se abre bajo carga, las dos fases quedan en serie a través de 240V y sobrevoltajean un lado. Ambas fases deben desconectarse juntas, y los conductores deben ir a fases opuestas — «compartir» en la misma fase sobrecarga el neutro en vez de cancelarlo.",
+      "sharma_note": "",
+      "figure_idea": "Cuatro diagramas unifilares simples, uno por tipo, con el circuito multiwire mostrando dos fases compartiendo un neutro.",
+      "related_ids": [
+        "C1-L-068",
+        "C1-100-BRANCH-CIRCUIT"
+      ],
+      "florida_note": "",
+      "verified": false,
+      "prev_id": "C1-100-BRANCH-CIRCUIT",
+      "next_id": "C1-100-CIRCUIT-BREAKER",
+      "sharma_rule_ids": []
+    },
+    {
+      "id": "C1-100-CIRCUIT-BREAKER",
+      "chapter": 1,
+      "article": "100",
+      "section": "100",
+      "title": "Breaker, tablero, gabinete y las clasificaciones de falla",
+      "plain_explanation": "Un breaker (interruptor automático) es un dispositivo que abre y cierra un circuito por medios no automáticos y lo abre automáticamente ante una sobrecorriente prefijada — un breaker de disparo ajustable permite cambiar ese ajuste sin cambiar partes internas. Un tablero (panelboard) es un panel único, o grupo de unidades de panel, de interruptores o breakers en un gabinete, diseñado para montarse en o contra una pared; el gabinete (o caja de interruptores) es la envolvente que lo rodea, de superficie o empotrada, con puertas o marco según su diseño. Aquí viven dos clasificaciones de falla que se confunden constantemente: la capacidad interruptiva es la mayor corriente de falla que el propio dispositivo puede abrir con seguridad a su voltaje nominal; la clasificación de corriente de cortocircuito (SCCR) es la corriente de falla que una pieza de equipo en conjunto puede soportar o ante la cual puede estar protegida. Las páginas de 110.9 y 110.10 llevan las reglas detrás de ambas clasificaciones.",
+      "on_the_job": "Un breaker que encaja no es un breaker que corresponde: su capacidad interruptiva debe igualar o superar la corriente de falla disponible en sus terminales, y el SCCR del tablero debe cubrir la instalación — revise las etiquetas antes de instalar el equipo, no en la inspección.",
+      "sharma_note": "",
+      "figure_idea": "Un corte de tablero: breakers adentro, gabinete alrededor, con llamadas a la capacidad interruptiva en la etiqueta de un breaker y al SCCR en la etiqueta del tablero.",
+      "related_ids": [
+        "C1-L-069",
+        "C1-110.9",
+        "C1-110.10",
+        "C1-100-APPROVAL-FAMILY"
+      ],
+      "florida_note": "",
+      "verified": false,
+      "prev_id": "C1-100-BRANCH-CIRCUIT-TYPES",
+      "next_id": "C1-100-FEEDER",
+      "sharma_rule_ids": []
     },
     {
       "id": "C1-100-FEEDER",
@@ -389,7 +534,7 @@
       ],
       "florida_note": "",
       "verified": true,
-      "prev_id": "C1-100-BRANCH-CIRCUIT",
+      "prev_id": "C1-100-CIRCUIT-BREAKER",
       "next_id": "C1-100-CONTINUOUS-LOAD",
       "sharma_rule_ids": []
     },
@@ -410,6 +555,27 @@
       "florida_note": "",
       "verified": true,
       "prev_id": "C1-100-FEEDER",
+      "next_id": "C1-100-LOAD-TERMS",
+      "sharma_rule_ids": []
+    },
+    {
+      "id": "C1-100-LOAD-TERMS",
+      "chapter": 1,
+      "article": "100",
+      "section": "100",
+      "title": "Factor de demanda, carga no lineal y sobrecorriente",
+      "plain_explanation": "El factor de demanda es la relación entre la demanda máxima de un sistema (o parte de uno) y la carga total conectada — siempre es 1.0 o menos, y es lo que permite que un alimentador sea más pequeño que la suma de todo lo conectado, porque no todo funciona a la vez. Una carga no lineal es una carga cuya forma de onda de corriente no sigue la forma de onda del voltaje — drivers LED, balastos electrónicos, variadores de velocidad y la mayoría de la electrónica enchufable — que empuja corriente armónica al sistema, especialmente al neutro compartido. Sobrecorriente es cualquier corriente por encima de la clasificación de un conductor o equipo, por una de dos causas que la cuadrilla debe distinguir: una sobrecarga es demasiada carga legítima en un circuito por lo demás sano, mientras que un cortocircuito o una falla a tierra es una falla — la protección y la localización del problema son distintas en cada caso.",
+      "on_the_job": "El factor de demanda es la razón por la que el cálculo de acometida del Capítulo 2 nunca suma simplemente cada breaker. Las cargas no lineales son la razón por la que un neutro compartido en un circuito multiwire que alimenta iluminación LED puede necesitar tratarse como conductor portador de corriente y a veces aumentarse de calibre — los armónicos se suman en el neutro en vez de cancelarse.",
+      "sharma_note": "",
+      "figure_idea": "Un gráfico de barras: carga conectada alta, demanda máxima más corta, la relación rotulada factor de demanda; al lado, una forma de onda de corriente distorsionada rotulada no lineal.",
+      "related_ids": [
+        "C1-L-073",
+        "C1-100-CONTINUOUS-LOAD",
+        "C1-100-BRANCH-CIRCUIT-TYPES"
+      ],
+      "florida_note": "",
+      "verified": false,
+      "prev_id": "C1-100-CONTINUOUS-LOAD",
       "next_id": "C1-100-DWELLING-UNIT",
       "sharma_rule_ids": []
     },
@@ -428,7 +594,28 @@
       ],
       "florida_note": "",
       "verified": true,
-      "prev_id": "C1-100-CONTINUOUS-LOAD",
+      "prev_id": "C1-100-LOAD-TERMS",
+      "next_id": "C1-100-BATHROOM",
+      "sharma_rule_ids": []
+    },
+    {
+      "id": "C1-100-BATHROOM",
+      "chapter": 1,
+      "article": "100",
+      "section": "100",
+      "title": "Baño y clóset de ropa",
+      "plain_explanation": "Un baño, en el Artículo 100, es un área que incluye un lavabo más al menos uno de: un inodoro, una tina o una ducha — una habitación con solo un inodoro y sin lavabo no es un baño según el Código, y un lavabo sin nada más tampoco. La definición importa porque conjuntos enteros de reglas se activan con ella: el circuito de 20A para receptáculos de baño, la protección GFCI para receptáculos de baño, y la prohibición de receptáculos dentro de los espacios de tina y ducha. Un clóset de ropa es la habitación o espacio no habitable destinado a guardar ropa — la definición detrás de las reglas de luminarias que mantienen las lámparas calientes y expuestas alejadas de la ropa y los estantes guardados.",
+      "on_the_job": "En los planos, revise la lista de aparatos antes de aplicar las reglas de baño: un tocador con lavabo e inodoro es un baño; un medio baño de solo inodoro no lo es. En los clósets, la definición de clóset de ropa es lo que activa las reglas de tipo y distancia de luminarias en 410.16 — trate cualquier clóset con barra y estante como tal, salvo que los planos digan lo contrario.",
+      "sharma_note": "",
+      "figure_idea": "Dos plantas pequeñas: lavabo + inodoro marcados como baño, inodoro solo tachado, con una planta de clóset mostrando estante y barra.",
+      "related_ids": [
+        "C1-L-061",
+        "C1-100-AREAS-IN-USE",
+        "C1-100-DWELLING-UNIT"
+      ],
+      "florida_note": "",
+      "verified": false,
+      "prev_id": "C1-100-DWELLING-UNIT",
       "next_id": "C1-100-EXPOSED",
       "sharma_rule_ids": []
     },
@@ -447,7 +634,27 @@
       ],
       "florida_note": "",
       "verified": true,
-      "prev_id": "C1-100-DWELLING-UNIT",
+      "prev_id": "C1-100-BATHROOM",
+      "next_id": "C1-100-CONCEALED",
+      "sharma_rule_ids": []
+    },
+    {
+      "id": "C1-100-CONCEALED",
+      "chapter": 1,
+      "article": "100",
+      "section": "100",
+      "title": "Oculto (concealed)",
+      "plain_explanation": "Oculto describe el cableado o equipo que la estructura o el acabado del edificio vuelve inaccesible — detrás del drywall, sobre un techo terminado, dentro de una losa. Es el espejo de la página de Expuesto: oculto no significa fuera del Código. El trabajo oculto debe instalarse igualmente según las reglas del método, porque una vez puesto el acabado nadie puede inspeccionarlo ni alcanzarlo sin demolición — exactamente la razón por la que la inspección de rough-in ocurre antes de cubrir.",
+      "on_the_job": "Todo lo oculto debe seguir siendo accesible donde el Código exige acceso — las cajas de empalmes y los empalmes no pueden enterrarse detrás del acabado, la trampa de la que advierte la página de Accesible. Si una caja va a quedar oculta e inalcanzable, muévala o añada un panel de acceso antes de que suba el drywall.",
+      "sharma_note": "",
+      "figure_idea": "Un corte de pared: cable y una caja dentro de la pared terminada marcados como ocultos, con la caja señalada como la parte que no puede enterrarse.",
+      "related_ids": [
+        "C1-100-EXPOSED",
+        "C1-100-ACCESSIBLE"
+      ],
+      "florida_note": "",
+      "verified": false,
+      "prev_id": "C1-100-EXPOSED",
       "next_id": "C1-100-LOCATIONS",
       "sharma_rule_ids": []
     },
@@ -468,7 +675,28 @@
       ],
       "florida_note": "La humedad de Florida y la lluvia impulsada por el viento empujan muchas ubicaciones dudosas de porches y cocheras hacia húmedas o mojadas según el criterio del AHJ. Confirme las ubicaciones dudosas con el inspector en lugar de suponer que son secas.",
       "verified": true,
-      "prev_id": "C1-100-EXPOSED",
+      "prev_id": "C1-100-CONCEALED",
+      "next_id": "C1-100-EXPOSURE-TERMS",
+      "sharma_rule_ids": []
+    },
+    {
+      "id": "C1-100-EXPOSURE-TERMS",
+      "chapter": 1,
+      "article": "100",
+      "section": "100",
+      "title": "Resistente a la intemperie, hermético al agua y hermético al polvo",
+      "plain_explanation": "Tres términos de exposición de envolventes, en orden creciente de sellado. Resistente a la intemperie (weatherproof) significa construido o protegido de modo que la exposición al clima no interfiera con su operación exitosa — la lluvia puede llegarle, pero el equipo sigue funcionando; no promete que el agua se quede fuera. Hermético al agua (watertight) significa construido de modo que la humedad no entre a la envolvente bajo las condiciones de prueba especificadas — el sello mismo es el punto. Hermético al polvo (dusttight) significa construido de modo que el polvo no entre bajo las condiciones de prueba especificadas. Estos términos van junto a la página de Ubicaciones: la ubicación dice qué tan mojado es el lugar; estos términos dicen qué hace la envolvente con su ambiente.",
+      "on_the_job": "Resistente a la intemperie es la palabra que engaña — una caja de campana weatherproof desvía el clima lo bastante bien para funcionar, pero no es hermética al agua, y ninguna de las dos palabras sustituye el listado para ubicación húmeda ni las reglas de tapas en uso donde aplican. Lea la clasificación real de la envolvente para el trabajo en cuestión.",
+      "sharma_note": "",
+      "figure_idea": "Tres envolventes bajo la lluvia: una funcionando con el agua corriendo fuera, una sellada contra la entrada, una sellada contra el polvo, cada una rotulada.",
+      "related_ids": [
+        "C1-L-077",
+        "C1-100-LOCATIONS",
+        "C1-110.28"
+      ],
+      "florida_note": "",
+      "verified": false,
+      "prev_id": "C1-100-LOCATIONS",
       "next_id": "C1-100-OUTLET-RECEPTACLE",
       "sharma_rule_ids": []
     },
@@ -490,11 +718,30 @@
       ],
       "florida_note": "",
       "verified": true,
-      "prev_id": "C1-100-LOCATIONS",
-      "next_id": "C1-100-SERVICE",
+      "prev_id": "C1-100-EXPOSURE-TERMS",
+      "next_id": "C1-100-LUMINAIRE-OUTLET",
       "sharma_rule_ids": [
         "S-04"
       ]
+    },
+    {
+      "id": "C1-100-LUMINAIRE-OUTLET",
+      "chapter": 1,
+      "article": "100",
+      "section": "100",
+      "title": "Luminaria y salida de iluminación",
+      "plain_explanation": "Una luminaria es la unidad completa de iluminación — lámpara o fuente LED, las partes que distribuyen la luz, colocan y protegen la fuente, y la conectan a la alimentación. Es la palabra del Código para lo que las cuadrillas llaman un fixture, y el Código usa luminaria en todas partes donde una regla se refiere a la unidad completa, no solo al bombillo. Una salida de iluminación es una salida destinada a conectarse directamente a una luminaria o a un portalámparas — uno de los tipos de salida de la página de Salida y receptáculo, y el punto donde termina la responsabilidad del circuito derivado por esa luz.",
+      "on_the_job": "Los conteos de fixtures en un takeoff son conteos de luminarias. Cuando una regla o un plano dice «salida de iluminación», se refiere a la caja y el punto del circuito, esté o no instalada ya la luminaria — el rough-in se inspecciona contra las salidas, el trim contra las luminarias.",
+      "sharma_note": "",
+      "figure_idea": "Una caja de techo rotulada salida de iluminación con la luminaria debajo rotulada como la unidad completa, de la lámpara a la carcasa.",
+      "related_ids": [
+        "C1-100-OUTLET-RECEPTACLE"
+      ],
+      "florida_note": "",
+      "verified": false,
+      "prev_id": "C1-100-OUTLET-RECEPTACLE",
+      "next_id": "C1-100-SERVICE",
+      "sharma_rule_ids": []
     },
     {
       "id": "C1-100-SERVICE",
@@ -512,7 +759,29 @@
       ],
       "florida_note": "La compañía eléctrica que sirve el trabajo (por ejemplo FPL o una compañía municipal) fija sus propios requisitos de punto de acometida y medidor junto con el NEC. Confirme los requisitos actuales de la compañía en trabajos de acometida.",
       "verified": true,
-      "prev_id": "C1-100-OUTLET-RECEPTACLE",
+      "prev_id": "C1-100-LUMINAIRE-OUTLET",
+      "next_id": "C1-100-SERVICE-FAMILY",
+      "sharma_rule_ids": [
+        "S-09"
+      ]
+    },
+    {
+      "id": "C1-100-SERVICE-FAMILY",
+      "chapter": 1,
+      "article": "100",
+      "section": "100",
+      "title": "Conductores de acometida, bajada, lateral, entrada, equipo y punto",
+      "plain_explanation": "La familia de la acometida, pieza por pieza. El punto de acometida es el punto donde las instalaciones de la compañía eléctrica se encuentran con el cableado del predio — el límite de responsabilidad. Los conductores de acometida van desde el punto de acometida hasta el desconectador de acometida. Por arriba, se dividen en la bajada de acometida (los conductores aéreos de la compañía, desde su sistema hasta el punto de acometida) y los conductores de entrada de acometida (del lado del cliente, desde el punto de acometida hasta el equipo de acometida). Por debajo del suelo, el recorrido de la compañía hasta el punto de acometida es la lateral de acometida. El equipo de acometida es el equipo — normalmente el desconectador principal y su envolvente — que controla y corta el suministro al edificio. La página base de Acometida presenta la familia; esta página es el mapa de qué es de quién, y dónde.",
+      "on_the_job": "Casi toda discusión de acometida es una discusión del punto de acometida: de quién es el conductor, de quién la reparación, de quién la norma. En las acometidas de Sharma el medidor va afuera y el tablero adentro, espalda con espalda, para que el recorrido de entrada de acometida quede tan corto como permita la distribución — y los requisitos de la compañía gobiernan todo lo que está de su lado del punto.",
+      "sharma_note": "S-09: meter outside and panel inside, back to back, where the layout allows — the arrangement that keeps the service-entrance conductors short.",
+      "figure_idea": "Una acometida aérea y una subterránea lado a lado, cada una dividida en un punto de acometida marcado: bajada/lateral del lado de la compañía, conductores de entrada y equipo de acometida del lado del edificio.",
+      "related_ids": [
+        "C1-L-029",
+        "C1-100-SERVICE"
+      ],
+      "florida_note": "",
+      "verified": false,
+      "prev_id": "C1-100-SERVICE",
       "next_id": "C1-100-IN-SIGHT",
       "sharma_rule_ids": [
         "S-09"
@@ -534,7 +803,49 @@
       ],
       "florida_note": "",
       "verified": true,
-      "prev_id": "C1-100-SERVICE",
+      "prev_id": "C1-100-SERVICE-FAMILY",
+      "next_id": "C1-100-DEVICE-DISCONNECT",
+      "sharma_rule_ids": []
+    },
+    {
+      "id": "C1-100-DEVICE-DISCONNECT",
+      "chapter": 1,
+      "article": "100",
+      "section": "100",
+      "title": "Dispositivo, medio de desconexión y tipos de interruptores",
+      "plain_explanation": "Un dispositivo es una unidad de un sistema eléctrico, distinta de un conductor, que lleva o controla energía eléctrica — interruptores, receptáculos, breakers y termostatos son dispositivos; el cable y la tubería no lo son. Un medio de desconexión es un dispositivo, grupo de dispositivos u otro medio por el cual los conductores de un circuito pueden desconectarse de su fuente — aquello desde lo que la página de A la vista mide. Tres tipos de interruptores completan la familia: un interruptor de uso general controla cargas de iluminación y electrodomésticos y se clasifica en amperios a su voltaje marcado; un interruptor de aislamiento está destinado a aislar un circuito de su fuente y no está destinado a interrumpir corriente bajo carga; un interruptor de circuito de motor se clasifica en caballos de fuerza y está construido para interrumpir la máxima corriente de sobrecarga de operación del motor al que sirve.",
+      "on_the_job": "Un interruptor de aislamiento no es un interruptor de corte bajo carga — abrir uno bajo carga es un evento de arco, no una desconexión. Cuando una regla pide un medio de desconexión, verifique que el dispositivo en mano esté realmente clasificado para hacer el trabajo de desconexión para ese tipo de carga.",
+      "sharma_note": "",
+      "figure_idea": "Tres interruptores en fila — de uso general, de aislamiento, de circuito de motor — con la carga que cada uno está construido para interrumpir dibujada al lado.",
+      "related_ids": [
+        "C1-100-IN-SIGHT",
+        "C1-110.22",
+        "C1-110.25"
+      ],
+      "florida_note": "",
+      "verified": false,
+      "prev_id": "C1-100-IN-SIGHT",
+      "next_id": "C1-100-SYSTEMS-WIRING",
+      "sharma_rule_ids": []
+    },
+    {
+      "id": "C1-100-SYSTEMS-WIRING",
+      "chapter": 1,
+      "article": "100",
+      "section": "100",
+      "title": "Cableado del predio, sistemas derivados separadamente, raceway y empalmes",
+      "plain_explanation": "El sistema de cableado del predio es todo el cableado dentro de (y adosado a) un edificio, desde el punto de acometida — o desde otra fuente de energía como un generador o un sistema solar — hasta las salidas; no incluye el cableado interno del propio equipo. Un sistema derivado separadamente es un sistema de cableado del predio alimentado desde una fuente distinta de una acometida — un transformador, generador, convertidor o batería — que no tiene conexión eléctrica directa con los conductores de alimentación de otro sistema, salvo a través de la puesta a tierra y la unión. Un raceway es un canal cerrado construido para alojar conductores o cables — la tubería conduit y el tubing son raceways; el cable no lo es. Un empalme es la conexión entre conductores, y un conector de empalme para cables es el dispositivo — tuerca para cables, conector de palanca, bloque de terminales — listado para hacer esa conexión bajo presión. Un hoistway es el espacio tipo hueco por el que viaja un elevador, montaplatos o equipo similar, un espacio con sus propias reglas de cableado en el Artículo 620.",
+      "on_the_job": "Un tablero alimentado por transformador es un sistema derivado separadamente, y por eso recibe su propia unión neutro-tierra a través de un puente de unión del sistema — la unión que describe la página de la familia de puesta a tierra. Y cada empalme que hace una cuadrilla vive o muere por el listado del conector: el conector, no la cinta sobre él, es el empalme.",
+      "sharma_note": "",
+      "figure_idea": "Un contorno de edificio desde el punto de acometida hasta la última salida rotulado cableado del predio, un transformador alimentando su propio tablero rotulado derivado separadamente, y un raceway abierto mostrando los conductores adentro.",
+      "related_ids": [
+        "C1-L-072",
+        "C1-L-076",
+        "C1-100-GROUNDING-FAMILY"
+      ],
+      "florida_note": "",
+      "verified": false,
+      "prev_id": "C1-100-DEVICE-DISCONNECT",
       "next_id": "C1-100-SPECIAL-PERMISSION",
       "sharma_rule_ids": []
     },
@@ -553,7 +864,7 @@
       ],
       "florida_note": "",
       "verified": true,
-      "prev_id": "C1-100-IN-SIGHT",
+      "prev_id": "C1-100-SYSTEMS-WIRING",
       "next_id": "C1-100-AREAS-IN-USE",
       "sharma_rule_ids": []
     },
@@ -712,7 +1023,9 @@
       "figure_idea": "",
       "related_ids": [
         "C1-L-038",
-        "S-10"
+        "S-10",
+        "C1-L-064",
+        "C1-L-067"
       ],
       "florida_note": "",
       "verified": true,
@@ -888,7 +1201,8 @@
         "L-039",
         "S-10",
         "C1-Q-013",
-        "C1-Q-014"
+        "C1-Q-014",
+        "C1-L-065"
       ],
       "florida_note": "",
       "verified": true,
@@ -976,6 +1290,23 @@
       "florida_note": "",
       "verified": true,
       "prev_id": "C1-110.15",
+      "next_id": "C1-110.17",
+      "sharma_rule_ids": []
+    },
+    {
+      "id": "C1-110.17",
+      "chapter": 1,
+      "article": "110",
+      "section": "110.17",
+      "title": "Mantenimiento y servicio de equipos",
+      "plain_explanation": "Esta sección, nueva en la edición 2020, trata el servicio y mantenimiento de equipos eléctricos: el servicio debe hacerlo personal calificado, y las piezas y componentes de reemplazo deben ser adecuados para el equipo — identificados para él o los reemplazos especificados por el fabricante. La experiencia por sí sola no es el estándar; la persona que hace el trabajo necesita la capacitación y el conocimiento que la tarea y sus peligros requieren.",
+      "on_the_job": "En llamadas de servicio, reemplace los componentes fallados con piezas identificadas para ese equipo, y trate el equipo desconocido — especialmente el switchgear comercial — como un trabajo solo para personas calificadas hasta que la persona correcta esté en el sitio.",
+      "sharma_note": "",
+      "figure_idea": "",
+      "related_ids": [],
+      "florida_note": "",
+      "verified": false,
+      "prev_id": "C1-110.16",
       "next_id": "C1-110.18",
       "sharma_rule_ids": []
     },
@@ -992,7 +1323,7 @@
       "related_ids": [],
       "florida_note": "",
       "verified": true,
-      "prev_id": "C1-110.16",
+      "prev_id": "C1-110.17",
       "next_id": "C1-110.19",
       "sharma_rule_ids": []
     },
@@ -1010,6 +1341,25 @@
       "florida_note": "",
       "verified": true,
       "prev_id": "C1-110.18",
+      "next_id": "C1-110.20",
+      "sharma_rule_ids": []
+    },
+    {
+      "id": "C1-110.20",
+      "chapter": 1,
+      "article": "110",
+      "section": "110.20",
+      "title": "Equipo reacondicionado",
+      "plain_explanation": "Esta sección, nueva en la edición 2020, gobierna el equipo que ha sido reacondicionado — reconstruido o restaurado — a diferencia del equipo que solo recibió servicio o una pieza fallada reemplazada por un equivalente aprobado. El equipo reacondicionado debe evaluarse y aceptarse según los términos de la sección, la parte que lo reacondicionó debe ser identificable, y algunas categorías de equipo están restringidas o no se permite reacondicionarlas en absoluto. Un listado anterior no sobrevive automáticamente a una reconstrucción extensa.",
+      "on_the_job": "En renovaciones comerciales, trate los tableros de distribución, panelboards y breakers reacondicionados como una pregunta, no como una ganga: ¿quién lo reacondicionó, bajo qué evaluación, y se permite reacondicionar esa categoría de equipo? Obtenga la respuesta antes de instalarlo, no en la inspección.",
+      "sharma_note": "",
+      "figure_idea": "",
+      "related_ids": [
+        "C1-L-034"
+      ],
+      "florida_note": "",
+      "verified": false,
+      "prev_id": "C1-110.19",
       "next_id": "C1-110.21",
       "sharma_rule_ids": []
     },
@@ -1028,7 +1378,7 @@
       ],
       "florida_note": "Las etiquetas exteriores de Florida se borran rápido. Use etiquetas durables contra UV y humedad en exteriores para que los marcados requeridos sobrevivan hasta la próxima inspección.",
       "verified": true,
-      "prev_id": "C1-110.19",
+      "prev_id": "C1-110.20",
       "next_id": "C1-110.22",
       "sharma_rule_ids": []
     },
@@ -1168,7 +1518,7 @@
       "article": "110",
       "section": "110.26(A)(1)",
       "title": "Profundidad del espacio de trabajo y las tres condiciones",
-      "plain_explanation": "La profundidad se lee de la tabla de esta sección, que fija la distancia según el voltaje a tierra y según lo que queda frente al trabajador. La Condición 1 es partes vivas expuestas en un lado del espacio sin partes vivas ni puestas a tierra en el otro lado. La Condición 2 pone una superficie puesta a tierra, como una pared de concreto o mampostería, en el lado opuesto. La Condición 3 pone partes vivas expuestas en ambos lados. De 0 a 150 volts a tierra la tabla da 3 ft para las tres condiciones; las condiciones solo cambian la profundidad a voltajes mayores: de 151 a 600 volts a tierra las profundidades son 3 ft, 3 ft 6 in y 4 ft. Cuanto peor es la exposición al otro lado del pasillo, más profundo debe ser el espacio una vez que el voltaje hace divergir las condiciones.",
+      "plain_explanation": "La profundidad se lee de la tabla de esta sección, que fija la distancia según el voltaje a tierra y según lo que queda frente al trabajador. La Condición 1 es partes vivas expuestas en un lado del espacio sin partes vivas ni puestas a tierra en el otro lado. La Condición 2 pone una superficie puesta a tierra, como una pared de concreto o mampostería, en el lado opuesto. La Condición 3 pone partes vivas expuestas en ambos lados. De 0 a 150 volts a tierra la tabla da 3 ft para las tres condiciones; las condiciones solo cambian la profundidad a voltajes mayores: de 151 a 600 volts a tierra las profundidades son 3 ft, 3 ft 6 in y 4 ft. Cuanto peor es la exposición al otro lado del pasillo, más profundo debe ser el espacio una vez que el voltaje hace divergir las condiciones.\n\nTabla 110.26(A)(1) — profundidad mínima del espacio de trabajo, por voltaje a tierra:\n• 0–150 V a tierra — Condición 1: 3 ft · Condición 2: 3 ft · Condición 3: 3 ft\n• 151–600 V a tierra — Condición 1: 3 ft · Condición 2: 3½ ft · Condición 3: 4 ft\n• 601–1000 V a tierra — Condición 1: 3 ft · Condición 2: 4 ft · Condición 3: 5 ft",
       "on_the_job": "Para un tablero de casa en una pared con estructura de madera y nada vivo al otro lado del pasillo, la Condición 1 y su profundidad de 3 ft para hasta 150V a tierra es el caso de todos los días. Un segundo tablero frente al primero lo convierte en Condición 3: sigue siendo 3 ft al voltaje de casa, porque a 150V o menos a tierra las tres condiciones son 3 ft. Vuelva a revisar la tabla cuando el voltaje a tierra pase de 150V.",
       "sharma_note": "",
       "figure_idea": "Tres cortes de pasillo rotulados Condición 1, 2 y 3, que muestran qué hay en la pared opuesta en cada uno y una flecha que apunta a la tabla para la profundidad.",
@@ -1180,8 +1530,50 @@
         "C1-Q-019"
       ],
       "florida_note": "",
-      "verified": true,
+      "verified": false,
       "prev_id": "C1-110.26(A)",
+      "next_id": "C1-110.26(A)(2)",
+      "sharma_rule_ids": []
+    },
+    {
+      "id": "C1-110.26(A)(2)",
+      "chapter": 1,
+      "article": "110",
+      "section": "110.26(A)(2)",
+      "title": "Ancho del espacio de trabajo",
+      "plain_explanation": "El espacio de trabajo frente al equipo eléctrico debe tener al menos 30 in. de ancho, o el ancho del propio equipo, lo que sea mayor. El ancho se mide para que el trabajador pueda pararse de frente al equipo: el espacio puede disponerse con el equipo desplazado dentro de él, pero deben estar las 30 in. mínimas — o el ancho completo del equipo en equipos más anchos — y, como todo espacio de trabajo, debe mantenerse despejado, no convertirse en almacenamiento.\n• Ancho: 30 in. mínimo, o el ancho del equipo si el equipo es más ancho",
+      "on_the_job": "Un tablero residencial suele ser más angosto que 30 in., así que la regla de las 30 in. es la que gobierna — mídala antes de que un clóset, estantería o un calentador de agua se enmarque en esa franja. En switchgear comercial ancho, manda el propio ancho del equipo.",
+      "sharma_note": "",
+      "figure_idea": "Un tablero de frente con una línea de cota de 30 in. a través del espacio de trabajo y un switchboard más ancho al lado medido a su propio ancho.",
+      "related_ids": [
+        "C1-L-053",
+        "C1-110.26(A)",
+        "C1-110.26(A)(1)"
+      ],
+      "florida_note": "",
+      "verified": false,
+      "prev_id": "C1-110.26(A)(1)",
+      "next_id": "C1-110.26(A)(3)",
+      "sharma_rule_ids": []
+    },
+    {
+      "id": "C1-110.26(A)(3)",
+      "chapter": 1,
+      "article": "110",
+      "section": "110.26(A)(3)",
+      "title": "Altura del espacio de trabajo",
+      "plain_explanation": "El espacio de trabajo debe extenderse desde el piso o plataforma hasta una altura de 6½ ft, o la altura del propio equipo, lo que sea mayor. Dos excepciones cotidianas moderan el número: en edificios existentes, el equipo de acometida o los tableros más pequeños (200A o menos, en instalaciones relacionadas con viviendas) que no cumplan la altura pueden permitirse donde lo permita el AHJ, y los medidores y sus bases pueden proyectarse dentro del espacio dentro de límites. El equipo por encima del espacio — una tubería de rociadores o un ducto que no es eléctrico — es una cuestión de espacio dedicado bajo 110.26(E), no una razón para reducir la altura.\n• Altura: 6½ ft mínimo, o la altura del equipo si el equipo es más alto",
+      "on_the_job": "Seis pies y medio es más alto de lo que la mayoría de los ayudantes estima a ojo — el dintel de una puerta estándar queda justo en la línea. Revise la altura antes de que un plafón o un ducto se enmarque sobre la ubicación de un tablero, y trate las excepciones como conversaciones con el AHJ, no como supuestos.",
+      "sharma_note": "",
+      "figure_idea": "Una elevación de tablero con una línea de cota de 6½ ft desde el piso hasta la parte superior del espacio de trabajo y un ducto dibujado por encima de la línea.",
+      "related_ids": [
+        "C1-L-053",
+        "C1-110.26(A)",
+        "C1-110.26(E)"
+      ],
+      "florida_note": "",
+      "verified": false,
+      "prev_id": "C1-110.26(A)(2)",
       "next_id": "C1-110.26(B-D)",
       "sharma_rule_ids": []
     },
@@ -1201,7 +1593,48 @@
       ],
       "florida_note": "",
       "verified": true,
-      "prev_id": "C1-110.26(A)(1)",
+      "prev_id": "C1-110.26(A)(3)",
+      "next_id": "C1-110.26(C)",
+      "sharma_rule_ids": []
+    },
+    {
+      "id": "C1-110.26(C)",
+      "chapter": 1,
+      "article": "110",
+      "section": "110.26(C)",
+      "title": "Entrada y salida del espacio de trabajo",
+      "plain_explanation": "Debe haber al menos una entrada y salida del espacio de trabajo, dimensionada y dispuesta para que un trabajador pueda entrar, trabajar y salir sin apretarse junto al equipo. Para equipos grandes — clasificados 1200A o más y de más de 6 ft de ancho, que contengan dispositivos de sobrecorriente, interruptores o control — debe haber una entrada en cada extremo del espacio de trabajo, y una sola entrada solo se permite donde la distribución da un camino de escape despejado, de profundidad doble u otro aceptado por el Código. Las puertas que sirven a estos espacios y se abren hacia el área de trabajo son parte de la preocupación de la regla: las puertas de personal dentro de la distancia indicada del equipo deben abrir en la dirección de salida y llevar herraje antipánico listado, para que un trabajador que reacciona a un arco empuje hacia fuera en vez de tirar de una puerta contra la explosión.",
+      "on_the_job": "Las casas rara vez activan la regla de los 1200A, pero el principio de una entrada aplica en todas partes: nunca deje que el cuarto de un tablero se enmarque de modo que la única salida sea junto al equipo. En trabajos comerciales con switchboards grandes, cuente las entradas en la distribución y revise el giro de las puertas y el herraje antipánico antes de colgar las puertas.",
+      "sharma_note": "",
+      "figure_idea": "Una planta de cuarto de switchboard: una línea ancha de equipos con una puerta en cada extremo del espacio de trabajo, flechas mostrando la salida alejándose del equipo.",
+      "related_ids": [
+        "C1-L-075",
+        "C1-110.26(A)",
+        "C1-110.26(B-D)"
+      ],
+      "florida_note": "",
+      "verified": false,
+      "prev_id": "C1-110.26(B-D)",
+      "next_id": "C1-110.26(D)",
+      "sharma_rule_ids": []
+    },
+    {
+      "id": "C1-110.26(D)",
+      "chapter": 1,
+      "article": "110",
+      "section": "110.26(D)",
+      "title": "Iluminación",
+      "plain_explanation": "Debe proveerse iluminación para los espacios de trabajo alrededor de equipos de acometida, switchboards, switchgear, tableros y centros de control de motores — un trabajador que lee un directorio, una especificación de torque o una etiqueta de falla no puede hacerlo en la oscuridad. La luz no puede controlarse solo por medios automáticos, así que una instalación solo con sensor de movimiento que pueda dejar a un trabajador a oscuras a mitad de tarea no satisface la regla; debe haber una manera manual de mantener la luz encendida. Los espacios de trabajo exteriores están cubiertos por el mismo requisito, con la luz dispuesta para el propio espacio.",
+      "on_the_job": "Un tablero en un garaje o un desconectador exterior también necesita su luz. Si la única luz en el plano es un sensor de movimiento, márquelo en el rough-in — añadir el control manual después del trim es un viaje de regreso.",
+      "sharma_note": "",
+      "figure_idea": "Un tablero con una luz dedicada sobre el espacio de trabajo y un interruptor de pared al lado, con la versión de solo sensor de movimiento tachada.",
+      "related_ids": [
+        "C1-110.26(B-D)",
+        "C1-110.26(A)"
+      ],
+      "florida_note": "",
+      "verified": false,
+      "prev_id": "C1-110.26(C)",
       "next_id": "C1-110.26(E)",
       "sharma_rule_ids": []
     },
@@ -1222,7 +1655,7 @@
       ],
       "florida_note": "",
       "verified": true,
-      "prev_id": "C1-110.26(B-D)",
+      "prev_id": "C1-110.26(D)",
       "next_id": "C1-110.27",
       "sharma_rule_ids": []
     },
@@ -1288,7 +1721,7 @@
     {
       "id": "C1-ART-90",
       "article": "90",
-      "title": "Artículo 90 — Introducción: cómo está organizado este Código",
+      "title": "Introduction",
       "children": [
         {
           "id": "C1-90.1",
@@ -1340,7 +1773,7 @@
     {
       "id": "C1-ART-100",
       "article": "100",
-      "title": "Artículo 100 — Definiciones: las palabras que usa el Código",
+      "title": "Definitions",
       "children": [
         {
           "id": "C1-100-ACCESSIBLE",
@@ -1353,6 +1786,16 @@
           "title": "Ampacidad"
         },
         {
+          "id": "C1-100-CONDUCTORS",
+          "section": "100",
+          "title": "Conductores — desnudo, cubierto, aislado y el neutro"
+        },
+        {
+          "id": "C1-100-VOLTAGE-FAMILY",
+          "section": "100",
+          "title": "Voltaje — voltaje nominal, voltaje a tierra y voltaje del circuito"
+        },
+        {
           "id": "C1-100-APPLIANCE",
           "section": "100",
           "title": "Electrodoméstico"
@@ -1363,9 +1806,19 @@
           "title": "Aprobado, identificado, rotulado y listado"
         },
         {
+          "id": "C1-100-EQUIPMENT-FAMILY",
+          "section": "100",
+          "title": "Equipo, equipo de utilización, envolventes y accesorios"
+        },
+        {
           "id": "C1-100-BONDING",
           "section": "100",
           "title": "Unión equipotencial (bonding) — unido, conductor de unión, puente de unión"
+        },
+        {
+          "id": "C1-100-GROUNDING-FAMILY",
+          "section": "100",
+          "title": "Conductores y electrodos de puesta a tierra — EGC, GEC y puentes de unión"
         },
         {
           "id": "C1-100-GROUNDED-GROUNDING",
@@ -1373,9 +1826,24 @@
           "title": "Puesto a tierra y puesta a tierra — cómo distinguir los conductores"
         },
         {
+          "id": "C1-100-GROUND-FAULT-FAMILY",
+          "section": "100",
+          "title": "Falla a tierra, GFCI y protección de falla a tierra de equipos"
+        },
+        {
           "id": "C1-100-BRANCH-CIRCUIT",
           "section": "100",
           "title": "Circuito derivado"
+        },
+        {
+          "id": "C1-100-BRANCH-CIRCUIT-TYPES",
+          "section": "100",
+          "title": "Tipos de circuitos derivados — de electrodomésticos, de uso general, individual y multiconductor (multiwire)"
+        },
+        {
+          "id": "C1-100-CIRCUIT-BREAKER",
+          "section": "100",
+          "title": "Breaker, tablero, gabinete y las clasificaciones de falla"
         },
         {
           "id": "C1-100-FEEDER",
@@ -1388,9 +1856,19 @@
           "title": "Carga continua"
         },
         {
+          "id": "C1-100-LOAD-TERMS",
+          "section": "100",
+          "title": "Factor de demanda, carga no lineal y sobrecorriente"
+        },
+        {
           "id": "C1-100-DWELLING-UNIT",
           "section": "100",
           "title": "Unidad de vivienda"
+        },
+        {
+          "id": "C1-100-BATHROOM",
+          "section": "100",
+          "title": "Baño y clóset de ropa"
         },
         {
           "id": "C1-100-EXPOSED",
@@ -1398,9 +1876,19 @@
           "title": "Expuesto — partes vivas y métodos de cableado"
         },
         {
+          "id": "C1-100-CONCEALED",
+          "section": "100",
+          "title": "Oculto (concealed)"
+        },
+        {
           "id": "C1-100-LOCATIONS",
           "section": "100",
           "title": "Ubicaciones — secas, húmedas y mojadas"
+        },
+        {
+          "id": "C1-100-EXPOSURE-TERMS",
+          "section": "100",
+          "title": "Resistente a la intemperie, hermético al agua y hermético al polvo"
         },
         {
           "id": "C1-100-OUTLET-RECEPTACLE",
@@ -1408,14 +1896,34 @@
           "title": "Salida y tomacorriente"
         },
         {
+          "id": "C1-100-LUMINAIRE-OUTLET",
+          "section": "100",
+          "title": "Luminaria y salida de iluminación"
+        },
+        {
           "id": "C1-100-SERVICE",
           "section": "100",
           "title": "Acometida — la familia de términos de acometida"
         },
         {
+          "id": "C1-100-SERVICE-FAMILY",
+          "section": "100",
+          "title": "Conductores de acometida, bajada, lateral, entrada, equipo y punto"
+        },
+        {
           "id": "C1-100-IN-SIGHT",
           "section": "100",
           "title": "A la vista desde — y medio de desconexión"
+        },
+        {
+          "id": "C1-100-DEVICE-DISCONNECT",
+          "section": "100",
+          "title": "Dispositivo, medio de desconexión y tipos de interruptores"
+        },
+        {
+          "id": "C1-100-SYSTEMS-WIRING",
+          "section": "100",
+          "title": "Cableado del predio, sistemas derivados separadamente, raceway y empalmes"
         },
         {
           "id": "C1-100-SPECIAL-PERMISSION",
@@ -1432,7 +1940,7 @@
     {
       "id": "C1-ART-110",
       "article": "110",
-      "title": "Artículo 110 — Requisitos para instalaciones eléctricas",
+      "title": "Requirements for Electrical Installations",
       "children": [
         {
           "id": "C1-110.1",
@@ -1530,6 +2038,11 @@
           "title": "Marcado de advertencia de peligro de arco eléctrico (arc-flash)"
         },
         {
+          "id": "C1-110.17",
+          "section": "110.17",
+          "title": "Mantenimiento y servicio de equipos"
+        },
+        {
           "id": "C1-110.18",
           "section": "110.18",
           "title": "Partes que producen arcos"
@@ -1538,6 +2051,11 @@
           "id": "C1-110.19",
           "section": "110.19",
           "title": "Luz y energía desde conductores ferroviarios (orientación)"
+        },
+        {
+          "id": "C1-110.20",
+          "section": "110.20",
+          "title": "Equipo reacondicionado"
         },
         {
           "id": "C1-110.21",
@@ -1580,9 +2098,29 @@
           "title": "Profundidad del espacio de trabajo y las tres condiciones"
         },
         {
+          "id": "C1-110.26(A)(2)",
+          "section": "110.26(A)(2)",
+          "title": "Ancho del espacio de trabajo"
+        },
+        {
+          "id": "C1-110.26(A)(3)",
+          "section": "110.26(A)(3)",
+          "title": "Altura del espacio de trabajo"
+        },
+        {
           "id": "C1-110.26(B-D)",
           "section": "110.26(B)",
           "title": "Espacio libre, entrada y salida, e iluminación"
+        },
+        {
+          "id": "C1-110.26(C)",
+          "section": "110.26(C)",
+          "title": "Entrada y salida del espacio de trabajo"
+        },
+        {
+          "id": "C1-110.26(D)",
+          "section": "110.26(D)",
+          "title": "Iluminación"
         },
         {
           "id": "C1-110.26(E)",
@@ -1662,6 +2200,12 @@
       ]
     },
     {
+      "term": "Bathroom",
+      "ids": [
+        "C1-100-BATHROOM"
+      ]
+    },
+    {
       "term": "Bonding",
       "ids": [
         "C1-100-BONDING"
@@ -1674,6 +2218,18 @@
       ]
     },
     {
+      "term": "Branch circuit, types",
+      "ids": [
+        "C1-100-BRANCH-CIRCUIT-TYPES"
+      ]
+    },
+    {
+      "term": "Cabinet and cutout box",
+      "ids": [
+        "C1-100-CIRCUIT-BREAKER"
+      ]
+    },
+    {
       "term": "CCA (copper-clad aluminum)",
       "ids": [
         "C1-100-AMPACITY",
@@ -1682,9 +2238,33 @@
       ]
     },
     {
+      "term": "Circuit breaker",
+      "ids": [
+        "C1-100-CIRCUIT-BREAKER"
+      ]
+    },
+    {
+      "term": "Clothes closet",
+      "ids": [
+        "C1-100-BATHROOM"
+      ]
+    },
+    {
+      "term": "Concealed",
+      "ids": [
+        "C1-100-CONCEALED"
+      ]
+    },
+    {
       "term": "Conductor sizes (AWG / kcmil)",
       "ids": [
         "C1-110.6"
+      ]
+    },
+    {
+      "term": "Conductors, bare / covered / insulated",
+      "ids": [
+        "C1-100-CONDUCTORS"
       ]
     },
     {
@@ -1713,6 +2293,18 @@
       ]
     },
     {
+      "term": "Demand factor",
+      "ids": [
+        "C1-100-LOAD-TERMS"
+      ]
+    },
+    {
+      "term": "Device",
+      "ids": [
+        "C1-100-DEVICE-DISCONNECT"
+      ]
+    },
+    {
       "term": "Disconnect, identification of",
       "ids": [
         "C1-110.22"
@@ -1723,7 +2315,8 @@
       "ids": [
         "C1-100-IN-SIGHT",
         "C1-110.22",
-        "C1-110.25"
+        "C1-110.25",
+        "C1-100-DEVICE-DISCONNECT"
       ]
     },
     {
@@ -1739,9 +2332,21 @@
       ]
     },
     {
+      "term": "Dusttight",
+      "ids": [
+        "C1-100-EXPOSURE-TERMS"
+      ]
+    },
+    {
       "term": "Dwelling unit",
       "ids": [
         "C1-100-DWELLING-UNIT"
+      ]
+    },
+    {
+      "term": "Enclosed and enclosure",
+      "ids": [
+        "C1-100-EQUIPMENT-FAMILY"
       ]
     },
     {
@@ -1749,6 +2354,18 @@
       "ids": [
         "C1-110.28",
         "C1-110.11"
+      ]
+    },
+    {
+      "term": "Equipment",
+      "ids": [
+        "C1-100-EQUIPMENT-FAMILY"
+      ]
+    },
+    {
+      "term": "Equipment grounding conductor (EGC)",
+      "ids": [
+        "C1-100-GROUNDING-FAMILY"
       ]
     },
     {
@@ -1773,9 +2390,33 @@
       ]
     },
     {
+      "term": "Fitting",
+      "ids": [
+        "C1-100-EQUIPMENT-FAMILY"
+      ]
+    },
+    {
       "term": "Garage",
       "ids": [
         "C1-100-AREAS-IN-USE"
+      ]
+    },
+    {
+      "term": "GFCI (ground-fault circuit interrupter)",
+      "ids": [
+        "C1-100-GROUND-FAULT-FAMILY"
+      ]
+    },
+    {
+      "term": "Ground fault",
+      "ids": [
+        "C1-100-GROUND-FAULT-FAMILY"
+      ]
+    },
+    {
+      "term": "Ground-fault protection of equipment (GFPE)",
+      "ids": [
+        "C1-100-GROUND-FAULT-FAMILY"
       ]
     },
     {
@@ -1791,9 +2432,27 @@
       ]
     },
     {
+      "term": "Grounding electrode",
+      "ids": [
+        "C1-100-GROUNDING-FAMILY"
+      ]
+    },
+    {
+      "term": "Grounding electrode conductor (GEC)",
+      "ids": [
+        "C1-100-GROUNDING-FAMILY"
+      ]
+    },
+    {
       "term": "Guarding of live parts",
       "ids": [
         "C1-110.27"
+      ]
+    },
+    {
+      "term": "Handhole enclosure",
+      "ids": [
+        "C1-100-EQUIPMENT-FAMILY"
       ]
     },
     {
@@ -1803,9 +2462,21 @@
       ]
     },
     {
+      "term": "Hoistway",
+      "ids": [
+        "C1-100-SYSTEMS-WIRING"
+      ]
+    },
+    {
       "term": "Identified",
       "ids": [
         "C1-100-APPROVAL-FAMILY"
+      ]
+    },
+    {
+      "term": "Illumination, working space",
+      "ids": [
+        "C1-110.26(D)"
       ]
     },
     {
@@ -1831,7 +2502,8 @@
       "term": "Interrupting rating",
       "ids": [
         "C1-110.9",
-        "C1-110.24"
+        "C1-110.24",
+        "C1-100-CIRCUIT-BREAKER"
       ]
     },
     {
@@ -1853,6 +2525,12 @@
       ]
     },
     {
+      "term": "Lighting outlet",
+      "ids": [
+        "C1-100-LUMINAIRE-OUTLET"
+      ]
+    },
+    {
       "term": "Listed",
       "ids": [
         "C1-100-APPROVAL-FAMILY",
@@ -1867,6 +2545,18 @@
       ]
     },
     {
+      "term": "Luminaire",
+      "ids": [
+        "C1-100-LUMINAIRE-OUTLET"
+      ]
+    },
+    {
+      "term": "Main bonding jumper",
+      "ids": [
+        "C1-100-GROUNDING-FAMILY"
+      ]
+    },
+    {
       "term": "Marking, equipment",
       "ids": [
         "C1-110.21",
@@ -1875,9 +2565,57 @@
       ]
     },
     {
+      "term": "Multiwire branch circuit",
+      "ids": [
+        "C1-100-BRANCH-CIRCUIT-TYPES"
+      ]
+    },
+    {
+      "term": "Neutral conductor and neutral point",
+      "ids": [
+        "C1-100-CONDUCTORS"
+      ]
+    },
+    {
+      "term": "Nominal voltage",
+      "ids": [
+        "C1-100-VOLTAGE-FAMILY"
+      ]
+    },
+    {
+      "term": "Nonlinear load",
+      "ids": [
+        "C1-100-LOAD-TERMS"
+      ]
+    },
+    {
       "term": "Outlet",
       "ids": [
         "C1-100-OUTLET-RECEPTACLE"
+      ]
+    },
+    {
+      "term": "Overcurrent and overload",
+      "ids": [
+        "C1-100-LOAD-TERMS"
+      ]
+    },
+    {
+      "term": "Panelboard",
+      "ids": [
+        "C1-100-CIRCUIT-BREAKER"
+      ]
+    },
+    {
+      "term": "Premises wiring system",
+      "ids": [
+        "C1-100-SYSTEMS-WIRING"
+      ]
+    },
+    {
+      "term": "Raceway",
+      "ids": [
+        "C1-100-SYSTEMS-WIRING"
       ]
     },
     {
@@ -1893,9 +2631,34 @@
       ]
     },
     {
+      "term": "Reconditioned equipment",
+      "ids": [
+        "C1-110.20"
+      ]
+    },
+    {
       "term": "Scope of the Code",
       "ids": [
         "C1-90.2"
+      ]
+    },
+    {
+      "term": "Separately derived system",
+      "ids": [
+        "C1-100-SYSTEMS-WIRING"
+      ]
+    },
+    {
+      "term": "Service conductors, drop, lateral, entrance",
+      "ids": [
+        "C1-100-SERVICE-FAMILY"
+      ]
+    },
+    {
+      "term": "Service point",
+      "ids": [
+        "C1-100-SERVICE-FAMILY",
+        "C1-100-SERVICE"
       ]
     },
     {
@@ -1903,6 +2666,18 @@
       "ids": [
         "C1-100-SERVICE",
         "C1-90.2"
+      ]
+    },
+    {
+      "term": "Servicing and maintenance",
+      "ids": [
+        "C1-110.17"
+      ]
+    },
+    {
+      "term": "Short-circuit current rating (SCCR)",
+      "ids": [
+        "C1-100-CIRCUIT-BREAKER"
       ]
     },
     {
@@ -1917,6 +2692,18 @@
         "C1-100-SPECIAL-PERMISSION",
         "C1-90.2",
         "C1-90.4"
+      ]
+    },
+    {
+      "term": "Splice and splicing wire connector",
+      "ids": [
+        "C1-100-SYSTEMS-WIRING"
+      ]
+    },
+    {
+      "term": "Switches — general-use, isolating, motor-circuit",
+      "ids": [
+        "C1-100-DEVICE-DISCONNECT"
       ]
     },
     {
@@ -1939,9 +2726,33 @@
       ]
     },
     {
+      "term": "Utilization equipment",
+      "ids": [
+        "C1-100-EQUIPMENT-FAMILY"
+      ]
+    },
+    {
+      "term": "Voltage to ground",
+      "ids": [
+        "C1-100-VOLTAGE-FAMILY"
+      ]
+    },
+    {
       "term": "Voltages, nominal",
       "ids": [
         "C1-110.4"
+      ]
+    },
+    {
+      "term": "Watertight",
+      "ids": [
+        "C1-100-EXPOSURE-TERMS"
+      ]
+    },
+    {
+      "term": "Weatherproof",
+      "ids": [
+        "C1-100-EXPOSURE-TERMS"
       ]
     },
     {
@@ -1961,7 +2772,15 @@
       "term": "Working space, depth / width / height",
       "ids": [
         "C1-110.26(A)",
-        "C1-110.26(A)(1)"
+        "C1-110.26(A)(1)",
+        "C1-110.26(A)(2)",
+        "C1-110.26(A)(3)"
+      ]
+    },
+    {
+      "term": "Working space, entrance and exit",
+      "ids": [
+        "C1-110.26(C)"
       ]
     },
     {

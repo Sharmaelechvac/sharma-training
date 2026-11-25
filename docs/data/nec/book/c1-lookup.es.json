@@ -1003,5 +1003,284 @@
     "verified": true,
     "verified_by": "Master audit reconciliation 2026-11-12 (external audit claim verified against NEC 2020 Article 100)",
     "verified_date": "2026-11-12"
+  },
+  {
+    "id": "C1-L-063",
+    "question": "¿Cómo cambian los cálculos cuando el conductor es CCA? (resumen de la opción de material)",
+    "aliases": [
+      "cálculos CCA",
+      "opción de material cobre aluminio CCA",
+      "reglas CCA para calculadoras"
+    ],
+    "answer_plain": "Todo cálculo con conductores en este libro se hace con una opción de material: cobre, aluminio o aluminio revestido de cobre (CCA). La ampacidad del CCA sale de la columna de aluminio de la Tabla 310.16, con los límites más estrictos de 240.4(D) para conductores pequeños, por lo que Sharma dimensiona el CCA un calibre AWG mayor que el cobre para el mismo breaker. El llenado de cajas y de tuberías no cambia con el metal al mismo calibre, y los cálculos de carga se hacen primero en volt-amperios, eligiendo el conductor al final en el material elegido.",
+    "nec_ref": "110.5",
+    "nec_edition": "2020",
+    "sharma_rule_id": "S-10",
+    "tags": [
+      "CCA",
+      "cálculos"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C1-L-064",
+    "question": "¿Qué resistencia uso para la caída de voltaje en CCA?",
+    "aliases": [
+      "caída de voltaje CCA",
+      "resistencia CCA ohmios"
+    ],
+    "answer_plain": "Use datos de resistencia del propio CCA, no los valores del cobre ni un factor adivinado. La Tabla 8 del Capítulo 9 puede no listar el CCA; donde no lo haga, el valor debe venir de datos citados del fabricante o de UL para el producto real, y cualquier cifra de resistencia de CCA usada en un cálculo queda marcada hasta que esa cita esté en archivo. Nunca invente un número de resistencia de CCA para terminar un cálculo de caída de voltaje.",
+    "nec_ref": "110.5",
+    "nec_edition": "2020",
+    "sharma_rule_id": "S-10",
+    "tags": [
+      "CCA",
+      "caída de voltaje"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11",
+    "verified": false,
+    "unverified_reason": "No se declara aquí ningún valor de resistencia de CCA: la Tabla 8 del Capítulo 9 del NEC puede no listar el CCA, y no había en archivo ninguna tabla de resistencia de CCA de fabricante/UL en esta pasada. Regla declarada por instrucción de Sanjay 2026-11-11; los valores se añaden solo desde datos citados de fabricante o UL."
+  },
+  {
+    "id": "C1-L-065",
+    "question": "¿Dónde se puede terminar el CCA? (resumen de cálculos y dispositivos)",
+    "aliases": [
+      "terminaciones CCA resumen",
+      "dispositivos tuercas terminales CCA"
+    ],
+    "answer_plain": "Los terminales de tornillo de dispositivos de 15 y 20A están bien para el CCA salvo que el dispositivo indique lo contrario, y los dispositivos de 30A en adelante son solo para cobre salvo que estén marcados AL/CU. Las tuercas para cables, conectores de empalme y terminales usados con CCA o aluminio deben estar marcados para la combinación (AL-CU / CU-AL, o la marca de mezcla donde los metales se tocan); un conector solo CU no es adecuado. Los terminales de inserción (backstab) son solo para 14 AWG de cobre sólido, así que el CCA nunca va en backstab.",
+    "nec_ref": "110.14",
+    "nec_edition": "2020",
+    "sharma_rule_id": "S-10",
+    "tags": [
+      "CCA",
+      "terminaciones"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C1-L-066",
+    "question": "¿Cambia el llenado de cajas o de tuberías si el cable es CCA en vez de cobre?",
+    "aliases": [
+      "llenado de cajas CCA",
+      "llenado de tuberías CCA",
+      "llenado por metal"
+    ],
+    "answer_plain": "No — el llenado va por el calibre y el aislamiento del conductor, no por su metal. Un conductor de 12 AWG cuenta 2.25 in³ según la Tabla 314.16(B) y toma su área de la Tabla 5 por su calibre y tipo de aislamiento, sea cobre o CCA, así que los mismos calibres en la misma caja o raceway dan el mismo resultado. Lo que cambia en un trabajo con CCA es el calibre mismo: un circuito de 20A cableado en 10 AWG CCA cuenta al volumen de 10 AWG, porque el conductor en la caja es más grande.",
+    "nec_ref": "314.16",
+    "nec_edition": "2020",
+    "sharma_rule_id": "S-10",
+    "tags": [
+      "CCA",
+      "llenado de cajas",
+      "llenado de tuberías"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C1-L-067",
+    "question": "¿Cómo funcionan los cálculos de carga y el dimensionamiento de acometidas cuando el trabajo se cablea en CCA?",
+    "aliases": [
+      "cálculo de carga CCA",
+      "dimensionamiento de acometida CCA material"
+    ],
+    "answer_plain": "El cálculo de carga en sí no cambia: la demanda se calcula en volt-amperios y amperios de la misma manera sea cual sea el metal. La elección de material llega al último paso, cuando se elige el conductor — un conductor de acometida o alimentador en CCA se selecciona de la columna de aluminio de la Tabla 310.16 al calibre que la carga calculada requiere. Haga el cálculo una vez, y luego elija el conductor en el material que el trabajo realmente usa.",
+    "nec_ref": "220.82",
+    "nec_edition": "2020",
+    "sharma_rule_id": "S-10",
+    "tags": [
+      "CCA",
+      "cálculos de carga"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-11"
+  },
+  {
+    "id": "C1-L-068",
+    "question": "¿Qué es un circuito derivado multiconductor (multiwire) y por qué importa el neutro compartido?",
+    "aliases": [
+      "circuito derivado multiwire",
+      "circuito de neutro compartido",
+      "MWBC"
+    ],
+    "answer_plain": "Un circuito derivado multiconductor (multiwire) tiene dos o más conductores no puestos a tierra con un voltaje entre ellos, compartiendo un neutro que lleva solo la diferencia desequilibrada. Conectadas a fases opuestas, las corrientes del neutro se cancelan; en la misma fase, se suman y pueden sobrecargar el neutro. Si el neutro compartido se abre bajo carga, las cargas de las dos fases quedan en serie a través del voltaje completo entre fases. Ambos conductores no puestos a tierra deben desconectarse al mismo tiempo.",
+    "nec_ref": "Article 100",
+    "nec_edition": "2020",
+    "tags": [
+      "circuito derivado",
+      "multiwire",
+      "neutro"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-25"
+  },
+  {
+    "id": "C1-L-069",
+    "question": "Capacidad interruptiva vs clasificación de corriente de cortocircuito — ¿cuál es la diferencia?",
+    "aliases": [
+      "capacidad interruptiva vs SCCR",
+      "kAIC vs SCCR",
+      "diferencia de clasificaciones de falla"
+    ],
+    "answer_plain": "La capacidad interruptiva pertenece al dispositivo de protección: es la mayor corriente de falla que ese breaker o fusible puede abrir con seguridad a su voltaje nominal. La clasificación de corriente de cortocircuito (SCCR) pertenece al equipo en conjunto: es la corriente de falla que el equipo puede soportar, o ante la cual puede estar protegido, sin crear un peligro. Un tablero puede llevar breakers cuya capacidad interruptiva está bien y aun así estar limitado por el propio SCCR del tablero — ambas etiquetas deben cubrir la corriente de falla disponible en la instalación.",
+    "nec_ref": "110.9",
+    "nec_edition": "2020",
+    "tags": [
+      "corriente de falla",
+      "clasificaciones",
+      "tablero"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-25"
+  },
+  {
+    "id": "C1-L-070",
+    "question": "GFCI vs protección de falla a tierra de equipos — ¿cuál es la diferencia?",
+    "aliases": [
+      "GFCI vs GFPE",
+      "tipos de protección de falla a tierra",
+      "falla a tierra personal vs equipos"
+    ],
+    "answer_plain": "Un GFCI protege a las personas: abre el circuito cuando unos pocos miliamperios de corriente se fugan fuera del camino previsto (los dispositivos Clase A disparan en el rango de 4–6 mA). La protección de falla a tierra de equipos (GFPE) protege equipos y conductores: abre a niveles de falla a tierra mucho más altos, cientos de amperios en acometidas grandes, para limitar el daño por quemado de las fallas con arco. El GFPE no es protección contra descargas para una persona, y un GFCI de receptáculo no es protección de equipos de acometida.",
+    "nec_ref": "Article 100",
+    "nec_edition": "2020",
+    "tags": [
+      "GFCI",
+      "GFPE",
+      "falla a tierra"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-25"
+  },
+  {
+    "id": "C1-L-071",
+    "question": "¿Qué es el conductor neutro y qué es el punto neutro?",
+    "aliases": [
+      "definición de conductor neutro",
+      "punto neutro",
+      "qué es el neutro"
+    ],
+    "answer_plain": "El conductor neutro es el conductor conectado al punto neutro del sistema, destinado a llevar corriente en operación normal — el conductor de trabajo blanco o gris, no una tierra. El punto neutro es el punto común de un sistema en estrella (Y), o el punto medio de un sistema monofásico o de DC. En una acometida de casa de 120/240V, el punto neutro es la toma central del transformador de la compañía, por lo que cada fase mide 120V al neutro y 240V entre fases.",
+    "nec_ref": "Article 100",
+    "nec_edition": "2020",
+    "tags": [
+      "neutro",
+      "conductores"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-25"
+  },
+  {
+    "id": "C1-L-072",
+    "question": "¿Qué es un sistema derivado separadamente?",
+    "aliases": [
+      "sistema derivado separadamente",
+      "sistema derivado por transformador",
+      "sistema derivado por generador"
+    ],
+    "answer_plain": "Un sistema derivado separadamente es el cableado del predio alimentado desde una fuente distinta de una acometida — un transformador, generador, convertidor o batería — sin conexión eléctrica directa con los conductores de alimentación de otro sistema, salvo a través de las conexiones de puesta a tierra y unión. Como es su propia fuente, recibe su propia unión neutro-tierra a través de un puente de unión del sistema, dimensionado e instalado según las reglas del Artículo 250 para sistemas derivados.",
+    "nec_ref": "Article 100",
+    "nec_edition": "2020",
+    "tags": [
+      "derivado separadamente",
+      "transformador",
+      "unión"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-25"
+  },
+  {
+    "id": "C1-L-073",
+    "question": "¿Qué es un factor de demanda?",
+    "aliases": [
+      "factor de demanda",
+      "definición de factor de demanda",
+      "carga conectada vs demanda"
+    ],
+    "answer_plain": "El factor de demanda es la relación entre la demanda máxima de un sistema y su carga total conectada. Nunca es mayor que 1.0, porque no toda carga funciona a la vez. Es la idea detrás de los factores de demanda en los cálculos de carga: un alimentador o una acometida puede dimensionarse para la demanda, no para la suma aritmética de todo lo conectado.",
+    "nec_ref": "Article 100",
+    "nec_edition": "2020",
+    "tags": [
+      "cálculos de carga",
+      "demanda"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-25"
+  },
+  {
+    "id": "C1-L-074",
+    "question": "Conductor de puesta a tierra de equipos vs conductor del electrodo de puesta a tierra — ¿cuál es cuál?",
+    "aliases": [
+      "EGC vs GEC",
+      "conductor de puesta a tierra de equipos vs del electrodo"
+    ],
+    "answer_plain": "El conductor de puesta a tierra de equipos (EGC) conecta el metal de los equipos de vuelta a la fuente para que una falla a tierra tome suficiente corriente para disparar el dispositivo de sobrecorriente — se dimensiona con la Tabla 250.122. El conductor del electrodo de puesta a tierra (GEC) conecta el sistema al electrodo de puesta a tierra (varilla, electrodo embebido en concreto, etc.) y se dimensiona con la Tabla 250.66. Uno protege a las personas del metal energizado; el otro une el sistema a la tierra. Trabajos distintos, tablas distintas.",
+    "nec_ref": "Article 100",
+    "nec_edition": "2020",
+    "tags": [
+      "puesta a tierra",
+      "EGC",
+      "GEC"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-25"
+  },
+  {
+    "id": "C1-L-075",
+    "question": "¿Cuándo necesita el espacio de trabajo eléctrico una entrada en cada extremo?",
+    "aliases": [
+      "dos entradas espacio de trabajo",
+      "regla de entrada de 1200 amperios",
+      "entradas 110.26(C)"
+    ],
+    "answer_plain": "Para equipos grandes — clasificados 1200A o más y de más de 6 ft de ancho, que contengan dispositivos de sobrecorriente, interruptores o control — 110.26(C) exige una entrada en cada extremo del espacio de trabajo, salvo que la distribución provea una de las alternativas aceptadas por la sección, como un camino de salida despejado o el doble de profundidad del espacio de trabajo. Las puertas de personal cerca del equipo deben abrir en la dirección de salida y llevar herraje antipánico listado.",
+    "nec_ref": "110.26(C)",
+    "nec_edition": "2020",
+    "tags": [
+      "espacio de trabajo",
+      "entradas"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-25"
+  },
+  {
+    "id": "C1-L-076",
+    "question": "¿Qué es el sistema de cableado del predio — dónde empieza y dónde termina?",
+    "aliases": [
+      "sistema de cableado del predio",
+      "definición de cableado del predio",
+      "dónde empieza el cableado del predio"
+    ],
+    "answer_plain": "El sistema de cableado del predio es todo el cableado dentro de un edificio o adosado a él, desde el punto de acometida (o desde otra fuente como un generador o un sistema solar) hasta las salidas. No incluye el cableado interno dentro de los equipos. Es el término límite que separa la instalación del cliente, que el NEC gobierna, del lado de la compañía eléctrica en el punto de acometida.",
+    "nec_ref": "Article 100",
+    "nec_edition": "2020",
+    "tags": [
+      "cableado del predio",
+      "punto de acometida"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-25"
+  },
+  {
+    "id": "C1-L-077",
+    "question": "Resistente a la intemperie vs hermético al agua — ¿cuál es la diferencia?",
+    "aliases": [
+      "weatherproof vs watertight",
+      "términos de exposición de envolventes",
+      "dusttight"
+    ],
+    "answer_plain": "El equipo resistente a la intemperie está construido o protegido de modo que la exposición al clima no impida que opere — no promete que el agua se quede fuera. El equipo hermético al agua está construido de modo que la humedad no entre a la envolvente bajo sus condiciones de prueba — el sello es el punto. Hermético al polvo es la misma idea para el polvo. Ni weatherproof ni watertight sustituyen un listado para ubicación húmeda donde una regla lo exige.",
+    "nec_ref": "Article 100",
+    "nec_edition": "2020",
+    "tags": [
+      "envolventes",
+      "ubicaciones"
+    ],
+    "verified_by": "Jarvis",
+    "verified_date": "2026-11-25"
   }
 ]
