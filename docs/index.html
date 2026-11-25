@@ -17,7 +17,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="https://sharma-kit.sharma-crew.workers.dev/assets/favicon-32.png">
 <link rel="stylesheet" href="https://sharma-kit.sharma-crew.workers.dev/sharma-kit.css">
 <script src="https://sharma-kit.sharma-crew.workers.dev/sharma-kit.js" defer></script>
-<link rel="stylesheet" href="app.css?v=4">
+<link rel="stylesheet" href="app.css?v=5">
 </head>
 <body class="sk">
 <header class="sk-header"><div class="sk-header__bar">
@@ -43,6 +43,7 @@
   <a class="sk-tab" href="#/howtos" data-tab="howtos"><svg class="sk-icon"><use href="#i-tools"/></svg>How-Tos</a>
   <a class="sk-tab" href="#/quizzes" data-tab="quizzes"><svg class="sk-icon"><use href="#i-edit"/></svg>Quizzes</a>
   <button class="tr-langbtn" id="langToggle" type="button" aria-label="Language / Idioma">Español</button>
+  <button class="tr-langbtn tr-schemebtn" id="schemeToggle" type="button" aria-label="Appearance / Apariencia">Dark</button>
 </div></nav>
 <script>
 /* Language toggle (EN/ES). The choice lives in localStorage "tr-lang";
@@ -74,6 +75,36 @@
       if (n.nodeType === 3) { var k = n.textContent.trim(); if (MAP[k]) n.textContent = n.textContent.replace(k, MAP[k]); }
     });
   });
+})();
+</script>
+<script>
+/* Appearance toggle (Light | Dark) — sits in the tab bar alongside the
+   EN/ES toggle (fleet standard, Sanjay 2026-11-25). Same storage as the
+   kit's More-sheet Appearance switch (localStorage "sk-scheme"), light by
+   default; the kit's schemeSet keeps both controls in sync. The label
+   names the scheme a tap switches TO, in the current language. */
+(function(){
+  var btn = document.getElementById("schemeToggle");
+  if (!btn) return;
+  function cur(){ try { return localStorage.getItem("sk-scheme") === "dark" ? "dark" : "light"; } catch (e) { return "light"; } }
+  function es(){ try { return localStorage.getItem("tr-lang") === "es"; } catch (e) { return false; } }
+  function paint(){
+    var dark = cur() === "dark";
+    btn.textContent = dark ? (es() ? "Claro" : "Light") : (es() ? "Oscuro" : "Dark");
+    btn.setAttribute("aria-checked", String(dark));
+  }
+  btn.addEventListener("click", function(){
+    var next = cur() === "dark" ? "light" : "dark";
+    if (window.SK && SK.scheme) SK.scheme.set(next);
+    else {
+      try { localStorage.setItem("sk-scheme", next); } catch (e) {}
+      document.documentElement.setAttribute("data-scheme", next);
+    }
+    paint();
+  });
+  document.addEventListener("sk:scheme", paint);
+  addEventListener("storage", function(e){ if (e.key === "sk-scheme") paint(); });
+  paint();
 })();
 </script>
 <script type="module" src="app.js?v=4"></script>
