@@ -5,6 +5,12 @@
   "index": [
     {
       "ids": [
+        "C9-ANNEXB"
+      ],
+      "term": "Annex B, ampacity under engineering supervision"
+    },
+    {
+      "ids": [
         "C9-ANNEXC",
         "C9-FILL-SAME"
       ],
@@ -41,6 +47,26 @@
         "C9-Table8-CCA"
       ],
       "term": "CCA, resistance approximation"
+    },
+    {
+      "term": "Class 2 and Class 3 power source limits, Tables 11(A) and 11(B)",
+      "ids": [
+        "C9-Table11",
+        "C9-L-062"
+      ]
+    },
+    {
+      "term": "Compact conductors, dimensions and areas (Table 5A)",
+      "ids": [
+        "C9-Table5A",
+        "C9-L-061"
+      ]
+    },
+    {
+      "ids": [
+        "C9-Table2"
+      ],
+      "term": "Conduit bends, minimum radius"
     },
     {
       "ids": [
@@ -90,6 +116,12 @@
     },
     {
       "ids": [
+        "C9-Table2"
+      ],
+      "term": "Table 2, radius of conduit bends"
+    },
+    {
+      "ids": [
         "C9-Table4"
       ],
       "term": "Table 4, raceway area"
@@ -136,24 +168,6 @@
         "C9-VD-WORKED"
       ],
       "term": "Voltage drop, upsizing to fix"
-    },
-    {
-      "ids": [
-        "C9-Table2"
-      ],
-      "term": "Table 2, radius of conduit bends"
-    },
-    {
-      "ids": [
-        "C9-Table2"
-      ],
-      "term": "Conduit bends, minimum radius"
-    },
-    {
-      "ids": [
-        "C9-ANNEXB"
-      ],
-      "term": "Annex B, ampacity under engineering supervision"
     }
   ],
   "jurisdiction": "Florida Building Code 8th Edition (2023)",
@@ -282,7 +296,7 @@
       "figure_idea": "Secciones transversales de THHN de 14, 12, 10 y 8 AWG dibujadas a escala, cada una etiquetada con su área de la Tabla 5.",
       "florida_note": "",
       "id": "C9-Table5",
-      "next_id": "C9-FILL-METHOD",
+      "next_id": "C9-Table5A",
       "on_the_job": "Confirma el tipo de aislamiento en el carrete antes de calcular. Si el trabajo cambia de THHN a un tipo de aislamiento más grueso, vuelve a hacer las cuentas de llenado con el área de la Tabla 5 de ese tipo, en vez de suponer que la cantidad todavía cabe.",
       "plain_explanation": "La Tabla 5 da el diámetro y el área aproximados de los conductores aislados y los cables de luminarias, por calibre y tipo de aislamiento. El llenado se calcula con el conductor aislado que realmente estás tendiendo, aislamiento incluido — no con el metal desnudo. En los datos de v1 usados en todo este capítulo, el THHN/THWN/THWN-2 de 12 AWG mide 0.0133 sq in, el de 10 AWG 0.0211, el de 8 AWG 0.0366 y el de 6 AWG 0.0507. Un tipo de aislamiento diferente en el mismo AWG puede tener un área diferente, así que la columna del aislamiento es parte de la respuesta.\n\nLa lista de trabajo para el tipo de aislamiento que Sharma tiende más — THHN / THWN / THWN-2, área aproximada en pulgadas cuadradas:\n• 14 AWG THHN — 0.0097 in²\n• 12 AWG THHN — 0.0133 in²\n• 10 AWG THHN — 0.0211 in²\n• 8 AWG THHN — 0.0366 in²\n• 6 AWG THHN — 0.0507 in²\n• 4 AWG THHN — 0.0824 in²\n• 3 AWG THHN — 0.0973 in²\n• 2 AWG THHN — 0.1158 in²\n• 1 AWG THHN — 0.1562 in²\n• 1/0 AWG THHN — 0.1855 in²\n• 2/0 AWG THHN — 0.2223 in²\n• 3/0 AWG THHN — 0.2679 in²\n• 4/0 AWG THHN — 0.3237 in²",
       "prev_id": "C9-Table4",
@@ -302,6 +316,28 @@
       "verified": false
     },
     {
+      "id": "C9-Table5A",
+      "chapter": 9,
+      "article": "9",
+      "section": "Table 5A",
+      "title": "Tabla 5A — dimensiones y áreas de conductores compactos",
+      "plain_explanation": "La Tabla 5A es la hermana de la Tabla 5 para conductores de trenzado compacto. En un conductor compacto los hilos se comprimen durante la fabricación, así que el conductor terminado es más redondo y de menor diámetro que un conductor estándar de trenzado concéntrico del mismo AWG — un trenzado común en los alimentadores de aluminio de mayor tamaño. El llenado se calcula sobre el conductor que realmente está en la canalización: los conductores compactos toman su diámetro y área de la Tabla 5A, los estándar de la Tabla 5. Calcular un conductor compacto desde la Tabla 5 sobreestima su área, así que un llenado puede reprobar en papel lo que pasaría en la canalización; calcular un conductor estándar desde la Tabla 5A lo subestima, y esa dirección sí es la violación. La marcación del conductor y su fabricante le dicen qué trenzado tiene en la mano.",
+      "on_the_job": "Un alimentador compacto de aluminio 4/0: abra la Tabla 5A, no la Tabla 5, antes de decirle al capataz el tamaño del conduit. La diferencia entre las dos tablas es regularmente la diferencia entre el conduit del camión y el siguiente tamaño.",
+      "sharma_note": "",
+      "florida_note": "",
+      "figure_idea": "Cortes transversales: trenzado concéntrico vs compacto en el mismo AWG, diámetros comparados.",
+      "related_ids": [
+        "C9-Table5",
+        "C9-FILL-METHOD",
+        "C9-Table4",
+        "C9-L-061"
+      ],
+      "sharma_rule_ids": [],
+      "verified": false,
+      "prev_id": "C9-Table5",
+      "next_id": "C9-FILL-METHOD"
+    },
+    {
       "article": "9",
       "chapter": 9,
       "figure_idea": "Una tira de flujo de cuatro pasos: enumerar los conductores, sumar las áreas de la Tabla 5, escoger el porcentaje de la Tabla 1, comparar en la Tabla 4.",
@@ -310,7 +346,7 @@
       "next_id": "C9-FILL-SAME",
       "on_the_job": "Di los pasos en voz alta en un tendido mixto antes de pedir el material. La mayoría de los llenados fallidos vienen de un paso saltado — una tierra que quedó fuera de la lista, una fila de EMT usada para un tramo de PVC, o la columna del 40 por ciento usada para un tendido de dos conductores que solo recibe el 31 por ciento.",
       "plain_explanation": "Todo problema de llenado sigue los mismos cuatro pasos. Primero, enumera cada conductor de la canalización, incluidos los de puesta a tierra del equipo, con su calibre y tipo de aislamiento. Segundo, toma el área de cada conductor de la Tabla 5 (el área de la Tabla 8 para un conductor desnudo) y súmalas. Tercero, escoge el porcentaje de la Tabla 1 según la cantidad de conductores — 53, 31, 40, o 60 para un niple corto. Cuarto, abre la Tabla 4 para tu tipo de canalización y toma el primer tamaño comercial cuya área utilizable a ese porcentaje sea igual o mayor que tu total de conductores. Si el total se pasa aunque sea por poco, sube un tamaño comercial; casi no cuenta.",
-      "prev_id": "C9-Table5",
+      "prev_id": "C9-Table5A",
       "related_ids": [
         "Ch9-T4",
         "Ch9-T5",
@@ -610,7 +646,7 @@
       "figure_idea": "Una bifurcación en el camino: los tramos ramales cortos toman el camino de la Tabla 8; un alimentador grande y largo toma el camino de la Tabla 9 con un letrero de 'correrlo desde la Tabla 9 impresa'.",
       "florida_note": "",
       "id": "C9-Table9",
-      "next_id": "C9-ANNEXD",
+      "next_id": "C9-Table11",
       "on_the_job": "Si una respuesta de caída de voltaje importa lo suficiente para pelear por ella — un alimentador largo, un motor grande, un comentario de revisión de planos — no la resuelvas con la aproximación de la Tabla 8. Márcala para que Mike la corra con la Tabla 9 y la canalización y el factor de potencia reales.\n\nEjemplo trabajado con la columna de Z efectiva: un alimentador trifásico de 208 V que lleva 100 A a 0.85 de factor de potencia, 200 ft en un sentido, con cobre de 2 AWG en PVC (Z = 0.19 ohm/kft). VD = 1.732 × 200 × 0.19 × 100 / 1000 = 6.58 V, como 3.2 por ciento de 208 V — por encima de la recomendación del 3 por ciento solo en el alimentador, así que la conversación de diseño empieza en 1 AWG o 1/0, no en la esperanza.",
       "plain_explanation": "La Tabla 9 es el siguiente paso después de la Tabla 8 para la caída de voltaje. Su título completo es 'Alternating-Current Resistance and Reactance for 600-Volt Cables, 3-Phase, 60 Hz, 75 degrees C — Three Single Conductors in Conduit', y en vez de solo la resistencia en DC da, en ohms al neutro por 1000 ft, la reactancia inductiva para todos los cables, la resistencia en corriente alterna para cobre sin recubrimiento y para aluminio, y la impedancia efectiva Z a 0.85 de factor de potencia — cada una desglosada para tubería de PVC, aluminio y acero, porque una canalización magnética de acero sube la reactancia y, en los tamaños más grandes, también la resistencia en AC. La Nota 1 de la tabla limita sus valores a conductores a 75 grados C bajo las condiciones que dice su título. Este libro no publica valores de la Tabla 9 por calibre; la enseñanza aquí es cuándo acudir a ella — conductores grandes, tramos trifásicos largos, canalización de acero, o una aproximación de la Tabla 8 que cae cerca de un límite — y correr esos casos desde la tabla impresa en vez de hacerlo de memoria.\n\nLos valores de tamaños comunes sí se incluyen aquí después de todo, para los tamaños que Sharma corre más — cobre sin recubrimiento, ohms al neutro por 1000 ft. La reactancia y la columna de Z efectiva son las partes que la Tabla 8 no te puede dar; la columna de resistencia en AC sigue de cerca a la Tabla 8 en los tamaños chicos y sube por encima de ella en tubería de acero a medida que los tamaños crecen. Los tamaños por encima de 4/0, y las columnas de aluminio, se quedan en la tabla impresa:\n• 14 AWG cobre — reactancia 0.058 en tubería de PVC o aluminio, 0.073 en acero; resistencia en AC 3.1 en PVC; Z efectiva a 0.85 de factor de potencia 2.7 en PVC\n• 12 AWG cobre — reactancia 0.054 en tubería de PVC o aluminio, 0.068 en acero; resistencia en AC 2.0 en PVC; Z efectiva a 0.85 de factor de potencia 1.7 en PVC\n• 10 AWG cobre — reactancia 0.050 en tubería de PVC o aluminio, 0.063 en acero; resistencia en AC 1.2 en PVC; Z efectiva a 0.85 de factor de potencia 1.1 en PVC\n• 8 AWG cobre — reactancia 0.052 en tubería de PVC o aluminio, 0.065 en acero; resistencia en AC 0.78 en PVC; Z efectiva a 0.85 de factor de potencia 0.69 en PVC\n• 6 AWG cobre — reactancia 0.051 en tubería de PVC o aluminio, 0.064 en acero; resistencia en AC 0.49 en PVC; Z efectiva a 0.85 de factor de potencia 0.44 en PVC\n• 4 AWG cobre — reactancia 0.048 en tubería de PVC o aluminio, 0.060 en acero; resistencia en AC 0.31 en PVC; Z efectiva a 0.85 de factor de potencia 0.29 en PVC\n• 3 AWG cobre — reactancia 0.047 en tubería de PVC o aluminio, 0.059 en acero; resistencia en AC 0.25 en PVC; Z efectiva a 0.85 de factor de potencia 0.23 en PVC\n• 2 AWG cobre — reactancia 0.045 en tubería de PVC o aluminio, 0.057 en acero; resistencia en AC 0.19 en PVC; Z efectiva a 0.85 de factor de potencia 0.19 en PVC\n• 1 AWG cobre — reactancia 0.046 en tubería de PVC o aluminio, 0.057 en acero; resistencia en AC 0.15 en PVC; Z efectiva a 0.85 de factor de potencia 0.16 en PVC\n• 1/0 AWG cobre — reactancia 0.044 en tubería de PVC o aluminio, 0.055 en acero; resistencia en AC 0.12 en PVC; Z efectiva a 0.85 de factor de potencia 0.13 en PVC\n• 4/0 AWG cobre — reactancia 0.041 en tubería de PVC o aluminio, 0.051 en acero; resistencia en AC 0.062 en PVC",
       "prev_id": "C9-VD-LIMITS",
@@ -626,6 +662,27 @@
       "verified": false
     },
     {
+      "id": "C9-Table11",
+      "chapter": 9,
+      "article": "9",
+      "section": "Tables 11(A) and 11(B)",
+      "title": "Tablas 11(A) y 11(B) — cuánta energía puede entregar una fuente Clase 2 o Clase 3",
+      "plain_explanation": "Las Tablas 11(A) y 11(B) son los números detrás de las palabras «potencia limitada». Para circuitos Clase 2 y Clase 3, las tablas limitan lo que la fuente de energía puede entregar — voltaje máximo del circuito, corriente máxima y volt-amperios máximos — con una tabla para fuentes de corriente alterna y otra para fuentes de corriente continua. Cada tabla divide las fuentes en dos: fuentes inherentemente limitadas, cuya construcción las mantiene dentro de los límites bajo cualquier carga o falla, y fuentes que no son inherentemente limitadas y por tanto dependen de una protección contra sobrecorriente dimensionada desde la tabla. El Artículo 725 le envía aquí para decidir si un transformador o una fuente realmente es una fuente Clase 2; la afirmación «Clase 2» en una placa se verifica contra estas tablas, no se acepta por fe.",
+      "on_the_job": "Un transformador de control de puerta marcado Clase 2: la fila de la tabla para su voltaje es lo que hace verdadera esa marcación, y también lo que gana las libertades de método de cableado que el Capítulo 7 da a los circuitos Clase 2. Sin coincidencia con la tabla, no hay trato Clase 2: el circuito se cablea como energía.",
+      "sharma_note": "",
+      "florida_note": "",
+      "figure_idea": "Esqueleto de tabla: tablas de ca y cc, columnas de inherentemente limitada vs protegida por sobrecorriente.",
+      "related_ids": [
+        "C7-725.121",
+        "C9-ART-9",
+        "C9-L-062"
+      ],
+      "sharma_rule_ids": [],
+      "verified": false,
+      "prev_id": "C9-Table9",
+      "next_id": "C9-ANNEXD"
+    },
+    {
       "article": "9",
       "chapter": 9,
       "figure_idea": "Un diagrama de flujo desde la lista de cargas de una casa, a través de los factores de demanda, hasta un tamaño de acometida, con una señal que apunta de vuelta al Capítulo 2 y a 220.82.",
@@ -634,7 +691,7 @@
       "next_id": "C9-ANNEXI",
       "on_the_job": "Cuando toque hacer un cálculo de carga, trabájalo en el orden del anexo — cargas generales, luego los aparatos y motores nombrados, luego la demanda, luego el tamaño de la acometida — y guarda la aritmética con el estimado para que Mike pueda volver a correrla. Si tu total y el patrón del anexo no coinciden, los datos están mal en alguna parte, no el patrón.",
       "plain_explanation": "El Anexo D muestra los artículos de cálculo de carga trabajados de principio a fin en edificios de ejemplo: suma las cargas que los artículos nombran, aplica los factores de demanda que los artículos permiten, y llega a un tamaño de acometida o alimentador. El anexo de 2020 trabaja ocho familias de ejemplos: D1, una vivienda unifamiliar por el método estándar, con y sin aire acondicionado; D2, una vivienda unifamiliar por el método opcional de 220.82, incluyendo una versión con bomba de calor y calor de respaldo; D3, un edificio de tienda; D4 y D5, viviendas multifamiliares — D5 servida a 208Y/120 volts, trifásica; D6, demanda máxima para cargas de estufas según la Tabla 220.55; D7, conductores de acometida de vivienda dimensionados con 310.12; y D8, conductores y protección de motores bajo el Artículo 430. Este libro enseña ese método y te dirige al trabajo real en el Capítulo 2 — en especial los datos del cálculo opcional de vivienda que v1 lleva como tabla 220.82 — en vez de copiar un ejemplo del anexo. Un ejemplo de Sharma debe calcularse fresco desde la casa real, etiquetarse como ejemplo de Sharma y revisarse; un ejemplo del anexo es un patrón a seguir, no un número para tomar prestado para otro edificio.",
-      "prev_id": "C9-Table9",
+      "prev_id": "C9-Table11",
       "related_ids": [
         "220.82",
         "C9-L-045",
@@ -744,6 +801,11 @@
           "id": "C9-FILL-EGC-AND-BARE",
           "section": "Tables 5, 8",
           "title": "Las tierras cuentan, y los conductores desnudos usan la Tabla 8"
+        },
+        {
+          "id": "C9-Table5A",
+          "section": "Table 5A",
+          "title": "Tabla 5A — dimensiones y áreas de conductores compactos"
         }
       ],
       "id": "C9-Table5",
@@ -798,6 +860,12 @@
       "children": [],
       "id": "C9-Table9",
       "title": "Tabla 9 — resistencia y reactancia en AC, para un trabajo de caída de voltaje más fino"
+    },
+    {
+      "article": "9",
+      "children": [],
+      "id": "C9-Table11",
+      "title": "Tablas 11(A) y 11(B) — cuánta energía puede entregar una fuente Clase 2 o Clase 3"
     },
     {
       "article": "9",
