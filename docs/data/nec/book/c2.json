@@ -268,8 +268,8 @@
       "article": "200",
       "section": "200.7",
       "title": "What white or gray insulation may be used for",
-      "plain_explanation": "White or gray insulation is reserved for the grounded conductor, with narrow exceptions the section spells out. The familiar field examples are a re-identified conductor in a cable assembly used as a hot for a switch loop or a 240V circuit, and flexible cord uses — and re-identification has to be permanent and visible where required. A white conductor is never free to be a ground; equipment grounds are green, green with yellow stripes, or bare.",
-      "on_the_job": "If you re-identify a white wire as a hot, mark it at every box where it appears and tell the trim crew. If you open a box and find an unmarked white on a switch or breaker, stop and trace it instead of assuming.",
+      "plain_explanation": "White or gray insulation is reserved for the grounded conductor, with narrow exceptions the section spells out. The color is a promise, and for circuits of 50 volts or more the promise may be bent only in these ways (200.7(C)):\n• Cable assemblies. A white conductor inside a cable assembly may serve as a hot — the familiar field examples are a re-identified conductor in a cable assembly used as a hot for a switch loop or a 240V circuit, and the marking has to be permanent: re-identified at its termination and at every location where it is visible and accessible, with the marking encircling the insulation in a color other than white, gray or green.\n• Switch loops. The re-identified white may supply the switch, or run as a traveler between 3-way and 4-way switches. It may not be the return conductor from the switch back to the outlet.\n• Flexible cords. A white conductor in a flexible cord may be used as a hot only where the cord rules permit it (400.7).\nIn a raceway there is no re-identification at all — individual conductors are pulled in the right color. And a white conductor is never free to be a ground; equipment grounds are green, green with yellow stripes, or bare.",
+      "on_the_job": "If you re-identify a white wire as a hot, mark it at every box where it appears and tell the trim crew. If you open a box and find an unmarked white on a switch or breaker, stop and trace it instead of assuming. The everyday Sharma case is the 240 V water heater wired in a two-wire cable assembly: the white is re-identified with black tape that encircles it, at the heater and again at the breaker. Mark one end only and the job is half done — the other end is where the next person gets surprised.",
       "sharma_note": "Never backstab and never guess a re-identified white — Sharma crews trace it. See S-10 for conductor and termination practice generally.",
       "figure_idea": "",
       "related_ids": [
@@ -282,7 +282,110 @@
       "next_id": "C2-200.10",
       "sharma_rule_ids": [
         "S-10"
-      ]
+      ],
+      "why_it_exists": "The next person to open the box trusts the color before anything else. A white wire that is secretly a hot shocks the person who treats it as a neutral; a white wire used as a ground leaves equipment looking grounded when it is not. Reserving the color — and marking every exception so it cannot be missed — is what makes that trust safe.",
+      "exam_trap": "The exam's favorite wrong answers: 'a white conductor may be re-identified anywhere if it is taped' — no, the allowance covers cable assemblies and flexible cords, never individual conductors in a raceway. And 'the re-identified white in a switch loop can carry the switched return back to the light' — no, it may only supply the switch, or run as a traveler; the return is a colored conductor.",
+      "inspection_fails": [
+        "White conductor landed on a breaker with no re-identification marking anywhere.",
+        "Re-identified white marked at the panel but not at the far box where it is visible and accessible.",
+        "White conductor used as the equipment grounding conductor on a retrofit.",
+        "White THHN pulled in conduit and taped black to serve as a hot."
+      ],
+      "tables": [
+        {
+          "caption": "A white or gray conductor may be…",
+          "headers": [
+            "Use",
+            "Allowed?"
+          ],
+          "rows": [
+            [
+              "The grounded conductor (neutral)",
+              "Yes — that is its job"
+            ],
+            [
+              "A hot in a cable assembly, permanently re-identified at every visible point",
+              "Yes — 200.7(C)(1)"
+            ],
+            [
+              "The return from a switch back to the outlet, in a switch loop",
+              "No — supply to the switch only"
+            ],
+            [
+              "A hot in a raceway, taped at the ends",
+              "No"
+            ],
+            [
+              "The equipment grounding conductor",
+              "No — never"
+            ]
+          ],
+          "note": "Re-identification must encircle the insulation and be a color other than white, gray or green."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-200.7-white-wire.svg",
+          "alt": "Three panels: a switch loop in a cable assembly with the white conductor re-identified at both ends, marked OK; a white conductor used as an unmarked hot at a breaker, marked NO; and a white conductor used as the equipment ground, marked NO, with the correct ground colors listed.",
+          "caption": "White is the grounded color: one OK use, two common violations.",
+          "w": 900,
+          "h": 1460
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "White or gray insulation is reserved for:",
+          "choices": [
+            "The equipment grounding conductor",
+            "The grounded conductor",
+            "Any conductor, if taped",
+            "Travelers between 3-way switches"
+          ],
+          "answer_index": 1,
+          "explain_plain": "White and gray identify the grounded conductor; the exceptions in 200.7(C) are narrow and must be marked.",
+          "nec_ref": "200.7"
+        },
+        {
+          "question": "A white conductor in a cable assembly may be used as a hot when it is:",
+          "choices": [
+            "Taped at one end",
+            "Permanently re-identified at its termination and at every location where it is visible and accessible",
+            "On a circuit under 50 volts",
+            "Feeding a receptacle outlet"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The marking must encircle the insulation, in a color other than white, gray or green, everywhere the conductor can be seen.",
+          "nec_ref": "200.7(C)(1)"
+        },
+        {
+          "question": "In a switch loop, the re-identified white conductor may be used as:",
+          "choices": [
+            "The return conductor to the light",
+            "The supply to the switch",
+            "The equipment grounding conductor",
+            "Either the supply or the return"
+          ],
+          "answer_index": 1,
+          "explain_plain": "It may supply the switch, or run as a traveler — never as the return from the switch to the outlet.",
+          "nec_ref": "200.7(C)"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "200.7",
+        "200.7(C)(1)",
+        "200.6",
+        "400.7"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "200.7(C) covers circuits of 50 volts or more; re-identification must encircle the insulation in a color other than white, gray or green, at each termination and every visible and accessible location; in switch loops the re-identified conductor may supply the switch but not serve as the return conductor",
+          "source": "Mike Holt, NEC Questions and Answers (200.7 summary)",
+          "url": "https://www.mikeholt.com/newsletters.php?action=display&letterID=1187&email="
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C2-200.10",
@@ -503,8 +606,8 @@
       "article": "210",
       "section": "210.4",
       "title": "Multiwire branch circuits",
-      "plain_explanation": "A multiwire branch circuit shares one grounded conductor between two or three ungrounded conductors taken from different phases or legs. Because the shared neutral only carries the unbalanced current when the hots are on opposite legs, landing both hots on the same leg can overload a neutral that has no breaker of its own. The article also requires a way to disconnect all the hots together at the panel and grouping so the shared set can be identified.\n\nNEC 2023 CHANGE:\n• 210.4: The same-origin rule for multiwire branch circuits now points to 300.3(B)(4), which covers column-width panelboards whose neutrals land in an attached pull box. Hots and neutral of any multiwire branch circuit still begin in one panelboard or other distribution equipment.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Before you share a neutral, confirm the breakers are on opposite legs and tied or on a common-trip / handle-tied arrangement as required. In a 120/240V house panel, that means adjacent positions are not automatically opposite legs in every panel layout — check, do not assume.",
+      "plain_explanation": "A multiwire branch circuit shares one grounded conductor (neutral) between two or three ungrounded conductors taken from different phases or legs. The rules that make it safe:\n• Same origin: all conductors of the circuit begin in the same panelboard or similar distribution equipment (210.4(A))\n• The shared neutral carries only the unbalanced current. With the hots on opposite legs the currents cancel — two 16 A loads can leave the neutral at 0 A\n• Simultaneous disconnect: a means at the panel must open all the hots together — a two-pole breaker or handle-tied breakers (210.4(B))\n• Line-to-neutral loads only (210.4(C))\n• Grouping: the hots and their shared neutral are grouped together in the panel so the set can be identified (210.4(D))\nLand both hots on the same leg and the math flips: the neutral now carries the sum of both loads, on a conductor with no breaker of its own.",
+      "on_the_job": "Before you share a neutral, prove the breakers are on opposite legs — do not trust position. Adjacent spaces are not opposite legs in every panel layout, and tandem breakers make it worse: two tandems can put both hots on the same leg while looking like a pair. Meter it on the 120/240 V system: 240 V between the two hots means opposite legs; 0 V means the same leg, and the neutral will carry the sum. Use a two-pole breaker, or handle-tied singles, so both hots open together — and on a dual-function job, a two-pole device reads the shared neutral correctly instead of nuisance-tripping on it.",
       "sharma_note": "",
       "figure_idea": "A two-pole breaker feeding a red hot, a black hot, and one shared white neutral to two receptacle runs, with the opposite-leg point circled.",
       "related_ids": [
@@ -524,7 +627,107 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/210-4",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "The neutral has no overcurrent device watching it. Landed on the same leg, it can carry double current and cook its insulation inside a wall while both breakers sit happy at half load. The second hazard is quieter: open a shared neutral on a live circuit and the two loads end up in series across 240 V — the lighter load can see most of that voltage and burn up.",
+      "exam_trap": "The trap: 'Two 20 A multiwire circuits share a neutral, so the neutral must be rated for 40 A.' Wrong — on opposite legs the neutral carries only the difference between the loads, never more than the larger one. The 40 A answer describes the wiring error, not the rule: land both hots on one leg and the neutral really does carry the sum, with nothing there to trip.",
+      "inspection_fails": [
+        "Both hots of a multiwire circuit landed on the same leg — neutral found overheated, insulation brittle, and no breaker ever tripped.",
+        "Two single-pole breakers with no handle tie: one circuit worked on live while the shared neutral still carried the other circuit's current.",
+        "Multiwire conductors not grouped in the panel — the shared neutral landed with the wrong pair of hots.",
+        "Shared neutral spliced through a receptacle instead of pigtailed, so removing the device opens the neutral on a live circuit."
+      ],
+      "tables": [
+        {
+          "caption": "Same two loads, two landings",
+          "headers": [
+            "",
+            "Opposite legs (right)",
+            "Same leg (wrong)"
+          ],
+          "rows": [
+            [
+              "Hot A",
+              "16 A",
+              "16 A"
+            ],
+            [
+              "Hot B",
+              "16 A",
+              "16 A"
+            ],
+            [
+              "Shared neutral",
+              "0 A (16 − 16)",
+              "32 A (16 + 16)"
+            ],
+            [
+              "Breaker trips?",
+              "—",
+              "No — the neutral cooks silently"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-210.4-shared-neutral.svg",
+          "alt": "Comparison diagram of a multiwire branch circuit: landed on opposite legs the shared neutral carries 0 A with two 16 A loads; landed on the same leg it carries 32 A and overheats with no breaker tripping.",
+          "caption": "Opposite legs, the neutral rests. Same leg, it carries both loads.",
+          "w": 900,
+          "h": 1460
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Two multiwire loads draw 16 A each on opposite legs. What does the shared neutral carry?",
+          "choices": [
+            "32 A",
+            "16 A",
+            "0 A",
+            "8 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "On opposite legs the currents cancel; the neutral carries only the unbalanced (difference) current.",
+          "nec_ref": "210.4"
+        },
+        {
+          "question": "What disconnecting means does a multiwire branch circuit need at the panel?",
+          "choices": [
+            "Each hot on its own single-pole breaker, no tie",
+            "A means that opens all the hots simultaneously",
+            "A fused switch in the neutral",
+            "No special means"
+          ],
+          "answer_index": 1,
+          "explain_plain": "210.4(B): all ungrounded conductors of the circuit must open together at the point of origin.",
+          "nec_ref": "210.4(B)"
+        },
+        {
+          "question": "Why are a multiwire circuit's conductors grouped in the panelboard?",
+          "choices": [
+            "To save gutter space",
+            "So the shared set can be identified",
+            "To keep the phases apart",
+            "Only for the inspector's count"
+          ],
+          "answer_index": 1,
+          "explain_plain": "210.4(D) requires grouping so the hots and their shared neutral can be identified as one circuit.",
+          "nec_ref": "210.4(D)"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 210.4: The same-origin rule for multiwire branch circuits now points to 300.3(B)(4), which covers column-width panelboards whose neutrals land in an attached pull box. Hots and neutral of any multiwire branch circuit still begin in one panelboard or other distribution equipment.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "210.4",
+        "210.4(A)",
+        "210.4(B)",
+        "210.4(C)",
+        "210.4(D)",
+        "225.30",
+        "300.13(B)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-210.5",
@@ -1073,8 +1276,8 @@
       "article": "210",
       "section": "210.8(D)",
       "title": "Specific appliances that need GFCI protection",
-      "plain_explanation": "Beyond location lists, this subsection points to 422.5(A): specific appliances need ground-fault protection wherever they are installed, in any occupancy, when rated 150 volts or less to ground and 60 amps or less. The 2020 list is automotive vacuum machines, drinking water coolers and bottle fill stations, cord-and-plug-connected high-pressure spray washers, tire inflation machines, vending machines, sump pumps, and dishwashers. The test is the appliance and its rating, not the room. When an appliance is on the list, moving it to a room that is not on the 210.8(A) list does not remove the requirement.\n\nNEC 2023 CHANGE:\n• 210.8(D): 210.8(D) now names the appliances: electric ranges, wall-mounted ovens, counter-mounted cooking units, clothes dryers and microwave ovens were added, correlated with 422.5(A).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Check the appliance schedule, not just the room finish. If a listed appliance will be cord-and-plug or hardwired within the stated limits, plan the protection before the panel schedule is finalized.",
+      "plain_explanation": "Beyond the location lists, this subsection points to 422.5(A): specific appliances need ground-fault protection wherever they are installed, in any occupancy, when rated 150 volts or less to ground and 60 amps or less. The 2020 list:\n• Automotive vacuum machines\n• Drinking water coolers and bottle fill stations\n• Cord-and-plug-connected high-pressure spray washers\n• Tire inflation machines\n• Vending machines\n• Sump pumps\n• Dishwashers\nThe test is the appliance and its rating, not the room. When an appliance is on the list, moving it to a room that is not on the 210.8(A) list does not remove the requirement. The dishwasher is the one a house crew meets every week: it needs this protection in a dwelling, a restaurant or an office kitchen, whether it plugs in or is hardwired.",
+      "on_the_job": "On a Sharma spec home in Marion Oaks, the dishwasher is the standing case: it lands on a 20 A kitchen circuit, and the S-07 dual-function breaker in the Siemens panel supplies the GFCI protection, with a standard TR receptacle under the sink where the dishwasher plugs in. The site trap is the appliance swap: the builder changes the dishwasher model after trim and nobody rechecks. Because the protection lives at the breaker, the new unit is covered the moment it is plugged in. On a small commercial job, check the vending machine and the bottle fill station the same way: both are on the 422.5(A) list even though the break room is not a 210.8(A) location.",
       "sharma_note": "S-07: a DFN breaker supplies this protection on 120V circuits, with a standard TR receptacle at the appliance where there is a receptacle.",
       "figure_idea": "",
       "related_ids": [
@@ -1098,7 +1301,130 @@
           "url": "https://dca.georgia.gov/document/public-notices/2023necchangespresentationpdf/download",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Every appliance on this list mixes electricity with water, wet hands or a wet floor. A sump pump sits in a pit of water, a spray washer soaks its operator, and a dishwasher can leak across a kitchen floor. A fault inside the appliance can put full line voltage on its metal case, and the person who touches it becomes the path to ground. GFCI protection watches for current leaking where it should not go and opens the circuit in a fraction of a second, before that case can deliver a dangerous shock.",
+      "exam_trap": "The trap answer: \"The break room is not on the 210.8(A) list, so the vending machine needs no GFCI.\" Wrong — 210.8(D) follows the appliance, not the room, in any occupancy. Second trap: picking an electric range or a clothes dryer as a 2020 requirement. Those appliances were added in 2023; under the 2020 rule above they are not on the (D) list.",
+      "inspection_fails": [
+        "Dishwasher on a standard breaker with no GFCI protection — the most common 210.8(D) write-up there is.",
+        "Sump pump on an unprotected receptacle because the pit closet \"is not a listed location.\"",
+        "Vending machine or bottle fill station on an unprotected circuit in a commercial break room.",
+        "GFCI protection taken out after nuisance trips instead of finding the faulting appliance."
+      ],
+      "tables": [
+        {
+          "caption": "The 2020 list, and where you meet each one",
+          "headers": [
+            "Appliance",
+            "Where you meet it"
+          ],
+          "rows": [
+            [
+              "Dishwashers",
+              "Houses, restaurants, break rooms"
+            ],
+            [
+              "Sump pumps",
+              "Pits and lift stations"
+            ],
+            [
+              "Vending machines",
+              "Break rooms, laundromats"
+            ],
+            [
+              "Drinking water coolers, bottle fill stations",
+              "Offices, gyms, schools"
+            ],
+            [
+              "Tire inflation machines",
+              "Gas stations, car washes"
+            ],
+            [
+              "Automotive vacuum machines",
+              "Car washes, detail shops"
+            ],
+            [
+              "High-pressure spray washers (cord-and-plug)",
+              "Wash bays, job sites"
+            ]
+          ]
+        },
+        {
+          "caption": "2020 vs 2023 at a glance",
+          "headers": [
+            "Item",
+            "NEC 2020",
+            "NEC 2023"
+          ],
+          "rows": [
+            [
+              "Where the list lives",
+              "210.8(D) points to 422.5(A)",
+              "210.8(D) names the appliances itself"
+            ],
+            [
+              "Added appliances",
+              "—",
+              "Electric ranges, wall-mounted ovens, counter-mounted cooking units, clothes dryers, microwave ovens"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-210.8D-appliance-test.svg",
+          "alt": "Decision flow chart for 210.8(D): first ask whether the appliance is on the 422.5(A) list of seven appliances, then whether it is rated 150 volts or less to ground and 60 amps or less; a yes on both ends at a green box requiring GFCI protection in any occupancy, a no points back to the 210.8(A) location list.",
+          "caption": "The (D) test: appliance first, rating second, room never.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A dishwasher is installed in an office break room. Under NEC 2020, does it need GFCI protection?",
+          "choices": [
+            "No — break rooms are not on the 210.8(A) list",
+            "Yes — 210.8(D) follows the appliance, not the room",
+            "Only if it is within 6 ft of a sink",
+            "Only in dwelling units"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Dishwashers are on the 422.5(A) list, and 210.8(D) applies in any occupancy.",
+          "nec_ref": "210.8(D)"
+        },
+        {
+          "question": "Which appliance joined the 210.8(D) GFCI list only in NEC 2023?",
+          "choices": [
+            "Sump pump",
+            "Vending machine",
+            "Clothes dryer",
+            "Dishwasher"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Clothes dryers (with ranges, ovens, cooking units and microwaves) were added in 2023; the other three were already on the 2020 list.",
+          "nec_ref": "210.8(D) (2023)"
+        },
+        {
+          "question": "The 422.5(A) appliance protection applies to appliances rated up to:",
+          "choices": [
+            "125 V and 20 A",
+            "150 V to ground and 60 A",
+            "250 V and 100 A",
+            "Any voltage and any rating"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The list covers appliances rated 150 volts or less to ground and 60 amps or less.",
+          "nec_ref": "422.5(A)"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 210.8(D): 210.8(D) now names the appliances: electric ranges, wall-mounted ovens, counter-mounted cooking units, clothes dryers and microwave ovens were added, correlated with 422.5(A).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "210.8(D)",
+        "422.5(A)",
+        "210.8(A)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-210.8(F)",
@@ -1272,8 +1598,8 @@
       "article": "210",
       "section": "210.11(C)",
       "title": "The named dwelling circuits: kitchen, laundry, bathroom, garage",
-      "plain_explanation": "This subsection names four things. At least two 20A small-appliance circuits serve kitchen, pantry, breakfast, and dining receptacles, with tight limits on other outlets. At least one 20A laundry circuit serves the laundry receptacle and nothing else outside that area. At least one 20A bathroom circuit serves bathroom receptacles, or — for a single bathroom only — may carry that bathroom's other outlets. And the 2020 edition adds a dedicated 20A garage circuit for the required garage receptacles, with a limited allowance for readily accessible outdoor receptacles.\n\nNEC 2023 CHANGE:\n• 210.11(C)(4): The text was revised at Section 210. l l(C)(4), clarifying that 15-ampere branch circuits are permitted to serve receptacle outlets installed in a dwelling unit garage that are in addition to the receptacle outlets required by 210.52(G)(l).\n• 210.11(C)(4): A new exception (4) was added to Section 210.l l(C)(4), permitting the 20- ampere circuit supplying a single-vehicle bay garage to supply other equipment in accordance with requirements in 210.23(A)(l) and (A)(2).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Label these four on the panel schedule by their code job, not by a room nickname, and check the 'no other outlets' limits before adding a convenience receptacle to any of them. The single-bathroom exception is the trap: it does not let one circuit carry two bathrooms' receptacles plus lights.",
+      "plain_explanation": "This subsection names four things. At least two 20A small-appliance circuits serve kitchen, pantry, breakfast, and dining receptacles, with tight limits on other outlets. At least one 20A laundry circuit serves the laundry receptacle and nothing else outside that area. At least one 20A bathroom circuit serves bathroom receptacles, or — for a single bathroom only — may carry that bathroom's other outlets. And the 2020 edition adds a dedicated 20A garage circuit for the required garage receptacles, with a limited allowance for readily accessible outdoor receptacles.",
+      "on_the_job": "Panel schedule for a three-bed, two-bath Florida spec house, labeled by code job: spaces 1 and 3 'SABC KITCHEN 1 / 2', space 5 'LAUNDRY — NO OTHER OUTLETS', space 7 'BATH RECEP', space 9 'GARAGE RECEP', and S-06 puts the microwave on its own 20A circuit at space 11. Before trim-out, walk the 'no other outlets' limits: the laundry circuit stops at the laundry room wall, and the bath circuit serves one bathroom's receptacles — the single-bathroom exception does not let it carry the second bathroom's receptacles plus lights.",
       "sharma_note": "S-06 sits on top of this list: the microwave gets its own 20A circuit, separate from the small-appliance circuits. The wire size is PENDING (12 AWG copper versus 10 AWG CCA).",
       "figure_idea": "Five labeled home runs leaving a panel: two to the kitchen counters, one to the laundry, one to the bathroom, one to the garage, each with a 'no other outlets' tag where it applies.",
       "related_ids": [
@@ -1300,19 +1626,121 @@
       "nec2023_change": [
         {
           "section": "210.11(C)(4)",
-          "change": "The text was revised at Section 210. l l(C)(4), clarifying that 15-ampere branch circuits are permitted to serve receptacle outlets installed in a dwelling unit garage that are in addition to the receptacle outlets required by 210.52(G)(l).",
+          "change": "The text was revised at Section 210.11(C)(4), clarifying that 15-ampere branch circuits are permitted to serve receptacle outlets installed in a dwelling unit garage that are in addition to the receptacle outlets required by 210.52(G)(1).",
           "source": "Carosella/NFPA-based 2023 NEC change workbook: 210.11{C){4) 210.11 Branch Circuits Required. {C) Dwelling Units. (4) Garage Branch Circuits",
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         },
         {
           "section": "210.11(C)(4)",
-          "change": "A new exception (4) was added to Section 210.l l(C)(4), permitting the 20- ampere circuit supplying a single-vehicle bay garage to supply other equipment in accordance with requirements in 210.23(A)(l) and (A)(2).",
+          "change": "A new exception (4) was added to Section 210.11(C)(4), permitting the 20-ampere circuit supplying a single-vehicle bay garage to supply other equipment in accordance with requirements in 210.23(A)(1) and (A)(2).",
           "source": "Carosella/NFPA-based 2023 NEC change workbook: 210.11{C){4) 210.11 Branch Circuits Required. {C) Dwelling Units. (4) Garage Branch Circuits. Exception",
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 210.11(C)(4): The text was revised at Section 210.11(C)(4), clarifying that 15-ampere branch circuits are permitted to serve receptacle outlets installed in a dwelling unit garage that are in addition to the receptacle outlets required by 210.52(G)(1).\n• 210.11(C)(4): A new exception (4) was added to Section 210.11(C)(4), permitting the 20-ampere circuit supplying a single-vehicle bay garage to supply other equipment in accordance with requirements in 210.23(A)(1) and (A)(2).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "These four circuits serve the loads most likely to be plugged in and run hard at the same time — countertop appliances at breakfast, a washer mid-cycle, hair dryers in the morning. Giving each its own 20A circuit, and fencing it off from other outlets, keeps a space heater in the hallway or a fridge on a shared run from becoming the reason a breaker trips — or gets upsized past the wire. The 'no other outlets' limits are what make the protection predictable.",
+      "inspection_fails": [
+        "Microwave receptacle landed on a small-appliance circuit — S-06 gives the microwave its own 20A circuit.",
+        "Laundry circuit extended to a hallway receptacle outside the laundry area.",
+        "One 20A circuit serving receptacles in two bathrooms.",
+        "Garage receptacles fed from a general lighting circuit — no dedicated 20A garage circuit (210.11(C)(4))."
+      ],
+      "exam_trap": "The exam trap is the single-bathroom exception: one 20A circuit may carry one bathroom's receptacles plus that same bathroom's lights and fan. The wrong answer stretches it to feed both bathrooms' receptacles 'because they are on the same circuit size.' The exception dies the moment a second bathroom is added.",
+      "tables": [
+        {
+          "caption": "The named circuits in 210.11(C)",
+          "headers": [
+            "Circuit",
+            "Minimum",
+            "Serves",
+            "Limit"
+          ],
+          "rows": [
+            [
+              "Small-appliance × 2",
+              "20A each",
+              "Kitchen, pantry, breakfast and dining receptacles",
+              "No other outlets outside those rooms"
+            ],
+            [
+              "Laundry × 1",
+              "20A",
+              "The laundry receptacle outlet(s)",
+              "Nothing outside the laundry area"
+            ],
+            [
+              "Bathroom × 1",
+              "20A",
+              "Bathroom receptacle outlets",
+              "One bathroom only may add its other outlets"
+            ],
+            [
+              "Garage × 1",
+              "20A",
+              "The required garage receptacles",
+              "May also serve readily accessible outdoor receptacles"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-210.11C-named-circuits.svg",
+          "alt": "Panel schedule with six labeled home runs: two 20 A small-appliance circuits, a 20 A laundry circuit, a 20 A bathroom circuit and a 20 A garage circuit, the small-appliance and laundry runs tagged no other outlets, plus the microwave on its own 20 A circuit per Sharma rule S-06.",
+          "caption": "Five code-named home runs, plus the microwave on S-06.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Fewest 20A small-appliance branch circuits in a dwelling?",
+          "choices": [
+            "1",
+            "2",
+            "3",
+            "One per counter"
+          ],
+          "answer_index": 1,
+          "explain_plain": "210.11(C)(1) requires at least two 20A small-appliance circuits for the kitchen, pantry, breakfast and dining receptacles.",
+          "nec_ref": "210.11(C)(1)"
+        },
+        {
+          "question": "The 20A laundry circuit may also serve:",
+          "choices": [
+            "A hallway receptacle on the same wall",
+            "The bathroom receptacle next door",
+            "Nothing outside the laundry area",
+            "The garage door opener"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The laundry circuit serves the laundry receptacle outlet(s) and no other outlets outside the laundry area.",
+          "nec_ref": "210.11(C)(2)"
+        },
+        {
+          "question": "Under NEC 2023, receptacles in a dwelling garage that are in addition to those required by 210.52(G)(1) may be served by:",
+          "choices": [
+            "The lighting circuit",
+            "15A branch circuits",
+            "A shared 20A circuit with the kitchen",
+            "Only a dedicated 30A circuit"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The 2023 revision to 210.11(C)(4) permits 15-ampere branch circuits for the additional garage receptacles.",
+          "nec_ref": "210.11(C)(4) (2023)"
+        }
+      ],
+      "code_refs": [
+        "210.11(C)(1)–(4)",
+        "210.52(G)(1)",
+        "210.23(A)(1)",
+        "210.23(A)(2)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-210.12",
@@ -1875,8 +2303,8 @@
       "article": "210",
       "section": "210.52(A)",
       "title": "Wall spacing in habitable rooms",
-      "plain_explanation": "In kitchens, family rooms, bedrooms, and the other rooms this subsection lists, receptacles are placed so that no point along the floor line of a wall is more than 6 ft from a receptacle — which works out to 12 ft maximum between receptacles on a run. Wall space is counted from 2 ft wide upward, and the section explains how fixed panels, sliding panels, and room dividers count, and when a floor receptacle may count toward the requirement. A receptacle behind a fixed appliance or too far above the floor does not do the job this spacing is meant to do.",
-      "on_the_job": "Measure along the floor line around corners and breaks, the way a lamp cord actually travels. Mark the 2 ft wall pieces — beside a door, between a closet and a corner — because those are the ones that get skipped.",
+      "plain_explanation": "In kitchens, family rooms, bedrooms, and the other rooms this subsection lists, receptacles are placed so that no point along the floor line of a wall is more than 6 ft from a receptacle — which works out to 12 ft maximum between receptacles on a run (210.52(A)(1)). Measure along the floor line and around corners: corners do not break a wall run, but doorways, fireplaces, and fixed cabinets without countertops do. Wall space is counted from 2 ft wide upward, and fixed panels and fixed room dividers count as wall space while sliding panels do not (210.52(A)(2)). A floor receptacle counts only when it sits within 18 in of the wall (210.52(A)(3)), and a receptacle more than 5½ ft above the floor, inside a cabinet, or behind a fixed appliance does not do the job this spacing is meant to do.",
+      "on_the_job": "Bedroom wall in a Marion Oaks spec house, 26 ft long with a 3 ft door opening: measure along the floor line from the first jamb. First run, 10 ft: one receptacle near the middle puts every point within 6 ft. Second run, 13 ft: two receptacles, at about 6 ft and 12 ft from the jamb, cover the end of the wall. Then mark the pieces crews skip — the 2 ft stub between the closet door and the corner is wall space and needs coverage. Set the boxes at S-04 height, 18 in to the bottom of the box, and walk the wall with a tape before you drill a single hole.",
       "sharma_note": "S-04 sets the box height when the plan is silent: 18 in to the bottom of the box. S-05 sets switch boxes at 48 in to center under the same condition.",
       "figure_idea": "A wall elevation with a tape running along the floor line, arrows showing 6 ft maximum from any point to the nearest receptacle and 12 ft maximum between two.",
       "related_ids": [
@@ -1894,7 +2322,113 @@
       "next_id": "C2-210.52(B)",
       "sharma_rule_ids": [
         "S-04"
-      ]
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "The rule is written around the length of a lamp or appliance cord. If every point on the wall is within 6 ft of a receptacle, cords reach without extension cords — and extension cords run under rugs and through doorways are a standing fire and trip hazard. The 2 ft rule exists because the short wall piece beside a door is exactly where a lamp or a vacuum wants to plug in.",
+      "inspection_fails": [
+        "A 2 ft wall piece between two doors left with no receptacle.",
+        "First receptacle more than 6 ft from a door jamb or fireplace edge.",
+        "Floor receptacle set 3 ft out from the wall counted toward the wall spacing.",
+        "Receptacle above 5½ ft counted as a required outlet."
+      ],
+      "exam_trap": "The trap is resetting the tape at every corner, as if each wall were its own run. Corners do not break wall space — the measurement follows the floor line around the corner, so a receptacle just past the corner can cover the end of the wall before it. Doorways are the opposite: they break the run and the 6 ft count starts over at the jamb.",
+      "tables": [
+        {
+          "caption": "What counts as wall space (210.52(A)(2))",
+          "headers": [
+            "Feature",
+            "Counts?",
+            "Note"
+          ],
+          "rows": [
+            [
+              "Wall piece 2 ft or wider",
+              "Yes",
+              "Even the stub beside a door"
+            ],
+            [
+              "Fixed glass panel",
+              "Yes",
+              "Treated as wall space"
+            ],
+            [
+              "Fixed room divider",
+              "Yes",
+              "Treated as wall space"
+            ],
+            [
+              "Sliding panel",
+              "No",
+              "Breaks the wall run"
+            ],
+            [
+              "Floor receptacle within 18 in of wall",
+              "Yes",
+              "210.52(A)(3)"
+            ],
+            [
+              "Receptacle over 5½ ft above the floor",
+              "No",
+              "Does not count toward the requirement"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-210.52A-floor-line.svg",
+          "alt": "Unrolled 34 ft wall run measured along the floor line: receptacles at 6, 18, 27 and 33 ft, dimension lines showing 6 ft maximum to the first receptacle and 12 ft maximum between receptacles, a doorway breaking the run, and a 2 ft wall piece that still counts.",
+          "caption": "The tape follows the floor line — corners don't break it, doorways do.",
+          "w": 900,
+          "h": 1380
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "No point along the floor line of a wall may be more than ___ from a receptacle.",
+          "choices": [
+            "4 ft",
+            "6 ft",
+            "8 ft",
+            "12 ft"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The reach from any point is 6 ft, which is why two receptacles can sit up to 12 ft apart.",
+          "nec_ref": "210.52(A)(1)"
+        },
+        {
+          "question": "Wall space starts counting at what width?",
+          "choices": [
+            "1 ft",
+            "2 ft",
+            "4 ft",
+            "6 ft"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Any wall space 2 ft or wider counts, including the short piece beside a door.",
+          "nec_ref": "210.52(A)(2)"
+        },
+        {
+          "question": "A floor receptacle counts toward 210.52(A) only if it is within:",
+          "choices": [
+            "6 in of the wall",
+            "12 in of the wall",
+            "18 in of the wall",
+            "Anywhere in the room"
+          ],
+          "answer_index": 2,
+          "explain_plain": "A floor receptacle counts only when it is located within 18 in of the wall.",
+          "nec_ref": "210.52(A)(3)"
+        }
+      ],
+      "code_refs": [
+        "210.52(A)(1)",
+        "210.52(A)(2)",
+        "210.52(A)(3)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-210.52(B)",
@@ -1962,8 +2496,8 @@
       "article": "210",
       "section": "210.52(D)",
       "title": "Bathroom receptacles",
-      "plain_explanation": "Each bathroom needs a receptacle close to every basin: within 3 ft of the outside edge of the basin, on a wall or partition next to it, or in one of the other positions this subsection permits. A double vanity has two basins and needs the requirement met for each one. This placement rule works alongside the bathroom circuit rule in 210.11(C)(3) and the GFCI list in 210.8(A) — all three have to be satisfied at the same sink.",
-      "on_the_job": "Measure from the basin's outside edge, not from the center of the faucet and not from the cabinet edge. On a long double vanity, one receptacle in the middle may not be within 3 ft of both basins — check both.",
+      "plain_explanation": "Each bathroom needs a receptacle close to every basin: within 3 ft of the outside edge of the basin, on a wall or partition next to it, on the countertop itself in a listed assembly, or on the side or face of the basin cabinet — and in no case more than 12 in below the top of the basin or countertop. A double vanity has two basins and needs the requirement met for each one. One receptacle placed between two basins can serve both, but only if it is within 3 ft of the outside edge of each. This placement rule works alongside two more rules at the same sink:\n• Circuit: at least one 20 A bathroom circuit serves the bathroom receptacles (210.11(C)(3)).\n• Protection: bathroom receptacles are GFCI protected (210.8(A)(1)).\nAll three have to be satisfied at the same time, at every basin.",
+      "on_the_job": "Measure from the basin's outside edge, not from the center of the faucet and not from the cabinet edge. On a long double vanity, one receptacle in the middle may not be within 3 ft of both basins — check both. On a 72 in double vanity in a Marion Oaks primary bath, the basins sit near the ends: a receptacle at the far left end of the counter is more than 3 ft from the right-hand basin and fails it. Centered between the basins, the same receptacle is within 3 ft of each one and passes. Tape the 3 ft reach on the wall at rough-in, before the boxes are set.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1976,7 +2510,106 @@
       "verified": true,
       "prev_id": "C2-210.52(C)",
       "next_id": "C2-210.52(E)",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Hair dryers, curling irons and electric razors live at the sink, in wet hands, over a hard floor. A receptacle placed where the appliance is actually used keeps cords short and out of the water — and the GFCI protection required at the same spot is what protects the person when something goes wrong.",
+      "exam_trap": "The tape comes out and the measurement is taken from the center of the faucet, or from the middle of the basin. Both are wrong: the 3 ft runs from the outside edge of the basin. The second trap is 'one receptacle per bathroom' — the rule runs per basin, so a double vanity may need the requirement met twice.",
+      "inspection_fails": [
+        "Receptacle 3 ft from the faucet center but more than 3 ft from the basin's outside edge.",
+        "One receptacle centered on a wide double vanity, beyond the 3 ft limit of the far basin.",
+        "Basin receptacle on the cabinet face, more than 12 in below the top of the countertop.",
+        "Bathroom receptacle landed on a lighting circuit instead of the 20 A bathroom circuit.",
+        "No GFCI protection at the bathroom receptacle."
+      ],
+      "tables": [
+        {
+          "caption": "Three rules at the same sink",
+          "headers": [
+            "Rule",
+            "Requirement",
+            "Ref"
+          ],
+          "rows": [
+            [
+              "Placement",
+              "Receptacle within 3 ft of each basin",
+              "210.52(D)"
+            ],
+            [
+              "Circuit",
+              "20 A bathroom circuit for the receptacles",
+              "210.11(C)(3)"
+            ],
+            [
+              "Protection",
+              "GFCI protection",
+              "210.8(A)(1)"
+            ]
+          ],
+          "note": "One receptacle can meet the placement rule for two basins if it is within 3 ft of the outside edge of each."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-210.52D-double-vanity.svg",
+          "alt": "Plan view of a 72 in double vanity with two basins: a receptacle centered between the basins is within 3 ft of each basin edge, a receptacle at the far end is more than 3 ft from the far basin, and an elevation shows a cabinet-face receptacle no more than 12 in below the countertop.",
+          "caption": "One receptacle can serve two basins — if it is within 3 ft of each.",
+          "w": 900,
+          "h": 1330
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "The 3 ft bathroom receptacle distance is measured from:",
+          "choices": [
+            "The center of the faucet",
+            "The outside edge of the basin",
+            "The edge of the vanity cabinet",
+            "The center of the basin"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The rule measures from the outside edge of each basin.",
+          "nec_ref": "210.52(D)"
+        },
+        {
+          "question": "Two basins sit 5 ft apart, outside edge to outside edge. One receptacle centered between them:",
+          "choices": [
+            "Always complies",
+            "Complies, because it is within 3 ft of each basin",
+            "Never complies",
+            "Complies only on a 15 A circuit"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Centered, it is 2.5 ft from each basin's outside edge — inside the 3 ft limit for both.",
+          "nec_ref": "210.52(D)"
+        },
+        {
+          "question": "A receptacle on the face of the basin cabinet may be no more than ___ below the top of the basin or countertop:",
+          "choices": [
+            "6 in",
+            "12 in",
+            "18 in",
+            "There is no limit"
+          ],
+          "answer_index": 1,
+          "explain_plain": "In no case may the receptacle be located more than 12 in below the top of the basin or basin countertop.",
+          "nec_ref": "210.52(D)"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "210.52(D)",
+        "210.11(C)(3)",
+        "210.8(A)(1)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "210.52(D) permitted positions (wall or partition, countertop assembly, side or face of the basin cabinet) and the limit of not more than 12 in below the top of the basin or countertop",
+          "source": "Mike Holt, Article 210 — Receptacles in Dwellings, 210.52(D) discussion",
+          "url": "https://www.mikeholt.com/newsletters.php?action=display&letterID=1725&email="
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C2-210.52(E)",
@@ -3208,8 +3841,8 @@
       "article": "220",
       "section": "220.52",
       "title": "Small-appliance and laundry allowances — 1,500 VA each",
-      "plain_explanation": "In the standard method, the kitchen and laundry circuits enter the calculation at set values instead of nameplate numbers:\n• Each 20A small-appliance branch circuit — 1,500 VA (a dwelling has at least two, so at least 3,000 VA)\n• The laundry branch circuit — 1,500 VA\nThese allowances are added into the general load first; the Table 220.42 demand factor is then applied to the total. They are calculation allowances only — the circuits themselves are still wired and protected as full 20A circuits.",
-      "on_the_job": "Worked fragment: two small-appliance circuits (3,000 VA) plus one laundry circuit (1,500 VA) put 4,500 VA into the general load of every standard-method house calculation before floor-area lighting is added. If your worksheet shows less than 4,500 VA on these lines, the sheet is wrong.",
+      "plain_explanation": "In the standard method, the kitchen and laundry circuits enter the calculation at set values instead of nameplate numbers:\n• Each 20A small-appliance branch circuit — 1,500 VA (a dwelling has at least two, so at least 3,000 VA) — 220.52(A)\n• The laundry branch circuit — 1,500 VA — 220.52(B)\nThese allowances are added into the general load first; the Table 220.42 demand factor is then applied to the total. They are calculation allowances only — the circuits themselves are still wired and protected as full 20A circuits.",
+      "on_the_job": "Standard-method worksheet for a 1,500 sq ft Marion Oaks house. General lighting: 1,500 sq ft × 3 VA (220.14(J)) = 4,500 VA. Small-appliance: two circuits × 1,500 VA = 3,000 VA. Laundry: 1,500 VA. The general load is 9,000 VA before demand. Table 220.42 then counts the first 3,000 VA at 100 percent and the remaining 6,000 VA at 35 percent — 3,000 + 2,100 = 5,100 VA carried into the rest of the service calculation. If your worksheet shows less than 4,500 VA on the small-appliance and laundry lines together, the sheet is wrong before it starts.",
       "sharma_note": "",
       "figure_idea": "Standard-method worksheet with the lines highlighted: small-appliance × 2 = 3,000 VA, laundry = 1,500 VA, feeding into the 220.42 demand step.",
       "related_ids": [
@@ -3222,7 +3855,118 @@
       "verified": true,
       "prev_id": "C2-220.42",
       "next_id": "C2-220.53",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "No house runs every countertop appliance and the washer at full load at the same moment, and no two houses load their kitchen circuits alike. Fixed allowances put every standard-method calculation on the same footing: the service is sized from a code-set picture of these circuits, not from whichever appliances happen to be on site the day the calculation is done. The Table 220.42 demand factor then does the diversity work once, on the whole general load.",
+      "inspection_fails": [
+        "Worksheet counts one small-appliance circuit (1,500 VA) — a dwelling always has at least two, so the line is 3,000 VA minimum.",
+        "Laundry allowance missing from the standard-method calculation.",
+        "Table 220.42 demand factor applied to each line separately instead of once to the total general load.",
+        "Small-appliance circuits protected at less than 20A because 'the calc only counts 1,500 VA' — the allowance is a calc number, not a circuit rating."
+      ],
+      "exam_trap": "The tempting wrong answer counts one small-appliance circuit at 1,500 VA because the kitchen 'only has one counter circuit drawn.' A dwelling always has at least two small-appliance circuits (210.11(C)(1)), so the floor is 3,000 VA — and every small-appliance circuit actually installed enters at 1,500 VA, including a third one for an island.",
+      "tables": [
+        {
+          "caption": "Standard method — general load for a 1,500 sq ft house",
+          "headers": [
+            "Line",
+            "Math",
+            "VA"
+          ],
+          "rows": [
+            [
+              "General lighting",
+              "1,500 sq ft × 3 VA",
+              "4,500"
+            ],
+            [
+              "Small-appliance (220.52(A))",
+              "2 circuits × 1,500 VA",
+              "3,000"
+            ],
+            [
+              "Laundry (220.52(B))",
+              "1 circuit × 1,500 VA",
+              "1,500"
+            ],
+            [
+              "General load subtotal",
+              "",
+              "9,000"
+            ],
+            [
+              "After Table 220.42 demand",
+              "3,000 at 100% + 6,000 at 35%",
+              "5,100"
+            ]
+          ],
+          "note": "Appliance, dryer, range and HVAC loads are worked in their own sections and added after this step."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-220.52-allowances.svg",
+          "alt": "Standard-method worksheet: general lighting 4,500 VA, two small-appliance circuits at 1,500 VA each, one laundry circuit at 1,500 VA, a 9,000 VA subtotal, and the Table 220.42 demand factor reducing it to 5,100 VA.",
+          "caption": "The allowances go in before the demand factor — never after.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Minimum small-appliance load in a standard-method dwelling calculation?",
+          "choices": [
+            "1,500 VA",
+            "3,000 VA",
+            "4,500 VA",
+            "The nameplate total"
+          ],
+          "answer_index": 1,
+          "explain_plain": "A dwelling has at least two small-appliance circuits, and each enters at 1,500 VA.",
+          "nec_ref": "220.52(A)"
+        },
+        {
+          "question": "The laundry branch circuit enters the standard method at:",
+          "choices": [
+            "500 VA",
+            "1,000 VA",
+            "1,500 VA",
+            "5,000 VA"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The laundry allowance is a flat 1,500 VA, same as one small-appliance circuit.",
+          "nec_ref": "220.52(B)"
+        },
+        {
+          "question": "A 9,000 VA general load, after the Table 220.42 demand factor, counts as:",
+          "choices": [
+            "9,000 VA",
+            "6,300 VA",
+            "5,100 VA",
+            "3,150 VA"
+          ],
+          "answer_index": 2,
+          "explain_plain": "First 3,000 VA at 100 percent (3,000) plus the remaining 6,000 VA at 35 percent (2,100) equals 5,100 VA.",
+          "nec_ref": "Table 220.42"
+        }
+      ],
+      "code_refs": [
+        "220.52",
+        "220.52(A)",
+        "220.52(B)",
+        "Table 220.42",
+        "220.14(J)",
+        "210.11(C)(1)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "220.52(A) assigns 1,500 VA to each small-appliance branch circuit and every circuit installed counts; 220.52(B) assigns 1,500 VA to the laundry branch circuit",
+          "source": "Mike Holt, One-Family Dwelling Unit Load Calculations",
+          "url": "https://www.mikeholt.com/newsletters.php?action=display&letterID=1522&email="
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C2-220.53",
@@ -3347,8 +4091,8 @@
       "article": "220",
       "section": "220.82(B)",
       "title": "Optional method — the general loads",
-      "plain_explanation": "The general-loads block starts with floor area at 3 VA per square foot, adds 1,500 VA for each small-appliance circuit and for the laundry circuit, and adds the nameplate ratings of the appliances and motors the subsection lists. The first 10 kVA of that total is taken at full value and the remainder at 40 percent. That demand step is the whole advantage of the optional method, and it only applies to the loads this block covers — heating and cooling are handled separately in the next part.",
-      "on_the_job": "Count circuits, not appliances, for the 1,500 VA blocks: two small-appliance circuits are required, and a third one that is installed also counts. Use nameplate VA where a rating is given in amps and volts.",
+      "plain_explanation": "The general-loads block of the optional method is built from:\n• Floor area at 3 VA per square foot\n• 1,500 VA for each small-appliance branch circuit, and 1,500 VA for the laundry circuit\n• The nameplate ratings of the appliances and motors the subsection lists — dishwasher, disposal, water heater and the rest that are fastened in place or on a specific circuit\nThen the demand step: the first 10 kVA of that total is taken at full value, and the remainder at 40 percent. That step is the whole advantage of the optional method, and it only applies to the loads this block covers — heating and cooling are handled separately in the next part, 220.82(C).",
+      "on_the_job": "Count circuits, not appliances, for the 1,500 VA blocks: two small-appliance circuits are required, and a third one that is installed also counts. Use nameplate VA where a rating is given in amps and volts. Worked example, a 2,000 sq ft house: floor area 2,000 × 3 VA = 6,000 VA; small-appliance circuits 2 × 1,500 = 3,000 VA; laundry 1,500 VA; dishwasher nameplate 1,200 VA; disposal 900 VA; water heater 4,500 VA. Total 17,100 VA. First 10,000 VA at 100 percent; the remaining 7,100 VA at 40 percent is 2,840 VA. General demand: 12,840 VA — before heating and cooling are added under (C).",
       "sharma_note": "",
       "figure_idea": "A bar showing a general-load total split at 10 kVA: the first block at 100 percent, the rest at 40 percent.",
       "related_ids": [
@@ -3362,7 +4106,111 @@
       "verified": true,
       "prev_id": "C2-220.82",
       "next_id": "C2-220.82(C)",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "A house never runs everything at once. The standard method adds nameplates as if it did, and oversizes the service; the optional method prices in diversity — but only for the loads on its list. Skip a block, like the laundry circuit, and the service comes out too small. Add heating or cooling here and again in (C), and it comes out too big. Both errors start in this block.",
+      "exam_trap": "The trap: run the whole total at 40 percent. On the worked example that gives 6,840 VA and a service far too small. The first 10 kVA is always taken at full value — the 40 percent touches only what is above it. The mirror-image trap is counting appliances instead of circuits for the 1,500 VA blocks: three installed small-appliance circuits count 4,500 VA, even if only two are loaded today.",
+      "inspection_fails": [
+        "Load calculation applies 40 percent to the first 10 kVA — the demand step is backwards.",
+        "Only one small-appliance circuit counted; two are required, and an installed third counts too.",
+        "Laundry circuit's 1,500 VA left out of the general loads.",
+        "Heating load added in the (B) block and again in (C) — counted twice."
+      ],
+      "tables": [
+        {
+          "caption": "Worked example: general loads, 2,000 sq ft house",
+          "headers": [
+            "Block",
+            "VA"
+          ],
+          "rows": [
+            [
+              "Floor area: 2,000 sq ft × 3 VA",
+              "6,000"
+            ],
+            [
+              "Small-appliance: 2 circuits × 1,500 VA",
+              "3,000"
+            ],
+            [
+              "Laundry circuit",
+              "1,500"
+            ],
+            [
+              "Dishwasher (nameplate)",
+              "1,200"
+            ],
+            [
+              "Disposal (nameplate)",
+              "900"
+            ],
+            [
+              "Water heater (nameplate)",
+              "4,500"
+            ],
+            [
+              "Total general load",
+              "17,100"
+            ]
+          ],
+          "note": "Demand: first 10,000 VA at 100%; remaining 7,100 VA × 40% = 2,840 VA; general demand = 12,840 VA. Heating and cooling are added under 220.82(C), not here."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-220.82B-demand-bar.svg",
+          "alt": "Bar chart of the 220.82(B) general loads for a 2,000 square foot house totaling 17,100 VA, then the demand step: the first 10,000 VA at 100 percent plus 7,100 VA at 40 percent equals a 12,840 VA general demand.",
+          "caption": "The 10 kVA step: first block at full value, the rest at 40 percent.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Optional method: general lighting and receptacle load for a 1,800 sq ft dwelling?",
+          "choices": [
+            "3,600 VA",
+            "5,400 VA",
+            "1,800 VA",
+            "6,000 VA"
+          ],
+          "answer_index": 1,
+          "explain_plain": "1,800 sq ft × 3 VA per square foot = 5,400 VA.",
+          "nec_ref": "220.82(B)"
+        },
+        {
+          "question": "The (B) block totals 17,100 VA. The general demand is…",
+          "choices": [
+            "6,840 VA",
+            "17,100 VA",
+            "12,840 VA",
+            "10,000 VA"
+          ],
+          "answer_index": 2,
+          "explain_plain": "First 10,000 VA at 100%, plus 7,100 VA × 40% = 2,840 VA. Total 12,840 VA.",
+          "nec_ref": "220.82(B)"
+        },
+        {
+          "question": "For the 1,500 VA blocks of 220.82(B), you count…",
+          "choices": [
+            "Appliances",
+            "Circuits",
+            "Receptacles",
+            "Rooms"
+          ],
+          "answer_index": 1,
+          "explain_plain": "1,500 VA per small-appliance branch circuit and for the laundry circuit — circuits, not appliances.",
+          "nec_ref": "220.82(B)"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "220.82",
+        "220.82(B)",
+        "220.82(C)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-220.82(C)",
@@ -3579,8 +4427,8 @@
       "article": "225",
       "section": "225.30",
       "title": "How many supplies may feed one building",
-      "plain_explanation": "The general rule is one: a building or structure gets a single feeder or branch circuit, or a single set of feeders, subject to the exceptions the section lists for things such as emergency and standby systems, fire pumps, and certain large or separately controlled installations. Two ordinary feeders run to the same detached garage because two panels were convenient is not one of the ordinary cases. Where an exception is used, the building must carry a permanent plaque or directory showing where the other disconnects are.",
-      "on_the_job": "Before running a second supply to a structure that already has one, name the exception in writing in the job file. If you cannot name one, redesign to a single larger feeder and a subpanel.",
+      "plain_explanation": "The general rule is one: a building or other structure gets a single feeder or branch circuit, or a single set of feeders. A multiwire branch circuit counts as a single circuit here. Additional supplies are permitted only through the exceptions:\n• (A) Special conditions: fire pumps, emergency systems, legally required standby, optional standby, parallel power production, and systems designed for connection to multiple sources for enhanced reliability\n• (B) Special occupancies, by special permission: multiple-occupancy buildings where there is no space for supply equipment accessible to all occupants, or a single building large enough to need two or more supplies\n• (C) Capacity requirements: the capacity needed is in excess of 2000 A at a supply voltage of 600 V or less\n• (D) Different characteristics: different voltages, frequencies or phases, or different uses\n• (E) Documented switching procedures: installations under single management with documented safe switching procedures established and maintained\nTwo ordinary feeders run to the same detached garage because two panels were convenient is not one of the cases. Where an exception is used, the building must carry a permanent plaque or directory showing where the other disconnects are.",
+      "on_the_job": "A homeowner in Ocala wants a second 100 A feeder to the workshop for a welder, on top of the 100 A feeder already feeding it. No exception covers that — convenience is not on the list. Before running a second supply to a structure that already has one, name the exception in writing in the job file. If you cannot name one, redesign to a single larger feeder and a subpanel with room to grow. When a standby generator is added later, that supply rides on (A) — with its own disconnect, and the plaque at the building updated to show it.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -3591,7 +4439,117 @@
       "verified": true,
       "prev_id": "C2-225.18",
       "next_id": "C2-225.31",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Every extra supply is another way for a building to stay live after someone thinks it is dead. A firefighter, or the next electrician, opens the disconnect they can see — and the second feeder, run for convenience and documented nowhere, keeps the building energized. One supply, or a plaque that names the rest, is what makes 'off' mean off.",
+      "exam_trap": "The trap: 'Each feeder has its own disconnect, so two feeders to one building are fine.' Wrong — disconnects do not create the permission. Without an exception in (A) through (E), the building gets one supply no matter how neatly the second one is installed. Runner-up trap: counting a multiwire branch circuit as two supplies. It counts as one circuit.",
+      "inspection_fails": [
+        "Second feeder to a detached garage with no 225.30 exception — 'the owner wanted the welder separate' is not an exception.",
+        "Standby supply added under an exception, but no plaque or directory at the building showing where the other disconnect is.",
+        "Disconnects for two supplies scattered around the building, not grouped or identified.",
+        "Two supplies under single management with no documented switching procedure, where (E) was the claimed basis."
+      ],
+      "tables": [
+        {
+          "caption": "The exceptions at a glance",
+          "headers": [
+            "225.30",
+            "Covers"
+          ],
+          "rows": [
+            [
+              "(A) Special conditions",
+              "Fire pumps, emergency, standby, parallel power"
+            ],
+            [
+              "(B) Special occupancies",
+              "By special permission: multi-occupancy, very large buildings"
+            ],
+            [
+              "(C) Capacity",
+              "Over 2000 A at 600 V or less"
+            ],
+            [
+              "(D) Different characteristics",
+              "Different voltage, frequency, phases or use"
+            ],
+            [
+              "(E) Documented switching",
+              "Single management, written procedures"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-225.30-one-supply.svg",
+          "alt": "Flowchart for 225.30: a building with one supply needs a named exception from 225.30(A) through (E) before a second supply may be added; otherwise run one larger feeder and a subpanel.",
+          "caption": "One supply per building — a second one needs a named exception.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Under the general rule, how many feeders may supply one building?",
+          "choices": [
+            "As many as have their own disconnects",
+            "One, unless a 225.30 exception applies",
+            "Two for residential, more for commercial",
+            "Unlimited, if each is in its own raceway"
+          ],
+          "answer_index": 1,
+          "explain_plain": "225.30 allows one feeder or branch circuit, or one set of feeders, unless an exception in (A) through (E) applies.",
+          "nec_ref": "225.30"
+        },
+        {
+          "question": "The capacity exception permits additional supplies where the capacity required is in excess of…",
+          "choices": [
+            "1000 A at 1000 V or less",
+            "2000 A at 600 V or less",
+            "2000 A at any voltage",
+            "600 A at 600 V or less"
+          ],
+          "answer_index": 1,
+          "explain_plain": "225.30(C): capacity in excess of 2000 amperes at a supply voltage of 600 volts or less.",
+          "nec_ref": "225.30(C)"
+        },
+        {
+          "question": "For 225.30, a multiwire branch circuit counts as…",
+          "choices": [
+            "Two supplies",
+            "One circuit",
+            "A service",
+            "An exception"
+          ],
+          "answer_index": 1,
+          "explain_plain": "A multiwire branch circuit is considered a single circuit for this section.",
+          "nec_ref": "225.30"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "225.30",
+        "225.30(A)",
+        "225.30(B)",
+        "225.30(C)",
+        "225.30(D)",
+        "225.30(E)",
+        "225.31"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "225.30(A)–(E) exception list; capacity exception is in excess of 2000 A at 600 V or less; a multiwire branch circuit counts as a single circuit",
+          "source": "Mike Holt forum, 225.30 Number of Supplies text",
+          "url": "https://forums.mikeholt.com/threads/other-structure-circuit-requirements.113435/"
+        },
+        {
+          "claim": "Five conditions under which the single feeder/branch-circuit limit may be exceeded, 225.30(A)–(E)",
+          "source": "EC&M, Structures Supplied by Other Than a Service, Part 4",
+          "url": "https://www.ecmweb.com/mro-insider/article/20897713/structures-supplied-by-other-than-a-service-part-4"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C2-225.31",
@@ -3890,8 +4848,8 @@
       "article": "230",
       "section": "230.42",
       "title": "Minimum size and rating of service-entrance conductors",
-      "plain_explanation": "Service-entrance conductors are sized for the calculated load from Article 220 — the calculation, not the size of the panel that was ordered, sets the floor. The conductor ampacity has to carry the load and coordinate with the service overcurrent protection; for a one-family dwelling the service itself may not be smaller than 100A (that rating rule is on the 230.79(C) page), and dwelling services and whole-load feeders may use the 83 percent sizing rule covered in Chapter 3 at 310.12. A 200A panel fed by conductors sized for 100A of calculated load is not a 200A service.",
-      "on_the_job": "Do the Article 220 math before the service gear is ordered, and keep the worksheet in the job file. If the calculated load lands close to the next standard size, that is a conversation for the office — not a field decision to round the conductors down.",
+      "plain_explanation": "Service-entrance conductors are sized for the calculated load from Article 220 — the calculation, not the size of the panel that was ordered, sets the floor. The conductor ampacity has to carry the load and coordinate with the service overcurrent protection. For a one-family dwelling the service disconnect itself may not be smaller than 100A (that rating rule is on the 230.79(C) page), and dwelling services and whole-load feeders may use the 83 percent sizing rule covered in Chapter 3 at 310.12 — for services rated 100A through 400A that carry the entire dwelling load. A 200A panel fed by conductors sized for 100A of calculated load is not a 200A service.",
+      "on_the_job": "Use the optional-method worked example in this book (220.82): an 1,800 sq ft house whose calculation lands at 25,160 VA — about 105 A at 240 V. The 100A floor in 230.79(C) does not save a 100A service here: the conductors and the disconnect must carry 105 A, so the service is built at the next size up. On paper, the same house with a 200A panel and conductors sized for only 100A of load would still be a 100A-class installation wearing a 200A label. Do the Article 220 math before the service gear is ordered, and keep the worksheet in the job file — if the calculated load lands close to the next standard size, that is a conversation for the office, not a field decision to round the conductors down.",
       "sharma_note": "",
       "figure_idea": "Flow line: Article 220 load → conductor ampacity (or 310.12 for a dwelling) → service disconnect rating → panel, with 'panel size alone' crossed out as a starting point.",
       "related_ids": [
@@ -3903,7 +4861,105 @@
       "verified": true,
       "prev_id": "C2-230.28",
       "next_id": "C2-230.54",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Conductors sized below the real load run hot for the life of the house, and the failure shows up years later as cooked insulation inside a wall or a meter base. Sizing from the calculation — not from the panel label or the sales sheet — is what keeps the service honest: the wire, the disconnect, and the load all tell the same story when an inspector or the next electrician opens it up.",
+      "inspection_fails": [
+        "Service conductors sized to the panel label instead of the Article 220 calculated load.",
+        "200A panel installed on conductors sized for a 100A load and passed off as a 200A service.",
+        "Table 310.12 used for a feeder that carries only part of the dwelling load.",
+        "Service disconnect rated below the calculated load because '100A is the house minimum.'"
+      ],
+      "exam_trap": "The wrong answer sizes the conductors to the panel: '200A panel, so 200A conductors' — or worse, '200A panel, conductors whatever was on the truck.' 230.42 runs the other way: the Article 220 calculation sets the conductor size, the disconnect must be at least the calculated load, and the panel rating is just the last number in the chain.",
+      "tables": [
+        {
+          "caption": "Table 310.12 — dwelling service and whole-load feeder conductors (83 percent rule)",
+          "headers": [
+            "Service rating",
+            "Copper",
+            "Aluminum"
+          ],
+          "rows": [
+            [
+              "100A",
+              "4 AWG",
+              "2 AWG"
+            ],
+            [
+              "125A",
+              "2 AWG",
+              "1/0 AWG"
+            ],
+            [
+              "150A",
+              "1 AWG",
+              "2/0 AWG"
+            ],
+            [
+              "200A",
+              "2/0 AWG",
+              "4/0 AWG"
+            ]
+          ],
+          "note": "Single-phase dwelling services and feeders carrying the entire dwelling load, 100A through 400A, where no adjustment or correction factors apply. Source page: C3-310.12."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-230.42-flow.svg",
+          "alt": "Flow chart for sizing service-entrance conductors: Article 220 calculation first, then conductor ampacity, then the disconnect rating, then the panel rating — with starting from the panel size marked as the wrong way.",
+          "caption": "Calculation first, panel last.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "What sets the minimum size of service-entrance conductors?",
+          "choices": [
+            "The panelboard rating",
+            "The Article 220 calculated load",
+            "The utility transformer size",
+            "The largest breaker in the panel"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The conductors are sized for the calculated load; the panel that was ordered does not set the floor.",
+          "nec_ref": "230.42"
+        },
+        {
+          "question": "Under Table 310.12, a 200A dwelling service may be run with:",
+          "choices": [
+            "2 AWG copper",
+            "2/0 copper or 4/0 aluminum",
+            "4/0 copper only",
+            "1/0 aluminum"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Table 310.12 pairs a 200A dwelling service with 2/0 copper or 4/0 aluminum conductors.",
+          "nec_ref": "310.12"
+        },
+        {
+          "question": "A house calculates to 105 A. The service disconnect must be at least:",
+          "choices": [
+            "100 A, the dwelling minimum",
+            "105 A — at least the calculated load",
+            "150 A",
+            "200 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The 100A figure in 230.79(C) is a floor, not a cap: the rating must also be at least the calculated load.",
+          "nec_ref": "230.42, 230.79(C)"
+        }
+      ],
+      "code_refs": [
+        "230.42",
+        "230.79(C)",
+        "310.12",
+        "220.82"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-230.54",
@@ -3933,8 +4989,8 @@
       "article": "230",
       "section": "230.67",
       "title": "Surge protection on the service",
-      "plain_explanation": "New in the 2020 edition, this section requires surge protection when a service supplies a dwelling: a listed Type 1 or Type 2 surge protective device, installed in or next to the service equipment, with the rating and connection rules the section states. It also applies when service equipment is replaced. It protects the house's electronics against surges arriving on the service; it is not lightning protection and it is not a substitute for equipment-level protection on sensitive gear.\n\nNEC 2023 CHANGE:\n• 215.18 / 225.42 / 242.2: SPD rule spread to feeders: new 215.18 and 225.42 require a Type 1 or Type 2 SPD (10 kA In minimum) where a feeder supplies a dwelling unit, dormitory unit, hotel/motel guest room or nursing-home sleeping area. Article 242 itself is not new in 2023 (it was new in 2020); 2023 adds 242.2 (SPDs and surge arresters may not be reconditioned).\n• 230.67: Surge protection at the service now reaches dorm units, hotel and motel guest suites and rooms, and nursing home patient sleeping areas. The device itself now needs a 10 kA minimum nominal discharge current rating. Dorm units and the guest rooms and suites of hotels and motels joined dwelling units: their services now need a surge-protective device (SPD).\n• 242.9: Starting in 2023, every surge-protective device (SPD) has to show whether it is still working, so anyone can tell when the protection is gone. Every SPD now needs a way to show it is working properly (242.9).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Confirm the SPD is on the material list for every new house service and every service change, and that its location — integral to the panel or in an enclosure next to it — is drawn before rough-in. A surge device left in the truck is a failed item.",
+      "plain_explanation": "New in the 2020 edition, this section requires surge protection when a service supplies a dwelling unit: a listed Type 1 or Type 2 surge protective device (SPD), installed in the service equipment or in an enclosure right next to it. The rule also bites on replacement: when the service equipment of a dwelling is replaced, the new equipment needs the SPD too. The device clamps surges arriving on the service conductors and shunts them to ground before they can spread through the house wiring. It is not a lightning protection system, and it is not a substitute for point-of-use protection on sensitive gear.",
+      "on_the_job": "On every new Sharma house service — a 200 A Siemens meter-main in Marion Oaks, say — the SPD is on the material list with the service gear (S-02), integral to the meter-main or in its own enclosure beside it, and drawn on the service sketch before rough-in. Confirm the same on every service change. The miss that fails inspections is the storm repair: a damaged meter-main swapped like-for-like with no SPD, because \"we only replaced what was there.\" Section 230.67 counts that replacement as a trigger. A surge device left in the truck is a failed item.",
       "sharma_note": "S-02: new gear is Siemens, so the SPD choice follows the Siemens service equipment on Sharma jobs.",
       "figure_idea": "A panel with an integral surge device shown beside the main breaker and a short lead connection drawn in.",
       "related_ids": [
@@ -3973,7 +5029,128 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/242-9",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Florida is lightning country, but most damaging surges never come from a direct strike. Utility switching and strikes blocks away push a voltage spike down the service drop, and that spike hunts for the weakest board in the house — the air handler control board, the refrigerator board, the TV. An SPD at the service meets the surge at the door and dumps its energy to ground while it is still small enough to handle, instead of letting it divide among every electronic device in the home.",
+      "exam_trap": "The trap answer: a plug-in surge strip at the TV satisfies 230.67. It does not — a strip is a Type 3 point-of-use device, and the rule wants a listed Type 1 or Type 2 SPD at the service equipment. Second trap: \"SPDs are only for new construction.\" Replacing the service equipment on an existing dwelling triggers the same rule.",
+      "inspection_fails": [
+        "New dwelling service with no SPD installed at all — the 2020 rule is still missed on site.",
+        "Service equipment replaced after storm damage, like-for-like, with no SPD added.",
+        "A Type 3 plug-in strip offered as the service surge protective device.",
+        "SPD landed in a downstream subpanel instead of in or next to the service equipment.",
+        "SPD in place but dead — status indicator dark — and left in service."
+      ],
+      "tables": [
+        {
+          "caption": "The 2020 rule at a glance",
+          "headers": [
+            "Item",
+            "Requirement"
+          ],
+          "rows": [
+            [
+              "Occupancy",
+              "Services supplying dwelling units"
+            ],
+            [
+              "Device",
+              "Listed Type 1 or Type 2 SPD"
+            ],
+            [
+              "Location",
+              "In, or in an enclosure adjacent to, the service equipment"
+            ],
+            [
+              "Trigger",
+              "New service — and replacement of service equipment"
+            ]
+          ]
+        },
+        {
+          "caption": "2020 vs 2023 at a glance",
+          "headers": [
+            "Item",
+            "NEC 2020",
+            "NEC 2023"
+          ],
+          "rows": [
+            [
+              "Occupancies",
+              "Dwelling units",
+              "Adds dormitory units, hotel/motel guest rooms and suites, nursing-home patient sleeping areas"
+            ],
+            [
+              "Device rating",
+              "Listed Type 1 or Type 2",
+              "Adds a 10 kA minimum nominal discharge current (In)"
+            ],
+            [
+              "Feeders",
+              "Not covered",
+              "215.18 and 225.42 add SPDs on feeders to the same occupancies"
+            ],
+            [
+              "Status indication",
+              "Not addressed",
+              "242.9 requires every SPD to show it is still working"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-230.67-spd-service.svg",
+          "alt": "Elevation of a house service: a surge arrives on the service drop, a Siemens meter-main is mounted on the wall, and a surge protective device in a small enclosure beside it with short straight leads shunts the surge down the grounding electrode conductor to the ground rod, keeping it out of the house panel.",
+          "caption": "The SPD sits at the service and meets the surge at the door.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "NEC 2020: a new 200 A service supplies a single-family home. What surge protection is required?",
+          "choices": [
+            "None — surge protection is optional",
+            "A listed Type 1 or Type 2 SPD at the service equipment",
+            "A plug-in surge strip at the panel",
+            "A Type 3 SPD in the first receptacle"
+          ],
+          "answer_index": 1,
+          "explain_plain": "230.67 requires a listed Type 1 or Type 2 SPD on services supplying dwelling units.",
+          "nec_ref": "230.67"
+        },
+        {
+          "question": "A storm-damaged meter-main on an existing house is replaced like-for-like. Is an SPD required?",
+          "choices": [
+            "Yes — replacing service equipment triggers 230.67",
+            "No — the house is existing",
+            "Only if the interior panel is also replaced",
+            "Only on services over 200 A"
+          ],
+          "answer_index": 0,
+          "explain_plain": "The rule applies to new services and when service equipment is replaced.",
+          "nec_ref": "230.67"
+        },
+        {
+          "question": "Where must the 230.67 SPD be installed?",
+          "choices": [
+            "In or adjacent to the service equipment",
+            "At the receptacle farthest from the panel",
+            "In the first subpanel downstream",
+            "On the utility pole"
+          ],
+          "answer_index": 0,
+          "explain_plain": "The SPD goes in the service equipment or in an enclosure right next to it, where its leads stay short.",
+          "nec_ref": "230.67"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 215.18 / 225.42 / 242.2: SPD rule spread to feeders: new 215.18 and 225.42 require a Type 1 or Type 2 SPD (10 kA In minimum) where a feeder supplies a dwelling unit, dormitory unit, hotel/motel guest room or nursing-home sleeping area. Article 242 itself is not new in 2023 (it was new in 2020); 2023 adds 242.2 (SPDs and surge arresters may not be reconditioned).\n• 230.67: Surge protection at the service now reaches dorm units, hotel and motel guest suites and rooms, and nursing home patient sleeping areas. The device itself now needs a 10 kA minimum nominal discharge current rating. Dorm units and the guest rooms and suites of hotels and motels joined dwelling units: their services now need a surge-protective device (SPD).\n• 242.9: Starting in 2023, every surge-protective device (SPD) has to show whether it is still working, so anyone can tell when the protection is gone. Every SPD now needs a way to show it is working properly (242.9).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "230.67",
+        "Article 242"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-230.70",
@@ -3981,8 +5158,8 @@
       "article": "230",
       "section": "230.70",
       "title": "Where the service disconnect goes",
-      "plain_explanation": "The service disconnect must be readily accessible and in one of the locations this section allows: outside the building, or inside near the point where the service conductors enter, subject to the 2020 wording and to what the AHJ accepts for conductor length inside. Every occupant also needs access to disconnecting means for their own space in the occupancies the section covers. The disconnect is what everything downstream is judged from — it is where the service ends and feeders and branch circuits begin.",
-      "on_the_job": "Decide the disconnect location with the inspector's local practice in mind before the service is built, especially on a service change where an older inside location is being reused. Keep the path to it clear and the location marked.",
+      "plain_explanation": "The service disconnecting means has to be:\n• Readily accessible\n• Outside the building, or inside nearest the point where the service conductors enter (230.70(A)(1))\nThat is the list of places it may go, subject to the 2020 wording and to what the AHJ accepts for conductor length inside. Every occupant also needs access to disconnecting means for their own space in the occupancies the section covers. The disconnect is what everything downstream is judged from — it is where the service ends and feeders and branch circuits begin.",
+      "on_the_job": "Sharma's standard is S-09, the back-to-back layout: meter on the outside wall, panel directly behind it, so the service conductors inside are measured in inches, not feet. Decide the disconnect location with the inspector's local practice in mind before the service is built, especially on a service change where an older inside location is being reused — an AHJ who wants an outside disconnect will not accept 'it was already there.' Keep the path to it clear and the location marked. On a house, do not confuse this with the 230.85 emergency disconnect: that is a separate outdoor switch for first responders, not the service disconnect itself.",
       "sharma_note": "S-09's back-to-back layout puts the panel directly behind the meter, which keeps service conductors inside the building to the shortest practical run.",
       "figure_idea": "",
       "related_ids": [
@@ -3996,7 +5173,98 @@
       "next_id": "C2-230.71",
       "sharma_rule_ids": [
         "S-09"
-      ]
+      ],
+      "why_it_exists": "The conductors ahead of the disconnect have no overcurrent protection on the premises side — only the utility's fuse, far away and slow. Every foot of that unfused conductor inside the building is a fault waiting to burn until the utility lets go. Putting the disconnect outside, or hard against the entry point, keeps the unprotected run as short as possible — and ready access means anyone can kill the building in an emergency.",
+      "exam_trap": "The trap answer: 'The service disconnect may go anywhere inside, as long as it is readily accessible.' Wrong — inside means nearest the point of entrance. A panel at the far end of the house, fed by a long run of unfused conductor through the attic, fails the location rule even though anyone can reach it.",
+      "inspection_fails": [
+        "Service disconnect deep inside the building on a long unfused conductor run, with no AHJ acceptance of the length inside.",
+        "Disconnect behind a locked door or blocked by stored material — not readily accessible.",
+        "Tenant in a multi-occupancy building cannot reach the disconnecting means for their own space.",
+        "Service change rebuilt on the old interior location without confirming the AHJ still accepts it."
+      ],
+      "tables": [
+        {
+          "caption": "Where it may go",
+          "headers": [
+            "Location",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "Outside the building",
+              "Permitted; readily accessible"
+            ],
+            [
+              "Inside",
+              "Nearest the point of entrance only"
+            ],
+            [
+              "Deep inside",
+              "Long unfused run — the AHJ decides; expect a no"
+            ],
+            [
+              "Sharma standard (S-09)",
+              "Back-to-back: panel directly behind the meter"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-230.70-disconnect-location.svg",
+          "alt": "Elevation of a house wall with three service disconnect placements: outside beside the meter, the panel directly behind the meter in the back-to-back layout, and a panel deep inside the house marked as not permitted.",
+          "caption": "Outside, or inside nearest the entrance — the back-to-back layout makes it inches.",
+          "w": 900,
+          "h": 1460
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A service disconnect installed inside a building must be located…",
+          "choices": [
+            "In the electrical room",
+            "Nearest the point of entrance of the service conductors",
+            "Within 25 ft of the meter",
+            "Next to the farthest panel"
+          ],
+          "answer_index": 1,
+          "explain_plain": "230.70(A)(1): inside means nearest the point of entrance — the unfused run stays as short as possible.",
+          "nec_ref": "230.70(A)(1)"
+        },
+        {
+          "question": "Why does the inside location hug the entry point?",
+          "choices": [
+            "To save conductor cost",
+            "Conductors ahead of the disconnect have no overcurrent protection on the premises side",
+            "For the inspector's convenience",
+            "So the panel is near the bedrooms"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Service conductors before the disconnect are protected only by the utility's fuse; a fault on a long inside run burns until it lets go.",
+          "nec_ref": "230.70"
+        },
+        {
+          "question": "The service disconnecting means must be…",
+          "choices": [
+            "Readily accessible",
+            "Inside a locked electrical room",
+            "Painted red",
+            "Locked open at all times"
+          ],
+          "answer_index": 0,
+          "explain_plain": "230.70 requires the disconnect to be readily accessible, and each occupant needs access to the disconnect for their own space.",
+          "nec_ref": "230.70(A)(1)"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "230.70",
+        "230.70(A)(1)",
+        "230.85"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-230.71",
@@ -4004,8 +5272,8 @@
       "article": "230",
       "section": "230.71",
       "title": "How many service disconnects, and how they are grouped",
-      "plain_explanation": "The 2020 edition reorganized this rule: a service may have two to six disconnecting means, and 230.71(B) permits four arrangements — (1) separate enclosures for each disconnect; (2) panelboards, each with its own main disconnect; (3) a switchboard with each disconnect in a separate barriered vertical section; or (4) switchgear or metering centers with each disconnect in its own compartment. The disconnects must be grouped as 230.71(A) requires. A single multi-switch assembly is not automatically wrong — it counts where it fits one of these four arrangements.\n\nNEC 2023 CHANGE:\n• 230.71: Transfer switches and motor control centers joined the two-to-six disconnect list, separate meter centers got their own item, and older equipment that legally grouped service disconnects in one enclosure gets a pass. New exception: existing service equipment built under an older edition that allowed grouped disconnects can keep up to six in one enclosure, section or compartment.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "On a service with more than one disconnect, show the arrangement on the plan — separate enclosures, panelboards with mains, barriered switchboard sections, or compartmented switchgear — and show the grouping. Do not condemn a compliant panelboard or switchboard service for not having separate enclosures.",
+      "plain_explanation": "One disconnect is always fine; this section governs a service built with more than one. The 2020 edition reorganized the multi-disconnect rule: a service may have two to six disconnecting means, grouped together, and 230.71(B) permits four arrangements:\n• (1) Separate enclosures for each disconnect\n• (2) Panelboards, each with its own main disconnect\n• (3) A switchboard with each disconnect in a separate barriered vertical section\n• (4) Switchgear or metering centers with each disconnect in its own compartment\nThe disconnects must be grouped as 230.71(A) requires. A single multi-switch assembly is not automatically wrong — it counts where it fits one of these four arrangements. What 2020 ended is the old habit of landing several unrelated mains loose in one enclosure with no barriers between them.",
+      "on_the_job": "On a small Sharma commercial service — a 400 A switchboard feeding a plaza unit — three service disconnects sit in three barriered vertical sections of one switchboard, grouped on the same wall, each labeled for the load it kills: arrangement (3). On a duplex, two panelboards side by side, each with its own main, do the same job under arrangement (2). Draw the arrangement and the grouping on the service sketch; if all the disconnects cannot be taken in at one glance, the layout is wrong.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -4025,7 +5293,104 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/230-71",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Grouping is about the worst day, not the normal one. When a building is burning or a service is faulting, one person has to kill all the power in one place, in seconds, without hunting through rooms. The 2020 separation rules add a second protection: a fault or a fire inside one disconnect section cannot reach across and take the neighboring disconnects — and the whole service — with it.",
+      "exam_trap": "The trap answer: \"Up to six disconnects, so six mains loose in one big enclosure is fine.\" That was the old way. Under 2020, six disconnects pass only inside one of the four arrangements — separate enclosures, panelboards with mains, barriered switchboard sections, or compartmented switchgear and metering centers. The mirror trap — \"every disconnect needs its own enclosure\" — is also wrong: arrangements (2) through (4) exist precisely so grouped gear can comply.",
+      "inspection_fails": [
+        "Seven service disconnects installed on one service — two too many over the six-disconnect limit.",
+        "Disconnects scattered between rooms or between indoors and outdoors, not grouped.",
+        "Several mains landed loose in one unbarriered enclosure on a new 2020 installation.",
+        "Grouped disconnects with no marking to say which load each one kills."
+      ],
+      "tables": [
+        {
+          "caption": "The four arrangements, 230.71(B)",
+          "headers": [
+            "Arrangement",
+            "Gear",
+            "Picture it"
+          ],
+          "rows": [
+            [
+              "(1) Separate enclosures",
+              "One disconnect per enclosure",
+              "A row of disconnect switches"
+            ],
+            [
+              "(2) Panelboards",
+              "Each panelboard has its own main",
+              "Two panels, two mains, side by side"
+            ],
+            [
+              "(3) Switchboard",
+              "Barriered vertical sections",
+              "One board, walled-off sections"
+            ],
+            [
+              "(4) Switchgear, metering centers",
+              "Each disconnect in its own compartment",
+              "A compartment per disconnect"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-230.71-four-arrangements.svg",
+          "alt": "Four elevation sketches in a row showing the four 230.71(B) arrangements: separate enclosures, two panelboards each with a main, one switchboard split into barriered vertical sections, and switchgear split into compartments; a banner over all four reads two to six disconnects, grouped.",
+          "caption": "Four ways to build a legal multi-disconnect service in 2020.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "NEC 2020: the maximum number of disconnecting means for one service is:",
+          "choices": [
+            "Two",
+            "Four",
+            "Six",
+            "As many as the gear holds"
+          ],
+          "answer_index": 2,
+          "explain_plain": "A service may have two to six disconnecting means, grouped, in one of the four 230.71(B) arrangements.",
+          "nec_ref": "230.71"
+        },
+        {
+          "question": "Which installation complies with 230.71(B) on a new service?",
+          "choices": [
+            "Six mains loose in one unbarriered enclosure",
+            "Three disconnects in barriered switchboard sections",
+            "Disconnects spread across three rooms",
+            "Seven disconnects, grouped on one wall"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Barriered vertical sections are arrangement (3). The others break the arrangement, grouping or count rules.",
+          "nec_ref": "230.71(B)"
+        },
+        {
+          "question": "The disconnects permitted by 230.71 must be:",
+          "choices": [
+            "Grouped together",
+            "In separate buildings",
+            "One per floor",
+            "Locked against operation"
+          ],
+          "answer_index": 0,
+          "explain_plain": "230.71(A) requires the two to six disconnecting means to be grouped.",
+          "nec_ref": "230.71(A)"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 230.71: Transfer switches and motor control centers joined the two-to-six disconnect list, separate meter centers got their own item, and older equipment that legally grouped service disconnects in one enclosure gets a pass. New exception: existing service equipment built under an older edition that allowed grouped disconnects can keep up to six in one enclosure, section or compartment.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "230.71",
+        "230.71(A)",
+        "230.71(B)",
+        "230.70"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-230.79(C)",
@@ -4361,8 +5726,8 @@
       "article": "240",
       "section": "240",
       "title": "Overcurrent protection — breakers and fuses",
-      "plain_explanation": "Article 240 is the protection article: it decides where overcurrent devices go, what standard ratings exist, how conductors are protected, when the next higher rating may be used, how tap conductors work, and where panels may and may not be located. A breaker has two jobs that must not be confused — it protects the conductor, and only through that does it protect the equipment and the building. Most of Article 240 that Sharma uses daily is in 240.4 and 240.24.\n\nNEC 2023 CHANGE:\n• 240.11: When a rule makes one feeder's overcurrent device selectively coordinate with the service device, every other feeder fed directly from that service device now has to coordinate with it too. Once one feeder device must selectively coordinate with the service device, every feeder device fed straight from that service device must coordinate with it (240.11).\n• 240.16: Branch-circuit breakers and fuses still need at least 5,000 amps of interrupting rating, but that floor moved out of the Article 100 definition and into new 240.16. Any breaker or fuse doing branch-circuit duty must be rated to interrupt 5,000 amps or more (240.16).\n• 240.60: New in 2023: a fuse reducer, the adapter that lets a smaller fuse sit in clips made for a bigger one, has to be a listed product. Every fuse reducer now has to be listed. A shop-made spacer or an adapter with no listing mark doesn't pass.\n• 240.7: Three kinds of protective devices now have to be listed: branch-circuit breakers and fuses, the relays and breakers that provide ground-fault protection of equipment, and GFCIs. Branch-circuit rated breakers and fuses, the kind that can protect services, feeders and branch circuits, have to be listed. Supplementary protectors aren't on this list.\n• 240.89: New in 2023: a replacement trip unit has to carry a listing for use in the specific circuit breaker it goes into. Fitting the frame isn't enough. Swapping a breaker's trip unit? The new unit needs a listing that covers that particular breaker, not just a matching shape.\n• 240.2: The reconditioning requirements located at 240.62 and 240.88 were relocated to Section 240.2 in the 2023 NEC. Ground-fault protection of equipment (GFPE) and ground-fault circuit interrupters (GFCI) were added to the list of equipment that shall not be reconditioned.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "For every circuit, ask the Article 240 question out loud: what conductor am I protecting, at what ampacity, and which rule lets me use this breaker size? If the answer is a shrug, the circuit is not designed yet.",
+      "plain_explanation": "Article 240 is the protection article: it decides where overcurrent devices go, what standard ratings exist, how conductors are protected, when the next higher rating may be used, how tap conductors work, and where panels may and may not be located. A breaker has two jobs that must not be confused — it protects the conductor, and only through that does it protect the equipment and the building. The standard ratings live in 240.6, the tap rules in 240.21, and the location rules in 240.24: devices readily accessible, the center of the handle grip no higher than 6 ft 7 in, and in dwellings no overcurrent devices in bathrooms or clothes closets. Most of Article 240 that Sharma uses daily is in 240.4 and 240.24.",
+      "on_the_job": "For every circuit, ask the Article 240 question out loud: what conductor am I protecting, at what ampacity, and which rule lets me use this breaker size? If the answer is a shrug, the circuit is not designed yet. On a Sharma panel swap, that question catches the classics before the inspector does: a breaker that fits the bus but is not listed for the panel (S-03), and the 30 A breaker someone landed on a 12 AWG run to stop nuisance trips — the conductor's cap is 20 A, and the 'fix' removed its protection.",
       "sharma_note": "S-03: in an existing Square D panel, use Square D breakers listed for that panel. Brand mixing is not an Article 240 allowance.",
       "figure_idea": "A breaker panel with one breaker lifted out, showing its rating marking and the conductor it protects drawn beside it.",
       "related_ids": [
@@ -4422,7 +5787,109 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Overcurrent is any current beyond what the conductor can carry — an overload that cooks it slowly, or a short circuit or ground fault that delivers thousands of amps in a cycle. Without a device sized and placed by this article, the conductor itself becomes the protection, and it protects by burning. Article 240 puts a listed, rated device between the fault and the fire.",
+      "exam_trap": "The wrong answer is that the breaker protects the equipment plugged into the receptacle — the toaster, the TV, the appliance. It does not. The breaker protects the conductor; equipment is protected only through the conductor, or by its own article and nameplate. Picking the equipment answer is how a 30 A breaker ends up 'protecting' a 12 AWG circuit.",
+      "inspection_fails": [
+        "Breaker that fits the panel but is not listed for it — brand mixing (S-03).",
+        "Overcurrent devices installed in a dwelling bathroom or a clothes closet.",
+        "Center of the operating handle higher than 6 ft 7 in above the floor or platform.",
+        "Breaker upsized beyond the conductor's ampacity to stop nuisance tripping."
+      ],
+      "tables": [
+        {
+          "caption": "Article 240 map — the parts Sharma uses daily",
+          "headers": [
+            "Section",
+            "What it decides"
+          ],
+          "rows": [
+            [
+              "240.4",
+              "Protect conductors at their ampacity"
+            ],
+            [
+              "240.4(B)",
+              "When the next standard size up is allowed"
+            ],
+            [
+              "240.4(D)",
+              "Small-conductor caps: 14, 12, 10 AWG"
+            ],
+            [
+              "240.6",
+              "The standard ampere ratings"
+            ],
+            [
+              "240.21",
+              "Tap conductor rules"
+            ],
+            [
+              "240.24",
+              "Location: access, 6 ft 7 in handle height, no dwelling bathrooms"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-ART-240-breaker-anatomy.svg",
+          "alt": "A loadcenter with one breaker removed and drawn enlarged beside it: numbered markers identify the ampere rating, the listing for that specific panel, and the interrupting rating marking, and a 12 AWG copper conductor leaves the panel protected at 20 A under the 240.4(D) cap.",
+          "caption": "One breaker, lifted out: rating, listing, interrupting rating.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A circuit breaker's primary job is to protect:",
+          "choices": [
+            "The appliance plugged into the receptacle",
+            "The conductor",
+            "The receptacle outlet",
+            "The panel bus"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The device protects the conductor; equipment is protected only through the conductor, or by its own article.",
+          "nec_ref": "240.4"
+        },
+        {
+          "question": "The center of a breaker's operating handle, in its highest position, may be no more than ___ above the floor or working platform:",
+          "choices": [
+            "6 ft",
+            "6 ft 7 in",
+            "7 ft",
+            "There is no limit"
+          ],
+          "answer_index": 1,
+          "explain_plain": "240.24 sets the limit at 6 ft 7 in, with listed exceptions.",
+          "nec_ref": "240.24"
+        },
+        {
+          "question": "In a dwelling, overcurrent devices are not permitted in:",
+          "choices": [
+            "A garage",
+            "A laundry room",
+            "A bathroom",
+            "A hallway"
+          ],
+          "answer_index": 2,
+          "explain_plain": "240.24 keeps overcurrent devices out of dwelling bathrooms (and clothes closets).",
+          "nec_ref": "240.24"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 240.11: When a rule makes one feeder's overcurrent device selectively coordinate with the service device, every other feeder fed directly from that service device now has to coordinate with it too. Once one feeder device must selectively coordinate with the service device, every feeder device fed straight from that service device must coordinate with it (240.11).\n• 240.16: Branch-circuit breakers and fuses still need at least 5,000 amps of interrupting rating, but that floor moved out of the Article 100 definition and into new 240.16. Any breaker or fuse doing branch-circuit duty must be rated to interrupt 5,000 amps or more (240.16).\n• 240.60: New in 2023: a fuse reducer, the adapter that lets a smaller fuse sit in clips made for a bigger one, has to be a listed product. Every fuse reducer now has to be listed. A shop-made spacer or an adapter with no listing mark doesn't pass.\n• 240.7: Three kinds of protective devices now have to be listed: branch-circuit breakers and fuses, the relays and breakers that provide ground-fault protection of equipment, and GFCIs. Branch-circuit rated breakers and fuses, the kind that can protect services, feeders and branch circuits, have to be listed. Supplementary protectors aren't on this list.\n• 240.89: New in 2023: a replacement trip unit has to carry a listing for use in the specific circuit breaker it goes into. Fitting the frame isn't enough. Swapping a breaker's trip unit? The new unit needs a listing that covers that particular breaker, not just a matching shape.\n• 240.2: The reconditioning requirements located at 240.62 and 240.88 were relocated to Section 240.2 in the 2023 NEC. Ground-fault protection of equipment (GFPE) and ground-fault circuit interrupters (GFCI) were added to the list of equipment that shall not be reconditioned.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "240.4",
+        "240.4(B)",
+        "240.4(D)",
+        "240.6",
+        "240.21",
+        "240.24"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-240.4",
@@ -4430,8 +5897,8 @@
       "article": "240",
       "section": "240.4",
       "title": "Protecting a conductor at its ampacity",
-      "plain_explanation": "The starting rule of the article is simple: conductors are protected against overcurrent at their ampacity, in the ways this section then refines. It points to the special cases handled elsewhere — motors, air conditioning, welders, transformers, and others — where the nameplate or a specific article changes the protection picture. It also contains the two allowances Sharma uses most, covered on the next two pages: rounding up to the next standard rating in limited conditions, and the small-conductor caps.\n\nNEC 2023 CHANGE:\n• 240.4: Three additions: 14 AWG copper-clad aluminum is capped at 10 amps, adjustable-trip breakers with restricted settings get the next-size-up allowance, and 310.12 sizing for dwelling services and feeders carries over to the breaker. New 240.4(H): a dwelling service or feeder sized with 310.12 can be protected at that full rating, like a 200-amp breaker on 2/0 copper.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "When equipment has a nameplate that states its own maximum protection, follow that equipment article and the nameplate — the general rule here is not permission to upsize. Write the special-case citation in the job file when you use one.",
+      "plain_explanation": "The starting rule of Article 240 is simple: a conductor is protected against overcurrent at its ampacity. Ampacity comes from Table 310.16, after the correction and adjustment factors of 310.15 — not from the size of breaker that happens to be on the truck. This section then refines the rule:\n• Specific equipment plays by its own article. Motors, air conditioning, welders and transformers are sized and protected under their own rules and nameplates, and those rules win over the general rule here.\n• Next size up (240.4(B)). Where an ampacity does not land on a standard rating, the next higher standard device may be used — only when all of that subsection's conditions are met, and never above 800 A.\n• Small conductors (240.4(D)). 14, 12 and 10 AWG conductors carry hard caps, whatever the ampacity table says.\n• Over 800 A (240.4(C)). There is no rounding up at all: the conductor ampacity must be at least equal to the rating of the device.\nThe two allowances Sharma uses most — rounding up to the next standard rating in limited conditions, and the small-conductor caps — are covered on the next two pages.",
+      "on_the_job": "When equipment has a nameplate that states its own maximum protection, follow that equipment article and the nameplate — the general rule here is not permission to upsize. Write the special-case citation in the job file when you use one. Worked example: a feeder in 4 AWG copper has a 75 °C ampacity of 85 A (Table 310.16). No standard breaker is 85 A, so a 90 A breaker is allowed under 240.4(B) — the run is a feeder, not a multioutlet receptacle branch circuit, and it is well under 800 A. Run the same trick on a 12 AWG branch circuit and it fails: the table gives 25 A at 75 °C, but 240.4(D) caps 12 AWG copper at 20 A.",
       "sharma_note": "S-10 governs the wire this protection is matched to at Sharma: copper by default, CCA one size up, rated in the aluminum column.",
       "figure_idea": "",
       "related_ids": [
@@ -4455,7 +5922,111 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/240-4",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "A breaker is the conductor's bodyguard. If the device is bigger than the ampacity, the conductor becomes the fuse: it overheats inside a wall or above a ceiling, cooks its insulation, and starts a fire at a current the breaker sees as normal load. Matching protection to ampacity keeps the weakest link a device that is designed to open — not the wire.",
+      "exam_trap": "The exam shows a 12 AWG copper conductor, points at the 25 A value in the 75 °C column of Table 310.16, and offers a 25 A breaker. It is wrong: 240.4(D) caps 12 AWG copper at 20 A no matter what the table says. The table gives ampacity; this section decides the protection.",
+      "inspection_fails": [
+        "30 A breaker landed on a 12 AWG branch circuit 'because it kept tripping' — the cap is 20 A (240.4(D)).",
+        "Next-size-up allowance used on a multioutlet branch circuit feeding receptacles — 240.4(B) is not available there.",
+        "Condenser breaker upsized past the nameplate maximum overcurrent protection.",
+        "Feeder protected above its ampacity with none of the 240.4(B) conditions documented."
+      ],
+      "tables": [
+        {
+          "caption": "Which rule sets the breaker?",
+          "headers": [
+            "Case",
+            "Breaker rule",
+            "Ref"
+          ],
+          "rows": [
+            [
+              "Ordinary feeder or branch circuit",
+              "Protect at the ampacity",
+              "240.4"
+            ],
+            [
+              "Ampacity between standard ratings",
+              "Next size up, conditions met, 800 A max",
+              "240.4(B)"
+            ],
+            [
+              "14, 12 or 10 AWG conductor",
+              "Hard caps, whatever the table says",
+              "240.4(D)"
+            ],
+            [
+              "Device rated over 800 A",
+              "Ampacity at least equals the rating",
+              "240.4(C)"
+            ],
+            [
+              "Motor, AC, welder, transformer",
+              "Equipment article and nameplate",
+              "240.4"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-240.4-breaker-flow.svg",
+          "alt": "Flow chart with four steps for choosing a breaker: conductor ampacity from Table 310.16, then the equipment article or nameplate, then the small-conductor caps of 240.4(D), then matching the breaker to the ampacity with the limited next-size-up allowance of 240.4(B).",
+          "caption": "Picking the breaker: start at the conductor, in four steps.",
+          "w": 900,
+          "h": 1290
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "What is the general rule for protecting a conductor against overcurrent?",
+          "choices": [
+            "At the rating of the equipment it feeds",
+            "At its ampacity",
+            "One standard size above its ampacity",
+            "At the rating of the service"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Protection is matched to the conductor's ampacity; 240.4(B) through (D) are refinements with conditions, not the general rule.",
+          "nec_ref": "240.4"
+        },
+        {
+          "question": "A 12 AWG copper conductor has a 75 °C ampacity of 25 A. What is the largest breaker allowed?",
+          "choices": [
+            "15 A",
+            "20 A",
+            "25 A",
+            "30 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The small-conductor cap for 12 AWG copper is 20 A, whatever the ampacity table says.",
+          "nec_ref": "240.4(D)"
+        },
+        {
+          "question": "A feeder conductor's ampacity is 85 A. When may a 90 A breaker protect it?",
+          "choices": [
+            "Always",
+            "Never",
+            "When the 240.4(B) conditions are met and the rating stays at or under 800 A",
+            "Only on a dwelling service"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The next higher standard rating is an allowance with conditions, and it ends at 800 A.",
+          "nec_ref": "240.4(B)"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 240.4: Three additions: 14 AWG copper-clad aluminum is capped at 10 amps, adjustable-trip breakers with restricted settings get the next-size-up allowance, and 310.12 sizing for dwelling services and feeders carries over to the breaker. New 240.4(H): a dwelling service or feeder sized with 310.12 can be protected at that full rating, like a 200-amp breaker on 2/0 copper.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "240.4",
+        "240.4(B)",
+        "240.4(C)",
+        "240.4(D)",
+        "240.6",
+        "Table 310.16"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-240.4(B)",
@@ -4770,8 +6341,8 @@
       "article": "250",
       "section": "250",
       "title": "Grounding and bonding — the fault-current path",
-      "plain_explanation": "Article 250 is the longest and most argued article in this chapter. Grounding connects a system to earth through electrodes; bonding connects metal parts together so a fault has a low-impedance path back to the source that trips the breaker fast. Earth itself is not that fault path — the breaker trips because bonding carries the fault home. The pages that follow walk the service bond, the electrodes, the sizing tables, and the piping and intersystem bonds in that order.\n\nNEC 2023 CHANGE:\n• 250.100: The hazardous-location bonding rule was reworded for accuracy. Raceways, metal-clad cable, equipment and enclosures still need threaded, threadless or listed bonding fittings, even with a wire-type equipment grounding conductor (EGC). In classified locations, bond with a method from 250.92(B)(2) through (B)(4): wrenchtight threaded entries, tight threadless fittings, or other listed bonding devices.\n• 250.109: Plaster rings and extension rings now join metal covers and fittings: each must be fastened to a metal box so the fault path holds, or bonded with a jumper or equipment grounding conductor (EGC). Metal covers, plaster rings, extension rings and metal fittings must be fastened so the fault path holds, or else bonded with a jumper or EGC.\n• 250.114: Cord-and-plug ice makers joined the list of appliances whose exposed metal parts must connect to an equipment grounding conductor (EGC), in homes and other occupancies alike. Ice makers now sit next to refrigerators, freezers and air conditioners in the residential list, 250.114(3).\n• 250.130: 250.130(C) now covers swapping out a nongrounding snap switch. An equipment grounding conductor (EGC) added for the new switch can land at the same points already allowed for receptacles. Putting a switch with a grounding terminal in an old box with no EGC? Its new EGC can run to any point listed in 250.130(C).\n• 250.148: A jumper to a metal box now has a size rule: Table 250.122, based on the largest breaker or fuse on circuits in the box. Rules for joining the grounding conductors got clearer too. A bonding jumper to a metal box is now sized from Table 250.122, using the largest breaker or fuse on circuits in that box (250.148(C)).\n• 250.36: The section now says impedance grounded systems, dropping high and neutral, and renames its conductors to match their real jobs. When you can use one hasn't changed. Renamed from high-impedance grounded neutral systems to impedance grounded systems. High and neutral both came out.\n• 250.6: The 2023 edition spells it out: neither ground-fault current nor current on a grounding or bonding connection Article 250 requires counts as objectionable current. Current on a required grounding or bonding connection is not objectionable current (250.6(C)). Don't remove the connection to stop it.\n• 250.70: Mostly a cleanup: 250.70 now splits general rules from the indoor communications strap clamp, and a new note confirms a direct-burial clamp also suits concrete encasement. New note: a clamp listed for direct burial is also suitable for concrete encasement, so it can go on a concrete-encased electrode.\n• 250.106: References to the NFPA 780 standard were removed for Informational Note No. 1 and updated for Informational Note No. 2.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "On every job, trace one imaginary fault with your finger: from a hot wire touching a metal box, through the ground or bond, back to the source, and out on the hot again. If any link in that loop is missing, painted over, or loose, you have found the defect.",
+      "plain_explanation": "Article 250 is the longest and most argued article in this chapter. Grounding connects a system to earth through electrodes; bonding connects metal parts together so a fault has a low-impedance path back to the source that trips the breaker fast. Earth itself is not that fault path — the breaker trips because bonding carries the fault home. Section 250.4 states the performance test the whole article is built to pass: the path must be permanent and continuous, low-impedance, and able to carry the fault current long enough for the overcurrent device to open. When a detail is argued on site, that test settles it. The pages that follow walk the service bond, the electrodes, the sizing tables, and the piping and intersystem bonds in that order.",
+      "on_the_job": "On every job, trace one imaginary fault with your finger: a hot wire chafes through onto the metal frame of an air handler. The fault current runs on the equipment grounding conductor to the service, crosses the main bonding jumper to the neutral, and rides back out to the source — and the breaker opens on the way. If any link in that loop is missing, painted over, or loose, you have found the defect. On a Sharma 200 A house service the hardware in that loop is sized, not guessed: the main bonding jumper is 4 AWG copper behind 2/0 copper service conductors (250.28), and the grounding electrode conductor comes off Table 250.66 (the 250.50 page).",
       "sharma_note": "Torque and termination discipline decide whether this article works in real life. A correctly sized conductor on a loose lug is not a fault path.",
       "figure_idea": "A fault-path diagram: a hot conductor touching an appliance frame, fault current traveling the green ground back to the service bond, and the breaker opening.",
       "related_ids": [
@@ -4852,7 +6423,101 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "A breaker only trips when fault current is big, and fault current is only big when the loop back to the source is low-impedance metal the whole way. Dirt is not that loop: a fault dumped into a ground rod may draw only a few amps — nowhere near enough to move a 20 A breaker — while the metal case of a washer sits live at 120 V, waiting for a hand. Bonding builds the metal loop. Grounding ties the system to earth to limit lightning and surge voltage and to hold the voltage to ground steady.",
+      "exam_trap": "The trap answer: \"The ground rods trip the breaker on a fault.\" They do not. Earth is far too high an impedance to carry fault current back to the source, and 250.4 says plainly that the earth shall not be considered an effective ground-fault current path. The breaker trips because bonding and the equipment grounding conductor carry the fault home on metal.",
+      "inspection_fails": [
+        "Bootleg ground: the neutral jumpered to the ground terminal at a receptacle to fake a grounded outlet on a tester.",
+        "Subpanel \"grounded\" to a local rod with no equipment grounding conductor run back to the service.",
+        "Bonding lug landed over paint, or torqued loose, so the fault path is a resistor.",
+        "Equipment grounding conductor cut or left unlanded after a device swap into a plastic box."
+      ],
+      "tables": [
+        {
+          "caption": "Three jobs that get mixed up",
+          "headers": [
+            "Job",
+            "Connects",
+            "Its real work"
+          ],
+          "rows": [
+            [
+              "Grounding",
+              "The system to earth, through electrodes",
+              "Limits lightning and surge voltage; holds voltage to ground steady"
+            ],
+            [
+              "Bonding",
+              "Metal part to metal part",
+              "Makes every enclosure and raceway one continuous fault path"
+            ],
+            [
+              "Equipment grounding",
+              "Equipment frames to the service bond",
+              "Carries fault current back so the breaker opens"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-ART-250-fault-path.svg",
+          "alt": "Fault-path loop diagram: a hot conductor touches the frame of an air handler, fault current travels the green equipment grounding conductor back to the service panel, crosses the gold main bonding jumper to the neutral, and returns to the source while the breaker opens; a ground rod below the panel is crossed out with the note that earth is not the fault path.",
+          "caption": "The loop that trips the breaker is metal the whole way home.",
+          "w": 900,
+          "h": 1540
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "What carries fault current back to the source so the breaker trips?",
+          "choices": [
+            "The earth, through the ground rods",
+            "The bonded metal path and the equipment grounding conductor",
+            "The neutral conductor alone",
+            "The grounding electrode conductor alone"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Bonding and the EGC form a low-impedance metal loop; the fault current on that loop is what opens the breaker.",
+          "nec_ref": "250.4(A)(5)"
+        },
+        {
+          "question": "Under 250.4, the earth shall not be considered:",
+          "choices": [
+            "A grounding electrode",
+            "An effective ground-fault current path",
+            "A path for lightning energy",
+            "A voltage reference"
+          ],
+          "answer_index": 1,
+          "explain_plain": "250.4 states it directly: the earth is not an effective ground-fault current path.",
+          "nec_ref": "250.4(A)(5)"
+        },
+        {
+          "question": "Bonding is best defined as:",
+          "choices": [
+            "Connecting a system to a ground rod",
+            "Joining metal parts to establish electrical continuity and conductivity",
+            "Driving electrodes at every panel",
+            "Keeping neutrals and grounds apart"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Bonding joins metal parts into one continuous, conductive whole — that continuity is the fault path.",
+          "nec_ref": "250.4"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 250.100: The hazardous-location bonding rule was reworded for accuracy. Raceways, metal-clad cable, equipment and enclosures still need threaded, threadless or listed bonding fittings, even with a wire-type equipment grounding conductor (EGC). In classified locations, bond with a method from 250.92(B)(2) through (B)(4): wrenchtight threaded entries, tight threadless fittings, or other listed bonding devices.\n• 250.109: Plaster rings and extension rings now join metal covers and fittings: each must be fastened to a metal box so the fault path holds, or bonded with a jumper or equipment grounding conductor (EGC). Metal covers, plaster rings, extension rings and metal fittings must be fastened so the fault path holds, or else bonded with a jumper or EGC.\n• 250.114: Cord-and-plug ice makers joined the list of appliances whose exposed metal parts must connect to an equipment grounding conductor (EGC), in homes and other occupancies alike. Ice makers now sit next to refrigerators, freezers and air conditioners in the residential list, 250.114(3).\n• 250.130: 250.130(C) now covers swapping out a nongrounding snap switch. An equipment grounding conductor (EGC) added for the new switch can land at the same points already allowed for receptacles. Putting a switch with a grounding terminal in an old box with no EGC? Its new EGC can run to any point listed in 250.130(C).\n• 250.148: A jumper to a metal box now has a size rule: Table 250.122, based on the largest breaker or fuse on circuits in the box. Rules for joining the grounding conductors got clearer too. A bonding jumper to a metal box is now sized from Table 250.122, using the largest breaker or fuse on circuits in that box (250.148(C)).\n• 250.36: The section now says impedance grounded systems, dropping high and neutral, and renames its conductors to match their real jobs. When you can use one hasn't changed. Renamed from high-impedance grounded neutral systems to impedance grounded systems. High and neutral both came out.\n• 250.6: The 2023 edition spells it out: neither ground-fault current nor current on a grounding or bonding connection Article 250 requires counts as objectionable current. Current on a required grounding or bonding connection is not objectionable current (250.6(C)). Don't remove the connection to stop it.\n• 250.70: Mostly a cleanup: 250.70 now splits general rules from the indoor communications strap clamp, and a new note confirms a direct-burial clamp also suits concrete encasement. New note: a clamp listed for direct burial is also suitable for concrete encasement, so it can go on a concrete-encased electrode.\n• 250.106: References to the NFPA 780 standard were removed for Informational Note No. 1 and updated for Informational Note No. 2.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "250.4",
+        "250.4(A)(5)",
+        "250.24",
+        "250.28",
+        "250.50",
+        "Table 250.66"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-250.4",
@@ -4860,8 +6525,8 @@
       "article": "250",
       "section": "250.4",
       "title": "What grounding and bonding must accomplish",
-      "plain_explanation": "This general section states the performance the rest of the article builds: grounded systems are connected to earth in a way that limits voltage from lightning and surges and stabilizes voltage to ground, and electrical equipment and enclosures are bonded together into a continuous, low-impedance path that can carry fault current long enough for the overcurrent device to open. It also states plainly that the earth is not to be used as the sole equipment grounding conductor. When a specific installation rule is unclear, this section is the test it has to pass.",
-      "on_the_job": "Use this page when a field argument starts: 'will it trip the breaker, fast, every time?' is the question this section asks. If the honest answer is no, the detail is wrong whatever it looks like.",
+      "plain_explanation": "This general section states the performance the rest of Article 250 has to deliver, and it splits the work into two jobs:\n• Grounding — connecting the system and equipment to earth. It limits the voltage imposed by lightning, line surges, and accidental contact with higher-voltage lines, and it stabilizes the voltage to ground during normal operation.\n• Bonding — connecting metal parts together and back to the source in one continuous, low-impedance path that can carry fault current long enough for the overcurrent device to open.\nThe section states plainly that the earth is not an effective ground-fault current path and must not be used as the sole equipment grounding conductor. When a specific installation rule is unclear, this section is the test it has to pass.",
+      "on_the_job": "On a Florida slab house with a meter-main outside and the panel inside, run this page as a checklist before you call the rough-in. The grounding electrode system is bonded together at the service (250.50). The main bonding jumper lands at the meter-main, where the neutral meets ground. An equipment grounding conductor runs with the feeder to the inside panel, and the neutral is not bonded to ground again downstream (250.24(A)(5)). One rod by itself must prove 25 ohms or less, or a second rod goes in (250.53(A)(2)). Then ask the question this section asks: will it trip the breaker, fast, every time? If any link in that chain is missing, the honest answer is no.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -4872,7 +6537,102 @@
       "verified": true,
       "prev_id": "C2-ART-250",
       "next_id": "C2-250.8",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "A hot conductor that faults to a metal enclosure puts that enclosure at line voltage. If the only way back is through the earth, the path impedance is so high that only a few amperes flow — far too little to trip a breaker — and the enclosure sits energized, waiting for a hand to complete the circuit through a body. A bonded, low-impedance path back to the source lets a heavy fault current flow for the fraction of a second the breaker needs to open. Earth grounding handles lightning and surges; bonding is what clears faults.",
+      "inspection_fails": [
+        "No equipment grounding conductor run with the circuit — the installer relied on the ground rod to clear faults.",
+        "Neutral bonded to ground again in a subpanel downstream of the service disconnect (250.24(A)(5)).",
+        "Grounding electrode conductor spliced with a split bolt instead of an irreversible compression connector or exothermic weld (250.64(C)).",
+        "Metal interior water piping left unbonded (250.104)."
+      ],
+      "exam_trap": "The tempting answer says a ground rod at the panel 'gives fault current a path to earth so the breaker trips.' It is wrong twice. The rod's job is lightning and surges, and the earth is far too high in impedance to clear a fault. The breaker trips because of the bonded path back to the source (250.4(A)(5)).",
+      "tables": [
+        {
+          "caption": "The two jobs in 250.4",
+          "headers": [
+            "Job",
+            "What it connects",
+            "What it does"
+          ],
+          "rows": [
+            [
+              "Grounding",
+              "System and equipment to earth",
+              "Limits lightning and surge voltage; stabilizes voltage to ground"
+            ],
+            [
+              "Bonding",
+              "Metal parts to each other and back to the source",
+              "Carries fault current so the breaker opens fast"
+            ],
+            [
+              "Earth alone",
+              "—",
+              "Not an effective fault path; never the sole equipment grounding conductor"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-250.4-fault-path.svg",
+          "alt": "Comparison panel for a fault to a metal enclosure: the earth-only path through a ground rod is too high in impedance to trip the breaker, while the bonded equipment grounding path back to the source clears the fault.",
+          "caption": "Fault clearing runs on the bonded path, not on the earth.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A hot conductor faults to a metal enclosure. What makes the breaker trip?",
+          "choices": [
+            "The ground rod carries the fault into the earth",
+            "The bonded low-impedance path back to the source carries enough current to open it",
+            "The enclosure insulation breaks down",
+            "The surge protector absorbs the fault"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Fault clearing needs a low-impedance path back to the source so a heavy fault current flows and the breaker opens. The earth cannot do it.",
+          "nec_ref": "250.4(A)(5)"
+        },
+        {
+          "question": "Under 250.4, the earth may be used as:",
+          "choices": [
+            "The sole equipment grounding conductor",
+            "Part of the grounding electrode system, but never the sole fault path",
+            "The neutral return for a subpanel",
+            "A substitute for bonding metal piping"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The earth is not an effective ground-fault current path and must not be the sole equipment grounding conductor.",
+          "nec_ref": "250.4(A)(5)"
+        },
+        {
+          "question": "A single ground rod measures more than 25 ohms to earth. The standard fix is:",
+          "choices": [
+            "Drive it deeper and retest",
+            "Add a second rod",
+            "Connect it to the water pipe and stop",
+            "Use a larger clamp"
+          ],
+          "answer_index": 1,
+          "explain_plain": "A single rod must show 25 ohms or less, or it is supplemented with a second electrode.",
+          "nec_ref": "250.53(A)(2)"
+        }
+      ],
+      "code_refs": [
+        "250.4",
+        "250.4(A)(5)",
+        "250.24(A)(5)",
+        "250.50",
+        "250.53(A)(2)",
+        "250.64(C)",
+        "250.104"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-250.8",
@@ -4922,8 +6682,8 @@
       "article": "250",
       "section": "250.24",
       "title": "Grounding at the service — and nowhere downstream",
-      "plain_explanation": "At the service, the grounded conductor is connected to the grounding electrode system and to the equipment grounding conductors through the main bonding jumper, in the service equipment. That is the one place in a premises system where neutral and ground meet. Downstream of the service — in subpanels and feeders — the grounded conductor is kept isolated from equipment grounds and enclosures, so normal neutral current never travels on metal parts and fault current has one clear path home.\n\nNEC 2023 CHANGE:\n• 250.24: Made several changes within Section 250.24 to meet the requirements of the NEC Style Manual.\n• 250.24(D)(2): Received substantiation to clarify the requirements concerning grounded parallel conductors for service equipment. As a result, Section 250.4(D)(2) was revised.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "In every subpanel: neutral bar isolated and not bonded to the can, ground bar bonded to the can, grounds and neutrals on their own bars, and no bonding screw or strap left in place by habit. Photograph the first subpanel on a job and check it against this page.",
+      "plain_explanation": "At the service, three connections come together in the service equipment:\n• The grounding electrode conductor lands on the grounded conductor (the neutral).\n• The main bonding jumper ties the neutral to the equipment grounding conductors and to the enclosure.\n• From that one point on, the neutral carries load current and the grounding system carries fault current.\nThat is the one place in a premises system where neutral and ground meet. Downstream of the service — in subpanels and feeders — the grounded conductor is kept isolated from equipment grounds and enclosures, so normal neutral current never travels on metal parts and fault current has one clear path home.",
+      "on_the_job": "Sharma's standard is the S-09 back-to-back: the outdoor Siemens meter-main is the service equipment, so the main bonding jumper and the grounding electrode conductor land there. On a 200 A service with 2/0 copper service conductors, the main bonding jumper is 4 AWG copper, sized from Table 250.102(C)(1) by way of 250.28. The indoor panel is a subpanel: four-wire feeder, neutral bar isolated and floating, ground bar bonded to the can, bonding screw left out. Photograph the first subpanel on a job and check it against this page.",
       "sharma_note": "S-09's back-to-back service is where Sharma's bond is made; every panel downstream of it is wired isolated-neutral, no exceptions for a detached building panel that is actually a subpanel — see 250.32 for the separate-building case.",
       "figure_idea": "Two panel drawings side by side: a service panel with the bond shown, and a subpanel with the bonding strap removed and the neutral bar floating.",
       "related_ids": [
@@ -4955,7 +6715,104 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Add a second bond in a subpanel and neutral current splits: part of it rides the conduit, the water pipe and every equipment ground back to the service. Metal that should sit at zero volts now carries current every minute of the day, and if that neutral ever loosens, full load current can push onto parts a person can touch. One bond at the service keeps normal current on the neutral, where it belongs, and reserves the grounding path for faults — so a fault draws the heavy current that trips the breaker fast.",
+      "exam_trap": "The trap answer: \"Bond the neutral in every panel — more grounds are safer.\" Wrong. Every bond past the service puts load current on metal parts, all day long. The only neutral-to-ground connection in the premises system is the main bonding jumper at the service. (A separately derived system, and a separate building under 250.32, follow their own pages and their own rules.)",
+      "inspection_fails": [
+        "Bonding screw or bonding strap left in a subpanel, tying the neutral bar to the can.",
+        "Neutrals and equipment grounds landed on the same bar in a subpanel.",
+        "Main bonding jumper missing at the service, or a green screw standing in for a sized jumper.",
+        "Grounding electrode conductor landed in a downstream panel instead of the service equipment."
+      ],
+      "tables": [
+        {
+          "caption": "The service equipment vs every panel after it",
+          "headers": [
+            "Item",
+            "At the service",
+            "Downstream"
+          ],
+          "rows": [
+            [
+              "Main bonding jumper",
+              "Installed here",
+              "Never"
+            ],
+            [
+              "Neutral bar",
+              "Bonded to the enclosure",
+              "Isolated, floating"
+            ],
+            [
+              "Grounding electrode conductor",
+              "Lands here",
+              "Never lands here"
+            ],
+            [
+              "Neutrals and equipment grounds",
+              "They meet here",
+              "Always on separate bars"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-250.24-two-panels.svg",
+          "alt": "Two panel drawings side by side: on the left a service panel where a gold main bonding jumper joins the neutral bar to the ground bar and enclosure and the grounding electrode conductor leaves the bottom; on the right a subpanel with the bonding screw removed, the neutral bar floating on insulators, and the ground bar bonded to the can.",
+          "caption": "One bond, at the service. Every panel after it floats its neutral.",
+          "w": 900,
+          "h": 1520
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Where is the neutral connected to the equipment grounding system in a premises wiring system?",
+          "choices": [
+            "At the service equipment, by the main bonding jumper",
+            "In every panel, for safety",
+            "At the first receptacle on each circuit",
+            "Only at the ground rod"
+          ],
+          "answer_index": 0,
+          "explain_plain": "The main bonding jumper at the service equipment is the one neutral-to-ground connection.",
+          "nec_ref": "250.24"
+        },
+        {
+          "question": "In a subpanel fed from an outdoor meter-main, the neutral bar must be:",
+          "choices": [
+            "Bonded to the can",
+            "Isolated from the can and from the equipment grounds",
+            "Landed together with the grounds",
+            "Connected to its own ground rod"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Downstream of the service the grounded conductor stays isolated so load current never rides metal parts.",
+          "nec_ref": "250.24"
+        },
+        {
+          "question": "A 200 A service uses 2/0 copper service conductors. The main bonding jumper is:",
+          "choices": [
+            "8 AWG copper",
+            "6 AWG copper",
+            "4 AWG copper",
+            "2 AWG copper"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Table 250.102(C)(1), called by 250.28(D)(1): 2/0 copper service conductors take a 4 AWG copper main bonding jumper.",
+          "nec_ref": "250.28(D)(1)"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 250.24: Made several changes within Section 250.24 to meet the requirements of the NEC Style Manual.\n• 250.24(D)(2): Received substantiation to clarify the requirements concerning grounded parallel conductors for service equipment. As a result, Section 250.4(D)(2) was revised.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "250.24",
+        "250.28",
+        "Table 250.102(C)(1)",
+        "250.32"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-250.28",
@@ -5015,8 +6872,8 @@
       "article": "250",
       "section": "250.32",
       "title": "A separate building fed by a feeder",
-      "plain_explanation": "When a feeder supplies a second building or structure, that building needs its own grounding electrode system and a disconnect, and an equipment grounding conductor is run with the feeder in modern work. The grounded conductor at the separate building is not bonded again in the ordinary case — the bond stays at the service — and the narrow exception for existing installations has conditions that must all be met. This is the Article 250 companion to the Article 225 pages earlier in this chapter.",
-      "on_the_job": "Treat a detached garage panel as a subpanel that also needs electrodes: four-wire feeder, isolated neutral, ground bar bonded, rods driven at the building. Do not re-bond the neutral because the building 'feels like' its own service.",
+      "plain_explanation": "When a feeder or branch circuit supplies a second building or structure, that building is treated almost like a service — but it is not one. The building needs:\n• A disconnecting means for the supply (225.31)\n• Its own grounding electrode system (250.32(A)). Exception: a building fed by a single branch circuit, individual or multiwire, that includes an equipment grounding conductor needs no electrode system\n• An equipment grounding conductor run with the feeder (250.32(B)(1)), sized from 250.122. The disconnect and the electrodes connect to that EGC\n• The grounded conductor (neutral) is NOT bonded at the separate building. A neutral run with the feeder stays isolated from the EGC and the electrodes — the one neutral-to-ground bond stays at the service\nOne narrow exception, for existing installations only: the grounded conductor may be connected at the separate building if all three are true — no EGC was run with the supply, there are no continuous metallic paths bonded to the grounding system in both buildings (a metal water line between them kills it), and ground-fault protection of equipment is not installed on the supply side. That grounded conductor cannot be smaller than the larger of 220.61 and 250.122. The Article 250 companion to the Article 225 pages.",
+      "on_the_job": "Detached garage behind an Ocala house, fed from the house panel: run a four-wire feeder — two hots, an isolated neutral, and an EGC. At the garage, set the disconnect, land the EGC on the ground bar, and drive two 8 ft rods 6 ft apart, bonded to that bar; a single rod is enough only with a 25-ohm test on file. Leave the panel's bonding screw out. If you open an older garage panel and find a three-wire feed with the neutral bonded, do not just copy it: check the three exception conditions first, and write down what you found.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -5027,7 +6884,119 @@
       "verified": true,
       "prev_id": "C2-250.30",
       "next_id": "C2-250.34",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Bond the neutral a second time and normal neutral current splits onto every parallel metal path — the EGC, the water piping, the earth itself. That objectionable current raises touch voltage on equipment, corrodes buried metal, and can leave bonded parts live if the neutral ever opens. One bond at the service, plus a separate EGC, gives fault current a solid metal path home so the breaker trips instead of the equipment case going hot.",
+      "exam_trap": "The trap answer: 'A separate building gets its own service, so bond the neutral there like a main.' Wrong — a feeder is not a service. The bond stays at the service; the separate building gets electrodes and an EGC, with the neutral isolated. The only re-bond allowed is the existing-installation exception, and it dies the moment an EGC is run or a metal water line links the buildings.",
+      "inspection_fails": [
+        "Neutral bonded in the detached garage panel — bonding screw in or strap landed — putting neutral current on the EGC and the water piping.",
+        "No grounding electrode system at the separate building fed by a feeder.",
+        "New feeder run as three wires with no EGC, claiming the existing-installation exception on new work.",
+        "Ground rods driven at the garage but never bonded to the panel ground bar."
+      ],
+      "tables": [
+        {
+          "caption": "At the separate building — the checklist",
+          "headers": [
+            "Item",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "Disconnecting means",
+              "Required for the supply (225.31)"
+            ],
+            [
+              "Grounding electrodes",
+              "Own system required (250.32(A))"
+            ],
+            [
+              "Equipment grounding conductor",
+              "Run with the feeder, sized per 250.122"
+            ],
+            [
+              "Neutral bond",
+              "None — the bond stays at the service"
+            ],
+            [
+              "Existing 3-wire feed",
+              "Exception only: all 3 conditions met"
+            ]
+          ],
+          "note": "Single branch circuit with an EGC? No electrode system is required at that building (250.32(A) Exception)."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-250.32-garage-feeder.svg",
+          "alt": "Diagram of a house service feeding a detached garage with a four-wire feeder: the main bond is at the house only, the garage neutral is isolated, and two 8 ft ground rods 6 ft apart bond to the garage ground bar.",
+          "caption": "Separate building: four-wire feeder, electrodes there, bond stays at the service.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A new feeder is run to a detached garage. What must run with it?",
+          "choices": [
+            "A bonding jumper for the garage panel",
+            "An equipment grounding conductor",
+            "A second grounded conductor",
+            "A ground rod at the house"
+          ],
+          "answer_index": 1,
+          "explain_plain": "250.32(B)(1): the EGC runs with the supply and lands on the disconnect and the electrodes. The neutral stays isolated.",
+          "nec_ref": "250.32(B)(1)"
+        },
+        {
+          "question": "When may the neutral be bonded at an existing separate building?",
+          "choices": [
+            "Whenever the building has its own ground rods",
+            "Only if no EGC was run, no continuous metallic path links the buildings, and no ground-fault protection is on the supply side",
+            "On any building wired before 2008, with no other conditions",
+            "Never, under any circumstances"
+          ],
+          "answer_index": 1,
+          "explain_plain": "All three conditions of the existing-installation exception must be met at the same time.",
+          "nec_ref": "250.32(B)(1) Exception"
+        },
+        {
+          "question": "A pump house is fed by one multiwire branch circuit that includes an EGC. Does it need its own grounding electrode system?",
+          "choices": [
+            "Yes, two rods minimum",
+            "Yes, one rod minimum",
+            "No — the single-branch-circuit exception applies",
+            "Only if it also has a disconnect"
+          ],
+          "answer_index": 2,
+          "explain_plain": "250.32(A) excepts a building supplied by a single branch circuit, individual or multiwire, with an EGC.",
+          "nec_ref": "250.32(A) Exception"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "250.32",
+        "250.32(A)",
+        "250.32(B)(1)",
+        "250.32(B)(1) Ex.",
+        "250.122",
+        "220.61",
+        "225.31",
+        "250.53(A)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "250.32(B)(1) exception for existing installations: the three conditions, and the grounded conductor sized not smaller than the larger of 220.61 and 250.122",
+          "source": "Mike Holt, Article 250.32 instructional page",
+          "url": "https://www.mikeholt.com/newsletters.php?action=display&letterID=1241&email="
+        },
+        {
+          "claim": "250.32(A) exception: a building supplied by a single branch circuit (individual or multiwire) with an EGC needs no grounding electrode system",
+          "source": "Electrical Contractor Magazine, NEC 250.32 Grounding & Bonding for Separate Buildings or Structures",
+          "url": "https://www.ecmag.com/magazine/articles/article-detail/codes-standards-equipment-and-structure-grounding-and-bonding-separate-buildings-or"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C2-250.34",
@@ -5368,8 +7337,8 @@
       "article": "250",
       "section": "250.94",
       "title": "The intersystem bonding termination",
-      "plain_explanation": "Other systems — telephone, cable, antenna, and similar communications systems — need a place to bond to the electrical grounding system, and this section requires an intersystem bonding termination at the service or metering equipment, accessible for connection, with room for the stated number of terminations. It is the small bar or bridge by the meter that keeps a cable installer from clamping onto a random pipe. It does not replace the bonding those systems' own articles require; it gives them the listed place to land.\n\nNEC 2023 CHANGE:\n• 250.94(A): Made minor wording changes in 250.94(A)(4) a and band removed Informational Note 1, which did not have much value within the code and did not comply with the NEC Style Manual.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Install it where the other utilities actually arrive at the house, and leave it accessible after siding and landscaping. Point it out on the final walk — half its failures are being buried behind finishes.",
+      "plain_explanation": "Other systems — telephone, cable, antenna, and similar communications systems — need a place to bond to the electrical grounding system, and this section requires an intersystem bonding termination (IBT) for them, at the service or metering equipment, accessible for connection, with room for the stated number of terminations. It is the small bar or bridge by the meter that keeps a cable installer from clamping onto a random pipe. It does not replace the bonding those systems' own articles require; it gives them the listed place to land.\nWhere it goes:\n• At the service equipment or the metering equipment enclosure, external to the enclosure.\n• Also at the disconnecting means of any other building or structure on the property supplied by a feeder or branch circuit.\nWhat it must be (250.94(A)):\n• Accessible for connection and inspection.\n• A set of terminals with the capacity for connection of not less than three intersystem bonding conductors.\n• Mounted so it does not interfere with opening the enclosure.\n• Securely mounted and electrically connected to the service equipment, the meter enclosure, or the grounding electrode conductor.\n• Listed as grounding and bonding equipment.",
+      "on_the_job": "Install it where the other utilities actually arrive at the house, and leave it accessible after siding and landscaping. Point it out on the final walk — half its failures are being buried behind finishes. On a Sharma new home, the phone and cable drops land at the meter-main, so the IBT goes on the wall beside it with its terminals free. If the cable installer arrives before the IBT is up, he will clamp the nearest pipe — and the correction lands on us.",
       "sharma_note": "",
       "figure_idea": "A meter base with a small bonding bridge mounted beside it, with telephone and cable ground wires landed on its terminals.",
       "related_ids": [
@@ -5385,12 +7354,112 @@
       "nec2023_change": [
         {
           "section": "250.94(A)",
-          "change": "Made minor wording changes in 250.94(A)(4) a and band removed Informational Note 1, which did not have much value within the code and did not comply with the NEC Style Manual.",
+          "change": "Made minor wording changes in 250.94(A)(4) a and b, and removed Informational Note 1, which did not have much value within the code and did not comply with the NEC Style Manual.",
           "source": "Carosella/NFPA-based 2023 NEC change workbook: 250.94(A) The lntersystem Bonding Termination Device",
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Lightning and utility surges do not respect trade boundaries. If the cable system and the power system sit at different potentials during a surge, the difference equalizes the violent way — arcing between systems, cooking electronics, and shocking whoever touches both at once. One bonded termination point keeps every system at the same potential.",
+      "exam_trap": "Two wrong answers show up. First: 'the IBT is a grounding electrode' — it is not; it is a termination point that connects other systems to the grounding electrode system. Second: 'landing on the IBT replaces the bonding required by the communications articles' — it does not; those articles still require the bond. The IBT is simply the listed place it lands.",
+      "inspection_fails": [
+        "No IBT at the service — the cable bond is clamped to a hose bibb or a random pipe.",
+        "IBT buried behind siding, stucco or landscaping, no longer accessible.",
+        "Feeder-supplied detached garage with its own cable drop, but no IBT at its disconnecting means.",
+        "IBT mounted where it blocks the meter enclosure door from opening."
+      ],
+      "tables": [
+        {
+          "caption": "The IBT checklist (250.94(A))",
+          "headers": [
+            "Requirement",
+            "In the field"
+          ],
+          "rows": [
+            [
+              "Location",
+              "At the service or metering equipment; also at a feeder-supplied building's disconnect"
+            ],
+            [
+              "Access",
+              "Reachable for connection and inspection after the finishes are on"
+            ],
+            [
+              "Capacity",
+              "Terminals for not less than three intersystem bonding conductors"
+            ],
+            [
+              "Mounting",
+              "Secure, electrically connected, and clear of the enclosure door"
+            ],
+            [
+              "Listing",
+              "Listed as grounding and bonding equipment"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-250.94-ibt.svg",
+          "alt": "Elevation of a meter-main on a wall with an intersystem bonding termination beside it; telephone, cable TV and antenna bonding conductors land on its three terminals, and the grounding electrode conductor runs from the meter-main to the ground symbol.",
+          "caption": "The IBT beside the meter-main: one listed landing place for every other system.",
+          "w": 900,
+          "h": 1640
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "An intersystem bonding termination must be provided at:",
+          "choices": [
+            "Every panelboard",
+            "The service equipment or metering equipment enclosure",
+            "The first receptacle outlet",
+            "The water service entrance only"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The IBT belongs at the service equipment or metering equipment enclosure — and at the disconnecting means of feeder-supplied buildings.",
+          "nec_ref": "250.94"
+        },
+        {
+          "question": "The IBT's set of terminals must have capacity for:",
+          "choices": [
+            "One intersystem bonding conductor",
+            "Two intersystem bonding conductors",
+            "Not less than three intersystem bonding conductors",
+            "Six intersystem bonding conductors"
+          ],
+          "answer_index": 2,
+          "explain_plain": "250.94(A) requires a set of terminals with capacity for not less than three intersystem bonding conductors.",
+          "nec_ref": "250.94(A)"
+        },
+        {
+          "question": "Landing a cable system's bonding conductor on the IBT:",
+          "choices": [
+            "Replaces the bonding its own article requires",
+            "Gives it the listed place to land — its own article still requires the bond",
+            "Makes the IBT a grounding electrode",
+            "Is optional if the system is wireless"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The IBT is the termination point; it does not replace the bonding the communications articles require.",
+          "nec_ref": "250.94"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 250.94(A): Made minor wording changes in 250.94(A)(4) a and b, and removed Informational Note 1, which did not have much value within the code and did not comply with the NEC Style Manual.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "250.94",
+        "250.94(A)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "250.94(A) IBT requirements: accessible for connection and inspection, capacity for at least three intersystem bonding conductors, does not interfere with opening the enclosure, securely mounted and electrically connected, listed as grounding and bonding equipment",
+          "source": "Mike Holt, Bonding and Grounding, based on the 2020 NEC (250.94 summary)",
+          "url": "https://www.mikeholt.com/newsletters.php?action=display&letterID=2312"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C2-250.104",

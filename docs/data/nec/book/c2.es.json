@@ -268,8 +268,8 @@
       "article": "200",
       "section": "200.7",
       "title": "Para qué puede usarse el aislamiento blanco o gris",
-      "plain_explanation": "El aislamiento blanco o gris está reservado para el conductor puesto a tierra (neutro), con excepciones limitadas que la sección detalla. Los ejemplos conocidos en el campo son un conductor reidentificado en un conjunto de cable usado como activo para un lazo de interruptor o un circuito de 240V, y los usos en cordones flexibles — y la reidentificación debe ser permanente y visible donde se requiere. Un conductor blanco nunca puede usarse libremente como tierra; las tierras de equipos son verdes, verdes con franjas amarillas o desnudas.",
-      "on_the_job": "Si reidentifica un cable blanco como activo, márquelo en cada caja donde aparezca y avise al equipo de terminación (trim). Si abre una caja y encuentra un blanco sin marcar en un interruptor o en un breaker, deténgase y rastree el circuito en lugar de suponer.",
+      "plain_explanation": "El aislamiento blanco o gris está reservado para el conductor puesto a tierra, con excepciones limitadas que la sección detalla. El color es una promesa, y para circuitos de 50 volts o más la promesa solo puede flexibilizarse de estas maneras (200.7(C)):\n• Conjuntos de cable. Un conductor blanco dentro de un conjunto de cable puede servir como activo — los ejemplos conocidos en el campo son un conductor reidentificado en un conjunto de cable usado como activo para un lazo de interruptor o un circuito de 240V, y los usos en cordones flexibles — y la reidentificación debe ser permanente: reidentificado en su terminación y en cada lugar donde sea visible y accesible, con la marca rodeando el aislamiento en un color que no sea blanco, gris ni verde.\n• Lazos de interruptor. El blanco reidentificado puede alimentar el interruptor, o correr como viajero entre interruptores de 3 vías y 4 vías. No puede ser el conductor de retorno desde el interruptor hasta la salida.\n• Cordones flexibles. Un conductor blanco en un cordón flexible puede usarse como activo solo donde las reglas de cordones lo permiten (400.7).\nEn una canalización no hay reidentificación alguna — los conductores individuales se instalan en el color correcto. Y un conductor blanco nunca puede usarse libremente como tierra; las tierras de equipos son verdes, verdes con franjas amarillas o desnudas.",
+      "on_the_job": "Si reidentifica un cable blanco como activo, márquelo en cada caja donde aparezca y avise al equipo de terminación (trim). Si abre una caja y encuentra un blanco sin marcar en un interruptor o en un breaker, deténgase y rastree el circuito en lugar de suponer. El caso cotidiano en Sharma es el calentador de agua de 240 V cableado con un conjunto de cable de dos conductores: el blanco se reidentifica con cinta negra que lo rodea, en el calentador y otra vez en el breaker. Marcar un solo extremo deja el trabajo a medias — el otro extremo es donde la siguiente persona se lleva la sorpresa.",
       "sharma_note": "Nunca conecte por la parte trasera (backstab) y nunca adivine qué es un blanco reidentificado — los equipos de Sharma lo rastrean. Vea S-10 para la práctica general de conductores y terminaciones.",
       "figure_idea": "",
       "related_ids": [
@@ -282,7 +282,110 @@
       "next_id": "C2-200.10",
       "sharma_rule_ids": [
         "S-10"
-      ]
+      ],
+      "why_it_exists": "La siguiente persona que abra la caja confía en el color antes que en cualquier otra cosa. Un cable blanco que en secreto es un activo le da una descarga a quien lo trata como neutro; un cable blanco usado como tierra deja el equipo aparentando estar puesto a tierra cuando no lo está. Reservar el color — y marcar cada excepción de modo que no pueda pasar desapercibida — es lo que hace segura esa confianza.",
+      "exam_trap": "Las respuestas incorrectas favoritas del examen: 'un conductor blanco puede reidentificarse en cualquier lugar si lleva cinta' — no, el permiso cubre conjuntos de cable y cordones flexibles, nunca conductores individuales en una canalización. Y 'el blanco reidentificado en un lazo de interruptor puede llevar el retorno conmutado de vuelta a la luz' — no, solo puede alimentar el interruptor, o correr como viajero; el retorno es un conductor de color.",
+      "inspection_fails": [
+        "Conductor blanco conectado a un breaker sin ninguna marca de reidentificación.",
+        "Blanco reidentificado marcado en el tablero, pero no en la caja lejana donde es visible y accesible.",
+        "Conductor blanco usado como conductor de puesta a tierra de equipos en una remodelación.",
+        "THHN blanco instalado en tubo y envuelto en cinta negra para servir como activo."
+      ],
+      "tables": [
+        {
+          "caption": "Un conductor blanco o gris puede ser…",
+          "headers": [
+            "Uso",
+            "¿Permitido?"
+          ],
+          "rows": [
+            [
+              "El conductor puesto a tierra (neutro)",
+              "Sí — ese es su trabajo"
+            ],
+            [
+              "Un activo en un conjunto de cable, reidentificado permanentemente en cada punto visible",
+              "Sí — 200.7(C)(1)"
+            ],
+            [
+              "El retorno desde el interruptor hasta la salida, en un lazo de interruptor",
+              "No — solo alimentar el interruptor"
+            ],
+            [
+              "Un activo en una canalización, con cinta en los extremos",
+              "No"
+            ],
+            [
+              "El conductor de puesta a tierra de equipos",
+              "No — nunca"
+            ]
+          ],
+          "note": "La marca de reidentificación debe rodear el aislamiento y ser de un color que no sea blanco, gris ni verde."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-200.7-white-wire.svg",
+          "alt": "Tres paneles: un lazo de interruptor en un conjunto de cable con el conductor blanco reidentificado en ambos extremos, marcado OK; un conductor blanco usado como activo sin marcar en un breaker, marcado NO; y un conductor blanco usado como tierra de equipos, marcado NO, con los colores correctos de tierra indicados.",
+          "caption": "El blanco es el color del puesto a tierra: un uso OK y dos violaciones comunes.",
+          "w": 900,
+          "h": 1460
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "El aislamiento blanco o gris está reservado para:",
+          "choices": [
+            "El conductor de puesta a tierra de equipos",
+            "El conductor puesto a tierra",
+            "Cualquier conductor, si lleva cinta",
+            "Los viajeros entre interruptores de 3 vías"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El blanco y el gris identifican al conductor puesto a tierra; las excepciones de 200.7(C) son limitadas y deben marcarse.",
+          "nec_ref": "200.7"
+        },
+        {
+          "question": "Un conductor blanco en un conjunto de cable puede usarse como activo cuando está:",
+          "choices": [
+            "Envuelto en cinta en un extremo",
+            "Reidentificado permanentemente en su terminación y en cada lugar donde sea visible y accesible",
+            "En un circuito de menos de 50 volts",
+            "Alimentando un tomacorriente"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La marca debe rodear el aislamiento, en un color que no sea blanco, gris ni verde, en todos los lugares donde el conductor pueda verse.",
+          "nec_ref": "200.7(C)(1)"
+        },
+        {
+          "question": "En un lazo de interruptor, el conductor blanco reidentificado puede usarse como:",
+          "choices": [
+            "El conductor de retorno a la luz",
+            "La alimentación al interruptor",
+            "El conductor de puesta a tierra de equipos",
+            "La alimentación o el retorno, indistintamente"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Puede alimentar el interruptor, o correr como viajero — nunca como retorno desde el interruptor hasta la salida.",
+          "nec_ref": "200.7(C)"
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios del 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "200.7",
+        "200.7(C)(1)",
+        "200.6",
+        "400.7"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "200.7(C) covers circuits of 50 volts or more; re-identification must encircle the insulation in a color other than white, gray or green, at each termination and every visible and accessible location; in switch loops the re-identified conductor may supply the switch but not serve as the return conductor",
+          "source": "Mike Holt, NEC Questions and Answers (200.7 summary)",
+          "url": "https://www.mikeholt.com/newsletters.php?action=display&letterID=1187&email="
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C2-200.10",
@@ -503,8 +606,8 @@
       "article": "210",
       "section": "210.4",
       "title": "Circuitos ramales multiconductores",
-      "plain_explanation": "Un circuito ramal multiconductor comparte un conductor puesto a tierra (neutro) entre dos o tres conductores no puestos a tierra tomados de fases o ramas diferentes. Como el neutro compartido solo lleva la corriente desbalanceada cuando los activos están en ramas opuestas, conectar ambos activos en la misma rama puede sobrecargar un neutro que no tiene breaker propio. El artículo también exige una forma de desconectar todos los activos juntos en el tablero y una agrupación que permita identificar el conjunto compartido.\n\nCAMBIO NEC 2023:\n• 210.4: La regla del mismo origen para los circuitos ramales multiconductores ahora remite a 300.3(B)(4), que cubre los tableros de ancho de columna cuyos neutros se conectan en una caja de paso (pull box) adjunta. Los conductores calientes y el neutro de cualquier circuito ramal multiconductor siguen comenzando en un solo tablero u otro equipo de distribución.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Antes de compartir un neutro, confirme que los breakers están en ramas opuestas y unidos o en un arreglo de disparo común / manijas unidas, según se requiera. En un tablero de casa de 120/240V, eso significa que las posiciones adyacentes no son automáticamente ramas opuestas en todo diseño de tablero — verifique, no suponga.",
+      "plain_explanation": "Un circuito ramal multiconductor comparte un conductor puesto a tierra (neutro) entre dos o tres conductores no puestos a tierra tomados de fases o ramas diferentes. Las reglas que lo hacen seguro:\n• Mismo origen: todos los conductores del circuito comienzan en el mismo tablero o equipo de distribución similar (210.4(A))\n• El neutro compartido solo lleva la corriente desbalanceada. Con los activos en ramas opuestas, las corrientes se cancelan — dos cargas de 16 A pueden dejar el neutro en 0 A\n• Desconexión simultánea: un medio en el tablero debe abrir todos los activos juntos — un breaker de dos polos o breakers con manijas unidas (210.4(B))\n• Solo cargas de línea a neutro (210.4(C))\n• Agrupación: los activos y su neutro compartido se agrupan en el tablero para que el conjunto pueda identificarse (210.4(D))\nSi conecta ambos activos en la misma rama, el cálculo se invierte: el neutro lleva ahora la suma de ambas cargas, en un conductor que no tiene breaker propio.",
+      "on_the_job": "Antes de compartir un neutro, compruebe que los breakers están en ramas opuestas — no confíe en la posición. Las posiciones adyacentes no son ramas opuestas en todo diseño de tablero, y los breakers tandem lo empeoran: dos tandem pueden poner ambos activos en la misma rama pareciendo un par. Mídalo en el sistema de 120/240 V: 240 V entre los dos activos significa ramas opuestas; 0 V significa la misma rama, y el neutro llevará la suma. Use un breaker de dos polos, o breakers sencillos con manijas unidas, para que ambos activos abran juntos — y en un trabajo de doble función, un dispositivo de dos polos lee el neutro compartido correctamente en lugar de disparar por molestia.",
       "sharma_note": "",
       "figure_idea": "Un breaker de dos polos que alimenta un activo rojo, un activo negro y un neutro blanco compartido hacia dos tramos de tomacorrientes, con el punto de las ramas opuestas marcado con un círculo.",
       "related_ids": [
@@ -524,7 +627,107 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/210-4",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "El neutro no tiene ningún dispositivo de sobrecorriente que lo vigile. Conectado en la misma rama, puede llevar el doble de corriente y cocinar su aislamiento dentro de una pared mientras ambos breakers están tranquilos a media carga. El segundo peligro es más silencioso: si usted abre un neutro compartido con el circuito energizado, las dos cargas quedan en serie a través de 240 V — la carga más ligera puede recibir la mayor parte de ese voltaje y quemarse.",
+      "exam_trap": "La trampa: «Dos circuitos multiconductores de 20 A comparten un neutro, así que el neutro debe tener capacidad para 40 A». Incorrecto — en ramas opuestas el neutro solo lleva la diferencia entre las cargas, nunca más que la mayor. La respuesta de 40 A describe el error de cableado, no la regla: conecte ambos activos en una rama y el neutro sí lleva la suma, sin nada que dispare.",
+      "inspection_fails": [
+        "Ambos activos de un circuito multiconductor conectados en la misma rama — neutro encontrado sobrecalentado, aislamiento quebradizo, y ningún breaker disparó jamás.",
+        "Dos breakers de un polo sin unión de manijas: un circuito se trabajó energizado mientras el neutro compartido aún llevaba la corriente del otro circuito.",
+        "Conductores multiconductores sin agrupar en el tablero — el neutro compartido conectado con el par de activos equivocado.",
+        "Neutro compartido empalmado a través de un tomacorriente en lugar de con coleta, de modo que retirar el dispositivo abre el neutro en un circuito energizado."
+      ],
+      "tables": [
+        {
+          "caption": "Las mismas dos cargas, dos conexiones",
+          "headers": [
+            "",
+            "Ramas opuestas (correcto)",
+            "Misma rama (incorrecto)"
+          ],
+          "rows": [
+            [
+              "Activo A",
+              "16 A",
+              "16 A"
+            ],
+            [
+              "Activo B",
+              "16 A",
+              "16 A"
+            ],
+            [
+              "Neutro compartido",
+              "0 A (16 − 16)",
+              "32 A (16 + 16)"
+            ],
+            [
+              "¿Dispara el breaker?",
+              "—",
+              "No — el neutro se cocina en silencio"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-210.4-shared-neutral.svg",
+          "alt": "Diagrama comparativo de un circuito ramal multiconductor: conectado en ramas opuestas, el neutro compartido lleva 0 A con dos cargas de 16 A; conectado en la misma rama, lleva 32 A y se sobrecalienta sin que dispare ningún breaker.",
+          "caption": "Ramas opuestas, el neutro descansa. Misma rama, lleva ambas cargas.",
+          "w": 900,
+          "h": 1460
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Dos cargas multiconductores consumen 16 A cada una en ramas opuestas. ¿Qué lleva el neutro compartido?",
+          "choices": [
+            "32 A",
+            "16 A",
+            "0 A",
+            "8 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "En ramas opuestas las corrientes se cancelan; el neutro solo lleva la corriente desbalanceada (la diferencia).",
+          "nec_ref": "210.4"
+        },
+        {
+          "question": "¿Qué medio de desconexión necesita un circuito ramal multiconductor en el tablero?",
+          "choices": [
+            "Cada activo en su propio breaker de un polo, sin unión",
+            "Un medio que abra todos los activos simultáneamente",
+            "Un interruptor con fusible en el neutro",
+            "Ningún medio especial"
+          ],
+          "answer_index": 1,
+          "explain_plain": "210.4(B): todos los conductores no puestos a tierra del circuito deben abrir juntos en el punto de origen.",
+          "nec_ref": "210.4(B)"
+        },
+        {
+          "question": "¿Por qué se agrupan los conductores de un circuito multiconductor en el tablero?",
+          "choices": [
+            "Para ahorrar espacio en la canaleta",
+            "Para que el conjunto compartido pueda identificarse",
+            "Para mantener las fases separadas",
+            "Solo para el conteo del inspector"
+          ],
+          "answer_index": 1,
+          "explain_plain": "210.4(D) exige la agrupación para que los activos y su neutro compartido se identifiquen como un solo circuito.",
+          "nec_ref": "210.4(D)"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 210.4: La regla del mismo origen para los circuitos ramales multiconductores ahora remite a 300.3(B)(4), que cubre los tableros de ancho de columna cuyos neutros se conectan en una caja de paso (pull box) adjunta. Los conductores calientes y el neutro de cualquier circuito ramal multiconductor siguen comenzando en un solo tablero u otro equipo de distribución.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "210.4",
+        "210.4(A)",
+        "210.4(B)",
+        "210.4(C)",
+        "210.4(D)",
+        "225.30",
+        "300.13(B)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-210.5",
@@ -1073,8 +1276,8 @@
       "article": "210",
       "section": "210.8(D)",
       "title": "Aparatos específicos que necesitan protección GFCI",
-      "plain_explanation": "Más allá de las listas por lugar, esta subsección remite a 422.5(A): aparatos específicos necesitan protección contra fallas a tierra donde sea que se instalen, en cualquier tipo de ocupación, cuando sean de 150 voltios o menos a tierra y 60 amps o menos. La lista de 2020 es: máquinas de aspirado automotriz, enfriadores de agua potable y estaciones para llenar botellas, hidrolavadoras de alta presión conectadas con cordón y enchufe, máquinas para inflar neumáticos, máquinas expendedoras, bombas de sumidero y lavaplatos. La prueba es el aparato y su capacidad, no el cuarto. Cuando un aparato está en la lista, moverlo a un cuarto que no está en la lista de 210.8(A) no elimina el requisito.\n\nCAMBIO NEC 2023:\n• 210.8(D): 210.8(D) ahora nombra los aparatos: se agregaron estufas eléctricas, hornos de pared, unidades de cocción de tope, secadoras de ropa y hornos de microondas, en correlación con 422.5(A).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Revise el programa de aparatos, no solo el acabado del cuarto. Si un aparato de la lista se conectará con cordón y enchufe o directo (hardwired) dentro de los límites indicados, planifique la protección antes de finalizar el programa del tablero.",
+      "plain_explanation": "Más allá de las listas por lugar, esta subsección remite a 422.5(A): aparatos específicos necesitan protección contra fallas a tierra donde sea que se instalen, en cualquier tipo de ocupación, cuando sean de 150 voltios o menos a tierra y 60 amps o menos. La lista de 2020:\n• Máquinas de aspirado automotriz\n• Enfriadores de agua potable y estaciones para llenar botellas\n• Hidrolavadoras de alta presión conectadas con cordón y enchufe\n• Máquinas para inflar neumáticos\n• Máquinas expendedoras\n• Bombas de sumidero\n• Lavaplatos\nLa prueba es el aparato y su capacidad, no el cuarto. Cuando un aparato está en la lista, moverlo a un cuarto que no está en la lista de 210.8(A) no elimina el requisito. El lavaplatos es el que una cuadrilla de casas encuentra cada semana: necesita esta protección en una vivienda, un restaurante o una cocina de oficina, se enchufe o se conecte directo (hardwired).",
+      "on_the_job": "En una casa de producción de Sharma en Marion Oaks, el lavaplatos es el caso permanente: cae en un circuito de cocina de 20 A, y el breaker de doble función de S-07 en el tablero Siemens suministra la protección GFCI, con un tomacorriente TR estándar bajo el fregadero donde se enchufa el lavaplatos. La trampa en la obra es el cambio de aparato: el constructor cambia el modelo del lavaplatos después del acabado (trim) y nadie vuelve a revisar. Como la protección vive en el breaker, el aparato nuevo queda cubierto en el momento en que se enchufa. En un trabajo comercial pequeño, revise la máquina expendedora y la estación para llenar botellas de la misma manera: ambas están en la lista de 422.5(A) aunque el cuarto de descanso no sea un lugar de 210.8(A).",
       "sharma_note": "S-07: un breaker DFN suministra esta protección en circuitos de 120V, con un tomacorriente TR estándar en el aparato donde hay un tomacorriente.",
       "figure_idea": "",
       "related_ids": [
@@ -1098,7 +1301,130 @@
           "url": "https://dca.georgia.gov/document/public-notices/2023necchangespresentationpdf/download",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Cada aparato de esta lista mezcla electricidad con agua, manos mojadas o un piso mojado. Una bomba de sumidero está dentro de un pozo con agua, una hidrolavadora empapa a su operador y un lavaplatos puede derramar agua por el piso de la cocina. Una falla dentro del aparato puede poner el voltaje pleno de línea en su carcasa metálica, y la persona que la toca se convierte en el camino a tierra. La protección GFCI vigila la corriente que se fuga por donde no debe y abre el circuito en una fracción de segundo, antes de que esa carcasa pueda dar una descarga peligrosa.",
+      "exam_trap": "La respuesta trampa: «El cuarto de descanso no está en la lista de 210.8(A), así que la máquina expendedora no necesita GFCI». Incorrecto — 210.8(D) sigue al aparato, no al cuarto, en cualquier tipo de ocupación. Segunda trampa: escoger una estufa eléctrica o una secadora de ropa como requisito de 2020. Esos aparatos se agregaron en 2023; bajo la regla de 2020 anterior no están en la lista de (D).",
+      "inspection_fails": [
+        "Lavaplatos en un breaker estándar sin protección GFCI — el señalamiento de 210.8(D) más común que existe.",
+        "Bomba de sumidero en un tomacorriente sin protección porque el clóset del pozo «no es un lugar listado».",
+        "Máquina expendedora o estación para llenar botellas en un circuito sin protección en un cuarto de descanso comercial.",
+        "Protección GFCI eliminada después de disparos molestos (nuisance trips) en lugar de encontrar el aparato con la falla."
+      ],
+      "tables": [
+        {
+          "caption": "La lista de 2020, y dónde encuentra cada uno",
+          "headers": [
+            "Aparato",
+            "Dónde lo encuentra"
+          ],
+          "rows": [
+            [
+              "Lavaplatos",
+              "Casas, restaurantes, cuartos de descanso"
+            ],
+            [
+              "Bombas de sumidero",
+              "Pozos y estaciones de bombeo"
+            ],
+            [
+              "Máquinas expendedoras",
+              "Cuartos de descanso, lavanderías"
+            ],
+            [
+              "Enfriadores de agua potable, estaciones para llenar botellas",
+              "Oficinas, gimnasios, escuelas"
+            ],
+            [
+              "Máquinas para inflar neumáticos",
+              "Gasolineras, lavaderos de autos"
+            ],
+            [
+              "Máquinas de aspirado automotriz",
+              "Lavaderos de autos, talleres de detallado"
+            ],
+            [
+              "Hidrolavadoras de alta presión (cordón y enchufe)",
+              "Áreas de lavado, obras"
+            ]
+          ]
+        },
+        {
+          "caption": "2020 vs 2023 de un vistazo",
+          "headers": [
+            "Punto",
+            "NEC 2020",
+            "NEC 2023"
+          ],
+          "rows": [
+            [
+              "Dónde vive la lista",
+              "210.8(D) remite a 422.5(A)",
+              "210.8(D) nombra los aparatos directamente"
+            ],
+            [
+              "Aparatos agregados",
+              "—",
+              "Estufas eléctricas, hornos de pared, unidades de cocción de tope, secadoras de ropa, hornos de microondas"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-210.8D-appliance-test.svg",
+          "alt": "Diagrama de flujo de decisión para 210.8(D): primero pregunte si el aparato está en la lista de siete aparatos de 422.5(A), luego si es de 150 voltios o menos a tierra y 60 amps o menos; un sí en ambas termina en un recuadro verde que exige protección GFCI en cualquier ocupación, y un no remite a la lista de lugares de 210.8(A).",
+          "caption": "La prueba de (D): primero el aparato, segundo la capacidad, el cuarto nunca.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Se instala un lavaplatos en el cuarto de descanso de una oficina. Bajo el NEC 2020, ¿necesita protección GFCI?",
+          "choices": [
+            "No — los cuartos de descanso no están en la lista de 210.8(A)",
+            "Sí — 210.8(D) sigue al aparato, no al cuarto",
+            "Solo si está a menos de 6 ft de un fregadero",
+            "Solo en unidades de vivienda"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Los lavaplatos están en la lista de 422.5(A), y 210.8(D) aplica en cualquier tipo de ocupación.",
+          "nec_ref": "210.8(D)"
+        },
+        {
+          "question": "¿Qué aparato se unió a la lista GFCI de 210.8(D) solo en el NEC 2023?",
+          "choices": [
+            "Bomba de sumidero",
+            "Máquina expendedora",
+            "Secadora de ropa",
+            "Lavaplatos"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Las secadoras de ropa (con estufas, hornos, unidades de cocción y microondas) se agregaron en 2023; los otros tres ya estaban en la lista de 2020.",
+          "nec_ref": "210.8(D) (2023)"
+        },
+        {
+          "question": "La protección de aparatos de 422.5(A) aplica a aparatos de hasta:",
+          "choices": [
+            "125 V y 20 A",
+            "150 V a tierra y 60 A",
+            "250 V y 100 A",
+            "Cualquier voltaje y cualquier capacidad"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La lista cubre aparatos de 150 voltios o menos a tierra y 60 amps o menos.",
+          "nec_ref": "422.5(A)"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 210.8(D): 210.8(D) ahora nombra los aparatos: se agregaron estufas eléctricas, hornos de pared, unidades de cocción de tope, secadoras de ropa y hornos de microondas, en correlación con 422.5(A).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "210.8(D)",
+        "422.5(A)",
+        "210.8(A)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-210.8(F)",
@@ -1272,8 +1598,8 @@
       "article": "210",
       "section": "210.11(C)",
       "title": "Los circuitos nombrados de vivienda: cocina, lavandería, baño, garaje",
-      "plain_explanation": "Esta subsección nombra cuatro cosas. Al menos dos circuitos de 20A para aparatos pequeños sirven a los tomacorrientes de cocina, despensa, área de desayuno y comedor, con límites estrictos para otras salidas. Al menos un circuito de lavandería de 20A sirve al tomacorriente de la lavandería y a nada más fuera de esa área. Al menos un circuito de baño de 20A sirve a los tomacorrientes del baño o — solo para un único baño — puede llevar las demás salidas de ese baño. Y la edición 2020 agrega un circuito de garaje dedicado de 20A para los tomacorrientes requeridos del garaje, con un permiso limitado para tomacorrientes exteriores de fácil acceso.\n\nCAMBIO NEC 2023:\n• 210.11(C)(4): El texto se revisó en la Sección 210. l l(C)(4), aclarando que se permite que los circuitos derivados de 15 amperios sirvan las salidas de tomacorriente instaladas en un garaje de unidad de vivienda que sean adicionales a las salidas de tomacorriente requeridas por 210.52(G)(l).\n• 210.11(C)(4): Se agregó una nueva excepción (4) a la Sección 210.l l(C)(4), que permite que el circuito de 20 amperios que alimenta un garaje de una bahía para un solo vehículo alimente otros equipos de acuerdo con los requisitos de 210.23(A)(l) y (A)(2).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Identifique estos cuatro en el programa del tablero por su función de código, no por un apodo del cuarto, y revise los límites de «ninguna otra salida» antes de agregar un tomacorriente de conveniencia a cualquiera de ellos. La excepción del baño único es la trampa: no permite que un circuito lleve los tomacorrientes de dos baños más las luces.",
+      "plain_explanation": "Esta subsección nombra cuatro cosas. Al menos dos circuitos de 20A para aparatos pequeños sirven a los tomacorrientes de cocina, despensa, área de desayuno y comedor, con límites estrictos para otras salidas. Al menos un circuito de lavandería de 20A sirve al tomacorriente de la lavandería y a nada más fuera de esa área. Al menos un circuito de baño de 20A sirve a los tomacorrientes del baño o — solo para un único baño — puede llevar las demás salidas de ese baño. Y la edición 2020 agrega un circuito de garaje dedicado de 20A para los tomacorrientes requeridos del garaje, con un permiso limitado para tomacorrientes exteriores de fácil acceso.",
+      "on_the_job": "Programa del tablero para una casa de Florida de tres cuartos y dos baños, identificado por la función de código: espacios 1 y 3 «PEQ. ELECTRODOMÉSTICOS COCINA 1 / 2», espacio 5 «LAVANDERÍA — NINGUNA OTRA SALIDA», espacio 7 «TOMAC. BAÑO», espacio 9 «TOMAC. GARAJE», y la S-06 pone el microondas en su propio circuito de 20A en el espacio 11. Antes del trim-out, camine los límites de «ninguna otra salida»: el circuito de lavandería se detiene en la pared del cuarto de lavado, y el circuito de baño sirve los tomacorrientes de un solo baño — la excepción del baño único no le permite llevar los tomacorrientes del segundo baño más las luces.",
       "sharma_note": "S-06 se suma a esta lista: el microondas tiene su propio circuito de 20A, separado de los circuitos de aparatos pequeños. El calibre del cable está PENDIENTE (12 AWG de cobre frente a 10 AWG de CCA).",
       "figure_idea": "Cinco tramos identificados saliendo de un tablero: dos hacia los topes de cocina, uno hacia la lavandería, uno hacia el baño y uno hacia el garaje, cada uno con una etiqueta de «ninguna otra salida» donde aplica.",
       "related_ids": [
@@ -1300,19 +1626,121 @@
       "nec2023_change": [
         {
           "section": "210.11(C)(4)",
-          "change": "El texto se revisó en la Sección 210. l l(C)(4), aclarando que se permite que los circuitos derivados de 15 amperios sirvan las salidas de tomacorriente instaladas en un garaje de unidad de vivienda que sean adicionales a las salidas de tomacorriente requeridas por 210.52(G)(l).",
+          "change": "El texto se revisó en la Sección 210.11(C)(4), aclarando que se permite que los circuitos derivados de 15 amperios sirvan las salidas de tomacorriente instaladas en un garaje de unidad de vivienda que sean adicionales a las salidas de tomacorriente requeridas por 210.52(G)(1).",
           "source": "Carosella/NFPA-based 2023 NEC change workbook: 210.11{C){4) 210.11 Branch Circuits Required. {C) Dwelling Units. (4) Garage Branch Circuits",
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         },
         {
           "section": "210.11(C)(4)",
-          "change": "Se agregó una nueva excepción (4) a la Sección 210.l l(C)(4), que permite que el circuito de 20 amperios que alimenta un garaje de una bahía para un solo vehículo alimente otros equipos de acuerdo con los requisitos de 210.23(A)(l) y (A)(2).",
+          "change": "Se agregó una nueva excepción (4) a la Sección 210.11(C)(4), que permite que el circuito de 20 amperios que alimenta un garaje de una bahía para un solo vehículo alimente otros equipos de acuerdo con los requisitos de 210.23(A)(1) y (A)(2).",
           "source": "Carosella/NFPA-based 2023 NEC change workbook: 210.11{C){4) 210.11 Branch Circuits Required. {C) Dwelling Units. (4) Garage Branch Circuits. Exception",
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 210.11(C)(4): El texto se revisó en la Sección 210.11(C)(4), aclarando que se permite que los circuitos derivados de 15 amperios sirvan las salidas de tomacorriente instaladas en un garaje de unidad de vivienda que sean adicionales a las salidas de tomacorriente requeridas por 210.52(G)(1).\n• 210.11(C)(4): Se agregó una nueva excepción (4) a la Sección 210.11(C)(4), que permite que el circuito de 20 amperios que alimenta un garaje de una bahía para un solo vehículo alimente otros equipos de acuerdo con los requisitos de 210.23(A)(1) y (A)(2).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Estos cuatro circuitos alimentan las cargas con más probabilidad de conectarse y trabajar duro al mismo tiempo — aparatos de tope a la hora del desayuno, una lavadora a mitad de ciclo, secadores de pelo en la mañana. Dar a cada uno su propio circuito de 20A, y cercarlo de otras salidas, evita que un calentador en el pasillo o un refrigerador en un tramo compartido sea la razón de que un breaker se dispare — o de que se le suba la capacidad más allá del cable. Los límites de «ninguna otra salida» son lo que hace predecible la protección.",
+      "inspection_fails": [
+        "Tomacorriente del microondas conectado a un circuito de pequeños electrodomésticos — la S-06 da al microondas su propio circuito de 20A.",
+        "Circuito de lavandería extendido a un tomacorriente de pasillo fuera del área de lavandería.",
+        "Un circuito de 20A sirviendo tomacorrientes en dos baños.",
+        "Tomacorrientes del garaje alimentados desde un circuito de alumbrado general — sin circuito dedicado de garaje de 20A (210.11(C)(4))."
+      ],
+      "exam_trap": "La trampa del examen es la excepción del baño único: un circuito de 20A puede llevar los tomacorrientes de un baño más las demás salidas de ese mismo baño. La respuesta incorrecta la estira para alimentar los tomacorrientes de los dos baños «porque son del mismo tamaño de circuito». La excepción muere en el momento en que se agrega un segundo baño.",
+      "tables": [
+        {
+          "caption": "Los circuitos nombrados en 210.11(C)",
+          "headers": [
+            "Circuito",
+            "Mínimo",
+            "Sirve a",
+            "Límite"
+          ],
+          "rows": [
+            [
+              "Pequeños electrodomésticos × 2",
+              "20A cada uno",
+              "Tomacorrientes de cocina, despensa, área de desayuno y comedor",
+              "Ninguna otra salida fuera de esos cuartos"
+            ],
+            [
+              "Lavandería × 1",
+              "20A",
+              "La(s) salida(s) de tomacorriente de la lavandería",
+              "Nada fuera del área de lavandería"
+            ],
+            [
+              "Baño × 1",
+              "20A",
+              "Salidas de tomacorriente del baño",
+              "Solo un baño puede agregar sus demás salidas"
+            ],
+            [
+              "Garaje × 1",
+              "20A",
+              "Los tomacorrientes requeridos del garaje",
+              "También puede servir tomacorrientes exteriores de fácil acceso"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-210.11C-named-circuits.svg",
+          "alt": "Programa de tablero con seis tramos identificados: dos circuitos de 20A para pequeños electrodomésticos, un circuito de lavandería de 20A, un circuito de baño de 20A y un circuito de garaje de 20A, con los tramos de pequeños electrodomésticos y lavandería marcados «ninguna otra salida», más el microondas en su propio circuito de 20A según la regla S-06 de Sharma.",
+          "caption": "Cinco tramos con nombre de código, más el microondas en la S-06.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Mínimo de circuitos derivados de 20A para pequeños electrodomésticos en una vivienda?",
+          "choices": [
+            "1",
+            "2",
+            "3",
+            "Uno por tope"
+          ],
+          "answer_index": 1,
+          "explain_plain": "210.11(C)(1) requiere al menos dos circuitos de 20A para pequeños electrodomésticos para los tomacorrientes de cocina, despensa, área de desayuno y comedor.",
+          "nec_ref": "210.11(C)(1)"
+        },
+        {
+          "question": "El circuito de lavandería de 20A también puede servir:",
+          "choices": [
+            "Un tomacorriente de pasillo en la misma pared",
+            "El tomacorriente del baño vecino",
+            "Nada fuera del área de lavandería",
+            "El abridor del garaje"
+          ],
+          "answer_index": 2,
+          "explain_plain": "El circuito de lavandería sirve la(s) salida(s) de tomacorriente de la lavandería y ninguna otra salida fuera de esa área.",
+          "nec_ref": "210.11(C)(2)"
+        },
+        {
+          "question": "Según el NEC 2023, los tomacorrientes de un garaje de vivienda adicionales a los requeridos por 210.52(G)(1) pueden ser servidos por:",
+          "choices": [
+            "El circuito de alumbrado",
+            "Circuitos derivados de 15A",
+            "Un circuito de 20A compartido con la cocina",
+            "Solo un circuito dedicado de 30A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La revisión de 2023 a 210.11(C)(4) permite circuitos derivados de 15 amperios para los tomacorrientes adicionales del garaje.",
+          "nec_ref": "210.11(C)(4) (2023)"
+        }
+      ],
+      "code_refs": [
+        "210.11(C)(1)–(4)",
+        "210.52(G)(1)",
+        "210.23(A)(1)",
+        "210.23(A)(2)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-210.12",
@@ -1875,8 +2303,8 @@
       "article": "210",
       "section": "210.52(A)",
       "title": "Espaciamiento en paredes de cuartos habitables",
-      "plain_explanation": "En cocinas, salas familiares, dormitorios y los demás cuartos que lista esta subsección, los tomacorrientes se colocan de modo que ningún punto a lo largo de la línea del piso de una pared esté a más de 6 ft de un tomacorriente — lo que resulta en 12 ft como máximo entre tomacorrientes en un tramo. El espacio de pared se cuenta desde 2 ft de ancho en adelante, y la sección explica cómo cuentan los paneles fijos, los paneles deslizantes y los divisores de cuartos, y cuándo un tomacorriente de piso puede contar para el requisito. Un tomacorriente detrás de un aparato fijo o demasiado alto sobre el piso no hace el trabajo que este espaciamiento busca hacer.",
-      "on_the_job": "Mida a lo largo de la línea del piso, rodeando esquinas e interrupciones, tal como viaja en realidad el cordón de una lámpara. Marque los pedazos de pared de 2 ft — junto a una puerta, entre un clóset y una esquina — porque esos son los que se saltan.",
+      "plain_explanation": "En cocinas, salas familiares, dormitorios y los demás cuartos que lista esta subsección, los tomacorrientes se colocan de modo que ningún punto a lo largo de la línea del piso de una pared esté a más de 6 ft de un tomacorriente — lo que resulta en 12 ft como máximo entre tomacorrientes en un tramo (210.52(A)(1)). Mida a lo largo de la línea del piso y rodeando las esquinas: las esquinas no rompen un tramo de pared, pero las puertas, las chimeneas y los gabinetes fijos sin tope sí lo rompen. El espacio de pared se cuenta desde 2 ft de ancho en adelante, y los paneles fijos y los divisores fijos de cuarto cuentan como espacio de pared, mientras que los paneles deslizantes no (210.52(A)(2)). Un tomacorriente de piso cuenta solo cuando está a 18 in o menos de la pared (210.52(A)(3)), y un tomacorriente a más de 5½ ft sobre el piso, dentro de un gabinete o detrás de un aparato fijo no hace el trabajo que este espaciamiento busca hacer.",
+      "on_the_job": "Pared de dormitorio en una casa de Marion Oaks, 26 ft de largo con una abertura de puerta de 3 ft: mida a lo largo de la línea del piso desde el primer marco. Primer tramo, 10 ft: un tomacorriente cerca del centro deja todo punto a 6 ft o menos. Segundo tramo, 13 ft: dos tomacorrientes, a unas 6 ft y 12 ft del marco, cubren el final de la pared. Después marque los pedazos que las cuadrillas se saltan — el pedazo de 2 ft entre la puerta del clóset y la esquina es espacio de pared y necesita cobertura. Coloque las cajas a la altura de la S-04, 18 in hasta la parte inferior de la caja, y camine la pared con una cinta antes de perforar un solo hueco.",
       "sharma_note": "S-04 fija la altura de la caja cuando el plano no dice nada: 18 in hasta la parte inferior de la caja. S-05 fija las cajas de interruptores a 48 in hasta el centro bajo la misma condición.",
       "figure_idea": "Una elevación de pared con una cinta corriendo a lo largo de la línea del piso, con flechas que muestran 6 ft como máximo desde cualquier punto hasta el tomacorriente más cercano y 12 ft como máximo entre dos.",
       "related_ids": [
@@ -1894,7 +2322,113 @@
       "next_id": "C2-210.52(B)",
       "sharma_rule_ids": [
         "S-04"
-      ]
+      ],
+      "edition_note": "CAMBIO NEC 2023: No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "La regla está escrita alrededor del largo del cordón de una lámpara o un aparato. Si todo punto de la pared está a 6 ft o menos de un tomacorriente, los cordones llegan sin extensiones — y las extensiones bajo alfombras y a través de puertas son un riesgo permanente de incendio y de tropiezo. La regla de los 2 ft existe porque el pedazo corto de pared junto a una puerta es exactamente donde una lámpara o una aspiradora quiere conectarse.",
+      "inspection_fails": [
+        "Un pedazo de pared de 2 ft entre dos puertas quedó sin tomacorriente.",
+        "Primer tomacorriente a más de 6 ft de un marco de puerta o del borde de una chimenea.",
+        "Tomacorriente de piso colocado a 3 ft de la pared contado para el espaciamiento de pared.",
+        "Tomacorriente a más de 5½ ft contado como salida requerida."
+      ],
+      "exam_trap": "La trampa es reiniciar la cinta en cada esquina, como si cada pared fuera su propio tramo. Las esquinas no rompen el espacio de pared — la medida sigue la línea del piso rodeando la esquina, así que un tomacorriente justo después de la esquina puede cubrir el final de la pared anterior. Las puertas son lo contrario: rompen el tramo y la cuenta de 6 ft empieza otra vez en el marco.",
+      "tables": [
+        {
+          "caption": "Qué cuenta como espacio de pared (210.52(A)(2))",
+          "headers": [
+            "Elemento",
+            "¿Cuenta?",
+            "Nota"
+          ],
+          "rows": [
+            [
+              "Pedazo de pared de 2 ft o más",
+              "Sí",
+              "Incluso el pedazo junto a una puerta"
+            ],
+            [
+              "Panel fijo de vidrio",
+              "Sí",
+              "Se trata como espacio de pared"
+            ],
+            [
+              "Divisor fijo de cuarto",
+              "Sí",
+              "Se trata como espacio de pared"
+            ],
+            [
+              "Panel deslizante",
+              "No",
+              "Rompe el tramo de pared"
+            ],
+            [
+              "Tomacorriente de piso a 18 in o menos de la pared",
+              "Sí",
+              "210.52(A)(3)"
+            ],
+            [
+              "Tomacorriente a más de 5½ ft sobre el piso",
+              "No",
+              "No cuenta para el requisito"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-210.52A-floor-line.svg",
+          "alt": "Tramo de pared de 34 ft desenrollado y medido a lo largo de la línea del piso: tomacorrientes a 6, 18, 27 y 33 ft, cotas que muestran 6 ft como máximo hasta el primer tomacorriente y 12 ft como máximo entre tomacorrientes, una puerta que rompe el tramo, y un pedazo de pared de 2 ft que aun así cuenta.",
+          "caption": "La cinta sigue la línea del piso — las esquinas no la rompen, las puertas sí.",
+          "w": 900,
+          "h": 1380
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Ningún punto a lo largo de la línea del piso de una pared puede estar a más de ___ de un tomacorriente.",
+          "choices": [
+            "4 ft",
+            "6 ft",
+            "8 ft",
+            "12 ft"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El alcance desde cualquier punto es 6 ft, por eso dos tomacorrientes pueden quedar hasta a 12 ft de distancia.",
+          "nec_ref": "210.52(A)(1)"
+        },
+        {
+          "question": "¿El espacio de pared empieza a contar desde qué ancho?",
+          "choices": [
+            "1 ft",
+            "2 ft",
+            "4 ft",
+            "6 ft"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Todo espacio de pared de 2 ft o más cuenta, incluido el pedazo corto junto a una puerta.",
+          "nec_ref": "210.52(A)(2)"
+        },
+        {
+          "question": "Un tomacorriente de piso cuenta para 210.52(A) solo si está a:",
+          "choices": [
+            "6 in o menos de la pared",
+            "12 in o menos de la pared",
+            "18 in o menos de la pared",
+            "Cualquier punto del cuarto"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Un tomacorriente de piso cuenta solo cuando está ubicado a 18 in o menos de la pared.",
+          "nec_ref": "210.52(A)(3)"
+        }
+      ],
+      "code_refs": [
+        "210.52(A)(1)",
+        "210.52(A)(2)",
+        "210.52(A)(3)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-210.52(B)",
@@ -1962,8 +2496,8 @@
       "article": "210",
       "section": "210.52(D)",
       "title": "Tomacorrientes de baño",
-      "plain_explanation": "Cada baño necesita un tomacorriente cerca de cada lavamanos: dentro de 3 ft del borde exterior del lavamanos, en una pared o división junto a él, o en una de las otras posiciones que permite esta subsección. Un tocador doble tiene dos lavamanos y necesita cumplir el requisito para cada uno. Esta regla de ubicación funciona junto con la regla del circuito de baño en 210.11(C)(3) y la lista GFCI en 210.8(A) — las tres deben cumplirse en el mismo lavamanos.",
-      "on_the_job": "Mida desde el borde exterior del lavamanos, no desde el centro de la llave ni desde el borde del gabinete. En un tocador doble largo, un tomacorriente en el medio puede no estar dentro de 3 ft de ambos lavamanos — verifique los dos.",
+      "plain_explanation": "Cada baño necesita un tomacorriente cerca de cada lavamanos: dentro de 3 ft del borde exterior del lavamanos, en una pared o división junto a él, en la propia encimera en un conjunto listado, o en el costado o la cara del gabinete del lavamanos — y en ningún caso a más de 12 in por debajo de la parte superior del lavamanos o de la encimera. Un tocador doble tiene dos lavamanos y necesita cumplir el requisito para cada uno. Un tomacorriente ubicado entre dos lavamanos puede servir a ambos, pero solo si está dentro de 3 ft del borde exterior de cada uno. Esta regla de ubicación funciona junto con la regla del circuito de baño en 210.11(C)(3) y la lista GFCI en 210.8(A) — las tres deben cumplirse en el mismo lavamanos:\n• Circuito: al menos un circuito de baño de 20 A alimenta los tomacorrientes del baño (210.11(C)(3)).\n• Protección: los tomacorrientes de baño llevan protección GFCI (210.8(A)(1)).",
+      "on_the_job": "Mida desde el borde exterior del lavamanos, no desde el centro de la llave ni desde el borde del gabinete. En un tocador doble largo, un tomacorriente en el medio puede no estar dentro de 3 ft de ambos lavamanos — verifique los dos. En un tocador doble de 72 in en un baño principal de Marion Oaks, los lavamanos quedan cerca de los extremos: un tomacorriente en el extremo izquierdo de la encimera está a más de 3 ft del lavamanos derecho y no lo cumple. Centrado entre los lavamanos, el mismo tomacorriente queda dentro de 3 ft de cada uno y sí cumple. Marque con cinta el alcance de 3 ft en la pared durante el rough-in, antes de fijar las cajas.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1976,7 +2510,106 @@
       "verified": true,
       "prev_id": "C2-210.52(C)",
       "next_id": "C2-210.52(E)",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Las secadoras de pelo, las planchas para el cabello y las rasuradoras eléctricas viven en el lavamanos, en manos mojadas, sobre un piso duro. Un tomacorriente ubicado donde el aparato realmente se usa mantiene los cordones cortos y fuera del agua — y la protección GFCI exigida en el mismo lugar es lo que protege a la persona cuando algo sale mal.",
+      "exam_trap": "Sale la cinta métrica y la medición se toma desde el centro de la llave, o desde el centro del lavamanos. Ambas están mal: los 3 ft corren desde el borde exterior del lavamanos. La segunda trampa es 'un tomacorriente por baño' — la regla corre por lavamanos, así que un tocador doble puede necesitar cumplir el requisito dos veces.",
+      "inspection_fails": [
+        "Tomacorriente a 3 ft del centro de la llave, pero a más de 3 ft del borde exterior del lavamanos.",
+        "Un solo tomacorriente centrado en un tocador doble ancho, fuera del límite de 3 ft del lavamanos lejano.",
+        "Tomacorriente del lavamanos en la cara del gabinete, a más de 12 in por debajo de la parte superior de la encimera.",
+        "Tomacorriente de baño conectado a un circuito de iluminación en lugar del circuito de baño de 20 A.",
+        "Sin protección GFCI en el tomacorriente del baño."
+      ],
+      "tables": [
+        {
+          "caption": "Tres reglas en el mismo lavamanos",
+          "headers": [
+            "Regla",
+            "Requisito",
+            "Ref"
+          ],
+          "rows": [
+            [
+              "Ubicación",
+              "Tomacorriente dentro de 3 ft de cada lavamanos",
+              "210.52(D)"
+            ],
+            [
+              "Circuito",
+              "Circuito de baño de 20 A para los tomacorrientes",
+              "210.11(C)(3)"
+            ],
+            [
+              "Protección",
+              "Protección GFCI",
+              "210.8(A)(1)"
+            ]
+          ],
+          "note": "Un tomacorriente puede cumplir la regla de ubicación para dos lavamanos si está dentro de 3 ft del borde exterior de cada uno."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-210.52D-double-vanity.svg",
+          "alt": "Vista en planta de un tocador doble de 72 in con dos lavamanos: un tomacorriente centrado entre los lavamanos está dentro de 3 ft de cada borde de lavamanos, un tomacorriente en el extremo lejano está a más de 3 ft del lavamanos lejano, y una elevación muestra un tomacorriente en la cara del gabinete a no más de 12 in por debajo de la encimera.",
+          "caption": "Un tomacorriente puede servir a dos lavamanos — si está dentro de 3 ft de cada uno.",
+          "w": 900,
+          "h": 1330
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "La distancia de 3 ft del tomacorriente de baño se mide desde:",
+          "choices": [
+            "El centro de la llave",
+            "El borde exterior del lavamanos",
+            "El borde del gabinete del tocador",
+            "El centro del lavamanos"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La regla mide desde el borde exterior de cada lavamanos.",
+          "nec_ref": "210.52(D)"
+        },
+        {
+          "question": "Dos lavamanos están a 5 ft de distancia, de borde exterior a borde exterior. Un tomacorriente centrado entre ellos:",
+          "choices": [
+            "Siempre cumple",
+            "Cumple, porque está dentro de 3 ft de cada lavamanos",
+            "Nunca cumple",
+            "Cumple solo en un circuito de 15 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Centrado, queda a 2.5 ft del borde exterior de cada lavamanos — dentro del límite de 3 ft para ambos.",
+          "nec_ref": "210.52(D)"
+        },
+        {
+          "question": "Un tomacorriente en la cara del gabinete del lavamanos puede estar a no más de ___ por debajo de la parte superior del lavamanos o de la encimera:",
+          "choices": [
+            "6 in",
+            "12 in",
+            "18 in",
+            "No hay límite"
+          ],
+          "answer_index": 1,
+          "explain_plain": "En ningún caso el tomacorriente puede ubicarse a más de 12 in por debajo de la parte superior del lavamanos o de la encimera del lavamanos.",
+          "nec_ref": "210.52(D)"
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios del 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "210.52(D)",
+        "210.11(C)(3)",
+        "210.8(A)(1)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "210.52(D) permitted positions (wall or partition, countertop assembly, side or face of the basin cabinet) and the limit of not more than 12 in below the top of the basin or countertop",
+          "source": "Mike Holt, Article 210 — Receptacles in Dwellings, 210.52(D) discussion",
+          "url": "https://www.mikeholt.com/newsletters.php?action=display&letterID=1725&email="
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C2-210.52(E)",
@@ -3208,8 +3841,8 @@
       "article": "220",
       "section": "220.52",
       "title": "Asignaciones de pequeños electrodomésticos y lavandería — 1,500 VA cada una",
-      "plain_explanation": "En el método estándar, los circuitos de cocina y lavandería entran al cálculo con valores fijos en lugar de números de placa:\n• Cada circuito derivado de 20A para pequeños electrodomésticos — 1,500 VA (una vivienda tiene al menos dos, así que al menos 3,000 VA)\n• El circuito derivado de lavandería — 1,500 VA\nEstas asignaciones se suman primero a la carga general; después se aplica el factor de demanda de la Tabla 220.42 al total. Son solo asignaciones de cálculo — los circuitos mismos siguen cableados y protegidos como circuitos completos de 20A.",
-      "on_the_job": "Fragmento resuelto: dos circuitos de pequeños electrodomésticos (3,000 VA) más un circuito de lavandería (1,500 VA) ponen 4,500 VA en la carga general de todo cálculo de casa por el método estándar, antes de sumar siquiera el alumbrado por área de piso. Si su hoja de cálculo muestra menos de 4,500 VA en esas líneas, la hoja está mal.",
+      "plain_explanation": "En el método estándar, los circuitos de cocina y lavandería entran al cálculo con valores fijos en lugar de números de placa:\n• Cada circuito derivado de 20A para pequeños electrodomésticos — 1,500 VA (una vivienda tiene al menos dos, así que al menos 3,000 VA) — 220.52(A)\n• El circuito derivado de lavandería — 1,500 VA — 220.52(B)\nEstas asignaciones se suman primero a la carga general; después se aplica el factor de demanda de la Tabla 220.42 al total. Son solo asignaciones de cálculo — los circuitos mismos siguen cableados y protegidos como circuitos completos de 20A.",
+      "on_the_job": "Hoja de cálculo del método estándar para una casa de 1,500 sq ft en Marion Oaks. Alumbrado general: 1,500 sq ft × 3 VA (220.14(J)) = 4,500 VA. Pequeños electrodomésticos: dos circuitos × 1,500 VA = 3,000 VA. Lavandería: 1,500 VA. La carga general es 9,000 VA antes de la demanda. La Tabla 220.42 cuenta después los primeros 3,000 VA al 100 por ciento y los 6,000 VA restantes al 35 por ciento — 3,000 + 2,100 = 5,100 VA que pasan al resto del cálculo de la acometida. Si su hoja muestra menos de 4,500 VA en las líneas de pequeños electrodomésticos y lavandería juntas, la hoja está mal desde el inicio.",
       "sharma_note": "",
       "figure_idea": "Hoja de cálculo del método estándar con las líneas resaltadas: pequeños electrodomésticos × 2 = 3,000 VA, lavandería = 1,500 VA, alimentando el paso de demanda de 220.42.",
       "related_ids": [
@@ -3222,7 +3855,118 @@
       "verified": true,
       "prev_id": "C2-220.42",
       "next_id": "C2-220.53",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "CAMBIO NEC 2023: No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Ninguna casa hace funcionar todos los aparatos de tope y la lavadora a plena carga en el mismo momento, y no hay dos casas que carguen igual sus circuitos de cocina. Las asignaciones fijas ponen todo cálculo por el método estándar sobre la misma base: la acometida se dimensiona desde una imagen de estos circuitos fijada por el código, no desde los aparatos que estén en la obra el día que se hace el cálculo. El factor de demanda de la Tabla 220.42 hace después el trabajo de diversidad una sola vez, sobre toda la carga general.",
+      "inspection_fails": [
+        "La hoja cuenta un circuito de pequeños electrodomésticos (1,500 VA) — una vivienda siempre tiene al menos dos, así que la línea es 3,000 VA como mínimo.",
+        "Falta la asignación de lavandería en el cálculo del método estándar.",
+        "El factor de demanda de la Tabla 220.42 aplicado a cada línea por separado en vez de una sola vez a la carga general total.",
+        "Circuitos de pequeños electrodomésticos protegidos a menos de 20A porque «el cálculo solo cuenta 1,500 VA» — la asignación es un número de cálculo, no la capacidad del circuito."
+      ],
+      "exam_trap": "La respuesta incorrecta tentadora cuenta un solo circuito de pequeños electrodomésticos a 1,500 VA porque la cocina «solo tiene dibujado un circuito de tope». Una vivienda siempre tiene al menos dos circuitos de pequeños electrodomésticos (210.11(C)(1)), así que el piso es 3,000 VA — y cada circuito de pequeños electrodomésticos instalado entra a 1,500 VA, incluido un tercero para una isla.",
+      "tables": [
+        {
+          "caption": "Método estándar — carga general de una casa de 1,500 sq ft",
+          "headers": [
+            "Línea",
+            "Cálculo",
+            "VA"
+          ],
+          "rows": [
+            [
+              "Alumbrado general",
+              "1,500 sq ft × 3 VA",
+              "4,500"
+            ],
+            [
+              "Pequeños electrodomésticos (220.52(A))",
+              "2 circuitos × 1,500 VA",
+              "3,000"
+            ],
+            [
+              "Lavandería (220.52(B))",
+              "1 circuito × 1,500 VA",
+              "1,500"
+            ],
+            [
+              "Subtotal de carga general",
+              "",
+              "9,000"
+            ],
+            [
+              "Después de la demanda de la Tabla 220.42",
+              "3,000 al 100% + 6,000 al 35%",
+              "5,100"
+            ]
+          ],
+          "note": "Las cargas de aparatos, secadora, estufa y HVAC se calculan en sus propias secciones y se suman después de este paso."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-220.52-allowances.svg",
+          "alt": "Hoja de cálculo del método estándar: alumbrado general 4,500 VA, dos circuitos de pequeños electrodomésticos a 1,500 VA cada uno, un circuito de lavandería a 1,500 VA, un subtotal de 9,000 VA, y el factor de demanda de la Tabla 220.42 que lo reduce a 5,100 VA.",
+          "caption": "Las asignaciones entran antes del factor de demanda — nunca después.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Carga mínima de pequeños electrodomésticos en un cálculo de vivienda por el método estándar?",
+          "choices": [
+            "1,500 VA",
+            "3,000 VA",
+            "4,500 VA",
+            "El total de placa"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Una vivienda tiene al menos dos circuitos de pequeños electrodomésticos, y cada uno entra a 1,500 VA.",
+          "nec_ref": "220.52(A)"
+        },
+        {
+          "question": "El circuito derivado de lavandería entra al método estándar a:",
+          "choices": [
+            "500 VA",
+            "1,000 VA",
+            "1,500 VA",
+            "5,000 VA"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La asignación de lavandería es fija: 1,500 VA, igual que un circuito de pequeños electrodomésticos.",
+          "nec_ref": "220.52(B)"
+        },
+        {
+          "question": "Una carga general de 9,000 VA, después del factor de demanda de la Tabla 220.42, cuenta como:",
+          "choices": [
+            "9,000 VA",
+            "6,300 VA",
+            "5,100 VA",
+            "3,150 VA"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Los primeros 3,000 VA al 100 por ciento (3,000) más los 6,000 VA restantes al 35 por ciento (2,100) suman 5,100 VA.",
+          "nec_ref": "Tabla 220.42"
+        }
+      ],
+      "code_refs": [
+        "220.52",
+        "220.52(A)",
+        "220.52(B)",
+        "Table 220.42",
+        "220.14(J)",
+        "210.11(C)(1)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "220.52(A) asigna 1,500 VA a cada circuito derivado de pequeños electrodomésticos y cuenta cada circuito instalado; 220.52(B) asigna 1,500 VA al circuito derivado de lavandería",
+          "source": "Mike Holt, One-Family Dwelling Unit Load Calculations",
+          "url": "https://www.mikeholt.com/newsletters.php?action=display&letterID=1522&email="
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C2-220.53",
@@ -3347,8 +4091,8 @@
       "article": "220",
       "section": "220.82(B)",
       "title": "Método opcional — las cargas generales",
-      "plain_explanation": "El bloque de cargas generales comienza con el área de piso a 3 VA por pie cuadrado, agrega 1,500 VA por cada circuito de aparatos pequeños y por el circuito de lavandería, y agrega las capacidades de placa de los aparatos y motores que lista la subsección. Los primeros 10 kVA de ese total se toman a su valor completo y el resto al 40 por ciento. Ese paso de demanda es toda la ventaja del método opcional, y solo aplica a las cargas que cubre este bloque — la calefacción y el enfriamiento se tratan por separado en la parte siguiente.",
-      "on_the_job": "Cuente circuitos, no aparatos, para los bloques de 1,500 VA: se requieren dos circuitos de aparatos pequeños, y un tercero que esté instalado también cuenta. Use los VA de placa donde una capacidad se da en amps y voltios.",
+      "plain_explanation": "El bloque de cargas generales del método opcional se construye con:\n• Área de piso a 3 VA por pie cuadrado\n• 1,500 VA por cada circuito ramal de aparatos pequeños, y 1,500 VA por el circuito de lavandería\n• Las capacidades de placa de los aparatos y motores que lista la subsección — lavavajillas, triturador, calentador de agua y el resto que están fijos en su lugar o en un circuito específico\nDespués viene el paso de demanda: los primeros 10 kVA de ese total se toman a su valor completo, y el resto al 40 por ciento. Ese paso es toda la ventaja del método opcional, y solo aplica a las cargas que cubre este bloque — la calefacción y el enfriamiento se tratan por separado en la parte siguiente, 220.82(C).",
+      "on_the_job": "Cuente circuitos, no aparatos, para los bloques de 1,500 VA: se requieren dos circuitos de aparatos pequeños, y un tercero que esté instalado también cuenta. Use los VA de placa donde una capacidad se da en amps y voltios. Ejemplo resuelto, una casa de 2,000 pies cuadrados: área de piso 2,000 × 3 VA = 6,000 VA; circuitos de aparatos pequeños 2 × 1,500 = 3,000 VA; lavandería 1,500 VA; lavavajillas de placa 1,200 VA; triturador 900 VA; calentador de agua 4,500 VA. Total 17,100 VA. Los primeros 10,000 VA al 100 por ciento; los 7,100 VA restantes al 40 por ciento son 2,840 VA. Demanda general: 12,840 VA — antes de agregar calefacción y enfriamiento bajo (C).",
       "sharma_note": "",
       "figure_idea": "Una barra que muestra un total de carga general dividido en 10 kVA: el primer bloque al 100 por ciento y el resto al 40 por ciento.",
       "related_ids": [
@@ -3362,7 +4106,111 @@
       "verified": true,
       "prev_id": "C2-220.82",
       "next_id": "C2-220.82(C)",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Una casa nunca hace funcionar todo a la vez. El método estándar suma placas como si lo hiciera, y sobredimensiona la acometida; el método opcional incluye la diversidad en el precio — pero solo para las cargas de su lista. Si omite un bloque, como el circuito de lavandería, la acometida sale pequeña. Si agrega calefacción o enfriamiento aquí y otra vez en (C), sale grande. Ambos errores empiezan en este bloque.",
+      "exam_trap": "La trampa: aplicar el 40 por ciento a todo el total. En el ejemplo resuelto eso da 6,840 VA y una acometida demasiado pequeña. Los primeros 10 kVA siempre se toman a su valor completo — el 40 por ciento toca solo lo que está por encima. La trampa inversa es contar aparatos en lugar de circuitos para los bloques de 1,500 VA: tres circuitos de aparatos pequeños instalados cuentan 4,500 VA, aunque hoy solo dos tengan carga.",
+      "inspection_fails": [
+        "El cálculo de carga aplica el 40 por ciento a los primeros 10 kVA — el paso de demanda está al revés.",
+        "Solo se contó un circuito de aparatos pequeños; se requieren dos, y un tercero instalado también cuenta.",
+        "Los 1,500 VA del circuito de lavandería quedaron fuera de las cargas generales.",
+        "Carga de calefacción agregada en el bloque (B) y otra vez en (C) — contada dos veces."
+      ],
+      "tables": [
+        {
+          "caption": "Ejemplo resuelto: cargas generales, casa de 2,000 pies cuadrados",
+          "headers": [
+            "Bloque",
+            "VA"
+          ],
+          "rows": [
+            [
+              "Área de piso: 2,000 pies² × 3 VA",
+              "6,000"
+            ],
+            [
+              "Aparatos pequeños: 2 circuitos × 1,500 VA",
+              "3,000"
+            ],
+            [
+              "Circuito de lavandería",
+              "1,500"
+            ],
+            [
+              "Lavavajillas (placa)",
+              "1,200"
+            ],
+            [
+              "Triturador (placa)",
+              "900"
+            ],
+            [
+              "Calentador de agua (placa)",
+              "4,500"
+            ],
+            [
+              "Carga general total",
+              "17,100"
+            ]
+          ],
+          "note": "Demanda: primeros 10,000 VA al 100%; restantes 7,100 VA × 40% = 2,840 VA; demanda general = 12,840 VA. La calefacción y el enfriamiento se agregan bajo 220.82(C), no aquí."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-220.82B-demand-bar.svg",
+          "alt": "Gráfico de barras de las cargas generales de 220.82(B) para una casa de 2,000 pies cuadrados que totalizan 17,100 VA, y luego el paso de demanda: los primeros 10,000 VA al 100 por ciento más 7,100 VA al 40 por ciento igual a una demanda general de 12,840 VA.",
+          "caption": "El paso de 10 kVA: el primer bloque a valor completo, el resto al 40 por ciento.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Método opcional: ¿carga general de alumbrado y tomacorrientes para una vivienda de 1,800 pies cuadrados?",
+          "choices": [
+            "3,600 VA",
+            "5,400 VA",
+            "1,800 VA",
+            "6,000 VA"
+          ],
+          "answer_index": 1,
+          "explain_plain": "1,800 pies cuadrados × 3 VA por pie cuadrado = 5,400 VA.",
+          "nec_ref": "220.82(B)"
+        },
+        {
+          "question": "El bloque (B) totaliza 17,100 VA. La demanda general es…",
+          "choices": [
+            "6,840 VA",
+            "17,100 VA",
+            "12,840 VA",
+            "10,000 VA"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Primeros 10,000 VA al 100%, más 7,100 VA × 40% = 2,840 VA. Total 12,840 VA.",
+          "nec_ref": "220.82(B)"
+        },
+        {
+          "question": "Para los bloques de 1,500 VA de 220.82(B), usted cuenta…",
+          "choices": [
+            "Aparatos",
+            "Circuitos",
+            "Tomacorrientes",
+            "Cuartos"
+          ],
+          "answer_index": 1,
+          "explain_plain": "1,500 VA por cada circuito ramal de aparatos pequeños y por el circuito de lavandería — circuitos, no aparatos.",
+          "nec_ref": "220.82(B)"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023: No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "220.82",
+        "220.82(B)",
+        "220.82(C)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-220.82(C)",
@@ -3579,8 +4427,8 @@
       "article": "225",
       "section": "225.30",
       "title": "Cuántas alimentaciones pueden alimentar un edificio",
-      "plain_explanation": "La regla general es una: un edificio o estructura recibe un solo alimentador o circuito ramal, o un solo conjunto de alimentadores, sujeto a las excepciones que lista la sección para cosas como sistemas de emergencia y de reserva, bombas contra incendios y ciertas instalaciones grandes o controladas por separado. Dos alimentadores ordinarios llevados al mismo garaje separado porque dos tableros eran convenientes no es uno de los casos ordinarios. Donde se usa una excepción, el edificio debe llevar una placa o directorio permanente que muestre dónde están los demás desconectadores.",
-      "on_the_job": "Antes de llevar una segunda alimentación a una estructura que ya tiene una, nombre la excepción por escrito en el archivo del trabajo. Si no puede nombrar ninguna, rediseñe a un solo alimentador más grande y un subtablero.",
+      "plain_explanation": "La regla general es una: un edificio o estructura recibe un solo alimentador o circuito ramal, o un solo conjunto de alimentadores. Un circuito ramal multiconductor cuenta como un solo circuito aquí. Las alimentaciones adicionales se permiten solo mediante las excepciones:\n• (A) Condiciones especiales: bombas contra incendios, sistemas de emergencia, reserva legalmente requerida, reserva opcional, producción de energía en paralelo y sistemas diseñados para conectarse a múltiples fuentes para mayor confiabilidad\n• (B) Ocupaciones especiales, con permiso especial: edificios de ocupación múltiple donde no hay espacio para equipos de alimentación accesibles a todos los ocupantes, o un solo edificio tan grande que necesita dos o más alimentaciones\n• (C) Requisitos de capacidad: la capacidad necesaria supera los 2000 A con un voltaje de alimentación de 600 V o menos\n• (D) Características diferentes: voltajes, frecuencias o fases diferentes, o usos diferentes\n• (E) Procedimientos de conmutación documentados: instalaciones bajo una sola administración, con procedimientos seguros de conmutación documentados, establecidos y mantenidos\nDos alimentadores ordinarios llevados al mismo garaje separado porque dos tableros eran convenientes no es uno de los casos. Donde se usa una excepción, el edificio debe llevar una placa o directorio permanente que muestre dónde están los demás desconectadores.",
+      "on_the_job": "Un propietario en Ocala quiere un segundo alimentador de 100 A al taller para una soldadora, además del alimentador de 100 A que ya lo alimenta. Ninguna excepción cubre eso — la conveniencia no está en la lista. Antes de tender una segunda alimentación a una estructura que ya tiene una, nombre la excepción por escrito en el archivo del trabajo. Si no puede nombrar ninguna, rediseñe a un solo alimentador más grande y un subtablero con espacio para crecer. Cuando más adelante se agregue un generador de reserva, esa alimentación se ampara en (A) — con su propio desconectador y la placa del edificio actualizada para mostrarlo.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -3591,7 +4439,117 @@
       "verified": true,
       "prev_id": "C2-225.18",
       "next_id": "C2-225.31",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Cada alimentación adicional es otra forma de que un edificio permanezca energizado después de que alguien cree que está muerto. Un bombero, o el siguiente electricista, abre el desconectador que puede ver — y el segundo alimentador, tendido por conveniencia y sin documentar en ninguna parte, mantiene el edificio energizado. Una sola alimentación, o una placa que nombre las demás, es lo que hace que «apagado» signifique apagado.",
+      "exam_trap": "La trampa: «Cada alimentador tiene su propio desconectador, así que dos alimentadores a un edificio están bien». Incorrecto — los desconectadores no crean el permiso. Sin una excepción de (A) a (E), el edificio recibe una sola alimentación sin importar qué tan prolija esté instalada la segunda. Trampa secundaria: contar un circuito ramal multiconductor como dos alimentaciones. Cuenta como uno.",
+      "inspection_fails": [
+        "Segundo alimentador a un garaje separado sin excepción de 225.30 — «el dueño quería la soldadora aparte» no es una excepción.",
+        "Alimentación de reserva agregada bajo una excepción, pero sin placa ni directorio en el edificio que muestre dónde está el otro desconectador.",
+        "Desconectadores de dos alimentaciones dispersos por el edificio, sin agrupar ni identificar.",
+        "Dos alimentaciones bajo una sola administración sin procedimiento de conmutación documentado, donde la base reclamada era (E)."
+      ],
+      "tables": [
+        {
+          "caption": "Las excepciones de un vistazo",
+          "headers": [
+            "225.30",
+            "Cubre"
+          ],
+          "rows": [
+            [
+              "(A) Condiciones especiales",
+              "Bombas contra incendios, emergencia, reserva, energía en paralelo"
+            ],
+            [
+              "(B) Ocupaciones especiales",
+              "Con permiso especial: ocupación múltiple, edificios muy grandes"
+            ],
+            [
+              "(C) Capacidad",
+              "Más de 2000 A a 600 V o menos"
+            ],
+            [
+              "(D) Características diferentes",
+              "Voltaje, frecuencia, fases o uso diferentes"
+            ],
+            [
+              "(E) Conmutación documentada",
+              "Una sola administración, procedimientos escritos"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-225.30-one-supply.svg",
+          "alt": "Diagrama de flujo de 225.30: un edificio con una alimentación necesita una excepción nombrada de 225.30(A) a (E) antes de poder agregar una segunda; de lo contrario, un solo alimentador más grande y un subtablero.",
+          "caption": "Una alimentación por edificio — la segunda necesita una excepción nombrada.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Bajo la regla general, ¿cuántos alimentadores pueden suministrar un edificio?",
+          "choices": [
+            "Tantos como tengan sus propios desconectadores",
+            "Uno, a menos que aplique una excepción de 225.30",
+            "Dos en residencial, más en comercial",
+            "Sin límite, si cada uno va en su propia canalización"
+          ],
+          "answer_index": 1,
+          "explain_plain": "225.30 permite un alimentador o circuito ramal, o un conjunto de alimentadores, a menos que aplique una excepción de (A) a (E).",
+          "nec_ref": "225.30"
+        },
+        {
+          "question": "La excepción por capacidad permite alimentaciones adicionales cuando la capacidad requerida supera…",
+          "choices": [
+            "1000 A a 1000 V o menos",
+            "2000 A a 600 V o menos",
+            "2000 A a cualquier voltaje",
+            "600 A a 600 V o menos"
+          ],
+          "answer_index": 1,
+          "explain_plain": "225.30(C): capacidad que supera los 2000 amperes con un voltaje de alimentación de 600 volts o menos.",
+          "nec_ref": "225.30(C)"
+        },
+        {
+          "question": "Para 225.30, un circuito ramal multiconductor cuenta como…",
+          "choices": [
+            "Dos alimentaciones",
+            "Un circuito",
+            "Una acometida",
+            "Una excepción"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Un circuito ramal multiconductor se considera un solo circuito para esta sección.",
+          "nec_ref": "225.30"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023: No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "225.30",
+        "225.30(A)",
+        "225.30(B)",
+        "225.30(C)",
+        "225.30(D)",
+        "225.30(E)",
+        "225.31"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "225.30(A)–(E) exception list; capacity exception is in excess of 2000 A at 600 V or less; a multiwire branch circuit counts as a single circuit",
+          "source": "Mike Holt forum, 225.30 Number of Supplies text",
+          "url": "https://forums.mikeholt.com/threads/other-structure-circuit-requirements.113435/"
+        },
+        {
+          "claim": "Five conditions under which the single feeder/branch-circuit limit may be exceeded, 225.30(A)–(E)",
+          "source": "EC&M, Structures Supplied by Other Than a Service, Part 4",
+          "url": "https://www.ecmweb.com/mro-insider/article/20897713/structures-supplied-by-other-than-a-service-part-4"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C2-225.31",
@@ -3890,8 +4848,8 @@
       "article": "230",
       "section": "230.42",
       "title": "Tamaño y capacidad mínimos de los conductores de entrada de acometida",
-      "plain_explanation": "Los conductores de entrada de acometida se dimensionan para la carga calculada del Artículo 220 — el cálculo, no el tamaño del tablero que se pidió, pone el piso. La ampacidad del conductor debe llevar la carga y coordinarse con la protección contra sobrecorriente de la acometida; para una vivienda unifamiliar la acometida misma no puede ser menor de 100A (esa regla de capacidad está en la página de 230.79(C)), y las acometidas de vivienda y los alimentadores de carga total pueden usar la regla de dimensionamiento del 83 por ciento tratada en el Capítulo 3 en 310.12. Un tablero de 200A alimentado por conductores dimensionados para 100A de carga calculada no es una acometida de 200A.",
-      "on_the_job": "Haga el cálculo del Artículo 220 antes de pedir el equipo de acometida, y guarde la hoja en el expediente del trabajo. Si la carga calculada cae cerca del siguiente tamaño estándar, eso es una conversación para la oficina — no una decisión de campo de redondear los conductores hacia abajo.",
+      "plain_explanation": "Los conductores de entrada de acometida se dimensionan para la carga calculada del Artículo 220 — el cálculo, no el tamaño del tablero que se pidió, pone el piso. La ampacidad del conductor debe llevar la carga y coordinarse con la protección contra sobrecorriente de la acometida. Para una vivienda unifamiliar el interruptor de acometida mismo no puede ser menor de 100A (esa regla de capacidad está en la página de 230.79(C)), y las acometidas de vivienda y los alimentadores de carga total pueden usar la regla de dimensionamiento del 83 por ciento tratada en el Capítulo 3 en 310.12 — para acometidas de 100A a 400A que llevan toda la carga de la vivienda. Un tablero de 200A alimentado por conductores dimensionados para 100A de carga calculada no es una acometida de 200A.",
+      "on_the_job": "Use el ejemplo resuelto del método opcional de este libro (220.82): una casa de 1,800 sq ft cuyo cálculo aterriza en 25,160 VA — unas 105 A a 240 V. El piso de 100A de 230.79(C) no salva aquí una acometida de 100A: los conductores y el interruptor deben llevar 105 A, así que la acometida se construye en el siguiente tamaño. En papel, la misma casa con un tablero de 200A y conductores dimensionados para solo 100A de carga seguiría siendo una instalación clase 100A con una etiqueta de 200A. Haga el cálculo del Artículo 220 antes de pedir el equipo de acometida, y guarde la hoja en el expediente del trabajo — si el cálculo cae cerca del siguiente tamaño estándar, eso es una conversación para la oficina, no una decisión de campo de redondear los conductores hacia abajo.",
       "sharma_note": "",
       "figure_idea": "Línea de flujo: carga del Artículo 220 → ampacidad del conductor (o 310.12 para una vivienda) → capacidad del interruptor de acometida → tablero, con «el tamaño del tablero por sí solo» tachado como punto de partida.",
       "related_ids": [
@@ -3903,7 +4861,105 @@
       "verified": true,
       "prev_id": "C2-230.28",
       "next_id": "C2-230.54",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "CAMBIO NEC 2023: No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Los conductores dimensionados por debajo de la carga real se calientan durante toda la vida de la casa, y la falla aparece años después como aislamiento cocido dentro de una pared o en una base de medidor. Dimensionar desde el cálculo — no desde la etiqueta del tablero ni desde la hoja de ventas — es lo que mantiene honesta la acometida: el cable, el interruptor y la carga cuentan la misma historia cuando un inspector o el próximo electricista la abre.",
+      "inspection_fails": [
+        "Conductores de acometida dimensionados según la etiqueta del tablero en vez de la carga calculada del Artículo 220.",
+        "Tablero de 200A instalado sobre conductores dimensionados para una carga de 100A y presentado como acometida de 200A.",
+        "Tabla 310.12 usada para un alimentador que lleva solo parte de la carga de la vivienda.",
+        "Interruptor de acometida por debajo de la carga calculada porque «100A es el mínimo de la casa»."
+      ],
+      "exam_trap": "La respuesta incorrecta dimensiona los conductores según el tablero: «tablero de 200A, entonces conductores de 200A» — o peor, «tablero de 200A, conductores los que hubiera en el camión». 230.42 corre al revés: el cálculo del Artículo 220 fija el tamaño del conductor, el interruptor debe ser al menos la carga calculada, y la capacidad del tablero es solo el último número de la cadena.",
+      "tables": [
+        {
+          "caption": "Tabla 310.12 — conductores de acometida de vivienda y de alimentador de carga total (regla del 83 por ciento)",
+          "headers": [
+            "Capacidad de la acometida",
+            "Cobre",
+            "Aluminio"
+          ],
+          "rows": [
+            [
+              "100A",
+              "4 AWG",
+              "2 AWG"
+            ],
+            [
+              "125A",
+              "2 AWG",
+              "1/0 AWG"
+            ],
+            [
+              "150A",
+              "1 AWG",
+              "2/0 AWG"
+            ],
+            [
+              "200A",
+              "2/0 AWG",
+              "4/0 AWG"
+            ]
+          ],
+          "note": "Acometidas monofásicas de vivienda y alimentadores que llevan toda la carga de la vivienda, de 100A a 400A, donde no aplican factores de ajuste ni de corrección. Página fuente: C3-310.12."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-230.42-flow.svg",
+          "alt": "Diagrama de flujo para dimensionar los conductores de entrada de acometida: primero el cálculo del Artículo 220, después la ampacidad del conductor, después la capacidad del interruptor, y al final la capacidad del tablero — con empezar por el tamaño del tablero marcado como el camino incorrecto.",
+          "caption": "El cálculo primero, el tablero al final.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Qué fija el tamaño mínimo de los conductores de entrada de acometida?",
+          "choices": [
+            "La capacidad del tablero",
+            "La carga calculada del Artículo 220",
+            "El tamaño del transformador de la compañía",
+            "El breaker más grande del tablero"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Los conductores se dimensionan para la carga calculada; el tablero que se pidió no pone el piso.",
+          "nec_ref": "230.42"
+        },
+        {
+          "question": "Según la Tabla 310.12, una acometida de vivienda de 200A puede correrse con:",
+          "choices": [
+            "Cobre de 2 AWG",
+            "Cobre de 2/0 o aluminio de 4/0",
+            "Solo cobre de 4/0",
+            "Aluminio de 1/0"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La Tabla 310.12 empareja una acometida de vivienda de 200A con conductores de cobre de 2/0 o aluminio de 4/0.",
+          "nec_ref": "310.12"
+        },
+        {
+          "question": "Una casa calcula 105 A. El interruptor de acometida debe ser al menos:",
+          "choices": [
+            "100 A, el mínimo de vivienda",
+            "105 A — al menos la carga calculada",
+            "150 A",
+            "200 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El valor de 100A en 230.79(C) es un piso, no un tope: la capacidad también debe ser al menos la carga calculada.",
+          "nec_ref": "230.42, 230.79(C)"
+        }
+      ],
+      "code_refs": [
+        "230.42",
+        "230.79(C)",
+        "310.12",
+        "220.82"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-230.54",
@@ -3933,8 +4989,8 @@
       "article": "230",
       "section": "230.67",
       "title": "Protección contra sobretensiones en la acometida",
-      "plain_explanation": "Nuevo en la edición 2020, esta sección exige protección contra sobretensiones cuando una acometida suministra una vivienda: un dispositivo de protección contra sobretensiones listado Tipo 1 o Tipo 2, instalado en el equipo de acometida o junto a él, con las reglas de capacidad y conexión que indica la sección. También aplica cuando se reemplaza el equipo de acometida. Protege los aparatos electrónicos de la casa contra sobretensiones que llegan por la acometida; no es protección contra rayos ni sustituye la protección a nivel de equipo para aparatos sensibles.\n\nCAMBIO NEC 2023:\n• 215.18 / 225.42 / 242.2: La regla del SPD se extendió a los alimentadores: los nuevos 215.18 y 225.42 exigen un SPD Tipo 1 o Tipo 2 (10 kA In mínimo) donde un alimentador alimenta una unidad de vivienda, una unidad de dormitorio, una habitación de huéspedes de hotel/motel o un área de dormitorio de un hogar de ancianos. El Artículo 242 en sí no es nuevo en 2023 (era nuevo en 2020); 2023 agrega 242.2 (los SPD y los descargadores de sobretensión no pueden reacondicionarse).\n• 230.67: La protección contra sobretensiones en la acometida ahora llega a las unidades de dormitorio, las suites y habitaciones de huéspedes de hoteles y moteles y las áreas de dormitorio de pacientes de hogares de ancianos. El dispositivo en sí ahora necesita una capacidad nominal de corriente de descarga mínima de 10 kA. Las unidades de dormitorio y las habitaciones y suites de huéspedes de hoteles y moteles se unieron a las unidades de vivienda: sus acometidas ahora necesitan un dispositivo de protección contra sobretensiones (SPD).\n• 242.9: A partir de 2023, cada dispositivo de protección contra sobretensiones (SPD) debe mostrar si sigue funcionando, para que cualquiera pueda saber cuándo se perdió la protección. Cada SPD ahora necesita una forma de mostrar que está funcionando correctamente (242.9).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Confirme que el SPD está en la lista de materiales de cada acometida nueva de casa y de cada cambio de acometida, y que su ubicación — integrado al tablero o en un gabinete junto a él — esté dibujada antes de la instalación en bruto. Un dispositivo contra sobretensiones que se queda en el camión es un punto fallado.",
+      "plain_explanation": "Nuevo en la edición 2020, esta sección exige protección contra sobretensiones cuando una acometida suministra una unidad de vivienda: un dispositivo de protección contra sobretensiones (SPD) listado Tipo 1 o Tipo 2, instalado en el equipo de acometida o en un gabinete justo al lado. La regla también muerde en el reemplazo: cuando se reemplaza el equipo de acometida de una vivienda, el equipo nuevo también necesita el SPD. El dispositivo limita (clamps) las sobretensiones que llegan por los conductores de la acometida y las desvía a tierra antes de que puedan extenderse por el cableado de la casa. No es un sistema de protección contra rayos ni sustituye la protección a nivel de equipo para aparatos sensibles.",
+      "on_the_job": "En cada acometida nueva de casa de Sharma — un medidor-principal (meter-main) Siemens de 200 A en Marion Oaks, por ejemplo — el SPD va en la lista de materiales con el equipo de acometida (S-02), integrado al meter-main o en su propio gabinete junto a él, y dibujado en el croquis de la acometida antes de la instalación en bruto. Confirme lo mismo en cada cambio de acometida. El error que reprueba inspecciones es la reparación por tormenta: un meter-main dañado cambiado por otro igual sin SPD, porque «solo reemplazamos lo que había». La Sección 230.67 cuenta ese reemplazo como un disparador. Un dispositivo contra sobretensiones que se queda en el camión es un punto fallado.",
       "sharma_note": "S-02: el equipo nuevo es Siemens, así que la elección del SPD sigue al equipo de acometida Siemens en los trabajos de Sharma.",
       "figure_idea": "Un tablero con un dispositivo integral contra sobretensiones mostrado junto al breaker principal y una conexión de cable corto dibujada.",
       "related_ids": [
@@ -3973,7 +5029,128 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/242-9",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Florida es tierra de rayos, pero la mayoría de las sobretensiones dañinas nunca vienen de un impacto directo. Las maniobras de la compañía eléctrica y los rayos que caen a cuadras de distancia empujan un pico de voltaje por la acometida, y ese pico busca la tarjeta más débil de la casa — la tarjeta de control del manejador de aire, la tarjeta del refrigerador, el televisor. Un SPD en la acometida recibe la sobretensión en la puerta y descarga su energía a tierra mientras todavía es lo bastante pequeña para manejarla, en lugar de dejar que se reparta entre cada aparato electrónico del hogar.",
+      "exam_trap": "La respuesta trampa: una regleta con supresor en el televisor satisface 230.67. No — una regleta es un dispositivo Tipo 3 de punto de uso, y la regla quiere un SPD listado Tipo 1 o Tipo 2 en el equipo de acometida. Segunda trampa: «Los SPD son solo para construcción nueva». Reemplazar el equipo de acometida de una vivienda existente dispara la misma regla.",
+      "inspection_fails": [
+        "Acometida nueva de vivienda sin ningún SPD instalado — la regla de 2020 todavía se pasa por alto en la obra.",
+        "Equipo de acometida reemplazado tras daño por tormenta, por otro igual, sin agregar el SPD.",
+        "Una regleta Tipo 3 con enchufe presentada como el dispositivo de protección contra sobretensiones de la acometida.",
+        "SPD conectado en un subtablero aguas abajo en lugar de en el equipo de acometida o junto a él.",
+        "SPD instalado pero muerto — indicador de estado apagado — y dejado en servicio."
+      ],
+      "tables": [
+        {
+          "caption": "La regla de 2020 de un vistazo",
+          "headers": [
+            "Punto",
+            "Requisito"
+          ],
+          "rows": [
+            [
+              "Ocupación",
+              "Acometidas que suministran unidades de vivienda"
+            ],
+            [
+              "Dispositivo",
+              "SPD listado Tipo 1 o Tipo 2"
+            ],
+            [
+              "Ubicación",
+              "En el equipo de acometida, o en un gabinete junto a él"
+            ],
+            [
+              "Disparador",
+              "Acometida nueva — y reemplazo del equipo de acometida"
+            ]
+          ]
+        },
+        {
+          "caption": "2020 vs 2023 de un vistazo",
+          "headers": [
+            "Punto",
+            "NEC 2020",
+            "NEC 2023"
+          ],
+          "rows": [
+            [
+              "Ocupaciones",
+              "Unidades de vivienda",
+              "Agrega unidades de dormitorio, habitaciones y suites de huéspedes de hotel/motel y áreas de dormitorio de pacientes de hogares de ancianos"
+            ],
+            [
+              "Capacidad del dispositivo",
+              "Listado Tipo 1 o Tipo 2",
+              "Agrega una corriente nominal de descarga (In) mínima de 10 kA"
+            ],
+            [
+              "Alimentadores",
+              "No cubiertos",
+              "215.18 y 225.42 agregan SPD en alimentadores a las mismas ocupaciones"
+            ],
+            [
+              "Indicación de estado",
+              "No tratado",
+              "242.9 exige que cada SPD muestre que sigue funcionando"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-230.67-spd-service.svg",
+          "alt": "Elevación de la acometida de una casa: una sobretensión llega por la acometida aérea, un meter-main Siemens está montado en la pared, y un dispositivo de protección contra sobretensiones en un gabinete pequeño junto a él, con conductores cortos y rectos, desvía la sobretensión por el conductor del electrodo de puesta a tierra hasta la varilla de tierra, manteniéndola fuera del tablero de la casa.",
+          "caption": "El SPD se sienta en la acometida y recibe la sobretensión en la puerta.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "NEC 2020: una acometida nueva de 200 A suministra una casa unifamiliar. ¿Qué protección contra sobretensiones se exige?",
+          "choices": [
+            "Ninguna — la protección contra sobretensiones es opcional",
+            "Un SPD listado Tipo 1 o Tipo 2 en el equipo de acometida",
+            "Una regleta con supresor en el tablero",
+            "Un SPD Tipo 3 en el primer tomacorriente"
+          ],
+          "answer_index": 1,
+          "explain_plain": "230.67 exige un SPD listado Tipo 1 o Tipo 2 en las acometidas que suministran unidades de vivienda.",
+          "nec_ref": "230.67"
+        },
+        {
+          "question": "Un meter-main dañado por una tormenta en una casa existente se reemplaza por otro igual. ¿Se exige un SPD?",
+          "choices": [
+            "Sí — reemplazar el equipo de acometida dispara 230.67",
+            "No — la casa ya existe",
+            "Solo si también se reemplaza el tablero interior",
+            "Solo en acometidas de más de 200 A"
+          ],
+          "answer_index": 0,
+          "explain_plain": "La regla aplica a acometidas nuevas y cuando se reemplaza el equipo de acometida.",
+          "nec_ref": "230.67"
+        },
+        {
+          "question": "¿Dónde debe instalarse el SPD de 230.67?",
+          "choices": [
+            "En el equipo de acometida o junto a él",
+            "En el tomacorriente más lejano del tablero",
+            "En el primer subtablero aguas abajo",
+            "En el poste de la compañía eléctrica"
+          ],
+          "answer_index": 0,
+          "explain_plain": "El SPD va en el equipo de acometida o en un gabinete justo al lado, donde sus conductores quedan cortos.",
+          "nec_ref": "230.67"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 215.18 / 225.42 / 242.2: La regla del SPD se extendió a los alimentadores: los nuevos 215.18 y 225.42 exigen un SPD Tipo 1 o Tipo 2 (10 kA In mínimo) donde un alimentador alimenta una unidad de vivienda, una unidad de dormitorio, una habitación de huéspedes de hotel/motel o un área de dormitorio de un hogar de ancianos. El Artículo 242 en sí no es nuevo en 2023 (era nuevo en 2020); 2023 agrega 242.2 (los SPD y los descargadores de sobretensión no pueden reacondicionarse).\n• 230.67: La protección contra sobretensiones en la acometida ahora llega a las unidades de dormitorio, las suites y habitaciones de huéspedes de hoteles y moteles y las áreas de dormitorio de pacientes de hogares de ancianos. El dispositivo en sí ahora necesita una capacidad nominal de corriente de descarga mínima de 10 kA. Las unidades de dormitorio y las habitaciones y suites de huéspedes de hoteles y moteles se unieron a las unidades de vivienda: sus acometidas ahora necesitan un dispositivo de protección contra sobretensiones (SPD).\n• 242.9: A partir de 2023, cada dispositivo de protección contra sobretensiones (SPD) debe mostrar si sigue funcionando, para que cualquiera pueda saber cuándo se perdió la protección. Cada SPD ahora necesita una forma de mostrar que está funcionando correctamente (242.9).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "230.67",
+        "Article 242"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-230.70",
@@ -3981,8 +5158,8 @@
       "article": "230",
       "section": "230.70",
       "title": "Dónde va el desconectador de acometida",
-      "plain_explanation": "El desconectador de acometida debe ser de fácil acceso y estar en uno de los lugares que permite esta sección: fuera del edificio, o adentro cerca del punto donde los conductores de acometida entran, sujeto a la redacción de 2020 y a lo que el AHJ acepte para la longitud de conductor en el interior. Cada ocupante también necesita acceso a medios de desconexión para su propio espacio en los tipos de ocupación que cubre la sección. El desconectador es aquello desde lo cual se juzga todo lo que sigue aguas abajo — es donde termina la acometida y comienzan los alimentadores y circuitos ramales.",
-      "on_the_job": "Decida la ubicación del desconectador teniendo en mente la práctica local del inspector antes de construir la acometida, especialmente en un cambio de acometida donde se reutiliza una ubicación interior antigua. Mantenga despejado el camino hacia él y marcada la ubicación.",
+      "plain_explanation": "El medio de desconexión de la acometida debe ser:\n• De fácil acceso\n• Fuera del edificio, o adentro cerca del punto donde los conductores de acometida entran (230.70(A)(1))\nEsa es la lista de lugares donde puede ir, sujeto a la redacción de 2020 y a lo que el AHJ acepte para la longitud de conductor en el interior. Cada ocupante también necesita acceso a medios de desconexión para su propio espacio en los tipos de ocupación que cubre la sección. El desconectador es aquello desde lo cual se juzga todo lo que sigue aguas abajo — es donde termina la acometida y comienzan los alimentadores y circuitos ramales.",
+      "on_the_job": "El estándar de Sharma es S-09, la distribución espalda con espalda: medidor en la pared exterior, tablero directamente detrás de él, de modo que los conductores de acometida en el interior se miden en pulgadas, no en pies. Decida la ubicación del desconectador teniendo en mente la práctica local del inspector antes de construir la acometida, especialmente en un cambio de acometida donde se reutiliza una ubicación interior antigua — un AHJ que quiere un desconectador exterior no aceptará «ya estaba ahí». Mantenga despejado el camino hacia él y marcada la ubicación. En una casa, no confunda esto con el desconectador de emergencia de 230.85: ese es un interruptor exterior separado para los primeros respondedores, no el propio desconectador de acometida.",
       "sharma_note": "La distribución espalda con espalda de S-09 pone el tablero directamente detrás del medidor, lo que mantiene los conductores de acometida dentro del edificio en el tramo práctico más corto.",
       "figure_idea": "",
       "related_ids": [
@@ -3996,7 +5173,98 @@
       "next_id": "C2-230.71",
       "sharma_rule_ids": [
         "S-09"
-      ]
+      ],
+      "why_it_exists": "Los conductores antes del desconectador no tienen protección contra sobrecorriente del lado del inmueble — solo el fusible de la compañía eléctrica, lejos y lento. Cada pie de ese conductor sin fusible dentro del edificio es una falla esperando arder hasta que la compañía corte. Poner el desconectador afuera, o pegado al punto de entrada, mantiene el tramo sin protección lo más corto posible — y el fácil acceso significa que cualquiera puede matar el edificio en una emergencia.",
+      "exam_trap": "La respuesta trampa: «El desconectador de acometida puede ir en cualquier lugar del interior, siempre que sea de fácil acceso». Incorrecto — adentro significa cerca del punto de entrada. Un tablero en el extremo opuesto de la casa, alimentado por un tramo largo de conductor sin fusible por el ático, incumple la regla de ubicación aunque cualquiera pueda alcanzarlo.",
+      "inspection_fails": [
+        "Desconectador de acometida muy adentro del edificio con un tramo largo de conductor sin fusible, y sin aceptación del AHJ para la longitud interior.",
+        "Desconectador detrás de una puerta con llave o bloqueado por material almacenado — no es de fácil acceso.",
+        "Un inquilino en un edificio de ocupación múltiple no puede alcanzar el medio de desconexión de su propio espacio.",
+        "Cambio de acometida reconstruido en la ubicación interior antigua sin confirmar que el AHJ aún la acepta."
+      ],
+      "tables": [
+        {
+          "caption": "Dónde puede ir",
+          "headers": [
+            "Ubicación",
+            "Regla"
+          ],
+          "rows": [
+            [
+              "Fuera del edificio",
+              "Permitido; de fácil acceso"
+            ],
+            [
+              "Adentro",
+              "Solo cerca del punto de entrada"
+            ],
+            [
+              "Muy adentro",
+              "Tramo largo sin fusible — decide el AHJ; espere un no"
+            ],
+            [
+              "Estándar Sharma (S-09)",
+              "Espalda con espalda: tablero detrás del medidor"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-230.70-disconnect-location.svg",
+          "alt": "Elevación de la pared de una casa con tres ubicaciones del desconectador de acometida: afuera junto al medidor, el tablero directamente detrás del medidor en la distribución espalda con espalda, y un tablero muy adentro de la casa marcado como no permitido.",
+          "caption": "Afuera, o adentro cerca de la entrada — la espalda con espalda lo deja en pulgadas.",
+          "w": 900,
+          "h": 1460
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un desconectador de acometida instalado dentro de un edificio debe ubicarse…",
+          "choices": [
+            "En el cuarto eléctrico",
+            "Cerca del punto de entrada de los conductores de acometida",
+            "Dentro de 25 ft del medidor",
+            "Junto al tablero más lejano"
+          ],
+          "answer_index": 1,
+          "explain_plain": "230.70(A)(1): adentro significa cerca del punto de entrada — el tramo sin fusible queda lo más corto posible.",
+          "nec_ref": "230.70(A)(1)"
+        },
+        {
+          "question": "¿Por qué la ubicación interior se pega al punto de entrada?",
+          "choices": [
+            "Para ahorrar costo de conductor",
+            "Los conductores antes del desconectador no tienen protección contra sobrecorriente del lado del inmueble",
+            "Por conveniencia del inspector",
+            "Para que el tablero quede cerca de los dormitorios"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Los conductores de acometida antes del desconectador solo están protegidos por el fusible de la compañía; una falla en un tramo interior largo arde hasta que ese fusible corte.",
+          "nec_ref": "230.70"
+        },
+        {
+          "question": "El medio de desconexión de la acometida debe ser…",
+          "choices": [
+            "De fácil acceso",
+            "Dentro de un cuarto eléctrico con llave",
+            "Pintado de rojo",
+            "Bloqueado en abierto en todo momento"
+          ],
+          "answer_index": 0,
+          "explain_plain": "230.70 exige que el desconectador sea de fácil acceso, y cada ocupante necesita acceso al desconectador de su propio espacio.",
+          "nec_ref": "230.70(A)(1)"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023: No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "230.70",
+        "230.70(A)(1)",
+        "230.85"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-230.71",
@@ -4004,8 +5272,8 @@
       "article": "230",
       "section": "230.71",
       "title": "Cuántos desconectadores de acometida hay y cómo se agrupan",
-      "plain_explanation": "La edición 2020 reorganizó esta regla: una acometida puede tener de dos a seis medios de desconexión, y 230.71(B) permite cuatro arreglos — (1) gabinetes separados para cada desconectador; (2) tableros, cada uno con su propio desconectador principal; (3) un tablero de distribución (switchboard) con cada desconectador en una sección vertical separada con barrera; o (4) equipo de interruptores (switchgear) o centros de medición con cada desconectador en su propio compartimento. Los desconectadores deben agruparse como exige 230.71(A). Un solo conjunto de múltiples interruptores no está automáticamente mal — cuenta donde encaja en uno de estos cuatro arreglos.\n\nCAMBIO NEC 2023:\n• 230.71: Los interruptores de transferencia y los centros de control de motores se unieron a la lista de dos a seis desconectadores, los centros de medidores separados obtuvieron su propio punto, y el equipo más antiguo que agrupaba legalmente los desconectadores de acometida en un solo gabinete recibe un pase. Nueva excepción: el equipo de acometida existente construido bajo una edición anterior que permitía desconectadores agrupados puede mantener hasta seis en un solo gabinete, sección o compartimento.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "En una acometida con más de un desconectador, muestre el arreglo en el plano — gabinetes separados, tableros con principales, secciones de switchboard con barrera o switchgear con compartimentos — y muestre la agrupación. No condene una acometida conforme de tablero o switchboard por no tener gabinetes separados.",
+      "plain_explanation": "Un solo desconectador siempre está bien; esta sección gobierna una acometida construida con más de uno. La edición 2020 reorganizó la regla de desconectadores múltiples: una acometida puede tener de dos a seis medios de desconexión, agrupados, y 230.71(B) permite cuatro arreglos:\n• (1) Gabinetes separados para cada desconectador\n• (2) Tableros (panelboards), cada uno con su propio desconectador principal\n• (3) Un tablero de distribución (switchboard) con cada desconectador en una sección vertical separada con barrera\n• (4) Equipo de interruptores (switchgear) o centros de medición con cada desconectador en su propio compartimento\nLos desconectadores deben agruparse como exige 230.71(A). Un solo conjunto de múltiples interruptores no está automáticamente mal — cuenta donde encaja en uno de estos cuatro arreglos. Lo que 2020 terminó es la vieja costumbre de conectar varios principales sin relación sueltos en un solo gabinete sin barreras entre ellos.",
+      "on_the_job": "En una acometida comercial pequeña de Sharma — un switchboard de 400 A que alimenta un local de una plaza — tres desconectadores de acometida están en tres secciones verticales con barrera de un solo switchboard, agrupados en la misma pared, cada uno rotulado con la carga que corta: arreglo (3). En un dúplex, dos tableros lado a lado, cada uno con su propio principal, hacen el mismo trabajo bajo el arreglo (2). Dibuje el arreglo y la agrupación en el croquis de la acometida; si todos los desconectadores no se pueden abarcar de una sola mirada, el diseño está mal.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -4025,7 +5293,104 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/230-71",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "La agrupación es para el peor día, no para el día normal. Cuando un edificio se está quemando o una acometida está en falla, una persona tiene que cortar toda la energía en un solo lugar, en segundos, sin buscar por los cuartos. Las reglas de separación de 2020 agregan una segunda protección: una falla o un fuego dentro de una sección de desconexión no puede cruzar y llevarse los desconectadores vecinos — y con ellos toda la acometida.",
+      "exam_trap": "La respuesta trampa: «Hasta seis desconectadores, así que seis principales sueltos en un gabinete grande está bien». Esa era la manera antigua. Bajo 2020, seis desconectadores pasan solo dentro de uno de los cuatro arreglos — gabinetes separados, tableros con principales, secciones de switchboard con barrera, o switchgear y centros de medición con compartimentos. La trampa espejo — «cada desconectador necesita su propio gabinete» — también es incorrecta: los arreglos (2) a (4) existen precisamente para que el equipo agrupado pueda cumplir.",
+      "inspection_fails": [
+        "Siete desconectadores de acometida instalados en una sola acometida — dos por encima del límite de seis.",
+        "Desconectadores dispersos entre cuartos o entre interior y exterior, sin agrupar.",
+        "Varios principales conectados sueltos en un gabinete sin barreras en una instalación nueva de 2020.",
+        "Desconectadores agrupados sin rotulación que diga qué carga corta cada uno."
+      ],
+      "tables": [
+        {
+          "caption": "Los cuatro arreglos, 230.71(B)",
+          "headers": [
+            "Arreglo",
+            "Equipo",
+            "Imagínelo"
+          ],
+          "rows": [
+            [
+              "(1) Gabinetes separados",
+              "Un desconectador por gabinete",
+              "Una fila de interruptores de desconexión"
+            ],
+            [
+              "(2) Tableros (panelboards)",
+              "Cada tablero tiene su propio principal",
+              "Dos tableros, dos principales, lado a lado"
+            ],
+            [
+              "(3) Switchboard",
+              "Secciones verticales con barrera",
+              "Un tablero, secciones separadas por paredes"
+            ],
+            [
+              "(4) Switchgear, centros de medición",
+              "Cada desconectador en su propio compartimento",
+              "Un compartimento por desconectador"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-230.71-four-arrangements.svg",
+          "alt": "Cuatro croquis de elevación en fila que muestran los cuatro arreglos de 230.71(B): gabinetes separados, dos tableros cada uno con un principal, un switchboard dividido en secciones verticales con barrera, y switchgear dividido en compartimentos; una banda sobre los cuatro dice de dos a seis desconectadores, agrupados.",
+          "caption": "Cuatro maneras de construir una acometida legal de varios desconectadores en 2020.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "NEC 2020: el número máximo de medios de desconexión para una acometida es:",
+          "choices": [
+            "Dos",
+            "Cuatro",
+            "Seis",
+            "Tantos como quepan en el equipo"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Una acometida puede tener de dos a seis medios de desconexión, agrupados, en uno de los cuatro arreglos de 230.71(B).",
+          "nec_ref": "230.71"
+        },
+        {
+          "question": "¿Qué instalación cumple con 230.71(B) en una acometida nueva?",
+          "choices": [
+            "Seis principales sueltos en un gabinete sin barreras",
+            "Tres desconectadores en secciones de switchboard con barrera",
+            "Desconectadores repartidos en tres cuartos",
+            "Siete desconectadores, agrupados en una pared"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Las secciones verticales con barrera son el arreglo (3). Los demás rompen las reglas de arreglo, agrupación o conteo.",
+          "nec_ref": "230.71(B)"
+        },
+        {
+          "question": "Los desconectadores permitidos por 230.71 deben estar:",
+          "choices": [
+            "Agrupados",
+            "En edificios separados",
+            "Uno por piso",
+            "Bloqueados contra operación"
+          ],
+          "answer_index": 0,
+          "explain_plain": "230.71(A) exige que los dos a seis medios de desconexión estén agrupados.",
+          "nec_ref": "230.71(A)"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 230.71: Los interruptores de transferencia y los centros de control de motores se unieron a la lista de dos a seis desconectadores, los centros de medidores separados obtuvieron su propio punto, y el equipo más antiguo que agrupaba legalmente los desconectadores de acometida en un solo gabinete recibe un pase. Nueva excepción: el equipo de acometida existente construido bajo una edición anterior que permitía desconectadores agrupados puede mantener hasta seis en un solo gabinete, sección o compartimento.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "230.71",
+        "230.71(A)",
+        "230.71(B)",
+        "230.70"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-230.79(C)",
@@ -4361,8 +5726,8 @@
       "article": "240",
       "section": "240",
       "title": "Protección contra sobrecorriente — breakers y fusibles",
-      "plain_explanation": "El Artículo 240 es el artículo de protección: decide dónde van los dispositivos contra sobrecorriente, qué capacidades estándar existen, cómo se protegen los conductores, cuándo puede usarse la capacidad inmediata superior, cómo funcionan los conductores de derivación (tap) y dónde pueden y no pueden ubicarse los tableros. Un breaker tiene dos trabajos que no deben confundirse — protege al conductor, y solo a través de eso protege al equipo y al edificio. La mayor parte del Artículo 240 que Sharma usa a diario está en 240.4 y 240.24.\n\nCAMBIO NEC 2023:\n• 240.11: Cuando una regla hace que el dispositivo contra sobrecorriente de un alimentador se coordine selectivamente con el dispositivo de acometida, cada otro alimentador alimentado directamente desde ese dispositivo de acometida ahora también debe coordinarse con él. Una vez que un dispositivo de alimentador debe coordinarse selectivamente con el dispositivo de acometida, cada dispositivo de alimentador alimentado directamente desde ese dispositivo de acometida debe coordinarse con él (240.11).\n• 240.16: Los breakers y fusibles de circuitos ramales siguen necesitando al menos 5,000 amps de capacidad de interrupción, pero ese piso se trasladó fuera de la definición del Artículo 100 y al nuevo 240.16. Cualquier breaker o fusible que haga trabajo de circuito ramal debe tener capacidad para interrumpir 5,000 amps o más (240.16).\n• 240.60: Nuevo en 2023: un reductor de fusible, el adaptador que permite que un fusible más pequeño se asiente en clips hechos para uno más grande, debe ser un producto listado. Cada reductor de fusible ahora debe estar listado. Un espaciador hecho en taller o un adaptador sin marca de listado no pasa.\n• 240.7: Tres tipos de dispositivos de protección ahora deben estar listados: breakers y fusibles de circuitos ramales, los relés y breakers que proporcionan protección contra fallas a tierra de equipos, y los GFCI. Los breakers y fusibles con capacidad de circuito ramal, del tipo que puede proteger acometidas, alimentadores y circuitos ramales, deben estar listados. Los protectores suplementarios no están en esta lista.\n• 240.89: Nuevo en 2023: una unidad de disparo de reemplazo debe llevar un listado para uso en el breaker específico en el que se instala. Que encaje en el marco no es suficiente. ¿Va a cambiar la unidad de disparo de un breaker? La unidad nueva necesita un listado que cubra ese breaker en particular, no solo una forma coincidente.\n• 240.2: Los requisitos de reacondicionamiento ubicados en 240.62 y 240.88 se trasladaron a la Sección 240.2 en el NEC 2023. La protección contra fallas a tierra de equipos (GFPE) y los interruptores de circuito por falla a tierra (GFCI) se agregaron a la lista de equipos que no deben reacondicionarse.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Para cada circuito, haga en voz alta la pregunta del Artículo 240: ¿qué conductor estoy protegiendo, a qué ampacidad, y qué regla me permite usar este tamaño de breaker? Si la respuesta es encogerse de hombros, el circuito aún no está diseñado.",
+      "plain_explanation": "El Artículo 240 es el artículo de protección: decide dónde van los dispositivos contra sobrecorriente, qué capacidades estándar existen, cómo se protegen los conductores, cuándo puede usarse la capacidad inmediata superior, cómo funcionan los conductores de derivación (tap) y dónde pueden y no pueden ubicarse los tableros. Un breaker tiene dos trabajos que no deben confundirse — protege al conductor, y solo a través de eso protege al equipo y al edificio. Las capacidades estándar están en 240.6, las reglas de derivación (tap) en 240.21, y las reglas de ubicación en 240.24: dispositivos fácilmente accesibles, el centro de la agarradera de la manija a no más de 6 ft 7 in, y en viviendas ningún dispositivo contra sobrecorriente en baños ni en clósets de ropa. La mayor parte del Artículo 240 que Sharma usa a diario está en 240.4 y 240.24.",
+      "on_the_job": "Para cada circuito, haga en voz alta la pregunta del Artículo 240: ¿qué conductor estoy protegiendo, a qué ampacidad, y qué regla me permite usar este tamaño de breaker? Si la respuesta es encogerse de hombros, el circuito aún no está diseñado. En un cambio de tablero de Sharma, esa pregunta atrapa los clásicos antes que el inspector: un breaker que encaja en la barra pero no está listado para ese tablero (S-03), y el breaker de 30 A que alguien conectó a un tendido de 12 AWG para acabar con los disparos molestos — el tope del conductor es 20 A, y el 'arreglo' le quitó su protección.",
       "sharma_note": "S-03: en un tablero Square D existente, use breakers Square D listados para ese tablero. Mezclar marcas no es un permiso del Artículo 240.",
       "figure_idea": "Un tablero de breakers con un breaker levantado, mostrando su marca de capacidad y el conductor que protege dibujado a su lado.",
       "related_ids": [
@@ -4422,7 +5787,109 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Sobrecorriente es cualquier corriente más allá de lo que el conductor puede soportar — una sobrecarga que lo cocina lentamente, o un cortocircuito o una falla a tierra que entrega miles de amps en un ciclo. Sin un dispositivo dimensionado y ubicado según este artículo, el propio conductor se convierte en la protección, y protege quemándose. El Artículo 240 pone un dispositivo listado y con capacidad nominal entre la falla y el incendio.",
+      "exam_trap": "La respuesta incorrecta es que el breaker protege el equipo conectado al tomacorriente — la tostadora, el televisor, el aparato. No lo protege. El breaker protege al conductor; el equipo se protege solo a través del conductor, o por su propio artículo y su placa. Elegir la respuesta del equipo es como un breaker de 30 A termina 'protegiendo' un circuito de 12 AWG.",
+      "inspection_fails": [
+        "Breaker que encaja en el tablero pero no está listado para él — mezcla de marcas (S-03).",
+        "Dispositivos contra sobrecorriente instalados en un baño de vivienda o en un clóset de ropa.",
+        "Centro de la manija de operación a más de 6 ft 7 in sobre el piso o la plataforma.",
+        "Breaker aumentado más allá de la ampacidad del conductor para acabar con los disparos molestos."
+      ],
+      "tables": [
+        {
+          "caption": "Mapa del Artículo 240 — las partes que Sharma usa a diario",
+          "headers": [
+            "Sección",
+            "Qué decide"
+          ],
+          "rows": [
+            [
+              "240.4",
+              "Proteger los conductores a su ampacidad"
+            ],
+            [
+              "240.4(B)",
+              "Cuándo se permite el tamaño estándar inmediato superior"
+            ],
+            [
+              "240.4(D)",
+              "Topes para conductores pequeños: 14, 12, 10 AWG"
+            ],
+            [
+              "240.6",
+              "Las capacidades estándar en amps"
+            ],
+            [
+              "240.21",
+              "Reglas de conductores de derivación (tap)"
+            ],
+            [
+              "240.24",
+              "Ubicación: acceso, altura de manija de 6 ft 7 in, sin baños en viviendas"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-ART-240-breaker-anatomy.svg",
+          "alt": "Un centro de carga con un breaker retirado y dibujado ampliado a su lado: marcadores numerados identifican la capacidad en amps, el listado para ese tablero específico y la marca de capacidad de interrupción, y un conductor de cobre de 12 AWG sale del tablero protegido a 20 A bajo el tope de 240.4(D).",
+          "caption": "Un breaker, retirado: capacidad, listado, capacidad de interrupción.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "El trabajo principal de un breaker es proteger:",
+          "choices": [
+            "El aparato conectado al tomacorriente",
+            "El conductor",
+            "El tomacorriente",
+            "La barra del tablero"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El dispositivo protege al conductor; el equipo se protege solo a través del conductor, o por su propio artículo.",
+          "nec_ref": "240.4"
+        },
+        {
+          "question": "El centro de la manija de operación de un breaker, en su posición más alta, puede estar a no más de ___ sobre el piso o la plataforma de trabajo:",
+          "choices": [
+            "6 ft",
+            "6 ft 7 in",
+            "7 ft",
+            "No hay límite"
+          ],
+          "answer_index": 1,
+          "explain_plain": "240.24 fija el límite en 6 ft 7 in, con excepciones listadas.",
+          "nec_ref": "240.24"
+        },
+        {
+          "question": "En una vivienda, los dispositivos contra sobrecorriente no se permiten en:",
+          "choices": [
+            "Un garaje",
+            "Un cuarto de lavado",
+            "Un baño",
+            "Un pasillo"
+          ],
+          "answer_index": 2,
+          "explain_plain": "240.24 mantiene los dispositivos contra sobrecorriente fuera de los baños de vivienda (y de los clósets de ropa).",
+          "nec_ref": "240.24"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 240.11: Cuando una regla hace que el dispositivo contra sobrecorriente de un alimentador se coordine selectivamente con el dispositivo de acometida, cada otro alimentador alimentado directamente desde ese dispositivo de acometida ahora también debe coordinarse con él. Una vez que un dispositivo de alimentador debe coordinarse selectivamente con el dispositivo de acometida, cada dispositivo de alimentador alimentado directamente desde ese dispositivo de acometida debe coordinarse con él (240.11).\n• 240.16: Los breakers y fusibles de circuitos ramales siguen necesitando al menos 5,000 amps de capacidad de interrupción, pero ese piso se trasladó fuera de la definición del Artículo 100 y al nuevo 240.16. Cualquier breaker o fusible que haga trabajo de circuito ramal debe tener capacidad para interrumpir 5,000 amps o más (240.16).\n• 240.60: Nuevo en 2023: un reductor de fusible, el adaptador que permite que un fusible más pequeño se asiente en clips hechos para uno más grande, debe ser un producto listado. Cada reductor de fusible ahora debe estar listado. Un espaciador hecho en taller o un adaptador sin marca de listado no pasa.\n• 240.7: Tres tipos de dispositivos de protección ahora deben estar listados: breakers y fusibles de circuitos ramales, los relés y breakers que proporcionan protección contra fallas a tierra de equipos, y los GFCI. Los breakers y fusibles con capacidad de circuito ramal, del tipo que puede proteger acometidas, alimentadores y circuitos ramales, deben estar listados. Los protectores suplementarios no están en esta lista.\n• 240.89: Nuevo en 2023: una unidad de disparo de reemplazo debe llevar un listado para uso en el breaker específico en el que se instala. Que encaje en el marco no es suficiente. ¿Va a cambiar la unidad de disparo de un breaker? La unidad nueva necesita un listado que cubra ese breaker en particular, no solo una forma coincidente.\n• 240.2: Los requisitos de reacondicionamiento ubicados en 240.62 y 240.88 se trasladaron a la Sección 240.2 en el NEC 2023. La protección contra fallas a tierra de equipos (GFPE) y los interruptores de circuito por falla a tierra (GFCI) se agregaron a la lista de equipos que no deben reacondicionarse.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "240.4",
+        "240.4(B)",
+        "240.4(D)",
+        "240.6",
+        "240.21",
+        "240.24"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-240.4",
@@ -4430,8 +5897,8 @@
       "article": "240",
       "section": "240.4",
       "title": "Proteger un conductor a su ampacidad",
-      "plain_explanation": "La regla inicial del artículo es simple: los conductores se protegen contra sobrecorriente a su ampacidad, de las formas que esta sección luego precisa. Remite a los casos especiales tratados en otros lugares — motores, aire acondicionado, soldadoras, transformadores y otros — donde la placa o un artículo específico cambia el panorama de protección. También contiene los dos permisos que Sharma usa más, cubiertos en las dos páginas siguientes: redondear hacia arriba a la capacidad estándar siguiente en condiciones limitadas y los topes para conductores pequeños.\n\nCAMBIO NEC 2023:\n• 240.4: Tres agregados: el aluminio revestido de cobre de 14 AWG tiene un tope de 10 amps, los breakers de disparo ajustable con ajustes restringidos obtienen el permiso del tamaño inmediato superior, y el dimensionamiento de 310.12 para acometidas y alimentadores de vivienda se traslada al breaker. Nuevo 240.4(H): una acometida o alimentador de vivienda dimensionado con 310.12 puede protegerse a esa capacidad completa, como un breaker de 200-amp en cobre de 2/0.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Cuando un equipo tiene una placa que indica su propia protección máxima, siga ese artículo del equipo y la placa — la regla general aquí no es permiso para aumentar el tamaño. Anote la cita del caso especial en el archivo del trabajo cuando use uno.",
+      "plain_explanation": "La regla inicial del artículo es simple: los conductores se protegen contra sobrecorriente a su ampacidad, de las formas que esta sección luego precisa. La ampacidad sale de la Tabla 310.16, después de los factores de corrección y ajuste de 310.15 — no del tamaño de breaker que resulte estar en el camión. La sección luego precisa la regla:\n• Los equipos específicos se rigen por su propio artículo. Motores, aire acondicionado, soldadoras y transformadores se dimensionan y protegen bajo sus propias reglas y placas, y esas reglas prevalecen sobre la regla general de esta página.\n• Tamaño inmediato superior (240.4(B)). Donde una ampacidad no coincide con una capacidad estándar, puede usarse el dispositivo estándar inmediato superior — solo cuando se cumplen todas las condiciones de esa subsección, y nunca por encima de 800 A.\n• Conductores pequeños (240.4(D)). Los conductores de 14, 12 y 10 AWG tienen topes fijos, diga lo que diga la tabla de ampacidad.\n• Más de 800 A (240.4(C)). No hay redondeo hacia arriba: la ampacidad del conductor debe ser al menos igual a la capacidad del dispositivo.\nTambién contiene los dos permisos que Sharma usa más, cubiertos en las dos páginas siguientes: redondear hacia arriba a la capacidad estándar siguiente en condiciones limitadas y los topes para conductores pequeños.",
+      "on_the_job": "Cuando un equipo tiene una placa que indica su propia protección máxima, siga ese artículo del equipo y la placa — la regla general aquí no es permiso para aumentar el tamaño. Anote la cita del caso especial en el archivo del trabajo cuando use uno. Ejemplo práctico: un alimentador en cobre de 4 AWG tiene una ampacidad a 75 °C de 85 A (Tabla 310.16). Ningún breaker estándar es de 85 A, así que se permite un breaker de 90 A bajo 240.4(B) — el tendido es un alimentador, no un circuito ramal de múltiples salidas para tomacorrientes, y está muy por debajo de 800 A. Haga el mismo truco en un circuito ramal de 12 AWG y no cumple: la tabla da 25 A a 75 °C, pero 240.4(D) limita el cobre de 12 AWG a 20 A.",
       "sharma_note": "S-10 regula el cable con el que se combina esta protección en Sharma: cobre por defecto, CCA un tamaño mayor, clasificado en la columna de aluminio.",
       "figure_idea": "",
       "related_ids": [
@@ -4455,7 +5922,111 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/240-4",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Un breaker es el guardaespaldas del conductor. Si el dispositivo es mayor que la ampacidad, el conductor se convierte en el fusible: se sobrecalienta dentro de una pared o sobre un techo, cocina su aislamiento y provoca un incendio con una corriente que el breaker ve como carga normal. Combinar la protección con la ampacidad mantiene el eslabón débil en un dispositivo diseñado para abrirse — no en el cable.",
+      "exam_trap": "El examen muestra un conductor de cobre de 12 AWG, señala el valor de 25 A en la columna de 75 °C de la Tabla 310.16 y ofrece un breaker de 25 A. Es incorrecto: 240.4(D) limita el cobre de 12 AWG a 20 A, diga lo que diga la tabla. La tabla da la ampacidad; esta sección decide la protección.",
+      "inspection_fails": [
+        "Breaker de 30 A conectado a un circuito ramal de 12 AWG 'porque se disparaba a cada rato' — el tope es 20 A (240.4(D)).",
+        "Permiso del tamaño inmediato superior usado en un circuito ramal de múltiples salidas que alimenta tomacorrientes — 240.4(B) no está disponible ahí.",
+        "Breaker del condensador aumentado más allá de la protección máxima contra sobrecorriente de la placa.",
+        "Alimentador protegido por encima de su ampacidad sin documentar ninguna de las condiciones de 240.4(B)."
+      ],
+      "tables": [
+        {
+          "caption": "¿Qué regla fija el breaker?",
+          "headers": [
+            "Caso",
+            "Regla del breaker",
+            "Ref"
+          ],
+          "rows": [
+            [
+              "Alimentador o circuito ramal ordinario",
+              "Proteger a la ampacidad",
+              "240.4"
+            ],
+            [
+              "Ampacidad entre capacidades estándar",
+              "Tamaño inmediato superior, condiciones cumplidas, 800 A máx",
+              "240.4(B)"
+            ],
+            [
+              "Conductor de 14, 12 o 10 AWG",
+              "Topes fijos, diga lo que diga la tabla",
+              "240.4(D)"
+            ],
+            [
+              "Dispositivo de más de 800 A",
+              "La ampacidad al menos iguala la capacidad",
+              "240.4(C)"
+            ],
+            [
+              "Motor, AC, soldadora, transformador",
+              "Artículo del equipo y placa",
+              "240.4"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-240.4-breaker-flow.svg",
+          "alt": "Diagrama de flujo con cuatro pasos para elegir un breaker: la ampacidad del conductor según la Tabla 310.16, luego el artículo del equipo o la placa, luego los topes para conductores pequeños de 240.4(D), y por último combinar el breaker con la ampacidad con el permiso limitado del tamaño inmediato superior de 240.4(B).",
+          "caption": "Cómo elegir el breaker: empiece por el conductor, en cuatro pasos.",
+          "w": 900,
+          "h": 1290
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Cuál es la regla general para proteger un conductor contra sobrecorriente?",
+          "choices": [
+            "A la capacidad del equipo que alimenta",
+            "A su ampacidad",
+            "Un tamaño estándar por encima de su ampacidad",
+            "A la capacidad de la acometida"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La protección se combina con la ampacidad del conductor; 240.4(B) a (D) son precisiones con condiciones, no la regla general.",
+          "nec_ref": "240.4"
+        },
+        {
+          "question": "Un conductor de cobre de 12 AWG tiene una ampacidad a 75 °C de 25 A. ¿Cuál es el breaker más grande permitido?",
+          "choices": [
+            "15 A",
+            "20 A",
+            "25 A",
+            "30 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El tope para conductores pequeños del cobre de 12 AWG es 20 A, diga lo que diga la tabla de ampacidad.",
+          "nec_ref": "240.4(D)"
+        },
+        {
+          "question": "La ampacidad de un conductor de alimentador es 85 A. ¿Cuándo puede protegerlo un breaker de 90 A?",
+          "choices": [
+            "Siempre",
+            "Nunca",
+            "Cuando se cumplen las condiciones de 240.4(B) y la capacidad se mantiene en 800 A o menos",
+            "Solo en una acometida de vivienda"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La capacidad estándar inmediata superior es un permiso con condiciones, y termina en 800 A.",
+          "nec_ref": "240.4(B)"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 240.4: Tres agregados: el aluminio revestido de cobre de 14 AWG tiene un tope de 10 amps, los breakers de disparo ajustable con ajustes restringidos obtienen el permiso del tamaño inmediato superior, y el dimensionamiento de 310.12 para acometidas y alimentadores de vivienda se traslada al breaker. Nuevo 240.4(H): una acometida o alimentador de vivienda dimensionado con 310.12 puede protegerse a esa capacidad completa, como un breaker de 200-amp en cobre de 2/0.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "240.4",
+        "240.4(B)",
+        "240.4(C)",
+        "240.4(D)",
+        "240.6",
+        "Table 310.16"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-240.4(B)",
@@ -4770,8 +6341,8 @@
       "article": "250",
       "section": "250",
       "title": "Puesta a tierra y unión (bonding) — el camino de la corriente de falla",
-      "plain_explanation": "El Artículo 250 es el artículo más largo y más discutido de este capítulo. La puesta a tierra conecta un sistema a la tierra física a través de electrodos; la unión (bonding) conecta las partes metálicas entre sí para que una falla tenga un camino de baja impedancia de regreso a la fuente que dispare el breaker rápidamente. La tierra física en sí no es ese camino de falla — el breaker se dispara porque la unión lleva la falla de regreso. Las páginas que siguen recorren la unión de la acometida, los electrodos, las tablas de dimensionamiento y las uniones de tuberías y entre sistemas, en ese orden.\n\nCAMBIO NEC 2023:\n• 250.100: La regla de unión en lugares peligrosos se reformuló para mayor exactitud. Las canalizaciones, el cable con armadura metálica, el equipo y los gabinetes siguen necesitando accesorios de unión roscados, sin rosca o listados, incluso con un conductor de puesta a tierra de equipos (EGC) tipo cable. En lugares clasificados, una con un método de 250.92(B)(2) a (B)(4): entradas roscadas apretadas con llave, accesorios sin rosca apretados, u otros dispositivos de unión listados.\n• 250.109: Los anillos de yeso y los anillos de extensión ahora se unen a las cubiertas y accesorios metálicos: cada uno debe sujetarse a una caja metálica para que el camino de falla se mantenga, o unirse con un puente o un conductor de puesta a tierra de equipos (EGC). Las cubiertas metálicas, los anillos de yeso, los anillos de extensión y los accesorios metálicos deben sujetarse para que el camino de falla se mantenga, o bien unirse con un puente o un EGC.\n• 250.114: Las máquinas de hielo de cordón y enchufe se unieron a la lista de aparatos cuyas partes metálicas expuestas deben conectarse a un conductor de puesta a tierra de equipos (EGC), tanto en casas como en otras ocupaciones. Las máquinas de hielo ahora están junto a refrigeradores, congeladores y aires acondicionados en la lista residencial, 250.114(3).\n• 250.130: 250.130(C) ahora cubre el reemplazo de un interruptor de acción rápida (snap switch) sin puesta a tierra. Un conductor de puesta a tierra de equipos (EGC) agregado para el interruptor nuevo puede conectarse en los mismos puntos ya permitidos para tomacorrientes. ¿Va a poner un interruptor con terminal de puesta a tierra en una caja antigua sin EGC? Su EGC nuevo puede ir a cualquier punto listado en 250.130(C).\n• 250.148: Un puente a una caja metálica ahora tiene una regla de tamaño: Tabla 250.122, basada en el breaker o fusible más grande de los circuitos en la caja. Las reglas para unir los conductores de puesta a tierra también se aclararon. Un puente de unión a una caja metálica ahora se dimensiona desde la Tabla 250.122, usando el breaker o fusible más grande de los circuitos en esa caja (250.148(C)).\n• 250.36: La sección ahora dice sistemas puestos a tierra por impedancia, eliminando alta y neutro, y renombra sus conductores para que coincidan con sus trabajos reales. Cuándo puede usarse uno no ha cambiado. Se renombró de sistemas de neutro puesto a tierra de alta impedancia a sistemas puestos a tierra por impedancia. Alta y neutro salieron ambos.\n• 250.6: La edición 2023 lo expresa claramente: ni la corriente de falla a tierra ni la corriente en una conexión de puesta a tierra o de unión que exige el Artículo 250 cuentan como corriente objetable. La corriente en una conexión requerida de puesta a tierra o de unión no es corriente objetable (250.6(C)). No retire la conexión para detenerla.\n• 250.70: En su mayor parte una limpieza: 250.70 ahora separa las reglas generales de la abrazadera de correa para comunicaciones interiores, y una nota nueva confirma que una abrazadera para enterramiento directo también sirve para empotramiento en concreto. Nota nueva: una abrazadera listada para enterramiento directo también es apta para empotramiento en concreto, así que puede ir en un electrodo empotrado en concreto.\n• 250.106: Las referencias a la norma NFPA 780 se eliminaron para la Nota Informativa N.º 1 y se actualizaron para la Nota Informativa N.º 2.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "En cada trabajo, rastree con el dedo una falla imaginaria: desde un cable activo que toca una caja metálica, a través de la tierra o la unión, de regreso a la fuente y de nuevo hacia afuera por el activo. Si algún eslabón de ese lazo falta, está pintado por encima o está suelto, usted encontró el defecto.",
+      "plain_explanation": "El Artículo 250 es el artículo más largo y más discutido de este capítulo. La puesta a tierra conecta un sistema a la tierra física a través de electrodos; la unión (bonding) conecta las partes metálicas entre sí para que una falla tenga un camino de baja impedancia de regreso a la fuente que dispare el breaker rápidamente. La tierra física en sí no es ese camino de falla — el breaker se dispara porque la unión lleva la falla de regreso. La Sección 250.4 establece la prueba de desempeño para la que está construido todo el artículo: el camino debe ser permanente y continuo, de baja impedancia, y capaz de llevar la corriente de falla el tiempo suficiente para que el dispositivo de sobrecorriente abra. Cuando un detalle se discute en la obra, esa prueba lo resuelve. Las páginas que siguen recorren la unión de la acometida, los electrodos, las tablas de dimensionamiento y las uniones de tuberías y entre sistemas, en ese orden.",
+      "on_the_job": "En cada trabajo, rastree con el dedo una falla imaginaria: un cable activo se pela y toca el marco metálico de un manejador de aire. La corriente de falla corre por el conductor de puesta a tierra de equipos hasta la acometida, cruza el puente de unión principal al neutro, y regresa a la fuente — y el breaker abre en el camino. Si algún eslabón de ese lazo falta, está pintado por encima o está suelto, usted encontró el defecto. En una acometida de casa de Sharma de 200 A, el hardware de ese lazo se dimensiona, no se adivina: el puente de unión principal es de cobre 4 AWG detrás de conductores de acometida de cobre 2/0 (250.28), y el conductor del electrodo de puesta a tierra sale de la Tabla 250.66 (la página de 250.50).",
       "sharma_note": "La disciplina de torque y de terminaciones decide si este artículo funciona en la vida real. Un conductor del tamaño correcto en un terminal suelto no es un camino de falla.",
       "figure_idea": "Un diagrama de camino de falla: un conductor activo tocando el marco de un aparato, la corriente de falla viajando por la tierra verde de regreso a la unión de la acometida y el breaker abriéndose.",
       "related_ids": [
@@ -4852,7 +6423,101 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Un breaker solo se dispara cuando la corriente de falla es grande, y la corriente de falla solo es grande cuando el lazo de regreso a la fuente es metal de baja impedancia en todo el camino. La tierra física no es ese lazo: una falla descargada en una varilla de tierra puede extraer solo unos pocos amps — ni de lejos lo suficiente para mover un breaker de 20 A — mientras la carcasa metálica de una lavadora queda energizada a 120 V, esperando una mano. La unión construye el lazo de metal. La puesta a tierra ata el sistema a la tierra física para limitar el voltaje de rayos y sobretensiones y mantener estable el voltaje a tierra.",
+      "exam_trap": "La respuesta trampa: «Las varillas de tierra disparan el breaker en una falla». No lo hacen. La tierra física tiene una impedancia demasiado alta para llevar la corriente de falla de regreso a la fuente, y 250.4 dice claramente que la tierra física no se considerará un camino efectivo de corriente de falla a tierra. El breaker se dispara porque la unión y el conductor de puesta a tierra de equipos llevan la falla de regreso por metal.",
+      "inspection_fails": [
+        "Tierra falsa (bootleg ground): el neutro puenteado al terminal de tierra en un tomacorriente para fingir una salida con tierra ante un probador.",
+        "Subtablero «puesto a tierra» con una varilla local y sin conductor de puesta a tierra de equipos traído desde la acometida.",
+        "Terminal de unión conectado sobre pintura, o con torque flojo, de modo que el camino de falla es una resistencia.",
+        "Conductor de puesta a tierra de equipos cortado o sin conectar después de un cambio de dispositivo a una caja plástica."
+      ],
+      "tables": [
+        {
+          "caption": "Tres trabajos que se confunden",
+          "headers": [
+            "Trabajo",
+            "Conecta",
+            "Su trabajo real"
+          ],
+          "rows": [
+            [
+              "Puesta a tierra",
+              "El sistema a la tierra física, por electrodos",
+              "Limita el voltaje de rayos y sobretensiones; mantiene estable el voltaje a tierra"
+            ],
+            [
+              "Unión (bonding)",
+              "Parte metálica con parte metálica",
+              "Hace de cada gabinete y canalización un solo camino de falla continuo"
+            ],
+            [
+              "Puesta a tierra de equipos",
+              "Los marcos de equipos a la unión de la acometida",
+              "Lleva la corriente de falla de regreso para que el breaker abra"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-ART-250-fault-path.svg",
+          "alt": "Diagrama del lazo de corriente de falla: un conductor activo toca el marco de un manejador de aire, la corriente de falla viaja por el conductor verde de puesta a tierra de equipos de regreso al tablero de acometida, cruza el puente de unión principal dorado al neutro, y regresa a la fuente mientras el breaker abre; una varilla de tierra bajo el tablero está tachada con la nota de que la tierra física no es el camino de falla.",
+          "caption": "El lazo que dispara el breaker es metal en todo el camino de regreso.",
+          "w": 900,
+          "h": 1540
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Qué lleva la corriente de falla de regreso a la fuente para que el breaker se dispare?",
+          "choices": [
+            "La tierra física, por las varillas de tierra",
+            "El camino metálico unido y el conductor de puesta a tierra de equipos",
+            "El conductor neutro solamente",
+            "El conductor del electrodo de puesta a tierra solamente"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La unión y el EGC forman un lazo de metal de baja impedancia; la corriente de falla en ese lazo es lo que abre el breaker.",
+          "nec_ref": "250.4(A)(5)"
+        },
+        {
+          "question": "Bajo 250.4, la tierra física no se considerará:",
+          "choices": [
+            "Un electrodo de puesta a tierra",
+            "Un camino efectivo de corriente de falla a tierra",
+            "Un camino para la energía de rayos",
+            "Una referencia de voltaje"
+          ],
+          "answer_index": 1,
+          "explain_plain": "250.4 lo dice directamente: la tierra física no es un camino efectivo de corriente de falla a tierra.",
+          "nec_ref": "250.4(A)(5)"
+        },
+        {
+          "question": "La unión (bonding) se define mejor como:",
+          "choices": [
+            "Conectar un sistema a una varilla de tierra",
+            "Unir partes metálicas para establecer continuidad y conductividad eléctricas",
+            "Clavar electrodos en cada tablero",
+            "Mantener neutros y tierras separados"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La unión junta las partes metálicas en un todo continuo y conductor — esa continuidad es el camino de falla.",
+          "nec_ref": "250.4"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 250.100: La regla de unión en lugares peligrosos se reformuló para mayor exactitud. Las canalizaciones, el cable con armadura metálica, el equipo y los gabinetes siguen necesitando accesorios de unión roscados, sin rosca o listados, incluso con un conductor de puesta a tierra de equipos (EGC) tipo cable. En lugares clasificados, una con un método de 250.92(B)(2) a (B)(4): entradas roscadas apretadas con llave, accesorios sin rosca apretados, u otros dispositivos de unión listados.\n• 250.109: Los anillos de yeso y los anillos de extensión ahora se unen a las cubiertas y accesorios metálicos: cada uno debe sujetarse a una caja metálica para que el camino de falla se mantenga, o unirse con un puente o un conductor de puesta a tierra de equipos (EGC). Las cubiertas metálicas, los anillos de yeso, los anillos de extensión y los accesorios metálicos deben sujetarse para que el camino de falla se mantenga, o bien unirse con un puente o un EGC.\n• 250.114: Las máquinas de hielo de cordón y enchufe se unieron a la lista de aparatos cuyas partes metálicas expuestas deben conectarse a un conductor de puesta a tierra de equipos (EGC), tanto en casas como en otras ocupaciones. Las máquinas de hielo ahora están junto a refrigeradores, congeladores y aires acondicionados en la lista residencial, 250.114(3).\n• 250.130: 250.130(C) ahora cubre el reemplazo de un interruptor de acción rápida (snap switch) sin puesta a tierra. Un conductor de puesta a tierra de equipos (EGC) agregado para el interruptor nuevo puede conectarse en los mismos puntos ya permitidos para tomacorrientes. ¿Va a poner un interruptor con terminal de puesta a tierra en una caja antigua sin EGC? Su EGC nuevo puede ir a cualquier punto listado en 250.130(C).\n• 250.148: Un puente a una caja metálica ahora tiene una regla de tamaño: Tabla 250.122, basada en el breaker o fusible más grande de los circuitos en la caja. Las reglas para unir los conductores de puesta a tierra también se aclararon. Un puente de unión a una caja metálica ahora se dimensiona desde la Tabla 250.122, usando el breaker o fusible más grande de los circuitos en esa caja (250.148(C)).\n• 250.36: La sección ahora dice sistemas puestos a tierra por impedancia, eliminando alta y neutro, y renombra sus conductores para que coincidan con sus trabajos reales. Cuándo puede usarse uno no ha cambiado. Se renombró de sistemas de neutro puesto a tierra de alta impedancia a sistemas puestos a tierra por impedancia. Alta y neutro salieron ambos.\n• 250.6: La edición 2023 lo expresa claramente: ni la corriente de falla a tierra ni la corriente en una conexión de puesta a tierra o de unión que exige el Artículo 250 cuentan como corriente objetable. La corriente en una conexión requerida de puesta a tierra o de unión no es corriente objetable (250.6(C)). No retire la conexión para detenerla.\n• 250.70: En su mayor parte una limpieza: 250.70 ahora separa las reglas generales de la abrazadera de correa para comunicaciones interiores, y una nota nueva confirma que una abrazadera para enterramiento directo también sirve para empotramiento en concreto. Nota nueva: una abrazadera listada para enterramiento directo también es apta para empotramiento en concreto, así que puede ir en un electrodo empotrado en concreto.\n• 250.106: Las referencias a la norma NFPA 780 se eliminaron para la Nota Informativa N.º 1 y se actualizaron para la Nota Informativa N.º 2.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "250.4",
+        "250.4(A)(5)",
+        "250.24",
+        "250.28",
+        "250.50",
+        "Table 250.66"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-250.4",
@@ -4860,8 +6525,8 @@
       "article": "250",
       "section": "250.4",
       "title": "Qué deben lograr la puesta a tierra y la unión",
-      "plain_explanation": "Esta sección general establece el desempeño sobre el que se construye el resto del artículo: los sistemas puestos a tierra se conectan a la tierra física de una forma que limita el voltaje por rayos y sobretensiones y estabiliza el voltaje a tierra, y los equipos eléctricos y los gabinetes se unen entre sí en un camino continuo y de baja impedancia que puede llevar corriente de falla el tiempo suficiente para que el dispositivo contra sobrecorriente se abra. También indica claramente que la tierra física no debe usarse como el único conductor de puesta a tierra de equipos. Cuando una regla específica de instalación no está clara, esta sección es la prueba que debe pasar.",
-      "on_the_job": "Use esta página cuando comience una discusión en el campo: «¿disparará el breaker, rápido, siempre?» es la pregunta que hace esta sección. Si la respuesta honesta es no, el detalle está mal, se vea como se vea.",
+      "plain_explanation": "Esta sección general establece el desempeño que debe entregar el resto del Artículo 250, y divide el trabajo en dos tareas:\n• Puesta a tierra — conectar el sistema y los equipos a la tierra física. Limita el voltaje impuesto por rayos, sobretensiones de línea y contacto accidental con líneas de mayor voltaje, y estabiliza el voltaje a tierra durante la operación normal.\n• Unión — conectar las partes metálicas entre sí y de regreso a la fuente en un camino continuo y de baja impedancia que pueda llevar la corriente de falla el tiempo suficiente para que el dispositivo contra sobrecorriente se abra.\nLa sección indica claramente que la tierra física no es un camino efectivo de corriente de falla a tierra y no debe usarse como el único conductor de puesta a tierra de equipos. Cuando una regla específica de instalación no está clara, esta sección es la prueba que debe pasar.",
+      "on_the_job": "En una casa de losa de Florida con medidor-principal afuera y el tablero adentro, use esta página como lista de verificación antes de llamar la inspección de rough-in. El sistema de electrodos de puesta a tierra está unido en la acometida (250.50). El puente de unión principal aterriza en el medidor-principal, donde el neutro se encuentra con tierra. Un conductor de puesta a tierra de equipos corre con el alimentador hasta el tablero interior, y el neutro no se une a tierra otra vez aguas abajo (250.24(A)(5)). Una sola varilla debe probar 25 ohmios o menos, o se instala una segunda varilla (250.53(A)(2)). Luego haga la pregunta que hace esta sección: ¿disparará el breaker, rápido, siempre? Si falta cualquier eslabón de esa cadena, la respuesta honesta es no.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -4872,7 +6537,102 @@
       "verified": true,
       "prev_id": "C2-ART-250",
       "next_id": "C2-250.8",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "CAMBIO NEC 2023: No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Un conductor caliente que hace falla contra un gabinete metálico pone ese gabinete al voltaje de línea. Si el único regreso es a través de la tierra física, la impedancia del camino es tan alta que solo fluyen unos pocos amperios — muy pocos para disparar un breaker — y el gabinete queda energizado, esperando que una mano complete el circuito a través de un cuerpo. Un camino unido y de baja impedancia de regreso a la fuente deja fluir una corriente de falla alta durante la fracción de segundo que el breaker necesita para abrirse. La puesta a tierra física atiende los rayos y las sobretensiones; la unión es lo que despeja las fallas.",
+      "inspection_fails": [
+        "Sin conductor de puesta a tierra de equipos con el circuito — el instalador confió en la varilla de tierra para despejar las fallas.",
+        "Neutro unido a tierra otra vez en un subtablero aguas abajo del interruptor de acometida (250.24(A)(5)).",
+        "Conductor del electrodo de puesta a tierra empalmado con un conector de tornillo partido en vez de un conector de compresión irreversible o soldadura exotérmica (250.64(C)).",
+        "Tubería metálica interior de agua sin unir (250.104)."
+      ],
+      "exam_trap": "La respuesta tentadora dice que una varilla de tierra en el tablero «da a la corriente de falla un camino a tierra para que el breaker se dispare». Está mal dos veces. El trabajo de la varilla son los rayos y las sobretensiones, y la tierra física tiene una impedancia demasiado alta para despejar una falla. El breaker se dispara por el camino unido de regreso a la fuente (250.4(A)(5)).",
+      "tables": [
+        {
+          "caption": "Las dos tareas en 250.4",
+          "headers": [
+            "Tarea",
+            "Qué conecta",
+            "Qué hace"
+          ],
+          "rows": [
+            [
+              "Puesta a tierra",
+              "El sistema y los equipos a la tierra física",
+              "Limita el voltaje de rayos y sobretensiones; estabiliza el voltaje a tierra"
+            ],
+            [
+              "Unión",
+              "Las partes metálicas entre sí y de regreso a la fuente",
+              "Lleva la corriente de falla para que el breaker se abra rápido"
+            ],
+            [
+              "La tierra sola",
+              "—",
+              "No es un camino de falla efectivo; nunca el único conductor de puesta a tierra de equipos"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-250.4-fault-path.svg",
+          "alt": "Panel de comparación para una falla contra un gabinete metálico: el camino solo por tierra a través de una varilla tiene una impedancia demasiado alta para disparar el breaker, mientras que el camino unido de puesta a tierra de equipos de regreso a la fuente despeja la falla.",
+          "caption": "El despeje de fallas corre por el camino unido, no por la tierra.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un conductor caliente hace falla contra un gabinete metálico. ¿Qué hace que el breaker se dispare?",
+          "choices": [
+            "La varilla de tierra lleva la falla a la tierra física",
+            "El camino unido de baja impedancia de regreso a la fuente lleva corriente suficiente para abrirlo",
+            "El aislamiento del gabinete se rompe",
+            "El protector contra sobretensiones absorbe la falla"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El despeje de fallas necesita un camino de baja impedancia de regreso a la fuente para que fluya una corriente de falla alta y el breaker se abra. La tierra física no puede hacerlo.",
+          "nec_ref": "250.4(A)(5)"
+        },
+        {
+          "question": "Según 250.4, la tierra física puede usarse como:",
+          "choices": [
+            "El único conductor de puesta a tierra de equipos",
+            "Parte del sistema de electrodos, pero nunca como único camino de falla",
+            "El regreso del neutro de un subtablero",
+            "Sustituto de la unión de la tubería metálica"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La tierra física no es un camino efectivo de corriente de falla a tierra y no debe ser el único conductor de puesta a tierra de equipos.",
+          "nec_ref": "250.4(A)(5)"
+        },
+        {
+          "question": "Una sola varilla de tierra mide más de 25 ohmios a tierra. La corrección estándar es:",
+          "choices": [
+            "Clavarla más profundo y volver a medir",
+            "Agregar una segunda varilla",
+            "Conectarla a la tubería de agua y terminar",
+            "Usar una abrazadera más grande"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Una sola varilla debe mostrar 25 ohmios o menos, o se suplementa con un segundo electrodo.",
+          "nec_ref": "250.53(A)(2)"
+        }
+      ],
+      "code_refs": [
+        "250.4",
+        "250.4(A)(5)",
+        "250.24(A)(5)",
+        "250.50",
+        "250.53(A)(2)",
+        "250.64(C)",
+        "250.104"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-250.8",
@@ -4922,8 +6682,8 @@
       "article": "250",
       "section": "250.24",
       "title": "Puesta a tierra en la acometida — y en ningún lugar aguas abajo",
-      "plain_explanation": "En la acometida, el conductor puesto a tierra (neutro) se conecta al sistema de electrodos de puesta a tierra y a los conductores de puesta a tierra de equipos a través del puente de unión principal (main bonding jumper), en el equipo de acometida. Ese es el único lugar en un sistema de una instalación donde el neutro y la tierra se encuentran. Aguas abajo de la acometida — en subtableros y alimentadores — el conductor puesto a tierra (neutro) se mantiene aislado de las tierras de equipos y de los gabinetes, para que la corriente normal del neutro nunca viaje por partes metálicas y la corriente de falla tenga un camino claro de regreso.\n\nCAMBIO NEC 2023:\n• 250.24: Se hicieron varios cambios dentro de la Sección 250.24 para cumplir los requisitos del Manual de Estilo del NEC.\n• 250.24(D)(2): Recibió fundamentación para aclarar los requisitos relativos a los conductores paralelos puestos a tierra para equipo de acometida. Como resultado, se revisó la Sección 250.4(D)(2).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "En cada subtablero: barra de neutros aislada y no unida a la caja, barra de tierra unida a la caja, tierras y neutros en sus propias barras, y ningún tornillo o correa de unión dejado en su lugar por costumbre. Fotografie el primer subtablero de un trabajo y compárelo con esta página.",
+      "plain_explanation": "En la acometida, tres conexiones se juntan en el equipo de acometida:\n• El conductor del electrodo de puesta a tierra se conecta al conductor puesto a tierra (el neutro).\n• El puente de unión principal (main bonding jumper) une el neutro a los conductores de puesta a tierra de equipos y al gabinete.\n• De ese único punto en adelante, el neutro lleva la corriente de carga y el sistema de puesta a tierra lleva la corriente de falla.\nEse es el único lugar en un sistema de una instalación donde el neutro y la tierra se encuentran. Aguas abajo de la acometida — en subtableros y alimentadores — el conductor puesto a tierra se mantiene aislado de las tierras de equipos y de los gabinetes, para que la corriente normal del neutro nunca viaje por partes metálicas y la corriente de falla tenga un camino claro de regreso.",
+      "on_the_job": "El estándar de Sharma es el espalda con espalda de S-09: el meter-main Siemens exterior es el equipo de acometida, así que el puente de unión principal y el conductor del electrodo de puesta a tierra se conectan allí. En una acometida de 200 A con conductores de acometida de cobre 2/0, el puente de unión principal es de cobre 4 AWG, dimensionado desde la Tabla 250.102(C)(1) por medio de 250.28. El tablero interior es un subtablero: alimentador de cuatro hilos, barra de neutros aislada y flotante, barra de tierra unida a la caja, tornillo de unión fuera. Fotografie el primer subtablero de un trabajo y compárelo con esta página.",
       "sharma_note": "La acometida espalda con espalda de S-09 es donde se hace la unión de Sharma; cada tablero aguas abajo de ella se cablea con neutro aislado, sin excepciones para un tablero de edificio separado que en realidad es un subtablero — vea 250.32 para el caso de edificio separado.",
       "figure_idea": "Dos dibujos de tableros lado a lado: un tablero de acometida con la unión mostrada, y un subtablero con la correa de unión retirada y la barra de neutros flotante.",
       "related_ids": [
@@ -4955,7 +6715,104 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Agregue una segunda unión en un subtablero y la corriente del neutro se divide: parte regresa por la tubería (conduit), la tubería de agua y cada tierra de equipo hasta la acometida. El metal que debería estar a cero voltios ahora lleva corriente cada minuto del día, y si ese neutro alguna vez se afloja, la corriente plena de carga puede pasar a partes que una persona puede tocar. Una sola unión en la acometida mantiene la corriente normal en el neutro, donde pertenece, y reserva el camino de puesta a tierra para las fallas — para que una falla extraiga la corriente fuerte que dispara el breaker rápidamente.",
+      "exam_trap": "La respuesta trampa: «Una el neutro en cada tablero — más tierras son más seguras». Incorrecto. Cada unión más allá de la acometida pone corriente de carga en partes metálicas, todo el día. La única conexión de neutro a tierra en el sistema de la instalación es el puente de unión principal en la acometida. (Un sistema derivado separadamente, y un edificio separado bajo 250.32, siguen sus propias páginas y sus propias reglas.)",
+      "inspection_fails": [
+        "Tornillo de unión o correa de unión dejado en un subtablero, atando la barra de neutros a la caja.",
+        "Neutros y tierras de equipos conectados en la misma barra en un subtablero.",
+        "Puente de unión principal faltante en la acometida, o un tornillo verde haciendo las veces de un puente dimensionado.",
+        "Conductor del electrodo de puesta a tierra conectado en un tablero aguas abajo en lugar del equipo de acometida."
+      ],
+      "tables": [
+        {
+          "caption": "El equipo de acometida vs cada tablero después de él",
+          "headers": [
+            "Punto",
+            "En la acometida",
+            "Aguas abajo"
+          ],
+          "rows": [
+            [
+              "Puente de unión principal",
+              "Instalado aquí",
+              "Nunca"
+            ],
+            [
+              "Barra de neutros",
+              "Unida al gabinete",
+              "Aislada, flotante"
+            ],
+            [
+              "Conductor del electrodo de puesta a tierra",
+              "Se conecta aquí",
+              "Nunca se conecta aquí"
+            ],
+            [
+              "Neutros y tierras de equipos",
+              "Se encuentran aquí",
+              "Siempre en barras separadas"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-250.24-two-panels.svg",
+          "alt": "Dos dibujos de tableros lado a lado: a la izquierda un tablero de acometida donde un puente de unión principal dorado une la barra de neutros a la barra de tierra y al gabinete y el conductor del electrodo de puesta a tierra sale por abajo; a la derecha un subtablero con el tornillo de unión retirado, la barra de neutros flotante sobre aisladores y la barra de tierra unida a la caja.",
+          "caption": "Una sola unión, en la acometida. Cada tablero después de ella flota su neutro.",
+          "w": 900,
+          "h": 1520
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Dónde se conecta el neutro al sistema de puesta a tierra de equipos en el sistema de una instalación?",
+          "choices": [
+            "En el equipo de acometida, por el puente de unión principal",
+            "En cada tablero, por seguridad",
+            "En el primer tomacorriente de cada circuito",
+            "Solo en la varilla de tierra"
+          ],
+          "answer_index": 0,
+          "explain_plain": "El puente de unión principal en el equipo de acometida es la única conexión de neutro a tierra.",
+          "nec_ref": "250.24"
+        },
+        {
+          "question": "En un subtablero alimentado desde un meter-main exterior, la barra de neutros debe estar:",
+          "choices": [
+            "Unida a la caja",
+            "Aislada de la caja y de las tierras de equipos",
+            "Conectada junto con las tierras",
+            "Conectada a su propia varilla de tierra"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Aguas abajo de la acometida el conductor puesto a tierra se mantiene aislado para que la corriente de carga nunca viaje por partes metálicas.",
+          "nec_ref": "250.24"
+        },
+        {
+          "question": "Una acometida de 200 A usa conductores de acometida de cobre 2/0. El puente de unión principal es:",
+          "choices": [
+            "Cobre 8 AWG",
+            "Cobre 6 AWG",
+            "Cobre 4 AWG",
+            "Cobre 2 AWG"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Tabla 250.102(C)(1), llamada por 250.28(D)(1): los conductores de acometida de cobre 2/0 llevan un puente de unión principal de cobre 4 AWG.",
+          "nec_ref": "250.28(D)(1)"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 250.24: Se hicieron varios cambios dentro de la Sección 250.24 para cumplir los requisitos del Manual de Estilo del NEC.\n• 250.24(D)(2): Recibió fundamentación para aclarar los requisitos relativos a los conductores paralelos puestos a tierra para equipo de acometida. Como resultado, se revisó la Sección 250.4(D)(2).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "250.24",
+        "250.28",
+        "Table 250.102(C)(1)",
+        "250.32"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-250.28",
@@ -5015,8 +6872,8 @@
       "article": "250",
       "section": "250.32",
       "title": "Un edificio separado alimentado por un alimentador",
-      "plain_explanation": "Cuando un alimentador suministra un segundo edificio o estructura, ese edificio necesita su propio sistema de electrodos de puesta a tierra y un desconectador, y en el trabajo moderno se tiende un conductor de puesta a tierra de equipos junto con el alimentador. El conductor puesto a tierra (neutro) en el edificio separado no se vuelve a unir en el caso ordinario — la unión permanece en la acometida — y la excepción limitada para instalaciones existentes tiene condiciones que deben cumplirse todas. Esta es la compañera en el Artículo 250 de las páginas del Artículo 225 anteriores en este capítulo.",
-      "on_the_job": "Trate el tablero de un garaje separado como un subtablero que también necesita electrodos: alimentador de cuatro cables, neutro aislado, barra de tierra unida, varillas clavadas en el edificio. No vuelva a unir el neutro porque el edificio «se sienta» como su propia acometida.",
+      "plain_explanation": "Cuando un alimentador o circuito ramal suministra un segundo edificio o estructura, ese edificio se trata casi como una acometida — pero no lo es. El edificio necesita:\n• Un medio de desconexión para la alimentación (225.31)\n• Su propio sistema de electrodos de puesta a tierra (250.32(A)). Excepción: un edificio alimentado por un solo circuito ramal, individual o multiconductor, que incluye un conductor de puesta a tierra de equipos no necesita sistema de electrodos\n• Un conductor de puesta a tierra de equipos tendido con el alimentador (250.32(B)(1)), dimensionado según 250.122. El desconectador y los electrodos se conectan a ese EGC\n• El conductor puesto a tierra (neutro) NO se une en el edificio separado. El neutro que se tiende con el alimentador permanece aislado del EGC y de los electrodos — la única unión neutro-tierra permanece en la acometida\nUna excepción limitada, solo para instalaciones existentes: el conductor puesto a tierra puede conectarse en el edificio separado si se cumplen las tres condiciones — no se tendió un EGC con la alimentación, no hay trayectorias metálicas continuas unidas al sistema de puesta a tierra en ambos edificios (una tubería metálica de agua entre ellos la anula) y no hay protección contra fallas a tierra de equipos instalada en el lado de la alimentación. Ese conductor puesto a tierra no puede ser menor que el mayor entre 220.61 y 250.122. La compañera en el Artículo 250 de las páginas del Artículo 225 anteriores en este capítulo.",
+      "on_the_job": "Garaje separado detrás de una casa en Ocala, alimentado desde el tablero de la casa: tienda un alimentador de cuatro conductores — dos activos, un neutro aislado y un EGC. En el garaje, instale el desconectador, conecte el EGC a la barra de tierra y clave dos varillas de 8 ft separadas 6 ft, unidas a esa barra; una sola varilla basta solo con una prueba de 25 ohms en el archivo. Deje fuera el tornillo de unión del tablero. Si abre el tablero de un garaje viejo y encuentra una alimentación de tres conductores con el neutro unido, no lo copie sin más: verifique primero las tres condiciones de la excepción y anote lo que encontró.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -5027,7 +6884,119 @@
       "verified": true,
       "prev_id": "C2-250.30",
       "next_id": "C2-250.34",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Si usted une el neutro por segunda vez, la corriente normal del neutro se reparte por todas las trayectorias metálicas paralelas — el EGC, la tubería de agua, la propia tierra. Esa corriente objetable eleva el voltaje de contacto en los equipos, corroe el metal enterrado y puede dejar partes unidas energizadas si el neutro se abre. Una sola unión en la acometida, más un EGC separado, le da a la corriente de falla un camino metálico sólido de regreso, para que el breaker dispare en lugar de que la carcasa del equipo se energice.",
+      "exam_trap": "La respuesta trampa: «Un edificio separado tiene su propia acometida, así que una el neutro allí como si fuera un principal». Incorrecto — un alimentador no es una acometida. La unión permanece en la acometida; el edificio separado recibe electrodos y un EGC, con el neutro aislado. La única nueva unión permitida es la excepción para instalaciones existentes, y desaparece en cuanto se tiende un EGC o una tubería metálica de agua enlaza los edificios.",
+      "inspection_fails": [
+        "Neutro unido en el tablero del garaje separado — tornillo de unión puesto o puente conectado — poniendo corriente del neutro sobre el EGC y la tubería de agua.",
+        "Sin sistema de electrodos de puesta a tierra en el edificio separado alimentado por un alimentador.",
+        "Alimentador nuevo tendido con tres conductores y sin EGC, reclamando la excepción de instalaciones existentes en trabajo nuevo.",
+        "Varillas clavadas en el garaje pero nunca unidas a la barra de tierra del tablero."
+      ],
+      "tables": [
+        {
+          "caption": "En el edificio separado — la lista de verificación",
+          "headers": [
+            "Elemento",
+            "Regla"
+          ],
+          "rows": [
+            [
+              "Medio de desconexión",
+              "Requerido para la alimentación (225.31)"
+            ],
+            [
+              "Electrodos de puesta a tierra",
+              "Sistema propio requerido (250.32(A))"
+            ],
+            [
+              "Conductor de puesta a tierra de equipos",
+              "Tendido con el alimentador, según 250.122"
+            ],
+            [
+              "Unión del neutro",
+              "Ninguna — la unión permanece en la acometida"
+            ],
+            [
+              "Alimentación vieja de 3 conductores",
+              "Solo por excepción: las 3 condiciones cumplidas"
+            ]
+          ],
+          "note": "¿Un solo circuito ramal con EGC? No se requiere sistema de electrodos en ese edificio (Excepción de 250.32(A))."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-250.32-garage-feeder.svg",
+          "alt": "Diagrama de una acometida de casa que alimenta un garaje separado con un alimentador de cuatro conductores: la unión principal está solo en la casa, el neutro del garaje está aislado y dos varillas de 8 ft separadas 6 ft se unen a la barra de tierra del garaje.",
+          "caption": "Edificio separado: alimentador de cuatro conductores, electrodos allí, la unión queda en la acometida.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Se tiende un alimentador nuevo a un garaje separado. ¿Qué debe tenderse con él?",
+          "choices": [
+            "Un puente de unión para el tablero del garaje",
+            "Un conductor de puesta a tierra de equipos",
+            "Un segundo conductor puesto a tierra",
+            "Una varilla de tierra en la casa"
+          ],
+          "answer_index": 1,
+          "explain_plain": "250.32(B)(1): el EGC se tiende con la alimentación y se conecta al desconectador y a los electrodos. El neutro permanece aislado.",
+          "nec_ref": "250.32(B)(1)"
+        },
+        {
+          "question": "¿Cuándo puede unirse el neutro en un edificio separado existente?",
+          "choices": [
+            "Siempre que el edificio tenga sus propias varillas",
+            "Solo si no se tendió EGC, ninguna trayectoria metálica continua enlaza los edificios y no hay protección contra fallas a tierra en el lado de la alimentación",
+            "En cualquier edificio cableado antes de 2008, sin más condiciones",
+            "Nunca, bajo ninguna circunstancia"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Las tres condiciones de la excepción para instalaciones existentes deben cumplirse al mismo tiempo.",
+          "nec_ref": "Excepción de 250.32(B)(1)"
+        },
+        {
+          "question": "Una caseta de bomba se alimenta con un solo circuito ramal multiconductor que incluye un EGC. ¿Necesita su propio sistema de electrodos?",
+          "choices": [
+            "Sí, dos varillas mínimo",
+            "Sí, una varilla mínimo",
+            "No — aplica la excepción del circuito ramal único",
+            "Solo si también tiene desconectador"
+          ],
+          "answer_index": 2,
+          "explain_plain": "250.32(A) exceptúa un edificio alimentado por un solo circuito ramal, individual o multiconductor, con EGC.",
+          "nec_ref": "Excepción de 250.32(A)"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023: No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "250.32",
+        "250.32(A)",
+        "250.32(B)(1)",
+        "250.32(B)(1) Ex.",
+        "250.122",
+        "220.61",
+        "225.31",
+        "250.53(A)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "250.32(B)(1) exception for existing installations: the three conditions, and the grounded conductor sized not smaller than the larger of 220.61 and 250.122",
+          "source": "Mike Holt, Article 250.32 instructional page",
+          "url": "https://www.mikeholt.com/newsletters.php?action=display&letterID=1241&email="
+        },
+        {
+          "claim": "250.32(A) exception: a building supplied by a single branch circuit (individual or multiwire) with an EGC needs no grounding electrode system",
+          "source": "Electrical Contractor Magazine, NEC 250.32 Grounding & Bonding for Separate Buildings or Structures",
+          "url": "https://www.ecmag.com/magazine/articles/article-detail/codes-standards-equipment-and-structure-grounding-and-bonding-separate-buildings-or"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C2-250.34",
@@ -5368,8 +7337,8 @@
       "article": "250",
       "section": "250.94",
       "title": "La terminación de unión entre sistemas (intersystem bonding termination)",
-      "plain_explanation": "Otros sistemas — teléfono, cable, antena y sistemas de comunicaciones similares — necesitan un lugar para unirse al sistema eléctrico de puesta a tierra, y esta sección exige una terminación de unión entre sistemas en el equipo de acometida o de medición, accesible para conexión, con espacio para el número indicado de terminaciones. Es la pequeña barra o puente junto al medidor que evita que un instalador de cable se sujete a una tubería cualquiera. No reemplaza la unión que exigen los propios artículos de esos sistemas; les da el lugar listado donde conectar.\n\nCAMBIO NEC 2023:\n• 250.94(A): Se hicieron cambios menores de redacción en 250.94(A)(4) a y b y se eliminó la Nota Informativa 1, que no tenía mucho valor dentro del código y no cumplía con el Manual de Estilo del NEC.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Instálela donde las demás compañías de servicios realmente llegan a la casa, y déjela accesible después del revestimiento y la jardinería. Señálela en el recorrido final — la mitad de sus fallas es quedar enterrada detrás de los acabados.",
+      "plain_explanation": "Otros sistemas — teléfono, cable, antena y sistemas de comunicaciones similares — necesitan un lugar para unirse al sistema eléctrico de puesta a tierra, y esta sección exige una terminación de unión entre sistemas en el equipo de acometida o de medición, accesible para conexión, con espacio para el número indicado de terminaciones. Es la pequeña barra o puente junto al medidor que evita que un instalador de cable se sujete a una tubería cualquiera. No reemplaza la unión que exigen los propios artículos de esos sistemas; les da el lugar listado donde conectar.\nDónde va:\n• En el equipo de acometida o en la caja del equipo de medición, externa a la caja.\n• También en el medio de desconexión de cualquier otro edificio o estructura de la propiedad alimentado por un alimentador o un circuito ramal.\nLo que debe ser (250.94(A)):\n• Accesible para conexión e inspección.\n• Un conjunto de terminales con capacidad para no menos de tres conductores de unión entre sistemas.\n• Montada de modo que no interfiera con la apertura de la caja.\n• Montada de forma segura y conectada eléctricamente al equipo de acometida, a la caja del medidor o al conductor del electrodo de puesta a tierra.\n• Listada como equipo de puesta a tierra y unión.",
+      "on_the_job": "Instálela donde las demás compañías de servicios realmente llegan a la casa, y déjela accesible después del revestimiento y la jardinería. Señálela en el recorrido final — la mitad de sus fallas es quedar enterrada detrás de los acabados. En una casa nueva de Sharma, las acometidas de teléfono y cable llegan al medidor principal (meter-main), así que la IBT va en la pared junto a él, con sus terminales libres. Si el instalador de cable llega antes de que la IBT esté instalada, sujetará la tubería más cercana — y la corrección cae sobre nosotros.",
       "sharma_note": "",
       "figure_idea": "Una base de medidor con un pequeño puente de unión montado a su lado, con los cables de tierra de teléfono y de cable conectados en sus terminales.",
       "related_ids": [
@@ -5390,7 +7359,107 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Los rayos y las sobretensiones de la compañía eléctrica no respetan los límites entre oficios. Si el sistema de cable y el sistema eléctrico quedan a potenciales diferentes durante una sobretensión, la diferencia se iguala de la manera violenta — con arcos entre sistemas, quemando equipos electrónicos y dando descargas a quien toque ambos a la vez. Un solo punto de terminación unido mantiene todos los sistemas al mismo potencial.",
+      "exam_trap": "Aparecen dos respuestas incorrectas. Primera: 'la IBT es un electrodo de puesta a tierra' — no lo es; es un punto de terminación que conecta los otros sistemas al sistema de electrodos de puesta a tierra. Segunda: 'conectar en la IBT reemplaza la unión que exigen los artículos de comunicaciones' — no la reemplaza; esos artículos siguen exigiendo la unión. La IBT es simplemente el lugar listado donde se conecta.",
+      "inspection_fails": [
+        "Sin IBT en la acometida — la unión del cable está sujeta a una llave de manguera o a una tubería cualquiera.",
+        "IBT enterrada detrás del revestimiento, el estuco o la jardinería, ya no accesible.",
+        "Garaje separado alimentado por un alimentador con su propia acometida de cable, pero sin IBT en su medio de desconexión.",
+        "IBT montada donde bloquea la apertura de la puerta de la caja del medidor."
+      ],
+      "tables": [
+        {
+          "caption": "La lista de la IBT (250.94(A))",
+          "headers": [
+            "Requisito",
+            "En el campo"
+          ],
+          "rows": [
+            [
+              "Ubicación",
+              "En el equipo de acometida o de medición; también en la desconexión de un edificio alimentado por alimentador"
+            ],
+            [
+              "Acceso",
+              "Alcanzable para conexión e inspección después de los acabados"
+            ],
+            [
+              "Capacidad",
+              "Terminales para no menos de tres conductores de unión"
+            ],
+            [
+              "Montaje",
+              "Segura, conectada eléctricamente y sin bloquear la puerta de la caja"
+            ],
+            [
+              "Listado",
+              "Listada como equipo de puesta a tierra y unión"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-250.94-ibt.svg",
+          "alt": "Elevación de un medidor principal (meter-main) en una pared con una terminación de unión entre sistemas a su lado; los conductores de unión de teléfono, cable de TV y antena se conectan en sus tres terminales, y el conductor del electrodo de puesta a tierra sale del medidor principal hacia el símbolo de tierra.",
+          "caption": "La IBT junto al medidor principal: un lugar listado para que aterricen todos los demás sistemas.",
+          "w": 900,
+          "h": 1640
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Debe proveerse una terminación de unión entre sistemas en:",
+          "choices": [
+            "Cada tablero",
+            "El equipo de acometida o la caja del equipo de medición",
+            "El primer tomacorriente",
+            "Solo la entrada del servicio de agua"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La IBT pertenece al equipo de acometida o a la caja del equipo de medición — y al medio de desconexión de los edificios alimentados por alimentadores.",
+          "nec_ref": "250.94"
+        },
+        {
+          "question": "El conjunto de terminales de la IBT debe tener capacidad para:",
+          "choices": [
+            "Un conductor de unión entre sistemas",
+            "Dos conductores de unión entre sistemas",
+            "No menos de tres conductores de unión entre sistemas",
+            "Seis conductores de unión entre sistemas"
+          ],
+          "answer_index": 2,
+          "explain_plain": "250.94(A) exige un conjunto de terminales con capacidad para no menos de tres conductores de unión entre sistemas.",
+          "nec_ref": "250.94(A)"
+        },
+        {
+          "question": "Conectar el conductor de unión de un sistema de cable en la IBT:",
+          "choices": [
+            "Reemplaza la unión que exige su propio artículo",
+            "Le da el lugar listado donde conectar — su propio artículo sigue exigiendo la unión",
+            "Convierte la IBT en un electrodo de puesta a tierra",
+            "Es opcional si el sistema es inalámbrico"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La IBT es el punto de terminación; no reemplaza la unión que exigen los artículos de comunicaciones.",
+          "nec_ref": "250.94"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 250.94(A): Se hicieron cambios menores de redacción en 250.94(A)(4) a y b y se eliminó la Nota Informativa 1, que no tenía mucho valor dentro del código y no cumplía con el Manual de Estilo del NEC.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "250.94",
+        "250.94(A)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "250.94(A) IBT requirements: accessible for connection and inspection, capacity for at least three intersystem bonding conductors, does not interfere with opening the enclosure, securely mounted and electrically connected, listed as grounding and bonding equipment",
+          "source": "Mike Holt, Bonding and Grounding, based on the 2020 NEC (250.94 summary)",
+          "url": "https://www.mikeholt.com/newsletters.php?action=display&letterID=2312"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C2-250.104",
