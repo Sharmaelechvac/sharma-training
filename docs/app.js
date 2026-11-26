@@ -105,7 +105,7 @@ const askCard = `<a class="tr-ask" href="#/ask"><b>${t("Ask the NEC")}</b><span>
    on its first page). The kit stackview is position:fixed, so a shell footer
    can never show — the mark closes the landing views themselves: Course
    (the app's first page) and Code (the NEC Field Book landing). */
-const wmFooter = `<div class="tr-foot"><span class="tr-foot__chip"><span class="tr-foot__by">Powered by</span><img src="assets/sharma360-logo-reversed.png?v=1" alt="SHARMA360" style="height:18px;width:auto"></span></div>`;
+const wmFooter = `<div class="tr-foot"><span class="tr-foot__chip"><span class="tr-foot__by">Powered by</span><img src="assets/sharma360-logo-reversed.png?v=2" alt="SHARMA360" style="height:18px;width:auto"></span></div>`;
 
 /* ---------------- Course (Rough-In Guide + training curriculum) ---------------- */
 function courseRootHtml() {
