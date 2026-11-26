@@ -13,8 +13,8 @@
       "article": "400",
       "section": "400",
       "title": "Flexible cords and cables — article intro",
-      "plain_explanation": "Article 400 covers cords and flexible cables used to connect equipment, not wire that is installed as part of a building. It sorts cord types by construction and permitted use, and it draws a hard line against using a cord as a substitute for permanent wiring. If the wire is meant to stay in the building, it belongs in a Chapter 3 wiring method, not in a cord.",
-      "on_the_job": "When you reach for a cord, ask whether the equipment is meant to move, be serviced, or be exchanged. If the answer is no, run a permanent wiring method instead. Check the cord jacket marking for the type letter before you trust it in a damp or hard-use location.",
+      "plain_explanation": "Article 400 covers flexible cords and flexible cables — the connections between equipment and the building wiring, not wire that is installed as part of the building. It sorts cord types by construction (Table 400.4) and permitted use, and it draws a hard line against using a cord as a substitute for permanent wiring. If the wire is meant to stay in the building, it belongs in a Chapter 3 wiring method, not in a cord.\nUses permitted (400.10) are the ones that need to move or be serviced:\n• Pendants\n• Portable lamps and portable appliances\n• Elevator and hoist cables\n• Parts of listed equipment, and similar flexible connections\nUses not permitted (400.12) — a flexible cord may not be:\n• (1) Used as a substitute for the fixed wiring of a structure\n• (2) Run through holes in walls, structural ceilings, suspended or dropped ceilings, or floors\n• (3) Run through doorways, windows, or similar openings\n• (4) Attached to building surfaces, except as 368.56(B) and 590.4 permit\n• (5) Concealed by walls, floors, or ceilings, or located above suspended or dropped ceilings\n• (6) Installed in raceways, except as otherwise permitted in the Code\n• (7) Installed where subject to physical damage\nThe 2020 numbers are 400.10 and 400.12; in the 2017 book the same lists were 400.7 and 400.8.",
+      "on_the_job": "When you reach for a cord, ask whether the equipment is meant to move, be serviced, or be exchanged. If the answer is no, run a permanent wiring method instead. On a service call at a small Orlando warehouse, Sharma found an air compressor 'temporarily' cord-connected through a hole bored in the wall for over a year, the cord pinched flat where it crossed a doorway. The fix was not a heavier cord: the crew ran a dedicated 20 A branch circuit in EMT to a receptacle beside the compressor — Sharma's commercial minimum — and the cord went back to being the compressor's own short connection. Check the cord jacket marking for the type letter before you trust it in a damp or hard-use location.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -22,7 +22,107 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": null,
-      "next_id": "C4-400.7"
+      "next_id": "C4-400.7",
+      "why_it_exists": "A cord jacket is not a raceway. Building wire gets mechanical protection, support, and a box at every splice; a cord pressed into permanent service gets none of that. Stapled, buried, or pinched in a doorway, its insulation fails quietly — and nobody re-checks it, because everyone assumes the 'temporary' cord was removed years ago.",
+      "exam_trap": "The trap answer is 'use a heavier cord.' A 12 AWG hard-service cord through a wall hole is still a 400.12(2) violation, and an extension cord feeding a fixed appliance is still a substitute for fixed wiring under 400.12(1). Cord size and jacket type never cure a prohibited use.",
+      "inspection_fails": [
+        "Flexible cord run through a hole in a wall, ceiling, or floor to reach fixed equipment (400.12(2)).",
+        "Cord passing through a doorway or window opening, pinched by the door (400.12(3)).",
+        "Extension cord or cord set left as the permanent supply to a fixed appliance (400.12(1)).",
+        "Cord concealed above a suspended ceiling, or attached to building surfaces outside the permitted exceptions (400.12(4), (5))."
+      ],
+      "tables": [
+        {
+          "caption": "Cord, or Chapter 3 method?",
+          "headers": [
+            "Situation",
+            "Cord OK?",
+            "Why"
+          ],
+          "rows": [
+            [
+              "Pendant luminaire over a workbench",
+              "Yes",
+              "Pendants are a permitted use (400.10)"
+            ],
+            [
+              "Portable fan or tool that moves with the job",
+              "Yes",
+              "Portable equipment is the cord's job (400.10)"
+            ],
+            [
+              "Fixed compressor fed through a hole in the wall",
+              "No",
+              "Through holes in walls is prohibited (400.12(2))"
+            ],
+            [
+              "Cord stapled along a baseboard to a fixed heater",
+              "No",
+              "Substitute for fixed wiring; attached to a building surface (400.12(1), (4))"
+            ],
+            [
+              "Cord hidden above a dropped ceiling",
+              "No",
+              "Concealed / above suspended ceilings (400.12(5))"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-ART-400-cord-line.svg",
+          "alt": "Two panels comparing flexible cord use: on the left a pendant luminaire and a portable fan at a bench, both permitted; on the right a cord run through a hole in a wall to a fixed unit and a cord pinched through a doorway, both prohibited.",
+          "caption": "A cord connects equipment that moves. It never becomes the building wiring.",
+          "w": 900,
+          "h": 1660
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Which of these is a permitted use of a flexible cord?",
+          "choices": [
+            "Feeding a fixed air handler through a wall",
+            "A pendant luminaire",
+            "A cord hidden above a dropped ceiling",
+            "A cord stapled to a baseboard as a permanent run"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Pendants are on the uses-permitted list. The other three are on the uses-not-permitted list.",
+          "nec_ref": "400.10"
+        },
+        {
+          "question": "A 12 AWG hard-service cord runs through a doorway to a fixed compressor. Verdict?",
+          "choices": [
+            "OK — the cord is heavy duty",
+            "OK if the door stays open",
+            "Not permitted — through a doorway, and a fixed load needs a permanent method",
+            "Not permitted only if the cord is damaged"
+          ],
+          "answer_index": 2,
+          "explain_plain": "400.12(3) bars cords through doorways, and 400.12(1) bars a cord as a substitute for fixed wiring. Cord size does not change either answer.",
+          "nec_ref": "400.12(3)"
+        },
+        {
+          "question": "In the 2020 NEC, the uses-permitted and uses-not-permitted lists for flexible cords are:",
+          "choices": [
+            "400.7 and 400.8",
+            "400.10 and 400.12",
+            "310.10 and 310.12",
+            "400.4 and 400.5"
+          ],
+          "answer_index": 1,
+          "explain_plain": "400.7 and 400.8 are the 2017 numbers — the classic trap. The 2020 lists are 400.10 and 400.12.",
+          "nec_ref": "400.10, 400.12"
+        }
+      ],
+      "code_refs": [
+        "400.10",
+        "400.12",
+        "Table 400.4"
+      ],
+      "uncertain": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C4-400.7",
@@ -531,8 +631,8 @@
       "article": "404",
       "section": "404.2(A)",
       "title": "Three-way and four-way switching — what the switch may control",
-      "plain_explanation": "Section 404.2(A) deals with which conductor a switch interrupts. In plain terms, switching belongs in the ungrounded (hot) conductor, and three-way and four-way arrangements must be wired so the load is never left connected to a hot conductor with the switch appearing to be off in a way that leaves lampholder shells energized. The traveler system exists to let two or more locations control one load while keeping that rule intact.",
-      "on_the_job": "Wire 3-way/4-way runs by function, not by color habit: common, travelers, switched leg, neutral, ground. Test every switch position at trim and confirm the load is fully controlled from each location before you leave. Never borrow a neutral from another circuit to make a traveler scheme work.",
+      "plain_explanation": "Section 404.2(A) is about which conductor a switch interrupts. For three-way and four-way switches the rule is stated outright: all switching must be in the ungrounded (hot) conductor.\n• The grounded (neutral) conductor is never switched. It runs unbroken to the load and lands on the screw shell of a lampholder, so the shell — the part fingers touch — stays on the grounded side.\n• In a traveler system, the hot lands on the first switch's common terminal, the two travelers carry it from switch to switch, and the switched leg leaves the last switch's common for the load. Two or more locations control one load while the rule stays intact.\n• The banned pattern is the old Carter system: hot and neutral both landed on the traveler terminals, so depending on the switch positions the shell could sit on the hot side — with the light off. Prohibited since the 1923 NEC, it still turns up in old Florida houses.",
+      "on_the_job": "Wire 3-way/4-way runs by function, not by color habit: common, travelers, switched leg, neutral, ground. On a Sharma house rough-in — a Winter Park two-story with switches at both ends of the hall and at the top and bottom of the stairs — the travelers on the long runs get labeled at rough-in, per the Sharma practice note below, so the trim crew is not ringing out pairs through finished walls. Test every switch position at trim and confirm the load is fully controlled from each location before you leave. Never borrow a neutral from another circuit to make a traveler scheme work.",
       "sharma_note": "Sharma practice note (job practice, not code text): label travelers at rough-in when a run is long or passes through several boxes. It saves the trim crew from ringing out pairs.",
       "figure_idea": "Figure idea (original, ours): a simple line drawing in our own style showing one load, a 3-way at each end and a 4-way in the middle, with boxes labelled common / travelers / switched leg — no textbook diagram copied.",
       "related_ids": [
@@ -543,7 +643,114 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-ART-404",
-      "next_id": "C4-404.2(C)"
+      "next_id": "C4-404.2(C)",
+      "why_it_exists": "A lamp that is 'off' should be safe to re-lamp. If the switching scheme leaves the screw shell connected to a hot conductor, the person changing the bulb — standing on a ladder, one hand on the shell — becomes the path. Switching only the hot conductor, and keeping the shell on the grounded conductor, is what makes 'off' mean off.",
+      "exam_trap": "The trap is wiring by 'it works.' A Carter-wired 3-way turns the light on and off from both locations, so it passes a lazy test — but in some switch combinations the socket shell is hot with the light off. 'The light works from both switches' is not the test; 'all switching is in the ungrounded conductor' is. The same goes for landing a traveler on the common because the colors looked right.",
+      "inspection_fails": [
+        "Neutral switched instead of the hot — the lampholder shell stays energized with the light off (404.2(A)).",
+        "Carter-style wiring found or recreated: hot and neutral both on the traveler terminals.",
+        "Traveler landed on a common terminal, so the load obeys only one switch or the positions disagree.",
+        "Neutral borrowed from another circuit to make a traveler scheme work."
+      ],
+      "tables": [
+        {
+          "caption": "Who's who in a 3-way/4-way run",
+          "headers": [
+            "Conductor",
+            "Job",
+            "Lands on"
+          ],
+          "rows": [
+            [
+              "Common (in)",
+              "Brings the hot to the first switch",
+              "Dark common screw of the first 3-way"
+            ],
+            [
+              "Travelers (2)",
+              "Carry the hot between the switches",
+              "Brass traveler terminals — the same pair, end to end"
+            ],
+            [
+              "Common (out)",
+              "Switched leg to the load",
+              "Dark common screw of the last 3-way"
+            ],
+            [
+              "Neutral",
+              "Returns the load current — never switched",
+              "Through to the load; the lampholder screw shell"
+            ],
+            [
+              "EGC",
+              "Bonds boxes and switch yokes",
+              "Green terminals and boxes (404.9)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-404.2A-three-way.svg",
+          "alt": "One-line diagram of a multi-way switching run: the panel hot lands on the first 3-way switch's common terminal, two travelers carry it through a 4-way switch to a second 3-way, the switched leg leaves its common for the lamp, and the neutral runs unbroken straight to the lamp's screw shell, with a warning panel about the banned Carter system.",
+          "caption": "Common, travelers, common — and the neutral never touches a switch.",
+          "w": 900,
+          "h": 1520
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "404.2(A): in a 3-way or 4-way system, all switching must be in which conductor?",
+          "choices": [
+            "The grounded (neutral) conductor",
+            "The ungrounded (hot) conductor",
+            "Either conductor, if the light works",
+            "The equipment grounding conductor"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Three-way and four-way switches must be wired so that all switching is in the ungrounded conductor.",
+          "nec_ref": "404.2(A)"
+        },
+        {
+          "question": "A lampholder's screw shell tests hot with the light switched off. The likely cause:",
+          "choices": [
+            "A burned-out lamp",
+            "The neutral is being switched, leaving the shell on the hot side",
+            "A bad breaker",
+            "The travelers are too long"
+          ],
+          "answer_index": 1,
+          "explain_plain": "If the scheme switches the neutral or lands hot and neutral on the travelers (Carter), the shell can sit on the hot side while the lamp is off.",
+          "nec_ref": "404.2(A)"
+        },
+        {
+          "question": "In a standard traveler system, the switched leg to the load leaves from:",
+          "choices": [
+            "A traveler terminal of the 4-way switch",
+            "The common terminal of the last 3-way",
+            "The neutral splice",
+            "The first switch's traveler terminal"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Hot in on the first common, travelers between the switches, switched leg out of the last common.",
+          "nec_ref": "404.2(A)"
+        }
+      ],
+      "code_refs": [
+        "404.2(A)",
+        "404.2(C)",
+        "404.9"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "Carter system: hot and neutral on the traveler terminals, the socket shell can be hot with the light off, banned in the 1923 NEC",
+          "source": "Terry Love Plumbing & Remodel DIY forum — Carter 3-way discussion",
+          "url": "https://terrylove.com/forums/index.php?threads/120v-49v-51v-on-outlet-test-and-hot-ground.71304/page-2"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C4-404.2(C)",
@@ -551,8 +758,8 @@
       "article": "404",
       "section": "404.2(C)",
       "title": "A neutral must be available at most switch locations",
-      "plain_explanation": "Section 404.2(C) requires a grounded conductor — the neutral — to be present at most switch locations in a dwelling and in general lighting control. The reason is practical: modern controls, timers, occupancy sensors, and smart switches often need a neutral to power themselves. There are listed exceptions, including some raceway installations where the neutral can be added later and certain replacement or retrofit situations, so read the exception list for the exact job instead of assuming.\n\nNEC 2023 CHANGE:\n• 404.2: One escape hatch for skipping the neutral at lighting switches is gone: a box you can get into later without opening up the finish no longer counts. Gone in 2023: the pass for a switch box reachable later without removing finish materials. Pull the neutral anyway (404.2(C)).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "At rough-in, pull the neutral through every switch box even when the planned device is a plain snap switch that does not use it today. Cap it neatly in the back of the box. That one habit prevents the most common 404.2(C) correction and makes later smart-switch work possible without opening walls.",
+      "plain_explanation": "Section 404.2(C) requires a grounded conductor — the neutral — to be installed at the switch locations where switches control lighting loads on a grounded general-purpose branch circuit: bathrooms, hallways, stairways, and habitable rooms. The reason is practical: modern controls, timers, occupancy sensors and smart switches need a neutral to power themselves.\n• The neutral must be there even if today's device is a plain snap switch that never touches it.\n• Where 3-way or 4-way locations control the same load and the whole floor area is visible from the switch locations, the neutral is required at only one location.\n• Exceptions (2020) let you omit it where the conductors enter through a raceway with room to add the neutral later, where a cable can still be added or replaced without removing finish materials, for snap switches with integral enclosures complying with 300.15(E), where the lighting is controlled by automatic means, and where the switch controls a receptacle load.\nRead the exception list for the exact job instead of assuming — and pull the neutral anyway when in doubt.",
+      "on_the_job": "At rough-in, pull the neutral through every switch box even when the planned device is a plain snap switch that does not use it today. Cap it neatly in the back of the box. That one habit prevents the most common 404.2(C) correction and makes later smart-switch work possible without opening walls. On a Marion Oaks entry, the 3-gang box gets the feed, three switch legs, and the neutral spliced through and capped; the hall 3-ways need the neutral at one location only, because the whole hall is visible from both ends.",
       "sharma_note": "Sharma note: this is why the Honeywell / ecobee-era control work and smart switches on Sharma jobs assume a neutral in the box. Do not design a switch location that strands a future electronic control without one.",
       "figure_idea": "",
       "related_ids": [
@@ -573,7 +780,109 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/404-2",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Electronic controls need power while the light is off. Without a neutral in the box, the old workarounds leaked current through the load or borrowed the equipment ground — flickering lamps and current on grounding paths. Requiring the neutral at rough-in, while the walls are open, turns every later control swap into a device change instead of a demolition job.",
+      "inspection_fails": [
+        "Switch loop roughed with no neutral in a bedroom or hallway switch box.",
+        "Smart dimmer landed on the equipment grounding conductor for its return current.",
+        "Neutral present in the box, but from a different circuit than the switch leg it serves.",
+        "No neutral at any 3-way location where the room is not visible from the switch locations."
+      ],
+      "exam_trap": "The trap answer is 'no neutral needed — the specified device is a plain snap switch.' The rule is about the location, not today's device: if the switch controls lighting in a habitable room, the neutral goes in the box. The related trap is powering a smart switch by borrowing the equipment grounding conductor as its return — electronic control switches are not permitted to put their operating current on the ground (404.22).",
+      "tables": [
+        {
+          "caption": "Neutral at the switch box — 2020",
+          "headers": [
+            "Situation",
+            "Neutral?"
+          ],
+          "rows": [
+            [
+              "Lighting switch, habitable room / hall / bath",
+              "Required"
+            ],
+            [
+              "3-way pair, whole room visible from both",
+              "One location"
+            ],
+            [
+              "Conductors enter via raceway with room to add",
+              "May omit"
+            ],
+            [
+              "Box reachable to add cable, finish intact",
+              "May omit (2020)"
+            ],
+            [
+              "Switch controls a receptacle load",
+              "May omit"
+            ]
+          ],
+          "note": "The 'reachable box' pass is deleted in NEC 2023 — see the 2020 vs 2023 box."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-404.2C-neutral.svg",
+          "alt": "Two switch boxes compared: on the left the feed enters the box and the neutral is spliced and capped in the back, ready for any control; on the right an old two-wire switch loop drops from the light to the switch box with no neutral at all.",
+          "caption": "Feed in the box with the neutral capped beats a switch loop every time.",
+          "w": 900,
+          "h": 1480
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A plain snap switch is specified for a bedroom light. Must a neutral be in the box?",
+          "choices": [
+            "No — only electronic switches need one",
+            "Yes — the rule is about the location",
+            "Only if the owner asks",
+            "Only on 20 A circuits"
+          ],
+          "answer_index": 1,
+          "explain_plain": "404.2(C) requires the neutral at the switch location regardless of today's device.",
+          "nec_ref": "404.2(C)"
+        },
+        {
+          "question": "Under the 2020 exceptions, which installation may omit the neutral?",
+          "choices": [
+            "Any switch loop",
+            "Conductors entering through a raceway large enough to add the neutral later",
+            "All 3-way switches",
+            "Switches mounted above 48 in"
+          ],
+          "answer_index": 1,
+          "explain_plain": "A raceway with room to pull the neutral in later is one of the listed exceptions.",
+          "nec_ref": "404.2(C)"
+        },
+        {
+          "question": "Two 3-way locations control a hall light, and the whole hall is visible from both. The neutral is required at:",
+          "choices": [
+            "Both locations",
+            "One location",
+            "Neither location",
+            "The fixture only"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Where the entire floor area is visible from the switch locations, one neutral location satisfies 404.2(C).",
+          "nec_ref": "404.2(C)"
+        }
+      ],
+      "code_refs": [
+        "404.2(C)",
+        "404.22",
+        "300.15(E)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "2020 404.2(C): neutral required at lighting switch locations serving bathrooms, hallways, stairways and habitable rooms; only one location needs it where 3-way/4-way locations see the whole area; the neutral may be omitted for raceway entry with room to add it, an accessible box, integral-enclosure snap switches per 300.15(E), automatic control, and switches controlling receptacles",
+          "source": "Mike Holt — Switches, based on the 2020 NEC",
+          "url": "https://www.mikeholt.com/newsletters.php?action=display&letterID=2638"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 404.2: One escape hatch for skipping the neutral at lighting switches is gone: a box you can get into later without opening up the finish no longer counts. Gone in 2023: the pass for a switch box reachable later without removing finish materials. Pull the neutral anyway (404.2(C)).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C4-404.4",
@@ -601,8 +910,8 @@
       "article": "404",
       "section": "404.8(A)",
       "title": "Switches must be reachable — operating handle height",
-      "plain_explanation": "Section 404.8(A) requires switches to be readily accessible and sets a ceiling on height: the center of the operating handle, in its highest position, may not be more than 6 ft 7 in. above the floor or working platform. The point is that a person standing on the floor must be able to operate the switch without a ladder or a reach tool. It does not set the normal mounting height for a house switch — that comes from the plan or company practice.",
-      "on_the_job": "Measure to the handle in its up position, not to the top of the box. Special cases exist for switches next to equipment they serve and for busway-type installations, so check the exceptions before you relocate a switch that looks too high.",
+      "plain_explanation": "Section 404.8(A) requires switches to be readily accessible and sets a ceiling on height: the center of the operating handle, in its highest position, may not be more than 6 ft 7 in. above the floor or working platform. The point is that a person standing on the floor must be able to operate the switch without a ladder or a reach tool. It does not set the normal mounting height for a house switch — that comes from the plan or company practice.\n• The measurement is to the center of the handle with the handle up — not to the top of the box or the plate.\n• Special cases exist for switches next to the equipment they serve and for busway-type installations, so check the exceptions before you relocate a switch that looks too high.",
+      "on_the_job": "Sharma roughs house switches at 48 in. to the center of the box when the plan is silent (S-05), so the ceiling in 404.8(A) rarely comes up — until it does. On an Ocala final, the garage switch for the yard lights had been set high to clear a workbench: the center of the handle in the up position measured 6 ft 8 in. One inch over the limit, and it failed. It moved down to 5 ft 6 in., still clear of the bench.",
       "sharma_note": "S-05: Sharma's default is 48 in. to the center of the box when the plan is silent. The plan governs when it states a height. Do not present 48 in. as a code number — 404.8(A) is the code ceiling, S-05 is our working height.",
       "figure_idea": "",
       "related_ids": [
@@ -615,7 +924,96 @@
         "S-05"
       ],
       "prev_id": "C4-404.4",
-      "next_id": "C4-404.9"
+      "next_id": "C4-404.9",
+      "why_it_exists": "A switch is the control a person reaches for in the dark, in smoke, or in a hurry. If it takes a ladder or a broom handle, it is not really a control — people leave the light on, or worse, cannot shut a circuit off at the device. The 6 ft 7 in. ceiling keeps every switch within a standing person's reach.",
+      "inspection_fails": [
+        "Switch handle center at 6 ft 9 in. above the floor — over the 404.8(A) ceiling.",
+        "Switch reachable only from a step stool or ladder in a garage or stairwell.",
+        "Switch blocked by fixed equipment or stored material — not readily accessible.",
+        "Height checked to the top of the plate at trim and a high switch passed on that measurement."
+      ],
+      "exam_trap": "The trap is answering 48 in. That is Sharma's working height (S-05), not a code number. The code gives a maximum, not a mounting height: 6 ft 7 in. to the center of the operating handle in its highest position. The second trap is measuring to the top of the box — the rule measures the handle.",
+      "tables": [
+        {
+          "caption": "Ceiling vs working height",
+          "headers": [
+            "Number",
+            "What it is",
+            "Source"
+          ],
+          "rows": [
+            [
+              "6 ft 7 in max",
+              "Center of handle, highest position",
+              "404.8(A)"
+            ],
+            [
+              "48 in",
+              "Sharma default to center of box",
+              "S-05 (company)"
+            ],
+            [
+              "Exceptions",
+              "Equipment-adjacent and busway switches — check first",
+              "404.8(A)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-404.8A-height.svg",
+          "alt": "Wall elevation showing a switch at 48 inches to the center of the box marked OK under Sharma rule S-05, a gold dashed ceiling line at 6 ft 7 in for NEC 404.8(A), and a switch at 6 ft 9 in above the line crossed out as failing.",
+          "caption": "48 in is how Sharma works; 6 ft 7 in is the code ceiling.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Maximum height for the center of a switch operating handle in its highest position?",
+          "choices": [
+            "6 ft",
+            "6 ft 7 in",
+            "7 ft",
+            "48 in"
+          ],
+          "answer_index": 1,
+          "explain_plain": "404.8(A) caps the handle center, handle up, at 6 ft 7 in. above the floor or platform.",
+          "nec_ref": "404.8(A)"
+        },
+        {
+          "question": "A general lighting switch measures 6 ft 8 in. to the handle center, handle up. No exception applies. Result?",
+          "choices": [
+            "Passes — within an inch",
+            "Fails by 1 in",
+            "Passes if the occupant is tall",
+            "Fails only in commercial work"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The ceiling is a hard maximum: 6 ft 8 in. is over 6 ft 7 in.",
+          "nec_ref": "404.8(A)"
+        },
+        {
+          "question": "The plan is silent on switch height. Sharma sets the box center at:",
+          "choices": [
+            "40 in",
+            "44 in",
+            "48 in",
+            "52 in"
+          ],
+          "answer_index": 2,
+          "explain_plain": "48 in. to the center of the box is Sharma's default (S-05). The code sets only the ceiling.",
+          "nec_ref": "404.8(A) / S-05"
+        }
+      ],
+      "code_refs": [
+        "404.8(A)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C4-404.9",
@@ -623,8 +1021,8 @@
       "article": "404",
       "section": "404.9",
       "title": "Grounding snap switches (404.9)",
-      "plain_explanation": "Section 404.9 requires snap switches to be grounded. In practice the switch's metal yoke is bonded through the equipment grounding conductor: a metal box bonded by its EGC grounds the switch through its mounting screws, and in a nonmetallic box the switch's own grounding terminal takes the EGC. The replacement exception matters in old houses: where an existing switch is replaced in a box with no grounding means, the exception's limited paths apply — including GFCI protection or a nonmetallic plate — rather than landing an ungrounded switch and moving on.",
-      "on_the_job": "On remodels, check for a ground before trim-out, not during the final walk. No EGC in the box changes what devices you may land — flag it at discovery.",
+      "plain_explanation": "Section 404.9 requires snap switches — including dimmers and control switches — to be connected to an equipment grounding conductor (EGC), so the metal yoke and any metal faceplate are bonded.\n• Metal box: the box is bonded by its EGC, and the switch's mounting screws bond the yoke to the box (250.109). The screws are the bond — use the switch's own mounting screws, tight.\n• Nonmetallic box: there is no box to bond through, so the EGC lands on the switch's own green grounding terminal.\n• Faceplates: 404.9(A) also requires the plate to completely cover the box opening and seat against the finished surface.\nThe replacement exception matters in old houses. Where an existing switch is replaced in a box with no grounding means — no EGC in the wiring method — an ungrounded replacement is permitted for replacement only, on the exception's terms: a nonmetallic, noncombustible faceplate with nonmetallic screws, or GFCI protection for the circuit. Where the switch sits within 8 ft vertically or 5 ft horizontally of ground or exposed grounded metal objects, those terms are the whole allowance. Landing a standard switch with a metal plate on a 2-wire box and moving on is not one of the paths.",
+      "on_the_job": "On remodels, check for a ground before trim-out, not during the final walk. In a 1960s Orlando ranch wired with 2-wire cable, Sharma's crew found no EGC in any switch box on the lighting circuits. Because the panel was being replaced with new Siemens gear anyway, the fix was GFCI breakers on those lighting circuits, which puts every replacement switch on the exception's GFCI path; on the one circuit that stayed unprotected, the plates went on nonmetallic, with nonmetallic screws. No EGC in the box changes what devices you may land — flag it at discovery.",
       "sharma_note": "",
       "figure_idea": "Yoke-to-box bond sketch: EGC to a metal box with the switch screws bonding the yoke; green terminal to EGC in a plastic box.",
       "related_ids": [
@@ -635,7 +1033,110 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-404.8(A)",
-      "next_id": "C4-404.14"
+      "next_id": "C4-404.14",
+      "why_it_exists": "The yoke and the plate screws sit right where fingers land in the dark. If a hot conductor faults to an unbonded yoke, the plate and its screws sit at line voltage with nothing to trip the breaker, and the first person to touch the switch becomes the fault path. The EGC gives that fault a low-impedance road home, so the breaker opens instead.",
+      "exam_trap": "The trap: 'The switch is in a metal box, so it is grounded.' A metal box is a grounding path only when the box itself is connected to an EGC. A steel box fed by old 2-wire cable bonds the yoke to a floating box — worse than plastic if the box ever faults. The second trap: GFCI protection does not create a ground. It is the exception's alternative protection for a replacement, not an equipment ground.",
+      "inspection_fails": [
+        "Replacement switch landed on a 2-wire box with a metal faceplate and no GFCI protection — none of the exception's paths taken.",
+        "Ground wire clipped off or left loose in a nonmetallic box instead of landed on the switch's green terminal.",
+        "Metal box assumed to be a ground because it is metal, with no EGC in the cable feeding it.",
+        "Faceplate that does not completely cover the box opening, or stands off the finished surface (404.9(A))."
+      ],
+      "tables": [
+        {
+          "caption": "How the switch gets its ground",
+          "headers": [
+            "Box",
+            "Grounding path",
+            "Watch out"
+          ],
+          "rows": [
+            [
+              "Metal box with EGC",
+              "Box bonded by the EGC; mounting screws bond the yoke (404.9(B)(1))",
+              "A steel box on 2-wire cable is not grounded — metal alone is not a path"
+            ],
+            [
+              "Nonmetallic box",
+              "EGC landed on the switch's green terminal (404.9(B)(2))",
+              "Do not clip the ground off because 'the box is plastic'"
+            ],
+            [
+              "No grounding means — replacement only",
+              "Nonmetallic plate with nonmetallic screws, or GFCI protection (404.9(B) Ex. 1)",
+              "Replacement only — never a plan for new work"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-404.9-two-boxes.svg",
+          "alt": "Two switch boxes side by side: a metal box where the equipment grounding conductor bonds the box and the mounting screws bond the switch yoke, and a nonmetallic box where the equipment grounding conductor lands directly on the switch's green grounding terminal.",
+          "caption": "Metal box: the screws are the bond. Plastic box: land the wire on the green terminal.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "New work, nonmetallic box: where does the EGC connect?",
+          "choices": [
+            "To the box",
+            "To the switch's green grounding terminal",
+            "To the neutral terminal",
+            "It is not needed in a plastic box"
+          ],
+          "answer_index": 1,
+          "explain_plain": "With no metal box to bond through, 404.9(B)(2) puts the EGC on the switch's grounding terminal.",
+          "nec_ref": "404.9(B)(2)"
+        },
+        {
+          "question": "A replacement switch goes into an old box with no grounding means. Which is a permitted path?",
+          "choices": [
+            "A standard switch with a brass faceplate",
+            "A switch with a nonmetallic, noncombustible plate and nonmetallic screws",
+            "A switch with the ground terminal jumpered to the neutral",
+            "Any switch — replacements are grandfathered"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Exception No. 1 allows an ungrounded replacement only with a nonmetallic plate and nonmetallic screws, or with GFCI protection.",
+          "nec_ref": "404.9(B) Exception No. 1"
+        },
+        {
+          "question": "In a metal box, the switch yoke is bonded by:",
+          "choices": [
+            "The faceplate alone",
+            "Its mounting screws to the EGC-bonded box",
+            "The neutral conductor",
+            "The cable jacket"
+          ],
+          "answer_index": 1,
+          "explain_plain": "404.9(B)(1): the yoke is secured with metal screws to a metal box or cover that is connected to an EGC.",
+          "nec_ref": "404.9(B)(1)"
+        }
+      ],
+      "code_refs": [
+        "404.9(A)",
+        "404.9(B)",
+        "404.9(B) Exception No. 1",
+        "250.109"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "404.9(B) methods (1) metal boxes and (2) nonmetallic boxes, and the Exception No. 1 replacement terms",
+          "source": "Mike Holt, Switches — based on the 2020 NEC",
+          "url": "https://www.mikeholt.com/newsletters.php?action=display&letterID=2638"
+        },
+        {
+          "claim": "Exception No. 1 proximity condition: within 8 ft vertically or 5 ft horizontally of ground or exposed grounded metal objects",
+          "source": "ICC, IRC 2021 Chapter 40 — Devices and Luminaires (quoting 404.9(B) Exception No. 1)",
+          "url": "https://codes.iccsafe.org/content/IRC2021P2/chapter-40-devices-and-luminaires"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C4-404.14",
@@ -930,8 +1431,8 @@
       "article": "406",
       "section": "406.5(E)",
       "title": "Receptacle assemblies in countertops and work surfaces — listed for the surface",
-      "plain_explanation": "A receptacle assembly installed in a countertop surface has to be listed for countertop applications — an ordinary receptacle in a cut-in box does not become countertop equipment by being set into the surface. Where the assembly is required to provide GFCI protection under 210.8, it is permitted to be a GFCI receptacle assembly listed for countertop applications. Section 406.5(F) applies the same listing rule to receptacle assemblies in work surfaces. Whether a receptacle may sit face-up in that surface at all is the next rule, 406.5(G).",
-      "on_the_job": "On a kitchen or bath counter, put the listed pop-up or countertop assembly on the material list — do not plan on a standard duplex in the surface. If that location needs GFCI, order the listed GFCI countertop version of the assembly.",
+      "plain_explanation": "A receptacle assembly installed in a countertop surface has to be listed for countertop applications — an ordinary receptacle in a cut-in box does not become countertop equipment by being set into the surface.\n• Where the assembly is required to provide GFCI protection under 210.8, it is permitted to be a GFCI receptacle assembly listed for countertop applications.\n• Section 406.5(F) applies the same listing rule to receptacle assemblies in work surfaces.\n• Whether a receptacle may sit face-up in that surface at all is the next rule, 406.5(G): face-up is allowed only for assemblies listed for countertop or work surface use, and never in the area below a sink.\nThe listing is the point: a countertop assembly is tested for the spills, heat and cleaning that a countertop actually sees.",
+      "on_the_job": "On a Winter Park kitchen island, the plan shows one receptacle in the island top and one on the cabinet side. The one in the top goes on the material list as a listed pop-up countertop assembly — the GFCI version, because kitchen countertop receptacles need GFCI protection under 210.8. The side receptacle is an ordinary tamper-resistant duplex in the cabinet side; it is not in the surface, so 406.5(E) does not govern it. Do not let the counter fabricator cut a hole sized for a standard duplex in the stone.",
       "sharma_note": "",
       "figure_idea": "Section through a kitchen island: a listed pop-up countertop assembly with its listing tag called out, beside a standard duplex in a cut box with a red X.",
       "related_ids": [
@@ -941,7 +1442,109 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-406.4(D)",
-      "next_id": "C4-406.5(G)"
+      "next_id": "C4-406.5(G)",
+      "why_it_exists": "A countertop is a wet work surface. Liquids spill, pots overflow, and crumbs and metal utensils sit on it all day. An ordinary receptacle face set into that surface collects whatever lands on it, straight into the slots. A listed countertop assembly is built and tested for that exposure — sealed, spill-shedding, and made to be cleaned.",
+      "inspection_fails": [
+        "Standard duplex receptacle cut into a quartz island top.",
+        "Desk or grommet outlet assembly used in a kitchen counter — not listed for countertop applications.",
+        "Countertop assembly without GFCI protection where 210.8 requires it.",
+        "Face-up receptacle installed in the counter area below the sink."
+      ],
+      "exam_trap": "The trap answer is 'any receptacle can go in the countertop as long as it is GFCI protected.' GFCI protection and countertop listing are different requirements — the assembly must be listed for countertop applications. The reverse trap is 'face-up receptacles are banned everywhere': a listed countertop assembly may sit face-up, just never in the area below a sink.",
+      "tables": [
+        {
+          "caption": "In the surface — what passes (2020)",
+          "headers": [
+            "Assembly",
+            "Verdict",
+            "Section"
+          ],
+          "rows": [
+            [
+              "Listed pop-up countertop assembly",
+              "OK",
+              "406.5(E)"
+            ],
+            [
+              "Listed GFCI countertop assembly, where 210.8 applies",
+              "OK",
+              "406.5(E)"
+            ],
+            [
+              "Standard duplex in a cut-in box",
+              "No",
+              "406.5(E)"
+            ],
+            [
+              "Listed assembly, face-up below a sink",
+              "No",
+              "406.5(G)(2)"
+            ],
+            [
+              "Work-surface assembly listed for work surfaces",
+              "OK",
+              "406.5(F)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-406.5E-countertop.svg",
+          "alt": "Section through a kitchen island countertop: a listed pop-up countertop assembly on the left, a standard duplex receptacle in a cut-in box crossed out in red on the right, and the counter zone below a sink hatched red where no face-up assembly may go.",
+          "caption": "In the surface, the assembly must be listed for the surface.",
+          "w": 900,
+          "h": 1400
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A receptacle assembly set into a countertop must be:",
+          "choices": [
+            "GFCI protected",
+            "Listed for countertop applications",
+            "Tamper-resistant only",
+            "On a 20 A circuit"
+          ],
+          "answer_index": 1,
+          "explain_plain": "406.5(E) is a listing rule: the assembly must be listed for countertop applications.",
+          "nec_ref": "406.5(E)"
+        },
+        {
+          "question": "Where 210.8 requires GFCI protection at the counter, the assembly may be:",
+          "choices": [
+            "Any receptacle on a GFCI breaker, listed or not",
+            "A GFCI receptacle assembly listed for countertop applications",
+            "A standard duplex if the breaker is GFCI",
+            "Unprotected if it is listed"
+          ],
+          "answer_index": 1,
+          "explain_plain": "406.5(E) permits a GFCI receptacle assembly listed for countertop applications.",
+          "nec_ref": "406.5(E)"
+        },
+        {
+          "question": "A listed countertop assembly installed face-up in the counter below a sink is:",
+          "choices": [
+            "Allowed — it is listed",
+            "Allowed if GFCI protected",
+            "Not permitted at all",
+            "Allowed in kitchens only"
+          ],
+          "answer_index": 2,
+          "explain_plain": "406.5(G)(2) bars face-up receptacles in the area below a sink — the listing does not save it there.",
+          "nec_ref": "406.5(G)(2)"
+        }
+      ],
+      "code_refs": [
+        "406.5(E)",
+        "406.5(F)",
+        "406.5(G)",
+        "210.8"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C4-406.5(G)",
@@ -969,8 +1572,8 @@
       "article": "406",
       "section": "406.9(A)",
       "title": "Receptacles in damp locations",
-      "plain_explanation": "Section 406.9(A) covers receptacles in damp locations — places that are protected from direct weather but can be damp, such as a covered porch or a carport. The receptacle must be weather-resistant type, and the enclosure must keep moisture out of the wiring connections when no plug is inserted; a cover that is weatherproof when the plug is out is the usual way this is met. Damp is the middle category: not dry indoors, not taking direct rain.",
-      "on_the_job": "Look up before you decide: if the device can get rained on with the cover open or closed, treat it as wet, not damp, and use the 406.9(B) in-use arrangement. When in doubt, install the wet-location setup — it satisfies the damp case too.",
+      "plain_explanation": "Section 406.9(A) covers receptacles in damp locations — places that are protected from direct weather but can be damp, such as a covered porch or a carport. Damp is the middle category: not dry indoors, not taking direct rain.\n• The receptacle must be weather-resistant (WR) type. On houses and light commercial work that means the 15 A and 20 A, 125 V and 250 V devices — the same WR devices 406.9(B) requires in wet locations.\n• The enclosure must keep moisture out of the wiring connections when no plug is inserted. A cover that is weatherproof when the plug is out — the flip lid — is the usual way this is met.\n• The cover does not have to stay weatherproof while a cord is plugged in. The in-use (bubble) cover belongs to the wet-location rule, 406.9(B).",
+      "on_the_job": "Covered lanai on a Florida home: the receptacles sit under the roof, but afternoon storms blow mist across them — that is damp, not dry. Fit WR receptacles and flip-lid covers that close weatherproof with nothing plugged in. Look up before you decide: if the device can get rained on with the cover open or closed — past the roof drip line, or under a leaking gutter — treat it as wet, not damp, and use the 406.9(B) arrangement: a WR receptacle plus a listed extra-duty in-use cover. When in doubt, install the wet-location setup — it satisfies the damp case too.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -981,7 +1584,93 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-406.5(G)",
-      "next_id": "C4-406.9(B)"
+      "next_id": "C4-406.9(B)",
+      "rich": 1,
+      "why_it_exists": "Damp air, condensation and wind-blown mist corrode contacts and creep across damp surfaces inside a box. A receptacle that is not weather-resistant loses contact pressure and insulation resistance after a few Florida summers, and an enclosure that lets moisture sit on the connections does the same damage from outside. The rule keeps the damp away from the device and its wiring connections.",
+      "inspection_fails": [
+        "Standard (non-WR) receptacle installed on a covered porch or in a carport.",
+        "No cover, or a cover that is not weatherproof with the plug removed, so moisture sits in the box.",
+        "Receptacle past the roof drip line treated as damp — it takes direct rain and needs the wet-location in-use cover.",
+        "Indoor cover plate on a damp-location box, or the gasket missing and the cover hanging open."
+      ],
+      "exam_trap": "The trap is calling a covered porch a dry location. Covered and protected from direct rain is the definition of a damp location, and the receptacle still has to be WR type with a cover that is weatherproof when the plug is out. The other wrong pick is the bubble cover: damp locations do not require an in-use cover — that requirement is 406.9(B), the wet rule.",
+      "tables": [
+        {
+          "caption": "Damp vs wet at a glance",
+          "headers": [
+            "Location",
+            "Device",
+            "Cover"
+          ],
+          "rows": [
+            [
+              "Damp — covered porch, carport",
+              "WR receptacle",
+              "Weatherproof with plug removed (flip lid)"
+            ],
+            [
+              "Wet — open exterior wall",
+              "WR receptacle",
+              "Listed extra-duty in-use (bubble) cover"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-406.9A-damp-vs-wet.svg",
+          "alt": "Porch elevation: a receptacle under the porch roof with a flip lid is in a damp location, while a receptacle past the roof drip line in the rain is in a wet location needing an extra-duty in-use cover; both locations use weather-resistant receptacles.",
+          "caption": "Under the roof is damp; past the drip line is wet. The parts are different.",
+          "w": 900,
+          "h": 1480
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A receptacle under a covered porch roof, protected from direct rain, is in which location?",
+          "choices": [
+            "Dry location",
+            "Damp location",
+            "Wet location",
+            "Hazardous location"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Protected from direct weather but able to be damp — a covered porch or carport — is a damp location.",
+          "nec_ref": "406.9(A)"
+        },
+        {
+          "question": "What must the cover on a damp-location receptacle do?",
+          "choices": [
+            "Stay weatherproof while a cord is plugged in",
+            "Be weatherproof when the plug is removed",
+            "Be lockable in the closed position",
+            "Be made of metal"
+          ],
+          "answer_index": 1,
+          "explain_plain": "406.9(A) requires the enclosure to keep moisture out when nothing is plugged in; the flip lid is the usual way.",
+          "nec_ref": "406.9(A)"
+        },
+        {
+          "question": "The receptacle can be rained on with the cover open. What is the correct treatment?",
+          "choices": [
+            "Damp-location parts are fine",
+            "Treat it as wet: WR receptacle plus a listed extra-duty in-use cover",
+            "A GFCI alone makes it compliant",
+            "Dry-location parts are fine if GFCI protected"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Direct rain makes it a wet location under 406.9(B), which adds the listed extra-duty in-use cover.",
+          "nec_ref": "406.9(B)"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "406.9(A)",
+        "406.9(B)",
+        "406.9(B)(1)"
+      ],
+      "uncertain": [],
+      "rich_sources": []
     },
     {
       "id": "C4-406.9(B)",
@@ -1672,8 +2361,8 @@
       "article": "409",
       "section": "409",
       "title": "Industrial control panels — article intro",
-      "plain_explanation": "Article 409 covers industrial control panels: the factory- or field-assembled panels that control industrial machinery, with their short-circuit current rating (SCCR) marking, supply conductor sizing, and internal wiring rules. The SCCR is the headline item — a panel may not be installed where the available fault current exceeds the rating marked on it. Sharma meets this article on light commercial and equipment work rather than in houses.\n\nNEC 2023 CHANGE:\n• 409.60: Section 409.60 for industrial control panels was restructured, creating (A) Grounding and (B) Bonding.\n• 409.70: New Section 409.70 has been added requiring surge protection for industrial control panels.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Read the SCCR on the panel label and compare it with the available fault current at its supply before you set the panel. If the panel has no SCCR marking or the fault current is unknown, stop and take it to Mike — that is an engineering check, not a field guess.",
+      "plain_explanation": "Article 409 covers industrial control panels: the factory- or field-assembled panels that control industrial machinery and equipment. The article sets the rules for the panel's short-circuit current rating (SCCR) marking, supply conductor sizing, and internal wiring and grounding.\n• The SCCR is the headline item. The panel must be marked with it (409.110), and a panel may not be installed where the available fault current at its supply exceeds the rating marked on it.\n• Read the label before the panel is set: supply voltage, phases, full-load current, and SCCR all come off the manufacturer's marking.\n• Supply conductors are sized from the panel's marked ratings, and the panel's grounding follows 409.60.\nSharma meets this article on light commercial and equipment work rather than in houses — rooftop equipment, lift stations, and machine controls.",
+      "on_the_job": "Read the SCCR on the panel label and compare it with the available fault current at its supply before you set the panel. On a light-commercial equipment swap in Orlando, the utility letter put the available fault current at 22 kA. The replacement control panel's label read 10 kA SCCR — that panel does not get set, no matter that its breakers are rated 22 kA; the assembly's marked SCCR is the ceiling. A panel marked 65 kA SCCR clears the same supply with room to spare. If the panel has no SCCR marking or the fault current is unknown, stop and take it to Mike — that is an engineering check, not a field guess.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -1697,7 +2386,98 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "A short circuit does not ask permission. If the fault current at a panel is higher than the panel was built and tested to withstand, the failure is not a tripped breaker — it is bus bars tearing loose, contacts welding, and an enclosure coming apart in front of whoever is standing there. The SCCR marking is the panel's tested ceiling, and the available fault current is the number it has to beat.",
+      "exam_trap": "The trap answer is the breaker's interrupting rating: 'The main breaker is rated 22 kA, so the panel is good for 22 kA.' The breaker's AIC is one component's rating. The panel's SCCR is the tested rating of the whole assembly — the weakest part sets it — and 409.110 makes the marked SCCR the number the installation is judged against.",
+      "inspection_fails": [
+        "Industrial control panel installed where the available fault current exceeds the SCCR marked on the panel (409.110).",
+        "Panel set with a missing or illegible SCCR marking — the ceiling was never checked.",
+        "Field modifications inside a listed panel that void its listing and its SCCR.",
+        "On a job permitted under the NEC 2023, an industrial control panel with no surge protection (409.70)."
+      ],
+      "tables": [
+        {
+          "caption": "SCCR check at one supply (example)",
+          "headers": [
+            "Number",
+            "Value",
+            "Verdict"
+          ],
+          "rows": [
+            [
+              "Available fault current at the supply",
+              "22 kA",
+              "The number to beat"
+            ],
+            [
+              "Panel marked 10 kA SCCR",
+              "10 kA",
+              "NO — fault current exceeds the marking"
+            ],
+            [
+              "Panel marked 65 kA SCCR",
+              "65 kA",
+              "OK — marking exceeds the fault current"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-ART-409-sccr.svg",
+          "alt": "An industrial control panel with its maker's label called out showing SCCR 65 kA, over a bar comparison at one supply: available fault current 22 kA, a panel marked 10 kA SCCR marked do not set, and a panel marked 65 kA SCCR marked OK.",
+          "caption": "Read the label first. The marked SCCR must beat the available fault current.",
+          "w": 900,
+          "h": 1580
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A panel is marked 10 kA SCCR. The available fault current at its supply is 22 kA. May it be installed there?",
+          "choices": [
+            "Yes — its breakers are rated 22 kA",
+            "Yes — if the feeder is short",
+            "No — the fault current exceeds the marked SCCR",
+            "Only if it is fused"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The panel may not be installed where the available fault current exceeds its marked SCCR, whatever the breaker ratings are.",
+          "nec_ref": "409.110"
+        },
+        {
+          "question": "Where do you find a control panel's SCCR?",
+          "choices": [
+            "Calculated from the largest motor",
+            "On the panel's manufacturer marking",
+            "Only on the utility transformer",
+            "It is always 65 kA"
+          ],
+          "answer_index": 1,
+          "explain_plain": "409.110 requires the panel to be marked with its ratings, including the short-circuit current rating.",
+          "nec_ref": "409.110"
+        },
+        {
+          "question": "The NEC 2023 added which new requirement for industrial control panels?",
+          "choices": [
+            "409.60 grounding was deleted",
+            "New 409.70 requires surge protection",
+            "SCCR marking was removed",
+            "Panels must be stainless steel"
+          ],
+          "answer_index": 1,
+          "explain_plain": "New Section 409.70 requires surge protection for industrial control panels in the 2023 edition.",
+          "nec_ref": "409.70 (2023)"
+        }
+      ],
+      "code_refs": [
+        "409.110",
+        "409.60",
+        "110.9",
+        "110.10"
+      ],
+      "uncertain": [],
+      "edition_note": "NEC 2023 CHANGE:\n• 409.60: Section 409.60 for industrial control panels was restructured, creating (A) Grounding and (B) Bonding.\n• 409.70: New Section 409.70 has been added requiring surge protection for industrial control panels.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C4-409.110",
@@ -1964,8 +2744,8 @@
       "article": "411",
       "section": "411",
       "title": "Lighting systems operating at 30 volts or less — article intro",
-      "plain_explanation": "Article 411 covers low-voltage lighting systems operating at 30 volts AC or 60 volts DC or less — and only 15 volts AC or 30 volts DC where contact with water is likely: the listed system, its power supply, and the secondary wiring that feeds the fixtures. These systems are installed as a listed assembly, not assembled from loose parts in the field, and the secondary conductors have their own rules distinct from ordinary branch wiring. Sharma meets this article mainly in landscape-style and specialty accent lighting inside a project.",
-      "on_the_job": "Install the system as the listed package: listed power supply, listed fixtures, and the manufacturer's wiring instructions. Do not extend a 30V secondary with branch-circuit wire methods or bury connections the listing does not allow.",
+      "plain_explanation": "Article 411 covers lighting systems operating at 30 volts AC or 60 volts DC or less — and only 15 volts AC or 30 volts DC where contact with water is likely. It covers the listed system as a package: the power supply, the fixtures, and the secondary wiring between them.\n• Listed system: the system is installed as a listed assembly — a complete listed system, or one assembled from listed parts (411.4). Loose parts gathered in the field do not make an Article 411 system.\n• Power supply: the listed power source limits the secondary circuit — the article caps secondary output at 25 amperes.\n• Secondary wiring: the conductors on the load side of the power supply follow Article 411's own rules, not ordinary branch-circuit wiring rules.\n• Locations: bare-conductor systems are not concealed and do not run through walls, floors or ceilings unless the specific listed system permits it, and the secondary wiring stays out of the pool zone — not within 10 ft of pools, spas, fountains or similar locations unless Article 680 permits it (411.5).\nSharma meets this article mainly in landscape-style and specialty accent lighting inside a project.",
+      "on_the_job": "A Lake Nona lanai job: the owner wants 24 V DC LED accent lighting around a covered patio that sits near the pool. Spec the listed system — the manufacturer's listed driver, cable and fixtures as one family. The driver is rated 100 W at 24 V DC; the tape and puck runs total 72 W, inside the rating. Route the secondary so the nearest fixture stays 12 ft from the pool water — outside the 10 ft limit in 411.5 — and keep the driver accessible in the garage, not buried in the soffit.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -1973,7 +2753,111 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-410.116",
-      "next_id": "C4-411.4"
+      "next_id": "C4-411.4",
+      "why_it_exists": "Thirty volts sounds harmless, so these systems get treated like doorbell wire. But a secondary that can deliver up to 25 amperes will heat a bad splice or an undersized conductor until something chars. The listing is the protection: the power supply, cable and fixtures were tested together, with the supply limiting what a fault can draw. Field-assembled parts have no tested limit.",
+      "inspection_fails": [
+        "Unlisted power supply and tape installed as a 'system' — no listing for the assembly (411.4).",
+        "Secondary conductors concealed in the wall with no listed system permitting it (411.5).",
+        "Low-voltage fixtures within 10 ft of pool water with no Article 680 basis (411.5).",
+        "Secondary splices buried in mulch or underground where the listing does not allow them.",
+        "Power supply inaccessible — sealed above a closed soffit."
+      ],
+      "exam_trap": "The trap answer is '30 volts or less means wire it like a doorbell — any parts, any method.' An Article 411 system is a listed system: a random driver and a roll of tape bought online is not one, no matter how low the voltage. The second trap is the pool: within 10 ft of the water the location rules bite, and where contact with water is likely the ceiling drops to 15 volts AC or 30 volts DC.",
+      "tables": [
+        {
+          "caption": "Article 411 at a glance (NEC 2020)",
+          "headers": [
+            "Item",
+            "Rule",
+            "Section"
+          ],
+          "rows": [
+            [
+              "Voltage ceiling",
+              "30 V AC / 60 V DC",
+              "411.1"
+            ],
+            [
+              "Near water",
+              "15 V AC / 30 V DC",
+              "411.1"
+            ],
+            [
+              "System",
+              "Listed system or listed parts",
+              "411.4"
+            ],
+            [
+              "Secondary output",
+              "25 A max",
+              "Article 411"
+            ],
+            [
+              "Pool locations",
+              "Keep 10 ft away unless Art. 680 permits",
+              "411.5"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-ART-411-system.svg",
+          "alt": "System diagram of an Article 411 low-voltage lighting system: a 120 volt branch circuit feeding a listed power supply, secondary wiring to three listed LED fixtures, and a pool with a 10 ft minimum dimension to the nearest fixture.",
+          "caption": "One listed system: supply, secondary, fixtures — and the 10 ft pool rule.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "What is the highest Article 411 system voltage where contact with water is likely?",
+          "choices": [
+            "30 V AC",
+            "15 V AC",
+            "60 V DC",
+            "120 V AC"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Near water the ceiling drops to 15 V AC or 30 V DC.",
+          "nec_ref": "411.1"
+        },
+        {
+          "question": "A driver, tape and fixtures bought separately online are installed as accent lighting. What is missing?",
+          "choices": [
+            "A GFCI breaker",
+            "A disconnect",
+            "A listed system — the assembly must be listed or built from listed parts",
+            "A permit"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Article 411 systems are installed as listed assemblies, not gathered from loose parts.",
+          "nec_ref": "411.4"
+        },
+        {
+          "question": "Without an Article 680 basis, how close may Article 411 secondary wiring run to pool water?",
+          "choices": [
+            "3 ft",
+            "6 ft",
+            "10 ft",
+            "No limit"
+          ],
+          "answer_index": 2,
+          "explain_plain": "411.5 keeps these systems at least 10 ft from pools, spas and fountains unless Article 680 permits otherwise.",
+          "nec_ref": "411.5"
+        }
+      ],
+      "code_refs": [
+        "411.1",
+        "411.4",
+        "411.5"
+      ],
+      "uncertain": [
+        "The 25 A secondary cap is stated at article level, as the book's verified 411.4/411.5 page states it; the exact subsection in a printed 2020 book was not confirmed."
+      ],
+      "rich_sources": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C4-411.4",
@@ -2185,8 +3069,8 @@
       "article": "422",
       "section": "422.10",
       "title": "Branch circuits for appliances (422.10)",
-      "plain_explanation": "Section 422.10 starts appliance work with the circuit: the branch circuit must be sized for the appliance it serves, using the appliance's marked rating, and an individual branch circuit — one that supplies only that appliance — is the default pattern for the big fixed appliances. Where two or more appliances share a circuit, this section's load rules and the general rules of Articles 210 and 220 both apply. When the nameplate and the circuit disagree, the circuit gets corrected; the appliance does not get derated by hope.",
-      "on_the_job": "Takeoff habit: every fixed appliance on the plans gets a line — appliance, rating, circuit, disconnect. If a plan shows the appliance but no circuit home, that is an open question for the packet, not a field surprise.",
+      "plain_explanation": "Section 422.10 starts appliance work with the circuit: the branch circuit must be sized for the appliance it serves, using the appliance's marked rating, and an individual branch circuit — one that supplies only that appliance — is the default pattern for the big fixed appliances. Where two or more appliances share a circuit, this section's load rules and the general rules of Articles 210 and 220 both apply. The numbers that ride with it:\n• Where the appliance is marked with a maximum overcurrent device, the marking governs (422.11)\n• A single non-motor appliance rated over 13.3 A, not marked with a maximum, may be protected at up to 150 percent of its rating; at 13.3 A or less the ceiling is 20 A (422.11(E))\n• A fixed storage water heater of 120 gallons or less is sized at 125 percent of nameplate — a continuous load (422.13)\nWhen the nameplate and the circuit disagree, the circuit gets corrected; the appliance does not get derated by hope.",
+      "on_the_job": "Takeoff habit: every fixed appliance on the plans gets a line — appliance, rating, circuit, disconnect. If a plan shows the appliance but no circuit home, that is an open question for the packet, not a field surprise. Worked line: a 4,500 W storage water heater at 240 V draws 18.75 A; as a continuous load under 422.13 the circuit is sized at 125 percent — 23.4 A minimum — so the line reads: water heater, 18.75 A, 30 A circuit on 10 AWG copper, lockable disconnect. Every fixed appliance on the plan gets the same four boxes filled before the packet goes out.",
       "sharma_note": "",
       "figure_idea": "Takeoff worksheet strip: appliance, rating, circuit, disconnect — four boxes in a row.",
       "related_ids": [
@@ -2197,7 +3081,102 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-422.5",
-      "next_id": "C4-422.11"
+      "next_id": "C4-422.11",
+      "why_it_exists": "An appliance is a known, fixed load that runs exactly as hard as its nameplate says, sometimes for hours. A circuit sized by habit instead of by the rating either nuisance-trips under a load that was never a fault, or leaves conductors and terminations carrying more than they were built for. Starting from the marked rating is what keeps both the appliance and the circuit honest.",
+      "exam_trap": "The trap is protecting an unmarked 16 A appliance with a 20 A breaker 'because it fits.' Section 422.11(E) works the other way: over 13.3 A with no marked maximum, the ceiling is 150 percent of the appliance rating — the breaker follows the appliance, not the other way around. The other common miss is sizing the storage water heater at 100 percent; at 120 gallons or less it is a continuous load at 125 percent (422.13).",
+      "inspection_fails": [
+        "Appliance landed on a circuit sized by habit, not by the appliance's marked rating.",
+        "Unmarked appliance over 13.3 A protected above 150 percent of its rating (422.11(E)).",
+        "Storage water heater of 120 gallons or less wired at 100 percent instead of 125 percent (422.13).",
+        "Fixed appliance on the plans with no circuit assigned — found in the field, not on the takeoff.",
+        "Appliance marked with a maximum overcurrent device protected above the marking (422.11)."
+      ],
+      "tables": [
+        {
+          "caption": "Sizing by the appliance",
+          "headers": [
+            "Appliance case",
+            "Circuit rule"
+          ],
+          "rows": [
+            [
+              "Marked maximum OCPD",
+              "The marking governs (422.11)"
+            ],
+            [
+              "Unmarked, over 13.3 A",
+              "OCPD up to 150% of rating (422.11(E))"
+            ],
+            [
+              "Unmarked, 13.3 A or less",
+              "20 A maximum (422.11(E))"
+            ],
+            [
+              "Storage water heater, 120 gal or less",
+              "125% of nameplate (422.13)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-422.10-takeoff-strip.svg",
+          "alt": "Takeoff worksheet with four rows - appliance, rating, circuit, disconnect - worked for a 4,500 watt storage water heater, plus the 422.11(E) ceiling for unmarked appliances and the open-question rule for plans.",
+          "caption": "Every fixed appliance gets a line: appliance, rating, circuit, disconnect.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "An individual branch circuit is one that:",
+          "choices": [
+            "Supplies only one appliance",
+            "Has only one receptacle",
+            "Is the only circuit in the panel",
+            "Feeds one room"
+          ],
+          "answer_index": 0,
+          "explain_plain": "An individual branch circuit supplies only the one appliance it serves.",
+          "nec_ref": "422.10"
+        },
+        {
+          "question": "A single non-motor appliance is rated 16 A and is not marked with a maximum overcurrent device. The largest protection 422.11(E) allows is:",
+          "choices": [
+            "16 A",
+            "20 A",
+            "24 A",
+            "30 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Over 13.3 A and unmarked, the ceiling is 150 percent of the rating: 16 × 1.5 = 24 A.",
+          "nec_ref": "422.11(E)"
+        },
+        {
+          "question": "A 4,500 W, 240 V storage water heater (120 gal or less) is sized at:",
+          "choices": [
+            "18.75 A",
+            "20 A",
+            "23.4 A minimum, as a continuous load",
+            "30 A exactly, by rule"
+          ],
+          "answer_index": 2,
+          "explain_plain": "18.75 A × 125 percent = 23.4 A minimum conductor and circuit sizing under 422.13.",
+          "nec_ref": "422.13"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "422.10",
+        "422.11(E)",
+        "422.13",
+        "422.31",
+        "Article 210",
+        "Article 220"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C4-422.11",
@@ -2246,8 +3225,8 @@
       "article": "422",
       "section": "422.16(B)(4)",
       "title": "Cord-and-plug connection for range hoods",
-      "plain_explanation": "Section 422.16(B)(4) is the provision the brief assigns to cord-and-plug-connected range hoods: a listed range hood may be connected with a cord and plug where the conditions of that subsection are met, including that the hood is marked for that connection method and the receptacle arrangement matches the rule. Cord connection is what lets the hood be removed for service without unwiring it, but it is only permitted because the appliance and the installation meet the listed conditions — not as a general shortcut for any fixed appliance.",
-      "on_the_job": "Confirm the hood's instructions allow cord connection and that the receptacle location matches the plan before rough-in. If the hood is listed for hard-wiring only, hard-wire it; the cord kit in the truck does not override the listing.",
+      "plain_explanation": "Section 422.16(B)(4) lets a listed range hood — and an over-the-range microwave/range hood combination — be cord-and-plug connected instead of hard-wired, but only when every condition in the subsection is met:\n• The flexible cord is identified as suitable for use on range hoods in the manufacturer's installation instructions.\n• The cord is not less than 18 in. and not over 4 ft long.\n• The cord has an equipment grounding conductor and ends in a grounding-type attachment plug. Exception: a listed hood marked as double-insulated does not need the grounding-type plug.\n• The receptacle is located so the cord is protected against physical damage.\n• The receptacle is accessible.\n• The receptacle is supplied by an individual branch circuit.\nCord connection is what lets the hood come down for service without unwiring it. It is a listed, conditioned permission — not a general shortcut for any fixed appliance.",
+      "on_the_job": "Marion Oaks kitchen: the plan shows an over-the-range microwave/hood combination. Under S-06 it gets its own dedicated 20 A circuit — never shared. The receptacle goes in the cabinet above the unit, where the cord reaches it without crossing the cooktop: the factory cord is 24 in., inside the 18 in. to 4 ft window. Before rough-in, confirm the unit's instructions identify the cord for range hood use; a hood listed for hard-wiring only gets hard-wired, cord kit or not.",
       "sharma_note": "Sharma note (company practice, not a 422 rule): the range hood often rides the dishwasher/disposal circuit in Sharma design practice. S-06 still stands on its own — the microwave keeps its own dedicated 20A circuit and is never lumped in with the hood. The wire size on that circuit is PENDING (12 AWG copper versus 10 AWG CCA).",
       "figure_idea": "",
       "related_ids": [
@@ -2262,7 +3241,117 @@
         "S-06"
       ],
       "prev_id": "C4-422.13",
-      "next_id": "C4-422.31"
+      "next_id": "C4-422.31",
+      "why_it_exists": "Hoods live over a hot cooktop in grease-laden air, and they come down for cleaning and service more than almost any other fixed appliance. The cord makes that practical. The conditions keep the cord itself from becoming the hazard: short enough to stay off the burners, grounded, protected from damage, and on its own circuit so the hood is not sharing a loaded kitchen circuit.",
+      "inspection_fails": [
+        "Cord-and-plug hood receptacle fed from the small-appliance or dishwasher circuit — not an individual branch circuit.",
+        "Hood cord 5 ft long, draped behind the range to reach a receptacle.",
+        "Receptacle hidden behind the hood's duct cover — not accessible.",
+        "Cord kit added to a hood whose instructions list it for hard-wiring only.",
+        "Receptacle located where a cabinet door or the duct pinches the cord."
+      ],
+      "exam_trap": "The trap is treating cord connection as permission to plug the hood into any handy receptacle — the countertop small-appliance circuit, or the dishwasher/disposal circuit. For a cord-and-plug hood, 422.16(B)(4) requires an individual branch circuit. The other trap is the cord length: over 4 ft fails, even if everything else is right.",
+      "tables": [
+        {
+          "caption": "The (B)(4) conditions (NEC 2020)",
+          "headers": [
+            "Condition",
+            "Requirement"
+          ],
+          "rows": [
+            [
+              "Cord",
+              "Identified for range hoods in the instructions"
+            ],
+            [
+              "Cord length",
+              "18 in. min — 4 ft max"
+            ],
+            [
+              "Plug",
+              "Grounding type, with EGC (double-insulated hoods excepted)"
+            ],
+            [
+              "Receptacle location",
+              "Protects the cord from physical damage"
+            ],
+            [
+              "Receptacle access",
+              "Accessible"
+            ],
+            [
+              "Circuit",
+              "Individual branch circuit"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-422.16B4-hood.svg",
+          "alt": "Kitchen elevation of a cord-and-plug connected range hood: the hood over a range, its factory cord running up to an accessible receptacle inside the cabinet above, the cord dimensioned 18 in minimum to 4 ft maximum, on an individual branch circuit.",
+          "caption": "Cord connection is a conditioned permission: length, plug, access, own circuit.",
+          "w": 900,
+          "h": 1520
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A cord-connected range hood's cord may be:",
+          "choices": [
+            "Up to 6 ft long",
+            "18 in. to 4 ft long",
+            "Any length the factory supplies",
+            "At least 4 ft long"
+          ],
+          "answer_index": 1,
+          "explain_plain": "422.16(B)(4) sets the cord window: not less than 18 in., not over 4 ft.",
+          "nec_ref": "422.16(B)(4)"
+        },
+        {
+          "question": "The receptacle for a cord-and-plug range hood must be supplied by:",
+          "choices": [
+            "A small-appliance circuit",
+            "The dishwasher circuit",
+            "An individual branch circuit",
+            "A lighting circuit"
+          ],
+          "answer_index": 2,
+          "explain_plain": "An individual branch circuit is one of the (B)(4) conditions.",
+          "nec_ref": "422.16(B)(4)"
+        },
+        {
+          "question": "A hood's instructions say 'hard-wire only,' and the truck has a cord kit. Correct move?",
+          "choices": [
+            "Use the cord kit",
+            "Hard-wire the hood",
+            "Plug it into the counter circuit",
+            "Let the homeowner decide"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Cord connection is permitted only where the manufacturer's instructions identify a cord suitable for the hood. The listing governs.",
+          "nec_ref": "422.16(B)(4)"
+        }
+      ],
+      "code_refs": [
+        "422.16(B)(4)",
+        "422.16"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "2020 422.16(B)(4): cord-and-plug range hoods and microwave/range hood combinations — cord 18 in. to 4 ft, grounding-type plug, receptacle accessible and located to protect the cord, individual branch circuit",
+          "source": "KBC Electric — NEC 422.16: Cords for dishwashers, disposals and range hoods",
+          "url": "https://kbcelectric.com/code/422-16"
+        },
+        {
+          "claim": "2020 text of 422.16(B)(4) lists the conditions, including the exception letting a listed double-insulated hood skip the grounding-type attachment plug",
+          "source": "Mike Holt Forum — Range Hood On Small Appliance Circuit (2020 NEC text quoted)",
+          "url": "https://forums.mikeholt.com/threads/range-hood-on-small-appliance-circuit.2564917/"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C4-422.31",
@@ -2374,8 +3463,8 @@
       "article": "424",
       "section": "424.19",
       "title": "Disconnecting means for fixed space-heating equipment",
-      "plain_explanation": "Section 424.19 requires a disconnecting means for fixed space-heating equipment that disconnects the heater and its controller, placed so the equipment can be serviced safely, with provisions for locking or for the breaker arrangement depending on the installation. A duct heater inside an air handler is normally disconnected at the air handler's disconnect, which is why the 440/424 boundary matters on an HVAC change-out: the heat strips and the blower are one piece of equipment at service time.",
-      "on_the_job": "Confirm the disconnect kills the strips and the blower together, and that it is within reach of the person servicing the unit. On a change-out, if you move the disconnect, re-verify the heat-strip circuit at the new location before start-up.",
+      "plain_explanation": "Section 424.19 requires a disconnecting means for fixed electric space-heating equipment — baseboard and wall heaters, duct heaters, and heat strips in an air handler. One operation has to kill the whole machine:\n• The disconnect must simultaneously disconnect the heater, the motor controller(s) and any supplementary overcurrent protective device(s) from all ungrounded conductors.\n• It must be lockable in the open position under 110.25 — the locking provision is part of the switch or breaker and stays in place with or without the lock.\n• The disconnect must have an ampere rating not less than 125 percent of the total load of the motors and the heaters.\n• Equipment with supplementary overcurrent protection: the disconnect is within sight from those devices — visible and not more than 50 ft away.\n• Equipment without supplementary overcurrent protection: the branch-circuit switch or breaker may serve as the disconnect, if it is within sight from the heater or lockable under 110.25 [424.19(B)].\n• A unit switch that is part of the equipment, with a marked \"off\" position, may serve as the disconnect where it disconnects all ungrounded conductors [424.19(C)].\nA duct heater in an air handler is normally disconnected at the air handler's disconnect — the 440/424 boundary matters on a change-out, because the strips and the blower are one piece of equipment at service time.",
+      "on_the_job": "Air-handler change-out in a Florida garage: the new unit carries 10 kW of strip heat and a blower, fed as one piece of equipment. The disconnect at the air handler must kill the strips, the blower and the controller together — test all three dead before your hands go in. The strip circuit is sized at 125 percent under 424.4(B): 10 kW at 240 V is 41.7 A — 52.1 A minimum, 60 A breaker. If you move the disconnect on the change-out, re-verify at the new location that it still opens the whole unit, and check the heat-strip circuit before start-up. Keep the disconnect within reach of the person servicing the unit.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -2385,7 +3474,114 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-424.4(B)",
-      "next_id": "C4-ART-425"
+      "next_id": "C4-ART-425",
+      "rich": 1,
+      "why_it_exists": "Heat strips and a blower share one cabinet, and the tech services them with the cabinet open and both hands inside. If the switch he opened kills the strips but leaves the blower or the controls live — or someone resets a breaker down the hall mid-repair — the \"dead\" unit starts or bites. One disconnect that opens everything and locks open is what makes the equipment safe to open up.",
+      "inspection_fails": [
+        "Disconnect opens the heat strips but the blower and controls stay live — it must open the heater, the controller and the supplementary protection together.",
+        "Out-of-sight disconnect with no lockable provision, or a portable hasp clipped on — 110.25 requires the provision to stay in place with or without the lock.",
+        "Unit has supplementary fuses inside, and the disconnect is around the corner, out of sight from those devices.",
+        "Unit switch used as the disconnect with no marked \"off\" position, or it opens only one ungrounded conductor."
+      ],
+      "exam_trap": "The trap answer is \"the panel breaker is the disconnect, full stop.\" That only works for equipment without supplementary overcurrent protection, and only when the breaker is within sight of the heater or lockable under 110.25. If the unit carries its own supplementary fuses or breakers, the disconnect must be within sight from those devices.",
+      "tables": [
+        {
+          "caption": "Which disconnect passes — by equipment type",
+          "headers": [
+            "Equipment",
+            "Disconnect that passes"
+          ],
+          "rows": [
+            [
+              "Supplementary fuses/breakers in the unit",
+              "Disconnect within sight from those devices, lockable per 110.25"
+            ],
+            [
+              "No supplementary protection",
+              "Branch-circuit breaker or switch, within sight from the heater or lockable per 110.25"
+            ],
+            [
+              "Unit switch on the equipment",
+              "Marked \"off\", part of the unit, opens all ungrounded conductors"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-424.19-disconnect.svg",
+          "alt": "One-line flow from a panel through a lockable breaker to a disconnect within sight (visible, 50 ft max) of an air handler; the disconnect opens the heat strips, blower, controller and supplementary fuses together, with a fail panel showing a switch that kills only the strips.",
+          "caption": "One disconnect, one operation: heater, blower, controller and fuses all go dead together.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A duct heater has supplementary fuses inside the air handler. Where must its disconnecting means be?",
+          "choices": [
+            "Anywhere on the same floor",
+            "Within sight from the supplementary overcurrent devices",
+            "Only at the main service panel",
+            "Within 6 ft of the thermostat"
+          ],
+          "answer_index": 1,
+          "explain_plain": "With supplementary overcurrent protection in the equipment, 424.19(A) puts the disconnect within sight from those devices.",
+          "nec_ref": "424.19(A)"
+        },
+        {
+          "question": "Which switch may serve as the 424.19 disconnect by itself?",
+          "choices": [
+            "A thermostat with an off setting",
+            "A unit switch with a marked \"off\" position that opens all ungrounded conductors",
+            "Any single-pole wall switch",
+            "The blower door safety switch"
+          ],
+          "answer_index": 1,
+          "explain_plain": "424.19(C) allows a unit switch that is part of the equipment, has a marked off position, and disconnects all ungrounded conductors.",
+          "nec_ref": "424.19(C)"
+        },
+        {
+          "question": "Equipment has no supplementary overcurrent protection. The branch-circuit breaker may serve as the disconnect if it is:",
+          "choices": [
+            "Rated 100 A or more",
+            "Within sight from the heater, or lockable in the open position per 110.25",
+            "In a locked electrical room",
+            "Labeled \"heater\" in the directory"
+          ],
+          "answer_index": 1,
+          "explain_plain": "424.19(B): without supplementary protection, the branch-circuit switch or breaker serves where it is within sight from the heater or capable of being locked open.",
+          "nec_ref": "424.19(B)"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "424.19",
+        "424.19(A)",
+        "424.19(B)",
+        "424.19(C)",
+        "110.25",
+        "424.4(B)",
+        "Article 100"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "424.19(B): without supplementary overcurrent protection the branch-circuit breaker may serve as the disconnect if within sight or lockable per 110.25; 424.19(C): a unit switch with a marked off position may serve as the disconnect",
+          "source": "Mike Holt, NEC Questions and Answers, based on the 2020 NEC — November 2021",
+          "url": "https://www.mikeholt.com/newsletters.php?action=display&letterID=2418&email="
+        },
+        {
+          "claim": "424.19(A): with supplementary overcurrent protection the disconnect must be within sight from the supplementary overcurrent devices; the disconnect must be capable of being locked open, with the locking provision remaining in place with or without the lock",
+          "source": "Mike Holt, Article 424: Fixed Electric Space-heating",
+          "url": "https://www.mikeholt.com/newsletters.php?action=display&letterID=506&email="
+        },
+        {
+          "claim": "The 424.19 disconnecting means has an ampere rating not less than 125 percent of the total load of the motors and the heaters, and disconnects the heater, motor controller(s) and supplementary overcurrent device(s) simultaneously",
+          "source": "Training module summary of NEC 424.19 (Table E4101.5, Disconnecting Means)",
+          "url": "https://static1.squarespace.com/static/5e71096c4d9fe82f78a5b057/t/6040dec715fc37004bdceb0b/1614864072946/Module+12+-+Section+10.pdf"
+        }
+      ]
     },
     {
       "id": "C4-ART-425",
@@ -2972,8 +4168,8 @@
       "article": "430",
       "section": "430.109",
       "title": "What may serve as the motor disconnect",
-      "plain_explanation": "Section 430.109 lists the types of switches and devices permitted to serve as a motor disconnect, including horsepower-rated switches and listed circuit breakers, with the permitted type depending on the motor's size and duty. A general-use switch that is fine for a lighting load is not automatically a motor disconnect; the device must be rated for interrupting a motor circuit of that horsepower. Small fractional-horsepower motors have their own permitted arrangements under this section and 430.111.",
-      "on_the_job": "Read the horsepower rating on the switch, not just the amp rating, before you land a motor on it. When the disconnect is a breaker in a panelboard, confirm it is a permitted type for that motor and that the within-sight rule in 430.102 is separately satisfied.",
+      "plain_explanation": "Section 430.109 lists the types of switches and devices permitted to serve as a motor disconnect. The general list at 430.109(A):\n• A listed motor-circuit switch rated in horsepower\n• A listed molded case circuit breaker\n• A listed molded case switch\n• An instantaneous-trip breaker that is part of a listed combination controller, or a listed self-protected combination controller\n• A listed manual motor controller additionally marked 'Suitable as Motor Disconnect,' installed between the final branch-circuit protective device and the motor\nSmall motors get their own paths. For stationary motors of 1/8 horsepower or less, the branch-circuit overcurrent device may serve as the disconnect (430.109(B)), and cord-and-plug arrangements for small motors sit with 430.111. For stationary motors of 2 horsepower or less and 300 volts or less, a general-use switch rated at not less than twice the motor full-load current is permitted, as is an AC general-use snap switch where the motor current is not more than 80 percent of the switch rating (430.109(C)). A general-use switch that is fine for a lighting load is not automatically a motor disconnect; the device must be rated for interrupting a motor circuit of that horsepower.",
+      "on_the_job": "Read the horsepower rating on the switch, not just the amp rating, before you land a motor on it. When the disconnect is a breaker in a panelboard, confirm it is a permitted type for that motor and that the within-sight rule in 430.102 is separately satisfied. Small-motor case: a 1/2 hp, 115 V exhaust fan motor has a table full-load current of 9.8 A (Table 430.248). On the 430.109(C) path, a general-use switch rated at least twice that — 19.6 A — serves as the disconnect, so a 20 A switch is the pick; a 15 A lighting toggle is not, whatever is on the truck.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -2983,7 +4179,113 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-430.102",
-      "next_id": "C4-430.110"
+      "next_id": "C4-430.110",
+      "why_it_exists": "A motor is not a light bulb. Starting current runs several times the running current, and opening a loaded motor circuit draws an arc the device has to survive thousands of times. A switch chosen by amps alone can weld its contacts or fail closed, leaving a servicer working on a machine that is still alive. The horsepower rating is the proof the device was tested to make and break motor current.",
+      "exam_trap": "The trap answer is 'a 20 A switch for a 20 A motor circuit.' Section 430.109 is a type list, not an amp list: outside the small-motor paths, the disconnect must be a horsepower-rated device or another listed type the section names. The companion trap is forgetting that type is only half the check — 430.110 still sizes the disconnect at not less than 115 percent of the table full-load current, and 430.102 still wants it within sight.",
+      "inspection_fails": [
+        "General-use lighting switch installed as the disconnect for a motor over the small-motor limits, with no horsepower rating.",
+        "Manual motor controller used as the disconnect without the 'Suitable as Motor Disconnect' marking (430.109(A)(6)).",
+        "Disconnect sized under 115 percent of the motor's table full-load current (430.110).",
+        "Permitted device type, but the disconnect is not within sight of the motor (430.102).",
+        "General-use switch under twice the full-load current on a 2 hp or less stationary motor (430.109(C)(1))."
+      ],
+      "tables": [
+        {
+          "caption": "Permitted disconnect paths",
+          "headers": [
+            "Motor",
+            "Permitted disconnect"
+          ],
+          "rows": [
+            [
+              "1/8 hp or less, stationary",
+              "Branch-circuit overcurrent device (430.109(B))"
+            ],
+            [
+              "2 hp or less, 300 V or less",
+              "General-use switch at 2× FLC or more (430.109(C)(1))"
+            ],
+            [
+              "2 hp or less, 300 V or less",
+              "AC snap switch, motor at 80% or less of rating (430.109(C)(2))"
+            ],
+            [
+              "All other motors",
+              "430.109(A) device: hp-rated switch, listed breaker or molded case switch"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-430.109-disconnect-types.svg",
+          "alt": "Decision chart for motor disconnects: 1/8 horsepower or less may use the branch-circuit device; 2 horsepower or less at 300 volts or less may use a general-use switch at twice full-load current, worked at 9.8 amps; all other motors need a 430.109(A) horsepower-rated device.",
+          "caption": "Pick the disconnect by the motor: type list first, amps second.",
+          "w": 900,
+          "h": 1760
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "For a stationary motor of 2 hp or less at 300 V or less, a general-use switch may serve as the disconnect if rated at least:",
+          "choices": [
+            "Equal to the FLC",
+            "115% of the FLC",
+            "Twice the FLC",
+            "Three times the FLC"
+          ],
+          "answer_index": 2,
+          "explain_plain": "430.109(C)(1) sets the general-use switch at not less than twice the motor full-load current.",
+          "nec_ref": "430.109(C)(1)"
+        },
+        {
+          "question": "A 1/2 hp, 115 V motor has a table FLC of 9.8 A. Smallest general-use switch permitted by 430.109(C)(1)?",
+          "choices": [
+            "10 A",
+            "15 A",
+            "20 A",
+            "30 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Twice 9.8 A is 19.6 A, so the switch must be rated at least 19.6 A — a 20 A switch.",
+          "nec_ref": "430.109(C)(1)"
+        },
+        {
+          "question": "A manual motor controller may serve as the disconnect only if it is:",
+          "choices": [
+            "Horsepower rated above the motor",
+            "Additionally marked 'Suitable as Motor Disconnect' and installed between the final branch-circuit protective device and the motor",
+            "Lockable in the open position",
+            "Fused"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Listing as a manual motor controller is not enough; 430.109(A)(6) requires the additional disconnect marking.",
+          "nec_ref": "430.109(A)(6)"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "430.109(A)",
+        "430.109(B)",
+        "430.109(C)",
+        "430.102",
+        "430.110",
+        "430.111"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "430.109(C): for motors rated 2 hp or less and 300 V or less, the disconnect may be a general-use switch with an ampere rating not less than twice the full-load current of the motor, or an AC general-use snap switch where the motor FLC does not exceed 80 percent of the switch rating",
+          "source": "Electrical Contractor Magazine, Code Q&A on 430.109(C)",
+          "url": "https://www.ecmag.com/magazine/articles/article-detail/systems-grounding-receptacles-overcurrent-protection-feeder-and-more"
+        },
+        {
+          "claim": "430.109(A)(6): a listed manual motor controller must be additionally marked 'Suitable as Motor Disconnect' to serve as the disconnecting means",
+          "source": "PrepPass, Control Devices and Disconnecting Means: Selection, Rating",
+          "url": "https://www.preppass.org/en/tx-master-electrician/learn/controls-disconnects"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C4-430.110",
@@ -3012,8 +4314,8 @@
       "article": "430",
       "section": "430.122",
       "title": "Conductors to drives and power conversion equipment (430.122)",
-      "plain_explanation": "Section 430.122 sizes the conductors feeding adjustable-speed drives and other power conversion equipment from the equipment's rated input current — not from the motor's horsepower table. The circuit conductors must have an ampacity of at least 125 percent of the drive's rated input current, and where the equipment has a bypass or its own rating rules, the section follows the larger demand. A drive can draw more at its input than the motor table suggests, so the drive nameplate — input amps — is the document that sizes this wire.",
-      "on_the_job": "Swapping a starter for a VFD on a pump or air handler: photograph the drive's input rating before ordering wire. Reusing the old starter's wire size without the input-current check is the standard failure.",
+      "plain_explanation": "Section 430.122 sizes the conductors feeding adjustable-speed drives and other power conversion equipment from the equipment's own ratings — not from the motor's horsepower table:\n• Supply (input) conductors: ampacity not less than 125 percent of the drive's rated input current [430.122(A)]. The drive nameplate — input amps — is the document that sizes this wire.\n• Output conductors, drive to motor: ampacity not less than 125 percent of the motor's full-load current as determined by 430.6 [430.122(B)]. Where the drive is listed and marked \"Suitable for Output Motor Conductor Protection,\" the output conductors must be at least the larger of that 125 percent value or the minimum conductor size marked on the drive.\n• Where the equipment has a bypass, the section follows the larger demand — the conductors must suit the bypass arrangement as well as the drive [430.122(C)].\nA drive can draw more at its input than the motor table suggests, so both sides of the drive get sized: input from the drive plate, output from the motor.",
+      "on_the_job": "Swapping a starter for a VFD on a pump or air handler: photograph the drive's input rating before ordering wire. Example: the plate reads INPUT 460 V, 21 A — the supply conductors need an ampacity of at least 21 × 1.25 = 26.25 A, whatever the motor table says. Reusing the old starter's wire size without the input-current check is the standard failure. Check the output side too: drive-to-motor conductors are sized at 125 percent of the motor's full-load current from 430.6.",
       "sharma_note": "",
       "figure_idea": "Nameplate zoom: 'INPUT 460 V 21 A' feeding the 125 percent math line.",
       "related_ids": [
@@ -3024,7 +4326,98 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-430.110",
-      "next_id": "C4-430.250"
+      "next_id": "C4-430.250",
+      "rich": 1,
+      "why_it_exists": "A drive is not a starter. Its input current includes the losses and the harmonic-rich draw of the conversion electronics, and it is set by the drive's rating, not by the motor behind it. Wire sized from the motor table can run hot feeding a drive whose motor is loafing — and a later swap to a larger drive frame on the same motor silently overloads wire that nobody re-checked.",
+      "inspection_fails": [
+        "Drive supply conductors sized from the motor horsepower table instead of the drive's rated input current.",
+        "Old starter wire reused on a VFD retrofit with no input-current check.",
+        "Output conductors to the motor undersized — not 125 percent of the motor full-load current.",
+        "Bypass installed and the conductors never checked for the across-the-line demand."
+      ],
+      "exam_trap": "The trap answer sizes the drive's supply conductors from the motor's table full-load current (430.6, 430.22) because \"it is a motor circuit.\" Part X changes the input side: supply conductors come from the drive's rated input current at 125 percent [430.122(A)]. The motor table still governs the output side — not the input.",
+      "tables": [
+        {
+          "caption": "Two sides of the drive",
+          "headers": [
+            "Conductors",
+            "Sized from"
+          ],
+          "rows": [
+            [
+              "Supply (input) side — 430.122(A)",
+              "125% of the drive rated input current, from the drive nameplate"
+            ],
+            [
+              "Output side, drive to motor — 430.122(B)",
+              "125% of motor full-load current per 430.6"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-430.122-drive.svg",
+          "alt": "Two-lane diagram of a drive installation: supply conductors sized at 125 percent of the drive rated input current (nameplate INPUT 460 V, 21 A, giving a 26.25 A minimum ampacity) feed the drive, and output conductors sized at 125 percent of motor full-load current per 430.6 run to the motor, with a bypass note and a fail strip against sizing the input from the motor horsepower table.",
+          "caption": "Input side from the drive plate; output side from the motor. Two different rules.",
+          "w": 900,
+          "h": 1360
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Supply conductors for an adjustable-speed drive are sized at 125 percent of what?",
+          "choices": [
+            "The motor table full-load current",
+            "The drive's rated input current",
+            "The motor nameplate FLA",
+            "The drive's output current"
+          ],
+          "answer_index": 1,
+          "explain_plain": "430.122(A) sizes the supply conductors from the power conversion equipment's rated input current, not the motor table.",
+          "nec_ref": "430.122(A)"
+        },
+        {
+          "question": "A drive nameplate shows a rated input current of 21 A. The minimum supply conductor ampacity is:",
+          "choices": [
+            "21 A",
+            "24.2 A",
+            "26.25 A",
+            "30 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "21 A × 1.25 = 26.25 A minimum ampacity under 430.122(A).",
+          "nec_ref": "430.122(A)"
+        },
+        {
+          "question": "Output conductors from the drive to the motor are sized at 125 percent of:",
+          "choices": [
+            "The drive input current",
+            "The motor full-load current as determined by 430.6",
+            "Half the drive input current",
+            "The bypass device rating"
+          ],
+          "answer_index": 1,
+          "explain_plain": "430.122(B) sizes the output conductors at 125 percent of the motor full-load current as determined by 430.6.",
+          "nec_ref": "430.122(B)"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "430.122(A)",
+        "430.122(B)",
+        "430.122(C)",
+        "430.6",
+        "430.22"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "430.122(B): output conductors require an ampacity at least 125 percent of the motor full-load current as determined by 430.6(A) or (B), with an exception for drives listed and marked \"Suitable for Output Motor Conductor Protection\" (the larger of that value or the minimum conductor size marked on the drive); 430.122(C) covers the bypass device",
+          "source": "JADE Learning, 2020 NEC Changes to 430.122 Conductors — Minimum Size and Ampacity",
+          "url": "https://www.jadelearning.com/blog/changes-to-430-122-conductors-minimum-size-and-ampacity/"
+        }
+      ]
     },
     {
       "id": "C4-430.250",
@@ -3302,8 +4695,8 @@
       "article": "440",
       "section": "440.32",
       "title": "Conductor sizing for a single motor-compressor",
-      "plain_explanation": "Section 440.32 sizes conductors for a single hermetic motor-compressor at not less than 125 percent of the compressor's rated-load current or branch-circuit selection current, whichever is greater. On listed equipment the manufacturer has already done this work and printed it as the MCA, so the field rule and the nameplate rule agree: the conductor ampacity must be at least the MCA. Where you are sizing from a compressor's own data rather than a unit plate, this section is the arithmetic behind the plate.",
-      "on_the_job": "When the plate is present, wire to the MCA and do not re-derive it. When the plate is missing or illegible on existing equipment, stop and get the data from the manufacturer rather than estimating from tonnage.",
+      "plain_explanation": "Section 440.32 sizes conductors for a single hermetic motor-compressor:\n• The conductor ampacity must be not less than 125 percent of the compressor's rated-load current, or of the branch-circuit selection current, whichever is greater.\n• On listed equipment the manufacturer has already done this work and printed it as the MCA (minimum circuit ampacity) on the nameplate. The field rule and the nameplate rule agree: the conductor ampacity must be at least the MCA.\n• Where you are sizing from a compressor's own data rather than a unit plate — a compressor-only replacement — this section is the arithmetic behind the plate.\nWorked example: a compressor with a 20 A rated-load current needs conductors with an ampacity of at least 20 × 1.25 = 25 A, before any other checks.",
+      "on_the_job": "When the plate is present, wire to the MCA and do not re-derive it — on a condenser change-out, the MCA and MOCP printed on the new unit's plate are the whole sizing job. When the plate is missing or illegible on existing equipment, stop and get the data from the manufacturer rather than estimating from tonnage: a \"3-ton\" guess is not a current rating, and two units of the same tonnage can carry different compressors. Photograph the plate at the survey so the wire gets ordered right the first time.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -3313,7 +4706,89 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-440.22",
-      "next_id": "C4-440.60"
+      "next_id": "C4-440.60",
+      "rich": 1,
+      "why_it_exists": "A compressor runs for hours at a stretch through a Florida summer, and its current does not politely stop at the nameplate value on a hot roof or a low-voltage afternoon. The 125 percent margin keeps the conductors from living at their temperature limit for the whole cooling season — which is what cooks insulation, loosens terminations and starts nuisance trips that turn into callbacks.",
+      "inspection_fails": [
+        "Conductors sized to the MOCP, or to a tonnage guess, instead of the nameplate MCA.",
+        "Old conductors reused on a change-out without checking them against the new unit's MCA.",
+        "Compressor-only replacement wired from the old unit's plate instead of the new compressor's rated-load or selection current.",
+        "MCA guessed from a faded, sun-bleached plate — the data was never pulled from the manufacturer."
+      ],
+      "exam_trap": "The trap answer sizes the wire from the MOCP — or from tonnage. The MOCP is short-circuit and ground-fault protection (440.22), and it is allowed to be far larger than the conductor ampacity; it does not size the wire. Conductors come from the MCA, which is 440.32's 125 percent already worked out by the manufacturer.",
+      "tables": [
+        {
+          "caption": "The two plate numbers — do not swap them",
+          "headers": [
+            "Plate value",
+            "What it sizes"
+          ],
+          "rows": [
+            [
+              "MCA — minimum circuit ampacity",
+              "Conductors: ampacity at least the MCA (440.32, worked out)"
+            ],
+            [
+              "MOCP — maximum overcurrent protection",
+              "Breaker or fuses: short-circuit protection only (440.22)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-440.32-mca.svg",
+          "alt": "Flow diagram: a compressor nameplate rated-load current of 20 A multiplied by 125 percent under 440.32 gives a 25 A minimum conductor ampacity; on listed equipment that number is printed as the MCA, and a warning panel states the MOCP and tonnage do not size the wire.",
+          "caption": "RLC × 125% = minimum conductor ampacity. On a listed unit, that number is the MCA.",
+          "w": 900,
+          "h": 1280
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Conductors for a single motor-compressor are sized at not less than what percent of the rated-load current or branch-circuit selection current, whichever is greater?",
+          "choices": [
+            "100 percent",
+            "115 percent",
+            "125 percent",
+            "175 percent"
+          ],
+          "answer_index": 2,
+          "explain_plain": "440.32 sets the floor at 125 percent of the greater of rated-load current or branch-circuit selection current.",
+          "nec_ref": "440.32"
+        },
+        {
+          "question": "On listed equipment, which nameplate value is the minimum conductor ampacity?",
+          "choices": [
+            "MOCP",
+            "MCA",
+            "LRA",
+            "Fan motor FLA"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The MCA is the manufacturer's worked-out 440.32 result; the conductor ampacity must be at least the MCA.",
+          "nec_ref": "440.32"
+        },
+        {
+          "question": "A compressor has a rated-load current of 20 A. From 440.32 alone, the minimum conductor ampacity is:",
+          "choices": [
+            "20 A",
+            "22 A",
+            "25 A",
+            "35 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "20 A × 1.25 = 25 A minimum conductor ampacity.",
+          "nec_ref": "440.32"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "440.32",
+        "440.22(A)"
+      ],
+      "uncertain": [],
+      "rich_sources": []
     },
     {
       "id": "C4-440.60",
@@ -3341,8 +4816,8 @@
       "article": "445",
       "section": "445",
       "title": "Generators — article intro",
-      "plain_explanation": "Article 445 covers generators themselves: their marking, conductor ampacity, overcurrent protection, and shutdown controls. The transfer equipment and the optional-standby-system rules that decide what a generator may feed live mainly in Chapter 7 (Article 702), and required standby systems in 700/701 — this article is about the machine. Sharma meets 445 on whole-house generator work in dwellings, where the 2020 outdoor shutdown rule on the next pages is the item inspectors ask about.\n\nNEC 2023 CHANGE:\n• 445.18: A generator's disconnect can now sit inside the unit behind a hinged cover, provided a sign points to its location. The emergency shutdown rules moved out to 445.19. The disconnect can be inside the generator, behind a hinged door, cover or panel, as long as a sign meeting 110.21(B) shows where it is.\n• 445.19: Generator shutdown rules moved to their own section, 445.19. Remote and dwelling shutdown switches can now mount on the generator enclosure, labeled \"Generator Emergency Shutdown.\" The remote shutdown switch and the dwelling shutdown device can now mount on the outside of the generator enclosure.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Separate the two questions on a generator job: is the machine itself installed to 445, and is the system it feeds wired and sized to Chapter 7? Passing one does not pass the other. Cross-link to Chapter 7 for transfer-switch sizing; do not size a transfer switch from this chapter.",
+      "plain_explanation": "Article 445 covers generators themselves: their marking, conductor ampacity, overcurrent protection, and shutdown controls. The working rules Sharma uses most:\n• Listing: stationary generators at 600 volts or less must be listed (445.6)\n• Overcurrent protection for the machine itself (445.12)\n• Conductors from the generator sized at not less than 115 percent of the nameplate current rating (445.13)\n• Shutdown controls, including the outdoor shutdown for a generator at a one- or two-family dwelling (445.18(D))\nThe transfer equipment and the optional-standby-system rules that decide what a generator may feed live mainly in Chapter 7 (Article 702), and required standby systems in 700/701 — this article is about the machine. Sharma meets 445 on whole-house generator work in dwellings, where the 2020 outdoor shutdown rule is the item inspectors ask about.",
+      "on_the_job": "Separate the two questions on a generator job: is the machine itself installed to 445, and is the system it feeds wired and sized to Chapter 7? Passing one does not pass the other. On a typical whole-house job the unit is a 22 kW standby generator at 240 V single-phase, nameplate current about 92 A. The feeder conductors are sized from that nameplate: 92 × 115 percent = 105.8 A, so conductors rated at least 106 A — 2 AWG copper at the 75°C column is 115 A (445.13). The shutdown device goes outside the dwelling, where occupants and first responders can reach it (445.18(D)). Cross-link to Chapter 7 for transfer-switch sizing; do not size a transfer switch from this chapter.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -3370,7 +4845,104 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/445-19",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "A generator is a second power source that starts by itself, often at 2 a.m. in a storm, with nobody watching. If its conductors are sized like a normal feeder, a long outage at full load overheats them. If it cannot be shut down from outside the house, first responders stand next to a running machine they cannot stop. Article 445 keeps the machine itself from becoming the emergency.",
+      "exam_trap": "The exam trap is sizing generator conductors at 100 percent of nameplate, like an ordinary feeder. 445.13 wants not less than 115 percent of the generator's nameplate current rating, because the machine can be asked to carry its full rating for an entire outage. A second trap: answering a transfer-switch or load question from Article 445 — what the generator may feed is decided in Chapter 7, not here.",
+      "inspection_fails": [
+        "Generator not listed, or the listing label missing on a stationary unit at 600 V or less (445.6).",
+        "Feeder conductors sized at 100 percent of nameplate instead of 115 percent (445.13).",
+        "No readily accessible shutdown device outside the dwelling on an outdoor generator at a one- or two-family dwelling (445.18(D)).",
+        "Generator with no overload protection — no inherent design, breaker, or fuses (445.12).",
+        "Transfer switch sized from Article 445 instead of the Chapter 7 system rules."
+      ],
+      "tables": [
+        {
+          "caption": "Article 445 working sections",
+          "headers": [
+            "Section",
+            "What it covers"
+          ],
+          "rows": [
+            [
+              "445.6",
+              "Listing — stationary generators, 600 V or less"
+            ],
+            [
+              "445.12",
+              "Overcurrent protection for the generator"
+            ],
+            [
+              "445.13",
+              "Conductors: 115% of nameplate current"
+            ],
+            [
+              "445.18(D)",
+              "Outdoor shutdown at one- and two-family dwellings"
+            ]
+          ],
+          "note": "What the generator may feed is decided in Chapter 7 (Articles 700, 701, 702)."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-ART-445-generator-oneline.svg",
+          "alt": "One-line diagram of a dwelling standby generator: the listed generator on its pad outside the house, an outdoor shutdown device, feeder conductors sized at 115 percent of nameplate current, a transfer switch, and the house panel.",
+          "caption": "The machine on one line: listed unit, 115% conductors, outdoor shutdown.",
+          "w": 900,
+          "h": 1640
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Conductors from a generator to the first distribution device are sized at not less than what percentage of nameplate current?",
+          "choices": [
+            "100%",
+            "115%",
+            "125%",
+            "150%"
+          ],
+          "answer_index": 1,
+          "explain_plain": "445.13 sets the floor at 115 percent of the generator's nameplate current rating.",
+          "nec_ref": "445.13"
+        },
+        {
+          "question": "A 22 kW, 240 V standby generator has a nameplate current of about 92 A. Minimum conductor ampacity under 445.13?",
+          "choices": [
+            "92 A",
+            "100 A",
+            "106 A",
+            "115 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "92 × 1.15 = 105.8 A, so the conductors must be rated at least 106 A.",
+          "nec_ref": "445.13"
+        },
+        {
+          "question": "An outdoor generator serves a one-family dwelling. Where must the 445.18(D) shutdown device be?",
+          "choices": [
+            "On the generator only",
+            "Inside the garage",
+            "Readily accessible and located outside the dwelling",
+            "At the utility meter only"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The dwelling generator located outside gets a readily accessible shutdown device located outside the dwelling.",
+          "nec_ref": "445.18(D)"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 445.18: A generator's disconnect can now sit inside the unit behind a hinged cover, provided a sign points to its location. The emergency shutdown rules moved out to 445.19. The disconnect can be inside the generator, behind a hinged door, cover or panel, as long as a sign meeting 110.21(B) shows where it is.\n• 445.19: Generator shutdown rules moved to their own section, 445.19. Remote and dwelling shutdown switches can now mount on the generator enclosure, labeled \"Generator Emergency Shutdown.\" The remote shutdown switch and the dwelling shutdown device can now mount on the outside of the generator enclosure.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "445.6",
+        "445.12",
+        "445.13",
+        "445.18(D)",
+        "Article 700",
+        "Article 701",
+        "Article 702"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C4-445.6",
@@ -3490,8 +5062,8 @@
       "article": "445",
       "section": "445.12",
       "title": "Overcurrent protection for generators (445.12)",
-      "plain_explanation": "Section 445.12 requires generators to be protected from overload — by inherent design, circuit breakers, fuses, or another identified means — so a fault or an overload cannot cook the machine that is supposed to be the backup. It works with 445.13, which sizes the conductors from the generator at 115 percent of nameplate current. Together they mean the generator's own protection and the wire leaving it are both chosen from the nameplate, and a transfer scheme never leaves the generator feeding a fault with nothing able to open.",
-      "on_the_job": "Read the generator nameplate for both numbers at the site survey: rated amps for the 445.13 conductor math, and the machine's built-in protection for the 445.12 check. Both go on the job record.",
+      "plain_explanation": "Section 445.12 requires generators to be protected from overload:\n• The protection may be inherent in the machine's design, circuit breakers, fuses, or another identified means — but one of them must be there, and it is chosen from the nameplate.\n• It works with 445.13, which sizes the conductors from the generator at 115 percent of nameplate current. The generator's own protection and the wire leaving it are both chosen from the nameplate.\n• A transfer scheme must never leave the generator feeding a fault or an overload with nothing able to open.\nTogether they mean a fault or an overload cannot cook the machine that is supposed to be the backup.",
+      "on_the_job": "Read the generator nameplate for both numbers at the site survey: rated amps for the 445.13 conductor math, and the machine's built-in protection for the 445.12 check. Both go on the job record. Example: a 22 kW standby unit at 240 V single-phase has a nameplate current of about 92 A, so the conductors leaving it need an ampacity of at least 92 × 1.15 = 105.8 A — call it 106 A minimum. On that same visit, confirm the unit's own breaker or inherent protection is in place before the transfer scheme is built around the machine.",
       "sharma_note": "",
       "figure_idea": "Generator nameplate card with two callouts: rated amps (wire math) and built-in protection (overload check).",
       "related_ids": [
@@ -3502,7 +5074,89 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-445.6",
-      "next_id": "C4-445.13"
+      "next_id": "C4-445.13",
+      "rich": 1,
+      "why_it_exists": "During an outage the generator is the only source the building has, and it will try to feed whatever is connected — including a fault — until something opens or something burns. A generator's windings are not sized to carry fault or overload current while it waits for help. Overload protection at the machine is what lets the backup survive the emergency it was bought for.",
+      "inspection_fails": [
+        "Generator installed with no inherent overload protection and no breaker or fuses at the machine.",
+        "Conductors from the generator sized at 100 percent of nameplate instead of the 115 percent 445.13 requires.",
+        "Nameplate rated amps never recorded at the survey, so the conductor math and the protection check were both guessed.",
+        "Transfer arrangement leaves the generator able to feed a fault with no device able to open."
+      ],
+      "exam_trap": "The trap answer is \"the feeder breaker in the panel protects the generator, so the machine needs nothing of its own.\" 445.12 puts the overload protection on the generator itself — inherent design, its own breakers or fuses, or another identified means. A downstream panel breaker is distribution protection; it is not the machine's overload protection.",
+      "tables": [
+        {
+          "caption": "One nameplate, two jobs",
+          "headers": [
+            "Check",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "Overload protection at the machine — 445.12",
+              "Inherent design, breakers, fuses, or other identified means"
+            ],
+            [
+              "Conductor ampacity from the machine — 445.13",
+              "At least 115% of nameplate current: 92 A plate → 106 A min"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-445.12-nameplate.svg",
+          "alt": "Generator nameplate card for a 22 kW, 240 V standby unit showing rated current 92 A and a built-in breaker, with two callouts: rated amps size the conductors at 115 percent for a 106 A minimum under 445.13, and the built-in protection is the 445.12 overload check; a one-line below runs generator, its own breaker, transfer switch and panel.",
+          "caption": "The nameplate carries both numbers: rated amps for the wire, built-in protection for the machine.",
+          "w": 900,
+          "h": 1440
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "445.12 requires a generator to be protected from overload by which means?",
+          "choices": [
+            "Only a fusible disconnect at the service",
+            "Inherent design, circuit breakers, fuses, or another identified means",
+            "The utility meter fuse",
+            "A surge protective device"
+          ],
+          "answer_index": 1,
+          "explain_plain": "445.12 accepts inherent design, circuit breakers, fuses, or another identified means — but one of them must protect the machine.",
+          "nec_ref": "445.12"
+        },
+        {
+          "question": "Conductors from a generator are sized at what percent of nameplate current?",
+          "choices": [
+            "100 percent",
+            "115 percent",
+            "125 percent",
+            "150 percent"
+          ],
+          "answer_index": 1,
+          "explain_plain": "445.13 sizes the conductors from the generator at not less than 115 percent of the nameplate current rating.",
+          "nec_ref": "445.13"
+        },
+        {
+          "question": "A 22 kW, 240 V standby generator has a nameplate current of about 92 A. The minimum conductor ampacity is about:",
+          "choices": [
+            "92 A",
+            "100 A",
+            "106 A",
+            "115 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "92 A × 1.15 = 105.8 A, so conductors rated at least 106 A.",
+          "nec_ref": "445.13"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "445.12",
+        "445.13"
+      ],
+      "uncertain": [],
+      "rich_sources": []
     },
     {
       "id": "C4-445.13",
@@ -3713,8 +5367,8 @@
       "article": "450",
       "section": "450.9",
       "title": "Transformer ventilation — and no storage on top",
-      "plain_explanation": "Section 450.9 requires transformers to be installed so air can circulate and carry heat away, and the 2020 edition expanded its marking provisions so the horizontal top surfaces of covered dry-type transformers are marked against being used for storage. A transformer is a heater by design losses; blocking its vents or stacking boxes on it raises its temperature and shortens its life. Ventilation is an installation requirement, not a housekeeping preference.",
-      "on_the_job": "Keep the manufacturer's clearances on all vented faces and treat the top of a dry-type transformer as equipment space, never a shelf. On a commercial service call, photograph and report storage stacked on a transformer rather than just moving it quietly — it will be back.",
+      "plain_explanation": "Section 450.9 requires a transformer to be installed so air can circulate and carry its heat away. Ventilation is an installation requirement, not a housekeeping preference.\n• Keep every vent opening clear — no stored material against the vented faces, and no wall, cover, or other equipment set so close that it chokes the airflow the manufacturer designed for.\n• The horizontal top surface of a covered dry-type transformer is marked against use for storage. Treat the top as equipment space, never as a shelf.\n• A transformer is a heater by design losses. Even idling it warms up; under load the heat has to leave, or the winding temperature climbs and the insulation ages fast.\nHeat leaving the unit is only half the location check. Section 450.21 covers keeping that heat away from combustible material: 12 in of separation for dry-types rated 112½ kVA or less, unless a fire-resistant, heat-insulating barrier separates them.",
+      "on_the_job": "On a service call at a Winter Park strip center, Sharma found a 45 kVA, 480-to-208/120 V dry-type — the size the shop sets most — with paint cans and spare ceiling tiles stacked on its top and boxes of lamps tight against both vented sides. The case was hot to the touch and the unit was humming hard. The crew cleared the top and the vents, confirmed the 12 in to the wood-framed closet wall (450.21), and photographed the storage for the job report rather than just moving it quietly — storage moved without a word is back within a month.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -3725,7 +5379,101 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-450.3",
-      "next_id": "C4-450.14"
+      "next_id": "C4-450.14",
+      "why_it_exists": "Insulation life is a temperature story. A dry-type transformer that cannot shed heat runs its windings hotter every loaded hour, and the insulation breaks down years early — brittle leads and heat damage first, and in the worst case a fault inside a sealed case in an occupied building. Blocked vents and storage on top trip nothing and alarm nothing; they just cook the unit quietly until it fails.",
+      "exam_trap": "The trap is treating the flat top of a dry-type transformer as dead space: 'It is only storage — the transformer still runs.' The top of a covered dry-type is marked against storage, and blocking the unit's heat path is an installation failure whether or not anything has failed yet. The second trap is calling ventilation the manufacturer's problem. Section 450.9 puts it on the installer.",
+      "inspection_fails": [
+        "Boxes, paint cans and spare parts stacked on top of a dry-type transformer, over the factory no-storage marking.",
+        "Vent openings blocked by stored material, or a wall or cover set inside the manufacturer's clearance so the unit cannot breathe.",
+        "Dry-type transformer rated 112½ kVA or less set closer than 12 in to combustible material with no fire-resistant barrier (450.21).",
+        "Indoor dry-type over 112½ kVA installed in an ordinary closet instead of a fire-resistant transformer room (450.21)."
+      ],
+      "tables": [
+        {
+          "caption": "Transformer location checks",
+          "headers": [
+            "Check",
+            "Rule",
+            "Section"
+          ],
+          "rows": [
+            [
+              "Vent openings",
+              "Clear — air in and out, nothing stored against them",
+              "450.9"
+            ],
+            [
+              "Top surface",
+              "Marked no storage; treat as equipment space",
+              "450.9"
+            ],
+            [
+              "Combustible material",
+              "12 in min, or a fire-resistant, heat-insulating barrier (dry-types ≤ 112½ kVA)",
+              "450.21"
+            ],
+            [
+              "Indoor units over 112½ kVA",
+              "Transformer room of fire-resistant construction, 1-hour rating, with the section's exceptions",
+              "450.21"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-450.9-ventilation.svg",
+          "alt": "Front elevation of a dry-type transformer with vent openings high and low, cool air arrows entering the lower vents, storage boxes crossed out in red on the marked top surface, and a 12 in minimum dimension to a combustible wall.",
+          "caption": "Keep the vents and the top clear — and hold 12 in from combustible material.",
+          "w": 900,
+          "h": 1480
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "What does 450.9 make the installer responsible for?",
+          "choices": [
+            "The transformer's internal winding design",
+            "Air circulation that carries the transformer's heat away",
+            "The utility's primary voltage",
+            "The color of the enclosure"
+          ],
+          "answer_index": 1,
+          "explain_plain": "450.9 requires the installation to let air circulate and dispose of the heat the transformer generates.",
+          "nec_ref": "450.9"
+        },
+        {
+          "question": "A 75 kVA indoor dry-type transformer sits 6 in from a wood-framed wall with no barrier. What is the problem?",
+          "choices": [
+            "None — units under 100 kVA are exempt",
+            "It needs 12 in of separation or a fire-resistant, heat-insulating barrier",
+            "It needs a 1-hour transformer room",
+            "It must be moved outdoors"
+          ],
+          "answer_index": 1,
+          "explain_plain": "75 kVA is at or under 112½ kVA, so 450.21 requires 12 in from combustible material or a barrier. The 1-hour room rule is for units over 112½ kVA.",
+          "nec_ref": "450.21"
+        },
+        {
+          "question": "The horizontal top surface of a covered dry-type transformer may be used for:",
+          "choices": [
+            "Storing spare lamps, if they are light",
+            "Storage only while the unit is de-energized",
+            "Nothing — it is marked against use for storage",
+            "Storing the transformer's own spare parts"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The 2020 marking provisions mark the top surfaces of covered dry-type transformers against storage use.",
+          "nec_ref": "450.9"
+        }
+      ],
+      "code_refs": [
+        "450.9",
+        "450.21"
+      ],
+      "uncertain": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C4-450.14",
@@ -4171,8 +5919,8 @@
       "article": "480",
       "section": "480",
       "title": "Storage batteries — article intro",
-      "plain_explanation": "Article 480 covers storage battery installations: the battery systems that back up services, feed UPS equipment, and increasingly pair with solar and generator work. Its working rules address disconnecting means, overcurrent protection, wiring to battery circuits, and the ventilation and spill concerns that depend on battery chemistry. The article works alongside the energy-storage rules in Chapter 7 (Article 706), which govern the system as a whole — 480 is about the battery installation itself.\n\nNEC 2023 CHANGE:\n• 480.1: Article 480 is now Stationary Standby Batteries and covers only standby battery systems over 1 kWh. Smaller ones, like a fire alarm panel battery, fall outside it. Article 480 now applies only to stationary standby batteries with more than 1 kWh (3.6 MJ) of capacity.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Identify the chemistry and the system listing before you wire anything: vented, sealed, and lithium systems have different room and protection needs. Put the battery disconnect where it is identified for the system and label it at the service as the system rules require (see Chapter 7 cross-links).",
+      "plain_explanation": "Article 480 covers stationary storage battery installations: the battery systems that back up services, feed UPS equipment, and increasingly pair with solar and generator work. Its working rules:\n• Disconnecting means for the battery circuits (480.7)\n• Overcurrent protection for battery conductors\n• Wiring and interconnections between cells and batteries (480.12)\n• Ventilation and spill concerns that depend on battery chemistry\nChemistry drives the details. Under 480.3, storage batteries and battery management equipment must be listed; the requirement does not apply to lead-acid batteries. The listing carries the room and protection details for that system. The article works alongside the energy-storage rules in Chapter 7 (Article 706), which govern the system as a whole — 480 is about the battery installation itself.",
+      "on_the_job": "Identify the chemistry and the system listing before you wire anything: vented, sealed, and lithium systems have different room and protection needs. On a small commercial UPS job, a 120 V DC string — ten 12 V batteries in series — is over the 60 V line in 480.7(A), so it gets a DC-rated disconnect, readily accessible and within sight of the bank, labeled with the nominal voltage and the available short-circuit current. Put the battery disconnect where it is identified for the system and label it at the service as the system rules require (see Chapter 7 cross-links).",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -4191,7 +5939,112 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/480-1",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "A battery bank is stored energy that never turns off. Opening a breaker does not discharge it, and a bank can deliver enormous fault current at very low impedance. Heat, vented gas and corrosive electrolyte depend on the chemistry in the rack. Article 480 exists so the bank can be disconnected, protected and serviced without the room or the wiring becoming the hazard.",
+      "exam_trap": "The trap is treating Article 480 and Article 706 as the same article. 706 governs the energy storage system as a whole; 480 governs the battery installation itself. A second trap: assuming every battery needs a listing. In the 2020 rules the 480.3 listing requirement does not apply to lead-acid batteries — it is the other chemistries and the battery management equipment that must be listed.",
+      "inspection_fails": [
+        "Battery disconnect is an AC-only switch with no DC rating on a string over 60 V DC (480.7).",
+        "No disconnecting means for the ungrounded battery conductors, or the disconnect is out of sight of the bank.",
+        "Non-lead-acid batteries installed with no listing (480.3).",
+        "Interconnection lugs loose or torqued by feel on a bank that can deliver thousands of amps of fault current (480.12).",
+        "Battery disconnect unlabeled: no nominal voltage or available short-circuit current marking (480.7(D))."
+      ],
+      "tables": [
+        {
+          "caption": "Article 480 working sections",
+          "headers": [
+            "Section",
+            "What it covers"
+          ],
+          "rows": [
+            [
+              "480.3",
+              "Listing: batteries and battery management equipment, except lead-acid"
+            ],
+            [
+              "480.7",
+              "DC disconnecting means for battery circuits"
+            ],
+            [
+              "480.12",
+              "Interconnections between cells and batteries"
+            ],
+            [
+              "Article 706",
+              "The energy storage system as a whole (Chapter 7)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-ART-480-battery-system.svg",
+          "alt": "Elevation of a standby battery installation: a battery bank on a rack, a DC disconnect on the wall, the feed down to a UPS, and numbered markers for the disconnect, interconnections, listing, and ventilation.",
+          "caption": "The battery installation itself: bank, disconnect, and the load it backs up.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Which article governs the battery installation itself, as opposed to the energy storage system as a whole?",
+          "choices": [
+            "Article 706",
+            "Article 480",
+            "Article 445",
+            "Article 230"
+          ],
+          "answer_index": 1,
+          "explain_plain": "480 is the battery installation; 706 is the energy storage system as a whole.",
+          "nec_ref": "480.1"
+        },
+        {
+          "question": "Under 480.3, which batteries are excused from the listing requirement?",
+          "choices": [
+            "Lithium-ion",
+            "Sealed batteries",
+            "Lead-acid",
+            "Nickel-cadmium"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Storage batteries and battery management equipment must be listed; the requirement does not apply to lead-acid batteries.",
+          "nec_ref": "480.3"
+        },
+        {
+          "question": "A stationary battery system is over 60 V DC. What does 480.7(A) require?",
+          "choices": [
+            "A disconnect for the grounded conductor only",
+            "A disconnecting means for all ungrounded conductors, readily accessible and within sight of the battery system",
+            "A disconnect at the service only",
+            "No disconnect under 600 V"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Over 60 V DC, every ungrounded conductor gets a disconnecting means, readily accessible and within sight of the battery system.",
+          "nec_ref": "480.7(A)"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 480.1: Article 480 is now Stationary Standby Batteries and covers only standby battery systems over 1 kWh. Smaller ones, like a fire alarm panel battery, fall outside it. Article 480 now applies only to stationary standby batteries with more than 1 kWh (3.6 MJ) of capacity.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "480.1",
+        "480.3",
+        "480.7",
+        "480.12",
+        "Article 706"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "2020 NEC 480.1 applies to all stationary installations of storage batteries, and 480.3 requires storage batteries and battery management equipment to be listed, except lead-acid batteries",
+          "source": "NEC 2020 First Revision statements, Article 480 text",
+          "url": "https://www.scribd.com/document/505494269/70-A2020-NEC-P13-FD-FRStatements"
+        },
+        {
+          "claim": "480.7(A) requires a disconnecting means for all ungrounded conductors from a stationary battery system over 60 V DC, readily accessible and within sight; 480.7(D) requires marking with nominal voltage and available short-circuit current",
+          "source": "McGraw-Hill, NEC Handbook, Article 480 — Storage Batteries",
+          "url": "https://www.accessengineeringlibrary.com/binary/mheaeworks/34b004955b268c13/f7cd7ee1926cca1b4fd94881a8eb58f3e32480f26a4cda48d28bcd11acd46f3a/article-480-storage-batteries.pdf"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C4-480.7",
@@ -4199,8 +6052,8 @@
       "article": "480",
       "section": "480.7",
       "title": "Battery disconnects — DC is its own problem",
-      "plain_explanation": "Section 480.7 sets the disconnecting methods for battery circuits, reorganized and expanded in the 2020 edition as battery requirements were gathered back into Article 480 from Article 706. The field point that matters most: interrupting DC is harder than interrupting AC, because DC has no natural current zero to help an arc die. A switching device must be rated for the DC voltage and current it will actually break; an AC-only device is not assumed suitable, whatever its amp rating says.",
-      "on_the_job": "Read the DC rating on any battery disconnect, fuse holder, or breaker before it goes in, and confirm polarity markings on polarized DC devices. If the rating plate does not mention DC, the device does not go on a battery circuit.",
+      "plain_explanation": "Section 480.7 sets the disconnecting methods for battery circuits, reorganized and expanded in the 2020 edition as battery requirements were gathered back into Article 480 from Article 706. What it requires:\n• A disconnecting means for all ungrounded conductors derived from a stationary battery system with a voltage over 60 volts DC (480.7(A))\n• The disconnect must be readily accessible and located within sight of the battery system (480.7(A))\n• Where remote controls operate the disconnect from out of sight, it must be capable of being locked in the open position, with a label showing where the controls are (480.7(B))\n• A marking at the disconnect giving the nominal voltage and the maximum available short-circuit current, with the date it was calculated (480.7(D))\nThe field point that matters most: interrupting DC is harder than interrupting AC, because DC has no natural current zero to help an arc die. A switching device must be rated for the DC voltage and current it will actually break; an AC-only device is not assumed suitable, whatever its amp rating says.",
+      "on_the_job": "Read the DC rating on any battery disconnect, fuse holder, or breaker before it goes in, and confirm polarity markings on polarized DC devices. If the rating plate does not mention DC, the device does not go on a battery circuit. Worked case: a small commercial UPS string of ten 12 V batteries is 120 V DC nominal — well over the 60 V line — so the string gets its own DC-rated disconnect within sight of the bank, and the label at the disconnect states 120 V nominal and the available short-circuit current from the battery calculation, dated.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -4211,7 +6064,115 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-ART-480",
-      "next_id": "C4-480.12"
+      "next_id": "C4-480.12",
+      "why_it_exists": "A battery bank does not stop being a source when you open a switch somewhere else. Its fault current is enormous and its arc does not self-extinguish the way AC does at each zero crossing. The wrong device can weld shut or keep arcing while a servicer believes the circuit is dead. The DC rating, the sight line, and the fault-current label are what make the disconnect a real disconnect.",
+      "exam_trap": "The trap answer is that a 200 A AC-rated switch can disconnect a 120 V DC battery string because 'amps are amps.' Interrupting DC is a different job: there is no current zero, so the device must carry a DC rating for the voltage and current it will break. The second trap is the threshold: 480.7(A) is triggered over 60 volts DC, not at 250 or 600.",
+      "inspection_fails": [
+        "AC-only switch or breaker installed as the battery disconnect; no DC rating on the device.",
+        "No disconnecting means for the ungrounded conductors of a battery system over 60 V DC.",
+        "Disconnect out of sight of the battery system, or not readily accessible.",
+        "Remote-controlled disconnect that cannot be locked open, with no label showing where the controls are (480.7(B)).",
+        "No marking of nominal voltage and available short-circuit current at the disconnect (480.7(D))."
+      ],
+      "tables": [
+        {
+          "caption": "480.7 disconnect checklist",
+          "headers": [
+            "Item",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "Trigger",
+              "Battery system over 60 V DC"
+            ],
+            [
+              "Opens",
+              "All ungrounded conductors"
+            ],
+            [
+              "Location",
+              "Readily accessible, within sight of the bank"
+            ],
+            [
+              "Device",
+              "Rated for the DC voltage and current"
+            ],
+            [
+              "Label",
+              "Nominal voltage + available short-circuit current, dated"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-480.7-dc-disconnect.svg",
+          "alt": "A 120 volt DC battery string of ten 12 volt batteries feeding a DC-rated disconnect, with the in-sight dimension of not over 50 ft, the label contents required by 480.7(D), and AC-only versus DC-rated switch panels.",
+          "caption": "The disconnect must be DC-rated, in sight, and labeled with the fault current.",
+          "w": 900,
+          "h": 1700
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "480.7(A) requires a disconnecting means for battery systems over what voltage?",
+          "choices": [
+            "24 V DC",
+            "48 V DC",
+            "60 V DC",
+            "250 V DC"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The trigger is a stationary battery system with a voltage over 60 volts DC.",
+          "nec_ref": "480.7(A)"
+        },
+        {
+          "question": "Why is an AC-only switch not acceptable as a battery disconnect?",
+          "choices": [
+            "AC switches are physically too small",
+            "DC has no natural current zero, so the device must be rated to break DC",
+            "DC systems have no overcurrent protection",
+            "Polarity does not matter on DC"
+          ],
+          "answer_index": 1,
+          "explain_plain": "An arc on DC has no zero crossing to help it die; the device must be rated for the DC voltage and current it will break.",
+          "nec_ref": "480.7"
+        },
+        {
+          "question": "The marking at a battery disconnect under 480.7(D) must show:",
+          "choices": [
+            "The battery brand and install date",
+            "Nominal voltage and the maximum available short-circuit current, with its calculation date",
+            "The conductor size",
+            "The room temperature rating"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The disconnect is marked with the nominal voltage and the maximum available short-circuit current, dated like the service marking in 110.24.",
+          "nec_ref": "480.7(D)"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "480.7(A)",
+        "480.7(B)",
+        "480.7(D)",
+        "Article 100 (in sight)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "480.7(A) requires a disconnecting means for any ungrounded conductor supplied by a stationary battery bank operating over 60 V, readily accessible and within sight of the battery system; 480.7(D) requires a label with nominal voltage and maximum available short-circuit current and a calculation date",
+          "source": "McGraw-Hill, NEC Handbook, Article 480 — Storage Batteries",
+          "url": "https://www.accessengineeringlibrary.com/binary/mheaeworks/34b004955b268c13/f7cd7ee1926cca1b4fd94881a8eb58f3e32480f26a4cda48d28bcd11acd46f3a/article-480-storage-batteries.pdf"
+        },
+        {
+          "claim": "480.7(B): where a disconnect located out of sight of the battery system has remote controls, it must be capable of being locked in the open position and labeled with the location of the controls",
+          "source": "City of Yonkers, Battery Energy Storage System Inspection Checklist",
+          "url": "https://www.yonkersny.gov/DocumentCenter/View/310/Energe-Storage-System-Checklist-2021-PDF"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C4-480.12",
