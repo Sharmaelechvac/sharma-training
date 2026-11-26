@@ -101,6 +101,11 @@ function sectionHtml(sec) {
 const blocksHtml = (page) => (page.sections || []).map(sectionHtml).join("");
 const trimAt = (s, n) => { const t = String(s || ""); return t.length <= n ? t : t.slice(0, n).replace(/\s+\S*$/, "") + "…"; };
 const askCard = `<a class="tr-ask" href="#/ask"><b>${t("Ask the NEC")}</b><span>${t("Type a question or a section number — it searches the Field Book's 594 pages, the look-ups and the guides, right on this device.")}</span><div class="go">${t("Ask a question")}</div></a>`;
+/* SHARMA360 watermark (Sanjay 2026-11-25: every app carries the logo, small,
+   on its first page). The kit stackview is position:fixed, so a shell footer
+   can never show — the mark closes the landing views themselves: Course
+   (the app's first page) and Code (the NEC Field Book landing). */
+const wmFooter = `<div class="tr-foot"><img src="assets/sharma360-logo.png" alt="SHARMA360" style="height:20px;width:auto"></div>`;
 
 /* ---------------- Course (Rough-In Guide + training curriculum) ---------------- */
 function courseRootHtml() {
@@ -119,7 +124,7 @@ function courseRootHtml() {
   <p class="tr-reviewed">${$esc(REVIEWED)}</p>
   <div class="tr-sec">${t("Training modules")}</div>${mods}
   <div class="tr-sec">${t("Residential rough-in, step by step")}</div>${groups}
-  <p class="tr-note">${$esc(LIC)}</p></div>`;
+  <p class="tr-note">${$esc(LIC)}</p>${wmFooter}</div>`;
 }
 function coursePageHtml(id) {
   const p = ROUGHIN_PAGES.find(x => x.id === id);
@@ -159,7 +164,7 @@ async function codeRootFill(page) {
   <a class="tr-card" href="#/code/tools"><span class="tr-card__t">${t("Tools — calculators")}</span><span class="tr-card__s">${t("Box fill, conduit fill, voltage drop, ampacity, load calc")}</span></a>
   <a class="tr-card" href="#/code/checklists"><span class="tr-card__t">${t("Checklists")}</span><span class="tr-card__s">${t("Room and inspection checklists")}</span></a>
   ${favs.size ? `<a class="tr-card" href="#/code/saved"><span class="tr-card__t">${t("Saved")}</span><span class="tr-card__s">${tf(favs.size === 1 ? "{n} saved page" : "{n} saved pages", { n: favs.size })}</span></a>` : ""}
-  </div>`);
+  ${wmFooter}</div>`);
 }
 function chHtml(n) {
   const e = (NEC.index || []).find(x => x.book.chapter === n);
