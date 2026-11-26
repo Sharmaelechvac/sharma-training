@@ -153,8 +153,8 @@
       "article": "501",
       "section": "501",
       "title": "Class I locations — gases and vapors",
-      "plain_explanation": "Article 501 gives the wiring, sealing, and equipment rules for Class I locations, where the hazard is flammable gas or liquid vapor. It is the article behind fuel-handling rooms, some process areas, and the classified pockets inside garages and hangars covered later in this chapter. Seals that stop gases traveling through conduit, and threaded metal raceways, are everyday themes here.\n\nNEC 2023 CHANGE:\n• 501.10: Threaded rigid and intermediate metal conduit wearing an extra anti-corrosion coat, PVC-coated rigid being the common one, is now named as an acceptable Class I, Division 1 wiring method. The first item in 501.10(A)(1) now covers threaded RMC (rigid metal conduit) and IMC (intermediate metal conduit) that carry a supplemental corrosion-protection coating.\n• 501.30: 501.30 now splits grounding from bonding, adds cable trays and tray-cable strut to what gets bonded, and narrows the Division 2 short-flex jumper exception to meter, instrument and relay circuits. New: bond any metal strut, channel or angle used to hold up or shield ITC, TC or power-limited tray cable in a Class I area.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "If a Sharma job enters a Class I area, work only from the classified drawing and the method Mike Holt has reviewed. Do not carry house or light-commercial habits — NM cable, ordinary boxes, unsealed conduit — across the boundary.",
+      "plain_explanation": "Article 501 gives the wiring, sealing, and equipment rules for Class I locations, where the hazard is flammable gas or liquid vapor. It is the article behind fuel-handling rooms, some process areas, and the classified pockets inside garages and hangars covered later in this chapter.\n• Wiring methods, Division 1 (501.10(A)): threaded rigid metal conduit or threaded steel IMC is the everyday method. Type MI cable, and Type MC-HL cable where its conditions are met, are also permitted. Ordinary-location methods — NM cable, EMT with set-screw fittings, unsealed conduit — stop at the boundary.\n• Wiring methods, Division 2 (501.10(B)): the list relaxes — more cable types and threadless fittings on rigid conduit are permitted — but the boundary and sealing rules still apply.\n• Seals (501.15): a seal fitting goes within 18 in of an explosionproof enclosure that holds arcing or hot parts, and every run leaving the classified area gets a boundary seal within 10 ft of the boundary, on either side. Seal compound is poured at least as thick as the conduit's trade size, and never less than 5/8 in.\n• Grounding and bonding follow 501.30: the metal raceway system and the equipment in the area are bonded into the grounding system — a conduit system is only as good as its continuity.",
+      "on_the_job": "On a Winter Park garage job, the classified pocket around the fuel-handling bench is wired from the classified drawing Mike Holt reviewed: threaded RMC throughout, the seal for the explosionproof disconnect poured 12 in from the enclosure — inside the 18 in limit — and the boundary seal set 6 ft inside the line, well within 10 ft. Nothing from the ordinary side of the shop — no NM, no ordinary boxes, no unsealed conduit — crosses that line.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -163,9 +163,9 @@
       ],
       "florida_note": "",
       "verified": true,
+      "sharma_rule_ids": [],
       "prev_id": "C5-500.8",
       "next_id": "C5-ART-502",
-      "sharma_rule_ids": [],
       "nec2023_change": [
         {
           "section": "501.10",
@@ -181,7 +181,114 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/501-30",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Flammable vapor does not stay politely in the room where it leaked. It migrates through the inside of a conduit system and can carry an ignition from an arcing device to equipment in a safe room. Seals break the raceway into short, closed segments so an explosion inside the pipe stays a pipe event, and threaded joints plus explosionproof enclosures keep an internal blast from lighting the room.",
+      "exam_trap": "The classic trap swaps the two seal distances: 18 in is the enclosure seal, 10 ft is the boundary seal. An answer that puts the boundary seal “within 18 in of the boundary” or the enclosure seal “within 10 ft of the enclosure” is wrong both ways.",
+      "inspection_fails": [
+        "Seal fitting installed 3 ft from the explosionproof enclosure it serves.",
+        "No boundary seal where the conduit run leaves the Division 1 area.",
+        "EMT with set-screw fittings run inside a Class I, Division 1 area.",
+        "Seal fitting poured with compound thinner than the conduit trade size.",
+        "NM cable carried across the boundary into a classified pocket."
+      ],
+      "tables": [
+        {
+          "caption": "The seals of 501.15",
+          "headers": [
+            "Seal",
+            "Where it goes",
+            "Distance"
+          ],
+          "rows": [
+            [
+              "Enclosure seal",
+              "Run into an enclosure with arcing or hot parts, Div 1",
+              "Within 18 in"
+            ],
+            [
+              "Boundary seal",
+              "Run leaving Div 1 or Div 2 for an unclassified area",
+              "Within 10 ft, either side"
+            ],
+            [
+              "Seal compound",
+              "Inside every seal fitting",
+              "≥ trade size thick, min 5/8 in"
+            ]
+          ],
+          "note": "Conductors may fill no more than 25% of the seal's cross-section area unless the seal is identified for more (501.15(C))."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-501-seals.svg",
+          "alt": "Elevation of a conduit run leaving a Class I, Division 1 area: an enclosure seal within 18 inches of the explosionproof enclosure, a boundary seal placed inside the 10-foot zone at the dashed boundary line, and the panel in the unclassified area.",
+          "caption": "18 in at the enclosure, 10 ft at the boundary — do not swap them.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "In Class I, Division 1, a conduit seal for an enclosure containing arcing parts must be within:",
+          "choices": [
+            "10 ft of the enclosure",
+            "18 in of the enclosure",
+            "5 ft of the enclosure",
+            "36 in of the boundary"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Enclosure seals sit within 18 in of the enclosure they protect; 10 ft is the boundary-seal distance.",
+          "nec_ref": "501.15(A)(1)"
+        },
+        {
+          "question": "A conduit run leaving a Class I, Division 1 location needs a boundary seal within:",
+          "choices": [
+            "18 in of the boundary",
+            "10 ft of the boundary, on either side",
+            "25 ft of the boundary",
+            "No seal is needed"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Boundary seals go within 10 ft of the boundary, on either side of it.",
+          "nec_ref": "501.15(A)(4)"
+        },
+        {
+          "question": "The everyday wiring method for Class I, Division 1 is:",
+          "choices": [
+            "EMT with set-screw fittings",
+            "NM cable in bored holes",
+            "Threaded RMC or threaded steel IMC",
+            "PVC conduit"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Division 1 starts with threaded rigid metal conduit or threaded steel IMC; ordinary-location methods stop at the boundary.",
+          "nec_ref": "501.10(A)(1)"
+        }
+      ],
+      "code_refs": [
+        "501.10(A)",
+        "501.10(B)",
+        "501.15(A)",
+        "501.15(B)",
+        "501.15(C)",
+        "501.30"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "501.15 seal placement: enclosure seals within 18 in of the enclosure; boundary seals within 10 ft on either side of the boundary; seal compound at least the trade size thick and never less than 5/8 in; conductor fill not over 25%",
+          "source": "JCR Productions, Class I Division 1 Seal Requirements: NEC 501.15 Guide",
+          "url": "https://www.jcrproductions.com/blogs/news/class-i-hazardous-locations-seals-501"
+        },
+        {
+          "claim": "Conduit sealing summary for Class I locations: seals in the conduit run within 18 in of the enclosure, and within 10 ft of either side of the boundary where a run leaves Division 1 or Division 2",
+          "source": "NFPA, Conduit Sealing Requirements — Class I Locations (501.15 summary table)",
+          "url": "https://nfpa-cod-production-public.s3.amazonaws.com/assets/solutions/resources/221026070737-Conduit_Sealing_Requirements_Class_I_locations_.pdf"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 501.10: Threaded rigid and intermediate metal conduit wearing an extra anti-corrosion coat, PVC-coated rigid being the common one, is now named as an acceptable Class I, Division 1 wiring method. The first item in 501.10(A)(1) now covers threaded RMC (rigid metal conduit) and IMC (intermediate metal conduit) that carry a supplemental corrosion-protection coating.\n• 501.30: 501.30 now splits grounding from bonding, adds cable trays and tray-cable strut to what gets bonded, and narrows the Division 2 short-flex jumper exception to meter, instrument and relay circuits. New: bond any metal strut, channel or angle used to hold up or shield ITC, TC or power-limited tray cable in a Class I area.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C5-ART-502",
@@ -189,8 +296,8 @@
       "article": "502",
       "section": "502",
       "title": "Class II locations — combustible dusts",
-      "plain_explanation": "Article 502 covers Class II locations, where combustible dust is the hazard — think grain, feed, and some manufacturing dusts. The goals are keeping dust out of enclosures, keeping surfaces cool enough not to ignite a dust layer, and wiring methods that do not let dust accumulate on live parts. Dust thickness on equipment is part of the hazard picture, not just dust in the air.",
-      "on_the_job": "Ask what dust is present and its group before choosing equipment, and plan on dust-tight style enclosures where the article calls for them. Clean dust off equipment before opening enclosures in these areas.",
+      "plain_explanation": "Article 502 covers Class II locations, where combustible dust is the hazard — grain, feed, wood and other manufacturing dusts. The goals are keeping dust out of enclosures, keeping surfaces cool enough not to ignite a dust layer, and wiring methods that do not let dust accumulate on live parts. Dust thickness on equipment is part of the hazard picture, not just dust in the air.\n• Groups (500.6): Group E is metal dusts, Group F is carbonaceous dusts such as coal and coke, and Group G is grain, flour and similar dusts. Equipment must be identified for the group actually present.\n• Wiring methods (502.10): Division 1 runs on threaded RMC or threaded steel IMC, Type MI cable, and dusttight boxes and fittings with threaded entries. Division 2 relaxes the list — EMT, dusttight wireways and listed cable types join it — but boxes and fittings stay dusttight.\n• Sealing (502.15): Class II seals are dust seals, not explosionproof seals. Where a raceway connects a dust-ignitionproof enclosure to an enclosure that is not, dust is kept out by a permanent and effective seal, a horizontal raceway at least 10 ft long, or a vertical raceway at least 5 ft long extending downward from the dust-ignitionproof enclosure. Where the other enclosure is in an unclassified location, no seal is required.\n• Temperature still rules: the equipment's marked surface temperature must stay below the ignition temperature of the dust (500.8) — and a dust blanket raises the risk, so housekeeping is part of the installation.",
+      "on_the_job": "In a Marion County feed store, the back room is Class II, Division 2, Group G. The dust-ignitionproof starter for the auger motor connects to a general-purpose enclosure with a horizontal raceway run of 12 ft — over the 10 ft option in 502.15, so no sealing fitting is needed on that run. Receptacle circuits are 20-ampere (S-01), boxes are dusttight, and the crew blows the dust off the motor and starter before either enclosure is opened.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -198,9 +305,114 @@
       ],
       "florida_note": "",
       "verified": true,
+      "sharma_rule_ids": [],
       "prev_id": "C5-ART-501",
       "next_id": "C5-ART-503",
-      "sharma_rule_ids": []
+      "why_it_exists": "Dust burns two ways. A layer settled on a hot motor is fuel resting on an ignition source, and the layer insulates the motor so it runs hotter still. And a small first event can loft settled dust into a cloud that explodes through the whole room. The article's answer is housekeeping built into the hardware: dust kept out of enclosures, surfaces kept cool, and no easy path for dust to travel into the box.",
+      "exam_trap": "The trap is importing the Class I seal rules: “Class II seals must be explosionproof and within 18 in.” Neither is true. 502.15 seals only have to stop dust, they need not be explosionproof, and the raceway-length options — 10 ft horizontal or 5 ft vertical down — often replace the seal entirely.",
+      "inspection_fails": [
+        "Raceway into a dust-ignitionproof enclosure with a 6 ft horizontal run and no seal — none of the 502.15 options met.",
+        "Thick dust layer caked on the motor and starter, undisturbed at inspection.",
+        "Ordinary open-type enclosure installed where a dust-ignitionproof enclosure is required in Division 1.",
+        "Set-screw EMT fittings and non-dusttight boxes in a Division 1 dust area."
+      ],
+      "tables": [
+        {
+          "caption": "Keeping dust out of the dust-ignitionproof box (502.15)",
+          "headers": [
+            "Option",
+            "What it takes"
+          ],
+          "rows": [
+            [
+              "Permanent, effective seal",
+              "Sealing fitting or putty; must stay accessible"
+            ],
+            [
+              "Horizontal raceway",
+              "At least 10 ft long"
+            ],
+            [
+              "Vertical raceway",
+              "At least 5 ft long, extending downward"
+            ],
+            [
+              "Other enclosure is unclassified",
+              "No seal required"
+            ]
+          ],
+          "note": "Class II seals are dust seals — they are not required to be explosionproof."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-502-dust-sealing.svg",
+          "alt": "Section showing a dust-ignitionproof starter enclosure with a dust layer settled on top, and the three 502.15 options below it: a permanent effective seal in the raceway, a horizontal raceway at least 10 ft long, and a vertical raceway at least 5 ft long extending downward.",
+          "caption": "Three ways to keep dust out of the box — a seal, 10 ft sideways, or 5 ft down.",
+          "w": 900,
+          "h": 1620
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A raceway leaves a dust-ignitionproof enclosure for a general-purpose enclosure in the same Class II location. Which arrangement keeps dust out without a sealing fitting?",
+          "choices": [
+            "A horizontal raceway at least 10 ft long",
+            "A vertical raceway 5 ft long extending upward",
+            "Any raceway under 25 ft",
+            "A raceway with a drain fitting"
+          ],
+          "answer_index": 0,
+          "explain_plain": "502.15 allows a horizontal raceway not less than 10 ft long, or a vertical one not less than 5 ft long extending downward, instead of a seal.",
+          "nec_ref": "502.15"
+        },
+        {
+          "question": "Grain and flour dusts are Class II, Group:",
+          "choices": [
+            "D",
+            "E",
+            "F",
+            "G"
+          ],
+          "answer_index": 3,
+          "explain_plain": "Group G covers grain, flour and other agricultural and plastic dusts; E is metal dusts and F is carbonaceous dusts.",
+          "nec_ref": "500.6"
+        },
+        {
+          "question": "Seals installed under 502.15 must be:",
+          "choices": [
+            "Explosionproof",
+            "Listed for Class I",
+            "Effective against dust — explosionproof is not required",
+            "Poured with 5/8 in of compound"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Class II seals stop dust migration; the Code does not require them to be explosionproof.",
+          "nec_ref": "502.15"
+        }
+      ],
+      "code_refs": [
+        "502.10(A)",
+        "502.10(B)",
+        "502.15",
+        "500.6",
+        "500.8"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "502.15: dust is kept out of a dust-ignitionproof enclosure by a permanent and effective seal, a horizontal raceway at least 10 ft long, or a vertical raceway at least 5 ft long extending downward; 502.10 Division 1 wiring is threaded rigid or intermediate metal conduit or listed cable types",
+          "source": "Tsai Electro, NEC 502 and 503 for the Journeyman Exam: Class II Dust and Class III Fiber Locations",
+          "url": "https://www.tsaielectro.com/nec-502-503-class-ii-iii-dust-fiber-locations/"
+        },
+        {
+          "claim": "502.10(B) Division 2 wiring methods include RMC, IMC, EMT, dusttight wireways, and MC, TC and MI cable; all boxes and fittings shall be dusttight",
+          "source": "Wisconsin DSPS, 2014 Winter Electrical Code Update",
+          "url": "https://dsps2016-pub-uat.wi.gov/Documents/Programs/ElectricalLighting/FAQ2014WinterUpdateCommercial.pdf"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C5-ART-503",
@@ -227,8 +439,8 @@
       "article": "504",
       "section": "504",
       "title": "Intrinsically safe systems",
-      "plain_explanation": "Article 504 covers intrinsically safe systems, where the circuit itself is limited to energy levels that cannot ignite the atmosphere, even under fault conditions. These systems live mostly in instrumentation and control wiring for classified areas. Separation from ordinary power wiring, identified cables, and the control drawing are the heart of the article.",
-      "on_the_job": "Never mix intrinsically safe conductors with regular power conductors in the same raceway or box unless the control drawing and the article allow it. Keep the light-blue identified wiring and separation distances the design shows.",
+      "plain_explanation": "Article 504 covers intrinsically safe (IS) systems. The protection is in the circuit itself: the energy is limited so low that the circuit cannot ignite the classified atmosphere, even under fault conditions. These systems live mostly in instrumentation and control wiring for classified areas.\n• Listed gear only. Intrinsically safe apparatus and the associated apparatus — the barrier or isolator — must be listed.\n• The control drawing runs the job. Section 504.10 requires installation in accordance with the manufacturer's control drawing: allowed interconnections, cable limits, and grounding all come off that drawing.\n• Ordinary wiring methods can serve. Section 504.20 permits the wiring methods allowed for unclassified locations, because the circuit energy is already limited.\n• Separation is the heart of the article. Keep IS conductors away from non-IS conductors: at least 50 mm (2 in.) of space, or a grounded metal partition, or an insulating partition (504.30).\n• Identification. Where a color code identifies IS wiring, the color is light blue, and raceways and wiring methods carry labels reading \"Intrinsic Safety Wiring\" at intervals of not more than 7.5 m (25 ft) (504.80).\n• Grounding and seals. Barriers and shields are grounded as the control drawing and 504.50 direct, and conduits are sealed where the article for the class requires a seal (504.70).",
+      "on_the_job": "On a Sharma controls job at a chemical blending plant outside Lakeland, the engineer specifies IS loops for tank level transmitters in a Class I, Division 1 room. The crew pulls the IS pairs in their own raceway, keeps the light-blue identified cable, and lands the barriers in the safe-area panel exactly as the control drawing in the submittal shows. In the one shared junction box, the IS terminals sit across a grounded metal partition from the 120 V control power — no shared raceway, no shared duct. Mike Holt checks the control drawing against the field wiring before the loops are energized.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -238,7 +450,114 @@
       "verified": true,
       "prev_id": "C5-ART-503",
       "next_id": "C5-ART-505",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "An ordinary control circuit can spark with more than enough energy to ignite a gas or dust atmosphere. Intrinsic safety removes the ignition source instead of containing the explosion: even under fault conditions, the circuit cannot release enough energy to ignite. The separation and identification rules protect that design for the life of the plant — one later power conductor landed in the wrong duct can feed in energy the barrier never allowed.",
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-504-separation.svg",
+          "alt": "One-line of an intrinsically safe loop: a field device in the classified area wired to an associated apparatus barrier in a safe-area panel, then on to a controller. Below, a shared enclosure split by a grounded metal partition, with a 50 mm (2 in) minimum separation dimension between the intrinsically safe terminals and the partition.",
+          "caption": "One loop, two rules: the barrier limits the energy, 504.30 keeps it separate.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "tables": [
+        {
+          "caption": "Keeping IS and non-IS apart (504.30)",
+          "headers": [
+            "Method",
+            "What it takes"
+          ],
+          "rows": [
+            [
+              "Space",
+              "At least 50 mm (2 in.) between IS and non-IS conductors"
+            ],
+            [
+              "Grounded metal partition",
+              "Grounded partition with the circuits on opposite sides"
+            ],
+            [
+              "Insulating partition",
+              "An insulating barrier between the two circuits"
+            ]
+          ],
+          "note": "Different IS circuits also separate from each other — 6 mm (1/4 in.) at field-wiring terminals unless the control drawing permits less (504.30)."
+        }
+      ],
+      "inspection_fails": [
+        "IS and non-IS conductors in the same raceway or duct with no partition and less than 2 in. of separation (504.30).",
+        "No control drawing on site, or field wiring that does not match the drawing (504.10).",
+        "IS raceways not labeled \"Intrinsic Safety Wiring,\" or labels spaced more than 25 ft apart (504.80).",
+        "Barrier landed without the grounding the control drawing shows (504.50).",
+        "IS wiring not identified — no light blue where the color code is the identification method (504.80)."
+      ],
+      "exam_trap": "The trap answer: \"IS wiring needs explosionproof enclosures and Division 1 raceways like everything else in the room.\" It does not — the energy limit is the protection, so 504.20 allows ordinary wiring methods. The opposite trap also fails: \"the barrier makes it ordinary wiring, so separation doesn't matter.\" Separation per 504.30 and the control drawing are what keep the energy limit real.",
+      "page_quiz": [
+        {
+          "question": "Inside a shared enclosure, IS conductors must be separated from non-IS conductors by at least:",
+          "choices": [
+            "6 mm (1/4 in.)",
+            "25 mm (1 in.)",
+            "50 mm (2 in.)",
+            "150 mm (6 in.)"
+          ],
+          "answer_index": 2,
+          "explain_plain": "504.30 sets 50 mm (2 in.) of space, or a grounded metal partition, or an insulating partition.",
+          "nec_ref": "504.30"
+        },
+        {
+          "question": "The document that governs how an IS system is interconnected and installed is:",
+          "choices": [
+            "The area classification drawing",
+            "The manufacturer's control drawing",
+            "The panel schedule",
+            "The equipment cut sheet"
+          ],
+          "answer_index": 1,
+          "explain_plain": "504.10 requires installation in accordance with the control drawing supplied with the apparatus.",
+          "nec_ref": "504.10"
+        },
+        {
+          "question": "Where a color code is used to identify intrinsically safe wiring, the color is:",
+          "choices": [
+            "Orange",
+            "Light blue",
+            "Gray",
+            "Purple"
+          ],
+          "answer_index": 1,
+          "explain_plain": "504.80 calls for light blue where a color code is the identification method.",
+          "nec_ref": "504.80"
+        }
+      ],
+      "code_refs": [
+        "504.10",
+        "504.20",
+        "504.30",
+        "504.50",
+        "504.70",
+        "504.80"
+      ],
+      "rich_sources": [
+        {
+          "claim": "504.30(A) requires at least 50 mm (2 in.) separation between IS and non-IS conductors, or a grounded metal or insulating partition; 504.80 labels at not more than 7.5 m (25 ft)",
+          "source": "IAEI Magazine, Installation of Intrinsically Safe and Nonincendive Systems",
+          "url": "https://iaeimagazine.org/2002/2002november/installation-of-intrinsically-safe-and-nonincendive-systems/"
+        },
+        {
+          "claim": "504.10(A) installation per the control drawing; identification wording 'intrinsic safety wiring' at intervals not over 25 ft; light blue color code under 504.80(C); different IS circuits separated 1/4 in. at terminals",
+          "source": "Electrical Contractor Magazine, Intrinsically Safe Systems: How the NEC's requirements help reduce ignition threats",
+          "url": "https://www.ecmag.com/magazine/articles/article-detail/codes-standards-intrinsically-safe-systems-how-necs-requirements-help-reduce-ignition"
+        },
+        {
+          "claim": "504.20 permits any wiring method suitable for unclassified locations for IS circuits",
+          "source": "EC&M, The Ins and Outs of Intrinsically Safe Systems",
+          "url": "https://www.ecmweb.com/nec/ins-and-outs-intrinsically-safe-systems"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C5-ART-505",
@@ -274,8 +593,8 @@
       "article": "506",
       "section": "506",
       "title": "Zone 20, 21, and 22 locations — zones for dusts and fibers",
-      "plain_explanation": "Article 506 extends the zone system to combustible dusts and ignitible fibers or flyings. Zone 20 is the most severe, with ignitible dust present continuously or often, Zone 21 is likely in normal operation, and Zone 22 is unlikely or short-lived. It pairs with Article 505 the way Article 502 and 503 pair with 501.",
-      "on_the_job": "As with 505, follow the zone marking on the equipment and the classification drawing. If a dust area is classified by zone instead of division, work from this article with Mike Holt reviewing the method.",
+      "plain_explanation": "Article 506 extends the zone system to combustible dusts and ignitible fibers or flyings. It pairs with Article 505 the way Articles 502 and 503 pair with 501.\n• Zone 20 is the most severe: ignitible dust, fibers, or flyings present continuously, often, or for long periods.\n• Zone 21: the ignitible cloud is likely to be present in normal operation.\n• Zone 22: not likely in normal operation, and present only briefly if it happens at all.\n• Material groups replace classes (506.6). Group IIIA is ignitible fibers and flyings, Group IIIB is combustible dust other than metal dust, and Group IIIC is combustible metal dust and metal fibers — the group that drives the strictest gear. Metal dust is only ever Zone 20 or Zone 21, never Zone 22.\n• Equipment must be identified for the zone and marked with the zone, the material group, and a temperature limit (506.9). Protection techniques are listed at 506.8.\n• Wiring methods step down by zone (506.15). Zone 20 takes the Division 1 style methods — threaded rigid or intermediate metal conduit, or Type MI cable — and what is permitted in Zone 20 is permitted in 21 and 22, never the reverse.",
+      "on_the_job": "As with 505, follow the zone marking on the equipment and the classification drawing. On a Sharma bid at a feed mill outside Winter Haven, the engineer's drawing zones the dust collector room Zone 21, Group IIIB, and the inside of the collector Zone 20. The takeoff prices threaded rigid for the Zone 20 drops and dusttight fittings where 506.15 allows them in Zone 21. If a dust area is classified by zone instead of division, work from this article with Mike Holt reviewing the method — every fixture submittal gets checked for a Zone 21, IIIB marking before anything is ordered.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -285,7 +604,121 @@
       "verified": true,
       "prev_id": "C5-ART-505",
       "next_id": "C5-ART-510",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Dust ignites two ways: as a suspended cloud, and as a layer that builds up on a hot surface and smolders. The zone grades how often the cloud is there; the material group grades how bad the dust is when it comes — a conductive metal dust can also bridge live parts. Matching zone, group, and temperature marking to the actual dust keeps both ignition paths closed.",
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-506-zones.svg",
+          "alt": "Comparison panel of the three dust zones: Zone 20 with ignitible dust or fibers present continuously or for long periods, Zone 21 likely in normal operation, Zone 22 not likely and only brief. Below are the three material groups: IIIA ignitible fibers and flyings, IIIB combustible dust other than metal, and IIIC combustible metal dust, the strictest.",
+          "caption": "The zone grades the cloud; the group grades the dust.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "tables": [
+        {
+          "caption": "Material groups (506.6) and their division-system cousins",
+          "headers": [
+            "Group",
+            "Material",
+            "Closest cousin"
+          ],
+          "rows": [
+            [
+              "IIIA",
+              "Ignitible fibers & flyings",
+              "Class III"
+            ],
+            [
+              "IIIB",
+              "Combustible dust, non-metal",
+              "Class II, Groups F & G"
+            ],
+            [
+              "IIIC",
+              "Conductive metal dust",
+              "Class II, Group E"
+            ]
+          ],
+          "note": "Memory aid only — the cousin's marking does not substitute for the zone marking (506.9)."
+        }
+      ],
+      "inspection_fails": [
+        "Equipment marked for Class II, Division 1 only, with no zone marking, installed in a Zone 21 area (506.9).",
+        "Material group mismatch — Group IIIB equipment installed where the dust is Group IIIC metal dust (506.6, 506.9).",
+        "Zone 22 wiring methods run inside a Zone 20 boundary (506.15).",
+        "Ordinary-location luminaire installed inside the Zone 21 boundary (506.9, 506.15).",
+        "Equipment temperature marking hotter than the dust layer on it can stand (506.9)."
+      ],
+      "exam_trap": "The trap: reading Zone 21 as \"Division 1\" and Zone 22 as \"Division 2\" and ordering Division-rated gear. The two systems run side by side, but the markings are not interchangeable — Article 506 equipment is marked with the zone, the III material group, and a temperature limit. A fixture marked only \"Class II, Division 1\" is not automatically a Zone 21 fixture.",
+      "page_quiz": [
+        {
+          "question": "Inside a dust collector, an ignitible dust cloud is present continuously. The zone is:",
+          "choices": [
+            "Zone 22",
+            "Zone 21",
+            "Zone 20",
+            "Division 2"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Continuous or long-period presence is Zone 20, the most severe of the three dust zones.",
+          "nec_ref": "506.5"
+        },
+        {
+          "question": "Grain dust (not a metal dust) in the zone system is material group:",
+          "choices": [
+            "IIIA",
+            "IIIB",
+            "IIIC",
+            "Group D"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Group IIIB covers combustible dust other than combustible metal dust; grain dust is the classic example.",
+          "nec_ref": "506.6"
+        },
+        {
+          "question": "Wiring methods permitted in Zone 21 are installed inside a Zone 20 area. The verdict:",
+          "choices": [
+            "Fine — zones are interchangeable",
+            "Fine if the AHJ is notified",
+            "Not permitted — methods step down from Zone 20, not up",
+            "Fine for runs under 10 ft"
+          ],
+          "answer_index": 2,
+          "explain_plain": "506.15 methods are downward compatible: Zone 20 methods work in 21 and 22, never the reverse.",
+          "nec_ref": "506.15"
+        }
+      ],
+      "code_refs": [
+        "506.5",
+        "506.6",
+        "506.8",
+        "506.9",
+        "506.15",
+        "505",
+        "502",
+        "503",
+        "501"
+      ],
+      "rich_sources": [
+        {
+          "claim": "506.6 material groups: IIIC combustible metal dust including metal fibers/flyings, IIIB combustible dust other than metal, IIIA ignitible fibers/flyings; IIIC only permits Zone 20 or 21",
+          "source": "Josh The Sparky, Zone Dust Locations (NEC 506.1–506.6)",
+          "url": "https://www.joshthesparky.online/quick-hits/chapter-5/zone-locations-for-combustible-dusts-or-ignitable-fibers-and-flyings/zone-dust-locations"
+        },
+        {
+          "claim": "Zone wiring methods are organized by zone and downward compatible; Zone 20 generally threaded RMC, IMC, or Type MI cable; equipment must carry the zone marking per 506.9(C)",
+          "source": "EC&M, Article 506: Class II and III Zone System",
+          "url": "https://www.ecmweb.com/national-electrical-code/article/20898123/article-506-class-ii-and-iii-zone-system?page=2"
+        },
+        {
+          "claim": "Group crosswalk: IIIC conductive dusts correspond to Class II Group E, IIIB non-conductive dusts to Class II Groups F and G, IIIA ignitible fibers/flyings to Class III",
+          "source": "Wikipedia, Electrical equipment in hazardous areas",
+          "url": "https://en.wikipedia.org/wiki/Electrical_equipment_in_hazardous_areas"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C5-ART-510",
@@ -413,8 +846,8 @@
       "article": "511",
       "section": "511.8",
       "title": "Underground wiring in garages",
-      "plain_explanation": "Underground wiring in a commercial garage borrows the underground rules written for motor fuel dispensing in Article 514. Buried runs under a repair floor sit below a space where fuel can spill and vapors can travel, so the raceway type, sealing, and emergence points are treated like fuel-dispensing underground work. Ordinary direct-burial habits from site work do not carry over.",
-      "on_the_job": "When a garage job has under-slab runs, detail them on the takeoff as 514-style underground work and confirm the method with Mike Holt. Do not let the slab pour happen before the underground method is settled.",
+      "plain_explanation": "511.8 does not write its own underground rules — it sends you to Article 514: underground wiring in a commercial garage is installed in accordance with 514.8, the motor fuel dispensing underground section.\n• Base method: threaded rigid metal conduit or threaded steel intermediate metal conduit.\n• Type MI cable is also permitted.\n• Nonmetallic conduit — Type PVC, Type RTRC or Type HDPE — is permitted only where it is buried under not less than 2 ft of cover. Where nonmetallic conduit is used, the last 2 ft of the underground run, up to where it emerges or connects to the aboveground raceway, must be threaded RMC or IMC, and an equipment grounding conductor runs inside the raceway.\n• Underground conduit below a classified location is sealed within 10 ft of the point where it emerges above grade.\n• Ordinary site habits do not carry over: the cover depths and methods of Table 300.5 are not the rule under a repair floor — 514.8 is.",
+      "on_the_job": "On a Lakeland garage addition, two under-slab runs feed a lift and a compressor: both go in as threaded RMC before the pour. A third run, the feeder to a future bay, is Type PVC buried with 30 in of cover — more than the 2 ft minimum — and it changes to threaded RMC for the last 2 ft before it stubs up at the panel, with a copper EGC pulled in the whole way. Each emergence gets its seal within 10 ft. The method was confirmed with Mike Holt at takeoff, before the slab was scheduled — not after.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -422,9 +855,128 @@
       ],
       "florida_note": "",
       "verified": true,
+      "sharma_rule_ids": [],
       "prev_id": "C5-511.7",
       "next_id": "C5-511.10",
-      "sharma_rule_ids": []
+      "why_it_exists": "Fuel spilled on a repair floor soaks into the soil below it, and gasoline vapor is heavier than air — it sinks, then travels through any open path, including the inside of a conduit, into panels and equipment in unclassified rooms. Threaded metal raceway, real depth, and seals at the emergence point keep that vapor path shut and give the run mechanical protection under a floor that carries vehicles.",
+      "exam_trap": "The trap is pricing the under-slab work from Table 300.5, the general burial table — “PVC at 18 inches is fine everywhere else.” Under a commercial garage, 511.8 sends you to 514.8: nonmetallic conduit needs a full 2 ft of cover and a threaded metal finish for the last 2 ft, whatever the general table allows elsewhere.",
+      "inspection_fails": [
+        "PVC conduit stubbed straight up through the slab at the panel — no threaded metal for the last 2 ft.",
+        "EMT run underground below the repair floor.",
+        "Nonmetallic run buried at 18 in of cover under the slab.",
+        "No equipment grounding conductor inside the nonmetallic raceway.",
+        "Underground conduit emerging above grade with no seal within 10 ft of the emergence point."
+      ],
+      "tables": [
+        {
+          "caption": "Underground methods under a garage floor (514.8)",
+          "headers": [
+            "Method",
+            "Allowed?",
+            "Condition"
+          ],
+          "rows": [
+            [
+              "Threaded RMC / steel IMC",
+              "Yes",
+              "The base method"
+            ],
+            [
+              "Type MI cable",
+              "Yes",
+              "Permitted by 514.8"
+            ],
+            [
+              "PVC / RTRC / HDPE",
+              "Conditional",
+              "≥ 2 ft cover; metal last 2 ft; EGC inside"
+            ],
+            [
+              "EMT",
+              "No",
+              "Not a 514.8 method"
+            ],
+            [
+              "Direct-buried cable",
+              "No",
+              "Not a 514.8 method"
+            ]
+          ],
+          "note": "511.8 adopts 514.8 for all underground wiring in commercial garages."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-511.8-underground-section.svg",
+          "alt": "Section under a garage slab showing a Type PVC conduit run buried with 2 ft minimum cover, changing to threaded rigid metal conduit for the last 2 ft before emerging at the panel, with an equipment grounding conductor dashed inside and a seal at the emergence.",
+          "caption": "Deep nonmetallic is allowed — the emergence is threaded metal.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Underground wiring in a commercial garage must comply with:",
+          "choices": [
+            "Table 300.5 only",
+            "514.8, by way of 511.8",
+            "The same rules as a dwelling slab",
+            "Article 680"
+          ],
+          "answer_index": 1,
+          "explain_plain": "511.8 adopts the motor fuel dispensing underground rules of 514.8 for garages.",
+          "nec_ref": "511.8"
+        },
+        {
+          "question": "Type PVC conduit under a garage floor is permitted when it is buried with at least ___ of cover and finishes in threaded metal for the last 2 ft.",
+          "choices": [
+            "12 in",
+            "18 in",
+            "2 ft",
+            "3 ft"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The nonmetallic permission needs not less than 2 ft of cover, and threaded RMC or IMC for the last 2 ft to emergence.",
+          "nec_ref": "514.8(C)"
+        },
+        {
+          "question": "An equipment grounding conductor inside a nonmetallic underground raceway under a garage is:",
+          "choices": [
+            "Not required — the earth is the path",
+            "Required",
+            "Required only on runs over 100 ft",
+            "Replaced by the metal stub-up"
+          ],
+          "answer_index": 1,
+          "explain_plain": "A nonmetallic raceway cannot carry the fault path, so 514.8 requires an EGC inside it.",
+          "nec_ref": "514.8(C)"
+        }
+      ],
+      "code_refs": [
+        "511.8",
+        "514.8",
+        "514.8(C)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "511.8 underground wiring: threaded RMC/IMC base method; Type PVC, RTRC and HDPE permitted below a commercial garage at 2 ft or more of cover with threaded metal for the last 2 ft and an EGC in the raceway; underground conduit sealed within 10 ft of emergence",
+          "source": "Mike Holt, Understanding Requirements for Commercial Garages and Fuel Dispensing Facilities (2017 NEC)",
+          "url": "http://www.mikeholt.com/newsletters.php?action=display&letterID=1897&email"
+        },
+        {
+          "claim": "514.8(C) nonmetallic conduit: permitted where buried under not less than 600 mm (2 ft) of cover; threaded RMC or IMC for the last 600 mm (2 ft) of the underground run to emergence; an equipment grounding conductor shall be included",
+          "source": "Mike Holt Forum, enhanced content quoting 514.8(C)",
+          "url": "https://forums.mikeholt.com/threads/burial-depth-under-slab_-hazardous-location.2581491/"
+        },
+        {
+          "claim": "514.8 Exception No. 2: rigid nonmetallic conduit permitted at burial of at least 2 ft, with threaded rigid metal conduit or threaded steel IMC for the last 2 ft of the run to emergence",
+          "source": "EC&M, Code Q&A: PVC Conduit Underground",
+          "url": "https://www.ecmag.com/magazine/articles/article-detail/systems-pvc-conduit-underground-disconnect-residentia"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C5-511.10",
@@ -432,8 +984,8 @@
       "article": "511",
       "section": "511.10",
       "title": "Special equipment in garages",
-      "plain_explanation": "This section collects requirements for particular garage equipment, including battery charging areas and equipment for charging electric vehicle batteries in the repair environment. Charging can produce its own ventilation and classification concerns on top of the garage's general classification. It is a short section, but it is the one to open when a charger or charging room is in the scope.",
-      "on_the_job": "If the bid includes vehicle charging inside a repair garage, note it separately on the takeoff instead of folding it into general receptacles. Ask for the charger nameplate and the ventilation design before pricing.",
+      "plain_explanation": "This section collects requirements for particular garage equipment — the two kinds of charging equipment that show up in a repair garage.\n• Battery charging equipment (511.10(A)). Battery chargers, their control equipment, and the batteries being charged shall not be located within the locations classified in 511.3. Charging adds its own gas and ignition concerns on top of the garage's general classification, so the charging spot lives outside the classified pockets.\n• Electric vehicle charging equipment (511.10(B)). Inside a repair garage, EV charging is installed in accordance with Article 625, with garage-specific rules added: no connector shall be located within a Class I location as defined in 511.3, and flexible cords shall be of a type identified for extra-hard usage.\n• The overhead cord rule. Where an EV charging cord is suspended from overhead, it shall be arranged so that the lowest point of sag is at least 6 in. above the floor (511.10(B)(3)).\n• The classification map it points to. In a major repair garage without the ventilation 511.3(C)(1)(a) describes, the entire floor area is Class I, Division 2 up to 18 in. above the floor, and an unventilated pit is Division 1 up to floor level — so \"outside the classified area\" is a line you can measure, not a guess.",
+      "on_the_job": "If the bid includes vehicle charging inside a repair garage, note it separately on the takeoff instead of folding it into general receptacles. On a Sharma bid for a dealership service department adding two EV chargers, the layout keeps both connectors out of the 18 in. classified floor layer, the cords are extra-hard usage, and the overhead drop is set so the cord's lowest sag stays at least 6 in. above the floor. Ask for the charger nameplate and the ventilation design before pricing — the ventilation answer decides whether the floor layer is classified at all.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -443,7 +995,117 @@
       "verified": true,
       "prev_id": "C5-511.8",
       "next_id": "C5-511.12",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Charging concentrates two ignition stories in one corner of the shop: batteries that vent gas while they charge, and connectors that make and break contact where people handle them daily. Gasoline vapor settles low, into the classified floor layer and the pit. Keeping chargers and connectors out of that layer separates the spark from the fuel.",
+      "figures": [
+        {
+          "src": "fig/c5/C5-511.10-charging.svg",
+          "alt": "Garage section showing the Class I, Division 2 layer up to 18 in. above the floor in an unventilated shop, dimensioned; a battery charger standing in that layer is crossed out as not permitted, and on the other side an EV charger per Article 625 has its connector out of the layer with an overhead cord whose lowest point of sag is dimensioned at least 6 in. above the floor.",
+          "caption": "Chargers and connectors stay out of the classified layer.",
+          "w": 900,
+          "h": 1520
+        }
+      ],
+      "tables": [
+        {
+          "caption": "511.10 at a glance",
+          "headers": [
+            "Equipment",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "Battery chargers & batteries on charge",
+              "Never inside 511.3 classified areas"
+            ],
+            [
+              "EV charging, general",
+              "Article 625 plus 511.10(B)"
+            ],
+            [
+              "EV charging connector",
+              "Not within a Class I location"
+            ],
+            [
+              "Overhead EV cord",
+              "Lowest sag at least 6 in. above the floor"
+            ]
+          ],
+          "note": "The classification map behind every line of this table is 511.3."
+        }
+      ],
+      "inspection_fails": [
+        "Battery charger, or batteries on charge, sitting inside the classified floor area (511.10(A)).",
+        "EV charging connector located within the Class I floor layer (511.10(B)(2)).",
+        "Overhead charging cord sagging to less than 6 in. above the floor (511.10(B)(3)).",
+        "Ordinary-duty flexible cord on garage charging equipment — extra-hard usage is required (511.10(B)(1)).",
+        "Charging receptacles installed without the GFCI protection the garage rules require (511.12)."
+      ],
+      "exam_trap": "The trap: \"EV charging in a garage is just Article 625.\" In a repair garage, 511.10(B) sends you to 625 and then adds the garage rules — the connector still cannot sit in a Class I location, and the cord must be extra-hard usage. The companion trap: parking the battery charger wherever it fits. Section 511.10(A) keeps chargers and batteries being charged out of the 511.3 classified areas, full stop.",
+      "page_quiz": [
+        {
+          "question": "Battery chargers and batteries being charged in a repair garage:",
+          "choices": [
+            "May sit anywhere with enough ventilation",
+            "Shall not be located in locations classified in 511.3",
+            "Need Division 1 enclosures",
+            "Are prohibited in garages"
+          ],
+          "answer_index": 1,
+          "explain_plain": "511.10(A) keeps chargers, their control equipment, and batteries being charged out of the 511.3 classified locations.",
+          "nec_ref": "511.10(A)"
+        },
+        {
+          "question": "An overhead-suspended EV charging cord in a repair garage must be arranged so its lowest sag is at least:",
+          "choices": [
+            "At floor level is fine",
+            "6 in. above the floor",
+            "18 in. above the floor",
+            "6 ft above the floor"
+          ],
+          "answer_index": 1,
+          "explain_plain": "511.10(B)(3) sets the lowest point of sag at least 150 mm (6 in.) above the floor.",
+          "nec_ref": "511.10(B)(3)"
+        },
+        {
+          "question": "EV charging equipment inside a repair garage is installed in accordance with:",
+          "choices": [
+            "Article 625 alone",
+            "Article 625 plus the added rules of 511.10(B)",
+            "Article 514",
+            "Article 590"
+          ],
+          "answer_index": 1,
+          "explain_plain": "511.10(B)(1) sends you to Article 625, then (B)(2) and (B)(3) add the connector-location and cord-sag rules.",
+          "nec_ref": "511.10(B)(1)"
+        }
+      ],
+      "code_refs": [
+        "511.10(A)",
+        "511.10(B)",
+        "511.3",
+        "625",
+        "511.12"
+      ],
+      "rich_sources": [
+        {
+          "claim": "511.10(A): chargers and batteries being charged not located in 511.3 classified locations; 511.10(B): EV charging per Article 625, no connector in a Class I location, overhead cord lowest sag at least 150 mm (6 in.) above the floor",
+          "source": "NEC Article 511 text reproduction, Solar365",
+          "url": "https://www.solar365.com/green-homes/national-electric-code-2008/commercial-garages--repair-and-storage/page/0/3?page=0,3"
+        },
+        {
+          "claim": "511.3(C)(1): unventilated major repair garage floor is Class I, Division 2 up to 18 in. above the floor; unventilated pit is Division 1 up to floor level; four air changes per hour leaves the floor unclassified",
+          "source": "Mike Holt, Commercial Garages (Article 511.3)",
+          "url": "https://www.mikeholt.com:443/newsletters.php?action=reply&inResponseTo=14788&letterID=860"
+        },
+        {
+          "claim": "511.10(B) battery-charging cable and connector detail, including the 6 in. (150 mm) floor clearance, confirmed in the 2020 Handbook commentary",
+          "source": "McGraw-Hill's NEC 2020 Handbook, Article 511 (Access Engineering)",
+          "url": "https://www.accessengineeringlibrary.com/index.php/binary/mheaeworks/2b6a7d37a13c12d1/23cbcb6c0f96438cf5afd69cdb4d1a898b42c47818f07008a3e22cd479c/-commercial-garages-repair-and-storage.pdf"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C5-511.12",
@@ -451,8 +1113,8 @@
       "article": "511",
       "section": "511.12",
       "title": "GFCI protection in commercial garages",
-      "plain_explanation": "Ground-fault circuit-interrupter protection for personnel is required in commercial garages as set by the non-dwelling rules of 210.8(B). In the 2020 edition this was broadened beyond the older diagnostic-equipment and hand-tool wording, so treat essentially all receptacles in the garage as needing GFCI protection unless a specific exception applies. The rule applies whether or not the particular spot is inside a classified area.",
-      "on_the_job": "Default every garage receptacle circuit to GFCI protection at the takeoff stage and test each device at trim. Losing this line item is the cheapest inspection failure in the article to prevent.",
+      "plain_explanation": "511.12 is one sentence long: ground-fault circuit-interrupter protection for personnel in a commercial garage is provided as required in 210.8(B), the non-dwelling GFCI list. On that list, item (8) is garages, accessory buildings, service bays and similar areas — vehicle exhibition halls and showrooms are the only garage spaces carved out.\n• Scope: 125-volt through 250-volt receptacles, on single-phase branch circuits rated 150 volts or less to ground and 50 amperes or less, or three-phase branch circuits rated 150 volts or less to ground and 100 amperes or less.\n• The 2020 wording is broader than the old rule. Earlier editions tied garage GFCI to receptacles serving diagnostic equipment, hand tools or portable lighting; the 2020 list drops that limit, so plan on protecting essentially every receptacle in the work areas.\n• The rule applies whether or not the receptacle sits inside a classified area. Classification changes the wiring method; it does not switch off 511.12.\n• A 240-volt receptacle for shop equipment is covered just like a 120-volt one — the range runs to 250 volts.",
+      "on_the_job": "Price a four-bay repair shop in Kissimmee: three 20-ampere receptacle circuits (S-01) serve the lifts, benches and wash bay — 14 receptacles in all — and every one lands on GFCI protection from the Siemens panel, breakers per the plans. The 240-volt receptacle for the tire machine is on a 2-pole GFCI breaker, not a standard one, because the rule runs to 250 volts. The two showroom receptacles stay standard: the showroom is carved out of item (8). Test every device at trim and write it on the punch list.",
       "sharma_note": "S-07 is Sharma's residential pattern — a dual-function breaker feeding a standard tamper-resistant receptacle, with no GFCI receptacles. Article 511 requires personnel GFCI protection but does not dictate breaker versus receptacle; on a commercial garage, use the device the plans specify and confirm a breaker-based method satisfies the spec before relying on the S-07 pattern.",
       "figure_idea": "",
       "related_ids": [
@@ -461,11 +1123,108 @@
       ],
       "florida_note": "",
       "verified": true,
-      "prev_id": "C5-511.10",
-      "next_id": "C5-ART-513",
       "sharma_rule_ids": [
         "S-07"
-      ]
+      ],
+      "prev_id": "C5-511.10",
+      "next_id": "C5-ART-513",
+      "why_it_exists": "A mechanic works on a conductive slab, often wet from wash-downs, holding a grounded vehicle with one hand and a corded tool with the other. A fault that leaks current through that path can stop a heart at a level no breaker will ever notice. GFCI protection watches for current leaking outside the circuit and opens in a fraction of a cycle, before the shock becomes lethal.",
+      "exam_trap": "The trap answer is “only the receptacles used for diagnostic equipment and hand tools need GFCI.” That was the pre-2020 wording of the garage item. NEC 2020 deleted the limit, so on a 2020 permit the whole service bay is protected, not just the bench where the scanner plugs in.",
+      "inspection_fails": [
+        "Service-bay receptacles on standard breakers — no GFCI protection anywhere in the bays.",
+        "240-volt shop-equipment receptacle protected by a plain 2-pole breaker.",
+        "Receptacle inside the classified floor area left unprotected because “classified rules take over.”",
+        "GFCI device installed where it cannot be reached for testing — not readily accessible."
+      ],
+      "tables": [
+        {
+          "caption": "Receptacle by receptacle in a repair garage (2020)",
+          "headers": [
+            "Receptacle",
+            "GFCI?",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "Bench receptacle, 120 V",
+              "Yes",
+              "210.8(B)(8)"
+            ],
+            [
+              "Tire machine receptacle, 240 V",
+              "Yes",
+              "In scope to 250 V"
+            ],
+            [
+              "Receptacle inside classified area",
+              "Yes",
+              "511.12 applies either way"
+            ],
+            [
+              "Showroom receptacle",
+              "No",
+              "(B)(8) carves out showrooms"
+            ]
+          ],
+          "note": "Other 210.8(B) items can still catch a garage receptacle — a receptacle within 6 ft of a sink is item (5)."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-511.12-garage-gfci-plan.svg",
+          "alt": "Plan view of a four-bay repair garage with five numbered receptacles: bench, sink, 240-volt tire machine and classified-pocket receptacles all marked GFCI, and the showroom receptacle marked as carved out of the rule.",
+          "caption": "Every work-area receptacle gets GFCI — the showroom does not.",
+          "w": 900,
+          "h": 1440
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "On a 2020 permit, which receptacles in a commercial repair garage need GFCI protection for personnel?",
+          "choices": [
+            "Only receptacles serving diagnostic equipment",
+            "Essentially all receptacles in the work areas",
+            "Only 120-volt receptacles",
+            "Only receptacles inside classified areas"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The 2020 list dropped the old diagnostic-equipment limit, so the garage item covers the work areas as a whole.",
+          "nec_ref": "511.12; 210.8(B)(8)"
+        },
+        {
+          "question": "A 240-volt receptacle for shop equipment in a service bay:",
+          "choices": [
+            "Needs no GFCI — the rule stops at 120 V",
+            "Needs GFCI — the rule covers receptacles through 250 V",
+            "Needs GFCI only if it is in a classified area",
+            "Needs a GFCI receptacle, never a breaker"
+          ],
+          "answer_index": 1,
+          "explain_plain": "210.8(B) covers 125-volt through 250-volt receptacles within its ampere limits, so the 240 V point is protected too.",
+          "nec_ref": "210.8(B)"
+        },
+        {
+          "question": "Which garage space is carved out of the 210.8(B)(8) garage item?",
+          "choices": [
+            "Wash bay",
+            "Parts room",
+            "Vehicle exhibition hall / showroom",
+            "Alignment bay"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Item (8) names garages, accessory buildings, service bays and similar areas — other than vehicle exhibition halls and showrooms.",
+          "nec_ref": "210.8(B)(8)"
+        }
+      ],
+      "code_refs": [
+        "511.12",
+        "210.8(B)",
+        "210.8(B)(8)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C5-ART-513",
@@ -492,8 +1251,8 @@
       "article": "514",
       "section": "514",
       "title": "Motor fuel dispensing facilities",
-      "plain_explanation": "Article 514 covers gas stations and any place motor fuel is dispensed into vehicles, including dispensing inside a repair garage. It classifies the area around dispensers and tanks, requires seals and specific underground wiring, and requires emergency disconnect controls that kill power to the dispensing equipment. Underground rules from this article are also borrowed by garages in 511.8 and by marinas for fueling docks.",
-      "on_the_job": "Fuel dispensing is specialty work: emergency shutoff location, dispenser seals, and underground method all come from the plans and this article. Flag any dispensing scope on a bid the day it is seen, not at rough-in.",
+      "plain_explanation": "Article 514 covers gas stations and any place motor fuel is dispensed into vehicles, including dispensing inside a repair garage. It classifies the area around dispensers and tanks, requires seals and specific underground wiring, and requires emergency disconnect controls that kill power to the dispensing equipment.\n• Classification comes from Table 514.3(B)(1). The inside of a dispenser enclosure is a Class I, Division 1 location. Around an outdoor dispenser, Division 2 runs up to 18 in above grade and out to 20 ft horizontally from the dispenser.\n• A tank vent discharging upward is Division 1 within 3 ft of its open end in all directions, and Division 2 from 3 ft to 5 ft.\n• Wiring and equipment inside the classified areas follow Article 501 (514.4), underground wiring is threaded rigid metal conduit or threaded intermediate metal conduit (514.8), and seals go where 501.15 requires them (514.9).\n• Emergency disconnects (514.11) sit not less than 20 ft and not more than 100 ft from the dispensers they serve, and they disconnect all conductors, including the grounded conductor — equipment grounding conductors stay connected.\nUnderground rules from this article are also borrowed by garages in 511.8 and by marinas for fueling docks.",
+      "on_the_job": "Fuel dispensing is specialty work: emergency shutoff location, dispenser seals, and underground method all come from the plans and this article. Flag any dispensing scope on a bid the day it is seen, not at rough-in. On a convenience-store island replacement, the classified zone drives the takeoff: threaded rigid conduit underground to each dispenser, seals at the dispenser entries, and the emergency disconnect verified between 20 ft and 100 ft from the dispensers it serves — measure it on the site plan before the bid goes out, because moving it later is a change order.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -504,7 +1263,120 @@
       "verified": true,
       "prev_id": "C5-ART-513",
       "next_id": "C5-514.3",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Gasoline vapor is heavier than air and pools at grade around the dispensers, exactly where ordinary wiring devices can spark. The classified zones, the sealed conduits, and one clearly identified emergency disconnect exist so that a leak, a drive-off, or a fire at one island does not find an ignition source — and so the first person on scene can kill every dispenser circuit from a safe distance.",
+      "exam_trap": "The trap is placing the emergency disconnect close to the pumps for convenience. Inside 20 ft it can sit in the classified area and inside the very fire it is meant to control; 514.11 sets a band, not just a minimum — not less than 20 ft and not more than 100 ft from the dispensing devices. The second trap is switching only the ungrounded conductors: the emergency disconnect must open the grounded conductor too, while the equipment grounding conductors remain connected.",
+      "inspection_fails": [
+        "Emergency disconnect mounted 12 ft from the dispensers — inside the 20 ft minimum of 514.11.",
+        "PVC conduit run underground to a dispenser where threaded rigid metal conduit or IMC is required (514.8).",
+        "Missing conduit seals where runs enter the dispenser enclosure (514.9, 501.15).",
+        "Ordinary-location junction box installed inside the Division 2 zone — within 20 ft of a dispenser and below 18 in above grade.",
+        "Emergency disconnect that leaves the grounded conductor connected (514.11)."
+      ],
+      "tables": [
+        {
+          "caption": "Classified areas at a dispenser (Table 514.3(B)(1))",
+          "headers": [
+            "Location",
+            "Class I extent"
+          ],
+          "rows": [
+            [
+              "Inside the dispenser enclosure",
+              "Division 1"
+            ],
+            [
+              "Outdoor dispenser, around it",
+              "Division 2: up to 18 in above grade, out to 20 ft"
+            ],
+            [
+              "Tank vent, discharging upward",
+              "Division 1 within 3 ft; Division 2 from 3 ft to 5 ft"
+            ],
+            [
+              "Any pit below grade in the area",
+              "Division 1"
+            ]
+          ],
+          "note": "Wiring and equipment inside these areas follow Article 501 (514.4)."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-514-dispenser-zones.svg",
+          "alt": "Plan view of an outdoor fuel dispenser with its Division 1 enclosure, the Division 2 area 18 inches high extending 20 feet out, tank vent zones, and the emergency disconnect distance band of 20 to 100 feet.",
+          "caption": "The classified zones and the disconnect band around one dispenser.",
+          "w": 900,
+          "h": 1700
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Around an outdoor dispenser, the Division 2 area extends up to 18 in above grade and out to how far horizontally?",
+          "choices": [
+            "5 ft",
+            "10 ft",
+            "20 ft",
+            "25 ft"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Table 514.3(B)(1): Division 2 runs up to 18 in above grade within 20 ft horizontally of the dispenser.",
+          "nec_ref": "Table 514.3(B)(1)"
+        },
+        {
+          "question": "Emergency disconnects for dispensing devices must be located:",
+          "choices": [
+            "Within 10 ft of the dispensers",
+            "Not less than 20 ft nor more than 100 ft away",
+            "At the service only",
+            "Inside the store"
+          ],
+          "answer_index": 1,
+          "explain_plain": "514.11 sets a band: far enough to stand clear of the hazard, close enough to reach in an emergency.",
+          "nec_ref": "514.11"
+        },
+        {
+          "question": "Underground wiring to a dispenser must be:",
+          "choices": [
+            "Direct-buried NM cable",
+            "PVC conduit at any depth",
+            "Threaded rigid metal conduit or threaded IMC",
+            "Open wiring on insulators"
+          ],
+          "answer_index": 2,
+          "explain_plain": "514.8 requires threaded rigid metal conduit or threaded intermediate metal conduit underground.",
+          "nec_ref": "514.8"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "514.3",
+        "Table 514.3(B)(1)",
+        "514.4",
+        "514.8",
+        "514.9",
+        "514.11",
+        "501.15"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "Table 514.3(B)(1): the dispenser enclosure interior is Class I, Division 1; around an outdoor dispenser, Division 2 extends up to 18 in above grade within 20 ft horizontally; a tank vent discharging upward is Division 1 within 3 ft of its open end and Division 2 from 3 ft to 5 ft",
+          "source": "McGraw-Hill's National Electrical Code Handbook, Article 514 commentary (Access Engineering)",
+          "url": "https://www.accessengineeringlibrary.com/binary/mheaeworks/f5c60e903a3ebe3f/93c9ecf4c47a2bf0df2251e35130b5a0d4793574fdd9388cbaf2f57a97aa49c0/article-514-motor-fuel-dispensing-facilities.pdf"
+        },
+        {
+          "claim": "514.11(A): emergency disconnects must be installed not less than 20 ft nor more than 100 ft from the fuel dispensing devices they serve, and must disconnect all conductors of the circuits, including the grounded conductor, while equipment grounding conductors remain connected",
+          "source": "Mike Holt forum — fuel dispenser disconnect (quoting 514.11(A))",
+          "url": "https://forums.mikeholt.com/threads/fuel-dispenser-disconnect.2590623/"
+        },
+        {
+          "claim": "514.8: underground wiring at motor fuel dispensing facilities is rigid metal conduit or IMC; 514.4: wiring and equipment within classified locations must comply with Article 501",
+          "source": "Trophy Electric — Gas Station Electrical Code Compliance Florida, NEC Article 514",
+          "url": "https://www.trophyelectricllc.com/gas-station-electrical-code-compliance-in-florida-what-fuel-station-owners-and-petroleum-contractors-must-know"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C5-514.3",
@@ -553,8 +1425,8 @@
       "article": "515",
       "section": "515",
       "title": "Bulk storage plants",
-      "plain_explanation": "Article 515 covers bulk storage plants, where flammable liquids are stored in large tanks and transferred to trucks or containers. Classifications follow the tanks, pumps, and loading areas, and the wiring rules build on Articles 500 through 501. It is industrial work Sharma would only touch with an engineered classification package.\n\nNEC 2023 CHANGE:\n• 515.10: Changed the title of Section 515.10 from \"Gasoline Dispensers\" to \"Motor Fuel Dispensers.\"\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "If a bulk plant appears in an invitation, the first deliverable is the classification drawing, not a price. No drawing, no takeoff.",
+      "plain_explanation": "Article 515 covers bulk storage plants and terminals — property where flammable liquids arrive by tank vessel, pipeline, tank car or tank vehicle, are stored or blended in bulk, and go back out the same way (515.1).\n• The classified map comes from Table 515.3. It classifies the areas around tanks, pumps, vents, fills, loading racks and pits, and gives the extent of each classified area.\n• Inside a classified area, wiring and equipment follow the Class I rules of Article 501 (515.4).\n• Above a classified area, fixed wiring runs in metal raceways, Schedule 80 PVC, or the other methods 515.7(A) lists, and arcing fixed equipment is totally enclosed or built so sparks cannot escape (515.7(B)).\n• Underground wiring is threaded rigid metal conduit or threaded IMC; where it is buried under at least 2 ft of cover, Type PVC conduit, Type RTRC conduit or a listed cable is permitted instead (515.8).\n• Conduit seals follow 515.9, and all metal parts are bonded so no two sit at a different potential (515.16).\n• Fuel dispensers at a bulk plant are not wired under 515 — they follow Article 514 (515.10), including its emergency disconnect 20 ft to 100 ft from the dispensers.\nIt is industrial work. Sharma touches it only with an engineered classification package in hand.",
+      "on_the_job": "A fuel distributor outside Ocala asks Sharma to rewire a pump pad and loading rack. If a bulk plant appears in an invitation, the first deliverable is the classification drawing, not a price. No drawing, no takeoff. When the engineered package lands, the takeoff reads off it: threaded RMC for the underground run to the rack, seals where conduits leave the classified envelope, bonding across the tank and rack steel, and the dispenser island priced under Article 514 with its emergency disconnect 20 ft to 100 ft out. If the package shows ordinary-location wiring inside the Table 515.3 envelope, that is a question for the engineer, not a field fix.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -573,7 +1445,127 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "A bulk plant moves flammable liquid through pumps, meters and open connections all day, so vapor is not an accident there — it is a normal byproduct of the work. One arcing contact inside the vapor's reach can ignite it. The classification table, the sealed raceways and the bonding exist to keep ignition sources out of that reach and every metal object at the same potential.",
+      "exam_trap": "The trap is treating a bulk plant like a gas station. Article 514 covers dispensing fuel into vehicles; a plant that receives, stores and transfers flammable liquids in bulk is Article 515, and its classified areas come from Table 515.3 — not from the 514.3 dispenser table. The twist: dispensers installed at the plant still follow Article 514 (515.10).",
+      "inspection_fails": [
+        "Underground run to the loading rack in PVC at 12 in of cover — the 515.8 exception needs at least 2 ft of cover, or the run belongs in threaded RMC or IMC.",
+        "Conduit leaving the classified area with no seal where 515.9 requires one.",
+        "Tank, rack steel and piping not bonded together — a difference of potential between metal objects is exactly what 515.16 is written against.",
+        "Ordinary-location junction box installed inside the Table 515.3 classified envelope.",
+        "Dispenser island wired as 515 equipment, with no Article 514 emergency disconnect."
+      ],
+      "tables": [
+        {
+          "caption": "Article 515 — the working map",
+          "headers": [
+            "Part of the job",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "Classified areas",
+              "Table 515.3 sets the extent"
+            ],
+            [
+              "Wiring inside",
+              "Article 501 Class I rules (515.4)"
+            ],
+            [
+              "Wiring above",
+              "Metal raceway or Sch 80 PVC (515.7)"
+            ],
+            [
+              "Underground",
+              "Threaded RMC/IMC; PVC at 2 ft+ cover (515.8)"
+            ],
+            [
+              "Dispensers",
+              "Article 514 applies (515.10)"
+            ],
+            [
+              "Bonding",
+              "All metal bonded together (515.16)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-515-plant-map.svg",
+          "alt": "Plan view of a bulk storage plant with two storage tanks, a pump pad and a loading rack inside a gold classified area per Table 515.3, an unclassified office outside the envelope, and an underground section showing threaded RMC or IMC with PVC permitted only under at least 2 ft of cover.",
+          "caption": "The classified map follows the tanks, pumps and rack — Table 515.3 sets how far it reaches.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Which table classifies the areas at a bulk storage plant?",
+          "choices": [
+            "Table 514.3",
+            "Table 515.3",
+            "Table 220.12",
+            "Table 310.16"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Table 515.3 classifies bulk plant areas and gives the extent of each classified area.",
+          "nec_ref": "515.3"
+        },
+        {
+          "question": "Underground wiring at a bulk plant may be Type PVC where it is buried under at least how much cover?",
+          "choices": [
+            "6 in",
+            "12 in",
+            "2 ft",
+            "5 ft"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The 515.8 exception permits PVC, RTRC or a listed cable under at least 2 ft of cover; otherwise threaded RMC or IMC.",
+          "nec_ref": "515.8"
+        },
+        {
+          "question": "Fuel dispensers installed at a bulk plant follow which article?",
+          "choices": [
+            "Article 515 only",
+            "Article 514",
+            "Article 511",
+            "Article 590"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Section 515.10 sends dispensers at a bulk plant to Article 514, including its emergency disconnect rules.",
+          "nec_ref": "515.10"
+        }
+      ],
+      "code_refs": [
+        "515.1",
+        "515.3",
+        "Table 515.3",
+        "515.4",
+        "515.7",
+        "515.8",
+        "515.9",
+        "515.10",
+        "515.16",
+        "500.5",
+        "501",
+        "514.11"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "Table 515.3 is applied to classify bulk plant areas and gives the extent of each classified area; wiring above a Class I location is in metal raceways or Schedule 80 PVC (515.7(A)), and fixed arcing equipment is totally enclosed (515.7(B)).",
+          "source": "CodeBookCity, NEC Article 515 tips",
+          "url": "https://www.codebookcity.com/codearticles/nec/necarticle515.htm"
+        },
+        {
+          "claim": "Underground wiring at a bulk plant is threaded RMC or threaded IMC; Type PVC, Type RTRC or a listed cable is permitted where buried under at least 2 ft of cover (515.8).",
+          "source": "CodeBookCity, NEC Article 515 tips",
+          "url": "https://www.codebookcity.com/codearticles/nec/necarticle515.htm"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 515.10: Changed the title of Section 515.10 from \"Gasoline Dispensers\" to \"Motor Fuel Dispensers.\"\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C5-ART-516",
@@ -581,8 +1573,8 @@
       "article": "516",
       "section": "516",
       "title": "Spray application, dipping, coating, and printing processes",
-      "plain_explanation": "Article 516 covers spray booths and rooms, dip tanks, and similar processes using flammable or combustible materials. The spray area and its surroundings carry classifications that depend on the booth construction and ventilation, and lighting through panels, interlocks, and equipment placement all have specific rules. Body shops and finishing operations are the light-commercial face of this article.",
-      "on_the_job": "A paint booth on a commercial bid pulls this article in even when the rest of the building is ordinary. Ask for the booth listing and ventilation details before pricing the booth circuits.",
+      "plain_explanation": "Article 516 covers spray booths and rooms, dip tanks, and similar processes using flammable or combustible materials. Body shops and finishing operations are the light-commercial face of this article, and the classification comes from 516.5 — it follows the process, not the building.\n• Division 1 pockets. The interior of a spray booth or room, the interior of exhaust ducts, and any area in the direct path of spray operations are Class I, Division 1 (Class II, Division 1 where the hazard is combustible powder).\n• Tight bubbles. All space within 3 ft of open containers, spray gun cleaners, and solvent recovery units is Division 1, and sumps, pits, and below-grade channels within 25 ft of a vapor source are Division 1.\n• Around the booth. Wiring and equipment within 3 ft of any opening of an open-face or open-front booth are Division 2.\n• Open spraying is the big footprint. With no booth, Division 2 reaches 20 ft horizontally and 10 ft vertically from the spray area.\n• Inside the classified pockets, wiring and equipment follow the division rules for the class. Luminaires over or beside a booth sit behind sealed panels or carry the approval for the area they are in, and the spray equipment is interlocked with the ventilation so spraying stops when the air stops.",
+      "on_the_job": "A paint booth on a commercial bid pulls this article in even when the rest of the building is ordinary. On a Sharma bid for an auto body shop in Orlando — one listed spray booth, prep area outside it — the takeoff prices the booth interior and the 3 ft band at its door with the methods the classification demands, keeps the prep-area receptacles ordinary beyond the 3 ft line, and asks for the booth listing and ventilation details before pricing the booth circuits. The interlock between the spray equipment and the exhaust fan is a priced item, not a note.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -592,7 +1584,115 @@
       "verified": true,
       "prev_id": "C5-ART-515",
       "next_id": "C5-ART-517",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Spraying atomizes paint and solvent into exactly the cloud a classified location worries about, and overspray deposits add a layer hazard on every nearby surface. The booth and its exhaust contain the cloud; the classified distances around openings and around open spraying mark how far the vapor can travel and still reach ignitible strength.",
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-516-booth.svg",
+          "alt": "Section view of a spray booth: the booth interior and its exhaust duct are Division 1, a gold Division 2 band extends 3 ft out from the booth opening with a dimension line, and ordinary area lies beyond the band. A lower panel shows unenclosed spraying with Division 2 extending 20 ft horizontally and 10 ft vertically, both dimensioned.",
+          "caption": "516.5 draws pockets, not buildings: Div 1 inside, Div 2 at the edges.",
+          "w": 900,
+          "h": 1640
+        }
+      ],
+      "tables": [
+        {
+          "caption": "Classification at a glance (516.5)",
+          "headers": [
+            "Space",
+            "Class"
+          ],
+          "rows": [
+            [
+              "Booth & exhaust duct interior",
+              "Division 1"
+            ],
+            [
+              "Direct path of spray",
+              "Division 1"
+            ],
+            [
+              "Within 3 ft of open containers",
+              "Division 1"
+            ],
+            [
+              "Open-face booth, within 3 ft of opening",
+              "Division 2"
+            ],
+            [
+              "Unenclosed spray, 20 ft out / 10 ft up",
+              "Division 2"
+            ]
+          ],
+          "note": "Class II, Division 1 or 2 applies instead where the hazard is combustible powder or dust."
+        }
+      ],
+      "inspection_fails": [
+        "Ordinary receptacle or switch inside the booth, or within 3 ft of the booth opening (516.5).",
+        "Spray equipment that still operates with the exhaust ventilation off — interlock missing or bypassed.",
+        "Luminaire over the booth not approved for the Division 2 area it sits in, and not behind a sealed panel.",
+        "Open solvent container or dip tank wired as ordinary space inside its 3 ft Division 1 bubble (516.5).",
+        "Pit or sump within 25 ft of the vapor source wired as unclassified (516.5)."
+      ],
+      "exam_trap": "The trap answer: \"the whole paint shop is Division 1.\" The classification is a set of pockets with hard edges — booth interior Division 1, 3 ft at the openings Division 2, ordinary beyond. The reverse trap fails too: treating the booth interior as ordinary because \"the fan runs all day.\" Ventilation is part of the system, but 516.5 classifies the interior Division 1 regardless.",
+      "page_quiz": [
+        {
+          "question": "The interior of a spray booth is classified:",
+          "choices": [
+            "Unclassified, if it is ventilated",
+            "Class I, Division 2",
+            "Class I, Division 1",
+            "Class III"
+          ],
+          "answer_index": 2,
+          "explain_plain": "516.5 makes the booth and room interior Division 1 — ventilation does not unclassify it.",
+          "nec_ref": "516.5"
+        },
+        {
+          "question": "Unenclosed spraying with no booth: the Division 2 area reaches:",
+          "choices": [
+            "3 ft in all directions",
+            "5 ft horizontally, 3 ft up",
+            "20 ft horizontally, 10 ft vertically",
+            "The whole building"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Without a booth to contain the vapor, 516.5(D) carries Division 2 out 20 ft horizontally and 10 ft vertically.",
+          "nec_ref": "516.5(D)"
+        },
+        {
+          "question": "A receptacle 2 ft outside the open face of a spray booth must be:",
+          "choices": [
+            "Ordinary-location type",
+            "Suitable for Class I, Division 2",
+            "Explosionproof for Division 1",
+            "GFCI protected only"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Within 3 ft of the opening is Division 2, so the receptacle must be suitable for Division 2.",
+          "nec_ref": "516.5(D)"
+        }
+      ],
+      "code_refs": [
+        "516.1",
+        "516.5",
+        "516.5(C)",
+        "516.5(D)"
+      ],
+      "rich_sources": [
+        {
+          "claim": "516.5 classification: booth and duct interiors and the direct path of spray are Division 1; within 3 ft of open containers Division 1; unenclosed spray Division 2 to 20 ft horizontal and 10 ft vertical; open-face booths Division 2 within 3 ft of openings",
+          "source": "NFPA 70 (2020) Article 516 text, reproduced at Yumpu",
+          "url": "https://www.yumpu.com/fr/document/view/67330429/nfpa-70-2020-national-electrical-code/429"
+        },
+        {
+          "claim": "Same distances in commentary: Division 2 extends 20 ft horizontally and 10 ft above unenclosed spraying; Division 2 within 3 ft in all directions from openings of enclosed processes",
+          "source": "McGraw-Hill's NEC Handbook, Article 516 (Access Engineering)",
+          "url": "https://www.accessengineeringlibrary.com/binary/mheaeworks/8ff23dd012e60469/72c91f8cc45bcb3ccd860f84502e1f76e218a62e36b8597c1f9234b7096fbc47/article-516-spray-application-dipping-coating-and-printing-processes-using-flammable-or-combustible-materials.pdf"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C5-ART-517",
@@ -805,8 +1905,8 @@
       "article": "518",
       "section": "518",
       "title": "Assembly occupancies",
-      "plain_explanation": "Article 518 covers buildings or parts of buildings designed or intended for the gathering of 100 or more people — auditoriums, churches, restaurants, gyms, exhibition halls, and the like. The core demand is tougher, more fire-resilient wiring in the assembly area, plus attention to the emergency systems that serve a crowd. Theaters and similar performance spaces are carved out to Article 520 instead.\n\nNEC 2023 CHANGE:\n• 518.2: Casinos and gaming facilities are now included in the list of assembly occupancy examples.\n• 518.5: The section concerning assembly occupancies was reorganized for clarity and revised, including requirements for commercial appliance outlet centers and panelboard orientation.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Ask for the occupant load of each space on a commercial bid — crossing 100 people is what turns this article on. A 60-seat café and a 300-seat hall are different wiring jobs even if the menus match.",
+      "plain_explanation": "Article 518 covers buildings, or parts of buildings, designed or intended for the gathering of 100 or more people — auditoriums, churches, restaurants, gyms, exhibition halls, and the like (518.1, 518.2).\n• The core demand is tougher, more fire-resilient wiring inside the assembly area: fixed wiring must be metal raceways, flexible metal raceways, nonmetallic raceways encased in not less than 2 in of concrete, or Type MI, MC, or AC cable (518.4(A)).\n• The wiring method itself must qualify as an equipment grounding conductor under 250.118, or contain an insulated equipment grounding conductor sized from Table 250.122 (518.4(A)).\n• Where the construction is not required to be fire-rated, 518.4(B) also permits nonmetallic-sheathed cable, electrical nonmetallic tubing, and rigid nonmetallic conduit in those areas.\n• Theaters and similar performance spaces are carved out to Article 520 instead, and the emergency systems that serve the crowd get extra attention.",
+      "on_the_job": "Ask for the occupant load of each space on a commercial bid — crossing 100 people is what turns this article on. A 60-seat café and a 300-seat hall are different wiring jobs even if the menus match. On a 240-seat restaurant build-out, the dining room is wired in EMT and MC with insulated equipment grounding conductors, on S-01's 20 A minimum commercial circuits, while the small office and storage rooms outside the assembly area can use the 518.4(B) methods where the construction is not fire-rated. Price the split on the takeoff, not as a change order.",
       "sharma_note": "S-01: 20 ampere minimum branch circuits on commercial work, which fits the metal raceway and MC methods this article pushes toward anyway.",
       "figure_idea": "Seating plan sketch with a '100 or more' threshold callout over the assembly room only, offices unshaded.",
       "related_ids": [
@@ -836,7 +1936,114 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "A fire in a room holding 100 or more people turns minutes into the whole evacuation. Metal raceways and cables, or raceways buried in concrete, keep the wiring itself from becoming fuel or a smoke path while the crowd gets out. The grounded metal methods also give a fault a solid path back to the source, so breakers trip fast in a room full of people who cannot see the hazard.",
+      "exam_trap": "The trap is wiring the whole building to 518 because one room assembles 100 people — or missing the article because the building total is under 100 while one hall seats 150. The article follows the assembly space, not the building total. The second trap is Romex in the assembly hall: Type NM appears only in 518.4(B), for areas not required to be fire-rated — it is never a substitute for the 518.4(A) methods inside a rated assembly space.",
+      "inspection_fails": [
+        "Type NM cable run in the assembly hall where 518.4(A) methods are required.",
+        "PVC conduit surface-run in the assembly area instead of encased in at least 2 in of concrete.",
+        "MC cable whose armor does not qualify as an equipment grounding conductor, with no insulated EGC inside (518.4(A), 250.118).",
+        "Occupant load never checked: a 150-seat banquet room wired as ordinary commercial space."
+      ],
+      "tables": [
+        {
+          "caption": "518.4 wiring methods (NEC 2020)",
+          "headers": [
+            "Method",
+            "Where it stands"
+          ],
+          "rows": [
+            [
+              "Metal raceway, flexible metal raceway",
+              "Permitted — 518.4(A)"
+            ],
+            [
+              "Type MI, MC, or AC cable",
+              "Permitted — 518.4(A)"
+            ],
+            [
+              "Nonmetallic raceway",
+              "Only encased in not less than 2 in of concrete — 518.4(A)"
+            ],
+            [
+              "NM cable, ENT, rigid nonmetallic conduit",
+              "Only where fire-rated construction is not required — 518.4(B)"
+            ]
+          ],
+          "note": "The method must qualify as an EGC per 250.118 or contain an insulated EGC sized per Table 250.122."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-518-assembly-plan.svg",
+          "alt": "Plan view of a building where a 240-seat assembly hall is Article 518 space and the office and storage rooms are not, with a section inset showing a nonmetallic raceway encased in at least 2 inches of concrete.",
+          "caption": "The 100-person line runs around the assembly room, not the building.",
+          "w": 900,
+          "h": 1620
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Article 518 turns on when a space is designed for the gathering of how many people?",
+          "choices": [
+            "50 or more",
+            "100 or more",
+            "200 or more",
+            "300 or more"
+          ],
+          "answer_index": 1,
+          "explain_plain": "100 or more persons — deliberation, worship, entertainment, eating, drinking, amusement, and similar purposes.",
+          "nec_ref": "518.1"
+        },
+        {
+          "question": "A nonmetallic raceway is proposed inside a rated assembly hall. When is it permitted?",
+          "choices": [
+            "Anywhere, if it is listed",
+            "Only encased in not less than 2 in of concrete",
+            "Only above the ceiling",
+            "Never"
+          ],
+          "answer_index": 1,
+          "explain_plain": "518.4(A) admits a nonmetallic raceway only when it is encased in not less than 2 in of concrete.",
+          "nec_ref": "518.4(A)"
+        },
+        {
+          "question": "The wiring of a theater's performance space is governed by:",
+          "choices": [
+            "Article 518",
+            "Article 520",
+            "Article 525",
+            "Article 590"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Theaters and similar performance spaces are carved out of 518 and covered by Article 520.",
+          "nec_ref": "520.1"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 518.2: Casinos and gaming facilities are now included in the list of assembly occupancy examples.\n• 518.5: The section concerning assembly occupancies was reorganized for clarity and revised, including requirements for commercial appliance outlet centers and panelboard orientation.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "518.1",
+        "518.2",
+        "518.4(A)",
+        "518.4(B)",
+        "250.118",
+        "Table 250.122",
+        "520.1"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "518.4(A): fixed wiring in assembly occupancies must be metal raceways, flexible metal raceways, nonmetallic raceways encased in not less than 2 in of concrete, or Type MI, MC or AC cable, and the method must qualify as an equipment grounding conductor per 250.118 or contain an insulated EGC sized per Table 250.122",
+          "source": "EC&M — Contractors, Assemble! Specific requirements outlined in Article 518",
+          "url": "https://www.ecmag.com/magazine/articles/article-detail/contractors-assemble!-specific-requirements-outlined-in-article-518"
+        },
+        {
+          "claim": "518.4(B): in addition to the 518.4(A) methods, nonmetallic-sheathed cable, electrical nonmetallic tubing and rigid nonmetallic conduit are permitted in areas not required to be of fire-rated construction",
+          "source": "HSM University, MELU-106 Lesson 4 — Assembly and other special occupancies",
+          "url": "https://www.hsmuniversity.org/us/course/melu-106-special-occupancies-equipment-and-conditions/lesson-4-assembly-and-other-special-occupancies"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C5-518.4",
@@ -913,8 +2120,8 @@
       "article": "522",
       "section": "522",
       "title": "Control systems for permanent amusement attractions",
-      "plain_explanation": "Article 522 covers the control systems of permanent amusement attractions — the rides and attractions built to stay, as opposed to the traveling shows in Article 525. It deals with control circuits, disconnects, and the interface between the electrical system and the attraction's safety controls. It is a narrow article most electricians meet only on attraction work.",
-      "on_the_job": "If an attraction appears in a scope, stop at the intro level and get the manufacturer's and engineer's control package. Do not improvise ride controls from general-purpose relays.",
+      "plain_explanation": "Article 522 covers the control systems of permanent amusement attractions — the rides and attractions built to stay, as opposed to the traveling shows in Article 525. It covers control circuit power sources and control circuit conductors, not the ride's power circuits: the motor feeder that delivers the horsepower belongs to the general chapters; the wiring that tells the motor what to do belongs here. Where 522 and another article differ, 522 applies (522.3).\n• Control voltage is capped at 150 volts ac to ground or 300 volts dc to ground (522.5).\n• Power-limited control circuits are supplied from a source rated not more than 30 volts and 1,000 volt-amperes; a source other than a transformer gets overcurrent protection at not more than 167 percent of its volt-ampere rating divided by its rated voltage (522.10(A)).\n• Non-power-limited control circuits may run up to 300 volts, with source overcurrent protection at not more than 125 percent on the same basis (522.10(B)).\n• Control circuit conductors are copper — aluminum conductors are not permitted (522.20).\n• Where wet contact is likely, ungrounded 2-wire control circuits are limited to 30 volts dc (522.28).\n• Only qualified persons service the attraction (522.7).\nIt is a narrow article most electricians meet only on attraction work.",
+      "on_the_job": "A permanent carousel and coaster package lands in a Central Florida attraction expansion. If an attraction appears in a scope, stop at the intro level and get the manufacturer's and engineer's control package. Do not improvise ride controls from general-purpose relays. When the package arrives, the Sharma scope reads from it: control panels fed from a 24-volt power-limited source of 1,000 VA or less sit inside 522.10(A); any control run the package shows at 120 volts is non-power-limited work, capped at 300 volts; and every control conductor is copper — the value-engineering suggestion to save money with aluminum control wire is a violation here (522.20).",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -924,7 +2131,110 @@
       "verified": true,
       "prev_id": "C5-ART-520",
       "next_id": "C5-ART-525",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Ride controls are the safety system. They carry the start, stop and interlock signals that keep a moving machine from hurting the people on it. Capping control voltage and giving control circuits their own power-source rules keeps a fault in a pushbutton circuit from becoming a fault at line voltage, and keeps the signals honest and alive when the power side is in trouble.",
+      "exam_trap": "The trap is wiring ride controls like ordinary remote-control circuits out of the general chapters and stopping there. Article 522 has its own power-source rules: power-limited means a source of not more than 30 volts and 1,000 VA (522.10(A)), overall control voltage is capped at 150 volts ac or 300 volts dc to ground (522.5), and where 522 differs from the other articles, 522 wins (522.3).",
+      "inspection_fails": [
+        "Aluminum conductors in a control circuit — 522.20 permits copper only.",
+        "Power-limited control source rated over 30 volts or over 1,000 VA (522.10(A)).",
+        "Control voltage over the 522.5 caps: 150 V ac to ground or 300 V dc to ground.",
+        "Ride controls field-improvised with general-purpose relays instead of the manufacturer's control package.",
+        "Ungrounded 2-wire control circuit over 30 V dc where wet contact is likely (522.28)."
+      ],
+      "tables": [
+        {
+          "caption": "Two kinds of control circuits (522.10)",
+          "headers": [
+            "",
+            "Power-limited",
+            "Non-power-limited"
+          ],
+          "rows": [
+            [
+              "Source cap",
+              "30 V and 1,000 VA max",
+              "300 V max"
+            ],
+            [
+              "Source OCPD",
+              "167% max of VA ÷ volts",
+              "125% max of VA ÷ volts"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-522-control-circuits.svg",
+          "alt": "Decision chart for Article 522 control circuits: power-limited circuits supplied from a source of not more than 30 volts and 1,000 volt-amperes with source overcurrent protection at not more than 167 percent, non-power-limited circuits to 300 volts with protection at not more than 125 percent, all control voltage capped at 150 volts ac or 300 volts dc to ground, and copper conductors only.",
+          "caption": "First question on any ride control circuit: power-limited, or not — the source rules follow.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A power-limited control circuit source under 522.10(A) is rated not more than…",
+          "choices": [
+            "30 V and 1,000 VA",
+            "50 V and 250 VA",
+            "150 V and 1,000 VA",
+            "300 V, with no VA limit"
+          ],
+          "answer_index": 0,
+          "explain_plain": "Power-limited control circuits are supplied from a source of not more than 30 volts and 1,000 volt-amperes.",
+          "nec_ref": "522.10(A)"
+        },
+        {
+          "question": "Control voltage at a permanent amusement attraction may not exceed…",
+          "choices": [
+            "150 V ac to ground or 300 V dc to ground",
+            "300 V either way",
+            "600 V",
+            "30 V in all cases"
+          ],
+          "answer_index": 0,
+          "explain_plain": "Section 522.5 caps control voltage at 150 volts ac to ground or 300 volts dc to ground.",
+          "nec_ref": "522.5"
+        },
+        {
+          "question": "Aluminum conductors in ride control circuits are…",
+          "choices": [
+            "Permitted if upsized one trade size",
+            "Not permitted",
+            "Permitted under 30 V",
+            "Permitted in raceway only"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Section 522.20 does not permit aluminum conductors in control circuits — copper only.",
+          "nec_ref": "522.20"
+        }
+      ],
+      "code_refs": [
+        "522.3",
+        "522.5",
+        "522.7",
+        "522.10(A)",
+        "522.10(B)",
+        "522.20",
+        "522.28",
+        "525"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "Power-limited control circuits: source not more than 30 V and 1,000 VA, with non-transformer source overcurrent protection at not more than 167 percent of the VA rating divided by the rated voltage; non-power-limited circuits not over 300 V with protection at not more than 125 percent (522.10); control voltage maximum 150 V ac or 300 V dc to ground (522.5); where 522 differs from other articles, 522 applies (522.3).",
+          "source": "Solar365, NEC Article 522 text",
+          "url": "https://www.solar365.com/node/13153"
+        },
+        {
+          "claim": "Aluminum conductors are not permitted in control circuits (522.20); where wet contact is likely, ungrounded 2-wire control circuits are limited to 30 V dc (522.28).",
+          "source": "CodeBookCity, NEC Article 522 tips",
+          "url": "http://www.codebookcity.com/codearticles/nec/necarticle522.htm"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C5-ART-525",
@@ -932,8 +2242,8 @@
       "article": "525",
       "section": "525",
       "title": "Carnivals, circuses, fairs, and similar events",
-      "plain_explanation": "Article 525 covers temporary event power for carnivals, circuses, fairs, and similar events — rides, games, food stands, and show wiring that is installed and removed for each event. Grounding, GFCI protection, disconnects within reach of operators, and separation of ride wiring are its recurring themes. It works alongside Article 590 but adds event-specific rules that 590 does not contain.",
-      "on_the_job": "Event power is not ordinary temp power — check this article as well as 590 before quoting a fair or festival job. Operator disconnects and ride grounding are priced items, not afterthoughts.",
+      "plain_explanation": "Article 525 covers temporary event power for carnivals, circuses, fairs, and similar events — rides, games, food stands, and show wiring that is installed and removed for each event. It works alongside Article 590 but adds event-specific rules that 590 does not contain.\n• Disconnects at the operator. Each ride and concession gets a fused disconnect switch or circuit breaker within sight of, and within 6 ft of, the operator's station (525.21).\n• GFCI where the public is. All 15 A and 20 A, 125 V nonlocking receptacles used for assembly and disassembly, or accessible to the public, get GFCI protection — and so does public-accessible equipment on 15 A or 20 A, 120 V circuits (525.23). Locking-type receptacles are exempt, and GFCI protection is not permitted on egress lighting circuits.\n• Overhead clearance. Rides and attractions stay at least 15 ft clear of overhead conductors (525.5).\n• Cords do the work. Portable cords are of a type identified for extra-hard usage, 12 AWG or larger, of the grounding type, and protected where they cross walkways or traffic (525.20).\n• Bonding at every setup. Metal frames of rides, concessions, and equipment fed from the same source are bonded together (525.30), and the continuity of the equipment grounding conductor is verified each time portable equipment is connected (525.32).",
+      "on_the_job": "Event power is not ordinary temp power — check this article as well as 590 before quoting a fair or festival job. On a Sharma quote for a fair weekend in Osceola County, the layout shows a temp service, distribution boxes on stands 6 in. off the ground, and a disconnect within 6 ft of each ride operator's station. The takeoff counts GFCI protection for every public-side 20 A, 125 V receptacle, extra-hard-usage cord for the runs, and a line item for the grounding continuity check at setup. Operator disconnects and ride grounding are priced items, not afterthoughts.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -943,7 +2253,125 @@
       "verified": true,
       "prev_id": "C5-ART-522",
       "next_id": "C5-525.23",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Event power is assembled by different hands, outdoors, on grass and gravel, in front of a crowd that touches everything. The rules assume the installation will be handled, walked on, and rained on: the operator can kill a ride from his own station, the public side is GFCI-protected, and the ground path is proven at every setup instead of assumed from the last one.",
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-525-midway.svg",
+          "alt": "Midway plan: overhead conductors across the top with a red keep-clear band and a 15 ft minimum dimension down to the ride, a ride with a bonded frame, an operator station with a fused disconnect dimensioned at 6 ft or less and within sight, a distribution box raised 6 in. off the ground, and a food stand with a GFCI label on the public side.",
+          "caption": "The operator's disconnect, the public's GFCI, the ride's clearance.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "tables": [
+        {
+          "caption": "What 525 adds on top of 590",
+          "headers": [
+            "Item",
+            "525 rule"
+          ],
+          "rows": [
+            [
+              "Ride disconnect",
+              "Within sight & within 6 ft of the operator"
+            ],
+            [
+              "Public receptacles",
+              "GFCI — 15/20 A, 125 V, nonlocking"
+            ],
+            [
+              "Egress lighting",
+              "GFCI not permitted"
+            ],
+            [
+              "Overhead conductors",
+              "15 ft clear of rides"
+            ],
+            [
+              "Two sources side by side",
+              "Sources < 12 ft apart bond to one electrode system"
+            ],
+            [
+              "Ground check",
+              "EGC continuity verified at every setup"
+            ]
+          ],
+          "note": "Article 590 still applies underneath — 525 supplements it, it does not replace it."
+        }
+      ],
+      "inspection_fails": [
+        "Ride disconnect out of sight of the operator, or more than 6 ft from the operator's station (525.21).",
+        "Public-accessible 20 A, 125 V receptacle with no GFCI protection (525.23).",
+        "GFCI protection landed on an egress lighting circuit (525.23).",
+        "Cords laid across a walkway with no protection, or portable cord smaller than 12 AWG (525.20).",
+        "No grounding continuity verification when the portable equipment was connected (525.32).",
+        "Ride set up within 15 ft of overhead conductors (525.5)."
+      ],
+      "exam_trap": "The trap: pricing event power as plain Article 590 temporary power. Article 590 is the floor, not the whole job — 525 adds the operator disconnect within 6 ft, the public GFCI rules, and the per-setup grounding verification. The second trap: \"GFCI everything.\" Locking-type receptacles are exempt from 525.23, and egress lighting must not be GFCI-protected at all.",
+      "page_quiz": [
+        {
+          "question": "A ride's disconnecting means must be within sight of the operator's station and within:",
+          "choices": [
+            "3 ft",
+            "6 ft",
+            "10 ft",
+            "25 ft"
+          ],
+          "answer_index": 1,
+          "explain_plain": "525.21 puts a fused disconnect or circuit breaker within sight and within 6 ft of the operator's station.",
+          "nec_ref": "525.21"
+        },
+        {
+          "question": "GFCI protection is NOT permitted on which of these?",
+          "choices": [
+            "Food stand receptacles",
+            "Egress lighting circuits",
+            "Public game booths",
+            "Assembly and disassembly tools"
+          ],
+          "answer_index": 1,
+          "explain_plain": "525.23 prohibits GFCI protection on egress lighting — a trip cannot be allowed to darken the way out.",
+          "nec_ref": "525.23"
+        },
+        {
+          "question": "Each time portable event equipment is connected, someone must verify:",
+          "choices": [
+            "The service size",
+            "Continuity of the equipment grounding conductor",
+            "The ride's nameplate voltage",
+            "The cord insulation color"
+          ],
+          "answer_index": 1,
+          "explain_plain": "525.32 requires the equipment grounding (bonding) conductor's continuity to be verified at every connection.",
+          "nec_ref": "525.32"
+        }
+      ],
+      "code_refs": [
+        "525.5",
+        "525.11",
+        "525.20",
+        "525.21",
+        "525.22",
+        "525.23",
+        "525.30",
+        "525.32",
+        "590"
+      ],
+      "rich_sources": [
+        {
+          "claim": "525.21 disconnect within sight and within 6 ft of the operator's station; 525.23 GFCI for 15/20 A 125 V nonlocking receptacles accessible to the public, locking type exempt, GFCI prohibited on egress lighting; 525.5(B) 15 ft overhead clearance from rides; 525.11 sources less than 12 ft apart bond to the same grounding electrode system; 525.32 EGC continuity verified each time equipment is connected",
+          "source": "Mike Holt, Article 525: Carnivals, Circuses, Fairs, and Similar Events",
+          "url": "https://www.mikeholt.com/newsletters.php?action=reply&inResponseTo=584&letterID=87"
+        },
+        {
+          "claim": "525.20 portable cords 12 AWG or larger, extra-hard usage types, grounding type; 525.22 outdoor distribution boxes at least 6 in. above the ground",
+          "source": "Minnesota DLI, Electrical Code rules for portable and temporary electrical power distribution",
+          "url": "http://dli.mn.gov/sites/default/files/pdf/eli-portable-power-code.pdf"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C5-525.23",
@@ -951,8 +2379,8 @@
       "article": "525",
       "section": "525.23",
       "title": "Carnivals and fairs — GFCI protection for personnel (525.23)",
-      "plain_explanation": "Section 525.23 requires ground-fault circuit-interrupter protection for personnel on the 15 A and 20 A, 125-volt 15A and 20A, 125V, single-phase receptacles readily accessible to the general public, and equipment readily accessible to the general public supplied from a 15A or 20A, 120V branch circuit (525.23(A)). at carnivals, circuses, fairs, and similar events — with the section's narrow exception pattern for receptacles that are not available for public use in the same way. Portable distribution at an event is temporary power with the public standing on the ground: the GFCI rule is the point of the article for a service electrician, and it applies to the event hookup even when the same box would be ordinary temporary power on a construction site under Article 590. GFCI is not required on receptacles that are not accessible from grade level and serve only quick-disconnect connections for amusement rides (525.23(B)), and egress lighting may not be GFCI protected (525.23(C)).",
-      "on_the_job": "Fairground and festival hookups: test every GFCI at setup, and again after any generator refuel-and-restart cycle. A nuisance trip on a midway is an annoyance; a missing GFCI is a liability.",
+      "plain_explanation": "Section 525.23 requires ground-fault circuit-interrupter protection for personnel on:\n• The 15 A and 20 A, 125-volt, single-phase receptacles readily accessible to the general public.\n• Equipment readily accessible to the general public that is supplied from a 15 A or 20 A, 120-volt branch circuit (525.23(A)).\nThat is the rule at carnivals, circuses, fairs, and similar events. Portable distribution at an event is temporary power with the public standing on the ground: the GFCI rule is the point of the article for a service electrician, and it applies to the event hookup even when the same box would be ordinary temporary power on a construction site under Article 590.\n• GFCI is not required on receptacles that are not accessible from grade level and serve only quick-disconnect connections for amusement rides (525.23(B)).\n• Egress lighting may not be GFCI protected (525.23(C)) — a nuisance trip must not be able to darken the way out.",
+      "on_the_job": "Fairground and festival hookups: test every GFCI at setup, and again after any generator refuel-and-restart cycle. A nuisance trip on a midway is an annoyance; a missing GFCI is a liability. On a county-fair hookup, walk the row before the gates open: every public receptacle on the distro boxes is 15 A or 20 A, 125-volt, so every one gets GFCI protection for personnel; the ride operator's quick-disconnect receptacles mounted up on the ride frame, out of reach from grade, are the 525.23(B) case and are left unprotected by design; the egress lighting circuit is landed on a plain breaker, never a GFCI (525.23(C)).",
       "sharma_note": "",
       "figure_idea": "Event distro box with GFCI test arrows and the 15/20 A, 125 V receptacle row highlighted.",
       "related_ids": [
@@ -963,7 +2391,98 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C5-ART-525",
-      "next_id": "C5-ART-530"
+      "next_id": "C5-ART-530",
+      "why_it_exists": "Midway power runs across wet grass and metal ride frames, with kids in sandals and food-truck staff plugging in all day. A fault that would only trip a breaker on a jobsite can put current through a person standing on grade. GFCI protection for personnel is the layer that trips in milliseconds, before the shock becomes a fatality — and the egress rule keeps that same fast trip from blacking out the exit path in a panic.",
+      "exam_trap": "The trap is protecting everything. An exam answer that puts the egress lighting on a GFCI \"for extra safety\" is wrong — 525.23(C) prohibits GFCI protection on egress lighting, because a trip during an evacuation leaves the crowd in the dark. The mirror-image trap is skipping GFCI on the public receptacles because the distro box is \"only temporary power\" — Article 525, not 590, governs the event hookup, and 525.23(A) requires the protection.",
+      "inspection_fails": [
+        "Public receptacle on a midway distro box with no GFCI protection (525.23(A)).",
+        "Egress lighting circuit landed on a GFCI breaker (525.23(C)).",
+        "GFCI devices never tested at setup — dead or failed units left in service for the run of the fair.",
+        "Ride quick-disconnect receptacles mounted at grade level, reachable by the public, treated as the 525.23(B) exception."
+      ],
+      "tables": [
+        {
+          "caption": "525.23: who gets GFCI protection for personnel",
+          "headers": [
+            "Circuit or receptacle",
+            "GFCI?"
+          ],
+          "rows": [
+            [
+              "15/20 A, 125 V receptacles accessible to the public",
+              "Required — 525.23(A)"
+            ],
+            [
+              "Public-accessible equipment on a 15/20 A, 120 V branch circuit",
+              "Required — 525.23(A)"
+            ],
+            [
+              "Ride quick-disconnect receptacles not accessible from grade",
+              "Not required — 525.23(B)"
+            ],
+            [
+              "Egress lighting",
+              "Prohibited — 525.23(C)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-525.23-distro-box.svg",
+          "alt": "Event distribution box with two GFCI-protected 15/20 ampere 125 volt receptacles with test buttons, an egress lighting circuit with no GFCI, the public standing on grade, and a ride quick-disconnect mounted out of reach.",
+          "caption": "Who gets GFCI at the fair — and the two cases that do not.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "At a fair, GFCI protection for personnel is required on receptacles readily accessible to the general public rated:",
+          "choices": [
+            "15/20 A, 125 V, single-phase",
+            "30 A, 250 V",
+            "Any rating",
+            "Only 20 A, 250 V"
+          ],
+          "answer_index": 0,
+          "explain_plain": "525.23(A) covers the 15 A and 20 A, 125-volt, single-phase receptacles the public can reach.",
+          "nec_ref": "525.23(A)"
+        },
+        {
+          "question": "Which circuit may NOT be GFCI protected at a carnival?",
+          "choices": [
+            "Food-truck receptacles",
+            "Egress lighting",
+            "Midway game outlets",
+            "Vendor booth power"
+          ],
+          "answer_index": 1,
+          "explain_plain": "525.23(C): egress lighting may not be GFCI protected — a trip must not darken the way out.",
+          "nec_ref": "525.23(C)"
+        },
+        {
+          "question": "GFCI is not required on a receptacle that serves only ride quick-disconnects when it is:",
+          "choices": [
+            "Already on a GFCI breaker",
+            "Not accessible from grade level",
+            "Painted yellow",
+            "Within sight of the operator"
+          ],
+          "answer_index": 1,
+          "explain_plain": "525.23(B) covers receptacles that are not accessible from grade level and serve only quick-disconnect connections for amusement rides.",
+          "nec_ref": "525.23(B)"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "525.23(A)",
+        "525.23(B)",
+        "525.23(C)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-ART-530",
@@ -971,8 +2490,8 @@
       "article": "530",
       "section": "530",
       "title": "Motion picture and television studios",
-      "plain_explanation": "Article 530 covers studios and similar locations where motion picture or television production happens, including the stage power, portable distribution, and single-conductor feeder practices that are unique to studio work. It exists because studio lighting loads and portable equipment do not behave like ordinary commercial installations. Florida production work is the only likely Sharma encounter.\n\nNEC 2023 CHANGE:\n• Article 530: Article 530 was completely reorganized for clarity and rewritten to remove old technologies and to include dominant and emerging new technologies.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Studio scope is specialty scope — work from the production electrical package. Nothing in this intro authorizes studio feeder practices on ordinary jobs.",
+      "plain_explanation": "Article 530 covers studios and similar locations where motion picture or television production happens — sound stages and the areas where film or tape is made, handled and stored — where cameras record but no audience sits (530.1). Audience areas belong to Article 520 instead.\n• Permanent wiring is in metal raceways, in nonmetallic raceways encased in at least 2 in of concrete, or in Type MI, Type MC or Type AC cable with an insulated equipment grounding conductor (530.11).\n• Portable wiring for set lighting and effects is portable cable and flexible cord; wiring that is subject to physical damage is extra-hard usage cord (530.12).\n• Permanently installed stage set lighting feeders are not summed at 100 percent — they take the demand factors of Table 530.7.\n• Stage lighting and effects are run from location boards: portable boards with contactors and overcurrent protection, built for remote control of stage lighting.\nIt exists because studio lighting loads and portable equipment do not behave like ordinary commercial installations. Florida production work is the only likely Sharma encounter.",
+      "on_the_job": "A production company converts a Winter Park warehouse into a small sound stage and asks Sharma for the stage power. Studio scope is specialty scope — work from the production electrical package. Nothing in this article authorizes studio feeder practices on ordinary jobs. The package shows 180,000 VA of permanently installed stage set lighting: Table 530.7 sizes the feeder at 50,000 × 100% + 50,000 × 75% + 80,000 × 60% = 135,500 VA of demand, not 180,000 VA. Permanent runs go in metal raceway; the set lighting itself is portable cable worked from the location boards.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -991,7 +2510,109 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "A stage is a temporary factory rebuilt for every scene: heavy lighting loads on portable cable, struck and re-rigged daily by crews working fast, often in the dark. The raceway rules protect the permanent skeleton of the building, the cord rules assume portable gear gets dragged, stepped on and driven over, and the demand table recognizes that no production burns every lamp at full at the same moment.",
+      "exam_trap": "The trap is sizing a studio stage feeder at 100 percent of the connected lighting load. Permanently installed stage set lighting feeders use Table 530.7: the first 50,000 VA at 100 percent, the next 50,000 VA at 75 percent, the next 100,000 VA at 60 percent, and everything over 200,000 VA at 50 percent. The second trap is keeping an audience in the room and staying in 530 — audience areas are Article 520.",
+      "inspection_fails": [
+        "Stage feeder sized at 100 percent of connected load — the Table 530.7 demand factors were never applied.",
+        "Portable set wiring in ordinary cord where it is subject to physical damage — 530.12 calls for extra-hard usage cord.",
+        "Permanent stage wiring in exposed nonmetallic raceway — 530.11 wants metal raceway, nonmetallic encased in at least 2 in of concrete, or MI, MC or AC cable with an insulated grounding conductor.",
+        "Location board with no overcurrent protection at the board for the cables it feeds.",
+        "Audience seating area wired under Article 530 instead of Article 520."
+      ],
+      "tables": [
+        {
+          "caption": "Table 530.7 — demand factors, stage set lighting feeders",
+          "headers": [
+            "Stage lighting load",
+            "Demand factor"
+          ],
+          "rows": [
+            [
+              "First 50,000 VA",
+              "100%"
+            ],
+            [
+              "Next 50,000 VA (to 100,000)",
+              "75%"
+            ],
+            [
+              "Next 100,000 VA (to 200,000)",
+              "60%"
+            ],
+            [
+              "Remainder over 200,000 VA",
+              "50%"
+            ]
+          ],
+          "note": "Applies to permanently installed stage set lighting feeders — not to portable loads."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-530-demand-factors.svg",
+          "alt": "Bar chart of the Table 530.7 demand factors for permanently installed stage set lighting feeders: first 50,000 VA at 100 percent, next 50,000 VA at 75 percent, next 100,000 VA at 60 percent, remainder over 200,000 VA at 50 percent, with a worked example turning 180,000 VA connected into 135,500 VA of feeder demand.",
+          "caption": "Table 530.7: the bigger the stage load, the smaller the share the feeder must carry.",
+          "w": 900,
+          "h": 1340
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A studio has 120,000 VA of permanently installed stage set lighting. Feeder demand under Table 530.7?",
+          "choices": [
+            "120,000 VA",
+            "105,000 VA",
+            "99,500 VA",
+            "90,000 VA"
+          ],
+          "answer_index": 2,
+          "explain_plain": "50,000 at 100% + 50,000 at 75% + 20,000 at 60% = 50,000 + 37,500 + 12,000 = 99,500 VA.",
+          "nec_ref": "Table 530.7"
+        },
+        {
+          "question": "Permanent wiring in a studio may be in nonmetallic raceway when it is…",
+          "choices": [
+            "Encased in at least 2 in of concrete",
+            "Painted to match the stage",
+            "Listed for the location",
+            "Run only above the ceiling"
+          ],
+          "answer_index": 0,
+          "explain_plain": "Section 530.11 permits nonmetallic raceways encased in at least 2 in of concrete, alongside metal raceways and MI, MC or AC cable with an insulated grounding conductor.",
+          "nec_ref": "530.11"
+        },
+        {
+          "question": "An audience area inside a production facility is covered by…",
+          "choices": [
+            "Article 530",
+            "Article 518",
+            "Article 520",
+            "Article 540"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Article 530 covers studios without audience areas; where an audience sits, Article 520 covers that area.",
+          "nec_ref": "530.1"
+        }
+      ],
+      "code_refs": [
+        "530.1",
+        "530.7",
+        "Table 530.7",
+        "530.11",
+        "530.12",
+        "520.1"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "Table 530.7 demand factors for permanently installed stage set lighting feeders: first 50,000 VA at 100%, 50,001–100,000 VA at 75%, 100,001–200,000 VA at 60%, remainder over 200,000 VA at 50%; permanent wiring in metal raceways, nonmetallic raceways encased in at least 2 in of concrete, or Type MI, MC or AC cable with an insulated EGC (530.11).",
+          "source": "Josh The Sparky, NEC Quick Hit: Motion Picture & TV Studios",
+          "url": "https://www.joshthesparky.online/quick-hits/chapter-5/motion-picture-and-television-studios/motion-picture-and-tv-studios"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• Article 530: Article 530 was completely reorganized for clarity and rewritten to remove old technologies and to include dominant and emerging new technologies.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C5-ART-540",
@@ -999,8 +2620,8 @@
       "article": "540",
       "section": "540",
       "title": "Motion picture projection rooms",
-      "plain_explanation": "Article 540 is a short article covering motion picture projection rooms and the film-handling hazards they were written for. Modern digital projection has shrunk its footprint, but the article remains in the 2020 book and in theater work where a projection room still exists. Ventilation and equipment placement in the room are its main subjects.",
-      "on_the_job": "On a theater renovation, confirm whether a projection room is in scope before assuming 518 or 520 covers the whole job. If it is, this article's room rules join the takeoff.",
+      "plain_explanation": "Article 540 is a short article covering motion picture projection rooms, projectors and associated equipment, professional and nonprofessional, using incandescent, carbon arc, xenon or other light sources that develop hazardous gases, dust or radiation (540.1).\n• Every professional-type projector — 35 mm and 70 mm film machines and the arc and xenon types — sits in a projection room of permanent construction, and every projection, spotlight and viewing port is completely closed with glass or other approved material (540.10).\n• A projection room is not a hazardous (classified) location under Article 500 — its rules are fire and equipment rules, not classified-wiring rules (540.10).\n• Motor-generator sets, transformers, rectifiers and rheostats are located or guarded so arcs and sparks cannot reach film; with nitrate film, they go in a separate room (540.11).\n• Each projector, floodlight and spotlight gets clear working space at least 30 in wide on each side and the rear (540.12).\n• Conductors for professional arc and xenon projectors are not smaller than 8 AWG, with ampacity not less than the projector rating (540.13).\n• Projectors, lamp enclosures, rectifiers, transformers and rheostats must be listed (540.20).\n• A nonprofessional projector using cellulose acetate safety film may operate without a projection room (540.31).\nDigital projection has shrunk its footprint, but the article remains in the 2020 book wherever a projection room still exists. Ventilation and equipment placement are its main subjects.",
+      "on_the_job": "On a theater renovation in Seminole County, confirm whether a projection room is in scope before assuming 518 or 520 covers the whole job. This room keeps a 35 mm archival projector beside the digital machine, so 540 joins the takeoff: ports verified completely closed with glass, 30 in of clear working space at the sides and rear of each projector, and the xenon circuit checked — conductors not smaller than 8 AWG, ampacity at least the projector rating (540.13). If the room were digital-only, with no professional-type projector, the room mandate falls away and the assembly and theater articles carry the job.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1010,7 +2631,123 @@
       "verified": true,
       "prev_id": "C5-ART-530",
       "next_id": "C5-ART-545",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "The article was written for nitrate film, which burns fiercely and carries its own oxygen, in a small room around carbon-arc lamps throwing sparks and heat. The room contains the fire, the closed ports keep flame and smoke out of the auditorium, and the guarding rules keep arcing equipment away from the film. Xenon lamps kept the heat and pressure hazards after nitrate left, so the room rules stayed.",
+      "exam_trap": "The trap is classifying the projection room. A projection room is expressly not a hazardous (classified) location (540.10), so Class I wiring methods are the wrong answer. The reverse trap: the room mandate attaches to professional-type projectors — a nonprofessional projector on safety film needs no projection room (540.31).",
+      "inspection_fails": [
+        "Projection or viewing port open, or closed with unapproved material — ports must be completely closed with glass or other approved material (540.10).",
+        "Unrelated electrical equipment installed in the projection room — the room is for projection equipment and its permitted controls.",
+        "Working space at a projector under 30 in at a side or at the rear (540.12).",
+        "Arc or xenon projector supplied with conductors smaller than 8 AWG, or with ampacity below the projector's current rating (540.13).",
+        "Unlisted projector, lamp enclosure, rectifier or rheostat (540.20)."
+      ],
+      "tables": [
+        {
+          "caption": "Article 540 at a glance",
+          "headers": [
+            "Item",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "Professional projector",
+              "In a permanent projection room (540.10)"
+            ],
+            [
+              "Ports",
+              "Completely closed — glass or approved"
+            ],
+            [
+              "Room classification",
+              "Not a classified location"
+            ],
+            [
+              "Working space",
+              "30 in min, each side and rear (540.12)"
+            ],
+            [
+              "Arc/xenon conductors",
+              "8 AWG min, ampacity per rating (540.13)"
+            ],
+            [
+              "Nonprofessional + safety film",
+              "No room required (540.31)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-540-projection-room.svg",
+          "alt": "Plan view of a motion picture projection room with two professional projectors, projection ports closed with glass in the auditorium wall, dimension lines showing 30 inch minimum working space at the side and rear of a projector, and a guarded rectifier located so its arcs cannot reach film.",
+          "caption": "The room, the closed ports, and 30 in of working space — the heart of Article 540.",
+          "w": 900,
+          "h": 1260
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Under Article 540, a motion picture projection room is…",
+          "choices": [
+            "A Class I, Division 1 location",
+            "A Class I, Division 2 location",
+            "Not a hazardous (classified) location",
+            "A Zone 1 location"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Section 540.10 states projection rooms are not considered hazardous (classified) locations under Article 500.",
+          "nec_ref": "540.10"
+        },
+        {
+          "question": "Minimum clear working space at each side and at the rear of a projector?",
+          "choices": [
+            "24 in",
+            "30 in",
+            "36 in",
+            "48 in"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Section 540.12 requires clear working space not less than 30 in wide on each side and at the rear of each projector, floodlight or spotlight.",
+          "nec_ref": "540.12"
+        },
+        {
+          "question": "Smallest conductor permitted to supply a professional arc or xenon projector?",
+          "choices": [
+            "12 AWG",
+            "10 AWG",
+            "8 AWG",
+            "6 AWG"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Section 540.13 sets the floor at 8 AWG, with ampacity not less than the projector current rating.",
+          "nec_ref": "540.13"
+        }
+      ],
+      "code_refs": [
+        "540.1",
+        "540.2",
+        "540.10",
+        "540.11",
+        "540.12",
+        "540.13",
+        "540.20",
+        "540.31"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "Working space at each projector, floodlight or spotlight is not less than 30 in wide on each side and at the rear (540.12); conductors for professional arc and xenon projectors are not smaller than 8 AWG with ampacity not less than the projector rating (540.13); projectors, lamp enclosures, rectifiers, transformers and rheostats must be listed (540.20); a nonprofessional projector using safety film may operate without a projection room (540.31).",
+          "source": "Solar365, NEC Article 540 text",
+          "url": "http://www.solar365.com/green-homes/national-electric-code-2008/motion-picture-projection-rooms/page/0/1?page=0,1"
+        },
+        {
+          "claim": "Every professional-type projector is located within a projection room of permanent construction; all projection, spotlight and viewing ports are completely closed with glass or other approved material; the room is not a hazardous (classified) location (540.10); a professional projector uses 35 mm or 70 mm film (540.2).",
+          "source": "Yumpu, NEC Article 540 text",
+          "url": "https://www.yumpu.com/fr/document/view/62991948/nfpa2005/439"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C5-ART-545",
@@ -1233,8 +2970,8 @@
       "article": "551",
       "section": "551",
       "title": "Recreational vehicles and recreational vehicle parks",
-      "plain_explanation": "Article 551 covers recreational vehicles themselves and, more importantly for site work, RV parks — the site supply equipment, receptacle configurations, and grounding for each RV lot. Park work is a feeder and pedestal job repeated many times, with GFCI and polarity details at every site. It pairs with Article 552, which covers park trailers separately.\n\nNEC 2023 CHANGE:\n• 551.3: Substantiation was submitted to for the need to address recreational vehicle sites located next to natural bodies of water. As a result, a new Section 551.3, Electrical Datum Plane Distances, was added.\n• 551.40(D): Section 551.40(D) was changed to eliminate the need for a Reverse Polarity Device in a recreational vehicle. Substantiation was submitted to for the addition of language for a loss of a ground device.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "On an RV park bid, count sites and pedestal types carefully and confirm the supply equipment listing. Do not price park pedestals as ordinary receptacle posts.",
+      "plain_explanation": "Article 551 covers recreational vehicles themselves and, more importantly for site work, RV parks — the site supply equipment, receptacle configurations, and grounding for each RV lot. Part VI covers the parks.\n• Every site with electrical supply gets site supply equipment with the receptacles travelers carry: 20-ampere, 125-volt; 30-ampere, 125-volt in the TT-30 configuration; and 50-ampere, 125/250-volt.\n• The mix is code, not preference: at least 70 percent of sites get a 30-ampere receptacle, at least 40 percent of new sites (20 percent of existing) get a 50-ampere — and every 50-ampere site also carries a 30 (551.71).\n• Each site's equipment includes its own disconnect and overcurrent protection, and the receptacles carry the ground-fault protection the article requires.\n• Park services and feeders are calculated from the sites: 9,600 VA per 50-ampere site, 3,600 VA per site with 20- and 30-ampere supply, 2,400 VA per 20-ampere-only site, and 600 VA per tent site — then reduced by the demand factors of Table 551.73(A) (551.73).\nPark work is a feeder and pedestal job repeated many times, with GFCI and polarity details at every site. It pairs with Article 552, which covers park trailers separately.",
+      "on_the_job": "A 40-site RV park expansion off US-27: count sites and pedestal types carefully and confirm the supply equipment listing. Do not price park pedestals as ordinary receptacle posts. The code mix drives the count: at least 28 of the 40 sites (70 percent) get 30-ampere receptacles, and at least 16 new sites (40 percent) get 50-ampere supply, each also carrying a 30. Load basis before demand factors: 16 × 9,600 VA + 24 × 3,600 VA = 240,000 VA. Table 551.73(A) then steps that down as sites are added — the difference between a service that prices the job and one that prices Sharma out of it.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1260,7 +2997,107 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "An RV is a dwelling that plugs in outdoors, often on wet ground, plugged and unplugged by the traveling public, not an electrician. The pedestal rules standardize what every traveler finds, put a disconnect and breaker in reach at the site, and put ground-fault protection where hands, water and cord caps meet. The demand table exists because a park never draws full rating at every pedestal at once — sizing without it prices the job out.",
+      "exam_trap": "The trap is calculating an RV park service at the straight sum of the pedestal ratings. Section 551.73 counts each site at its supply rating — 9,600 VA for a 50-ampere site — and then applies the demand factors of Table 551.73(A), which step down as sites are added. Skipping the table oversizes the service badly. The reverse trap is forgetting the mix itself: at least 40 percent of new sites must be 50-ampere sites (551.71).",
+      "inspection_fails": [
+        "Pedestal with no disconnecting means or no overcurrent protection at the site.",
+        "50-ampere site with no 30-ampere receptacle beside it — every 50-ampere site also carries a 30 (551.71).",
+        "Park service sized on raw pedestal totals with no Table 551.73(A) demand factors applied.",
+        "Wrong receptacle configuration for the rating — a 30-ampere RV site takes the TT-30 travel-trailer configuration, not a dryer receptacle.",
+        "Site receptacles missing the ground-fault protection the article requires."
+      ],
+      "tables": [
+        {
+          "caption": "Load basis per site (551.73(A))",
+          "headers": [
+            "Site supply",
+            "Counts as"
+          ],
+          "rows": [
+            [
+              "50 A, 125/250 V",
+              "9,600 VA"
+            ],
+            [
+              "20 A + 30 A",
+              "3,600 VA"
+            ],
+            [
+              "20 A only",
+              "2,400 VA"
+            ],
+            [
+              "Tent site, 20 A only",
+              "600 VA"
+            ]
+          ],
+          "note": "Total the sites, then apply the demand factors of Table 551.73(A)."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-551-pedestal.svg",
+          "alt": "Elevation of an RV site pedestal with a 50-ampere 125/250-volt receptacle, a 30-ampere TT-30 receptacle and a 20-ampere 125-volt receptacle, a legend covering the disconnect and overcurrent protection at the site, the rule that every 50-ampere site also carries a 30-ampere receptacle, ground-fault protection, and the park mix of at least 70 percent of sites at 30 amperes and at least 40 percent of new sites at 50 amperes.",
+          "caption": "One pedestal, repeated per site — the receptacle mix across the park is code, not preference.",
+          "w": 900,
+          "h": 1700
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Minimum share of NEW RV sites that must be equipped with a 50-ampere receptacle?",
+          "choices": [
+            "20 percent",
+            "30 percent",
+            "40 percent",
+            "70 percent"
+          ],
+          "answer_index": 2,
+          "explain_plain": "At least 40 percent of new sites (20 percent of existing sites) get a 50-ampere, 125/250-volt receptacle, and each of those sites also carries a 30-ampere receptacle.",
+          "nec_ref": "551.71"
+        },
+        {
+          "question": "In the 551.73 calculation, a site with 50-ampere supply counts as…",
+          "choices": [
+            "3,600 VA",
+            "6,000 VA",
+            "9,600 VA",
+            "12,000 VA"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Each site counts at its supply rating: 9,600 VA for a 50-ampere site, before the Table 551.73(A) demand factors.",
+          "nec_ref": "551.73(A)"
+        },
+        {
+          "question": "Park trailers are covered by which article?",
+          "choices": [
+            "Article 551",
+            "Article 552",
+            "Article 550",
+            "Article 555"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Article 551 covers recreational vehicles and RV parks; park trailers have their own article, 552.",
+          "nec_ref": "552"
+        }
+      ],
+      "code_refs": [
+        "551.71",
+        "551.73",
+        "Table 551.73(A)",
+        "552"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "At least 70 percent of sites with electrical supply need a 30-ampere, 125-volt receptacle; at least 40 percent of new sites (20 percent of existing sites) need a 50-ampere, 125/250-volt receptacle, and every 50-ampere site also carries a 30-ampere receptacle (551.71).",
+          "source": "Innowave Studio, RV Park Calculator (NEC 551.71 summary)",
+          "url": "https://www.innowave-studio.com/tools/rv-park-calculator"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 551.3: Substantiation was submitted to for the need to address recreational vehicle sites located next to natural bodies of water. As a result, a new Section 551.3, Electrical Datum Plane Distances, was added.\n• 551.40(D): Section 551.40(D) was changed to eliminate the need for a Reverse Polarity Device in a recreational vehicle. Substantiation was submitted to for the addition of language for a loss of a ground device.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C5-551.71",
@@ -1603,8 +3440,8 @@
       "article": "590",
       "section": "590",
       "title": "Temporary installations — jobsite power",
-      "plain_explanation": "Article 590 covers power and lighting installed for a limited time: construction, remodeling, maintenance, repair, and demolition work, plus decorative and holiday installations and similar short-term uses. It relaxes a few wiring methods for the temporary case but keeps the safety core — overcurrent protection, grounding, and GFCI protection for people — fully in force. Chapters 1 through 4 still apply except where this article specifically changes them.",
-      "on_the_job": "Every Sharma rough-in crew lives in this article on someone else's jobsite and on our own temp poles. Set temp power up like it will be inspected, because it can be.",
+      "plain_explanation": "Article 590 covers power and lighting installed for a limited time:\n• Construction, remodeling, maintenance, repair and demolition work.\n• Holiday and decorative installations, and similar short-term uses.\n• Emergencies, experiments and testing.\nChapters 1 through 4 still apply except where this article specifically changes them. The article relaxes a few wiring methods for the temporary case, but the safety core stays fully in force: overcurrent protection, grounding, and GFCI protection for people. Time is part of the rule — under 590.3, construction power lasts for the duration of the work, and holiday and decorative installations are limited to 90 days.\n• Every 125-volt, single-phase, 15-, 20- and 30-ampere receptacle outlet that is not part of the permanent wiring needs GFCI protection for personnel (590.6(A)(1)).\n• On a construction site, receptacles may not share a branch circuit with temporary lighting, and cords and cables used as feeders or branch circuits may not lie on the floor or ground (590.4).",
+      "on_the_job": "Sharma's standard temp pole on a Marion Oaks rough-in: meter and a Siemens load center on the pole, two 20-ampere GFCI-protected receptacles for the crew's tools, and a ground rod driven its full 8 ft with the GEC clamped above grade where it can be inspected. The temp service paperwork carries a removal date; when the permanent service is energized and accepted, the pole comes out instead of lingering for the next trade to trip over.",
       "sharma_note": "S-01 does not set temp panel sizes, but Sharma temp work still uses listed gear and Siemens breakers in our own panels per S-02. Temp is not a license for mixed-brand breaker swapping (S-03).",
       "figure_idea": "Temp pole sketch: meter, panel, GFCI receptacles, support and grounding, labeled as a field checklist figure.",
       "related_ids": [
@@ -1614,12 +3451,101 @@
       ],
       "florida_note": "",
       "verified": true,
-      "prev_id": "C5-555.35",
-      "next_id": "C5-590.3",
       "sharma_rule_ids": [
         "S-02",
         "S-03"
-      ]
+      ],
+      "prev_id": "C5-555.35",
+      "next_id": "C5-590.3",
+      "why_it_exists": "Temporary power is the most abused wiring on any site: cords run over by lifts, panels rained on, spider boxes moved daily by every trade. The hazard is not lower because the installation is temporary — the exposure is higher. That is why the article trades method flexibility for an unrelaxed core of GFCI protection, grounding and overcurrent protection.",
+      "exam_trap": "The trap answer is “GFCI is not required — it is only temporary power.” 590.6(A)(1) requires GFCI protection for personnel on the 125-volt 15-, 20- and 30-ampere receptacle outlets used for the work, temporary or not. The second trap: holiday lighting on a 90-day limit treated as a permanent installation.",
+      "inspection_fails": [
+        "Temp panel receptacles with no GFCI protection — “it is only temporary.”",
+        "Cords and cables lying on the ground across walkways and doorways.",
+        "Temporary service still feeding the site months after the permanent service was accepted.",
+        "Exposed lamps without guards and open splices without enclosures in the temp runs."
+      ],
+      "tables": [
+        {
+          "caption": "How long temporary can last (590.3)",
+          "headers": [
+            "Use",
+            "Time limit"
+          ],
+          "rows": [
+            [
+              "Construction, remodeling, repair, demolition",
+              "Duration of the work"
+            ],
+            [
+              "Holiday / decorative lighting",
+              "90 days maximum"
+            ],
+            [
+              "Emergencies, experiments, testing",
+              "Period of the emergency or test"
+            ]
+          ],
+          "note": "When the period ends, the installation comes out — it does not graduate to permanent."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-590-temp-pole.svg",
+          "alt": "Elevation of a temporary power pole with a service drop, meter, Siemens panel, two 20-ampere GFCI receptacles, a brace, and a ground rod driven 8 ft into the soil with its grounding electrode conductor clamped above grade.",
+          "caption": "The temp pole, set like it will be inspected — because it can be.",
+          "w": 900,
+          "h": 1620
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Which receptacle outlets used for construction work need GFCI protection for personnel?",
+          "choices": [
+            "Only outdoor receptacles",
+            "All 125 V, single-phase, 15-, 20- and 30 A receptacle outlets not part of the permanent wiring",
+            "Only receptacles over 20 A",
+            "None — temporary power is exempt"
+          ],
+          "answer_index": 1,
+          "explain_plain": "590.6(A)(1) covers every 125-volt, single-phase, 15-, 20- and 30-ampere receptacle outlet that is not part of the permanent wiring.",
+          "nec_ref": "590.6(A)(1)"
+        },
+        {
+          "question": "Holiday decorative lighting installed as a temporary installation may remain for no more than:",
+          "choices": [
+            "30 days",
+            "60 days",
+            "90 days",
+            "One year"
+          ],
+          "answer_index": 2,
+          "explain_plain": "590.3 limits holiday and decorative temporary installations to 90 days.",
+          "nec_ref": "590.3(B)"
+        },
+        {
+          "question": "On a construction site, temporary receptacles:",
+          "choices": [
+            "May share a branch circuit with temporary lighting",
+            "May not share a branch circuit with temporary lighting",
+            "Need no overcurrent protection",
+            "May be wired with cords lying on the ground"
+          ],
+          "answer_index": 1,
+          "explain_plain": "590.4 keeps receptacles and temporary lighting on separate branch circuits, and cords off the floor and ground.",
+          "nec_ref": "590.4"
+        }
+      ],
+      "code_refs": [
+        "590.2",
+        "590.3",
+        "590.4",
+        "590.6(A)(1)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C5-590.3",
@@ -1647,8 +3573,8 @@
       "article": "590",
       "section": "590.4",
       "title": "General requirements for temporary wiring",
-      "plain_explanation": "This is the working section of the article. A temporary service is installed to the service rules of Article 230, feeders and branch circuits keep the overcurrent protection of Article 240, and hard or extra-hard usage cords and cables do much of the distribution work. Receptacles on a branch circuit may not share it with temporary lighting on a construction site, receptacles in wet locations need weatherproof protection with a plug inserted, every temporary circuit needs a way to disconnect all its ungrounded conductors, lamps need guards, splices need enclosures, and cords crossing doorways and pinch points need protection. Cables and cords used as feeders or branch circuits may not lie on the ground or floor — support them or use the extension cord and protection routes the section actually allows.\n\nNEC 2023 CHANGE:\n• 590.4(F): Eliminated some existing text concerning various socket styles at Section\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Walk a temp installation weekly: guards on lamps, covers on splice boxes, cords up off the ground and out of doorways, and disconnects working. Most temp-power citations are housekeeping items from this one section.",
+      "plain_explanation": "This is the working section of the article. A temporary service is installed to the service rules of Article 230, feeders and branch circuits keep the overcurrent protection of Article 240 (590.4(B) and (C)), and hard or extra-hard usage cords and cables do much of the distribution work.\n• Receptacles on a branch circuit may not share it with temporary lighting on a construction site (590.4(D)).\n• Receptacles in wet locations need weatherproof protection with a plug inserted — an in-use cover, not a flip lid.\n• Every temporary circuit needs a way to disconnect all its ungrounded conductors.\n• Lamps for general illumination need protection from accidental contact or breakage — a suitable fixture or lampholder with a guard (590.4(F)).\n• Splices need a box, conduit body, or other enclosure with a cover (590.4(G)). The construction-site exceptions cover splices in cord and cable assemblies and in permanent wiring used temporarily — not open-air twisted joints.\n• Cables and cords used as feeders or branch circuits may not lie on the ground or floor — support them, protect them where they cross doorways and pinch points, or use the extension cord and protection routes the section actually allows.",
+      "on_the_job": "Walk a temp installation weekly: guards on lamps, covers on splice boxes, cords up off the ground and out of doorways, and disconnects working. Most temp-power citations are housekeeping items from this one section. On a multi-story build-out, give the weekly walk a route: spider boxes fed with cords supported overhead instead of lying in the walk path, string lights with every guard in place, in-use covers on the receptacles at the wet deck, and the temp panel disconnects exercised so they still open every ungrounded conductor.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1666,12 +3592,129 @@
       "nec2023_change": [
         {
           "section": "590.4(F)",
-          "change": "Eliminated some existing text concerning various socket styles at Section",
+          "change": "Eliminated some existing text concerning various socket styles at Section 590.4(F), and the words \"metal guarded sockets\" and \"metal guard\" were added.",
           "source": "Carosella/NFPA-based 2023 NEC change workbook: 590.4(F) Lamp Protection",
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Temporary wiring gets dragged, driven over, rained on, and reworked daily by every trade on the site. The guards, covers, enclosures, and support rules in this section are what stand between that abuse and a broken lamp, an open splice, or a cord cut in a doorway — the three ways temp power starts fires and shocks workers.",
+      "exam_trap": "The trap is the word \"temporary\" itself: it does not relax the rest of the Code. Article 590 modifies specific rules — services still follow Article 230 and overcurrent protection still follows Article 240. The second trap is the shared circuit: on a construction site, receptacles may not share a branch circuit with temporary lighting, even though the same layout would be legal in finished work.",
+      "inspection_fails": [
+        "Temporary string light with a missing or broken lamp guard (590.4(F)).",
+        "Open splice in a cord run — no box, conduit body, or enclosure with a cover (590.4(G)).",
+        "Feeder cord lying on the floor across a doorway with no protection.",
+        "Receptacles sharing a branch circuit with temporary lighting on a construction site (590.4(D)).",
+        "Wet-location receptacle with a flip cover instead of weatherproof protection with the plug inserted."
+      ],
+      "tables": [
+        {
+          "caption": "590.4: the working rules (NEC 2020)",
+          "headers": [
+            "Topic",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "Services",
+              "Installed to the Article 230 rules"
+            ],
+            [
+              "Feeders and branch circuits",
+              "Overcurrent protection per Article 240 — 590.4(B), (C)"
+            ],
+            [
+              "Receptacles",
+              "Not on the same branch circuit as temporary lighting on a construction site — 590.4(D)"
+            ],
+            [
+              "Lamps",
+              "Guard against accidental contact or breakage — 590.4(F)"
+            ],
+            [
+              "Splices",
+              "Box, conduit body, or enclosure with a cover — 590.4(G)"
+            ]
+          ],
+          "note": "Cords and cables do the distribution work, but they may not lie on the ground or floor as feeders or branch circuits."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-590.4-jobsite.svg",
+          "alt": "Temporary installation that passes: temp panel with a disconnect opening all ungrounded conductors, guarded string lamps, a splice in a covered box, an in-use receptacle cover, cords supported overhead, and a protected doorway crossing.",
+          "caption": "The weekly walk: guards, covers, boxes, support, protection.",
+          "w": 900,
+          "h": 1700
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "On a construction site, receptacles on a branch circuit:",
+          "choices": [
+            "May share it with temporary lighting",
+            "May not share it with temporary lighting",
+            "Need no overcurrent protection",
+            "Must be twist-lock only"
+          ],
+          "answer_index": 1,
+          "explain_plain": "590.4(D): receptacles are not permitted on the same branch circuit as temporary lighting on a construction site.",
+          "nec_ref": "590.4(D)"
+        },
+        {
+          "question": "A splice in temporary wiring generally requires:",
+          "choices": [
+            "Electrical tape only",
+            "A box, conduit body, or other enclosure with a cover",
+            "A wire nut rated for direct burial",
+            "Nothing, if it is outdoors"
+          ],
+          "answer_index": 1,
+          "explain_plain": "590.4(G) requires an enclosure with a cover for splices, with narrow construction-site exceptions.",
+          "nec_ref": "590.4(G)"
+        },
+        {
+          "question": "Lamps for general illumination in a temporary installation must have:",
+          "choices": [
+            "A guard against accidental contact or breakage",
+            "A GFCI breaker",
+            "A photocell",
+            "A metal-halide source"
+          ],
+          "answer_index": 0,
+          "explain_plain": "590.4(F): lamps are protected by a suitable fixture or lampholder with a guard.",
+          "nec_ref": "590.4(F)"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 590.4(F): Eliminated some existing text concerning various socket styles at Section 590.4(F), and the words \"metal guarded sockets\" and \"metal guard\" were added.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "590.4(B)",
+        "590.4(C)",
+        "590.4(D)",
+        "590.4(F)",
+        "590.4(G)",
+        "Article 230",
+        "Article 240"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "Completed 2023 change text for 590.4(F), from the workbook this page already cites: CMP-3 has eliminated some existing text concerning various socket styles at Section 590.4(F), and the words \"metal guarded sockets\" and \"metal guard\" were added — the sentence the old summary was cut from",
+          "source": "Carosella/NFPA-based 2023 NEC change workbook: 590.4(F) Lamp Protection",
+          "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf"
+        },
+        {
+          "claim": "The 2023 NEC text of 590.4(F) reads: all lamps for general illumination shall be protected from accidental contact or breakage by a suitable luminaire or lampholder with a guard; metal guarded sockets shall not be used unless the metal guard is connected to the circuit equipment grounding conductor",
+          "source": "Electrical License Renewal — NEC content, 590.6(E) Lamp Protection (quoting the 2023 NEC 590.4(F) text)",
+          "url": "https://www.ElectricalLicenseRenewal.com/Electrical-Continuing-Education-Courses/NEC-Content.php?sectionID=1965"
+        },
+        {
+          "claim": "590.4(G): a box, conduit body, or other enclosure with a cover is required for all splices in temporary wiring, with construction-site exceptions for splices in cord and cable assemblies and for GFCI-protected permanent wiring used temporarily",
+          "source": "mypdh.engineer — 590 Temporary Installations (2020 NEC lesson quoting 590.4(G))",
+          "url": "https://mypdh.engineer/lessons/590-temporary-installations-2/"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C5-590.6",
@@ -1703,8 +3746,8 @@
       "article": "590",
       "section": "590.8",
       "title": "Overcurrent devices in temporary installations — new in 2020",
-      "plain_explanation": "Added in the 2020 edition, this section speaks to the reused breakers and fuses that end up in temp panels. Reused overcurrent devices have to be inspected and maintained for the reuse, and current-limiting protection is required in the higher fault current cases the section describes, such as larger temporary services. It closes the old habit of treating the temp panel as a junk drawer for retired breakers.\n\nNEC 2023 CHANGE:\n• 590.8: Temporary services on 3-phase wye systems over 150 volts to ground now need current-limiting overcurrent devices only when available fault current exceeds 10,000 amps. Current-limiting service overcurrent devices are now needed only when the available fault current goes above 10,000 amps.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Retire damaged or unknown-history breakers instead of cycling them into temp panels. When a temp service is large, confirm the current-limiting requirement with Mike Holt at takeoff, not at energization.",
+      "plain_explanation": "This section was added in the 2020 edition, and it speaks to the reused breakers and fuses that end up in temp panels.\n• Where reused (590.8(A)): an overcurrent device that has been used before may go into a temporary installation only after it is examined, to confirm it has been properly installed, has been properly maintained, and shows no evidence of impending failure — arcing, overheating, loose or bound parts, visible damage, or deterioration.\n• Current-limiting service devices (590.8(B)): the overcurrent devices for a temporary service fed from a solidly grounded wye system of more than 150 volts to ground, but not over 1000 volts phase-to-phase, must be of the current-limiting type. A 277/480 volt temp service is the common case. The 2020 text sets no fault-current threshold for this rule.\n• The section closes the old habit of treating the temp panel as a junk drawer for retired breakers: a device with an unknown history does not get a second life protecting temporary wiring.",
+      "on_the_job": "Retire damaged or unknown-history breakers instead of cycling them into temp panels. When a temp service is large, confirm the current-limiting requirement with Mike Holt at takeoff, not at energization. On a 277/480 volt temp service for a commercial build-out, spec current-limiting breakers or fuses in the temp panel from the start: that service is over 150 volts to ground, so 590.8(B) applies before the first circuit is pulled. On the 120/208 volt spider boxes, the foreman examines every reused breaker at setup — heat discoloration, a loose handle, or a cracked case sends it to the dumpster, not back into the box.",
       "sharma_note": "S-03 reinforces this: breakers go only in panels they are listed for, temp panels included.",
       "figure_idea": "",
       "related_ids": [
@@ -1726,7 +3769,107 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/590-8",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "A breaker that has already cleared faults, sat in a damp gang box, or been swapped from panel to panel may not open when it should. Temporary wiring is handled, moved, and reworked more than any other wiring on the job, so it leans hardest on its overcurrent devices. The current-limiting rule for the bigger wye services also keeps fault energy down where a temp service ties into a stiff utility source.",
+      "exam_trap": "The trap is importing the 2023 threshold into a 2020 answer. Under the 2020 text, a 277/480 volt temporary service needs current-limiting overcurrent devices because it is a solidly grounded wye system over 150 volts to ground — the 2020 rule has no 10,000-ampere trigger. \"Only when the available fault current exceeds 10,000 amps\" is the 2023 revision; it is wrong on a 2020 exam and wrong on a 2020 permit.",
+      "inspection_fails": [
+        "Reused breaker installed with no examination — heat-damaged or cracked case visible in the temp panel (590.8(A)).",
+        "277/480 volt temporary service protected by standard, non-current-limiting overcurrent devices (590.8(B)).",
+        "Reused breaker installed in a temp panel it is not listed for — the S-03 violation that shows up with recycled devices.",
+        "Oversized reused breaker protecting smaller temporary conductors — feeder and branch protection still follows 240.4."
+      ],
+      "tables": [
+        {
+          "caption": "590.8 at a glance (NEC 2020)",
+          "headers": [
+            "Case",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "Reused breaker or fuse",
+              "Examine before install: properly installed, properly maintained, no evidence of impending failure — 590.8(A)"
+            ],
+            [
+              "Wye service over 150 V to ground, up to 1000 V phase-to-phase",
+              "Service overcurrent devices must be current-limiting — 590.8(B)"
+            ],
+            [
+              "120/208 V temp service (120 V to ground)",
+              "590.8(B) does not apply; 590.8(A) still governs any reused device"
+            ]
+          ],
+          "note": "The 10,000 A fault-current threshold is a 2023 change — see the edition note."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-590.8-two-gates.svg",
+          "alt": "Flow diagram of the two 590.8 checks: examine a reused overcurrent device for proper installation, maintenance, and no evidence of impending failure; a solidly grounded wye temporary service over 150 volts to ground needs current-limiting devices.",
+          "caption": "Two gates: examine reused devices; current-limiting on bigger wye services.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A breaker pulled from a demolished panel is installed in a temp panel. What does 590.8(A) require first?",
+          "choices": [
+            "Nothing — temp panels are exempt",
+            "Examination: properly installed, properly maintained, no evidence of impending failure",
+            "A new listing label",
+            "Load testing at 200 percent"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Reused devices must be examined before they go into a temporary installation.",
+          "nec_ref": "590.8(A)"
+        },
+        {
+          "question": "A temporary service is 277/480 volt, solidly grounded wye. Under the 2020 NEC, the service overcurrent devices must be:",
+          "choices": [
+            "Current-limiting type",
+            "Rated at least 10,000 A interrupting",
+            "Fused only, no breakers",
+            "GFCI protected"
+          ],
+          "answer_index": 0,
+          "explain_plain": "More than 150 volts to ground and not over 1000 volts phase-to-phase: current-limiting is required, with no fault-current threshold in the 2020 text.",
+          "nec_ref": "590.8(B)"
+        },
+        {
+          "question": "Which condition is evidence of impending failure under 590.8?",
+          "choices": [
+            "A breaker manufactured before 2020",
+            "Arcing, overheating, or visible damage",
+            "A breaker with a handle tie",
+            "A device installed outdoors"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The informational note lists arcing, overheating, loose or bound parts, visible damage, and deterioration.",
+          "nec_ref": "590.8(A)"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 590.8: Temporary services on 3-phase wye systems over 150 volts to ground now need current-limiting overcurrent devices only when available fault current exceeds 10,000 amps. Current-limiting service overcurrent devices are now needed only when the available fault current goes above 10,000 amps.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "590.8(A)",
+        "590.8(B)",
+        "590.4(B)",
+        "240.4"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "NEC 2020 590.8(B): overcurrent devices for solidly grounded wye services of more than 150 volts to ground but not exceeding 1000 volts phase-to-phase shall be current limiting — the 2020 text has no available-fault-current threshold",
+          "source": "mypdh.engineer — 590 Temporary Installations (2020 NEC lesson quoting 590.8)",
+          "url": "https://mypdh.engineer/lessons/590-temporary-installations-2/"
+        },
+        {
+          "claim": "NEC 2020 590.8(A): reused overcurrent devices must be examined to ensure they have been properly installed, properly maintained, and show no evidence of impending failure (arcing, overheating, loose or bound parts, visible damage, deterioration)",
+          "source": "mypdh.engineer — 590 Temporary Installations (2020 NEC lesson quoting 590.8)",
+          "url": "https://mypdh.engineer/lessons/590-temporary-installations-2/"
+        }
+      ],
+      "rich": 1
     }
   ],
   "toc": [
