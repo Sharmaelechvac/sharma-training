@@ -350,8 +350,8 @@
       "article": "625",
       "section": "625.41",
       "title": "Protección contra sobrecorriente — 125% de la carga máxima",
-      "plain_explanation": "La protección contra sobrecorriente de los alimentadores y circuitos derivados que alimentan la carga de EV se dimensiona para servicio continuo a no menos del 125% de la carga máxima del equipo. La matemática que espera el inspector: un cargador de 32A va en un dispositivo de 40A; un cargador de 48A va en un dispositivo de 60A; un cargador ajustado a una salida de 40A necesita un dispositivo de al menos 50A.",
-      "on_the_job": "Dimensione desde el ajuste máximo del cargador, no desde el auto que resulte estar conectado hoy.",
+      "plain_explanation": "La carga de un vehículo eléctrico es una carga continua — un cargador puede consumir su valor nominal durante tres horas o más en una carga nocturna. Por eso el dispositivo de protección contra sobrecorriente que protege un alimentador o circuito derivado que alimenta la carga de EV se dimensiona a no menos del 125% de la carga máxima del equipo, y los conductores se dimensionan con la misma cifra (625.42).\n• Cargador de 32 A → el 125% es 40 A → un interruptor de 40 A.\n• Cargador de 40 A → el 125% es 50 A → un interruptor de 50 A.\n• Cargador de 48 A → el 125% es 60 A → un interruptor de 60 A.\nDimensione desde el ajuste máximo del cargador, no desde el auto que esté conectado hoy ni desde un ajuste menor elegido en una aplicación. Cuando el acceso al ajuste está restringido, o un sistema de gestión de carga certificado limita la carga, 625.42 permite calcular la acometida y el alimentador con la carga limitada — pero cada salida de EV sigue teniendo su propio circuito derivado (625.40).",
+      "on_the_job": "Garaje para dos autos en Orlando con un tablero Siemens de 200 A. Un lado es un cargador enchufable ajustado a 40 A en un receptáculo de 240 V: 40 × 1,25 = 50, así que va en un interruptor GFCI bipolar de 50 A — 625.54 exige protección GFCI para el receptáculo de carga — con cobre de 8 AWG, bueno para 50 A a 75 °C. El otro lado es una unidad cableada ajustada a 48 A: 48 × 1,25 = 60, un interruptor de 60 A, y el conductor sube a cobre de 6 AWG porque el 8 AWG llega solo hasta 50 A. El directorio se escribe desde los ajustes máximos, no desde los autos que viven ahí ahora.",
       "sharma_note": "",
       "figure_idea": "Anotación en el directorio del tablero: EVSE de 48A → interruptor termomagnético de 60A, conductor dimensionado en correspondencia.",
       "related_ids": [
@@ -363,7 +363,105 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C6-625.40",
-      "next_id": "C6-625.42"
+      "next_id": "C6-625.42",
+      "rich": 1,
+      "why_it_exists": "Un interruptor y sus conductores dimensionados al 100% de una carga que funciona toda la noche quedan al límite térmico por horas. Los interruptores disparan por calor, las terminaciones se aflojan y se cocinan con ciclos largos repetidos, y el aislamiento envejece rápido cuando trabaja caliente. El factor del 125% es el margen del Código para cargas continuas: mantiene el dispositivo, las terminales y el conductor en su rango cómodo durante toda la carga, cada noche, por años.",
+      "exam_trap": "La trampa es dimensionar desde el ajuste de la pantalla: «el cargador está a 32 A, así que un interruptor de 40 A es suficiente» — hasta que el propietario lo sube a 48 A en la aplicación y el interruptor de 40 A se cocina cada noche. Sin el ajuste restringido que exige 625.42, la carga máxima es el ajuste máximo del equipo. La otra trampa es un cargador de 48 A en un interruptor de 50 A porque había un receptáculo de 50 A a mano: 50 es menos que 60, y la matemática falla antes de la pregunta del receptáculo.",
+      "tables": [
+        {
+          "caption": "Dimensionamiento 625.41: máximo del cargador → interruptor y conductor",
+          "headers": [
+            "Máx. cargador",
+            "× 125%",
+            "Interruptor mín.",
+            "Conductor Cu (75 °C)"
+          ],
+          "rows": [
+            [
+              "32 A",
+              "40 A",
+              "40 A",
+              "8 AWG (50 A)"
+            ],
+            [
+              "40 A",
+              "50 A",
+              "50 A",
+              "8 AWG (50 A)"
+            ],
+            [
+              "48 A",
+              "60 A",
+              "60 A",
+              "6 AWG (65 A)"
+            ]
+          ],
+          "note": "Ampacidades de la Tabla 310.16, cobre, columna de 75 °C. Los conductores se dimensionan con la misma cifra del 125% que el interruptor (625.42)."
+        }
+      ],
+      "inspection_fails": [
+        "Cargador de 48 A protegido por un interruptor de 50 A — el 125% de la carga máxima es 60 A (625.41).",
+        "Circuito del cargador dimensionado desde el ajuste de carga actual del auto en vez del ajuste máximo del equipo.",
+        "Dos salidas de EV compartiendo un circuito derivado — cada salida de EV tiene su propio circuito (625.40).",
+        "Interruptor de 60 A conectado a cobre de 8 AWG — la ampacidad del conductor (50 A a 75 °C) queda por debajo de la cifra del 125%.",
+        "Receptáculo de carga de EV sin protección GFCI (625.54)."
+      ],
+      "page_quiz": [
+        {
+          "question": "Un cargador de EV cableado está ajustado a su máximo de 48 A. ¿Tamaño mínimo del interruptor?",
+          "choices": [
+            "40 A",
+            "50 A",
+            "60 A",
+            "80 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La carga de EV es una carga continua: 48 × 1,25 = 60 A.",
+          "nec_ref": "625.41"
+        },
+        {
+          "question": "Un cargador puede ajustarse hasta 40 A pero actualmente está ajustado a 32 A. Sin ajuste de acceso restringido y sin gestión de carga, dimensione el circuito desde:",
+          "choices": [
+            "32 A — el ajuste actual",
+            "40 A — el ajuste máximo",
+            "El tamaño de la batería del auto",
+            "El valor nominal del receptáculo"
+          ],
+          "answer_index": 1,
+          "explain_plain": "625.41 dimensiona desde la carga máxima del equipo. Un ajuste menor en la aplicación solo cuenta cuando el ajuste está restringido o la carga se gestiona según 625.42.",
+          "nec_ref": "625.41, 625.42"
+        },
+        {
+          "question": "Para un cargador con una carga máxima de 40 A, los conductores del circuito derivado necesitan una ampacidad de al menos:",
+          "choices": [
+            "40 A",
+            "45 A",
+            "50 A",
+            "60 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Los conductores se dimensionan con la misma cifra de carga continua que el interruptor: 40 × 1,25 = 50 A.",
+          "nec_ref": "625.42"
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c6/C6-625.41-chart.svg",
+          "alt": "Tabla de dimensionamiento con tres filas: un cargador de 32 amperios por 1,25 va en un interruptor de 40 amperios con cobre de 8 AWG, uno de 40 amperios en un interruptor de 50 amperios con cobre de 8 AWG, y uno de 48 amperios en un interruptor de 60 amperios con cobre de 6 AWG.",
+          "caption": "La matemática del 125% para los tres tamaños de cargador más comunes.",
+          "w": 900,
+          "h": 1240
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios del NEC 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "625.41",
+        "625.42",
+        "625.40",
+        "625.54",
+        "Table 310.16",
+        "110.14(C)"
+      ]
     },
     {
       "id": "C6-625.42",
@@ -461,8 +559,8 @@
       "article": "625",
       "section": "625.50",
       "title": "Almacenamiento del conector — 18 in en interiores, 24 in en exteriores",
-      "plain_explanation": "A menos que el equipo esté certificado y marcado para una disposición distinta, el medio de acoplamiento (el conector del vehículo) debe guardarse o ubicarse a una altura no menor de 18 in sobre el piso en lugares interiores y no menor de 24 in sobre el nivel del suelo en lugares exteriores, y posicionarse de modo que pueda acoplarse directamente al vehículo.",
-      "on_the_job": "Monte el soporte (holster) lo bastante alto para que el conector no quede en el agua del piso del garaje ni en la escorrentía de la entrada.",
+      "plain_explanation": "A menos que el equipo esté certificado y marcado para una disposición distinta, el medio de acoplamiento — el conector del vehículo — debe guardarse o ubicarse a una altura de:\n• No menos de 18 in sobre el piso en lugares interiores.\n• No menos de 24 in sobre el nivel del suelo en lugares exteriores.\nTambién tiene que posicionarse de modo que pueda acoplarse directamente al vehículo: guardado donde el cable realmente alcanza el puerto de carga, no enrollado en un gancho al otro lado del garaje. Las alturas son mínimos, y se miden hasta donde queda el conector en su soporte o posición de almacenamiento.",
+      "on_the_job": "Florida hace que este punto sea fácil de fallar. Un cargador de pared dentro de un garaje lleva su soporte montado de modo que el conector se guarda a 18 in o más sobre la losa — por encima de la línea de agua cuando se lava el piso o una tormenta mete lluvia bajo la puerta. El mismo cargador en una pared exterior o en un poste de cochera es un lugar exterior: 24 in mínimo sobre el nivel del suelo, porque una tormenta de tarde puede encharcar agua contra esa pared en minutos. Mida hasta donde queda el conector guardado, no hasta la parte superior del soporte.",
       "sharma_note": "",
       "figure_idea": "Conector guardado en su soporte a la altura reglamentaria, en versiones de interior y de exterior.",
       "related_ids": [
@@ -472,7 +570,90 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C6-625.44",
-      "next_id": "C6-625.52"
+      "next_id": "C6-625.52",
+      "rich": 1,
+      "why_it_exists": "Un conector guardado al nivel del piso vive en el peor lugar del edificio: el agua del piso del garaje, la escorrentía de la entrada, el paso de las llantas y las herramientas que caen. El agua y la arena en los contactos del conector los corroen, y un conector dañado también puede dañar la entrada del vehículo. Las alturas mínimas mantienen el medio de acoplamiento fuera del agua estancada y fuera del paso de las llantas.",
+      "exam_trap": "La trampa es llevar el número de interiores a exteriores: 18 in es la medida para el piso interior. En exteriores el mínimo es 24 in, medido desde el nivel del suelo — no desde el punto alto de la entrada ni desde la parte superior de un adoquín. La segunda trampa es medir hasta los tornillos de montaje del soporte en vez de hasta el conector guardado; la regla trata de dónde queda el medio de acoplamiento.",
+      "tables": [
+        {
+          "caption": "Altura mínima de almacenamiento del conector del vehículo",
+          "headers": [
+            "Lugar",
+            "Mínimo",
+            "Medido desde"
+          ],
+          "rows": [
+            [
+              "Interior",
+              "18 in",
+              "El piso"
+            ],
+            [
+              "Exterior",
+              "24 in",
+              "El nivel del suelo"
+            ]
+          ],
+          "note": "A menos que el equipo esté certificado y marcado para una disposición distinta."
+        }
+      ],
+      "inspection_fails": [
+        "Soporte del conector montado a 12 in sobre una entrada exterior — el mínimo en exteriores es 24 in sobre el nivel del suelo (625.50).",
+        "Conector dejado tirado en el piso del garaje en vez de guardado en su soporte.",
+        "Altura interior de 18 in usada como patrón para la unidad exterior en el mismo trabajo.",
+        "Conector guardado donde el cable no puede acoplarse directamente al vehículo desde su posición de almacenamiento."
+      ],
+      "page_quiz": [
+        {
+          "question": "Un conector de vehículo guardado en exteriores debe ubicarse al menos ___ sobre el nivel del suelo.",
+          "choices": [
+            "12 in",
+            "18 in",
+            "24 in",
+            "36 in"
+          ],
+          "answer_index": 2,
+          "explain_plain": "En exteriores el mínimo es 24 in sobre el nivel del suelo. La cifra de 18 in es la regla de interiores.",
+          "nec_ref": "625.50"
+        },
+        {
+          "question": "Un conector de vehículo guardado en interiores debe ubicarse al menos ___ sobre el piso.",
+          "choices": [
+            "12 in",
+            "18 in",
+            "24 in",
+            "30 in"
+          ],
+          "answer_index": 1,
+          "explain_plain": "En interiores el mínimo es 18 in sobre el piso.",
+          "nec_ref": "625.50"
+        },
+        {
+          "question": "Las alturas de almacenamiento de 18 in / 24 in no aplican cuando:",
+          "choices": [
+            "El garaje tiene un drenaje en el piso",
+            "El equipo está certificado y marcado para una disposición distinta",
+            "El conector tiene una cubierta contra el clima",
+            "El cargador está cableado directamente"
+          ],
+          "answer_index": 1,
+          "explain_plain": "625.50 empieza con la excepción: certificado y marcado para una disposición distinta. Un drenaje o una cubierta no cambian nada.",
+          "nec_ref": "625.50"
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c6/C6-625.50-holster-heights.svg",
+          "alt": "Dos elevaciones del soporte de un cargador de EV: en interiores, el conector guardado queda a un mínimo de 18 pulgadas sobre el piso del garaje; en exteriores, el conector guardado queda a un mínimo de 24 pulgadas sobre el nivel del suelo.",
+          "caption": "Alturas de guardado: 18 in en interiores, 24 in en exteriores.",
+          "w": 900,
+          "h": 1400
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios del NEC 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "625.50"
+      ]
     },
     {
       "id": "C6-625.52",
@@ -480,8 +661,8 @@
       "article": "625",
       "section": "625.52",
       "title": "Ventilación — solo donde la certificación la exige",
-      "plain_explanation": "Los lugares de carga en interiores necesitan ventilación mecánica solo donde el equipo está certificado como que requiere ventilación para uso en interiores. El equipo certificado para carga en interiores sin ventilación no necesita ninguna. Donde se requiere ventilación, es un sistema permanente de suministro y extracción ventilado directamente al exterior, dispuesto para los vehículos que se cargan.",
-      "on_the_job": "Lea la certificación del EVSE antes de cotizar ductos — la mayoría del equipo residencial moderno está certificado para uso en interiores sin ventilación alguna.",
+      "plain_explanation": "La carga de EV en interiores necesita ventilación mecánica solo donde la certificación lo dice:\n• Equipo certificado como que requiere ventilación para uso en interiores: se requiere ventilación mecánica.\n• Equipo certificado para carga en interiores sin ventilación: no se requiere ninguna — la mayoría del EVSE residencial moderno está certificado así.\n• Donde se requiere ventilación, es un sistema permanente: aire de suministro y extracción, ventilado directamente al exterior, dispuesto para los vehículos que se cargan.\nLa certificación y las instrucciones de instalación son la regla aquí — el equipo se instala según su certificación (110.3(B)), y 625.52 sujeta la cuestión de la ventilación a esa certificación.",
+      "on_the_job": "Instalación en un garaje de una casa de Florida: un EVSE de pared de 48 A en un circuito de 60 A (625.41) — la placa y las instrucciones dicen certificado para uso en interiores, no requiere ventilación. La cuadrilla no cotiza ductos y anota la línea de la certificación en la orden de trabajo para que el inspector vea la base en el rough-in. Al otro lado de la ciudad, un taller de flotas compra cargadores cuya certificación exige ventilación para uso en interiores: ese trabajo lleva un sistema permanente de suministro y extracción ventilado directamente al exterior, cotizado antes de montar los cargadores.",
       "sharma_note": "",
       "figure_idea": "Cargador de garaje mostrado dos veces: certificado como 'no requiere ventilación' frente a una instalación comercial ventilada.",
       "related_ids": [
@@ -491,7 +672,94 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C6-625.50",
-      "next_id": "C6-625.54"
+      "next_id": "C6-625.54",
+      "why_it_exists": "Algunos equipos de carga y químicas de baterías pueden desprender gases durante la carga, y en un garaje cerrado no debe permitirse que esos gases se acumulen. El equipo certificado para uso en interiores sin ventilación tiene ese peligro eliminado por ingeniería, así que el Código no obliga a cada cargador de garaje a llevar ductos que no necesita — la ventilación sigue a la certificación, no a una regla general.",
+      "exam_trap": "La trampa es la respuesta general — todo cargador de EV en interiores necesita ventilación mecánica. 625.52 exige ventilación solo donde el equipo está certificado como que la requiere para uso en interiores. La trampa inversa también hace fallar trabajos: omitir la ventilación donde la certificación sí la exige, u ofrecer un ventilador portátil donde se requiere un sistema permanente de suministro y extracción ventilado al exterior.",
+      "inspection_fails": [
+        "Ventilación exigida por la certificación del EVSE, pero ningún sistema instalado.",
+        "Extracción descargada en el ático en lugar de ventilarse directamente al exterior.",
+        "Ventilador portátil ofrecido como el sistema de ventilación — el sistema debe ser permanente.",
+        "EVSE instalado en interiores que no está certificado para uso en interiores en absoluto."
+      ],
+      "tables": [
+        {
+          "caption": "Lea primero la certificación",
+          "headers": [
+            "La certificación dice",
+            "Ventilación"
+          ],
+          "rows": [
+            [
+              "Requiere ventilación para uso en interiores",
+              "Suministro + extracción permanentes, ventilados directamente al exterior"
+            ],
+            [
+              "Uso en interiores, no requiere ventilación",
+              "Ninguna"
+            ],
+            [
+              "No certificado para uso en interiores",
+              "No lo instale en interiores"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c6/C6-625.52-ventilation.svg",
+          "alt": "Panel de comparación de dos instalaciones de carga de EV en interiores: un cargador de garaje certificado para uso en interiores sin ventilación requerida y sin ductos, junto a un cargador certificado como que requiere ventilación, con aire de suministro permanente y una extracción con ductos directamente al exterior.",
+          "caption": "La certificación decide — sin ventilación, o un sistema permanente de suministro y extracción.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "La carga de EV en interiores requiere ventilación mecánica cuando:",
+          "choices": [
+            "Siempre",
+            "Nunca",
+            "El equipo está certificado como que la requiere para uso en interiores",
+            "El garaje no tiene ventanas"
+          ],
+          "answer_index": 2,
+          "explain_plain": "625.52 sujeta la ventilación a la certificación: se requiere solo donde el equipo está certificado como que requiere ventilación para uso en interiores.",
+          "nec_ref": "625.52"
+        },
+        {
+          "question": "Donde se requiere ventilación, el sistema debe ser:",
+          "choices": [
+            "Un ventilador portátil",
+            "Permanente, de suministro y extracción, ventilado directamente al exterior",
+            "Una puerta con rejillas",
+            "Una ventana abierta"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El sistema requerido es permanente, con suministro y extracción ventilados directamente al exterior.",
+          "nec_ref": "625.52"
+        },
+        {
+          "question": "La mayoría del EVSE residencial moderno está certificado:",
+          "choices": [
+            "Como que requiere ventilación",
+            "Para uso en interiores sin ventilación",
+            "Solo para uso en exteriores",
+            "Sin certificación alguna"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La mayoría del equipo residencial moderno está certificado para carga en interiores sin ventilación requerida — lea la certificación de la unidad que tiene enfrente.",
+          "nec_ref": "625.52"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "625.52",
+        "110.3(B)",
+        "625.41"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C6-625.54",
@@ -523,8 +791,8 @@
       "article": "625",
       "section": "625.56",
       "title": "Lugar húmedo — caja a prueba de intemperie",
-      "plain_explanation": "Los tomacorrientes instalados en exteriores o en lugares húmedos para la carga de EV deben estar encerrados de modo que sean a prueba de intemperie con la tapa del enchufe insertada o retirada — en lenguaje sencillo, 'a prueba de intemperie mientras está en uso', el mismo deber que el de otras cubiertas de tomacorrientes exteriores.",
-      "on_the_job": "Las cubiertas abatibles estándar no cumplen el deber de uso en servicio; especifique la cubierta tipo burbuja (bubble cover) en los tomacorrientes exteriores de cargadores.",
+      "plain_explanation": "625.56 tiene una sola oración: los tomacorrientes instalados en exteriores o en lugares húmedos para la carga de EV deben estar encerrados de modo que la caja sea a prueba de intemperie con la tapa del enchufe insertada o retirada. En lenguaje sencillo, a prueba de intemperie mientras está en uso — el mismo deber que otros tomacorrientes exteriores tienen según 406.9(B)(1).\n• Una cubierta abatible estándar es a prueba de intemperie solo cuando no hay nada conectado. Falla esta regla en el momento en que se conecta un cable de carga.\n• La cubierta que cumple es la de uso en servicio (tipo burbuja): una capucha profunda que se cierra sobre el enchufe y el cable durante toda la carga.\n• El tomacorriente aún debe la protección GFCI para el personal según 625.54. La cubierta y el GFCI son deberes separados — uno no excusa al otro.",
+      "on_the_job": "Casa de especificación en Florida con el tomacorriente del cargador en la pared del frente de la casa: un tomacorriente de 240 V, 50 A con protección GFCI (625.54) y una cubierta tipo burbuja encima, para que el enchufe del EVSE se mantenga seco durante una tormenta de tarde en medio de una carga. Estándar de Sharma: ponga la cubierta de uso en servicio en la lista de material del rough-in para todo tomacorriente exterior de cargador — las cubiertas abatibles estándar no cumplen el deber de uso en servicio, y cambiar una cubierta después del final es una visita de garantía, no una orden de cambio.",
       "sharma_note": "",
       "figure_idea": "Tomacorriente exterior con cubierta para uso en servicio, cargador conectado y cubierta cerrada.",
       "related_ids": [
@@ -532,9 +800,95 @@
       ],
       "florida_note": "",
       "verified": true,
-      "sharma_rule_ids": [],
       "prev_id": "C6-625.54",
-      "next_id": "C6-ART-626"
+      "next_id": "C6-ART-626",
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Un tomacorriente exterior de EV permanece conectado por horas, normalmente sin vigilancia y a menudo toda la noche, bajo la lluvia de Florida. Una cubierta que solo funciona cuando no hay nada conectado protege el tomacorriente exactamente cuando no se está usando. El agua que entra a un tomacorriente con energía corroe los contactos, crea caminos de fuga y puede energizar la caja — la cubierta de uso en servicio mantiene el clima fuera durante toda la carga.",
+      "exam_trap": "La trampa es 'a prueba de intemperie significa una cubierta abatible'. Una cubierta abatible es a prueba de intemperie con el enchufe retirado; 625.56 exige a prueba de intemperie con el enchufe insertado O retirado. La otra respuesta incorrecta es que la protección interna del propio EVSE cubre el tomacorriente — no sustituye el GFCI de 625.54, y no hace nada por el deber de la caja de 625.56.",
+      "inspection_fails": [
+        "Cubierta abatible en un tomacorriente exterior de EV — no es a prueba de intemperie mientras el cargador está conectado.",
+        "Cubierta de uso en servicio muy poco profunda para el enchufe, dejada abierta con una cuña para que la capucha no pueda cerrar.",
+        "Tomacorriente exterior de carga sin protección GFCI para el personal (625.54).",
+        "Caja del tomacorriente abierta a la lluvia impulsada por el viento en la entrada del conducto — la cubierta es correcta, la caja no es a prueba de intemperie."
+      ],
+      "tables": [
+        {
+          "caption": "¿Qué cubierta cumple 625.56?",
+          "headers": [
+            "Cubierta",
+            "Enchufe retirado",
+            "Enchufe insertado"
+          ],
+          "rows": [
+            [
+              "Cubierta abatible",
+              "A prueba de intemperie",
+              "Expuesto — falla"
+            ],
+            [
+              "Cubierta de uso en servicio (burbuja)",
+              "A prueba de intemperie",
+              "A prueba de intemperie — cumple"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c6/C6-625.56-in-use-cover.svg",
+          "alt": "Elevación de un tomacorriente exterior de carga de EV bajo una cubierta profunda de uso en servicio tipo burbuja que permanece cerrada sobre el enchufe y el cable insertados, junto a una cubierta abatible estándar tachada que deja el tomacorriente conectado expuesto al clima.",
+          "caption": "A prueba de intemperie con el enchufe puesto — esa es toda la regla.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "625.56 exige que la caja de un tomacorriente exterior de carga de EV sea a prueba de intemperie:",
+          "choices": [
+            "Solo con el enchufe retirado",
+            "Solo con el enchufe insertado",
+            "Con el enchufe insertado o retirado",
+            "Solo durante la inspección"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La caja debe ser a prueba de intemperie con la tapa del enchufe insertada o retirada — a prueba de intemperie mientras está en uso.",
+          "nec_ref": "625.56"
+        },
+        {
+          "question": "¿Qué cubierta cumple 625.56 para un tomacorriente exterior de cargador?",
+          "choices": [
+            "Cubierta abatible estándar",
+            "Cubierta de uso en servicio (burbuja) que se cierra sobre el enchufe",
+            "Sin cubierta si está bajo el techo de un carport",
+            "Una cubierta es opcional en exteriores"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Solo una cubierta de uso en servicio permanece a prueba de intemperie con el cargador conectado.",
+          "nec_ref": "625.56"
+        },
+        {
+          "question": "El EVSE tiene su propia protección interna para el personal. El GFCI del tomacorriente según 625.54 es:",
+          "choices": [
+            "Ya no es requerido",
+            "Aún es requerido",
+            "Requerido solo en exteriores",
+            "Requerido solo a 120 V"
+          ],
+          "answer_index": 1,
+          "explain_plain": "625.54 exige protección GFCI para el personal en todo tomacorriente instalado para la carga de EV; el sistema interno del EVSE no lo sustituye.",
+          "nec_ref": "625.54"
+        }
+      ],
+      "code_refs": [
+        "625.56",
+        "625.54",
+        "406.9(B)(1)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C6-ART-626",
@@ -585,8 +939,8 @@
       "article": "640",
       "section": "640",
       "title": "Artículo 640 — Equipos de procesamiento, amplificación y reproducción de señales de audio",
-      "plain_explanation": "Introducción: reglas de alimentación y cableado para sistemas de sonido profesionales y comerciales — estudios, recintos, lugares de culto. En su mayoría es un artículo de contratista especializado; Sharma lo toca en adecuaciones comerciales con audio distribuido.",
-      "on_the_job": "En una adecuación con audio distribuido, resuelva quién es dueño de la alimentación del rack y quién es dueño del cableado de bocinas antes de la instalación en bruto. La energía de voltaje de línea y el cable de audio de bajo voltaje siguen reglas distintas y hábitos de oficios distintos; esa división pertenece a la oferta, no a una orden de cambio en el acabado.",
+      "plain_explanation": "El Artículo 640 cubre las reglas de alimentación y cableado para los equipos de procesamiento, amplificación y reproducción de señales de audio — los sistemas de sonido profesionales y comerciales en estudios, recintos, lugares de culto y adecuaciones con audio distribuido.\n• La energía de voltaje de línea que llega al equipo — los circuitos del rack — sigue las reglas generales de los Capítulos 1 a 4 con las modificaciones del Artículo 640.\n• El lado de audio — el cableado de bocinas y el cableado de señal — sigue las reglas de cableado propias del Artículo 640, y no es intercambiable con el cableado de voltaje de línea.\n• La mayor parte del artículo recae en el contratista especializado de audio/video. Sharma lo toca cuando una adecuación comercial incluye audio distribuido y alguien tiene que alimentar el rack.",
+      "on_the_job": "Una adecuación de restaurante con audio distribuido muestra la división. La oferta de Sharma lleva la alimentación del rack — dos circuitos derivados de 20 A hasta la ubicación del rack de AV, el tamaño de circuito que instalamos como mínimo comercial — y el contratista de AV es dueño del cableado de bocinas, instalado y terminado según el Artículo 640. Resuelva quién es dueño de qué antes de la instalación en bruto: la energía de voltaje de línea y el cable de audio de bajo voltaje siguen reglas distintas y hábitos de oficios distintos, y esa división pertenece a la oferta, no a una orden de cambio en el acabado.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -594,7 +948,99 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C6-ART-630",
-      "next_id": "C6-ART-645"
+      "next_id": "C6-ART-645",
+      "rich": 1,
+      "why_it_exists": "Un sistema de sonido pone dos cableados muy distintos en el mismo rack y el mismo techo: energía de 120 V que puede iniciar un incendio, y cable de bocinas cuyas señales captan cada ruido cercano. Si los instala como un solo sistema, obtiene zumbido en las bocinas, voltaje de línea donde nadie lo espera, y fallas en cable que no fue construido para eso. El artículo mantiene los dos lados separados y le da a cada uno sus propias reglas.",
+      "exam_trap": "La trampa es tratar el cable de bocinas como cualquier otro cable de bajo voltaje que puede viajar junto con la energía: «es solo cable de bocinas — páselo por el conducto de la energía del rack». El Artículo 640 le da al lado de audio sus propias reglas de cableado, y mezclar los dos lados en un solo conducto es exactamente lo que el artículo busca evitar. La trampa de alcance va en la otra dirección: suponer que todo el sistema es problema del contratista de AV cuando nadie incluyó la energía del rack en el alcance.",
+      "tables": [
+        {
+          "caption": "Una adecuación con audio distribuido: quién es dueño de qué",
+          "headers": [
+            "Parte del trabajo",
+            "De quién es",
+            "Reglas"
+          ],
+          "rows": [
+            [
+              "Energía del rack (120 V)",
+              "Electricista",
+              "Cap. 1–4 + Art. 640"
+            ],
+            [
+              "Cableado de bocinas",
+              "Contratista de AV",
+              "Art. 640"
+            ],
+            [
+              "Cableado de señal",
+              "Contratista de AV",
+              "Art. 640"
+            ],
+            [
+              "La división misma",
+              "Se resuelve en la oferta",
+              "Antes de la instalación en bruto"
+            ]
+          ]
+        }
+      ],
+      "inspection_fails": [
+        "Cable de bocinas instalado en el mismo conducto que los circuitos de energía de 120 V del rack.",
+        "Energía del rack nunca incluida en el alcance — sin circuitos en la oferta, y una orden de cambio escrita en el acabado.",
+        "Cableado de audio instalado sin separación del cableado de voltaje de línea sobre el techo.",
+        "Sistema de sonido energizado con el lado de energía y el lado de audio instalados como un solo sistema."
+      ],
+      "page_quiz": [
+        {
+          "question": "El Artículo 640 cubre:",
+          "choices": [
+            "Sistemas residenciales de timbre",
+            "Equipos de procesamiento, amplificación y reproducción de señales de audio",
+            "Sistemas de alarma contra incendios",
+            "Solo distribución de antenas de TV"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El Artículo 640 es el artículo de los sistemas de sonido: estudios, recintos, lugares de culto y audio distribuido.",
+          "nec_ref": "640.1"
+        },
+        {
+          "question": "En una adecuación comercial con audio distribuido, la energía de voltaje de línea del rack debe:",
+          "choices": [
+            "Incluirse en el alcance del cableado de bocinas",
+            "Incluirse como trabajo eléctrico y resolverse antes de la instalación en bruto",
+            "Agregarse en el acabado con una orden de cambio",
+            "Dejarse al proveedor del equipo"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La energía del rack es trabajo eléctrico de voltaje de línea. La división entre la energía del rack y el cableado de bocinas pertenece a la oferta, no a una orden de cambio en el acabado.",
+          "nec_ref": "Article 640"
+        },
+        {
+          "question": "¿Cuál afirmación sobre el lado de audio es correcta?",
+          "choices": [
+            "El cable de bocinas sigue las reglas de cableado propias del Artículo 640",
+            "El cable de bocinas está exento del Código",
+            "El cable de bocinas puede compartir cualquier conducto con circuitos de energía",
+            "El cableado de audio no necesita separación del cableado de voltaje de línea"
+          ],
+          "answer_index": 0,
+          "explain_plain": "Bajo voltaje no significa sin reglas. El lado de audio tiene sus propias reglas de cableado en el Artículo 640 y no es intercambiable con el cableado de voltaje de línea.",
+          "nec_ref": "Article 640"
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c6/C6-ART-640-two-systems.svg",
+          "alt": "Diagrama de flujo en dos bandas: el tablero alimenta circuitos de 20 amperios al rack de AV en el lado de energía de voltaje de línea, y los amplificadores alimentan el cableado de bocinas en el lado de audio, con la advertencia de que los dos lados nunca comparten un conducto.",
+          "caption": "Un rack, dos sistemas: lado de energía y lado de audio.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios del NEC 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "640.1"
+      ]
     },
     {
       "id": "C6-ART-645",
@@ -619,8 +1065,8 @@
       "article": "646",
       "section": "646",
       "title": "Artículo 646 — Centros de datos modulares",
-      "plain_explanation": "Introducción: módulos de centro de datos fabricados en planta, tratados como equipo certificado con sus propias reglas de alimentación, desconexión y puesta a tierra. Agregado en un ciclo anterior (2014), no es nuevo en 2020.\n\nCAMBIO NEC 2023:\n• 646.19: La revisión de la sección 646.19 especifica los requisitos para las puertas de salida (egress) ubicadas en los centros de datos modulares.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Trate el módulo como equipo certificado: el alcance de Sharma es el alimentador de suministro, la desconexión y la conexión de puesta a tierra conectados en los terminales marcados del módulo. Nunca modifique en obra el cableado interno del módulo para que encaje una condición del sitio — esa es la certificación del fabricante que estaría anulando.",
+      "plain_explanation": "El Artículo 646 cubre los centros de datos modulares: unidades prefabricadas fabricadas en planta, con capacidad nominal de 600 volts o menos — una envolvente exterior que alberga bastidores o gabinetes de equipo de tecnología de la información más el equipo de apoyo, distribución de energía y enfriamiento, que los hace funcionar. El artículo se agregó en el ciclo de 2014; no es nuevo en 2020.\n• Un módulo certificado se trata como equipo certificado: cumple las secciones específicas a las que remite el artículo, y su cableado interno es la certificación del fabricante — la ruta de certificación suele pasar por el esquema Subject 2755 de UL para centros de datos modulares. Un módulo que no está certificado debe cumplir el Artículo 646 por completo.\n• 646.5: una placa de identificación en cada envolvente indica la corriente de plena carga y la capacidad nominal de corriente de cortocircuito. Los conductores de alimentación se dimensionan a no menos del 125 por ciento de la corriente de plena carga de la placa.\n• 646.9: los cordones y cables flexibles certificados para uso extra rudo pueden interconectar envolventes de módulos separadas — pero nunca pueden conectar un módulo a una fuente de energía externa, como la acometida del edificio.\n• 646.18: el espacio alrededor del equipo eléctrico dentro del módulo cumple 110.26.\n• 646.19: para equipo de más de 6 ft de ancho o de profundidad, hay una entrada y salida del espacio de trabajo en cada extremo, cada una de al menos 24 in de ancho y 6½ ft de alto, con herraje de pánico certificado o herraje de salida de incendios certificado. Se permite una sola entrada solo donde se cumpla 646.19(A) o (B).",
+      "on_the_job": "Trate el módulo como equipo certificado: el alcance de Sharma es el alimentador de suministro, la desconexión y la conexión de puesta a tierra conectados en los terminales marcados del módulo. Nunca modifique en obra el cableado interno del módulo para que encaje una condición del sitio — esa es la certificación del fabricante que estaría anulando. Ejemplo trabajado: un módulo se coloca sobre una base detrás de una bodega en Winter Park con una corriente de plena carga de placa de 160 A. Los conductores de alimentación se dimensionan al 125 por ciento — 200 A como mínimo — antes de cualquier otro ajuste, y el alimentador se conecta solo en los terminales de suministro marcados. La placa permanece visible después de instalar la unidad; si la distribución de la base la deja contra una pared, eso es un punto de punch list, no un detalle.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -637,7 +1083,118 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Un centro de datos modular concentra la distribución energizada de toda una sala en una caja de acero con espacio para que trabaje una sola persona. Si una falla o un incendio comienza en el extremo lejano, la única dirección segura es salir — por eso el artículo fija el espacio de trabajo y las salidas en la fábrica, en lugar de dejarlos a quien coloque la caja sobre su base.",
+      "exam_trap": "La trampa es responder 646.19 con 110.26(C)(2): ese disparador es 1200 A. El disparador del Artículo 646 es el tamaño — el equipo de más de 6 ft de ancho o de profundidad necesita una entrada en cada extremo cualquiera sea su capacidad en amperes.",
+      "inspection_fails": [
+        "Conductores de alimentación dimensionados al 100 por ciento de la corriente de plena carga de la placa en lugar del 125 por ciento (646.5).",
+        "Cordón flexible usado para conectar un módulo a la acometida del edificio en lugar de solo interconectar envolventes (646.9).",
+        "Placa de identificación bloqueada o mirando hacia una pared después de colocar el módulo, de modo que sus valores no se pueden leer.",
+        "Cableado interno de un módulo certificado modificado en obra, anulando la certificación.",
+        "Equipo de más de 6 ft de ancho con una sola entrada sin que se cumpla 646.19(A) ni (B)."
+      ],
+      "tables": [
+        {
+          "caption": "Dentro del módulo: las secciones que deciden la obra",
+          "headers": [
+            "Sección",
+            "Lo que fija"
+          ],
+          "rows": [
+            [
+              "646.5",
+              "Placa: corriente de plena carga y capacidad de cortocircuito"
+            ],
+            [
+              "646.9",
+              "Los cordones interconectan envolventes — nunca la acometida"
+            ],
+            [
+              "646.18",
+              "El espacio de trabajo interior cumple 110.26"
+            ],
+            [
+              "646.19",
+              "Equipo de más de 6 ft: entrada en cada extremo, 24 in × 6½ ft mín"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c6/C6-ART-646-egress-plan.svg",
+          "alt": "Vista en planta de un centro de datos modular: una fila de equipo de más de 6 ft de ancho en el centro, espacio de trabajo frente a ella según 110.26, y una puerta en cada extremo del módulo, cada una de al menos 24 pulgadas de ancho con herraje de pánico certificado.",
+          "caption": "646.19: una salida en cada extremo cuando el equipo supera 6 ft.",
+          "w": 900,
+          "h": 1400
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Qué dispara la regla de las dos entradas de 646.19?",
+          "choices": [
+            "Equipo con capacidad mayor de 1200 A",
+            "Equipo de más de 6 ft de ancho o de profundidad",
+            "Equipo de más de 600 volts",
+            "Cualquier equipo dentro de un contenedor"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El disparador de 646.19 es el tamaño físico: equipo de más de 6 ft de ancho o de profundidad, cualquiera sea su capacidad en amperes.",
+          "nec_ref": "646.19"
+        },
+        {
+          "question": "Los conductores de alimentación de un centro de datos modular se dimensionan a no menos de qué porcentaje de la corriente de plena carga de la placa?",
+          "choices": [
+            "100%",
+            "115%",
+            "125%",
+            "150%"
+          ],
+          "answer_index": 2,
+          "explain_plain": "646.5 exige dimensionar la alimentación a no menos del 125 por ciento de la corriente de plena carga indicada en la placa.",
+          "nec_ref": "646.5"
+        },
+        {
+          "question": "Los cordones flexibles certificados para uso extra rudo en un centro de datos modular pueden usarse para:",
+          "choices": [
+            "Conectar el módulo a la acometida del edificio",
+            "Interconectar envolventes de módulos separadas",
+            "Reemplazar el alimentador de suministro",
+            "Alimentar solo el HVAC dedicado"
+          ],
+          "answer_index": 1,
+          "explain_plain": "646.9 permite los cordones entre envolventes; 646.9(B) prohíbe usarlos para conectar el módulo a una fuente externa.",
+          "nec_ref": "646.9"
+        }
+      ],
+      "code_refs": [
+        "646.1",
+        "646.5",
+        "646.9",
+        "646.18",
+        "646.19",
+        "110.26"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "2020 text of 646.19: equipment over 6 ft wide or deep, entrance at each end 24 in. wide by 6½ ft high, listed panic or fire exit hardware, single entrance under (A) or (B)",
+          "source": "ExpertCE, 2023 NEC Updates: Modular Data Center Egress Changes (quotes the 2020 text)",
+          "url": "https://expertce.com/courses/electricians-guide-for-nec-2023/lessons/how-have-2023-nec-updates-changed-modular-data-center-egress-requirements/"
+        },
+        {
+          "claim": "Nameplate per 646.5 with full-load current and short-circuit rating; supply conductors at 125 percent; 646.9 cords; 646.18 working space per 110.26; UL 2755 listing route",
+          "source": "7x24 Exchange Magazine, Fall 2014, Article 646 overview",
+          "url": "https://www.7x24exchange.org/fall2014_/7x24FallMag_html/files/assets/basic-html/page64.html"
+        },
+        {
+          "claim": "Scope: prefabricated units rated 600 volts or less housing IT equipment and its support equipment",
+          "source": "Mission Critical Safety, NEC Article 646: Modular Data Centers",
+          "url": "https://missioncriticalsafety.org/nec/646-modular-data-centers/"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 646.19: La revisión de la sección 646.19 especifica los requisitos para las puertas de salida (egress) ubicadas en los centros de datos modulares.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich": 1
     },
     {
       "id": "C6-ART-647",
@@ -645,8 +1202,8 @@
       "article": "647",
       "section": "647",
       "title": "Artículo 647 — Equipos electrónicos sensibles",
-      "plain_explanation": "Introducción: el sistema de energía 'balanceado' de 120V, monofásico, con derivación central de 60V a tierra, para producción de audio/video y trabajos similares sensibles al ruido, con sus propias reglas de tomacorrientes y puesta a tierra. Es raro y siempre es ingeniería — nunca improvise uno.",
-      "on_the_job": "Si un cliente de estudio o producción pide 'energía limpia', no improvise un sistema balanceado 60/60 en obra — es una instalación de ingeniería con sus propios tomacorrientes identificados y su arreglo de puesta a tierra. Pase la solicitud a Mike para un diseño antes de que alguien la cotice.",
+      "plain_explanation": "El Artículo 647 cubre un sistema de energía especial para equipos electrónicos sensibles: un sistema de 120 V, monofásico, cuyo secundario del transformador tiene derivación central, con la derivación central puesta a tierra, de modo que cada conductor no puesto a tierra queda a 60 V a tierra mientras el voltaje entre conductores se mantiene en 120 V.\n• Los dos conductores son iguales y opuestos respecto a tierra — ese balance es lo que cancela el ruido de tierra que se escucha como zumbido en el trabajo de audio y video.\n• El sistema tiene sus propias reglas de tomacorrientes y puesta a tierra; los tomacorrientes están identificados para este sistema para que el equipo común no se conecte por error.\n• Es raro, y siempre es una instalación de ingeniería — nadie instala uno por costumbre.",
+      "on_the_job": "Si un cliente de estudio o producción pide «energía limpia», no improvise un sistema balanceado 60/60 en obra — es una instalación de ingeniería con sus propios tomacorrientes identificados y su arreglo de puesta a tierra. Pase la solicitud a Mike para un diseño antes de que alguien la cotice. Y si alguna vez mide uno que ya está instalado: cada ranura lee unos 60 V a tierra, y las dos ranuras leen 120 V entre sí. En un circuito normal esa lectura significa un neutro perdido; en un sistema 647 es exactamente lo correcto.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -654,7 +1211,100 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C6-ART-646",
-      "next_id": "C6-ART-650"
+      "next_id": "C6-ART-650",
+      "rich": 1,
+      "why_it_exists": "El equipo de producción de audio y video capta ruido a través de sus conexiones a tierra, y en un circuito normal ese ruido termina en la grabación. Con ambos conductores balanceados a 60 V a tierra, el ruido que se acopla por igual en los dos conductores se cancela en vez de sumarse. Ese mismo balance es el peligro si se improvisa: un tomacorriente que se ve normal pero lleva 60 V en ambas ranuras confunde a la próxima persona que lo mide o se conecta a él — por eso el sistema usa tomacorrientes identificados y un diseño de ingeniería.",
+      "exam_trap": "Las respuestas trampa son «un sistema de 60 V» y «cabléelo como un circuito normal de 120 V». Es un sistema de 120 V — 120 V de conductor a conductor — y ninguno de los dos es un neutro puesto a tierra que usted pueda tratar como tal. La trampa de campo es peor: construir una alimentación «balanceada» con una conexión de transformador estándar porque el cliente pidió energía limpia. El trabajo del Artículo 647 es de ingeniería, o no se hace.",
+      "tables": [
+        {
+          "caption": "Circuito normal de 120 V vs. el sistema balanceado 647",
+          "headers": [
+            "Medición",
+            "Normal",
+            "Balanceado 647"
+          ],
+          "rows": [
+            [
+              "Conductor 1 a tierra",
+              "120 V",
+              "60 V"
+            ],
+            [
+              "Conductor 2 / neutro a tierra",
+              "0 V",
+              "60 V"
+            ],
+            [
+              "De conductor a conductor",
+              "120 V",
+              "120 V"
+            ],
+            [
+              "Tomacorrientes",
+              "Estándar",
+              "Identificados para el sistema"
+            ]
+          ]
+        }
+      ],
+      "inspection_fails": [
+        "Tomacorriente estándar instalado en un circuito de energía balanceada — los tomacorrientes 647 están identificados para el sistema.",
+        "Alimentación balanceada 60/60 improvisada en obra con una conexión de transformador estándar, sin diseño de ingeniería.",
+        "Un conductor de un sistema 647 unido y tratado como un neutro normal, destruyendo el balance para el que existe el sistema.",
+        "Sistema para equipo sensible instalado sin el arreglo de puesta a tierra que exige su diseño."
+      ],
+      "page_quiz": [
+        {
+          "question": "En un sistema balanceado 647, cada conductor no puesto a tierra mide ___ a tierra.",
+          "choices": [
+            "0 V",
+            "60 V",
+            "120 V",
+            "240 V"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El secundario tiene derivación central y la derivación está puesta a tierra, así que cada conductor queda a la mitad de 120 V: 60 V a tierra.",
+          "nec_ref": "Article 647"
+        },
+        {
+          "question": "En el mismo sistema, el voltaje entre los dos conductores es:",
+          "choices": [
+            "60 V",
+            "120 V",
+            "180 V",
+            "240 V"
+          ],
+          "answer_index": 1,
+          "explain_plain": "60 V + 60 V, opuestos en polaridad: los conductores siguen entregando 120 V completos al equipo.",
+          "nec_ref": "Article 647"
+        },
+        {
+          "question": "Un cliente pide un sistema balanceado de «energía limpia» para un estudio. Lo correcto es:",
+          "choices": [
+            "Construirlo con una conexión de transformador estándar",
+            "Pasarlo para un diseño de ingeniería antes de que alguien lo cotice",
+            "Alimentarlo desde dos circuitos normales de 120 V",
+            "Instalar tomacorrientes estándar y etiquetarlos"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Un sistema 647 es una instalación de ingeniería con tomacorrientes identificados y su propio arreglo de puesta a tierra — nunca una improvisación de campo.",
+          "nec_ref": "647.1"
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c6/C6-ART-647-balanced.svg",
+          "alt": "Diagrama unifilar de un secundario de transformador con derivación central que alimenta un tomacorriente identificado: cada conductor mide 60 volts a la derivación central puesta a tierra, y los dos conductores miden 120 volts entre sí.",
+          "caption": "El sistema balanceado: 60 V a tierra en cada conductor, 120 V de conductor a conductor.",
+          "w": 900,
+          "h": 1180
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios del NEC 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "647.1",
+        "647.3"
+      ]
     },
     {
       "id": "C6-ART-650",
@@ -662,8 +1312,8 @@
       "article": "650",
       "section": "650",
       "title": "Artículo 650 — Órganos de tubos",
-      "plain_explanation": "Introducción: circuitos de acción de órgano de bajo voltaje, motores de fuelle y las reglas de separación entre ellos. Solo trabajo en iglesias; reconózcalo y remítase al artículo.",
-      "on_the_job": "En un trabajo de iglesia con un órgano, coordine dos alcances separados: el fuelle es un circuito de motor ordinario bajo el Artículo 430, y el cableado de acción de bajo voltaje es el sistema certificado del constructor del órgano. Obtenga los requisitos de energía del constructor antes de la instalación en bruto — los órganos suelen descubrirse en la conversación del ático, no en los planos eléctricos.",
+      "plain_explanation": "El Artículo 650 cubre los circuitos eléctricos y las partes de los órganos de tubos operados eléctricamente que controlan el aparato sonoro y los teclados — el sistema de acción. Los órganos electrónicos son otro animal: 650.3 los envía al Artículo 640.\n• 650.4: la acción funciona con cc de un rectificador tipo transformador, y el potencial de cc no debe exceder 30 volts.\n• 650.5: el rectificador se une al conductor de puesta a tierra del equipo según el Artículo 250 — la caja está puesta a tierra, la salida de bajo voltaje es el circuito de trabajo.\n• 650.6(A): los mínimos de conductor son diminutos y específicos — 28 AWG para circuitos de señal electrónica, 26 AWG para la alimentación de válvulas electromagnéticas y similares, y el conductor principal de retorno común en la alimentación electromagnética no menor de 14 AWG.\n• 650.6(B)–(D): los conductores llevan aislamiento termoplástico o termoestable, se agrupan en cables fuera del órgano propiamente dicho, y cada cable recibe una cubierta exterior — resistente a la propagación de flama donde el cable no va en canalización metálica.\n• 650.7: los cables se fijan en su lugar, pueden sujetarse directamente a la estructura del órgano y no deben quedar en contacto con otros conductores.\n• 650.8: los circuitos se disponen de modo que los conductores de 26 AWG y 28 AWG queden protegidos por un dispositivo de sobrecorriente de no más de 6 amperes.",
+      "on_the_job": "En un trabajo de iglesia con un órgano, coordine dos alcances separados: el fuelle es un circuito de motor ordinario bajo el Artículo 430, y el cableado de acción de bajo voltaje es el sistema certificado del constructor del órgano. La instalación en bruto de Sharma es el lado de voltaje de línea — un circuito derivado de 20 A hasta la desconexión del fuelle y un circuito de 20 A que alimenta el lugar del rectificador que elija el constructor. Obtenga los requisitos de energía del constructor antes de la instalación en bruto — los órganos suelen descubrirse en la conversación del ático, no en los planos eléctricos.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -671,7 +1321,111 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C6-ART-647",
-      "next_id": "C6-ART-660"
+      "next_id": "C6-ART-660",
+      "why_it_exists": "El sistema de acción de un órgano son cientos de conductores finísimos agrupados a través de una cámara de madera llena de polvo, fuelles y madera centenaria. Un cortocircuito en un conductor de 28 AWG sin fusible no puede disparar un breaker normal — simplemente se pone incandescente. El límite de 30 volts, el límite de fusible de 6 amperes y las reglas de agrupación en cables evitan que una falla en ese haz se convierta en un incendio de iglesia.",
+      "exam_trap": "La trampa es tratar todo el órgano como un solo sistema de bajo voltaje. Los circuitos de acción están limitados a 30 volts de cc por 650.4 — pero el fuelle que alimenta el viento es un motor de voltaje de línea, cableado y protegido bajo el Artículo 430 como cualquier otro motor.",
+      "inspection_fails": [
+        "Generador heredado o fuente de reemplazo poniendo más de 30 volts de cc en los circuitos de acción (650.4).",
+        "Conductores de acción de 26 AWG y 28 AWG protegidos a 20 amperes en lugar de no más de 6 amperes (650.8).",
+        "Cables de acción corridos en contacto con conductores de 120 volts dentro de la cámara del órgano (650.7).",
+        "Alambre heredado con aislamiento de algodón o esmalte reutilizado en lugar de aislamiento termoplástico o termoestable (650.6(B)).",
+        "Caja del rectificador sin unir al conductor de puesta a tierra del equipo (650.5)."
+      ],
+      "tables": [
+        {
+          "caption": "Mínimos de los circuitos de acción (650.6(A))",
+          "headers": [
+            "Circuito",
+            "Mínimo"
+          ],
+          "rows": [
+            [
+              "Circuitos de señal electrónica",
+              "28 AWG"
+            ],
+            [
+              "Alimentación de válvulas electromagnéticas",
+              "26 AWG"
+            ],
+            [
+              "Retorno común principal",
+              "14 AWG"
+            ]
+          ],
+          "note": "Protección para los conductores de 26 AWG y 28 AWG: no más de 6 A (650.8)."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c6/C6-ART-650-two-systems.svg",
+          "alt": "Diagrama unifilar de la instalación de un órgano de tubos: un circuito derivado de 120 volts alimenta un rectificador tipo transformador limitado a 30 volts de cc, protegido a no más de 6 amperes, que alimenta circuitos de señal de consola de 28 AWG mínimo y circuitos de imanes de pecho de 26 AWG mínimo con retorno común de 14 AWG mínimo. El motor del fuelle va en su propio circuito de motor del Artículo 430.",
+          "caption": "La acción es cc de 30 V máximo — el fuelle no lo es.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Potencial máximo de cc para la alimentación de acción de un órgano de tubos según 650.4:",
+          "choices": [
+            "15 V",
+            "30 V",
+            "50 V",
+            "60 V"
+          ],
+          "answer_index": 1,
+          "explain_plain": "650.4 exige un rectificador tipo transformador cuyo potencial de cc no exceda 30 volts.",
+          "nec_ref": "650.4"
+        },
+        {
+          "question": "Tamaño mínimo del conductor principal de retorno común en la alimentación electromagnética:",
+          "choices": [
+            "18 AWG",
+            "16 AWG",
+            "14 AWG",
+            "12 AWG"
+          ],
+          "answer_index": 2,
+          "explain_plain": "650.6(A) fija el retorno común principal en no menos de 14 AWG.",
+          "nec_ref": "650.6(A)"
+        },
+        {
+          "question": "Los conductores de acción de 26 AWG y 28 AWG deben protegerse a no más de:",
+          "choices": [
+            "6 A",
+            "10 A",
+            "15 A",
+            "20 A"
+          ],
+          "answer_index": 0,
+          "explain_plain": "650.8 limita la protección de los conductores de 26 AWG y 28 AWG a un dispositivo de no más de 6 amperes.",
+          "nec_ref": "650.8"
+        }
+      ],
+      "code_refs": [
+        "650.1",
+        "650.3",
+        "650.4",
+        "650.5",
+        "650.6",
+        "650.7",
+        "650.8"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "Text of 650.1, 650.3, 650.4 (30 V dc transformer-type rectifier), 650.5, 650.6(A) conductor sizes, 650.6(B)–(D), 650.7 and 650.8 (6 A cap)",
+          "source": "Solar365 NEC text mirror, Article 650 — Pipe Organs",
+          "url": "https://www.solar365.com/node/13176"
+        },
+        {
+          "claim": "Corroboration: 30 V dc supply cap, 28/26 AWG minimums, 6 A protection cap, lockable organ chamber",
+          "source": "CodeBookCity, National Electrical Code Tips: Article 650, Pipe Organs",
+          "url": "http://www.codebookcity.com/codearticles/nec/necarticle650.htm"
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich": 1
     },
     {
       "id": "C6-ART-660",
@@ -696,16 +1450,139 @@
       "article": "665",
       "section": "665",
       "title": "Artículo 665 — Equipos de calentamiento por inducción y dieléctrico",
-      "plain_explanation": "Introducción: equipos industriales de calentamiento — blindaje, puesta a tierra de equipos de alta frecuencia y reglas de desconexión. Solo industrial.",
-      "on_the_job": "Solo industrial para Sharma: si una oferta muestra calentamiento por inducción o dieléctrico, cotice solo la desconexión de alimentación y el alimentador que muestran los planos de ingeniería. El blindaje, las protecciones y los enclavamientos del equipo son la certificación del fabricante — no trabajo de obra, y no objetivos de ingeniería de valor.",
+      "plain_explanation": "El Artículo 665 cubre la construcción e instalación de equipos de calentamiento por inducción, fusión por inducción, soldadura por inducción y calentamiento dieléctrico, y sus accesorios, para aplicaciones industriales y científicas (665.1). Las aplicaciones médicas y dentales, los aparatos y el calentamiento de tuberías y recipientes a frecuencia de línea quedan fuera — el calentamiento de tuberías vive en el Artículo 427.\n• El alambrado desde la fuente de energía hasta el equipo sigue los Capítulos 1 a 4, a menos que este artículo lo modifique (665.3).\n• El equipo se mantiene fuera de lugares (clasificados) peligrosos, a menos que él y su alambrado estén aprobados para ese lugar (665.4).\n• El circuito de salida — todo lo externo al dispositivo convertidor — puede estar aislado de tierra, y su corriente a tierra está limitada para que no aparezcan 50 V o más a tierra en ninguna parte accesible (665.5).\n• Los puntos de control múltiples están enclavados para que el aplicador solo pueda energizarse desde un punto a la vez, con una manera de desenergizar en cada punto; los interruptores de pie llevan una protección contra cierre accidental (665.7).\n• La ampacidad de los conductores de alimentación se construye desde las corrientes de placa del grupo más grande de equipos que puede operar al mismo tiempo, más las corrientes de espera del equipo restante (665.10).",
+      "on_the_job": "Solo industrial para Sharma: si una oferta muestra calentamiento por inducción o dieléctrico, cotice solo la desconexión de alimentación y el alimentador que muestran los planos de ingeniería. La desconexión va a la vista del equipo y con capacidad de bloquearse en posición abierta (665.12). El blindaje, las protecciones y los enclavamientos del equipo son la certificación del fabricante — no trabajo de obra, y no objetivos de ingeniería de valor. Si los planos no muestran la alimentación, eso es un RFI, no una partida estimada.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
       "florida_note": "",
       "verified": true,
-      "sharma_rule_ids": [],
       "prev_id": "C6-ART-660",
-      "next_id": "C6-ART-668"
+      "next_id": "C6-ART-668",
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Este equipo produce calor con energía de alta frecuencia, y el lado de salida no se comporta como un circuito ramal: puede aparecer voltaje de RF en los bastidores y en el metal cercano, los capacitores guardan carga después del apagado, y un aplicador energizado desde un segundo punto de control puede arrancar mientras un trabajador tiene las manos dentro. Las reglas de enclavamiento, protección y unión existen porque el peligro es energía invisible, no una falla con chispas que se ve venir.",
+      "exam_trap": "La trampa es tratar el circuito de salida como alambrado ordinario que hay que conectar a tierra — 665.5 permite que esté aislado de tierra, y conectarlo a tierra 'por seguridad' puede derrotar el diseño. La segunda trampa es dimensionar el alimentador sumando todas las placas del piso: 665.10 cuenta el grupo más grande que puede operar a la vez a plena corriente de placa y el resto a corriente de espera.",
+      "inspection_fails": [
+        "El aplicador puede energizarse desde dos estaciones de control a la vez — puntos de control sin enclavamiento.",
+        "Interruptor de pie sin protección sobre el botón de contacto.",
+        "Alimentador dimensionado con los hábitos del Capítulo 3 en lugar del método de placas de 665.10.",
+        "Bastidores del equipo sin unir — voltaje de RF presente en el metal expuesto (665.26)."
+      ],
+      "tables": [
+        {
+          "caption": "El Artículo 665 de un vistazo",
+          "headers": [
+            "Tema",
+            "Regla",
+            "Ref."
+          ],
+          "rows": [
+            [
+              "Alcance",
+              "Calentamiento industrial y científico; no médico, dental ni aparatos",
+              "665.1"
+            ],
+            [
+              "Circuito de salida",
+              "Puede estar aislado; sin 50 V+ a tierra en partes accesibles",
+              "665.5"
+            ],
+            [
+              "Controles",
+              "Puntos enclavados; interruptores de pie protegidos",
+              "665.7"
+            ],
+            [
+              "Conductores de alimentación",
+              "Grupo simultáneo más grande + espera del resto",
+              "665.10"
+            ],
+            [
+              "Desconexión",
+              "A la vista, bloqueable en posición abierta",
+              "665.12"
+            ],
+            [
+              "Puesta a tierra y unión",
+              "Según el Artículo 250, Partes II y V",
+              "665.26"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c6/C6-ART-665-one-line.svg",
+          "alt": "Diagrama unifilar de un equipo de calentamiento por inducción: tablero, desconexión a la vista con bloqueo, dispositivo convertidor y aplicador en un flujo numerado, los bastidores del equipo unidos entre sí según el Artículo 250, Partes II y V, y una nota del circuito de salida que indica que puede estar aislado de tierra sin 50 voltios o más a tierra en las partes accesibles.",
+          "caption": "El lado de alimentación es nuestro alcance; el lado de salida es el diseño del fabricante.",
+          "w": 900,
+          "h": 1640
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Qué aplicación NO está cubierta por el Artículo 665?",
+          "choices": [
+            "Fusión por inducción en una fundición",
+            "Una máquina de sellado dieléctrico",
+            "Equipo dental de calentamiento dieléctrico",
+            "Soldadura por inducción"
+          ],
+          "answer_index": 2,
+          "explain_plain": "665.1 cubre aplicaciones industriales y científicas; las aplicaciones médicas y dentales y los aparatos quedan fuera del artículo.",
+          "nec_ref": "665.1"
+        },
+        {
+          "question": "La corriente a tierra del circuito de salida está limitada para que las partes accesibles se mantengan por debajo de:",
+          "choices": [
+            "30 V a tierra",
+            "50 V a tierra",
+            "120 V a tierra",
+            "No aplica ningún límite"
+          ],
+          "answer_index": 1,
+          "explain_plain": "665.5: el flujo a tierra no debe poner 50 V o más a tierra en ninguna parte accesible.",
+          "nec_ref": "665.5"
+        },
+        {
+          "question": "La ampacidad de los conductores de alimentación según 665.10 se construye desde:",
+          "choices": [
+            "Todas las placas del piso sumadas",
+            "El grupo simultáneo más grande a corriente de placa, más las corrientes de espera del resto",
+            "Solo la máquina más grande",
+            "El 125% de la corriente de la acometida"
+          ],
+          "answer_index": 1,
+          "explain_plain": "665.10(A): el grupo más grande capaz de operar simultáneamente a corriente de placa, más las corrientes de espera del equipo restante.",
+          "nec_ref": "665.10"
+        }
+      ],
+      "code_refs": [
+        "665.1",
+        "665.3",
+        "665.4",
+        "665.5",
+        "665.7",
+        "665.10",
+        "665.12",
+        "665.26",
+        "427"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "665.5 circuito de salida: el flujo de corriente a tierra está limitado para que no aparezcan 50 V o más a tierra en las partes accesibles, y el circuito de salida puede estar aislado de tierra; 665.7 puntos de control enclavados e interruptores de pie protegidos; 665.10 ampacidad desde el grupo simultáneo más grande más las corrientes de espera",
+          "source": "Solar365 — NEC Article 665 (Induction and Dielectric Heating Equipment)",
+          "url": "https://www.solar365.com/node/13178"
+        },
+        {
+          "claim": "665.12 desconexión a la vista del equipo y con capacidad de bloquearse en posición abierta; 665.26 puesta a tierra y unión según el Artículo 250, Partes II y V",
+          "source": "CodeBook City — National Electrical Code Tips: Article 665, Induction and Dielectric Equipment",
+          "url": "http://www.codebookcity.com/codearticles/nec/necarticle665.htm"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C6-ART-668",
@@ -713,8 +1590,8 @@
       "article": "668",
       "section": "668",
       "title": "Artículo 668 — Celdas electrolíticas",
-      "plain_explanation": "Introducción: espacios de trabajo en líneas de celdas, grúas sobre las celdas y la regla de que los conductores y accesorios de las líneas de celdas no se tratan como sistemas ordinarios puestos a tierra. Solo industria pesada.",
-      "on_the_job": "Solo reconocimiento: los espacios de trabajo y los conductores de las líneas de celdas siguen una lógica de puesta a tierra y distancias que corre en sentido contrario a la práctica ordinaria, a propósito. Sharma no acepta trabajo de líneas de celdas — avise a Sanjay y a Mike el día en que aparezca en un alcance.",
+      "plain_explanation": "El Artículo 668 cubre las celdas electrolíticas — las líneas de celdas que producen cloro, soda cáustica, aluminio y productos similares haciendo pasar una corriente DC pesada a través de un proceso. Los puntos de reconocimiento:\n• Una línea de celdas y su fuente de alimentación DC de proceso, dentro de la zona de trabajo de la línea de celdas, se tratan como una sola unidad funcional — una sola línea puede funcionar con más de 400,000 A DC a más de 1000 V DC.\n• Dentro de la zona, la lógica ordinaria de puesta a tierra se invierte a propósito. Los conductores de la fuente de alimentación DC de proceso no están obligados a estar puestos a tierra (668.11).\n• Donde esa fuente funciona a más de 50 V entre conductores, sus envolventes metálicas se ponen a tierra mediante relés de protección o con un conductor de unión de cobre no menor de 2/0 AWG (668.11).\n• Los sistemas AC y las superficies conductivas expuestas dentro de la zona no están obligados a estar puestos a tierra (668.30); en su lugar, los trabajadores y sus herramientas se aíslan de tierra.\n• Toda parte de una grúa o un polipasto que haga contacto con una celda energizada o sus accesorios debe estar aislada de tierra (668.32).\n• Cada fuente de alimentación DC de una línea de celdas debe poder desconectarse; un eslabón removible en las barras puede ser ese medio de desconexión (668.13).\n• Fuera de la zona de trabajo, nada de esto aplica — el resto del NEC rige por completo (668.3).",
+      "on_the_job": "Solo reconocimiento. Si un alcance muestra alguna vez un cuarto de rectificadores, una línea de celdas o tramos de barras que alimentan tanques de proceso en una planta química o de galvanoplastia de Florida, eso es territorio del Artículo 668 — industria pesada, y no es trabajo de Sharma. Avise a Sanjay y a Mike el día en que aparezca en un alcance. Si Sharma alguna vez da servicio a equipo ordinario de un edificio en una planta así, ese trabajo queda fuera de la zona de trabajo y sigue las reglas normales — pero nadie de una cuadrilla residencial improvisa dentro de la zona.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -722,7 +1599,130 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C6-ART-665",
-      "next_id": "C6-ART-669"
+      "next_id": "C6-ART-669",
+      "why_it_exists": "Las cuadrillas de las líneas de celdas tienen que tocar superficies de celdas energizadas para operar el proceso — el trabajo no puede hacerse con todo muerto y puesto a tierra. Si la línea, las herramientas y la grúa se pusieran a tierra de la manera ordinaria, el trabajador se convertiría en el puente entre las partes vivas y tierra. Por eso el artículo aísla al trabajador y al lugar de trabajo de tierra, y mantiene flotante el sistema DC, en lugar de aislar el conductor.",
+      "exam_trap": "La trampa es la respuesta de la práctica ordinaria: poner a tierra los conductores DC, poner a tierra la grúa, poner a tierra las herramientas y aplicar la lógica de espacios de trabajo de 110.26 dentro de la zona. Dentro de la zona de trabajo de la línea de celdas eso es exactamente al revés — 668.11 no exige que los conductores de proceso estén puestos a tierra, 668.32 exige que las partes de la grúa que tocan las celdas estén aisladas de tierra, y 668.3 reserva los artículos ordinarios para el trabajo fuera de la zona.",
+      "inspection_fails": [
+        "Línea de celdas tratada como un sistema ordinario puesto a tierra — conductores de proceso puestos a tierra en contra del diseño de 668.11.",
+        "Bloque de gancho de grúa en contacto con celdas energizadas sin aislamiento de tierra (668.32).",
+        "Herramientas portátiles en la zona alimentadas desde un circuito de receptáculos ordinario puesto a tierra, en lugar de una fuente aislada y sin puesta a tierra (668.20).",
+        "Fuente de alimentación DC sin ningún medio de desconectarla de su línea de celdas (668.13)."
+      ],
+      "tables": [
+        {
+          "caption": "Dentro de la zona frente a fuera de ella",
+          "headers": [
+            "Tema",
+            "Dentro de la zona",
+            "Fuera"
+          ],
+          "rows": [
+            [
+              "Conductores DC de proceso",
+              "No están obligados a estar puestos a tierra (668.11)",
+              "Reglas ordinarias del Artículo 250"
+            ],
+            [
+              "Protección del trabajador",
+              "El trabajador y las herramientas se aíslan de tierra",
+              "Se resguardan las partes vivas"
+            ],
+            [
+              "Grúa sobre las celdas",
+              "Partes de contacto aisladas de tierra (668.32)",
+              "Reglas ordinarias de grúas"
+            ],
+            [
+              "Qué artículos",
+              "Rige el Artículo 668",
+              "El resto del NEC por completo (668.3)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c6/C6-ART-668-cell-line.svg",
+          "alt": "Esquema de una línea de celdas electrolíticas dentro de su zona de trabajo sombreada: cuatro celdas sobre una barra, una fuente DC que funciona sin puesta a tierra, y una grúa aérea cuyas partes de contacto están aisladas de tierra.",
+          "caption": "Dentro de la zona de trabajo, la lógica de puesta a tierra corre al revés a propósito.",
+          "w": 900,
+          "h": 1520
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Dentro de una zona de trabajo de línea de celdas, los conductores de la fuente de alimentación DC de proceso:",
+          "choices": [
+            "Deben ponerse a tierra como una acometida",
+            "No están obligados a estar puestos a tierra",
+            "Deben unirse a la tubería de agua",
+            "Se dimensionan desde la Tabla 250.66"
+          ],
+          "answer_index": 1,
+          "explain_plain": "668.11 establece que los conductores de la fuente de alimentación de proceso de la línea de celdas no están obligados a estar puestos a tierra — la zona está diseñada para funcionar sin puesta a tierra.",
+          "nec_ref": "668.11"
+        },
+        {
+          "question": "Una parte de una grúa que hace contacto con una celda electrolítica energizada debe estar:",
+          "choices": [
+            "Puesta a tierra a la línea de celdas",
+            "Unida al acero del edificio",
+            "Aislada de tierra",
+            "Pintada de amarillo"
+          ],
+          "answer_index": 2,
+          "explain_plain": "668.32 exige que la parte de una grúa o polipasto que hace contacto con celdas energizadas o sus accesorios esté aislada de tierra.",
+          "nec_ref": "668.32"
+        },
+        {
+          "question": "El trabajo fuera de la zona de trabajo de la línea de celdas se rige por:",
+          "choices": [
+            "Solo el Artículo 668",
+            "El resto del NEC por completo",
+            "No aplica regla alguna",
+            "El manual del operador de la celda"
+          ],
+          "answer_index": 1,
+          "explain_plain": "668.3 remite el equipo y las aplicaciones fuera de la zona de trabajo a todas las demás reglas aplicables del NEC.",
+          "nec_ref": "668.3"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "668.1",
+        "668.3",
+        "668.11",
+        "668.13",
+        "668.20",
+        "668.30",
+        "668.32"
+      ],
+      "uncertain": [
+        "Las dimensiones exactas de la zona de trabajo de la línea de celdas en 668.10 no se indican en esta página — verifique la sección impresa antes de planificar cualquier trabajo dentro de una zona de trabajo de línea de celdas o cerca de ella."
+      ],
+      "rich_sources": [
+        {
+          "claim": "Una línea de celdas y su fuente DC de proceso se tratan como una sola unidad funcional y pueden superar 400,000 A DC o 1000 V DC (comentario de 668.2)",
+          "source": "McGraw-Hill, National Electrical Code 2020 Handbook, Article 668",
+          "url": "https://www.accessengineeringlibrary.com/index.php/binary/mheaeworks/c81661612a667dc9/9f311a0959d491fbb08f8ac1072f025f43925bf8b66eb9529b5e88de4c9fb25c/electrolytic-cells.pdf"
+        },
+        {
+          "claim": "668.11: los conductores de la fuente de alimentación de proceso no están obligados a estar puestos a tierra; donde la fuente funciona a más de 50 V entre conductores, las envolventes metálicas se ponen a tierra mediante relés de protección o con un conductor de unión de cobre no menor de 2/0 AWG",
+          "source": "McGraw-Hill, National Electrical Code 2020 Handbook, Article 668",
+          "url": "https://www.accessengineeringlibrary.com/index.php/binary/mheaeworks/c81661612a667dc9/9f311a0959d491fbb08f8ac1072f025f43925bf8b66eb9529b5e88de4c9fb25c/electrolytic-cells.pdf"
+        },
+        {
+          "claim": "668.13: cada fuente de alimentación DC de una sola línea de celdas debe poder desconectarse, y el medio de desconexión puede ser un eslabón removible en las barras",
+          "source": "McGraw-Hill, National Electrical Code 2020 Handbook, Article 668",
+          "url": "https://www.accessengineeringlibrary.com/index.php/binary/mheaeworks/c81661612a667dc9/9f311a0959d491fbb08f8ac1072f025f43925bf8b66eb9529b5e88de4c9fb25c/electrolytic-cells.pdf"
+        },
+        {
+          "claim": "668.32: las partes de grúas y polipastos que hacen contacto con celdas energizadas deben estar aisladas de tierra; 668.20/668.30: los circuitos de receptáculos de la zona usan transformadores de aislamiento con secundarios sin puesta a tierra, y los sistemas AC y las superficies conductivas expuestas en la zona no están obligados a estar puestos a tierra",
+          "source": "McGraw-Hill, National Electrical Code 2020 Handbook, Article 668",
+          "url": "https://www.accessengineeringlibrary.com/index.php/binary/mheaeworks/c81661612a667dc9/9f311a0959d491fbb08f8ac1072f025f43925bf8b66eb9529b5e88de4c9fb25c/electrolytic-cells.pdf"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C6-ART-669",
@@ -730,16 +1730,142 @@
       "article": "669",
       "section": "669",
       "title": "Artículo 669 — Galvanoplastia",
-      "plain_explanation": "Introducción: fuentes de alimentación de bajo voltaje y alta corriente para galvanoplastia — reglas de barras colectoras (busbar) y conductores para líneas de galvanoplastia y anodizado. Solo industrial.",
-      "on_the_job": "Solo reconocimiento: las líneas de galvanoplastia corren corrientes de CC muy altas a bajo voltaje en sistemas de barras colectoras de ingeniería. No cotice los conductores de una línea de galvanoplastia desde los hábitos de ampacidad del Capítulo 3 — el trabajo necesita el diseño del ingeniero de la planta antes de necesitar un electricista.",
+      "plain_explanation": "El Artículo 669 cubre los componentes eléctricos y el equipo accesorio que suministran energía y control para la galvanoplastia — y el anodizado, el electropulido y el electrodecapado se rigen por las mismas reglas; el Código llama galvanoplastia a todo ello (669.1). Es trabajo industrial: un rectificador alimenta los tanques de galvanoplastia a bajo voltaje y corriente muy alta, a menudo sobre barras colectoras desnudas en lugar del alambrado ordinario de circuitos ramales.\n• El equipo debe estar identificado para el servicio de galvanoplastia (669.3).\n• Los conductores de los circuitos ramales que alimentan el equipo necesitan una ampacidad de al menos el 125% de la carga total conectada (669.5).\n• Las barras colectoras siguen 366.23: la barra de cobre desnuda tiene un límite de 1000 A por pulgada cuadrada de sección transversal (669.5).\n• A 60 V CC o menos, los conductores aislados pueden ir sin soportes aislados si están protegidos contra daño físico, y el cobre o aluminio desnudo puede ir apoyado sobre aisladores (669.6(A)).\n• A más de 60 V CC, los conductores aislados necesitan soportes aislados, y los conductores desnudos sobre aisladores deben estar protegidos contra contacto accidental hasta el punto de terminación (669.6(B)).\n• Más de una fuente de alimentación significa un medio de desconexión en el lado de CC de cada fuente (669.8(A)).",
+      "on_the_job": "Solo reconocimiento para Sharma. En una oferta industrial para un taller de galvanoplastia, la placa del rectificador y el diseño de barras del ingeniero de la planta lo determinan todo. Digamos que la carga conectada es de 400 A de carga de galvanoplastia en CC: el circuito ramal se dimensiona a 500 A mínimo (125%), y la barra de cobre desnuda necesita al menos media pulgada cuadrada de sección transversal con el límite de 1000 A por pulgada cuadrada — antes de que la caída de voltaje entre en la conversación. No cotice los conductores de una línea de galvanoplastia desde los hábitos de ampacidad del Capítulo 3: el trabajo necesita el diseño del ingeniero de la planta antes de necesitar un electricista.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
       "florida_note": "",
       "verified": true,
-      "sharma_rule_ids": [],
       "prev_id": "C6-ART-668",
-      "next_id": "C6-ART-670"
+      "next_id": "C6-ART-670",
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Una línea de galvanoplastia es un peligro de quemaduras e incendio con disfraz de bajo voltaje. Los voltios suenan inofensivos, pero cientos de amperios a través de una unión floja de barra colectora generan calor rápido, y un arco de CC no se autoextingue en un cruce por cero como lo hace la CA. La regla del 125% en conductores, el límite de densidad de la barra y las reglas de protección por encima de 60 V existen porque el modo de falla es una unión al rojo vivo o un toque accidental en un taller químico húmedo y conductivo — no un breaker disparado.",
+      "exam_trap": "La trampa es dimensionar la alimentación como un circuito ramal ordinario del Capítulo 3 — ampacidad del conductor igual a la carga, o la barra escogida a ojo. 669.5 exige el 125% de la carga total conectada, y la barra tiene un límite por densidad de corriente según 366.23, no por una búsqueda en la Tabla 310.16. La otra respuesta incorrecta es 'son solo 48 voltios, así que no hace daño' — con las corrientes de galvanoplastia, el bajo voltaje es exactamente donde vive el peligro de quemadura.",
+      "inspection_fails": [
+        "Unión de barra colectora descolorida y caliente — el tramo se empujó más allá del límite de densidad de 1000 A por pulgada cuadrada.",
+        "Circuito ramal dimensionado al 100% de la carga del rectificador — nunca se aplicó el factor del 125% de 669.5.",
+        "Barra desnuda a más de 60 V CC instalada donde un trabajador puede rozarla — sin protección hasta la terminación.",
+        "Dos rectificadores alimentando una línea, una sola desconexión — sin desconexión del lado de CC para la segunda fuente."
+      ],
+      "tables": [
+        {
+          "caption": "El Artículo 669 de un vistazo",
+          "headers": [
+            "Tema",
+            "Regla",
+            "Ref."
+          ],
+          "rows": [
+            [
+              "Alcance",
+              "Galvanoplastia, anodizado, electropulido, electrodecapado",
+              "669.1"
+            ],
+            [
+              "Equipo",
+              "Identificado para el servicio",
+              "669.3"
+            ],
+            [
+              "Circuito ramal",
+              "Ampacidad de al menos el 125% de la carga total conectada",
+              "669.5"
+            ],
+            [
+              "Barra colectora",
+              "Cobre desnudo con límite de 1000 A por pulg. cuadrada",
+              "669.5, 366.23"
+            ],
+            [
+              "60 V CC o menos",
+              "Conductores desnudos permitidos sobre aisladores",
+              "669.6(A)"
+            ],
+            [
+              "Más de 60 V CC",
+              "Proteger los conductores desnudos hasta la terminación",
+              "669.6(B)"
+            ],
+            [
+              "Fuentes múltiples",
+              "Desconexión en el lado de CC de cada una",
+              "669.8(A)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c6/C6-ART-669-busbar.svg",
+          "alt": "Diagrama de una línea de galvanoplastia: un rectificador de CC que alimenta un tramo de barra colectora de cobre hasta un tanque de galvanoplastia, con llamadas sobre la regla del 125 por ciento para el circuito ramal y el límite de 1000 amperios por pulgada cuadrada de la barra, más una comparación de las reglas de conductores a 60 voltios CC o menos frente a más de 60 voltios CC.",
+          "caption": "Línea de galvanoplastia: bajo voltaje, corriente enorme — las reglas de la barra mandan.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Los conductores del circuito ramal que alimentan equipo de galvanoplastia necesitan una ampacidad de al menos qué parte de la carga total conectada?",
+          "choices": [
+            "100%",
+            "125%",
+            "150%",
+            "80%"
+          ],
+          "answer_index": 1,
+          "explain_plain": "669.5 fija el mínimo en el 125% de la carga total conectada.",
+          "nec_ref": "669.5"
+        },
+        {
+          "question": "La barra colectora de cobre desnudo según 366.23 tiene un límite de qué densidad de corriente?",
+          "choices": [
+            "600 A por pulg. cuadrada",
+            "800 A por pulg. cuadrada",
+            "1000 A por pulg. cuadrada",
+            "1250 A por pulg. cuadrada"
+          ],
+          "answer_index": 2,
+          "explain_plain": "1000 A por pulgada cuadrada de sección transversal para la barra de cobre desnuda.",
+          "nec_ref": "366.23"
+        },
+        {
+          "question": "Una línea de galvanoplastia tiene dos fuentes de alimentación de CC. La regla del medio de desconexión es:",
+          "choices": [
+            "Una desconexión en el lado de CA es suficiente",
+            "Una desconexión en el lado de CC de cada fuente",
+            "Una desconexión por tanque",
+            "Sin desconexión si es menos de 60 V"
+          ],
+          "answer_index": 1,
+          "explain_plain": "669.8(A): con más de una fuente de alimentación, cada fuente lleva un medio de desconexión en su lado de CC.",
+          "nec_ref": "669.8(A)"
+        }
+      ],
+      "code_refs": [
+        "669.1",
+        "669.3",
+        "669.5",
+        "669.6(A)",
+        "669.6(B)",
+        "669.8(A)",
+        "366.23"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "El alcance de 669.1 cubre galvanoplastia, anodizado, electropulido y electrodecapado; 669.3 equipo identificado para el servicio; el artículo no cambió del NEC 2020 al NEC 2023",
+          "source": "CodeBook City — National Electrical Code Tips: Article 669, Electroplating",
+          "url": "http://www.codebookcity.com/codearticles/nec/necarticle669.htm"
+        },
+        {
+          "claim": "669.5 ampacidad del circuito ramal de al menos el 125% de la carga total conectada y barras según 366.23 (cobre desnudo 1000 A por pulg. cuadrada); reglas de conductores a 60 V CC de 669.6(A)/(B); 669.8(A) desconexión en el lado de CC de cada fuente",
+          "source": "CodeBook City — National Electrical Code Tips: Article 669, Electroplating",
+          "url": "http://www.codebookcity.com/codearticles/nec/necarticle669.htm"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C6-ART-670",
@@ -904,8 +2030,8 @@
       "article": "680",
       "section": "680.11",
       "title": "Cableado subterráneo",
-      "plain_explanation": "No se permite cableado subterráneo bajo una piscina ni dentro de 5 ft horizontales de la pared interior, a menos que sea necesario para alimentar equipo de piscina permitido por el artículo. El cableado en esa zona usa los métodos de canalización certificados del artículo, y la puesta a tierra del equipo sigue las reglas de piscinas — ante la duda, rodee la banda de 5 ft.\n\nCAMBIO NEC 2023:\n• 680.11: Los tendidos subterráneos dentro de 5 ft de la pared interior de una piscina ahora cuentan como adecuados solo cuando el método de cableado se instala como un sistema completo, de una salida, caja de empalmes o punto de empalme al siguiente. Los métodos subterráneos para la zona dentro de 5 ft horizontales de la pared interior ahora cuentan solo cuando se instalan como sistemas completos (680.11(A)).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Mantenga la iluminación del sitio y las tuberías (conduit) de jardinería fuera de la banda de 5 ft, a menos que sirvan a la propia piscina.",
+      "plain_explanation": "No se permite cableado subterráneo bajo una piscina, ni dentro de 5 ft horizontales de la pared interior de la piscina, a menos que sea necesario para alimentar equipo de piscina permitido por este artículo. Esa sola frase decide la mayoría de las zanjas en la losa de la piscina antes de que empiecen.\n• El cableado que sí corre en la zona de 5 ft usa los métodos del artículo: tubería metálica rígida, tubería metálica intermedia, tubería rígida de cloruro de polivinilo, tubería rígida de resina termoestable reforzada, o cable Tipo MC, adecuados para las condiciones de ese lugar.\n• La cobertura mínima de esos tendidos sale de la Tabla 300.5 — en ubicaciones generales, 6 in para tubería metálica rígida e intermedia y 18 in para PVC rígido y RTRC.\n• La puesta a tierra del equipo para todo lo que esté en la zona sigue las reglas de piscinas de este artículo, no solo las reglas generales.\n• Ante la duda, rodee la banda de 5 ft. Una zanja más larga fuera de la banda casi siempre cuesta menos que una inspección fallada dentro de ella.",
+      "on_the_job": "En una obra de piscina en Winter Park, la base del equipo queda a 4 ft del borde del agua, así que los alimentadores de la bomba y del calentador cruzan la banda: corren en PVC rígido con 18 in de cobertura, el mínimo que la Tabla 300.5 pide para PVC en una ubicación general. La tubería de iluminación del sitio hacia la cerca trasera cuenta la otra mitad de la historia — no sirve a la piscina, así que se mantiene fuera de la banda de 5 ft aunque cortar por la esquina ahorraría 30 ft de zanja. Mantenga la iluminación del sitio y las tuberías de jardinería fuera de la banda, a menos que sirvan a la propia piscina.",
       "sharma_note": "",
       "figure_idea": "Vista en planta: vaso de la piscina con la banda de 5 ft de cableado subterráneo sombreada.",
       "related_ids": [
@@ -924,7 +2050,118 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/680-11",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "El agua, los pies descalzos y un conductor enterrado con falla son una mala mezcla: un cable dañado bajo la losa puede poner voltaje en el agua y en el concreto mojado que la rodea, y un nadador no tiene forma de soltarse ni de alejarse. Mantener el cableado ajeno fuera de la banda — y el que debe cruzarla dentro de una canalización resistente, enterrado profundo — mantiene las fallas de la piscina en el equipo de la piscina, donde las reglas de unión equipotencial y GFCI pueden manejarlas.",
+      "exam_trap": "La trampa es «cualquier tubería, enterrada profundo, está bien en la banda». La profundidad es solo la mitad de la regla — la lista de métodos de 680.11 es cerrada, y bajo la propia piscina la respuesta es más simple: allí no corre nada excepto lo que el equipo de la piscina necesita.",
+      "inspection_fails": [
+        "Cable UF de entierro directo cruzando la banda de 5 ft para alimentar iluminación de jardinería.",
+        "Tubería corrida bajo el vaso de la piscina como atajo hacia la base del equipo.",
+        "PVC rígido en la banda enterrado con solo unas pulgadas de cobertura en lugar del mínimo de la Tabla 300.5.",
+        "Cableado de iluminación del sitio o de riego enhebrado por la banda cuando existía una ruta fuera de ella."
+      ],
+      "tables": [
+        {
+          "caption": "Métodos permitidos en la zona de 5 ft (680.11)",
+          "headers": [
+            "Método",
+            "Cobertura mín*"
+          ],
+          "rows": [
+            [
+              "Tubería metálica rígida",
+              "6 in"
+            ],
+            [
+              "Tubería metálica intermedia",
+              "6 in"
+            ],
+            [
+              "Tubería rígida de PVC",
+              "18 in"
+            ],
+            [
+              "Tubería rígida de resina termoestable reforzada",
+              "18 in"
+            ],
+            [
+              "Cable Tipo MC",
+              "Ver Tabla 300.5"
+            ]
+          ],
+          "note": "*Cobertura mínima en ubicaciones generales, Tabla 300.5; otras columnas de la tabla rigen bajo calles, entradas de vehículos y losas."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c6/C6-680.11-pool-band.svg",
+          "alt": "Vista en planta de una piscina con la banda de cableado subterráneo de 5 ft sombreada a su alrededor. Un tendido de tubería de PVC verde que sirve a la bomba de la piscina cruza la banda, lo cual está permitido; un cable rojo de entierro directo que cruza la banda hacia una luz de jardinería está marcado como no permitido.",
+          "caption": "La banda de 5 ft decide la ruta antes de cavar la zanja.",
+          "w": 900,
+          "h": 1340
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "El cableado subterráneo puede correr bajo la propia piscina solo cuando:",
+          "choices": [
+            "Está en tubería metálica rígida",
+            "Es necesario para alimentar equipo de piscina permitido por el Artículo 680",
+            "Está enterrado a 24 in de profundidad",
+            "La piscina es residencial"
+          ],
+          "answer_index": 1,
+          "explain_plain": "680.11 prohíbe el cableado bajo la piscina salvo el necesario para el equipo de piscina que el artículo permite.",
+          "nec_ref": "680.11"
+        },
+        {
+          "question": "¿Qué método de cableado NO está en la lista de 680.11 para la zona de 5 ft?",
+          "choices": [
+            "Tubería rígida de cloruro de polivinilo",
+            "Cable Tipo MC",
+            "Tubería metálica eléctrica (EMT)",
+            "Tubería rígida de resina termoestable reforzada"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La lista de 680.11 es RMC, IMC, PVC rígido, RTRC o cable Tipo MC. El EMT no está en ella.",
+          "nec_ref": "680.11"
+        },
+        {
+          "question": "Cobertura mínima para tubería rígida de PVC en la banda, ubicación general, según la Tabla 300.5:",
+          "choices": [
+            "6 in",
+            "12 in",
+            "18 in",
+            "24 in"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La Tabla 300.5 pide 18 in de cobertura para canalizaciones no metálicas en ubicaciones generales; las metálicas piden 6 in.",
+          "nec_ref": "Tabla 300.5"
+        }
+      ],
+      "code_refs": [
+        "680.11",
+        "Table 300.5"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "680.11 text: permitted methods RMC, IMC, rigid PVC, RTRC, or Type MC; no wiring under the pool unless necessary for pool equipment; minimum cover per Table 300.5",
+          "source": "Mike Holt Forum, Exposed Conduit Within 5' of Pool Edge (quotes 680.11)",
+          "url": "https://forums.mikeholt.com/threads/exposed-conduit-within-5-of-pool-edge.2590329/"
+        },
+        {
+          "claim": "Minimum cover values used with pool underground runs: 6 in. for metal raceways, 18 in. for PVC",
+          "source": "Mike Holt, Pools and Spas, Part 1 of 3",
+          "url": "https://www.mikeholt.com/newsletters.php?action=reply&inResponseTo=10723&letterID=605"
+        },
+        {
+          "claim": "680.11(A)–(C): underground methods within 5 ft of the pool and minimum cover per Table 300.5",
+          "source": "City of Newport News, Residential Electrical Swimming Pool Information",
+          "url": "https://www.nnva.gov/DocumentCenter/View/6693/Residential-Swimming-Pools-Electrical-Wiring-Requirements"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 680.11: Los tendidos subterráneos dentro de 5 ft de la pared interior de una piscina ahora cuentan como adecuados solo cuando el método de cableado se instala como un sistema completo, de una salida, caja de empalmes o punto de empalme al siguiente. Los métodos subterráneos para la zona dentro de 5 ft horizontales de la pared interior ahora cuentan solo cuando se instalan como sistemas completos (680.11(A)).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich": 1
     },
     {
       "id": "C6-680.21(A)",
@@ -932,8 +2169,8 @@
       "article": "680",
       "section": "680.21(A)",
       "title": "Cableado de motores y conductor de puesta a tierra del equipo",
-      "plain_explanation": "Los circuitos de motores de piscina llevan un conductor de puesta a tierra del equipo (EGC) de cobre aislado, dimensionado según 250.122 — y nunca menor de 12 AWG, aun donde la Tabla 250.122 permitiera uno menor. El EGC aislado (no un conductor desnudo en la canalización) es la diferencia de piscina que los inspectores buscan en la plataforma de equipos.",
-      "on_the_job": "Tire un EGC verde aislado de 12 AWG mínimo en cada circuito de motor de piscina, sea cual sea el tamaño del interruptor termomagnético.",
+      "plain_explanation": "Los circuitos de motores de piscina llevan un conductor de puesta a tierra del equipo (EGC) con dos diferencias de piscina frente al trabajo ordinario de motores:\n• El EGC es de cobre aislado — no un conductor desnudo en la canalización, y no aluminio.\n• Se dimensiona desde la Tabla 250.122 según el dispositivo de sobrecorriente que está delante del circuito — pero nunca menor de 12 AWG, aun donde la tabla permitiera uno menor.\nEl único lugar donde el mínimo muerde: un circuito de 15 A, donde la Tabla 250.122 empareja el interruptor termomagnético con un EGC de cobre de 14 AWG. En un circuito de motor de piscina ese 14 AWG se queda en el camión — el EGC es 12 AWG. A 20 A la tabla y el mínimo coinciden en 12 AWG; a 30 A y más, manda la tabla (10 AWG a 30, 40 y 60 A).",
+      "on_the_job": "Plataforma de piscina en Florida, obra nueva: el motor de la bomba se alimenta desde un interruptor termomagnético GFCI de 20 A (680.21(C)) en el tablero Siemens. La cuadrilla tira dos conductores de circuito y un EGC de cobre verde aislado de 12 AWG en la canalización hasta el motor — el tamaño de la tabla para 20 A y el mínimo de 680.21(A) son aquí el mismo número. En la misma plataforma, un circuito de 15 A para una bomba auxiliar pequeña sigue recibiendo un EGC aislado de 12 AWG, no el 14 AWG que la tabla sola permitiría.",
       "sharma_note": "",
       "figure_idea": "Canalización de la plataforma de equipos abierta: EGC verde aislado junto a los conductores del circuito.",
       "related_ids": [
@@ -943,7 +2180,109 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C6-680.11",
-      "next_id": "C6-680.21(C)"
+      "next_id": "C6-680.21(C)",
+      "why_it_exists": "La plataforma de equipos está mojada, a la intemperie y unida a la unión equipotencial de la piscina. Un cable de tierra desnudo en una canalización húmeda se corroe en silencio durante años, y el primero en saberlo es cuando una falla no tiene camino de regreso y el interruptor termomagnético nunca dispara — con bañistas en el agua. El conductor de cobre aislado, sujeto a un mínimo de 12 AWG, mantiene intacto el camino de falla para que el dispositivo de sobrecorriente abra rápido.",
+      "exam_trap": "La trampa es dimensionar el EGC de la piscina directamente desde la Tabla 250.122 y detenerse ahí: 14 AWG para un circuito de 15 A es la respuesta de la tabla para el trabajo ordinario, y es la respuesta incorrecta en una piscina. 680.21(A) fija un mínimo de 12 AWG y exige que el conductor sea de cobre aislado — un tierra desnudo tirado en el conducto no cumple ni con el tamaño correcto.",
+      "inspection_fails": [
+        "Conductor de puesta a tierra del equipo desnudo en la canalización del motor de la piscina — 680.21(A) lo exige aislado.",
+        "EGC de 14 AWG en un circuito de motor de piscina de 15 A — por debajo del mínimo de 12 AWG.",
+        "EGC de aluminio en un circuito de motor de piscina — la sección exige cobre.",
+        "EGC dimensionado por el tamaño del conductor en lugar de por el dispositivo de sobrecorriente que está delante (Tabla 250.122)."
+      ],
+      "tables": [
+        {
+          "caption": "Tamaño de la Tabla 250.122 frente al mínimo de piscina (EGC de cobre)",
+          "headers": [
+            "Interruptor",
+            "Tabla 250.122",
+            "EGC de piscina"
+          ],
+          "rows": [
+            [
+              "15 A",
+              "14 AWG",
+              "12 AWG"
+            ],
+            [
+              "20 A",
+              "12 AWG",
+              "12 AWG"
+            ],
+            [
+              "30 A",
+              "10 AWG",
+              "10 AWG"
+            ],
+            [
+              "40 A",
+              "10 AWG",
+              "10 AWG"
+            ],
+            [
+              "60 A",
+              "10 AWG",
+              "10 AWG"
+            ]
+          ],
+          "note": "El mínimo de 12 AWG de 680.21(A) solo cambia la respuesta a 15 A; por encima de eso, manda la tabla."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c6/C6-680.21A-egc.svg",
+          "alt": "Tramo de canalización desde un tablero con un interruptor termomagnético GFCI de 20 A hasta el motor de una bomba de piscina, que muestra dos conductores de circuito y un conductor de puesta a tierra del equipo verde aislado, una banda dorada con el mínimo de 12 AWG, y un panel rojo que muestra un EGC desnudo como falla.",
+          "caption": "EGC de cobre aislado con el circuito — 12 AWG mínimo, sea cual sea el interruptor.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Cuál es el EGC más pequeño permitido en un circuito de motor de piscina?",
+          "choices": [
+            "14 AWG",
+            "12 AWG",
+            "10 AWG",
+            "8 AWG"
+          ],
+          "answer_index": 1,
+          "explain_plain": "680.21(A) fija el mínimo en 12 AWG aun donde la Tabla 250.122 permitiera 14 AWG.",
+          "nec_ref": "680.21(A)"
+        },
+        {
+          "question": "El EGC del motor de la piscina debe ser:",
+          "choices": [
+            "Cobre desnudo",
+            "Cobre aislado",
+            "Aluminio aislado",
+            "Cualquier conductor certificado"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El cobre aislado es la diferencia de piscina — un conductor desnudo en la canalización no cumple.",
+          "nec_ref": "680.21(A)"
+        },
+        {
+          "question": "¿EGC para el motor de una bomba de piscina con un interruptor de 40 A?",
+          "choices": [
+            "12 AWG",
+            "14 AWG",
+            "10 AWG",
+            "8 AWG"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La Tabla 250.122 empareja un dispositivo de 40 A con un EGC de cobre de 10 AWG, que está por encima del mínimo de 12 AWG.",
+          "nec_ref": "Table 250.122"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "680.21(A)",
+        "Table 250.122",
+        "680.21(C)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C6-680.21(C)",
@@ -983,8 +2322,8 @@
       "article": "680",
       "section": "680.21(D)",
       "title": "Motores de bomba de reemplazo",
-      "plain_explanation": "Donde se reemplaza el motor de una bomba de piscina, el trabajo de reemplazo debe proporcionar la protección GFCI que 680.21(C) exige para esa salida. Una llamada de servicio que cambia un motor en un circuito antiguo sin protección no puede dejarlo sin protección.\n\nCAMBIO NEC 2023:\n• 680.21(D): Las revisiones en 680.2l(D) amplían el requisito de proporcionar protección con interruptor de circuito por falla a tierra (GFCI) para los motores de bomba de piscina reemplazados, e incluyen también los que se reparan, pero no se reemplazan.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Equipos de servicio: un cambio de motor activa la mejora del GFCI — cotícela con el reemplazo, no como una sorpresa.",
+      "plain_explanation": "680.21(D) es una regla de servicio: donde se reemplaza el motor de una bomba de piscina, el trabajo de reemplazo debe proporcionar la protección GFCI que 680.21(C) exige para esa salida. Una llamada de servicio que cambia un motor en un circuito antiguo sin protección no puede dejarlo sin protección.\n• El deber acompaña al reemplazo, no a la edad de la piscina — un circuito existente sin protección no queda exento una vez que se cambia el motor.\n• El alcance de (C) al que remite: salidas que alimentan motores de piscina en circuitos ramales de 150 V o menos a tierra y 60 A o menos, monofásicos o trifásicos, por tomacorriente o por conexión directa.",
+      "on_the_job": "Equipos de servicio: un cambio de motor activa la mejora del GFCI — cotícela con el reemplazo, no como una sorpresa. Una llamada típica en Florida es una bomba cableada directa de 240 V, 20 A con un breaker común: el precio del reemplazo lleva la protección GFCI desde el principio, y el técnico verifica la protección en la salida antes de dejar el motor nuevo en marcha — no después de la llamada de garantía.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -992,18 +2331,103 @@
       ],
       "florida_note": "",
       "verified": true,
-      "sharma_rule_ids": [],
       "prev_id": "C6-680.21(C)",
       "next_id": "C6-680.22(A)",
+      "sharma_rule_ids": [],
       "nec2023_change": [
         {
           "section": "680.21(D)",
-          "change": "Las revisiones en 680.2l(D) amplían el requisito de proporcionar protección con interruptor de circuito por falla a tierra (GFCI) para los motores de bomba de piscina reemplazados, e incluyen también los que se reparan, pero no se reemplazan.",
+          "change": "Las revisiones en 680.21(D) amplían el requisito de proporcionar protección con interruptor de circuito por falla a tierra (GFCI) para los motores de bomba de piscina reemplazados, e incluyen también los que se reparan, pero no se reemplazan.",
           "source": "Carosella/NFPA-based 2023 NEC change workbook: 680.21{D) Pool Pump Motor Replacement",
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 680.21(D): Las revisiones en 680.21(D) amplían el requisito de proporcionar protección con interruptor de circuito por falla a tierra (GFCI) para los motores de bomba de piscina reemplazados, e incluyen también los que se reparan, pero no se reemplazan.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Los motores de bomba viven húmedos, atados al mismo sistema de circulación que los nadadores tocan. Un motor cambiado a un circuito sin protección mantiene vivo el antiguo peligro de choque bajo la factura de un motor nuevo. Atar la mejora del GFCI al reemplazo cierra la brecha de exención: en el único momento en que una persona calificada ya está parada junto al equipo, la protección se instala.",
+      "exam_trap": "La trampa es 'solo cambiamos el motor — nunca tocamos el circuito'. 680.21(D) convierte el propio reemplazo en el detonante, así que el trabajo falla si la salida queda sin la protección GFCI de 680.21(C), aunque el alambrado sea anterior a la regla. Y lea la nota de edición antes de cotizar trabajo futuro: según el cambio de 2023, una reparación activa el mismo deber.",
+      "inspection_fails": [
+        "Motor reemplazado y el circuito dejado con un breaker común — sin protección GFCI en la salida.",
+        "Cotización escrita solo por el motor; la mejora del GFCI presentada al cliente como sorpresa después del cambio.",
+        "Motor de reemplazo conectado por tomacorriente, y el tomacorriente no es la salida protegida que exige 680.21(C)."
+      ],
+      "tables": [
+        {
+          "caption": "¿Qué activa 680.21(D)?",
+          "headers": [
+            "Trabajo",
+            "Deber en 2020"
+          ],
+          "rows": [
+            [
+              "Motor reemplazado",
+              "Proporcionar la protección GFCI de 680.21(C) para la salida"
+            ],
+            [
+              "Motor solo reparado",
+              "(D) no se activa en 2020 — vea el cambio de 2023 abajo"
+            ],
+            [
+              "Alcance de (C)",
+              "150 V o menos a tierra, 60 A o menos, monofásico o trifásico"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c6/C6-680.21D-replacement-flow.svg",
+          "alt": "Flujo de decisión para una llamada de servicio de motor de bomba de piscina: si el motor se reemplaza, verifique si la salida tiene la protección GFCI que exige 680.21(C); si no, agregue la protección antes de irse. Una franja roja anota el cambio de 2023 que extiende el detonante a los motores reparados, y una pastilla de alcance indica 150 voltios a tierra y 60 amperios máximo.",
+          "caption": "El cambio es el detonante: la protección entra con el motor.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Usted reemplaza el motor de una bomba de piscina en un circuito antiguo sin protección GFCI. 680.21(D) le exige:",
+          "choices": [
+            "Dejar el circuito como lo encontró",
+            "Proporcionar la protección GFCI que 680.21(C) exige para esa salida",
+            "Reemplazar todo el tablero",
+            "Unir solo la carcasa del motor"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El trabajo de reemplazo debe proporcionar la protección GFCI de 680.21(C) — el cambio es el detonante.",
+          "nec_ref": "680.21(D)"
+        },
+        {
+          "question": "El alcance de la protección de 680.21(C) cubre salidas para motores de piscina en circuitos de:",
+          "choices": [
+            "Hasta 150 V a tierra y 60 A",
+            "Hasta 300 V a tierra y 100 A",
+            "Solo 120 V, 20 A",
+            "Solo bombas con cable y enchufe"
+          ],
+          "answer_index": 0,
+          "explain_plain": "150 V o menos a tierra y 60 A o menos, monofásicos o trifásicos, por tomacorriente o por conexión directa.",
+          "nec_ref": "680.21(C)"
+        },
+        {
+          "question": "Según el texto del NEC 2020 de 680.21(D), una reparación que no reemplaza el motor:",
+          "choices": [
+            "Activa el deber de GFCI",
+            "No activa (D) — eso llega con el cambio de 2023",
+            "Requiere una acometida nueva",
+            "Está prohibida"
+          ],
+          "answer_index": 1,
+          "explain_plain": "En 2020, (D) se activa con el reemplazo. El cambio de 2023 lo extiende a los motores reparados — vea la nota de edición.",
+          "nec_ref": "680.21(D)"
+        }
+      ],
+      "code_refs": [
+        "680.21(D)",
+        "680.21(C)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C6-680.22(A)",
@@ -1368,8 +2792,8 @@
       "article": "680",
       "section": "680.50",
       "title": "Fuentes — Partes I y V",
-      "plain_explanation": "Las fuentes se rigen por las Partes I y V, y donde las personas pueden entrar al agua (una fuente interactiva o un área de chorros), también entran las reglas de la Parte II referenciadas. El equipo de fuentes — bombas sumergibles, luminarias y sus alimentaciones — es equipo certificado de grado piscina, no material de iluminación de jardinería.\n\nCAMBIO NEC 2023:\n• 680.50: Las fuentes ahora reciben la misma regla de equipo de 5 ft que las piscinas: todo lo que esté por encima del límite de contacto de bajo voltaje se mantiene a 5 ft de la pared interior, a menos que una barrera permanente lo separe. El equipo que funciona por encima del límite de contacto de bajo voltaje necesita al menos 5 ft de separación desde la pared interior de la fuente (680.50(B)).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Una 'fuente decorativa' en la que los niños pueden mojarse no se cablea como un adorno de terraza seca — pregunte si se puede entrar antes de cotizar.",
+      "plain_explanation": "Las fuentes se rigen por la Parte I (general) y la Parte V del Artículo 680. Las partes son la primera decisión del trabajo:\n• Fuente decorativa a la que nadie entra: Partes I y V.\n• Fuente interactiva, área de chorros o cualquier fuente a la que las personas pueden entrar: también entran las reglas de la Parte II a las que la sección remite — trate el agua como una piscina.\n• El equipo es equipo certificado de grado piscina: bombas sumergibles, luminarias y sus alimentaciones. El material de iluminación de jardinería no es equipo de fuentes.\n• El equipo sumergible funciona con protección GFCI (680.51(A)) — si vive bajo el agua de la fuente con voltaje de línea, está protegido con GFCI.",
+      "on_the_job": "Una fuente de entrada de una HOA en Florida se dibuja como un adorno de terraza seca, pero el plano del sitio muestra escalones hacia la cuenca y el folleto de ventas la llama área de chorros. Esa respuesta cambia el cableado: la cuadrilla la cotiza como una fuente a la que se puede entrar, con las reglas referenciadas de la Parte II sobre las Partes I y V, una bomba sumergible certificada con protección GFCI y luminarias de fuente certificadas — no el paquete de iluminación de jardinería que el GC sugirió primero. Pregunte si se puede entrar antes de cotizar, siempre.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1388,7 +2812,93 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/680-50",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Agua, electricidad y pies descalzos son el problema de la piscina en una cuenca más pequeña. Una fuente parece inofensiva porque es poco profunda y decorativa, pero una falla en una bomba sumergible o una luminaria pone voltaje en agua que las personas tocan — y en un área interactiva, los niños están parados dentro. El equipo certificado de grado piscina y la protección GFCI son lo que impide que una falla se convierta en una descarga.",
+      "exam_trap": "La respuesta trampa es que las fuentes viven en la Parte II con las piscinas, o que una fuente es solo iluminación de jardinería que se moja. 680.50 ubica las fuentes en las Partes I y V; la Parte II entra solo por la referencia, cuando las personas pueden meterse al agua. Y el equipo es equipo certificado de grado piscina — un transformador de jardinería y una luminaria de jardín no son un sistema de fuente.",
+      "inspection_fails": [
+        "Equipo de iluminación de jardinería instalado como luminarias de fuente — no es equipo de fuente certificado.",
+        "Bomba sumergible sin protección GFCI (680.51(A)).",
+        "Fuente interactiva cableada como adorno de terraza seca — nunca se aplicaron las reglas referenciadas de la Parte II.",
+        "Equipo con voltaje de línea en el agua que no está certificado para uso en fuentes."
+      ],
+      "tables": [
+        {
+          "caption": "Qué fuente, qué reglas",
+          "headers": [
+            "Fuente",
+            "Reglas que aplican"
+          ],
+          "rows": [
+            [
+              "Decorativa, sin entrada",
+              "Partes I y V"
+            ],
+            [
+              "Interactiva / se puede entrar",
+              "Partes I y V, más las reglas referenciadas de la Parte II"
+            ],
+            [
+              "Bomba o luminaria sumergible",
+              "Equipo certificado de grado piscina, GFCI según 680.51(A)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c6/C6-680.50-fountain.svg",
+          "alt": "Vista en planta de la cuenca de una fuente con una bomba sumergible y una luminaria certificada, escalones de entrada que hacen la fuente interactiva, equipo GFCI fuera de la cuenca, y una franja roja de solo 2023 que dimensiona la separación de equipo de 5 ft desde la pared interior.",
+          "caption": "Rigen las Partes I y V — los escalones de entrada incorporan las reglas de la Parte II.",
+          "w": 900,
+          "h": 1620
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Qué partes del Artículo 680 rigen las fuentes?",
+          "choices": [
+            "Partes I y II",
+            "Partes I y V",
+            "Solo la Parte III",
+            "Parte VII"
+          ],
+          "answer_index": 1,
+          "explain_plain": "680.50 rige las fuentes bajo las Partes I y V; las reglas de la Parte II se incorporan solo por referencia, para las fuentes a las que las personas pueden entrar.",
+          "nec_ref": "680.50"
+        },
+        {
+          "question": "Una fuente interactiva de chorros debe aplicar además:",
+          "choices": [
+            "Ninguna regla extra",
+            "Las reglas referenciadas de la Parte II",
+            "Solo las reglas de piscinas desmontables",
+            "Las reglas de bañeras de hidromasaje"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Donde las personas pueden entrar al agua, 680.50 incorpora también los requisitos referenciados de la Parte II.",
+          "nec_ref": "680.50"
+        },
+        {
+          "question": "Una bomba sumergible de fuente con voltaje de línea requiere:",
+          "choices": [
+            "Ninguna protección si está certificada",
+            "Protección GFCI",
+            "Un EGC desnudo",
+            "Una certificación de iluminación de jardinería"
+          ],
+          "answer_index": 1,
+          "explain_plain": "680.51(A) exige protección GFCI para las luminarias de fuentes, las bombas sumergibles y demás equipo sumergible.",
+          "nec_ref": "680.51(A)"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 680.50: Las fuentes ahora reciben la misma regla de equipo de 5 ft que las piscinas: todo lo que esté por encima del límite de contacto de bajo voltaje se mantiene a 5 ft de la pared interior, a menos que una barrera permanente lo separe. El equipo que funciona por encima del límite de contacto de bajo voltaje necesita al menos 5 ft de separación desde la pared interior de la fuente (680.50(B)).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "680.50",
+        "680.51(A)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C6-680.51",
@@ -1434,16 +2944,117 @@
       "article": "680",
       "section": "680.80",
       "title": "Elevadores de piscina — Parte VIII",
-      "plain_explanation": "La Parte VIII cubre los elevadores de piscina operados eléctricamente (los elevadores de accesibilidad en piscinas comerciales y de amenidades): equipo certificado, protección GFCI para el circuito del elevador y unión equipotencial del elevador al sistema equipotencial de la piscina donde se aplique la Parte II.",
-      "on_the_job": "Trabajo ADA en piscinas de amenidades: el elevador es alcance eléctrico — incluya su circuito y su unión equipotencial en el precio de la piscina.",
+      "plain_explanation": "La Parte VIII del Artículo 680 cubre los elevadores de piscina operados eléctricamente — los elevadores de accesibilidad en piscinas comerciales y de amenidades (el elevador está definido en 680.2). Solo la Parte I y la Parte VIII se aplican al elevador mismo; el resto del Artículo 680 no lo acompaña.\n• El elevador debe estar certificado, etiquetado e identificado para uso en piscinas y spas.\n• Un elevador conectado al alambrado del inmueble que opera por encima del límite de voltaje de contacto bajo recibe protección GFCI para el personal.\n• El elevador se une al sistema de unión equipotencial de la piscina — accesorios metálicos fijados a la estructura de la piscina según 680.26(B)(5) y partes metálicas fijas según 680.26(B)(7), con cobre sólido no menor de 8 AWG.\n• Las excepciones a la certificación son estrechas: los elevadores que funcionan con una batería removible que se carga lejos de la piscina, y los elevadores solares pequeños, quedan fuera de la regla de certificación. Lea la excepción antes de asumir que una cubre su elevador.",
+      "on_the_job": "Trabajo ADA en piscinas de amenidades en una comunidad de apartamentos de Florida: el elevador es alcance eléctrico — incluya su circuito y su unión equipotencial en el precio de la piscina, no como una partida de último momento. En el rough-in eso significa un circuito protegido con GFCI hasta el lugar del elevador y un puente de unión de cobre sólido de 8 AWG que ate el elevador a la red equipotencial junto con las escaleras y los pasamanos. Si el elevador especificado es un modelo de batería removible que se carga en el cuarto de bombas, confirme que la excepción realmente aplica antes de eliminar el circuito de la oferta.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
       "florida_note": "",
       "verified": true,
-      "sharma_rule_ids": [],
       "prev_id": "C6-680.71",
-      "next_id": "C6-ART-682"
+      "next_id": "C6-ART-682",
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "El elevador lleva a una persona con movilidad limitada al agua sobre una máquina metálica conectada a la energía del inmueble. Si una falla energiza el bastidor, ese usuario no puede apartarse de un salto. La certificación prueba que la máquina fue construida para servicio húmedo, la protección GFCI corta una falla a tierra en milisegundos, y la unión equipotencial mantiene el elevador, el agua y la plataforma al mismo potencial para que ninguna diferencia de voltaje pueda impulsar corriente a través del nadador.",
+      "exam_trap": "La trampa es tratar el elevador como mobiliario de piscina que el GC coloca en su sitio — 'no es eléctrico'. La Parte VIII lo convierte en equipo eléctrico certificado con deberes de GFCI y de unión. La trampa inversa es unir el elevador de vuelta al tablero: la unión equipotencial ata el elevador al sistema de unión de la piscina, y los puentes de unión en el área de la piscina no tienen que correr de vuelta a un tablero remoto, al equipo de acometida ni a un electrodo.",
+      "inspection_fails": [
+        "Elevador instalado y energizado sin puente de unión a la red equipotencial de la piscina.",
+        "Circuito del elevador con un breaker común — sin protección GFCI para el personal.",
+        "Elevador residencial sin certificación instalado en una piscina comercial de amenidades.",
+        "Puente de unión aterrizado solo en la tierra del equipo del circuito ramal y nunca atado al sistema de unión de la piscina."
+      ],
+      "tables": [
+        {
+          "caption": "Deberes del elevador de piscina (Parte VIII)",
+          "headers": [
+            "Elemento",
+            "Regla"
+          ],
+          "rows": [
+            [
+              "Certificación",
+              "Certificado, etiquetado e identificado para uso en piscinas y spas"
+            ],
+            [
+              "GFCI",
+              "Protección para el personal cuando se conecta al inmueble por encima del límite de voltaje de contacto bajo"
+            ],
+            [
+              "Unión",
+              "Al sistema equipotencial; cobre sólido de 8 AWG mínimo"
+            ],
+            [
+              "Excepciones",
+              "Elevadores de batería removible y solares pequeños — estrechas, lea primero"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c6/C6-680.80-lift-bonding.svg",
+          "alt": "Vista en planta de la esquina de una piscina de amenidades con un elevador de piscina operado eléctricamente al borde de la plataforma, un lazo dorado de unión de cobre sólido de 8 AWG que ata el elevador, la escalera y el pasamanos en un solo sistema equipotencial, y una zona dimensionada de 5 pies para las partes metálicas fijas.",
+          "caption": "El elevador es alcance eléctrico: certificado, protegido con GFCI, unido.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un elevador de piscina conectado al inmueble que opera por encima del límite de voltaje de contacto bajo requiere:",
+          "choices": [
+            "Protección GFCI para el personal",
+            "Un transformador dedicado",
+            "Un alimentador de 100 A",
+            "Ninguna protección si tiene batería de respaldo"
+          ],
+          "answer_index": 0,
+          "explain_plain": "Parte VIII: los elevadores conectados al alambrado del inmueble por encima del límite de voltaje de contacto bajo reciben protección GFCI para el personal.",
+          "nec_ref": "680 Parte VIII"
+        },
+        {
+          "question": "El conductor de unión equipotencial del elevador es como mínimo:",
+          "choices": [
+            "Cobre trenzado de 12 AWG",
+            "Cobre sólido de 10 AWG",
+            "Cobre sólido de 8 AWG",
+            "Aluminio de 6 AWG"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Los puentes de unión para elevadores de piscina son de cobre sólido, no menores de 8 AWG.",
+          "nec_ref": "680.26(B)"
+        },
+        {
+          "question": "¿Qué partes del Artículo 680 se aplican a un elevador de piscina operado eléctricamente?",
+          "choices": [
+            "Todo el Artículo 680",
+            "Solo las Partes I y VIII",
+            "Solo la Parte II",
+            "Solo la Parte VII"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Los elevadores de piscina se rigen por la Parte I y la Parte VIII; las demás partes no se aplican al elevador.",
+          "nec_ref": "680 Parte VIII"
+        }
+      ],
+      "code_refs": [
+        "680 Part VIII",
+        "680.2",
+        "680.26",
+        "680.26(B)(5)",
+        "680.26(B)(7)"
+      ],
+      "uncertain": [
+        "El valor exacto del límite de voltaje de contacto bajo en la definición de 680.2 no se confirmó contra el texto impreso de 2020 para esta página — verifíquelo en el libro impreso antes de citar un número."
+      ],
+      "rich_sources": [
+        {
+          "claim": "Los elevadores de piscina deben estar certificados, etiquetados e identificados para uso en piscinas y spas; los conectados al alambrado del inmueble por encima del límite de voltaje de contacto bajo requieren protección GFCI para el personal; unión según 680.26(B)(5) y (B)(7), típicamente cobre sólido no menor de 8 AWG, con excepciones de certificación para elevadores de batería removible y solares pequeños",
+          "source": "Electrical Contractor Magazine — Busway Switch Rating, Special Permission and More",
+          "url": "https://www.ecmag.com/magazine/articles/article-detail/codes-standards-busway-switch-rating-special-permission-and-more"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C6-ART-682",
@@ -1491,8 +3102,8 @@
       "article": "685",
       "section": "685",
       "title": "Artículo 685 — Sistemas eléctricos integrados",
-      "plain_explanation": "Introducción: reglas de apagado ordenado e interconexión para sistemas eléctricos integrados en instalaciones industriales y grandes, donde una sola falla no debe propagarse en cascada. Territorio de ingeniería especializada; reconozca el artículo.",
-      "on_the_job": "Solo reconocimiento: donde los planos de una instalación muestran un sistema eléctrico integrado, su documentación de apagado ordenado es parte del registro eléctrico — guárdela con los directorios de tableros en el archivo de la obra, y no recablee interconexiones entre sistemas sin el ingeniero de registro.",
+      "plain_explanation": "El Artículo 685 cubre los sistemas eléctricos integrados: segmentos unitizados de un sistema de cableado industrial donde un apagado ordenado es necesario para garantizar una operación segura. No es una clase de tamaño ni de voltaje. Un sistema solo califica cuando se cumplen las tres condiciones de 685.1 al mismo tiempo:\n• Se requiere un apagado ordenado para minimizar el peligro para el personal y el daño al equipo: cortar la energía de golpe es, en sí mismo, el peligro.\n• Las condiciones de mantenimiento y supervisión garantizan que personas calificadas atiendan el sistema, y los nombres de esas personas calificadas se conservan en un registro permanente en la oficina a cargo de la instalación.\n• Se establecen y mantienen salvaguardas efectivas aceptables para la autoridad competente (AHJ).\nDonde un sistema califica, el artículo flexibiliza algunas reglas normales para que una alarma de falla se pueda responder con un apagado planificado en lugar de un disparo:\n• 685.10: los dispositivos de sobrecorriente críticos para el sistema pueden ser accesibles en lugar de fácilmente accesibles, montados a alturas que impidan su operación por personal no calificado.\n• 685.12: se permite que los circuitos de cc de dos conductores no estén puestos a tierra.\n• 685.14: se permite que los circuitos de control de 150 volts o menos, alimentados desde sistemas derivados separados, no estén puestos a tierra donde se requiere continuidad operativa.\nLa Tabla 685.3 de 685.3 remite a las secciones de otros artículos — 430.44 para motores es una — que tienen sus propias disposiciones de apagado ordenado.",
+      "on_the_job": "Solo reconocimiento. El trabajo de Sharma es residencial y comercial pequeño, así que este artículo nos aparece como una habilidad de lectura, no como un método de instalación: donde los planos de una instalación muestran un sistema eléctrico integrado, su documentación de apagado ordenado es parte del registro eléctrico — guárdela con los directorios de tableros en el archivo de la obra, y no recablee interconexiones entre sistemas sin el ingeniero de registro. Si una llamada de servicio lleva alguna vez a una cuadrilla a una planta que opera bajo 685, la primera pregunta es quiénes son las personas calificadas nombradas; si nadie puede mostrar ese registro, el sistema no se está operando como lo exige el artículo.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -1500,7 +3111,110 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C6-ART-682",
-      "next_id": "C6-ART-690"
+      "next_id": "C6-ART-690",
+      "why_it_exists": "En una planta química, una acería o sobre un patio de chatarra, la pérdida súbita de energía no es el estado seguro: es el accidente. Un electroimán de elevación suelta su carga, una reacción se sale de control, el metal fundido se solidifica donde no debe. El Artículo 685 cambia las reglas normales de accesibilidad y puesta a tierra por supervisión: las alarmas anuncian una falla y el personal capacitado apaga el proceso en secuencia antes de que alguien salga lastimado.",
+      "exam_trap": "La trampa del examen es «cualquier acometida industrial grande». El Artículo 685 no trata de tamaño: una planta grande que no cumple cualquiera de las tres condiciones de 685.1 se cablea bajo las reglas normales, con dispositivos de sobrecorriente fácilmente accesibles y sistemas puestos a tierra incluidos.",
+      "inspection_fails": [
+        "Nombres de las personas calificadas ausentes del registro permanente en la oficina a cargo de la instalación (685.1).",
+        "Salvaguardas del sistema integrado no establecidas, no mantenidas o nunca aceptadas por la AHJ (685.1).",
+        "Dispositivos de sobrecorriente críticos bajados a una altura fácilmente accesible en una modificación posterior, anulando la seguridad que permite 685.10.",
+        "Interconexiones entre sistemas recableadas en obra sin ingeniero de registro y sin actualizar la documentación de apagado."
+      ],
+      "tables": [
+        {
+          "caption": "Lo que cambia el Artículo 685 — y lo que exige primero",
+          "headers": [
+            "Sección",
+            "Regla"
+          ],
+          "rows": [
+            [
+              "685.10",
+              "Los dispositivos de sobrecorriente críticos pueden ser accesibles, montados por seguridad contra operación no calificada"
+            ],
+            [
+              "685.12",
+              "Se permite que los circuitos de cc de dos conductores no estén puestos a tierra"
+            ],
+            [
+              "685.14",
+              "Circuitos de control de 150 V o menos desde sistemas derivados separados: se permite no ponerlos a tierra"
+            ]
+          ],
+          "note": "Cada flexibilización depende de que las tres condiciones de 685.1 se mantengan vigentes."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c6/C6-ART-685-three-gates.svg",
+          "alt": "Diagrama de flujo: tres condiciones de calificación de 685.1 — apagado ordenado requerido, solo personas calificadas con nombres en registro permanente, y salvaguardas aceptadas por la AHJ — conducen a un sistema eléctrico integrado, tras lo cual aplican las flexibilizaciones de 685.10, 685.12 y 685.14.",
+          "caption": "Tres condiciones califican el sistema; solo entonces aplican las flexibilizaciones.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Cuál condición NO se requiere para que una instalación califique como sistema eléctrico integrado según 685.1?",
+          "choices": [
+            "Apagado ordenado requerido para minimizar peligro y daño",
+            "Personas calificadas atienden el sistema, con nombres en registro permanente",
+            "Salvaguardas efectivas aceptables para la AHJ",
+            "Equipo con capacidad nominal mayor de 1000 volts"
+          ],
+          "answer_index": 3,
+          "explain_plain": "685.1 exige tres cosas juntas: apagado ordenado, supervisión por personas calificadas con registro permanente, y salvaguardas aceptadas por la AHJ. La clase de voltaje no es una de ellas.",
+          "nec_ref": "685.1"
+        },
+        {
+          "question": "Según 685.12, los circuitos de cc de dos conductores en un sistema integrado pueden estar:",
+          "choices": [
+            "Sin puesta a tierra",
+            "Puestos a tierra en dos puntos",
+            "Sin protección de sobrecorriente",
+            "Sin medio de desconexión"
+          ],
+          "answer_index": 0,
+          "explain_plain": "685.12 permite que los circuitos de cc de dos conductores no estén puestos a tierra dentro de un sistema integrado que califica.",
+          "nec_ref": "685.12"
+        },
+        {
+          "question": "¿Qué hace la Tabla 685.3?",
+          "choices": [
+            "Dimensiona conductores para sistemas integrados",
+            "Enumera secciones de otros artículos con disposiciones de apagado ordenado aplicables",
+            "Fija profundidades de espacio de trabajo",
+            "Enumera dispositivos de salvaguarda aprobados"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La Tabla 685.3, invocada por 685.3, enumera las secciones de otros artículos que aplican donde existen requisitos de apagado ordenado.",
+          "nec_ref": "685.3, Tabla 685.3"
+        }
+      ],
+      "code_refs": [
+        "685.1",
+        "685.3",
+        "Table 685.3",
+        "685.10",
+        "685.12",
+        "685.14",
+        "240.12"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "685.1 scope and its three conditions; 685.10, 685.12 and 685.14 text; Table 685.3 in 685.3 (incl. 430.44)",
+          "source": "Solar365 NEC text mirror, Article 685 — Integrated Electrical Systems",
+          "url": "http://www.solar365.com/node/13185"
+        },
+        {
+          "claim": "Article 685 examples (chemical processes, steel production, lifting electromagnets) and the 240.12 orderly-shutdown overcurrent rules",
+          "source": "EC&M, The Forgotten Ones: Often Overlooked NEC Articles",
+          "url": "https://www.ecmag.com/magazine/articles/article-detail/codes-standards-forgotten-ones-overlooked-articles-nec"
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich": 1
     },
     {
       "id": "C6-ART-690",
@@ -1710,8 +3424,8 @@
       "article": "690",
       "section": "690.13",
       "title": "Medio de desconexión del sistema PV",
-      "plain_explanation": "El medio de desconexión del sistema PV debe ser fácilmente accesible, indicar si está abierto o cerrado, y estar marcado permanentemente como el medio de desconexión del sistema fotovoltaico. Donde el medio de desconexión PV no está en la acometida, las reglas de directorio y placas de 690.56 remiten a él.",
-      "on_the_job": "Un medio de desconexión PV evidente y rotulado — 'en algún lugar del menú del inversor' no es un medio de desconexión.",
+      "plain_explanation": "Debe proveerse un medio para desconectar el sistema PV de todos los sistemas de cableado — el sistema de energía de la compañía eléctrica, cualquier sistema de almacenamiento de energía, y el equipo de utilización con su cableado del local. El medio de desconexión debe pasar tres verificaciones:\n• Estar instalado en un lugar fácilmente accesible (690.13(A)) — alcanzable con rapidez, sin escalera, sin un cuarto con llave y sin atravesar el edificio.\n• Indicar con claridad si está en la posición abierta (off) o cerrada (on) (690.13(B)).\n• Estar marcado permanentemente \"PV SYSTEM DISCONNECT\" (690.13(B)) — una marca real que resiste la intemperie, no cinta ni marcador.\nDonde todos los terminales del medio de desconexión pueden seguir energizados con el interruptor abierto — el lado del arreglo permanece vivo con la luz del sol — se coloca una señal de advertencia sobre el medio de desconexión o junto a él. Donde el medio de desconexión PV no está en el equipo de acometida, las reglas de directorio y placas de 690.56 remiten a donde está, para que cada fuente del edificio pueda localizarse desde la acometida.",
+      "on_the_job": "PV en el techo de una casa de Florida: el inversor queda en la pared del garaje y la cuadrilla instala el medio de desconexión del sistema PV afuera, junto al meter-main Siemens, donde es fácilmente accesible desde el nivel del suelo. Es un interruptor real que muestra OPEN y ON, marcado permanentemente PV SYSTEM DISCONNECT. Como está agrupado en la acometida, la placa de 690.56 en el mismo lugar lo nombra junto con las demás fuentes del edificio. Al propietario se le dice con claridad: el interruptor corta la conexión, pero los paneles y sus cables permanecen vivos con la luz del día.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1721,7 +3435,111 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C6-690.12(C)",
-      "next_id": "C6-690.15"
+      "next_id": "C6-690.15",
+      "why_it_exists": "Un arreglo PV produce energía siempre que la luz lo toca, así que abrir el interruptor termomagnético de la compañía eléctrica no hace seguro el lado solar. El medio de desconexión es el único lugar donde un bombero, una cuadrilla de la compañía eléctrica o el próximo electricista puede separar el sistema PV de todo otro sistema de cableado y saber que está abierto. Si está escondido, sin marcar o ambiguo sobre su posición, alguien trabaja sobre conductores que cree muertos y no lo están.",
+      "exam_trap": "La trampa es responder que el interruptor de apagado rápido, o el control propio del inversor, satisface 690.13. El apagado rápido (690.12) limita el voltaje de los conductores para los bomberos; no es el medio de desconexión del sistema PV. 690.13 exige un medio de desconexión que separe el sistema PV de todos los sistemas de cableado, ubicado donde sea fácilmente accesible, que muestre con claridad abierto o cerrado, y marcado permanentemente PV SYSTEM DISCONNECT.",
+      "inspection_fails": [
+        "Medio de desconexión PV dentro del ático o detrás de una puerta con llave — no es fácilmente accesible (690.13(A)).",
+        "Medio de desconexión marcado con cinta o marcador — la marca no es permanente (690.13(B)).",
+        "El interruptor no indica con claridad la posición abierta frente a la cerrada (690.13(B)).",
+        "Medio de desconexión PV alejado de la acometida, sin directorio ni placa en el equipo de acometida que remita a él (690.56)."
+      ],
+      "tables": [
+        {
+          "caption": "El medio de desconexión de 690.13, verificado en cuatro puntos",
+          "headers": [
+            "Verificación",
+            "Regla"
+          ],
+          "rows": [
+            [
+              "Ubicación",
+              "Fácilmente accesible — 690.13(A)"
+            ],
+            [
+              "Posición",
+              "Muestra con claridad abierto (off) o cerrado (on) — 690.13(B)"
+            ],
+            [
+              "Marca",
+              "Marcado permanentemente PV SYSTEM DISCONNECT — 690.13(B)"
+            ],
+            [
+              "Fuera de la acometida",
+              "El directorio/placa en la acometida remite a él — 690.56"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c6/C6-690.13-disconnect.svg",
+          "alt": "Elevación de pared en una acometida que muestra un meter-main junto a un medio de desconexión PV que muestra OPEN y ON y está marcado permanentemente PV SYSTEM DISCONNECT, una placa directorio de 690.56, y una pantalla de menú tachada por no ser un medio de desconexión.",
+          "caption": "Un medio de desconexión PV marcado y alcanzable, agrupado en la acometida.",
+          "w": 900,
+          "h": 1440
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Dónde debe instalarse el medio de desconexión del sistema PV?",
+          "choices": [
+            "En el ático cerca del arreglo",
+            "En un lugar fácilmente accesible",
+            "Solo dentro del inversor",
+            "En cualquier parte del techo"
+          ],
+          "answer_index": 1,
+          "explain_plain": "690.13(A) ubica el medio de desconexión del sistema PV en un lugar fácilmente accesible.",
+          "nec_ref": "690.13(A)"
+        },
+        {
+          "question": "¿Qué marca debe llevar cada medio de desconexión del sistema PV?",
+          "choices": [
+            "SOLAR POWER",
+            "PV SYSTEM DISCONNECT",
+            "CAUTION HIGH VOLTAGE",
+            "No se requiere marca alguna"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Debe indicar con claridad abierto o cerrado y estar marcado permanentemente PV SYSTEM DISCONNECT, o equivalente.",
+          "nec_ref": "690.13(B)"
+        },
+        {
+          "question": "El medio de desconexión del sistema PV debe desconectar el sistema PV de:",
+          "choices": [
+            "Solo el arreglo",
+            "Solo la compañía eléctrica",
+            "Todos los sistemas de cableado, incluidos otros sistemas de energía y almacenamiento",
+            "El iniciador del apagado rápido"
+          ],
+          "answer_index": 2,
+          "explain_plain": "690.13 exige un medio para desconectar el sistema PV de todos los sistemas de cableado, incluidos los sistemas de energía, los sistemas de almacenamiento de energía y el equipo de utilización.",
+          "nec_ref": "690.13"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "690.13",
+        "690.13(A)",
+        "690.13(B)",
+        "690.56",
+        "690.15"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "Cada medio de desconexión del sistema PV debe indicar con claridad si está en la posición abierta (off) o cerrada (on) y estar marcado permanentemente 'PV SYSTEM DISCONNECT'; se requiere una señal de advertencia donde todos los terminales del medio de desconexión pueden estar energizados en la posición abierta",
+          "source": "Minnesota Department of Labor and Industry, 2020 NEC Labeling Requirements (solar label guide)",
+          "url": "https://dli.mn.gov/sites/default/files/pdf/solar_labelguide.pdf"
+        },
+        {
+          "claim": "Debe proveerse un medio para desconectar el sistema PV de todos los sistemas de cableado, incluidos los sistemas de energía, los sistemas de almacenamiento de energía y el equipo de utilización; 690.13(A) lugar fácilmente accesible y 690.13(B) marcado",
+          "source": "ION Solar, NEC Basics training curriculum (2020 NEC)",
+          "url": "https://sites.google.com/ionsolar.com/ion-oracle/training-curriculum/compliance/electrical/nec-basics"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C6-690.15",
@@ -1729,8 +3547,8 @@
       "article": "690",
       "section": "690.15",
       "title": "Desconexión del equipo PV",
-      "plain_explanation": "Los medios de desconexión del equipo deben abrir todos los conductores no puestos a tierra de todas las fuentes — en un trabajo PV eso significa el lado de la red eléctrica y el lado del arreglo, y en sistemas híbridos también el lado del almacenamiento. Un medio de desconexión que aísla el inversor de la red pero lo deja conectado a un arreglo energizado no ha hecho que el equipo sea seguro para su servicio.\n\nCAMBIO NEC 2023:\n• 690.15: Se reorganizó 690.15 con algunos cambios gramaticales. También se modificó un requisito de que un medio de desconexión de equipo esté dentro de 10 pies del equipo para que ahora esté a la vista.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Antes de abrir un inversor, verifique que ambos lados estén sin energía — el arreglo produce energía siempre que haya sol.",
+      "plain_explanation": "690.15 trata de aislar una pieza del equipo PV — un inversor, un controlador de carga, un convertidor de dc a dc — para poder darle servicio o reemplazarla con todas las fuentes cortadas. El medio de desconexión debe abrir todos los conductores no puestos a tierra de todas las fuentes:\n• El lado del arreglo. Los módulos producen energía siempre que haya luz; abrir el lado de ac no hace nada a la entrada de dc.\n• El lado de la red eléctrica. La red realimenta las terminales de ac del inversor hasta que se abre su desconexión de ac.\n• El lado del almacenamiento, en sistemas híbridos con baterías.\nUbicación (2020): el dispositivo de aislamiento o la desconexión del equipo va en el equipo, o a la vista y dentro de 10 pies de él. Cuando queda más lejos, debe poder bloquearse en la posición abierta (110.25). Un dispositivo de aislamiento que no está clasificado para interrumpir la corriente del circuito debe estar marcado «Do Not Disconnect Under Load» (no desconectar bajo carga).",
+      "on_the_job": "Antes de abrir un inversor, verifique que ambos lados estén sin energía — el arreglo produce energía siempre que haya sol. En un trabajo híbrido de techo en Florida son tres verificaciones, no dos: abra la desconexión de dc en el inversor y mida la entrada del arreglo, abra la desconexión de ac y mida la salida, y abra la desconexión de la batería en el lado del almacenamiento. Las desconexiones de 690.15 quedan en el inversor — a la vista y dentro de 10 pies — para que el técnico que las abrió pueda verlas desde el equipo mientras la tapa está abierta.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1748,6 +3566,110 @@
           "source": "Carosella/NFPA-based 2023 NEC change workbook: 690.15 Disconnecting Means for Isolating Photovoltaic Equipment",
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
+        }
+      ],
+      "rich": 1,
+      "why_it_exists": "El equipo PV se alimenta desde direcciones que no se comportan como un circuito normal. No hay interruptor para el sol: un inversor con el lado de ac abierto todavía tiene dc energizado en sus terminales a plena luz del día, y un inversor híbrido agrega una batería que nunca duerme. Esta sección existe para que la persona que abre el equipo pueda poner cada una de esas fuentes detrás de una desconexión abierta y visible primero.",
+      "exam_trap": "La trampa es «la desconexión del sistema PV está abierta, así que el inversor es seguro de abrir». La desconexión de 690.13 separa el sistema del edificio y de la red; no hace nada con el arreglo conectado directo a las terminales de dc del inversor. El apagado rápido (690.12) es la otra respuesta equivocada — limita el voltaje para los bomberos, no aísla el equipo. El aislamiento de 690.15 es por pieza de equipo, desde todas las fuentes.",
+      "tables": [
+        {
+          "caption": "Dos trabajos de desconexión distintos",
+          "headers": [
+            "",
+            "Desconexión del sistema 690.13",
+            "Desconexión del equipo 690.15"
+          ],
+          "rows": [
+            [
+              "Propósito",
+              "Desconecta todo el sistema PV",
+              "Aísla una pieza del equipo"
+            ],
+            [
+              "Fuentes que corta",
+              "El sistema del edificio y la red",
+              "Todas las fuentes en ese equipo"
+            ],
+            [
+              "Ubicación",
+              "Accesible fácilmente",
+              "En el equipo, o a la vista + 10 pies"
+            ]
+          ],
+          "note": "La desconexión del sistema de 690.13 se cubre en su propia página, C6-690.13."
+        }
+      ],
+      "inspection_fails": [
+        "Inversor abierto para servicio con solo la desconexión de ac abierta — el dc del arreglo sigue energizado en las terminales.",
+        "Desconexión del equipo montada fuera de la vista y más allá de 10 pies del inversor, sin poder bloquearse en posición abierta.",
+        "Conector de aislamiento abierto bajo carga sin la marca «Do Not Disconnect Under Load».",
+        "Desconexión que abre solo un conductor de dc no puesto a tierra, dejando el otro conductor conectado al arreglo."
+      ],
+      "page_quiz": [
+        {
+          "question": "Según las reglas de 2020, una desconexión de equipo de 690.15 debe ubicarse:",
+          "choices": [
+            "En cualquier lugar, si está etiquetada",
+            "En el equipo, o a la vista y dentro de 10 pies — más lejos solo si puede bloquearse abierta",
+            "Solo en la acometida",
+            "Dentro de 50 pies del equipo"
+          ],
+          "answer_index": 1,
+          "explain_plain": "690.15(A) pone el dispositivo de aislamiento o la desconexión del equipo en el equipo o a la vista y dentro de 10 pies; una desconexión remota debe poder bloquearse en la posición abierta (110.25).",
+          "nec_ref": "690.15(A)"
+        },
+        {
+          "question": "Un medio de desconexión de 690.15 debe abrir:",
+          "choices": [
+            "Solo los conductores de ac",
+            "Todos los conductores no puestos a tierra de todas las fuentes",
+            "El conductor puesto a tierra",
+            "Solo los conductores con más de 30 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Aislar el equipo significa cada conductor no puesto a tierra de cada fuente — arreglo, red eléctrica y, en híbridos, almacenamiento.",
+          "nec_ref": "690.15"
+        },
+        {
+          "question": "En un sistema PV híbrido, la tercera fuente de la que la desconexión debe aislar el inversor es:",
+          "choices": [
+            "El generador de reserva",
+            "El almacenamiento en baterías",
+            "El medidor de la compañía eléctrica",
+            "El iniciador del apagado rápido"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Un inversor híbrido se alimenta del arreglo, de la red y de la batería. Las tres quedan detrás de desconexiones antes de quitar la tapa.",
+          "nec_ref": "690.15"
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c6/C6-690.15-isolate.svg",
+          "alt": "Diagrama unifilar de un sistema PV híbrido: el arreglo alimenta una desconexión de dc hacia el inversor, el inversor alimenta una desconexión de ac hacia la red eléctrica, y una batería con su propia desconexión alimenta el inversor desde el lado.",
+          "caption": "Cada fuente tiene una desconexión en el equipo que alimenta.",
+          "w": 900,
+          "h": 1380
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 690.15: Se reorganizó 690.15 con algunos cambios gramaticales. También se modificó un requisito de que un medio de desconexión de equipo esté dentro de 10 pies del equipo para que ahora esté a la vista.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "690.15",
+        "690.15(A)",
+        "690.13",
+        "110.25",
+        "690.12"
+      ],
+      "rich_sources": [
+        {
+          "claim": "Regla de ubicación de 2020: los dispositivos de aislamiento y las desconexiones de equipo van en el equipo, o a la vista y dentro de 10 pies; una desconexión remota debe poder bloquearse según 110.25",
+          "source": "Maine Department of Professional and Financial Regulation — Solar installations and DC and AC disconnect requirements (basado en el NEC 2020)",
+          "url": "https://www.maine.gov/pfr/professionallicensing/sites/maine.gov.pfr.professionallicensing/files/inline-files/SolarDisconnects.pdf"
+        },
+        {
+          "claim": "Los dispositivos de aislamiento no clasificados para interrumpir la corriente del circuito deben estar marcados «Do Not Disconnect Under Load»; las desconexiones de equipo abren simultáneamente todos los conductores que no están sólidamente puestos a tierra",
+          "source": "IAEI Magazine — Disco Madness: Disconnects in PV Systems",
+          "url": "https://iaeimagazine.org/columns/photovoltaic/disco-madness-disconnects-in-pv-systems/"
         }
       ]
     },
@@ -1879,8 +3801,8 @@
       "article": "694",
       "section": "694",
       "title": "Artículo 694 — Sistemas eólicos eléctricos",
-      "plain_explanation": "Introducción: sistemas eólicos pequeños — turbinas, torres y sus medios de desconexión y puesta a tierra, incluida la regla de que la propia turbina forma parte del sistema eléctrico. Raro en los condados de Sharma; reconózcalo y remítase al artículo.",
-      "on_the_job": "Solo reconocimiento: las desconexiones, la puesta a tierra y el trabajo en la torre de un sistema eólico pequeño siguen la certificación del fabricante de la turbina y este artículo. La parte probable de Sharma es la conexión del lado de la alimentación — confirme que la propia desconexión de la turbina y la puesta a tierra de la torre están en el alcance del instalador de la turbina antes de cotizar el nuestro.",
+      "plain_explanation": "El Artículo 694 cubre los sistemas eólicos eléctricos pequeños: la turbina, su torre, y los generadores, alternadores, inversores y controladores que convierten el viento en energía para el inmueble, interconectados con la compañía eléctrica o aislados, con o sin almacenamiento en baterías. La línea de tamaño del artículo es por turbina — cada turbina eólica individual debe tener una capacidad nominal de 100 kW o menos. Las máquinas a escala de compañía eléctrica viven bajo las reglas de la compañía, no bajo este artículo.\n• La propia turbina forma parte del sistema eléctrico (694.2 cuenta la torre, la góndola y el circuito de salida de la turbina como partes del sistema), y 694.7 exige que el sistema eólico eléctrico esté certificado.\n• 694.10: en viviendas de una y dos familias, el circuito de salida de la turbina está limitado a 600 volts máximo.\n• 694.12: las corrientes del sistema se tratan como continuas — los conductores se dimensionan a no menos del 125 por ciento de la corriente máxima del circuito.\n• 694.15: los circuitos de salida de la turbina, los circuitos de salida del inversor y los conductores de almacenamiento reciben protección de sobrecorriente bajo el Artículo 240, dimensionada sobre la misma base del 125 por ciento.\n• 694.20: un medio de desconexión para el sistema debe ser fácilmente accesible y abrir todos los conductores no puestos a tierra.\n• Un sistema interactivo se interconecta bajo 694.60 y 694.62, que remiten al Artículo 705, usando inversores certificados e identificados como interactivos.",
+      "on_the_job": "Solo reconocimiento: las desconexiones, la puesta a tierra y el trabajo en la torre de un sistema eólico pequeño siguen la certificación del fabricante de la turbina y este artículo. La parte probable de Sharma es la conexión del lado de la alimentación — confirme que la propia desconexión de la turbina y la puesta a tierra de la torre están en el alcance del instalador de la turbina antes de cotizar el nuestro. Si alguna vez llega una cotización, el hábito de dimensionamiento que hay que traer es la regla del 125 por ciento: una turbina cuya corriente máxima de salida es 40 A necesita conductores dimensionados para al menos 50 A antes de cualquier ajuste por temperatura o llenado.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -1888,7 +3810,126 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C6-ART-692",
-      "next_id": "C6-ART-695"
+      "next_id": "C6-ART-695",
+      "why_it_exists": "El viento no se puede apagar. Una turbina sigue generando mientras el rotor gira, y una turbina sin carga en una ráfaga puede sobrevelocizarse y destruirse — así que el artículo construye la seguridad con certificación, dimensionamiento para servicio continuo y una desconexión real, en lugar de fingir que la fuente se puede cortar como una acometida de la compañía.",
+      "exam_trap": "La trampa es dimensionar los circuitos eólicos como cargas ordinarias. La salida del viento es continua por regla — 694.12 dimensiona los conductores al 125 por ciento de la corriente máxima del circuito, no al valor nominal de buen tiempo de la placa, y la desconexión aún debe abrir cada conductor no puesto a tierra.",
+      "inspection_fails": [
+        "Conductores de salida de la turbina dimensionados al 100 por ciento de la corriente máxima del circuito en lugar del 125 por ciento (694.12).",
+        "Breaker solo para ca protegiendo un circuito de salida de turbina de cc — el dispositivo debe estar clasificado para el circuito que protege (694.15).",
+        "Sin medio de desconexión fácilmente accesible, o uno que deja cerrado un conductor no puesto a tierra (694.20).",
+        "La red de la compañía usada como única protección contra sobrevelocidad — una red interconectada no es una carga de desvío alternativa adecuada (694.7).",
+        "Sistema de turbina no certificado instalado como kit armado en obra (694.7)."
+      ],
+      "tables": [
+        {
+          "caption": "El Artículo 694 de un vistazo",
+          "headers": [
+            "Sección",
+            "Regla"
+          ],
+          "rows": [
+            [
+              "694.1",
+              "Cada turbina con capacidad de 100 kW o menos"
+            ],
+            [
+              "694.7",
+              "El sistema eólico eléctrico está certificado"
+            ],
+            [
+              "694.10",
+              "Circuitos de salida en viviendas: 600 V máximo"
+            ],
+            [
+              "694.12",
+              "Conductores dimensionados al 125% de la corriente máxima del circuito"
+            ],
+            [
+              "694.20",
+              "La desconexión abre todos los conductores no puestos a tierra"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c6/C6-ART-694-turbine-system.svg",
+          "alt": "Elevación de un sistema eólico eléctrico pequeño: turbina y góndola sobre una torre, circuito de salida bajando por la torre hasta un medio de desconexión en la base que abre todos los conductores no puestos a tierra, luego inversor y controlador alimentando el tablero del inmueble, con la puesta a tierra de la torre indicada.",
+          "caption": "La turbina, la torre y la desconexión son un solo sistema bajo 694.",
+          "w": 900,
+          "h": 1480
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "El Artículo 694 aplica a sistemas eólicos donde cada turbina tiene capacidad nominal no mayor de:",
+          "choices": [
+            "10 kW",
+            "25 kW",
+            "100 kW",
+            "1 MW"
+          ],
+          "answer_index": 2,
+          "explain_plain": "694.1 limita el artículo a sistemas donde cada turbina individual tiene capacidad de 100 kW o menos.",
+          "nec_ref": "694.1"
+        },
+        {
+          "question": "Los conductores en un sistema eólico eléctrico se dimensionan a no menos de qué porcentaje de la corriente máxima del circuito?",
+          "choices": [
+            "100%",
+            "115%",
+            "125%",
+            "167%"
+          ],
+          "answer_index": 2,
+          "explain_plain": "694.12 trata las corrientes del sistema como continuas y dimensiona conductores y protección al 125 por ciento.",
+          "nec_ref": "694.12"
+        },
+        {
+          "question": "El medio de desconexión de 694.20 debe:",
+          "choices": [
+            "Abrir solo el conductor puesto a tierra",
+            "Estar ubicado dentro de la góndola",
+            "Abrir todos los conductores no puestos a tierra y ser fácilmente accesible",
+            "Estar clasificado solo para cc"
+          ],
+          "answer_index": 2,
+          "explain_plain": "694.20 exige un medio de desconexión fácilmente accesible que abra todos los conductores no puestos a tierra.",
+          "nec_ref": "694.20"
+        }
+      ],
+      "code_refs": [
+        "694.1",
+        "694.2",
+        "694.7",
+        "694.10",
+        "694.12",
+        "694.15",
+        "694.20",
+        "694.60",
+        "694.62",
+        "705"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "Scope: each individual turbine rated 100 kW or less (694.1); interactive inverters listed and identified as interactive (694.60); interconnection complies with Article 705 (694.62)",
+          "source": "Mike Holt, Small Wind Electric Systems, Article 694",
+          "url": "https://www.mikeholt.com/newsletters.php?action=display&letterID=1300"
+        },
+        {
+          "claim": "Wind electric system listing (694.7); 600 V maximum on one- and two-family dwelling output circuits (694.10); the grid is not an adequate alternate diversion load (694.7(C))",
+          "source": "McGraw-Hill, NEC 2017 Handbook, Article 694 commentary",
+          "url": "https://www.accessengineeringlibrary.com/index.php/binary/mheaeworks/8316343290ef2197/0eec8b849067dac898f37aa11a195e79c16c14f9f2c50932464a3020576dfe12/article-694-wind-electric-systems.pdf"
+        },
+        {
+          "claim": "125 percent continuous sizing (694.12); overcurrent protection (694.15); disconnecting means opening all ungrounded conductors (694.20)",
+          "source": "ElectricalCalcPro, Wind Turbine Electrical Systems: NEC Article 694",
+          "url": "https://electricalcalcpro.com/wind-turbine-electrical-systems-nec-code-requirements-and-ca/"
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich": 1
     },
     {
       "id": "C6-ART-695",
