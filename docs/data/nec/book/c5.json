@@ -284,7 +284,7 @@
       "section": "500.6",
       "title": "Material groups",
       "plain_explanation": "Within each class, materials are sorted into groups by how easily they ignite and how much pressure an explosion can build. Class I groups run A through D and Class II groups run E through G, with the earlier letters generally the more severe materials. Equipment has to be identified for the specific group in the location, not just for the class.\n\nExamples that fix the letters in memory. Class I: Group A is acetylene; Group B is hydrogen and gases or vapors of equivalent hazard; Group C covers ethylene-type vapors; Group D covers the everyday fuels — gasoline, propane, natural gas, and alcohol vapors. Class II: Group E is metal dusts; Group F is carbonaceous dusts such as coal and coke; Group G is grain, flour, and other agricultural and plastic dusts. The classification documents name the group for the material actually present — these examples are orientation, not a substitute for them.",
-      "on_the_job": "Check the group letter on the plans against the group letters on every luminaire, motor, and enclosure nameplate before installation. A fitting approved for Group D does not automatically cover Groups A, B, or C.",
+      "on_the_job": "On a Florida job — a fueling area, a propane yard, a feed mill — read the classification documents first; they name the group for the material actually present. Check the group letter on the plans against the group letters on every luminaire, motor, and enclosure nameplate before installation. A fitting approved for Group D does not automatically cover Groups A, B, or C, and a submittal that names the class but not the group goes back.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -295,7 +295,118 @@
       "verified": true,
       "prev_id": "C5-500.5",
       "next_id": "C5-500.7",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Class alone does not describe the material. Acetylene and hydrogen ignite more easily and build more explosion pressure than gasoline vapor, and metal dust behaves nothing like grain dust. Equipment is tested and identified against a specific group's ignition and pressure behavior. Put Group D gear in a Group B location and the enclosure may not contain the explosion it was supposed to survive.",
+      "inspection_fails": [
+        "Equipment nameplate lists the class and division but no group — or the wrong group for the material present.",
+        "Group D fittings installed where the classification documents name Group B (hydrogen).",
+        "Submittal approved on class alone; the group letters were never checked against the classification documents.",
+        "Dust-area equipment matched to Class II but not to its dust group — grain dust (G) area fitted with gear identified for a different group."
+      ],
+      "exam_trap": "The trap answer is 'Class I, Division 1 approved is enough.' It is not: the equipment must be identified for the specific group in the location. The letters also run with severity — in Class I, Group A (acetylene) is more severe than Group D (gasoline) — so a Group D listing never stretches upward to cover A, B, or C.",
+      "tables": [
+        {
+          "caption": "Material groups (500.6)",
+          "headers": [
+            "Class",
+            "Group",
+            "Example materials"
+          ],
+          "rows": [
+            [
+              "I",
+              "A",
+              "Acetylene"
+            ],
+            [
+              "I",
+              "B",
+              "Hydrogen and equivalent-hazard gases or vapors"
+            ],
+            [
+              "I",
+              "C",
+              "Ethylene-type vapors"
+            ],
+            [
+              "I",
+              "D",
+              "Gasoline, propane, natural gas, and alcohol vapors"
+            ],
+            [
+              "II",
+              "E",
+              "Metal dusts"
+            ],
+            [
+              "II",
+              "F",
+              "Carbonaceous dusts such as coal and coke"
+            ],
+            [
+              "II",
+              "G",
+              "Grain, flour, and other agricultural and plastic dusts"
+            ]
+          ],
+          "note": "The classification documents name the group for the material actually present — these examples are orientation, not a substitute for them."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-500.6-material-groups.svg",
+          "alt": "Two severity panels of material groups: Class I Groups A through D with acetylene, hydrogen, ethylene-type vapors and everyday fuels, and Class II Groups E through G with metal dusts, carbonaceous dusts and grain dusts, with longer bars marking the more severe materials.",
+          "caption": "Groups A through G: the letter must match the material actually present.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Hydrogen is the material present in a Class I location. Which group is it?",
+          "choices": [
+            "Group D",
+            "Group C",
+            "Group B",
+            "Group A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Group B is hydrogen and gases or vapors of equivalent hazard. Group A is acetylene only.",
+          "nec_ref": "500.6"
+        },
+        {
+          "question": "A fitting is identified for Class I, Group D. The location is classified Group B. What is the verdict?",
+          "choices": [
+            "Fine — it is the same class",
+            "Not acceptable — equipment must be identified for the specific group",
+            "Fine if the division matches",
+            "Acceptable in Division 2 only"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Equipment has to be identified for the specific group in the location, not just for the class. A Group D approval does not cover Group B.",
+          "nec_ref": "500.6"
+        },
+        {
+          "question": "Grain and flour dusts belong to which Class II group?",
+          "choices": [
+            "Group E",
+            "Group F",
+            "Group G",
+            "Group D"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Group G is grain, flour, and other agricultural and plastic dusts. Group E is metal dusts and Group F is carbonaceous dusts.",
+          "nec_ref": "500.6"
+        }
+      ],
+      "code_refs": [
+        "500.6",
+        "500.5"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-500.7",
@@ -473,8 +584,8 @@
       "article": "500",
       "section": "500.8",
       "title": "Equipment suitability, marking, and temperature",
-      "plain_explanation": "Equipment for a classified location has to suit the exact class, division, and group where it sits, and gear approved for Division 1 may also serve in Division 2 of the same class and group. Nameplates carry the class, division or zone, group, and a temperature marking that shows the hottest surface the equipment can reach. That temperature marking has to stay below the ignition temperature of the gas, vapor, or dust involved.\n\nTemperature codes (the T-marking) run from the hottest permitted surface down:\n• T1 — 450°C (842°F)\n• T2 — 300°C (572°F)\n• T3 — 200°C (392°F)\n• T4 — 135°C (275°F)\n• T5 — 100°C (212°F)\n• T6 — 85°C (185°F)\nThe equipment's marked maximum surface temperature must stay at or below the ignition temperature of the material in the location — a T3 device, allowed a 200°C surface, has no place where the gas present ignites at 180°C. Table 500.8(C) also has intermediate codes (T2A–T2D, T3A–T3C, T4A) — read the exact code off the nameplate.\n\nNEC 2023 CHANGE:\n• 500.8: Class III equipment now has a temperature rule in 500.8: its marking can't exceed the fibers' ignition temperature, with a 165°C (329°F) cap, or 120°C (248°F) for overloadable gear around ignitible fibers. In a Class III area, the equipment's temperature marking can't go above the ignition temperature of the fibers/flyings that make it hazardous (500.8(D)(3)).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Read the full nameplate, including the temperature code, before setting equipment — a correct class and group with the wrong temperature code is still a failed install. Photograph nameplates on classified work for the job record.",
+      "plain_explanation": "Equipment for a classified location has to suit the exact class, division, and group where it sits, and gear approved for Division 1 may also serve in Division 2 of the same class and group. Nameplates carry the class, division or zone, group, and a temperature marking that shows the hottest surface the equipment can reach. That temperature marking has to stay below the ignition temperature of the gas, vapor, or dust involved.\n\nTemperature codes (the T-marking) run from the hottest permitted surface down:\n• T1 — 450°C (842°F)\n• T2 — 300°C (572°F)\n• T3 — 200°C (392°F)\n• T4 — 135°C (275°F)\n• T5 — 100°C (212°F)\n• T6 — 85°C (185°F)\nThe equipment's marked maximum surface temperature must stay at or below the ignition temperature of the material in the location — a T3 device, allowed a 200°C surface, has no place where the gas present ignites at 180°C. Table 500.8(C) also has intermediate codes (T2A–T2D, T3A–T3C, T4A) — read the exact code off the nameplate.",
+      "on_the_job": "On a small commercial job — a spray booth at an Orlando body shop — the classification drawing shows a gas that ignites at 180°C. The replacement exhaust motor on the truck is marked Class I, Division 1, Group D, but its T-code is T3: a 200°C surface in a 180°C gas. Right class, right group, wrong temperature — it stays on the truck, and the T4 motor (135°C) goes in. Photograph every nameplate on classified work for the job record; the photo is the proof the check happened.",
       "sharma_note": "",
       "figure_idea": "Nameplate close-up sketch with callouts pointing to class, group, and temperature code fields (generic plate, no brand).",
       "related_ids": [
@@ -494,7 +605,113 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/500-8",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 500.8: Class III equipment now has a temperature rule in 500.8: its marking can't exceed the fibers' ignition temperature, with a 165°C (329°F) cap, or 120°C (248°F) for overloadable gear around ignitible fibers. In a Class III area, the equipment's temperature marking can't go above the ignition temperature of the fibers/flyings that make it hazardous (500.8(D)(3)).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "A classified area is a place where the air itself can burn. Any hot surface in that air is a possible match. The T-marking is the maker's tested promise of how hot the gear can get, and the ignition temperature is the point where the material lights without a spark. Keeping the first number under the second is what stops the equipment itself from becoming the ignition source.",
+      "inspection_fails": [
+        "Temperature code too hot for the material present — T3 equipment (200°C) installed where the gas ignites at 180°C.",
+        "Equipment marked for the class and division but not for the group of the gas or dust in the area.",
+        "Nameplate painted over, damaged, or missing, so class, group, and T-code can't be verified.",
+        "Division 2 equipment installed in a Division 1 location."
+      ],
+      "exam_trap": "The trap is reading the T-number backwards: T6 sounds like the heavy-duty rating, so it gets picked for the hottest job. It is the opposite — T1 allows the hottest surface (450°C) and T6 the coolest (85°C). A bigger T-number means a cooler, safer surface, never a stronger one.",
+      "tables": [
+        {
+          "caption": "Temperature codes — Table 500.8(C) (NEC 2020)",
+          "headers": [
+            "Code",
+            "Max surface °C",
+            "Max surface °F"
+          ],
+          "rows": [
+            [
+              "T1",
+              "450",
+              "842"
+            ],
+            [
+              "T2",
+              "300",
+              "572"
+            ],
+            [
+              "T3",
+              "200",
+              "392"
+            ],
+            [
+              "T4",
+              "135",
+              "275"
+            ],
+            [
+              "T5",
+              "100",
+              "212"
+            ],
+            [
+              "T6",
+              "85",
+              "185"
+            ]
+          ],
+          "note": "Intermediate codes T2A–T2D, T3A–T3C, and T4A sit between these steps — read the exact code off the nameplate."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-500.8-nameplate-tcode.svg",
+          "alt": "Generic equipment nameplate with numbered callouts for the class, division, group, and temperature code fields, beside a T1-to-T6 temperature ladder and a pass/fail check for gear in an area whose gas ignites at 180 degrees C.",
+          "caption": "Read all four nameplate fields — then check the T-code against the gas.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Which temperature code allows the hottest equipment surface?",
+          "choices": [
+            "T1",
+            "T3",
+            "T4",
+            "T6"
+          ],
+          "answer_index": 0,
+          "explain_plain": "T1 allows 450°C (842°F), the hottest surface on the scale. The codes run down to T6 at 85°C.",
+          "nec_ref": "Table 500.8(C)"
+        },
+        {
+          "question": "A gas in the area ignites at 180°C. Which marked equipment is acceptable?",
+          "choices": [
+            "T2 (300°C)",
+            "T3 (200°C)",
+            "T4 (135°C)",
+            "Any Division 1 gear"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The marked maximum surface temperature has to stay at or below the ignition temperature. Only T4, at 135°C, is under 180°C.",
+          "nec_ref": "500.8"
+        },
+        {
+          "question": "Equipment approved for Division 1 of a class and group may also be used where?",
+          "choices": [
+            "Division 2 of the same class and group",
+            "Any division of any class",
+            "Division 1 of any group",
+            "Only outdoors"
+          ],
+          "answer_index": 0,
+          "explain_plain": "Division 1 approval covers Division 2 of the same class and group — the class and group still have to match.",
+          "nec_ref": "500.8"
+        }
+      ],
+      "code_refs": [
+        "500.8",
+        "Table 500.8(C)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-ART-501",
@@ -1578,8 +1795,8 @@
       "article": "511",
       "section": "511.3",
       "title": "Classification of garage areas",
-      "plain_explanation": "This section sorts garage spaces using tables that turn on three questions: major or minor repair, whether the area is the floor, a pit, or the ceiling, and whether the required ventilation is provided. In major repair garages the floor area up to 18 inches is commonly a Class I, Division 2 location, pits are Division 1 or Division 2 depending on ventilation, and ceiling areas can be classified for lighter-than-air gases when ventilation is absent. Parking and storage garages with no repair work are not required to be classified.\n\nTwo points settle most layout questions. The classified floor band in a major repair garage runs from the floor up to 18 in. — receptacles and arcing equipment are planned against that band first. And a pit is treated at the stricter classification unless the ventilation the tables require for it is actually provided and maintained: a pit drawn as Division 2 'with ventilation' is Division 1 work the day the ventilation is deleted from the mechanical scope.",
-      "on_the_job": "Work the three questions in order for each space and write the result on the takeoff — do not classify the whole building by its worst room. Keep ordinary receptacles and arcing devices out of classified pockets where the layout allows.",
+      "plain_explanation": "This section classifies the spaces inside a commercial garage. Three questions decide every answer: major repair or minor repair (511.2), which part of the space — floor, pit, or ceiling — and whether the ventilation the section specifies is provided.\n• Parking and storage, 511.3(A): a garage with no repair work is not required to be classified.\n• Major repair floor, 511.3(C)(1): with mechanical ventilation at a minimum of four air changes per hour, the floor area is unclassified. Without it, the entire floor area is Class I, Division 2 up to 18 in. above the floor.\n• Pits, 511.3(C)(3): a pit in a lubrication or service room is Class I, Division 2 with ventilation at a minimum of six air changes per hour, and Class I, Division 1 up to the floor level without it.\n• Ceiling, 511.3(C)(2): for lighter-than-air fuels such as natural gas or hydrogen, the band within 18 in. of the ceiling is Class I, Division 2 without ventilation, and unclassified with ceiling exhaust ventilation of at least 1 cfm per square foot, taken within 18 in. of the highest point.\n• Minor repair, 511.3(D): floor areas are unclassified, except pit areas, which follow the pit rule above.\n• Fuel dispensing, 511.3(B): the dispensing functions classify from Table 514.3(B)(1) instead.\nThe ventilation is part of the classification, not a mechanical extra: a pit drawn Division 2 'with ventilation' is Division 1 work the day that ventilation leaves the mechanical scope.",
+      "on_the_job": "On a four-bay repair shop in Winter Haven — major repair, one lube pit, no fuel dispensing — work the three questions space by space and write the answers on the takeoff. The mechanical set provides four air changes per hour, so the floor prices as unclassified and the bays rough in with ordinary commercial methods on 20 A minimum branch circuits (S-01). The pit is the swing item: its Division 2 answer needs six air changes per hour of pit ventilation in the mechanical scope. If that line is not there, price the pit as Division 1 and say so on the bid.",
       "sharma_note": "",
       "figure_idea": "Plan view of a repair bay with the 18-inch floor band and a pit marked, and a note that ventilation changes the pit answer.",
       "related_ids": [
@@ -1594,7 +1811,142 @@
       "prev_id": "C5-ART-511",
       "next_id": "C5-511.4",
       "sharma_rule_ids": [],
-      "unverified_reason": "Still unverified after Mike Holt recheck (2026-11-25): The page states, as an unconditional rule, that the floor of a major repair garage up to 18 in. is Class I, Division 2. Under the 2020 tables the floor and pit classifications depend on whether the specified ventilation is provided. My understanding is that a ventilated major-repair floor is unclassified and an unventilated one is Division 2 up to 18 in., but I could not confirm the Table 511.3(C) and 511.3(D) cells from a public source. Rewrite the floor sentences as \"depends on the ventilation the table specifies\" and check every cell against the printed 2020 Tables 511.3(C)/(D) before publishing. The parking-garage statement (511.3(A), unclassified) is correct."
+      "unverified_reason": "Still unverified after Mike Holt recheck (2026-11-25): The page states, as an unconditional rule, that the floor of a major repair garage up to 18 in. is Class I, Division 2. Under the 2020 tables the floor and pit classifications depend on whether the specified ventilation is provided. My understanding is that a ventilated major-repair floor is unclassified and an unventilated one is Division 2 up to 18 in., but I could not confirm the Table 511.3(C) and 511.3(D) cells from a public source. Rewrite the floor sentences as \"depends on the ventilation the table specifies\" and check every cell against the printed 2020 Tables 511.3(C)/(D) before publishing. The parking-garage statement (511.3(A), unclassified) is correct.",
+      "why_it_exists": "Gasoline vapor is heavier than air: it sinks, spreads across the floor, and collects in a pit like water in a bowl. Lighter-than-air gases do the opposite and gather at the ceiling. The classification draws the boundary where the fuel actually collects, and ventilation earns its place in the answer because moving air keeps the mixture too lean to ignite.",
+      "exam_trap": "The trap answer is 'the floor of a major repair garage is always Class I, Division 2 up to 18 in.' That is only the no-ventilation answer. With the ventilation 511.3(C)(1) specifies, the floor area is unclassified — the trap prices classified-location methods the job does not need.",
+      "tables": [
+        {
+          "caption": "Classification at a glance — 511.3 (NEC 2020)",
+          "headers": [
+            "Area",
+            "Condition",
+            "Class"
+          ],
+          "rows": [
+            [
+              "Parking / storage only",
+              "No repair work",
+              "Unclassified"
+            ],
+            [
+              "Major repair floor",
+              "Ventilation, 4 air changes/hr",
+              "Unclassified"
+            ],
+            [
+              "Major repair floor",
+              "Ventilation not provided",
+              "Class I Div 2 to 18 in"
+            ],
+            [
+              "Pit, major repair",
+              "Ventilation, 6 air changes/hr",
+              "Class I Div 2"
+            ],
+            [
+              "Pit, major repair",
+              "Ventilation not provided",
+              "Class I Div 1 to floor"
+            ],
+            [
+              "Ceiling, gas fuels",
+              "Ventilation not provided",
+              "Class I Div 2 within 18 in"
+            ],
+            [
+              "Minor repair floor",
+              "No dispensing or transfer",
+              "Unclassified except pits"
+            ]
+          ],
+          "note": "Dispensing areas classify from Table 514.3(B)(1). If the ventilation leaves the mechanical scope, the answer changes with it."
+        }
+      ],
+      "inspection_fails": [
+        "Ordinary-location receptacles and a drop light installed inside the 18 in. floor band of an unventilated major repair garage — that band is Class I, Division 2.",
+        "Pit wired as Division 2 with no pit ventilation on the mechanical drawings or in the building — an unventilated pit is Class I, Division 1 to the floor level.",
+        "Equipment within 18 in. of the ceiling over natural-gas vehicles treated as an ordinary location in a garage with no ceiling exhaust ventilation.",
+        "Fuel dispensing equipment classified by the garage floor rules instead of Table 514.3(B)(1)."
+      ],
+      "page_quiz": [
+        {
+          "question": "A parking garage with no repair work is:",
+          "choices": [
+            "Class I, Division 2 throughout",
+            "Not required to be classified",
+            "Class I, Division 1 at the floor",
+            "Classified only at the ceiling"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Parking and storage garages are not required to be classified — the classification starts when repair work starts.",
+          "nec_ref": "511.3(A)"
+        },
+        {
+          "question": "In a major repair garage with mechanical ventilation at four air changes per hour, the floor area is:",
+          "choices": [
+            "Class I, Division 2 up to 18 in.",
+            "Class I, Division 1",
+            "Unclassified",
+            "Class I, Division 2 up to 12 ft"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The Division 2 floor band is the no-ventilation answer. With the ventilation 511.3(C)(1) specifies, the floor area is unclassified.",
+          "nec_ref": "511.3(C)(1)"
+        },
+        {
+          "question": "A lube pit in a major repair garage, with no ventilation provided, is classified:",
+          "choices": [
+            "Class I, Division 2",
+            "Unclassified",
+            "Class I, Division 1 up to the floor level",
+            "Class II, Division 1"
+          ],
+          "answer_index": 2,
+          "explain_plain": "An unventilated pit is Division 1 up to the floor level. Ventilation at six air changes per hour is what brings it to Division 2.",
+          "nec_ref": "511.3(C)(3)"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "511.2",
+        "511.3(A)",
+        "511.3(B)",
+        "511.3(C)",
+        "511.3(D)",
+        "Table 514.3(B)(1)",
+        "511.4"
+      ],
+      "uncertain": [
+        "An earlier version of this page stated the 18 in. floor band as a plain Division 2 rule with no conditions. That is only the no-ventilation answer — the classification depends on the ventilation the table specifies, so the unconditional statement has been removed.",
+        "The floor, pit, and ceiling answers on this page follow published summaries of 511.3. The exact cells of the printed Tables 511.3(C) and 511.3(D) have not been checked against the printed 2020 NEC — confirm the cell for your exact case in print before relying on it."
+      ],
+      "rich_sources": [
+        {
+          "claim": "Major and minor repair garage definitions; in a major repair garage the floor area is unclassified with mechanical ventilation at a minimum of four air changes per hour and Class I, Division 2 up to 18 in. above the floor without it; the band within 18 in. of the ceiling is classified for lighter-than-air gaseous fuels without ventilation.",
+          "source": "Mike Holt, Illustrated Guide to Understanding the NEC — Article 511, Commercial Garages (sample)",
+          "url": "https://mikeholt.com/instructor2/img/product/pdf/14UND2-1251-sample.pdf?srsltid=AU7gw4Xtc2KwGWj4Fj6ybL29t_E4Uk4HvmaO2apWSLsz9FltGTT_4mcl"
+        },
+        {
+          "claim": "A pit in a lubrication or service room is Class I, Division 2 with ventilation at a minimum of six air changes per hour and Class I, Division 1 up to the floor level without ventilation; ceiling exhaust at least 1 cfm/sq ft taken within 18 in. of the highest point leaves the ceiling area unclassified; minor repair garage floor areas are unclassified except pit areas.",
+          "source": "Mike Holt, Commercial Garages (Article 511.3)",
+          "url": "https://www.mikeholt.com:443/newsletters.php?action=reply&inResponseTo=14788&letterID=860"
+        },
+        {
+          "claim": "Any pit or depression below floor level is Class I, Division 1 up to the floor level, or Division 2 with adequate ventilation; a ventilated major repair floor is unclassified.",
+          "source": "ExamFinch, AK Electrician study guide — Article 511, Commercial Garages (2020 NEC)",
+          "url": "https://examfinch.com/study-guides/ak-electrician/ch11/ch11-sec04?exam=ak-electrician"
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-511.3-bay-section.svg",
+          "alt": "Section through a major repair garage bay showing the 18 inch ceiling band for lighter-than-air fuels, the 18 inch floor band, and a pit below floor level, with a legend giving the classification of each zone with and without the ventilation 511.3 specifies.",
+          "caption": "One major repair bay in section — every answer turns on ventilation.",
+          "w": 900,
+          "h": 1540
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C5-511.4",
@@ -2585,8 +2937,8 @@
       "article": "514",
       "section": "514.11",
       "title": "Emergency disconnect at fuel dispensing",
-      "plain_explanation": "Fuel dispensing areas need clearly identified emergency electrical disconnects — the control a station attendant or firefighter reaches for when fuel is flowing where it should not. Operated, the disconnect must simultaneously open all conductors of the circuits involved, including the grounded (neutral) conductor, cutting power to the dispensing devices, to the remote pumps serving them, to the associated power, control, and signal circuits, and to the other electrical equipment in the classified area around the dispensers. Resetting after an emergency shutoff takes manual intervention, in the manner the AHJ approves. 514.11(A) also fixes where the disconnect sits: an approved location not less than 20 ft and not more than 100 ft from the fuel dispensing devices it serves, and where more than one disconnect is provided, all of them are interconnected. Its location, identification, and the circuits it actually kills are inspection items, not details to assume.",
-      "on_the_job": "During a dispensing walkdown, operate the emergency disconnect and prove every dispenser circuit it serves is dead, then reset per the equipment instructions. Put its location on the job record the crew and the owner both get.",
+      "plain_explanation": "Fuel dispensing areas need clearly identified emergency electrical disconnects — the control a station attendant or firefighter reaches for when fuel is flowing where it should not. Operated, the disconnect must simultaneously open all conductors of the circuits involved, including the grounded (neutral) conductor. One operation cuts power to:\n• The dispensing devices\n• The remote pumps serving them\n• The associated power, control, and signal circuits\n• The other electrical equipment in the classified area around the dispensers\n\n514.11(A) also fixes where the disconnect sits: an approved location not less than 20 ft and not more than 100 ft from the fuel dispensing devices it serves, and where more than one disconnect is provided, all of them are interconnected. Resetting after an emergency shutoff takes manual intervention, in the manner the AHJ approves. Its location, identification, and the circuits it actually kills are inspection items, not details to assume.",
+      "on_the_job": "On a Central Florida convenience-store repump, Sharma's crew lands the emergency disconnect on the store wall 40 ft from the nearest dispenser — inside the 20 ft to 100 ft window — and interconnects it with the second disconnect at the canopy. During a dispensing walkdown, operate the emergency disconnect and prove every dispenser circuit it serves is dead, then reset per the equipment instructions. Put its location on the job record the crew and the owner both get.",
       "sharma_note": "Adopted after reconciliation with the ChatGPT research Sanjay supplied 2026-11-11; verified 2026-11-18 against NEC 2020 sources (514.11(A) is extracted from NFPA 30A 6.7): the 20 ft to 100 ft location and the simultaneous opening of all circuit conductors, grounded conductor included, are as this page states.",
       "figure_idea": "",
       "related_ids": [
@@ -2597,7 +2949,125 @@
       "verified": true,
       "prev_id": "C5-514.3",
       "next_id": "C5-ART-515",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Fuel flows by the gallon a few feet from ignition sources and moving cars. When a hose fails or a driver pulls away with the nozzle still in the tank, somebody has seconds to kill every circuit that can spark or keep pumping. Opening the grounded conductor matters too: leave it connected and current can still find a path and arc. A disconnect that stops only the dispenser leaves the remote pump pushing fuel to the leak.",
+      "inspection_fails": [
+        "Emergency disconnect opens the ungrounded conductors only — the grounded (neutral) conductor stays connected.",
+        "Disconnect located less than 20 ft, or more than 100 ft, from the dispensing devices it serves.",
+        "Two disconnects provided but not interconnected.",
+        "Disconnect kills the dispensers but leaves the remote pumps or the control circuits live.",
+        "Disconnect not clearly identified, or it resets automatically after an emergency shutoff."
+      ],
+      "exam_trap": "The trap is the disconnect that drops the dispenser power but leaves the grounded (neutral) conductor connected — or one mounted right at the island 'so it is easy to reach.' 514.11(A) wants every circuit conductor open at once, neutral included, from an approved location 20 ft to 100 ft away, with a manual reset. Close and partial both fail.",
+      "tables": [
+        {
+          "caption": "The disconnect rule in one view (514.11)",
+          "headers": [
+            "Item",
+            "Requirement"
+          ],
+          "rows": [
+            [
+              "Location",
+              "Not less than 20 ft, not more than 100 ft from the dispensers served"
+            ],
+            [
+              "Conductors opened",
+              "All circuit conductors at once, grounded (neutral) included"
+            ],
+            [
+              "More than one disconnect",
+              "All of them interconnected"
+            ],
+            [
+              "Reset after a shutoff",
+              "Manual intervention, in the manner the AHJ approves"
+            ]
+          ]
+        },
+        {
+          "caption": "What one operation must kill",
+          "headers": [
+            "Circuit",
+            "Killed"
+          ],
+          "rows": [
+            [
+              "Dispensing devices",
+              "Yes"
+            ],
+            [
+              "Remote pumps serving them",
+              "Yes"
+            ],
+            [
+              "Power, control, and signal circuits",
+              "Yes"
+            ],
+            [
+              "Other equipment in the classified area",
+              "Yes"
+            ]
+          ],
+          "note": "If any one of these stays live, the disconnect does not do its job."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-514.11-disconnect-window.svg",
+          "alt": "Plan view of a fuel dispensing site: two dispensers on an island inside a dashed red classified area, an underground tank with a remote pump, and the emergency disconnect on the store wall, with the dimension window of 20 ft minimum to 100 ft maximum from the dispensers.",
+          "caption": "The disconnect sits 20 ft to 100 ft out and kills every circuit at once.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "The emergency disconnect operates. What must open?",
+          "choices": [
+            "Only the ungrounded conductors",
+            "All circuit conductors except the neutral",
+            "All circuit conductors, including the grounded conductor",
+            "Only the dispenser power circuit"
+          ],
+          "answer_index": 2,
+          "explain_plain": "It must simultaneously open all conductors of the circuits involved, including the grounded (neutral) conductor.",
+          "nec_ref": "514.11"
+        },
+        {
+          "question": "Where may the emergency disconnect be located?",
+          "choices": [
+            "Right at the dispenser it serves",
+            "Not less than 20 ft and not more than 100 ft from the dispensing devices",
+            "Anywhere inside the store",
+            "Within 10 ft of the remote pumps"
+          ],
+          "answer_index": 1,
+          "explain_plain": "514.11(A) fixes an approved location in the 20 ft to 100 ft window from the dispensing devices it serves.",
+          "nec_ref": "514.11(A)"
+        },
+        {
+          "question": "After an emergency shutoff, how does the system come back?",
+          "choices": [
+            "Automatically when the button is released",
+            "From a phone app",
+            "By manual intervention, in the manner the AHJ approves",
+            "It can never be reset"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Resetting takes manual intervention, in the manner the AHJ approves — never an automatic reset.",
+          "nec_ref": "514.11"
+        }
+      ],
+      "code_refs": [
+        "514.11(A)",
+        "514.11",
+        "514.3"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-ART-515",
@@ -3201,8 +3671,8 @@
       "article": "517",
       "section": "517.13",
       "title": "Redundant grounding in patient care spaces",
-      "plain_explanation": "Branch circuits serving patient care spaces need two independent ground-fault return paths working together. The wiring method itself — a metal raceway, or a cable with a metal armor or sheath that qualifies as a grounding path — provides one path, and an insulated copper equipment grounding conductor run with the circuit provides the second. Receptacle grounding terminals and exposed metal of fixed equipment in those spaces connect to that insulated copper conductor, sized from Table 250.122.\n\nThe methods that can supply the metal ground path are the metal wiring methods — rigid metal conduit, intermediate metal conduit, or EMT, or Type MI, MC, or AC cable whose armor or sheath assembly itself qualifies as an equipment grounding conductor — in each case with listed fittings. The insulated copper conductor is pulled in every case: the metal path is the second path, never a substitute for it, and a cable whose armor does not qualify as a grounding path does not become compliant because it looks like the one that does.\n\nNEC 2023 CHANGE:\n• 517.13: Section 517.13 was revised for clarity by relocating former Exception No. 2 to follow the opening paragraph and by stating wiring \"serving\" patient care spaces.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "On a patient care rough-in, there is no NM cable and no relying on the raceway alone — pull the insulated copper grounding conductor on every branch circuit. Check that the cable or raceway chosen actually qualifies as a grounding path before it is ordered.",
+      "plain_explanation": "Branch circuits serving patient care spaces need two independent ground-fault return paths working together. The wiring method itself — a metal raceway, or a cable with a metal armor or sheath that qualifies as a grounding path — provides one path, and an insulated copper equipment grounding conductor run with the circuit provides the second. Receptacle grounding terminals and exposed metal of fixed equipment in those spaces connect to that insulated copper conductor, sized from Table 250.122.\n\nThe methods that can supply the metal ground path are the metal wiring methods — rigid metal conduit, intermediate metal conduit, or EMT, or Type MI, MC, or AC cable whose armor or sheath assembly itself qualifies as an equipment grounding conductor — in each case with listed fittings. The insulated copper conductor is pulled in every case: the metal path is the second path, never a substitute for it, and a cable whose armor does not qualify as a grounding path does not become compliant because it looks like the one that does.",
+      "on_the_job": "On a clinic fit-out in Orlando, every branch circuit serving the exam rooms runs in EMT with a 12 AWG insulated copper equipment grounding conductor pulled in — the Table 250.122 size for the 20 A circuits Sharma runs as the commercial minimum (S-01). The receptacles are hospital grade, and their grounding terminals land on the insulated conductor, not on the box. At trim, the crew tests each receptacle's ground path before the rooms are turned over.",
       "sharma_note": "",
       "figure_idea": "Single-line sketch of one patient care branch circuit showing two parallel ground paths: metal raceway and insulated copper conductor.",
       "related_ids": [
@@ -3224,7 +3694,93 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "A patient in a bed cannot get up and walk away from a fault, and medical equipment connects to the patient directly. One ground path can be damaged, corroded, or left loose at a fitting without anyone knowing. Two independent paths mean a single hidden failure still leaves the fault a way back to the source, so the breaker trips instead of the bed frame going live.",
+      "exam_trap": "The trap is 'the EMT is the ground, so the green wire is optional.' 517.13 requires both paths on every branch circuit serving a patient care space — the metal path never replaces the insulated copper conductor. The mirror-image trap fails too: a cable whose armor does not qualify as a grounding path does not count, however much it looks like one that does.",
+      "tables": [
+        {
+          "caption": "The two ground paths — 517.13",
+          "headers": [
+            "Path",
+            "What provides it",
+            "The catch"
+          ],
+          "rows": [
+            [
+              "1 — the metal path",
+              "RMC, IMC, or EMT; Type MI, MC, or AC cable whose armor or sheath qualifies as an equipment grounding conductor, with listed fittings",
+              "Armor or sheath that does not qualify does not count, however it looks"
+            ],
+            [
+              "2 — the insulated conductor",
+              "Insulated copper equipment grounding conductor run with the circuit, sized from Table 250.122",
+              "Pulled on every branch circuit — the metal path never replaces it"
+            ]
+          ]
+        }
+      ],
+      "inspection_fails": [
+        "NM cable roughed into a patient care space — no metal ground path, and the method is not on the 517.13 list.",
+        "Branch circuit run in EMT with no insulated copper equipment grounding conductor pulled — the raceway alone is only one of the two required paths.",
+        "Receptacle grounding terminal landed on the metal box instead of the insulated copper conductor in a patient care space.",
+        "Type MC cable whose armor does not qualify as an equipment grounding conductor installed as the metal path."
+      ],
+      "page_quiz": [
+        {
+          "question": "A branch circuit serving a patient care space is run in EMT. What else does 517.13 require?",
+          "choices": [
+            "Nothing — the EMT is the ground",
+            "An insulated copper equipment grounding conductor run with the circuit",
+            "A second EMT run beside the first",
+            "GFCI protection on the circuit"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Both paths are required on every branch circuit: the metal raceway is one path, and the insulated copper conductor is the second.",
+          "nec_ref": "517.13"
+        },
+        {
+          "question": "The insulated copper equipment grounding conductor is sized from:",
+          "choices": [
+            "Table 250.122",
+            "The raceway fill tables",
+            "The service conductor size",
+            "Table 250.66"
+          ],
+          "answer_index": 0,
+          "explain_plain": "Equipment grounding conductors are sized from Table 250.122, by the rating of the overcurrent device ahead of the circuit.",
+          "nec_ref": "Table 250.122"
+        },
+        {
+          "question": "A Type MC cable whose armor does NOT qualify as an equipment grounding conductor is installed in a patient care space. As the metal ground path, it:",
+          "choices": [
+            "Counts anyway",
+            "Counts if listed fittings are used",
+            "Does not count",
+            "Counts for receptacles only"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The metal path has to be a method that qualifies as an equipment grounding conductor. Looking like one is not enough.",
+          "nec_ref": "517.13"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 517.13: Section 517.13 was revised for clarity by relocating former Exception No. 2 to follow the opening paragraph and by stating wiring \"serving\" patient care spaces.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "517.13",
+        "250.118",
+        "Table 250.122"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "figures": [
+        {
+          "src": "fig/c5/C5-517.13-two-paths.svg",
+          "alt": "One-line sketch of a patient care branch circuit running from a panel through a metal raceway to a hospital-grade receptacle, showing the two independent ground paths: the metal raceway itself and the insulated copper equipment grounding conductor pulled inside it.",
+          "caption": "Two independent ground paths on every patient care branch circuit.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C5-517.16",
@@ -3464,7 +4020,7 @@
       "section": "517.31",
       "title": "The branches of a hospital essential electrical system (517.31–517.35)",
       "plain_explanation": "Where a health care facility has an essential electrical system, 517.31 sorts its loads into branches (life safety, critical and equipment), with branch contents in 517.33, 517.34 and 517.35 (confirm the sub-numbering in the printed 2020 Part III). In NEC 2020, 517.19 is the Category 1 (critical care) patient bed location rule in Part II. The life safety branch carries the loads that get people out and keep egress safe — illumination of exits and exit signs, fire alarm, and emergency communications. The critical branch carries the patient-care loads the facility selects — task lighting and receptacles at bed locations, nurse call, and similar systems that must not die with normal power. The equipment branch carries the heavy mechanical and facility loads that support care but tolerate a later transfer. Which branch a circuit lands on is a design decision in the facility's plans; the field job is to land each circuit on the panel its branch label names.",
-      "on_the_job": "In a clinic or surgery-center tenant job, panel schedules carry branch labels (LS, CR, EQ, or the designer's equivalents). Land circuits exactly as labeled and flag any field change — moving a receptacle from critical to normal is a design change, not a shortcut.",
+      "on_the_job": "In a clinic or surgery-center tenant job — Sharma does these build-outs around Orlando — the panel schedules carry branch labels: LS, CR, EQ, or the designer's equivalents. Land every circuit exactly where its label puts it. If a receptacle at a bed location is shown on the critical panel, it lands on the critical panel, even if the normal panel is closer and has spare spaces. Flag any field change to the designer: moving a receptacle from critical to normal is a design change, not a shortcut.",
       "sharma_note": "",
       "figure_idea": "Three-lane diagram: generator to transfer switches to life safety / critical / equipment lanes with example loads in each.",
       "related_ids": [
@@ -3475,7 +4031,103 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C5-517.18",
-      "next_id": "C5-517.30"
+      "next_id": "C5-517.30",
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "When the normal power dies, the generator and transfer gear cannot carry the whole building at once — and should not try. Sorting the loads into branches ahead of time means the loads that get people out and keep patients alive transfer first, and the heavy mechanical loads wait. Land one circuit on the wrong branch and either a bed receptacle goes dark with the normal power, or the generator gets loaded with loads that were supposed to wait.",
+      "inspection_fails": [
+        "Bed-location receptacles landed on the normal panel instead of the critical branch panel named on the schedule.",
+        "Exit signs or fire alarm circuits fed from a panel that is not the life safety branch.",
+        "Branch labels on the panel schedule changed in the field without revised plans.",
+        "Equipment-branch mechanical loads landed on the critical panel, crowding the loads that must transfer."
+      ],
+      "exam_trap": "The trap is assuming the biggest loads transfer first, so the equipment branch must be the most important one. It is the reverse: the equipment branch carries the heavy mechanical loads precisely because they can tolerate a later transfer. Life safety and critical carry the loads that cannot wait — egress lighting and the patient-care circuits the facility selected.",
+      "tables": [
+        {
+          "caption": "The three branches of the essential electrical system",
+          "headers": [
+            "Branch",
+            "Carries",
+            "Examples"
+          ],
+          "rows": [
+            [
+              "Life safety",
+              "Loads that get people out",
+              "Exit illumination, exit signs, fire alarm, emergency communications"
+            ],
+            [
+              "Critical",
+              "Patient-care loads the facility selects",
+              "Task lighting and receptacles at bed locations, nurse call"
+            ],
+            [
+              "Equipment",
+              "Heavy loads that support care",
+              "Mechanical and facility loads that tolerate a later transfer"
+            ]
+          ],
+          "note": "Branch contents are covered at 517.33, 517.34, and 517.35 — confirm the sub-numbering in the printed 2020 Part III."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-517.19-three-branches.svg",
+          "alt": "Flow diagram of a hospital essential electrical system: normal power and a generator feed transfer equipment, which splits into life safety, critical, and equipment branch lanes, each with its example loads.",
+          "caption": "One system, three branches — land each circuit where its label puts it.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Which branch carries exit signs and the fire alarm?",
+          "choices": [
+            "Critical",
+            "Equipment",
+            "Life safety",
+            "Normal"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The life safety branch carries the loads that get people out and keep egress safe: exit illumination and signs, fire alarm, and emergency communications.",
+          "nec_ref": "517.33"
+        },
+        {
+          "question": "Who decides which branch a circuit lands on?",
+          "choices": [
+            "The installer, by shortest run",
+            "The facility's design, shown on the plans",
+            "The inspector at final",
+            "The generator supplier"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Branch assignment is a design decision in the facility's plans. The field job is to land each circuit on the panel its branch label names.",
+          "nec_ref": "517.31"
+        },
+        {
+          "question": "The equipment branch is the right home for which loads?",
+          "choices": [
+            "Exit signs",
+            "Nurse call",
+            "Heavy mechanical loads that can transfer later",
+            "Bed-location receptacles"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The equipment branch carries heavy mechanical and facility loads that support care but tolerate a later transfer.",
+          "nec_ref": "517.35"
+        }
+      ],
+      "code_refs": [
+        "517.31",
+        "517.33",
+        "517.34",
+        "517.35",
+        "517.19"
+      ],
+      "uncertain": [
+        "The branch-content sections are cited on this page as 517.33, 517.34, and 517.35 — confirm the exact sub-numbering against the printed 2020 Part III before citing any one of them more narrowly."
+      ],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-517.30",
@@ -3991,8 +4643,8 @@
       "article": "520",
       "section": "520",
       "title": "Theaters, audience areas, and performance spaces",
-      "plain_explanation": "Article 520 takes theaters, audience areas of movie and television studios, and performance areas out of Article 518 and gives them their own rules, built around stage and house lighting, switchboards, and portable stage equipment. Wiring methods echo the assembly rules, with added provisions for the portable and temporary-looking equipment that is actually permanent in a theater. Sharma would meet this on a school auditorium or church stage package, not on ordinary tenant work.\n\nFor scope-spotting: fixed stage switchboards, portable switchboards used on stage, and the flexible cables and connectors feeding portable stage equipment are the article's center of gravity, and its wiring-method rules are stricter than ordinary commercial work because audiences sit in the dark in front of energized equipment. Any Sharma bid touching a stage should carry the article as a named scope with engineered drawings — it is never a 'few extra dimmers' add-on.",
-      "on_the_job": "Treat any stage, dimming, or performance lighting scope as engineered work and price only detailed plans. Portable stage cable and connectors follow this article, not jobsite temporary rules.",
+      "plain_explanation": "Article 520 takes theaters, audience areas of movie and television studios, and performance areas out of Article 518 and gives them their own rules, built around stage and house lighting, switchboards, and portable stage equipment. Wiring methods echo the assembly rules, with added provisions for the portable and temporary-looking equipment that is actually permanent in a theater. Sharma would meet this on a school auditorium or church stage package, not on ordinary tenant work.\n\nFor scope-spotting, the article's center of gravity is:\n• Fixed stage switchboards\n• Portable switchboards used on stage\n• Flexible cables and connectors feeding portable stage equipment\n• The stage and house lighting those boards control\n\nIts wiring-method rules are stricter than ordinary commercial work because audiences sit in the dark in front of energized equipment. Any Sharma bid touching a stage should carry the article as a named scope with engineered drawings — it is never a 'few extra dimmers' add-on.",
+      "on_the_job": "A Central Florida school auditorium package lands in the bid pile: a dimmer rack, border lights, and a portable switchboard the drama crew rolls out for each show. Treat any stage, dimming, or performance lighting scope as engineered work and price only detailed plans, with Article 520 carried as a named scope and branch circuits at Sharma's commercial standard of 20 A minimum. Portable stage cable and connectors follow this article, not jobsite temporary rules. If the drawings do not show the switchboards, the scope is not ready to price.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -4002,7 +4654,115 @@
       "verified": true,
       "prev_id": "C5-518.6",
       "next_id": "C5-ART-522",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "The audience sits in the dark, in fixed rows, in front of energized equipment that gets plugged in, moved, and re-rigged by a different crew for every show. A damaged cable or a fault on stage is not a shop problem — it is a fire and panic problem in a crowded room with the lights out. That is why theater wiring is held to stricter methods than ordinary commercial work, and why portable stage gear is treated as permanent work.",
+      "inspection_fails": [
+        "Portable stage equipment fed with jobsite temporary wiring methods instead of the Article 520 portable equipment rules.",
+        "Stage switchboard and stage lighting added in the field with no engineered drawings on file.",
+        "Portable stage cable run where crew and audience traffic damages it, with no protection.",
+        "Theater wired to ordinary commercial methods where Article 520 requires the stricter assembly-grade wiring methods."
+      ],
+      "exam_trap": "The trap is treating the portable switchboard and stage cable as Article 590 temporary wiring because they plug in and roll away. In a theater that gear is permanent work under Article 520 — and the theater itself is not an Article 518 job either. Article 520 takes theaters, studio audience areas, and performance areas out of 518 on purpose.",
+      "tables": [
+        {
+          "caption": "What Article 520 covers",
+          "headers": [
+            "Part of the job",
+            "What the article governs"
+          ],
+          "rows": [
+            [
+              "Fixed stage switchboards",
+              "The permanent boards controlling stage and house lighting"
+            ],
+            [
+              "Portable switchboards",
+              "Boards used on stage for productions"
+            ],
+            [
+              "Portable stage equipment",
+              "Flexible cables and connectors feeding it"
+            ],
+            [
+              "Stage and house lighting",
+              "The circuits the boards feed"
+            ]
+          ]
+        },
+        {
+          "caption": "518 or 520?",
+          "headers": [
+            "Space",
+            "Article"
+          ],
+          "rows": [
+            [
+              "Theater, studio audience area, performance area",
+              "520"
+            ],
+            [
+              "Other assembly occupancy",
+              "518"
+            ]
+          ],
+          "note": "Article 520 takes theaters and performance spaces out of Article 518 and gives them their own rules."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-520-theater-plan.svg",
+          "alt": "Plan view of a theater: stage with border lights, a fixed stage switchboard and a portable switchboard, a dimmer rack, and the audience house with seats and house lights, with numbered markers for what Article 520 governs.",
+          "caption": "One theater, one article: stage boards, portable gear, and house lighting.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A school auditorium stage package lands on your bid list. Which article governs the stage switchboards and portable stage equipment?",
+          "choices": [
+            "Article 518 — assembly occupancies",
+            "Article 520 — theaters and performance spaces",
+            "Article 590 — temporary installations",
+            "Article 410 — luminaires only"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Article 520 takes theaters, studio audience areas, and performance areas out of Article 518 and gives them their own rules.",
+          "nec_ref": "Article 520"
+        },
+        {
+          "question": "The drama crew's portable switchboard plugs in and rolls away after each show. How is it treated?",
+          "choices": [
+            "As temporary wiring under Article 590",
+            "As permanent work under Article 520",
+            "It is exempt because it is portable",
+            "Only the manufacturer's instructions apply"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Portable stage equipment in a theater looks temporary but is permanent work, and Article 520 has added provisions for it.",
+          "nec_ref": "Article 520"
+        },
+        {
+          "question": "How should a stage lighting scope be priced?",
+          "choices": [
+            "As a small add-on of a few extra dimmers",
+            "From the service size alone",
+            "As a named Article 520 scope from engineered drawings",
+            "With residential methods to save cost"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Stage work is engineered work: the article is a named scope and the price comes from detailed plans, never a dimmer add-on.",
+          "nec_ref": "Article 520"
+        }
+      ],
+      "code_refs": [
+        "Article 520",
+        "Article 518"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-ART-522",
@@ -4646,7 +5406,7 @@
       "section": "545",
       "title": "Manufactured buildings and relocatable structures",
       "plain_explanation": "Article 545 covers buildings built in a factory in sections or panels and assembled on site, plus relocatable structures such as portable classrooms and jobsite offices. The electrical questions are how the factory-built sections connect together, how the completed building connects to its service, and which parts are inspected at the factory versus on site. Florida's portable classroom and modular office market makes this a live article for Sharma even though this first pass stays at intro level.\n\nSite-side, the work concentrates at two joints: the interconnection between factory-built sections, made with the manufacturer's listed connection system and instructions, and the feeder or service connection to the completed building, which follows the ordinary service and feeder rules once the building is set. Which joint belongs to the factory's inspection and which to the local AHJ is decided by the state modular program paperwork — get it before rough-in, because an unlisted field splice between sections is the finding this article exists to prevent.",
-      "on_the_job": "On a modular or portable classroom job, get the manufacturer's connection details and the state modular insignia paperwork before pricing the site connection. This page is verified at article level only — no subsection numbers are given on this pass, on purpose.",
+      "on_the_job": "On a modular or portable classroom job — a steady market in Florida — get the manufacturer's connection details and the state modular insignia paperwork before pricing the site connection. The price changes with the split: sections that arrive with the interconnection already inspected under the state program leave Sharma the service connection; sections that don't, don't. This page is verified at article level only — no subsection numbers are given on this pass, on purpose.",
       "sharma_note": "",
       "figure_idea": "This first pass intentionally gives no 545 subsection pages. Mike Holt to confirm the 2020 section list before any are added.",
       "related_ids": [
@@ -4656,7 +5416,95 @@
       "verified": true,
       "prev_id": "C5-ART-540",
       "next_id": "C5-ART-547",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "The joint between two factory-built sections hides inside a finished wall once the building is trimmed out. If that joint is a field splice nobody listed and nobody inspected, it can fail or arc where no one can see it — and it can void the building's state modular insignia. The article exists so the connections are made with the manufacturer's listed system, and the paperwork settles who inspected what before the walls close.",
+      "inspection_fails": [
+        "Unlisted field splice between factory-built sections instead of the manufacturer's listed connection system.",
+        "Site connection roughed in with no state modular insignia paperwork on site, so the factory-versus-site inspection split was never settled.",
+        "Manufacturer's connection instructions not on site at rough-in.",
+        "Service or feeder connection to the completed building not run to the ordinary service and feeder rules once the building was set."
+      ],
+      "exam_trap": "The trap is treating the joint between sections like any other splice — a junction box and wire connectors from the truck. The interconnection has to be made with the manufacturer's listed connection system, following its instructions. An unlisted field splice between sections is exactly the finding this article exists to prevent.",
+      "tables": [
+        {
+          "caption": "The two joints on a manufactured building",
+          "headers": [
+            "Joint",
+            "How it is made",
+            "Inspected under"
+          ],
+          "rows": [
+            [
+              "Between factory-built sections",
+              "Manufacturer's listed connection system and instructions",
+              "State modular program paperwork"
+            ],
+            [
+              "Building to its service or feeder",
+              "Ordinary service and feeder rules once the building is set",
+              "Local AHJ"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-545-two-joints.svg",
+          "alt": "Two factory-built building sections joined on site, with a gold marker at the listed interconnection joint between the sections and a second marker at the service connection, plus a factory-versus-site inspection panel.",
+          "caption": "Two joints: the listed section connection, and the service connection.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "How are factory-built sections interconnected electrically?",
+          "choices": [
+            "Any listed junction box and connectors",
+            "The manufacturer's listed connection system, per its instructions",
+            "Romex jumpers between sections",
+            "However the site crew prefers"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The interconnection between sections is made with the manufacturer's listed connection system and instructions — an unlisted field splice is the classic finding.",
+          "nec_ref": "Article 545"
+        },
+        {
+          "question": "What decides whether a joint is inspected at the factory or on site?",
+          "choices": [
+            "The crew's schedule",
+            "The state modular program paperwork",
+            "The building's size",
+            "The AHJ's workload"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The state modular program and insignia paperwork decide which parts are inspected at the factory and which on site — get it before rough-in.",
+          "nec_ref": "Article 545"
+        },
+        {
+          "question": "Once a manufactured building is set, its service connection follows what?",
+          "choices": [
+            "Article 545 alone",
+            "The manufacturer's instructions only",
+            "The ordinary service and feeder rules",
+            "No rules — it was inspected at the factory"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The feeder or service connection to the completed building follows the ordinary service and feeder rules once the building is set.",
+          "nec_ref": "Article 545"
+        }
+      ],
+      "code_refs": [
+        "Article 545",
+        "Article 230",
+        "Article 225"
+      ],
+      "uncertain": [
+        "This page is verified at article level only. No 545 subsection numbers are given until the 2020 section list is confirmed in print."
+      ],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-ART-547",
@@ -5564,8 +6412,8 @@
       "article": "550",
       "section": "550.32",
       "title": "Service equipment — in sight and within 30 ft of the home",
-      "plain_explanation": "Mobile home service equipment is located adjacent to the home, never mounted in or on it, in sight from the home and not more than 30 ft from its exterior wall. If the service equipment must sit elsewhere on the premises, a disconnecting means suitable for use as service equipment still has to be within sight and within 30 ft of the wall, with grounding at that disconnect per 250.32. The equipment is rated not less than 100 amperes at 120/240 volts and must allow the feeder to be connected by a permanent wiring method. Mounting height is fixed too: the bottom of the enclosure at least 2 ft above the ground, and the disconnect not more than 6 ft 7 in. above the ground or platform. A manufactured home on a permanent foundation that meets the conditions of 550.32(B) is the exception — its service equipment may be installed in or on the home.\n\nNEC 2023 CHANGE:\n• 550.32: Mobile home service equipment now has to be within sight from the home, meaning visible and up to 50 ft away, instead of within 30 ft. Its disconnect can double as the emergency disconnect. Service equipment for a mobile home must be within sight from the home: visible and no more than 50 ft away (see 110.29).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Measure the 30 ft from the exterior wall before the pedestal or pole is set, and check the mounting height against finished grade — both are tape-measure inspection items. Keep the disconnect in sight of the home it serves.",
+      "plain_explanation": "Mobile home service equipment is located adjacent to the home, never mounted in or on it, in sight from the home and not more than 30 ft from its exterior wall. If the service equipment must sit elsewhere on the premises, a disconnecting means suitable for use as service equipment still has to be within sight and within 30 ft of the wall, with grounding at that disconnect per 250.32. The equipment is rated not less than 100 amperes at 120/240 volts and must allow the feeder to be connected by a permanent wiring method. Mounting height is fixed too: the bottom of the enclosure at least 2 ft above the ground, and the disconnect not more than 6 ft 7 in. above the ground or platform. A manufactured home on a permanent foundation that meets the conditions of 550.32(B) is the exception — its service equipment may be installed in or on the home.",
+      "on_the_job": "Setting a pedestal for a mobile home in an Ocala park: tape 30 ft from the home's exterior wall before the pedestal goes in — not from the skirting, and not after the trench is dug. The pedestal is 100 A at 120/240 V, Siemens gear, and its enclosure bottom lands 2 ft above finished grade, which also keeps it clear of the park's standing water after a storm. Last check before the inspection call: stand at the disconnect and confirm the home is in sight, and the handle is no higher than 6 ft 7 in.",
       "sharma_note": "",
       "figure_idea": "Lot sketch: pedestal service equipment beside the home, a 30 ft dimension line to the exterior wall, and the enclosure bottom shown 2 ft above grade.",
       "related_ids": [],
@@ -5582,7 +6430,104 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/550-32",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 550.32: Mobile home service equipment now has to be within sight from the home, meaning visible and up to 50 ft away, instead of within 30 ft. Its disconnect can double as the emergency disconnect. Service equipment for a mobile home must be within sight from the home: visible and no more than 50 ft away (see 110.29).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "The service equipment is the one disconnect that kills the whole home. If it sits on the home, a fire in the home takes the disconnect with it, and nobody can service or kill power safely. Keeping it beside the home, close enough to see and reach, and high enough to stay out of standing water, means the disconnect survives the emergency it exists for. Florida rain makes the 2 ft bottom height a real rule, not a detail.",
+      "inspection_fails": [
+        "Service equipment 38 ft from the exterior wall — over the 30 ft limit, however visible it is.",
+        "Enclosure bottom less than 2 ft above finished grade.",
+        "Disconnect handle above 6 ft 7 in. above the ground or platform.",
+        "Service equipment mounted on the home itself, with no permanent-foundation exception in play.",
+        "Equipment rated under 100 A, or the feeder landed with a cord instead of a permanent wiring method."
+      ],
+      "exam_trap": "The trap is the 50 ft number. It is real — but it is the 2023 definition of 'in sight,' and it does not apply to a 2020 permit. Under the 2020 rule on this page, the equipment has to be in sight AND within 30 ft of the exterior wall. Set the pedestal at 45 ft on a 2020 job and it fails, however visible it is.",
+      "tables": [
+        {
+          "caption": "550.32 placement checks (NEC 2020)",
+          "headers": [
+            "Check",
+            "2020 rule"
+          ],
+          "rows": [
+            [
+              "Location",
+              "Adjacent to the home, never in or on it"
+            ],
+            [
+              "Distance",
+              "In sight and within 30 ft of the exterior wall"
+            ],
+            [
+              "Rating",
+              "Not less than 100 A at 120/240 V"
+            ],
+            [
+              "Enclosure bottom",
+              "At least 2 ft above the ground"
+            ],
+            [
+              "Disconnect height",
+              "Not more than 6 ft 7 in. above ground or platform"
+            ]
+          ],
+          "note": "Exception: a manufactured home on a permanent foundation meeting 550.32(B) may have its service equipment in or on the home."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-550.32-lot-layout.svg",
+          "alt": "Lot plan and elevation for mobile home service equipment: a pedestal beside the home with a 30 ft maximum dimension to the exterior wall, an in-sight dashed line, and mounting heights of 2 ft minimum to the enclosure bottom and 6 ft 7 in maximum to the disconnect.",
+          "caption": "Beside the home, in sight, within 30 ft — and the heights are tape-measure items too.",
+          "w": 900,
+          "h": 1640
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Under NEC 2020, mobile home service equipment must be within what distance of the home's exterior wall?",
+          "choices": [
+            "20 ft",
+            "30 ft",
+            "50 ft",
+            "Any distance if visible"
+          ],
+          "answer_index": 1,
+          "explain_plain": "In sight and not more than 30 ft from the exterior wall. The 50 ft figure is a 2023 change.",
+          "nec_ref": "550.32"
+        },
+        {
+          "question": "Minimum rating for mobile home service equipment?",
+          "choices": [
+            "60 A at 120/240 V",
+            "100 A at 120/240 V",
+            "125 A at 120/240 V",
+            "200 A at 120/240 V"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Not less than 100 amperes at 120/240 volts, with the feeder connected by a permanent wiring method.",
+          "nec_ref": "550.32"
+        },
+        {
+          "question": "The bottom of the service enclosure must be at least how far above the ground?",
+          "choices": [
+            "6 in.",
+            "1 ft",
+            "2 ft",
+            "6 ft 7 in."
+          ],
+          "answer_index": 2,
+          "explain_plain": "At least 2 ft. The 6 ft 7 in. figure is the maximum height of the disconnect, not the minimum for the enclosure bottom.",
+          "nec_ref": "550.32"
+        }
+      ],
+      "code_refs": [
+        "550.32",
+        "550.32(B)",
+        "250.32"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-550.33",
@@ -6149,8 +7094,8 @@
       "article": "552",
       "section": "552",
       "title": "Park trailers",
-      "plain_explanation": "Article 552 covers park trailers — the trailer-type units built for park placement rather than highway travel, defined around a size threshold that separates them from recreational vehicles. Its rules parallel the mobile home and RV articles for supply and connection. Confusing a park trailer with an RV or a mobile home sends the job to the wrong article, so identification comes first.\n\nIdentification turns on the definition: a park trailer is built on a single chassis on wheels and, in its set-up mode, stays at or under 400 square feet of gross area — bigger or permanently sited units fall to other articles. Supply follows the unit's listing: park trailers are typically served by a cord connection or a permanent feeder sized to the unit's load under this article, with the disconnect and protection at the site. When the paperwork and the unit disagree, the nameplate and listing govern.",
-      "on_the_job": "Read the unit's label and paperwork before choosing between 550, 551, and 552. When the unit type is unclear, ask the AHJ rather than guessing the article.",
+      "plain_explanation": "Article 552 covers park trailers — the trailer-type units built for park placement rather than highway travel, defined around a size threshold that separates them from recreational vehicles. Its rules parallel the mobile home and RV articles for supply and connection. Confusing a park trailer with an RV or a mobile home sends the job to the wrong article, so identification comes first.\n\nIdentification turns on the definition:\n• Built on a single chassis mounted on wheels\n• 400 sq ft or less of gross area in its set-up mode\n• Bigger units, or units sited permanently, fall to other articles\n\nSupply follows the unit's listing: park trailers are typically served by a cord connection or a permanent feeder sized to the unit's load under this article, with the disconnect and protection at the site. When the paperwork and the unit disagree, the nameplate and listing govern.",
+      "on_the_job": "A park-model unit is delivered to a lot in a Central Florida park. Before choosing between 550, 551, and 552, read the unit's label and paperwork: single chassis on wheels, at or under 400 sq ft set up — a park trailer, Article 552. Sharma's work is the site side: the cord connection or permanent feeder the unit's listing calls for, sized to the unit's load, with the disconnect and protection at the site. When the unit type is unclear, ask the AHJ rather than guessing the article.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -6160,7 +7105,95 @@
       "verified": true,
       "prev_id": "C5-551.73",
       "next_id": "C5-ART-553",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Three different articles cover units that all arrive on wheels, and they do not ask for the same supply, disconnect, or protection. Wire a park trailer under the RV rules or the mobile home rules and the job is wrong before the first box is mounted — wrong feeder, wrong disconnect, a failed inspection. Identification is cheap; rework is not.",
+      "inspection_fails": [
+        "Unit wired under the wrong article — a park trailer treated as an RV (551) or a mobile home (550).",
+        "Supply sized from the sales paperwork instead of the unit nameplate and listing.",
+        "No disconnect and protection at the site for the park trailer supply.",
+        "Unit over 400 sq ft in set-up mode permitted and wired as a park trailer."
+      ],
+      "exam_trap": "The trap is calling every wheeled unit an RV and working under 551 — or a mobile home under 550. The article turns on the definition, not the sales name: a single chassis on wheels and 400 sq ft or less of gross area in set-up mode is a park trailer under 552. Over that size, the unit belongs to another article.",
+      "tables": [
+        {
+          "caption": "Which article? Identify the unit first",
+          "headers": [
+            "Unit",
+            "Article"
+          ],
+          "rows": [
+            [
+              "Mobile / manufactured home",
+              "550"
+            ],
+            [
+              "Recreational vehicle and RV park supply",
+              "551"
+            ],
+            [
+              "Park trailer — single chassis, 400 sq ft or less set up",
+              "552"
+            ]
+          ],
+          "note": "When the paperwork and the unit disagree, the nameplate and listing govern."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-552-identify-first.svg",
+          "alt": "Identification flowchart for a park trailer: a unit built on a single chassis on wheels, then the test of 400 square feet or less of gross area in set-up mode, leading to Article 552 for a park trailer or to Articles 550 and 551 if it is not.",
+          "caption": "Identify the unit first: the 400 sq ft test picks the article.",
+          "w": 900,
+          "h": 1440
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A unit on a single wheeled chassis measures 380 sq ft of gross area in set-up mode. Which article covers it?",
+          "choices": [
+            "Article 550 — mobile homes",
+            "Article 551 — recreational vehicles",
+            "Article 552 — park trailers",
+            "Article 555 — marinas"
+          ],
+          "answer_index": 2,
+          "explain_plain": "A single chassis on wheels at 400 sq ft or less in set-up mode is the park trailer definition — Article 552.",
+          "nec_ref": "Article 552"
+        },
+        {
+          "question": "The sales paperwork calls a unit an RV, but its nameplate and listing say park trailer. What governs?",
+          "choices": [
+            "The sales paperwork",
+            "The nameplate and listing",
+            "Whichever article is cheaper to wire",
+            "The park manager's preference"
+          ],
+          "answer_index": 1,
+          "explain_plain": "When the paperwork and the unit disagree, the nameplate and listing govern — identify the unit before picking the article.",
+          "nec_ref": "Article 552"
+        },
+        {
+          "question": "A set-up unit on a wheeled chassis measures 450 sq ft of gross area. What happens?",
+          "choices": [
+            "It is still a park trailer under 552",
+            "It falls to another article — 552 stops at 400 sq ft",
+            "It becomes an RV under 551 automatically",
+            "Nothing changes"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The 400 sq ft threshold is the line: bigger units fall to other articles.",
+          "nec_ref": "Article 552"
+        }
+      ],
+      "code_refs": [
+        "Article 552",
+        "Article 550",
+        "Article 551"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-ART-553",
@@ -7885,8 +8918,8 @@
       "article": "590",
       "section": "590.6",
       "title": "GFCI protection and the assured grounding program",
-      "plain_explanation": "Receptacles that supply temporary power for construction style work need GFCI protection for personnel: the 125-volt, 15-, 20-, and 30-ampere receptacles are covered directly by 590.6(A)(1) and (A)(2); 125/250-volt receptacles join the GFCI list only under (A)(3), and only where they are receptacle outlets on a portable generator rated not greater than 15 kW, including receptacles that are part of the building's permanent wiring when they are being used for the temporary work. For receptacles outside that list, the choice is GFCI protection or a written assured equipment grounding conductor program with documented testing of cords and equipment. All receptacles used for temporary power are of the grounding type.\n\nWhere the assured equipment grounding conductor program covers the receptacles outside the GFCI list, the NEC (590.6(B)(2)) requires written procedures and tests before first use on site, when there is evidence of damage, before equipment is returned to service after repairs, and at intervals not exceeding 3 months, recorded and made available to the AHJ. OSHA 29 CFR 1926.404(b)(1)(iii), not the NEC, adds the following details: before first use, before equipment is returned to service after a repair, after any incident that could reasonably be suspected of having caused damage, and at intervals not exceeding 3 months — 6 months only for cord sets and receptacles that are fixed in place and not exposed to damage. Each test verifies the equipment grounding conductor's continuity and that it terminates correctly, and the program is documented, by color coding or tagging and by records. An undocumented program is treated as no program. In NEC 2020 the GFCI scope is: (A)(1) all 125V, single-phase, 15-, 20- and 30A receptacle outlets that are not part of the permanent wiring and are in use by personnel; (A)(2) receptacles of any other rating, including the building's permanent receptacles, used to supply temporary power to equipment used by personnel during construction, remodeling, maintenance, repair or demolition — GFCI protection or a listed cord set or device with listed GFCI protection; (A)(3) 125V and 125/250V, single-phase, 15-, 20- and 30A receptacle outlets on a portable generator rated 15 kW or less — listed GFCI protection. The 6-month interval for fixed cord sets and receptacles and the color coding are OSHA rules, not NEC rules.",
-      "on_the_job": "Test temp GFCI devices on a schedule and keep the test log with the temp panel. If a site runs an assured grounding program instead for the larger receptacles, the paperwork and cord color coding have to exist before the inspector asks, not after.",
+      "plain_explanation": "Temporary-power receptacles need GFCI protection for personnel — or, outside the GFCI list, a written assured equipment grounding conductor program. All receptacles used for temporary power are of the grounding type.\n• The GFCI list, 590.6(A): (A)(1) all 125-volt, single-phase, 15-, 20-, and 30-ampere receptacle outlets that are not part of the permanent wiring and are in use by personnel; (A)(2) receptacles of any other rating — including the building's permanent receptacles — used for temporary power during construction, remodeling, maintenance, repair, or demolition: GFCI protection, or a listed cord set or device with listed GFCI protection; (A)(3) 125-volt and 125/250-volt, single-phase, 15-, 20-, and 30-ampere receptacle outlets on a portable generator rated 15 kW or less, with listed GFCI protection.\n• The program alternative, 590.6(B): for receptacles outside that list, the choice is GFCI protection or the assured program — written procedures; tests before first use, when there is evidence of damage, and before equipment returns to service after repairs; intervals not exceeding 3 months; records available to the AHJ.\nTwo of the familiar details are OSHA rules, not NEC rules — both from OSHA 29 CFR 1926.404(b)(1)(iii): the 6-month test interval, allowed only for cord sets and receptacles fixed in place and not exposed to damage, and the color coding or tagging of tested cords. Each test verifies the grounding conductor's continuity and correct termination. An undocumented program is treated as no program.",
+      "on_the_job": "On a Sharma remodel in Orlando, the spider box off the temp panel feeds the saws and chargers; every receptacle on it is GFCI-protected and tested device by device at setup (S-07: the house panel's pattern does not cover a jobsite distribution box), and the test log stays with the temp panel. The larger receptacles outside the (A) list run under the assured grounding program: cords tested before first use and every 3 months or less, tagged, records in the job trailer before the inspector asks, not after.",
       "sharma_note": "S-07 caution: a DFN breaker feeding a receptacle can be the GFCI method on a house's permanent wiring used temporarily, but a spider box or temp panel on site needs its own GFCI protection verified device by device — do not assume the upstream house pattern covers a jobsite distribution box.",
       "figure_idea": "",
       "related_ids": [
@@ -7901,7 +8934,130 @@
       "next_id": "C5-590.8",
       "sharma_rule_ids": [
         "S-07"
-      ]
+      ],
+      "why_it_exists": "Construction power is the roughest service in the trade: cords dragged across wet slabs, cut, spliced, and run over, feeding tools held by people standing on grade. A ground fault there does not announce itself — the tool keeps running while its frame sits at line voltage. GFCI protection, or a tested and documented grounding program, is what stands between that fault and the worker holding the tool.",
+      "exam_trap": "The trap is stretching the test interval to 6 months for every cord on site, or treating the program as a paperwork-free alternative. Under the NEC the interval is 3 months; the 6-month allowance is OSHA's, only for cord sets and receptacles fixed in place and not exposed to damage. No written program and no records means no program at all.",
+      "tables": [
+        {
+          "caption": "Who gets GFCI — 590.6(A)",
+          "headers": [
+            "Receptacle",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "125 V, single-phase, 15/20/30 A, not part of the permanent wiring",
+              "GFCI protection for personnel — (A)(1)"
+            ],
+            [
+              "Any other rating, incl. permanent receptacles used for temp power",
+              "GFCI, or a listed cord set or device with listed GFCI — (A)(2)"
+            ],
+            [
+              "125 V and 125/250 V, 15/20/30 A, on a portable generator of 15 kW or less",
+              "Listed GFCI protection — (A)(3)"
+            ],
+            [
+              "Receptacles outside the (A) list",
+              "GFCI, or the assured equipment grounding conductor program — (B)"
+            ]
+          ]
+        },
+        {
+          "caption": "Assured grounding program tests — 590.6(B)",
+          "headers": [
+            "When",
+            "NEC 590.6(B)",
+            "OSHA adds"
+          ],
+          "rows": [
+            [
+              "Before first use on site",
+              "Test cords and equipment",
+              "Same"
+            ],
+            [
+              "Damage or repairs",
+              "Test when there is evidence of damage, and before equipment returns to service after repairs",
+              "Test after any incident that could reasonably be suspected of having caused damage"
+            ],
+            [
+              "Interval",
+              "Not exceeding 3 months",
+              "6 months only for cord sets and receptacles fixed in place and not exposed to damage"
+            ],
+            [
+              "Records",
+              "Written procedures; records available to the AHJ",
+              "Color coding or tagging identifies the tested cords"
+            ]
+          ]
+        }
+      ],
+      "inspection_fails": [
+        "Spider box receptacles with no GFCI protection, on the assumption that the upstream panel covers the jobsite distribution box — protection is verified device by device (S-07).",
+        "An assured equipment grounding conductor program claimed on site with no written procedures and no test records — an undocumented program is treated as no program.",
+        "Cord set returned to service after a repair with no retest, and no test records for intervals past 3 months.",
+        "Non-grounding-type receptacles installed for temporary power."
+      ],
+      "page_quiz": [
+        {
+          "question": "A 125-volt, 20-ampere receptacle on a spider box — not part of the permanent wiring — is used by the crew. It needs:",
+          "choices": [
+            "Nothing, if the panel is grounded",
+            "GFCI protection for personnel",
+            "Only a grounding-type receptacle",
+            "Testing every 6 months"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Receptacles that are not part of the permanent wiring and are in use by personnel are on the 590.6(A)(1) list — GFCI protection for personnel is required.",
+          "nec_ref": "590.6(A)(1)"
+        },
+        {
+          "question": "Under the NEC, tests under an assured equipment grounding conductor program repeat at intervals not exceeding:",
+          "choices": [
+            "6 months",
+            "12 months",
+            "3 months",
+            "Only at the start of the job"
+          ],
+          "answer_index": 2,
+          "explain_plain": "590.6(B) sets the interval at not exceeding 3 months. The 6-month figure is an OSHA allowance for fixed cord sets and receptacles only.",
+          "nec_ref": "590.6(B)"
+        },
+        {
+          "question": "The 6-month test interval and the color coding of tested cords come from:",
+          "choices": [
+            "NEC 590.6",
+            "OSHA 29 CFR 1926.404(b)(1)(iii)",
+            "The receptacle's listing",
+            "A local amendment"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Both details are OSHA construction rules, not NEC rules — the NEC program runs on a 3-month interval with written records.",
+          "nec_ref": "29 CFR 1926.404(b)(1)(iii)"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "590.6(A)(1)",
+        "590.6(A)(2)",
+        "590.6(A)(3)",
+        "590.6(B)",
+        "29 CFR 1926.404(b)(1)(iii)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "figures": [
+        {
+          "src": "fig/c5/C5-590.6-decision.svg",
+          "alt": "Decision chart for temporary power receptacles under 590.6: a receptacle on the 590.6(A) list gets GFCI protection for personnel, and a receptacle outside the list gets GFCI protection or a written assured equipment grounding conductor program with tests at intervals not exceeding 3 months and records available to the AHJ.",
+          "caption": "GFCI for the listed receptacles; GFCI or the documented program for the rest.",
+          "w": 900,
+          "h": 1700
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C5-590.8",

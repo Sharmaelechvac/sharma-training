@@ -284,7 +284,7 @@
       "section": "500.6",
       "title": "Grupos de materiales",
       "plain_explanation": "Dentro de cada clase, los materiales se ordenan en grupos según la facilidad con que se encienden y cuánta presión puede generar una explosión. Los grupos de Clase I van de A a D y los grupos de Clase II van de E a G, y las primeras letras son generalmente los materiales más severos. El equipo tiene que estar identificado para el grupo específico de la ubicación, no solo para la clase.\n\nEjemplos que fijan las letras en la memoria. Clase I: el Grupo A es el acetileno; el Grupo B es el hidrógeno y gases o vapores de peligrosidad equivalente; el Grupo C cubre vapores tipo etileno; el Grupo D cubre los combustibles de todos los días — vapores de gasolina, propano, gas natural y alcohol. Clase II: el Grupo E son polvos metálicos; el Grupo F son polvos carbonáceos como el carbón y el coque; el Grupo G son polvos de granos, harina y otros polvos agrícolas y plásticos. Los documentos de clasificación nombran el grupo para el material realmente presente — estos ejemplos son orientación, no un sustituto de ellos.",
-      "on_the_job": "Verifique la letra del grupo en los planos contra las letras de grupo en la placa de cada luminaria, motor y gabinete antes de la instalación. Un accesorio aprobado para el Grupo D no cubre automáticamente los Grupos A, B o C.",
+      "on_the_job": "En un trabajo en Florida — un área de despacho de combustible, un patio de propano, un molino de alimento — lea primero los documentos de clasificación; ellos nombran el grupo para el material realmente presente. Verifique la letra del grupo en los planos contra las letras de grupo en la placa de cada luminaria, motor y gabinete antes de la instalación. Un accesorio aprobado para el Grupo D no cubre automáticamente los Grupos A, B o C, y una submittal que nombra la clase pero no el grupo se devuelve.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -295,7 +295,118 @@
       "verified": true,
       "prev_id": "C5-500.5",
       "next_id": "C5-500.7",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "La clase sola no describe el material. El acetileno y el hidrógeno se encienden con más facilidad y generan más presión de explosión que el vapor de gasolina, y el polvo metálico no se comporta como el polvo de granos. El equipo se prueba y se identifica contra el comportamiento de ignición y presión de un grupo específico. Ponga equipo del Grupo D en una ubicación del Grupo B y el gabinete puede no contener la explosión que debía sobrevivir.",
+      "inspection_fails": [
+        "La placa del equipo indica la clase y la división pero ningún grupo — o el grupo equivocado para el material presente.",
+        "Accesorios del Grupo D instalados donde los documentos de clasificación nombran el Grupo B (hidrógeno).",
+        "Submittal aprobada solo por la clase; las letras de grupo nunca se verificaron contra los documentos de clasificación.",
+        "Equipo de área de polvos ajustado a Clase II pero no a su grupo de polvo — área de polvo de granos (G) con equipo identificado para otro grupo."
+      ],
+      "exam_trap": "La respuesta trampa es «aprobado para Clase I, División 1 es suficiente». No lo es: el equipo tiene que estar identificado para el grupo específico de la ubicación. Las letras también corren con la severidad — en Clase I, el Grupo A (acetileno) es más severo que el Grupo D (gasolina) — así que un listado del Grupo D nunca se estira hacia arriba para cubrir A, B o C.",
+      "tables": [
+        {
+          "caption": "Grupos de materiales (500.6)",
+          "headers": [
+            "Clase",
+            "Grupo",
+            "Materiales de ejemplo"
+          ],
+          "rows": [
+            [
+              "I",
+              "A",
+              "Acetileno"
+            ],
+            [
+              "I",
+              "B",
+              "Hidrógeno y gases o vapores de peligrosidad equivalente"
+            ],
+            [
+              "I",
+              "C",
+              "Vapores tipo etileno"
+            ],
+            [
+              "I",
+              "D",
+              "Vapores de gasolina, propano, gas natural y alcohol"
+            ],
+            [
+              "II",
+              "E",
+              "Polvos metálicos"
+            ],
+            [
+              "II",
+              "F",
+              "Polvos carbonáceos como el carbón y el coque"
+            ],
+            [
+              "II",
+              "G",
+              "Polvos de granos, harina y otros polvos agrícolas y plásticos"
+            ]
+          ],
+          "note": "Los documentos de clasificación nombran el grupo para el material realmente presente — estos ejemplos son orientación, no un sustituto de ellos."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-500.6-material-groups.svg",
+          "alt": "Dos paneles de severidad de grupos de materiales: Clase I Grupos A a D con acetileno, hidrógeno, vapores tipo etileno y combustibles de todos los días, y Clase II Grupos E a G con polvos metálicos, polvos carbonáceos y polvos de granos, con barras más largas marcando los materiales más severos.",
+          "caption": "Grupos A a G: la letra debe coincidir con el material realmente presente.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "El hidrógeno es el material presente en una ubicación Clase I. ¿Qué grupo es?",
+          "choices": [
+            "Grupo D",
+            "Grupo C",
+            "Grupo B",
+            "Grupo A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "El Grupo B es el hidrógeno y gases o vapores de peligrosidad equivalente. El Grupo A es solo el acetileno.",
+          "nec_ref": "500.6"
+        },
+        {
+          "question": "Un accesorio está identificado para Clase I, Grupo D. La ubicación está clasificada Grupo B. ¿Cuál es el veredicto?",
+          "choices": [
+            "Bien — es la misma clase",
+            "No aceptable — el equipo debe estar identificado para el grupo específico",
+            "Bien si la división coincide",
+            "Aceptable solo en División 2"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El equipo tiene que estar identificado para el grupo específico de la ubicación, no solo para la clase. Una aprobación del Grupo D no cubre el Grupo B.",
+          "nec_ref": "500.6"
+        },
+        {
+          "question": "Los polvos de granos y harina pertenecen a qué grupo de Clase II?",
+          "choices": [
+            "Grupo E",
+            "Grupo F",
+            "Grupo G",
+            "Grupo D"
+          ],
+          "answer_index": 2,
+          "explain_plain": "El Grupo G son polvos de granos, harina y otros polvos agrícolas y plásticos. El Grupo E son polvos metálicos y el Grupo F son polvos carbonáceos.",
+          "nec_ref": "500.6"
+        }
+      ],
+      "code_refs": [
+        "500.6",
+        "500.5"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-500.7",
@@ -473,8 +584,8 @@
       "article": "500",
       "section": "500.8",
       "title": "Idoneidad, marcado y temperatura del equipo",
-      "plain_explanation": "El equipo para una ubicación clasificada tiene que ser adecuado para la clase, división y grupo exactos donde está, y el equipo aprobado para División 1 también puede servir en División 2 de la misma clase y el mismo grupo. Las placas llevan la clase, la división o zona, el grupo y una marca de temperatura que muestra la superficie más caliente que el equipo puede alcanzar. Esa marca de temperatura tiene que mantenerse por debajo de la temperatura de ignición del gas, vapor o polvo involucrado.\n\nLos códigos de temperatura (la marca T) van desde la superficie permitida más caliente hacia abajo:\n• T1 — 450°C (842°F)\n• T2 — 300°C (572°F)\n• T3 — 200°C (392°F)\n• T4 — 135°C (275°F)\n• T5 — 100°C (212°F)\n• T6 — 85°C (185°F)\nLa temperatura máxima de superficie marcada del equipo debe mantenerse en o por debajo de la temperatura de ignición del material de la ubicación — un dispositivo T3, al que se le permite una superficie de 200°C, no tiene lugar donde el gas presente se enciende a 180°C. La Tabla 500.8(C) también tiene códigos intermedios (T2A–T2D, T3A–T3C, T4A) — lea el código exacto en la placa.\n\nCAMBIO NEC 2023:\n• 500.8: El equipo de Clase III ahora tiene una regla de temperatura en 500.8: su marca no puede exceder la temperatura de ignición de las fibras, con un tope de 165°C (329°F), o 120°C (248°F) para equipo sobrecargable alrededor de fibras inflamables. En un área de Clase III, la marca de temperatura del equipo no puede superar la temperatura de ignición de las fibras/partículas volantes que la hacen peligrosa (500.8(D)(3)).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Lea la placa completa, incluido el código de temperatura, antes de colocar el equipo — una clase y un grupo correctos con el código de temperatura incorrecto sigue siendo una instalación fallida. Fotografie las placas en el trabajo clasificado para el registro de la obra.",
+      "plain_explanation": "El equipo para una ubicación clasificada tiene que ser adecuado para la clase, división y grupo exactos donde está, y el equipo aprobado para División 1 también puede servir en División 2 de la misma clase y el mismo grupo. Las placas llevan la clase, la división o zona, el grupo y una marca de temperatura que muestra la superficie más caliente que el equipo puede alcanzar. Esa marca de temperatura tiene que mantenerse por debajo de la temperatura de ignición del gas, vapor o polvo involucrado.\n\nLos códigos de temperatura (la marca T) van desde la superficie permitida más caliente hacia abajo:\n• T1 — 450°C (842°F)\n• T2 — 300°C (572°F)\n• T3 — 200°C (392°F)\n• T4 — 135°C (275°F)\n• T5 — 100°C (212°F)\n• T6 — 85°C (185°F)\nLa temperatura máxima de superficie marcada del equipo debe mantenerse en o por debajo de la temperatura de ignición del material de la ubicación — un dispositivo T3, al que se le permite una superficie de 200°C, no tiene lugar donde el gas presente se enciende a 180°C. La Tabla 500.8(C) también tiene códigos intermedios (T2A–T2D, T3A–T3C, T4A) — lea el código exacto en la placa.",
+      "on_the_job": "En un trabajo comercial pequeño — una cabina de pintura en un taller de carrocería de Orlando — el plano de clasificación muestra un gas que se enciende a 180°C. El motor de extracción de repuesto en el camión está marcado Clase I, División 1, Grupo D, pero su código T es T3: una superficie de 200°C en un gas de 180°C. Clase correcta, grupo correcto, temperatura incorrecta — se queda en el camión, y se instala el motor T4 (135°C). Fotografie cada placa en el trabajo clasificado para el registro de la obra; la foto es la prueba de que la verificación se hizo.",
       "sharma_note": "",
       "figure_idea": "Dibujo de primer plano de una placa con notas que señalan los campos de clase, grupo y código de temperatura (placa genérica, sin marca).",
       "related_ids": [
@@ -494,7 +605,113 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/500-8",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 500.8: El equipo de Clase III ahora tiene una regla de temperatura en 500.8: su marca no puede exceder la temperatura de ignición de las fibras, con un tope de 165°C (329°F), o 120°C (248°F) para equipo sobrecargable alrededor de fibras inflamables. En un área de Clase III, la marca de temperatura del equipo no puede superar la temperatura de ignición de las fibras/partículas volantes que la hacen peligrosa (500.8(D)(3)).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Un área clasificada es un lugar donde el propio aire puede arder. Cualquier superficie caliente en ese aire es una posible cerilla. La marca T es la promesa probada del fabricante de qué tan caliente puede ponerse el equipo, y la temperatura de ignición es el punto donde el material se enciende sin chispa. Mantener el primer número por debajo del segundo es lo que impide que el propio equipo se convierta en la fuente de ignición.",
+      "inspection_fails": [
+        "Código de temperatura demasiado caliente para el material presente — equipo T3 (200°C) instalado donde el gas se enciende a 180°C.",
+        "Equipo marcado para la clase y la división, pero no para el grupo del gas o polvo del área.",
+        "Placa pintada, dañada o faltante, de modo que la clase, el grupo y el código T no se pueden verificar.",
+        "Equipo de División 2 instalado en una ubicación de División 1."
+      ],
+      "exam_trap": "La trampa es leer el número T al revés: T6 suena como la clasificación de trabajo pesado, así que se elige para el trabajo más caliente. Es lo contrario — T1 permite la superficie más caliente (450°C) y T6 la más fría (85°C). Un número T mayor significa una superficie más fría y segura, nunca una más fuerte.",
+      "tables": [
+        {
+          "caption": "Códigos de temperatura — Tabla 500.8(C) (NEC 2020)",
+          "headers": [
+            "Código",
+            "Superficie máx °C",
+            "Superficie máx °F"
+          ],
+          "rows": [
+            [
+              "T1",
+              "450",
+              "842"
+            ],
+            [
+              "T2",
+              "300",
+              "572"
+            ],
+            [
+              "T3",
+              "200",
+              "392"
+            ],
+            [
+              "T4",
+              "135",
+              "275"
+            ],
+            [
+              "T5",
+              "100",
+              "212"
+            ],
+            [
+              "T6",
+              "85",
+              "185"
+            ]
+          ],
+          "note": "Los códigos intermedios T2A–T2D, T3A–T3C y T4A quedan entre estos escalones — lea el código exacto en la placa."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-500.8-nameplate-tcode.svg",
+          "alt": "Placa genérica de equipo con notas numeradas para los campos de clase, división, grupo y código de temperatura, junto a una escala de temperatura de T1 a T6 y una verificación de pasa o no pasa para equipo en un área cuyo gas se enciende a 180 grados C.",
+          "caption": "Lea los cuatro campos de la placa — luego verifique el código T contra el gas.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Qué código de temperatura permite la superficie de equipo más caliente?",
+          "choices": [
+            "T1",
+            "T3",
+            "T4",
+            "T6"
+          ],
+          "answer_index": 0,
+          "explain_plain": "T1 permite 450°C (842°F), la superficie más caliente de la escala. Los códigos bajan hasta T6 con 85°C.",
+          "nec_ref": "Table 500.8(C)"
+        },
+        {
+          "question": "Un gas del área se enciende a 180°C. ¿Qué equipo marcado es aceptable?",
+          "choices": [
+            "T2 (300°C)",
+            "T3 (200°C)",
+            "T4 (135°C)",
+            "Cualquier equipo de División 1"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La temperatura máxima de superficie marcada tiene que mantenerse en o por debajo de la temperatura de ignición. Solo T4, con 135°C, queda por debajo de 180°C.",
+          "nec_ref": "500.8"
+        },
+        {
+          "question": "El equipo aprobado para División 1 de una clase y un grupo también puede usarse ¿dónde?",
+          "choices": [
+            "División 2 de la misma clase y el mismo grupo",
+            "Cualquier división de cualquier clase",
+            "División 1 de cualquier grupo",
+            "Solo en exteriores"
+          ],
+          "answer_index": 0,
+          "explain_plain": "La aprobación de División 1 cubre la División 2 de la misma clase y el mismo grupo — la clase y el grupo aún tienen que coincidir.",
+          "nec_ref": "500.8"
+        }
+      ],
+      "code_refs": [
+        "500.8",
+        "Table 500.8(C)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-ART-501",
@@ -1578,8 +1795,8 @@
       "article": "511",
       "section": "511.3",
       "title": "Clasificación de las áreas de taller",
-      "plain_explanation": "Esta sección ordena los espacios de taller usando tablas que dependen de tres preguntas: reparación mayor o menor, si el área es el piso, una fosa o el techo, y si se proporciona la ventilación requerida. En talleres de reparación mayor, el área del piso hasta 18 pulgadas es comúnmente una ubicación Clase I, División 2; las fosas son División 1 o División 2 según la ventilación; y las áreas de techo pueden estar clasificadas para gases más ligeros que el aire cuando falta ventilación. No se requiere que los garajes de estacionamiento y almacenamiento sin trabajo de reparación estén clasificados.\n\nDos puntos resuelven la mayoría de las preguntas de distribución. La banda clasificada del piso en un taller de reparación mayor va desde el piso hasta 18 in. — los tomacorrientes y el equipo con arco se planifican primero contra esa banda. Y una fosa se trata con la clasificación más estricta a menos que la ventilación que las tablas exigen para ella realmente se proporcione y se mantenga: una fosa dibujada como División 2 'con ventilación' es trabajo de División 1 el día en que la ventilación se elimina del alcance mecánico.",
-      "on_the_job": "Trabaje las tres preguntas en orden para cada espacio y escriba el resultado en el metrado — no clasifique todo el edificio por su cuarto más severo. Mantenga los tomacorrientes ordinarios y los dispositivos con arco fuera de las zonas clasificadas donde el diseño lo permita.",
+      "plain_explanation": "Esta sección clasifica los espacios dentro de un taller comercial. Tres preguntas deciden cada respuesta: reparación mayor o reparación menor (511.2), qué parte del espacio es — el piso, una fosa o el techo — y si la ventilación que la sección especifica realmente se proporciona.\n• Estacionamiento y almacenamiento, 511.3(A): un garaje sin trabajo de reparación no tiene que estar clasificado.\n• Piso de reparación mayor, 511.3(C)(1): con ventilación mecánica de un mínimo de cuatro cambios de aire por hora, el área del piso no está clasificada. Sin ella, toda el área del piso es Clase I, División 2 hasta 18 in. sobre el piso.\n• Fosas, 511.3(C)(3): una fosa en un cuarto de lubricación o de servicio es Clase I, División 2 con ventilación de un mínimo de seis cambios de aire por hora, y Clase I, División 1 hasta el nivel del piso sin ella.\n• Techo, 511.3(C)(2): para combustibles más ligeros que el aire, como el gas natural o el hidrógeno, la banda dentro de 18 in. del techo es Clase I, División 2 sin ventilación, y no está clasificada con ventilación de escape en el techo de al menos 1 cfm por pie cuadrado, tomada dentro de 18 in. del punto más alto.\n• Reparación menor, 511.3(D): las áreas del piso no están clasificadas, excepto las áreas de fosas, que siguen la regla de fosas anterior.\n• Despacho de combustible, 511.3(B): las funciones de despacho se clasifican desde la Tabla 514.3(B)(1).\nLa ventilación es parte de la clasificación, no un extra mecánico: una fosa dibujada como División 2 'con ventilación' es trabajo de División 1 el día en que esa ventilación sale del alcance mecánico.",
+      "on_the_job": "En un taller de reparación de cuatro bahías en Winter Haven — reparación mayor, una fosa de lubricación, sin despacho de combustible — trabaje las tres preguntas espacio por espacio y escriba las respuestas en el metrado. El juego mecánico proporciona cuatro cambios de aire por hora, así que el piso se cotiza como no clasificado y las bahías se instalan con métodos comerciales ordinarios en circuitos derivados de 20 A mínimo (S-01). La fosa es el punto decisivo: su respuesta de División 2 necesita seis cambios de aire por hora de ventilación de fosa en el alcance mecánico. Si esa línea no está ahí, cotice la fosa como División 1 y dígalo en la oferta.",
       "sharma_note": "",
       "figure_idea": "Vista en planta de una bahía de reparación con la banda del piso de 18 pulgadas y una fosa marcadas, y una nota de que la ventilación cambia la respuesta de la fosa.",
       "related_ids": [
@@ -1594,7 +1811,142 @@
       "prev_id": "C5-ART-511",
       "next_id": "C5-511.4",
       "sharma_rule_ids": [],
-      "unverified_reason": "Sin verificar aún después de la revisión de Mike Holt (2026-11-25): La página establece, como regla incondicional, que el piso de un taller de reparación mayor hasta 18 in. es Clase I, División 2. Bajo las tablas de 2020, las clasificaciones del piso y de la fosa dependen de si se proporciona la ventilación especificada. Mi entendimiento es que un piso de reparación mayor ventilado no está clasificado y uno sin ventilar es División 2 hasta 18 in., pero no pude confirmar las celdas de la Tabla 511.3(C) y 511.3(D) desde una fuente pública. Reescriba las oraciones del piso como \"depende de la ventilación que la tabla especifica\" y verifique cada celda contra las Tablas impresas de 2020 511.3(C)/(D) antes de publicar. La declaración sobre el garaje de estacionamiento (511.3(A), sin clasificar) es correcta."
+      "unverified_reason": "Sin verificar aún después de la revisión de Mike Holt (2026-11-25): La página establece, como regla incondicional, que el piso de un taller de reparación mayor hasta 18 in. es Clase I, División 2. Bajo las tablas de 2020, las clasificaciones del piso y de la fosa dependen de si se proporciona la ventilación especificada. Mi entendimiento es que un piso de reparación mayor ventilado no está clasificado y uno sin ventilar es División 2 hasta 18 in., pero no pude confirmar las celdas de la Tabla 511.3(C) y 511.3(D) desde una fuente pública. Reescriba las oraciones del piso como \"depende de la ventilación que la tabla especifica\" y verifique cada celda contra las Tablas impresas de 2020 511.3(C)/(D) antes de publicar. La declaración sobre el garaje de estacionamiento (511.3(A), sin clasificar) es correcta.",
+      "why_it_exists": "El vapor de gasolina es más pesado que el aire: se hunde, se extiende por el piso y se acumula en una fosa como el agua en un recipiente. Los gases más ligeros que el aire hacen lo contrario y se acumulan en el techo. La clasificación dibuja el límite donde el combustible realmente se acumula, y la ventilación se gana su lugar en la respuesta porque el aire en movimiento mantiene la mezcla demasiado pobre para encenderse.",
+      "exam_trap": "La respuesta trampa es 'el piso de un taller de reparación mayor es siempre Clase I, División 2 hasta 18 in.' Esa es solo la respuesta sin ventilación. Con la ventilación que especifica 511.3(C)(1), el área del piso no está clasificada — la trampa cotiza métodos de ubicación clasificada que el trabajo no necesita.",
+      "tables": [
+        {
+          "caption": "Clasificación de un vistazo — 511.3 (NEC 2020)",
+          "headers": [
+            "Área",
+            "Condición",
+            "Clase"
+          ],
+          "rows": [
+            [
+              "Solo estacionamiento / almacenamiento",
+              "Sin trabajo de reparación",
+              "Sin clasificar"
+            ],
+            [
+              "Piso de reparación mayor",
+              "Ventilación, 4 cambios de aire/hr",
+              "Sin clasificar"
+            ],
+            [
+              "Piso de reparación mayor",
+              "Sin ventilación",
+              "Clase I Div 2 hasta 18 in"
+            ],
+            [
+              "Fosa, reparación mayor",
+              "Ventilación, 6 cambios de aire/hr",
+              "Clase I Div 2"
+            ],
+            [
+              "Fosa, reparación mayor",
+              "Sin ventilación",
+              "Clase I Div 1 hasta el piso"
+            ],
+            [
+              "Techo, combustibles gaseosos",
+              "Sin ventilación",
+              "Clase I Div 2 dentro de 18 in"
+            ],
+            [
+              "Piso de reparación menor",
+              "Sin despacho ni transferencia",
+              "Sin clasificar, excepto fosas"
+            ]
+          ],
+          "note": "Las áreas de despacho se clasifican desde la Tabla 514.3(B)(1). Si la ventilación sale del alcance mecánico, la respuesta cambia con ella."
+        }
+      ],
+      "inspection_fails": [
+        "Tomacorrientes de ubicación ordinaria y una lámpara portátil instalados dentro de la banda del piso de 18 in. de un taller de reparación mayor sin ventilación — esa banda es Clase I, División 2.",
+        "Fosa cableada como División 2 sin ventilación de fosa en los planos mecánicos ni en el edificio — una fosa sin ventilación es Clase I, División 1 hasta el nivel del piso.",
+        "Equipo dentro de 18 in. del techo sobre vehículos de gas natural tratado como ubicación ordinaria en un taller sin ventilación de escape en el techo.",
+        "Equipo de despacho de combustible clasificado con las reglas del piso del taller en lugar de la Tabla 514.3(B)(1)."
+      ],
+      "page_quiz": [
+        {
+          "question": "Un garaje de estacionamiento sin trabajo de reparación es:",
+          "choices": [
+            "Clase I, División 2 en todas partes",
+            "No tiene que estar clasificado",
+            "Clase I, División 1 en el piso",
+            "Clasificado solo en el techo"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Los garajes de estacionamiento y almacenamiento no tienen que estar clasificados — la clasificación empieza cuando empieza el trabajo de reparación.",
+          "nec_ref": "511.3(A)"
+        },
+        {
+          "question": "En un taller de reparación mayor con ventilación mecánica de cuatro cambios de aire por hora, el área del piso es:",
+          "choices": [
+            "Clase I, División 2 hasta 18 in.",
+            "Clase I, División 1",
+            "Sin clasificar",
+            "Clase I, División 2 hasta 12 ft"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La banda del piso de División 2 es la respuesta sin ventilación. Con la ventilación que especifica 511.3(C)(1), el área del piso no está clasificada.",
+          "nec_ref": "511.3(C)(1)"
+        },
+        {
+          "question": "Una fosa de lubricación en un taller de reparación mayor, sin ventilación, se clasifica:",
+          "choices": [
+            "Clase I, División 2",
+            "Sin clasificar",
+            "Clase I, División 1 hasta el nivel del piso",
+            "Clase II, División 1"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Una fosa sin ventilación es División 1 hasta el nivel del piso. La ventilación de seis cambios de aire por hora es lo que la lleva a División 2.",
+          "nec_ref": "511.3(C)(3)"
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios del NEC 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "511.2",
+        "511.3(A)",
+        "511.3(B)",
+        "511.3(C)",
+        "511.3(D)",
+        "Table 514.3(B)(1)",
+        "511.4"
+      ],
+      "uncertain": [
+        "Una versión anterior de esta página establecía la banda del piso de 18 in. como una regla simple de División 2, sin condiciones. Esa es solo la respuesta sin ventilación — la clasificación depende de la ventilación que especifica la tabla, así que la declaración incondicional se ha eliminado.",
+        "Las respuestas de piso, fosa y techo de esta página siguen resúmenes publicados de 511.3. Las celdas exactas de las Tablas impresas 511.3(C) y 511.3(D) no se han verificado contra el NEC 2020 impreso — confirme en papel la celda de su caso exacto antes de confiar en ella."
+      ],
+      "rich_sources": [
+        {
+          "claim": "Definiciones de taller de reparación mayor y menor; en un taller de reparación mayor el área del piso no está clasificada con ventilación mecánica de un mínimo de cuatro cambios de aire por hora y es Clase I, División 2 hasta 18 in. sobre el piso sin ella; la banda dentro de 18 in. del techo está clasificada para combustibles gaseosos más ligeros que el aire sin ventilación.",
+          "source": "Mike Holt, Illustrated Guide to Understanding the NEC — Article 511, Commercial Garages (sample)",
+          "url": "https://mikeholt.com/instructor2/img/product/pdf/14UND2-1251-sample.pdf?srsltid=AU7gw4Xtc2KwGWj4Fj6ybL29t_E4Uk4HvmaO2apWSLsz9FltGTT_4mcl"
+        },
+        {
+          "claim": "Una fosa en un cuarto de lubricación o de servicio es Clase I, División 2 con ventilación de un mínimo de seis cambios de aire por hora y Clase I, División 1 hasta el nivel del piso sin ventilación; el escape en el techo de al menos 1 cfm/pie cuadrado tomado dentro de 18 in. del punto más alto deja el área del techo sin clasificar; las áreas del piso de reparación menor no están clasificadas, excepto las fosas.",
+          "source": "Mike Holt, Commercial Garages (Article 511.3)",
+          "url": "https://www.mikeholt.com:443/newsletters.php?action=reply&inResponseTo=14788&letterID=860"
+        },
+        {
+          "claim": "Cualquier fosa o depresión bajo el nivel del piso es Clase I, División 1 hasta el nivel del piso, o División 2 con ventilación adecuada; un piso de reparación mayor ventilado no está clasificado.",
+          "source": "ExamFinch, AK Electrician study guide — Article 511, Commercial Garages (2020 NEC)",
+          "url": "https://examfinch.com/study-guides/ak-electrician/ch11/ch11-sec04?exam=ak-electrician"
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-511.3-bay-section.svg",
+          "alt": "Sección de una bahía de taller de reparación mayor que muestra la banda del techo de 18 pulgadas para combustibles más ligeros que el aire, la banda del piso de 18 pulgadas y una fosa bajo el nivel del piso, con una leyenda que da la clasificación de cada zona con y sin la ventilación que especifica 511.3.",
+          "caption": "Una bahía de reparación mayor en sección — cada respuesta depende de la ventilación.",
+          "w": 900,
+          "h": 1540
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C5-511.4",
@@ -2585,8 +2937,8 @@
       "article": "514",
       "section": "514.11",
       "title": "Medio de desconexión de emergencia en el despacho de combustible",
-      "plain_explanation": "Las áreas de despacho de combustible necesitan medios de desconexión eléctrica de emergencia claramente identificados — el control al que recurre un encargado de la estación o un bombero cuando el combustible fluye donde no debe. Al operarse, el medio de desconexión debe abrir simultáneamente todos los conductores de los circuitos involucrados, incluido el conductor puesto a tierra (neutro), cortando la energía a los dispositivos de despacho, a las bombas remotas que los sirven, a los circuitos asociados de energía, control y señal, y al demás equipo eléctrico en el área clasificada alrededor de los dispensadores. El restablecimiento después de un apagado de emergencia requiere intervención manual, de la manera que apruebe la AHJ. 514.11(A) también fija dónde se ubica el medio de desconexión: un lugar aprobado a no menos de 20 ft y no más de 100 ft de los dispositivos de despacho de combustible a los que sirve, y donde se proporciona más de un medio de desconexión, todos están interconectados. Su ubicación, su identificación y los circuitos que realmente corta son puntos de inspección, no detalles que suponer.",
-      "on_the_job": "Durante una revisión de despacho, opere el medio de desconexión de emergencia y compruebe que cada circuito de dispensador al que sirve está sin energía, luego restablezca según las instrucciones del equipo. Ponga su ubicación en el registro de la obra que reciben tanto el equipo como el propietario.",
+      "plain_explanation": "Las áreas de despacho de combustible necesitan medios de desconexión eléctrica de emergencia claramente identificados — el control al que recurre un encargado de la estación o un bombero cuando el combustible fluye donde no debe. Al operarse, el medio de desconexión debe abrir simultáneamente todos los conductores de los circuitos involucrados, incluido el conductor puesto a tierra (neutro). Una sola operación corta la energía a:\n• Los dispositivos de despacho\n• Las bombas remotas que los sirven\n• Los circuitos asociados de energía, control y señal\n• El demás equipo eléctrico en el área clasificada alrededor de los dispensadores\n\n514.11(A) también fija dónde se ubica el medio de desconexión: un lugar aprobado a no menos de 20 ft y no más de 100 ft de los dispositivos de despacho de combustible a los que sirve, y donde se proporciona más de un medio de desconexión, todos están interconectados. El restablecimiento después de un apagado de emergencia requiere intervención manual, de la manera que apruebe la AHJ. Su ubicación, su identificación y los circuitos que realmente corta son puntos de inspección, no detalles que suponer.",
+      "on_the_job": "En un cambio de bombas de una tienda de conveniencia en Florida Central, el equipo de Sharma instala el medio de desconexión de emergencia en la pared de la tienda a 40 ft del dispensador más cercano — dentro de la ventana de 20 ft a 100 ft — y lo interconecta con el segundo desconectivo en el canopy. Durante una revisión de despacho, opere el medio de desconexión de emergencia y compruebe que cada circuito de dispensador al que sirve está sin energía, luego restablezca según las instrucciones del equipo. Ponga su ubicación en el registro de la obra que reciben tanto el equipo como el propietario.",
       "sharma_note": "Adoptado después de la conciliación con la investigación de ChatGPT que Sanjay proporcionó el 2026-11-11; verificado el 2026-11-18 contra fuentes del NEC 2020 (514.11(A) está extraído de NFPA 30A 6.7): la ubicación de 20 ft a 100 ft y la apertura simultánea de todos los conductores de circuito, incluido el conductor puesto a tierra, son como indica esta página.",
       "figure_idea": "",
       "related_ids": [
@@ -2597,7 +2949,125 @@
       "verified": true,
       "prev_id": "C5-514.3",
       "next_id": "C5-ART-515",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "El combustible fluye por galones a pocos pies de fuentes de ignición y autos en movimiento. Cuando una manguera falla o un conductor arranca con la boquilla aún en el tanque, alguien tiene segundos para cortar todo circuito que pueda hacer chispas o seguir bombeando. Abrir también el conductor puesto a tierra importa: si queda conectado, la corriente aún puede buscar un camino y hacer arco. Un desconectivo que solo detiene el dispensador deja la bomba remota empujando combustible hacia la fuga.",
+      "inspection_fails": [
+        "El medio de desconexión de emergencia abre solo los conductores no puestos a tierra — el conductor puesto a tierra (neutro) queda conectado.",
+        "Desconectivo ubicado a menos de 20 ft, o a más de 100 ft, de los dispositivos de despacho a los que sirve.",
+        "Dos medios de desconexión proporcionados pero no interconectados.",
+        "El desconectivo corta los dispensadores pero deja vivas las bombas remotas o los circuitos de control.",
+        "Desconectivo no claramente identificado, o se restablece automáticamente después de un apagado de emergencia."
+      ],
+      "exam_trap": "La trampa es el desconectivo que corta la energía del dispensador pero deja conectado el conductor puesto a tierra (neutro) — o uno montado justo en la isla «para que quede a la mano». 514.11(A) quiere todos los conductores de circuito abiertos a la vez, neutro incluido, desde un lugar aprobado a 20 ft a 100 ft, con restablecimiento manual. Cerca y parcial, ambos fallan.",
+      "tables": [
+        {
+          "caption": "La regla del desconectivo en una vista (514.11)",
+          "headers": [
+            "Punto",
+            "Requisito"
+          ],
+          "rows": [
+            [
+              "Ubicación",
+              "No menos de 20 ft, no más de 100 ft de los dispensadores a los que sirve"
+            ],
+            [
+              "Conductores abiertos",
+              "Todos los conductores de circuito a la vez, incluido el puesto a tierra (neutro)"
+            ],
+            [
+              "Más de un desconectivo",
+              "Todos interconectados"
+            ],
+            [
+              "Restablecimiento tras un apagado",
+              "Intervención manual, de la manera que apruebe la AHJ"
+            ]
+          ]
+        },
+        {
+          "caption": "Lo que una sola operación debe cortar",
+          "headers": [
+            "Circuito",
+            "Cortado"
+          ],
+          "rows": [
+            [
+              "Dispositivos de despacho",
+              "Sí"
+            ],
+            [
+              "Bombas remotas que los sirven",
+              "Sí"
+            ],
+            [
+              "Circuitos de energía, control y señal",
+              "Sí"
+            ],
+            [
+              "Demás equipo en el área clasificada",
+              "Sí"
+            ]
+          ],
+          "note": "Si alguno de estos queda vivo, el desconectivo no hace su trabajo."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-514.11-disconnect-window.svg",
+          "alt": "Vista en planta de un sitio de despacho de combustible: dos dispensadores en una isla dentro de un área clasificada con línea discontinua roja, un tanque subterráneo con bomba remota, y el medio de desconexión de emergencia en la pared de la tienda, con la ventana de dimensión de 20 ft mínimo a 100 ft máximo desde los dispensadores.",
+          "caption": "El desconectivo se ubica de 20 ft a 100 ft y corta todo circuito a la vez.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "El medio de desconexión de emergencia opera. ¿Qué debe abrir?",
+          "choices": [
+            "Solo los conductores no puestos a tierra",
+            "Todos los conductores de circuito excepto el neutro",
+            "Todos los conductores de circuito, incluido el conductor puesto a tierra",
+            "Solo el circuito de energía del dispensador"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Debe abrir simultáneamente todos los conductores de los circuitos involucrados, incluido el conductor puesto a tierra (neutro).",
+          "nec_ref": "514.11"
+        },
+        {
+          "question": "¿Dónde puede ubicarse el medio de desconexión de emergencia?",
+          "choices": [
+            "Justo en el dispensador al que sirve",
+            "A no menos de 20 ft y no más de 100 ft de los dispositivos de despacho",
+            "En cualquier lugar dentro de la tienda",
+            "A menos de 10 ft de las bombas remotas"
+          ],
+          "answer_index": 1,
+          "explain_plain": "514.11(A) fija un lugar aprobado en la ventana de 20 ft a 100 ft desde los dispositivos de despacho a los que sirve.",
+          "nec_ref": "514.11(A)"
+        },
+        {
+          "question": "Después de un apagado de emergencia, ¿cómo vuelve el sistema?",
+          "choices": [
+            "Automáticamente al soltar el botón",
+            "Desde una aplicación de teléfono",
+            "Por intervención manual, de la manera que apruebe la AHJ",
+            "Nunca puede restablecerse"
+          ],
+          "answer_index": 2,
+          "explain_plain": "El restablecimiento requiere intervención manual, de la manera que apruebe la AHJ — nunca un restablecimiento automático.",
+          "nec_ref": "514.11"
+        }
+      ],
+      "code_refs": [
+        "514.11(A)",
+        "514.11",
+        "514.3"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-ART-515",
@@ -3201,8 +3671,8 @@
       "article": "517",
       "section": "517.13",
       "title": "Puesta a tierra redundante en espacios de atención al paciente",
-      "plain_explanation": "Los circuitos derivados que sirven a espacios de atención al paciente necesitan dos trayectorias independientes de retorno de falla a tierra que trabajen juntas. El método de cableado mismo — una canalización metálica, o un cable con armadura o cubierta metálica que califique como trayectoria de puesta a tierra — proporciona una trayectoria, y un conductor de puesta a tierra de equipo de cobre aislado instalado con el circuito proporciona la segunda. Los terminales de puesta a tierra de los tomacorrientes y el metal expuesto del equipo fijo en esos espacios se conectan a ese conductor de cobre aislado, dimensionado desde la Tabla 250.122.\n\nLos métodos que pueden suministrar la trayectoria metálica de tierra son los métodos de cableado metálicos — canalización metálica rígida, canalización metálica intermedia o EMT, o cable Tipo MI, MC o AC cuya armadura o conjunto de cubierta en sí califique como conductor de puesta a tierra de equipo — en cada caso con accesorios listados. El conductor de cobre aislado se pasa en todos los casos: la trayectoria metálica es la segunda trayectoria, nunca un sustituto de ella, y un cable cuya armadura no califica como trayectoria de puesta a tierra no se vuelve conforme por parecerse al que sí califica.\n\nCAMBIO NEC 2023:\n• 517.13: La Sección 517.13 se revisó para mayor claridad reubicando la antigua Excepción N.º 2 para que siga al párrafo inicial y declarando el cableado que \"sirve\" a los espacios de atención al paciente.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "En una instalación en bruto de atención al paciente, no hay cable NM ni confiar solo en la canalización — pase el conductor de puesta a tierra de cobre aislado en cada circuito derivado. Verifique que el cable o la canalización elegida realmente califique como trayectoria de puesta a tierra antes de ordenarlo.",
+      "plain_explanation": "Los circuitos derivados que sirven a espacios de atención al paciente necesitan dos trayectorias independientes de retorno de falla a tierra que trabajen juntas. El método de cableado mismo — una canalización metálica, o un cable con armadura o cubierta metálica que califique como trayectoria de puesta a tierra — proporciona una trayectoria, y un conductor de puesta a tierra de equipo de cobre aislado instalado con el circuito proporciona la segunda. Los terminales de puesta a tierra de los tomacorrientes y el metal expuesto del equipo fijo en esos espacios se conectan a ese conductor de cobre aislado, dimensionado desde la Tabla 250.122.\n\nLos métodos que pueden suministrar la trayectoria metálica de tierra son los métodos de cableado metálicos — canalización metálica rígida, canalización metálica intermedia o EMT, o cable Tipo MI, MC o AC cuya armadura o conjunto de cubierta en sí califique como conductor de puesta a tierra de equipo — en cada caso con accesorios listados. El conductor de cobre aislado se pasa en todos los casos: la trayectoria metálica es la segunda trayectoria, nunca un sustituto de ella, y un cable cuya armadura no califica como trayectoria de puesta a tierra no se vuelve conforme por parecerse al que sí califica.",
+      "on_the_job": "En la adecuación de una clínica en Orlando, cada circuito derivado que sirve a los cuartos de examen se instala en EMT con un conductor de puesta a tierra de equipo de cobre aislado de 12 AWG pasado — el tamaño de la Tabla 250.122 para los circuitos de 20 A que Sharma instala como mínimo comercial (S-01). Los tomacorrientes son de grado hospitalario, y sus terminales de puesta a tierra se conectan al conductor aislado, no a la caja. En el acabado, el equipo prueba la trayectoria de tierra de cada tomacorriente antes de entregar los cuartos.",
       "sharma_note": "",
       "figure_idea": "Dibujo unifilar de un circuito derivado de atención al paciente que muestra dos trayectorias de tierra en paralelo: canalización metálica y conductor de cobre aislado.",
       "related_ids": [
@@ -3224,7 +3694,93 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Un paciente en una cama no puede levantarse y alejarse de una falla, y el equipo médico se conecta directamente al paciente. Una trayectoria de tierra puede dañarse, corroerse o quedar floja en un accesorio sin que nadie lo sepa. Dos trayectorias independientes significan que una sola falla oculta todavía deja a la corriente de falla un camino de regreso a la fuente, así que el interruptor dispara en lugar de que el marco de la cama se energice.",
+      "exam_trap": "La trampa es 'el EMT es la tierra, así que el cable verde es opcional.' 517.13 exige ambas trayectorias en cada circuito derivado que sirve a un espacio de atención al paciente — la trayectoria metálica nunca sustituye al conductor de cobre aislado. La trampa inversa también falla: un cable cuya armadura no califica como trayectoria de puesta a tierra no cuenta, por mucho que se parezca a uno que sí califica.",
+      "tables": [
+        {
+          "caption": "Las dos trayectorias de tierra — 517.13",
+          "headers": [
+            "Trayectoria",
+            "Qué la proporciona",
+            "El detalle"
+          ],
+          "rows": [
+            [
+              "1 — la trayectoria metálica",
+              "RMC, IMC o EMT; cable Tipo MI, MC o AC cuya armadura o cubierta califique como conductor de puesta a tierra de equipo, con accesorios listados",
+              "La armadura o cubierta que no califica no cuenta, aunque lo parezca"
+            ],
+            [
+              "2 — el conductor aislado",
+              "Conductor de puesta a tierra de equipo de cobre aislado instalado con el circuito, dimensionado desde la Tabla 250.122",
+              "Se pasa en cada circuito derivado — la trayectoria metálica nunca lo sustituye"
+            ]
+          ]
+        }
+      ],
+      "inspection_fails": [
+        "Cable NM instalado en bruto en un espacio de atención al paciente — sin trayectoria metálica de tierra, y el método no está en la lista de 517.13.",
+        "Circuito derivado en EMT sin el conductor de puesta a tierra de equipo de cobre aislado pasado — la canalización sola es solo una de las dos trayectorias requeridas.",
+        "Terminal de puesta a tierra del tomacorriente conectado a la caja metálica en lugar del conductor de cobre aislado en un espacio de atención al paciente.",
+        "Cable Tipo MC cuya armadura no califica como conductor de puesta a tierra de equipo instalado como la trayectoria metálica."
+      ],
+      "page_quiz": [
+        {
+          "question": "Un circuito derivado que sirve a un espacio de atención al paciente se instala en EMT. ¿Qué más exige 517.13?",
+          "choices": [
+            "Nada — el EMT es la tierra",
+            "Un conductor de puesta a tierra de equipo de cobre aislado instalado con el circuito",
+            "Una segunda corrida de EMT junto a la primera",
+            "Protección GFCI en el circuito"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Ambas trayectorias se exigen en cada circuito derivado: la canalización metálica es una trayectoria, y el conductor de cobre aislado es la segunda.",
+          "nec_ref": "517.13"
+        },
+        {
+          "question": "El conductor de puesta a tierra de equipo de cobre aislado se dimensiona desde:",
+          "choices": [
+            "La Tabla 250.122",
+            "Las tablas de llenado de canalizaciones",
+            "El tamaño del conductor de acometida",
+            "La Tabla 250.66"
+          ],
+          "answer_index": 0,
+          "explain_plain": "Los conductores de puesta a tierra de equipo se dimensionan desde la Tabla 250.122, según la capacidad del dispositivo de sobrecorriente antes del circuito.",
+          "nec_ref": "Table 250.122"
+        },
+        {
+          "question": "Un cable Tipo MC cuya armadura NO califica como conductor de puesta a tierra de equipo se instala en un espacio de atención al paciente. Como trayectoria metálica de tierra:",
+          "choices": [
+            "Cuenta de todos modos",
+            "Cuenta si se usan accesorios listados",
+            "No cuenta",
+            "Cuenta solo para tomacorrientes"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La trayectoria metálica tiene que ser un método que califique como conductor de puesta a tierra de equipo. Parecerse a uno no basta.",
+          "nec_ref": "517.13"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 517.13: La Sección 517.13 se revisó para mayor claridad reubicando la antigua Excepción N.º 2 para que siga al párrafo inicial y declarando el cableado que \"sirve\" a los espacios de atención al paciente.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "517.13",
+        "250.118",
+        "Table 250.122"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "figures": [
+        {
+          "src": "fig/c5/C5-517.13-two-paths.svg",
+          "alt": "Dibujo unifilar de un circuito derivado de atención al paciente que va de un tablero por una canalización metálica hasta un tomacorriente de grado hospitalario, mostrando las dos trayectorias de tierra independientes: la canalización metálica misma y el conductor de puesta a tierra de equipo de cobre aislado pasado dentro de ella.",
+          "caption": "Dos trayectorias de tierra independientes en cada circuito derivado de atención al paciente.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C5-517.16",
@@ -3464,7 +4020,7 @@
       "section": "517.31",
       "title": "Las ramas del sistema eléctrico esencial de un hospital (517.31–517.35)",
       "plain_explanation": "Donde una instalación de atención médica tiene un sistema eléctrico esencial, 517.31 ordena sus cargas en ramas (seguridad de vida, crítica y de equipo), con el contenido de las ramas en 517.33, 517.34 y 517.35 (confirme la subnumeración en la Parte III impresa de 2020). En el NEC 2020, 517.19 es la regla de ubicación de cama de paciente de Categoría 1 (cuidados críticos) en la Parte II. La rama de seguridad de vida (life safety) lleva las cargas que sacan a la gente y mantienen segura la salida — iluminación de salidas y letreros de salida, alarma de incendio y comunicaciones de emergencia. La rama crítica lleva las cargas de cuidado al paciente que la instalación selecciona — iluminación de tarea y receptáculos en ubicaciones de cama, llamada de enfermera y sistemas similares que no deben morir con la energía normal. La rama de equipos lleva las cargas mecánicas e instalaciones pesadas que apoyan el cuidado pero toleran una transferencia posterior. En qué rama cae un circuito es una decisión de diseño en los planos de la instalación; el trabajo de campo es conectar cada circuito al panel que nombra su etiqueta de rama.",
-      "on_the_job": "En un trabajo de inquilino de clínica o centro de cirugía, los horarios de paneles llevan etiquetas de rama (LS, CR, EQ o los equivalentes del diseñador). Conecte los circuitos exactamente como están etiquetados y reporte cualquier cambio de campo — mover un receptáculo de crítico a normal es un cambio de diseño, no un atajo.",
+      "on_the_job": "En un trabajo de inquilino de clínica o centro de cirugía — Sharma hace estas adecuaciones alrededor de Orlando — los horarios de paneles llevan etiquetas de rama: LS, CR, EQ o los equivalentes del diseñador. Conecte cada circuito exactamente donde lo pone su etiqueta. Si un receptáculo en una ubicación de cama aparece en el panel crítico, se conecta al panel crítico, aunque el panel normal esté más cerca y tenga espacios libres. Reporte cualquier cambio de campo al diseñador: mover un receptáculo de crítico a normal es un cambio de diseño, no un atajo.",
       "sharma_note": "",
       "figure_idea": "Diagrama de tres carriles: generador a interruptores de transferencia a carriles de seguridad de vida / crítico / equipos con cargas de ejemplo en cada uno.",
       "related_ids": [
@@ -3475,7 +4031,103 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C5-517.18",
-      "next_id": "C5-517.30"
+      "next_id": "C5-517.30",
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Cuando se corta la energía normal, el generador y el equipo de transferencia no pueden cargar todo el edificio a la vez — y no deberían intentarlo. Ordenar las cargas en ramas con anticipación significa que las cargas que sacan a la gente y mantienen vivos a los pacientes se transfieren primero, y las cargas mecánicas pesadas esperan. Conectar un circuito en la rama equivocada hace que un receptáculo de cama se quede sin energía con la normal, o que el generador se cargue con cargas que debían esperar.",
+      "inspection_fails": [
+        "Receptáculos de ubicación de cama conectados al panel normal en lugar del panel de la rama crítica nombrado en el horario.",
+        "Letreros de salida o circuitos de alarma de incendio alimentados desde un panel que no es la rama de seguridad de vida.",
+        "Etiquetas de rama en el horario de paneles cambiadas en campo sin planos revisados.",
+        "Cargas mecánicas de la rama de equipos conectadas al panel crítico, desplazando las cargas que deben transferirse."
+      ],
+      "exam_trap": "La trampa es suponer que las cargas más grandes se transfieren primero, así que la rama de equipos debe ser la más importante. Es al revés: la rama de equipos lleva las cargas mecánicas pesadas precisamente porque pueden tolerar una transferencia posterior. La seguridad de vida y la crítica llevan las cargas que no pueden esperar — la iluminación de salida y los circuitos de cuidado al paciente que la instalación seleccionó.",
+      "tables": [
+        {
+          "caption": "Las tres ramas del sistema eléctrico esencial",
+          "headers": [
+            "Rama",
+            "Lleva",
+            "Ejemplos"
+          ],
+          "rows": [
+            [
+              "Seguridad de vida",
+              "Cargas que sacan a la gente",
+              "Iluminación de salidas, letreros de salida, alarma de incendio, comunicaciones de emergencia"
+            ],
+            [
+              "Crítica",
+              "Cargas de cuidado al paciente que la instalación selecciona",
+              "Iluminación de tarea y receptáculos en ubicaciones de cama, llamada de enfermera"
+            ],
+            [
+              "Equipos",
+              "Cargas pesadas que apoyan el cuidado",
+              "Cargas mecánicas y de la instalación que toleran una transferencia posterior"
+            ]
+          ],
+          "note": "El contenido de las ramas se cubre en 517.33, 517.34 y 517.35 — confirme la subnumeración en la Parte III impresa de 2020."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-517.19-three-branches.svg",
+          "alt": "Diagrama de flujo del sistema eléctrico esencial de un hospital: la energía normal y un generador alimentan el equipo de transferencia, que se divide en los carriles de seguridad de vida, crítica y equipos, cada uno con sus cargas de ejemplo.",
+          "caption": "Un sistema, tres ramas — conecte cada circuito donde lo pone su etiqueta.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Qué rama lleva los letreros de salida y la alarma de incendio?",
+          "choices": [
+            "Crítica",
+            "Equipos",
+            "Seguridad de vida",
+            "Normal"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La rama de seguridad de vida lleva las cargas que sacan a la gente y mantienen segura la salida: iluminación y letreros de salida, alarma de incendio y comunicaciones de emergencia.",
+          "nec_ref": "517.33"
+        },
+        {
+          "question": "¿Quién decide en qué rama se conecta un circuito?",
+          "choices": [
+            "El instalador, por el recorrido más corto",
+            "El diseño de la instalación, mostrado en los planos",
+            "El inspector en la inspección final",
+            "El proveedor del generador"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La asignación de rama es una decisión de diseño en los planos de la instalación. El trabajo de campo es conectar cada circuito al panel que nombra su etiqueta de rama.",
+          "nec_ref": "517.31"
+        },
+        {
+          "question": "La rama de equipos es el lugar correcto ¿para qué cargas?",
+          "choices": [
+            "Letreros de salida",
+            "Llamada de enfermera",
+            "Cargas mecánicas pesadas que pueden transferirse después",
+            "Receptáculos de ubicación de cama"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La rama de equipos lleva cargas mecánicas y de la instalación pesadas que apoyan el cuidado pero toleran una transferencia posterior.",
+          "nec_ref": "517.35"
+        }
+      ],
+      "code_refs": [
+        "517.31",
+        "517.33",
+        "517.34",
+        "517.35",
+        "517.19"
+      ],
+      "uncertain": [
+        "Las secciones de contenido de las ramas se citan en esta página como 517.33, 517.34 y 517.35 — confirme la subnumeración exacta contra la Parte III impresa de 2020 antes de citar cualquiera de ellas de forma más específica."
+      ],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-517.30",
@@ -3991,8 +4643,8 @@
       "article": "520",
       "section": "520",
       "title": "Teatros, áreas de público y espacios de espectáculos",
-      "plain_explanation": "El Artículo 520 saca a los teatros, las áreas de público de estudios de cine y televisión y las áreas de espectáculos del Artículo 518 y les da sus propias reglas, construidas alrededor de la iluminación de escenario y de sala, los tableros de control y el equipo portátil de escenario. Los métodos de cableado repiten las reglas de reunión, con disposiciones adicionales para el equipo portátil y de aspecto temporal que en realidad es permanente en un teatro. Sharma encontraría esto en un paquete de auditorio escolar o de escenario de iglesia, no en trabajo ordinario de locales.\n\nPara identificar alcance: los tableros de escenario fijos, los tableros portátiles usados en escenario y los cables y conectores flexibles que alimentan el equipo portátil de escenario son el centro de gravedad del artículo, y sus reglas de método de cableado son más estrictas que el trabajo comercial ordinario porque el público se sienta en la oscuridad frente a equipo energizado. Toda cotización de Sharma que toque un escenario debe llevar el artículo como alcance nombrado con dibujos de ingeniería — nunca es un añadido de «unos cuantos dimmers más».",
-      "on_the_job": "Trate cualquier alcance de escenario, atenuación (dimming) o iluminación de espectáculos como trabajo de ingeniería y cotice solo planos detallados. El cable y los conectores portátiles de escenario siguen este artículo, no las reglas temporales de obra.",
+      "plain_explanation": "El Artículo 520 saca a los teatros, las áreas de público de estudios de cine y televisión y las áreas de espectáculos del Artículo 518 y les da sus propias reglas, construidas alrededor de la iluminación de escenario y de sala, los tableros de control y el equipo portátil de escenario. Los métodos de cableado repiten las reglas de reunión, con disposiciones adicionales para el equipo portátil y de aspecto temporal que en realidad es permanente en un teatro. Sharma encontraría esto en un paquete de auditorio escolar o de escenario de iglesia, no en trabajo ordinario de locales.\n\nPara identificar el alcance, el centro de gravedad del artículo es:\n• Tableros de escenario fijos\n• Tableros portátiles usados en escenario\n• Cables y conectores flexibles que alimentan el equipo portátil de escenario\n• La iluminación de escenario y de sala que controlan esos tableros\n\nSus reglas de método de cableado son más estrictas que el trabajo comercial ordinario porque el público se sienta en la oscuridad frente a equipo energizado. Toda cotización de Sharma que toque un escenario debe llevar el artículo como alcance nombrado con dibujos de ingeniería — nunca es un añadido de «unos cuantos dimmers más».",
+      "on_the_job": "Un paquete de auditorio escolar en Florida Central llega a la lista de cotizaciones: un rack de dimmers, luces de borde (border lights) y un tablero portátil que el equipo de teatro escolar despliega para cada función. Trate cualquier alcance de escenario, atenuación (dimming) o iluminación de espectáculos como trabajo de ingeniería y cotice solo planos detallados, con el Artículo 520 como alcance nombrado y los circuitos ramales al estándar comercial de Sharma de 20 A mínimo. El cable y los conectores portátiles de escenario siguen este artículo, no las reglas temporales de obra. Si los dibujos no muestran los tableros, el alcance no está listo para cotizarse.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -4002,7 +4654,115 @@
       "verified": true,
       "prev_id": "C5-518.6",
       "next_id": "C5-ART-522",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "El público se sienta en la oscuridad, en filas fijas, frente a equipo energizado que un equipo distinto conecta, mueve y vuelve a montar para cada función. Un cable dañado o una falla en el escenario no es un problema de taller — es un problema de incendio y pánico en una sala llena y a oscuras. Por eso el cableado de teatros se rige por métodos más estrictos que el trabajo comercial ordinario, y por eso el equipo portátil de escenario se trata como trabajo permanente.",
+      "inspection_fails": [
+        "Equipo portátil de escenario alimentado con métodos de cableado temporal de obra en vez de las reglas de equipo portátil del Artículo 520.",
+        "Tablero de escenario e iluminación de escenario agregados en campo sin dibujos de ingeniería en archivo.",
+        "Cable portátil de escenario tendido donde el tránsito del personal y del público lo daña, sin protección.",
+        "Teatro cableado con métodos comerciales ordinarios donde el Artículo 520 exige los métodos más estrictos de nivel reunión."
+      ],
+      "exam_trap": "La trampa es tratar el tablero portátil y el cable de escenario como cableado temporal del Artículo 590 porque se conectan y se retiran. En un teatro ese equipo es trabajo permanente bajo el Artículo 520 — y el teatro en sí tampoco es un trabajo del Artículo 518. El Artículo 520 saca a los teatros, las áreas de público de estudios y las áreas de espectáculos del 518 a propósito.",
+      "tables": [
+        {
+          "caption": "Lo que cubre el Artículo 520",
+          "headers": [
+            "Parte del trabajo",
+            "Lo que rige el artículo"
+          ],
+          "rows": [
+            [
+              "Tableros de escenario fijos",
+              "Los tableros permanentes que controlan la iluminación de escenario y de sala"
+            ],
+            [
+              "Tableros portátiles",
+              "Tableros usados en escenario para las funciones"
+            ],
+            [
+              "Equipo portátil de escenario",
+              "Cables y conectores flexibles que lo alimentan"
+            ],
+            [
+              "Iluminación de escenario y de sala",
+              "Los circuitos que alimentan los tableros"
+            ]
+          ]
+        },
+        {
+          "caption": "¿518 o 520?",
+          "headers": [
+            "Espacio",
+            "Artículo"
+          ],
+          "rows": [
+            [
+              "Teatro, área de público de estudio, área de espectáculos",
+              "520"
+            ],
+            [
+              "Otra ocupación de reunión",
+              "518"
+            ]
+          ],
+          "note": "El Artículo 520 saca a los teatros y espacios de espectáculos del Artículo 518 y les da sus propias reglas."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-520-theater-plan.svg",
+          "alt": "Vista en planta de un teatro: escenario con luces de borde, un tablero de escenario fijo y un tablero portátil, un rack de dimmers, y la sala de público con asientos y luces de sala, con marcadores numerados de lo que rige el Artículo 520.",
+          "caption": "Un teatro, un artículo: tableros de escenario, equipo portátil e iluminación de sala.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un paquete de escenario de auditorio escolar llega a su lista de cotizaciones. ¿Qué artículo rige los tableros de escenario y el equipo portátil de escenario?",
+          "choices": [
+            "Artículo 518 — ocupaciones de reunión",
+            "Artículo 520 — teatros y espacios de espectáculos",
+            "Artículo 590 — instalaciones temporales",
+            "Artículo 410 — solo luminarias"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El Artículo 520 saca a los teatros, las áreas de público de estudios y las áreas de espectáculos del Artículo 518 y les da sus propias reglas.",
+          "nec_ref": "Article 520"
+        },
+        {
+          "question": "El tablero portátil del equipo de teatro se conecta y se retira después de cada función. ¿Cómo se trata?",
+          "choices": [
+            "Como cableado temporal bajo el Artículo 590",
+            "Como trabajo permanente bajo el Artículo 520",
+            "Está exento porque es portátil",
+            "Solo aplican las instrucciones del fabricante"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El equipo portátil de escenario en un teatro parece temporal pero es trabajo permanente, y el Artículo 520 tiene disposiciones adicionales para él.",
+          "nec_ref": "Article 520"
+        },
+        {
+          "question": "¿Cómo debe cotizarse un alcance de iluminación de escenario?",
+          "choices": [
+            "Como un añadido pequeño de unos cuantos dimmers más",
+            "Solo por el tamaño de la acometida",
+            "Como un alcance nombrado del Artículo 520 desde dibujos de ingeniería",
+            "Con métodos residenciales para ahorrar costo"
+          ],
+          "answer_index": 2,
+          "explain_plain": "El trabajo de escenario es trabajo de ingeniería: el artículo es un alcance nombrado y el precio sale de planos detallados, nunca de un añadido de dimmers.",
+          "nec_ref": "Article 520"
+        }
+      ],
+      "code_refs": [
+        "Article 520",
+        "Article 518"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-ART-522",
@@ -4646,7 +5406,7 @@
       "section": "545",
       "title": "Edificios manufacturados y estructuras reubicables",
       "plain_explanation": "El Artículo 545 cubre edificios construidos en una fábrica en secciones o paneles y ensamblados en el sitio, además de estructuras reubicables como aulas portátiles y oficinas de obra. Las preguntas eléctricas son cómo se conectan entre sí las secciones hechas en fábrica, cómo el edificio terminado se conecta a su acometida, y qué partes se inspeccionan en la fábrica frente al sitio. El mercado de aulas portátiles y oficinas modulares de Florida hace de este un artículo vivo para Sharma aunque esta primera pasada se mantenga en nivel introductorio.\n\nEn el sitio, el trabajo se concentra en dos uniones: la interconexión entre secciones construidas en fábrica, hecha con el sistema de conexión listado e instrucciones del fabricante, y la conexión del alimentador o servicio al edificio terminado, que sigue las reglas ordinarias de servicio y alimentadores una vez el edificio está instalado. Qué unión pertenece a la inspección de la fábrica y cuál a la AHJ local lo decide el papeleo del programa modular estatal — consígalo antes de la instalación en bruto, porque un empalme de campo no listado entre secciones es el señalamiento que este artículo existe para evitar.",
-      "on_the_job": "En un trabajo modular o de aula portátil, obtenga los detalles de conexión del fabricante y la documentación de la insignia modular estatal antes de cotizar la conexión en el sitio. Esta página está verificada solo a nivel de artículo — en esta pasada no se dan números de subsección, a propósito.",
+      "on_the_job": "En un trabajo modular o de aula portátil — un mercado constante en Florida — obtenga los detalles de conexión del fabricante y la documentación de la insignia modular estatal antes de cotizar la conexión en el sitio. El precio cambia con la división: las secciones que llegan con la interconexión ya inspeccionada bajo el programa estatal le dejan a Sharma la conexión de acometida; las que no, no. Esta página está verificada solo a nivel de artículo — en esta pasada no se dan números de subsección, a propósito.",
       "sharma_note": "",
       "figure_idea": "En esta primera pasada intencionalmente no se dan páginas de subsecciones de 545. Mike Holt debe confirmar la lista de secciones de 2020 antes de que se agregue alguna.",
       "related_ids": [
@@ -4656,7 +5416,95 @@
       "verified": true,
       "prev_id": "C5-ART-540",
       "next_id": "C5-ART-547",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "La unión entre dos secciones construidas en fábrica queda escondida dentro de una pared terminada una vez el edificio está acabado. Si esa unión es un empalme de campo que nadie listó ni inspeccionó, puede fallar o hacer arco donde nadie puede verlo — y puede anular la insignia modular estatal del edificio. El artículo existe para que las conexiones se hagan con el sistema listado del fabricante, y el papeleo resuelva quién inspeccionó qué antes de que se cierren las paredes.",
+      "inspection_fails": [
+        "Empalme de campo no listado entre secciones construidas en fábrica en lugar del sistema de conexión listado del fabricante.",
+        "Conexión en el sitio instalada en bruto sin la documentación de la insignia modular estatal en el sitio, de modo que la división de inspección fábrica contra sitio nunca se resolvió.",
+        "Instrucciones de conexión del fabricante ausentes en el sitio durante la instalación en bruto.",
+        "Conexión de acometida o alimentador al edificio terminado no instalada según las reglas ordinarias de servicio y alimentadores una vez el edificio quedó instalado."
+      ],
+      "exam_trap": "La trampa es tratar la unión entre secciones como cualquier otro empalme — una caja de conexiones y conectores del camión. La interconexión tiene que hacerse con el sistema de conexión listado del fabricante, siguiendo sus instrucciones. Un empalme de campo no listado entre secciones es exactamente el señalamiento que este artículo existe para evitar.",
+      "tables": [
+        {
+          "caption": "Las dos uniones en un edificio manufacturado",
+          "headers": [
+            "Unión",
+            "Cómo se hace",
+            "Inspeccionada bajo"
+          ],
+          "rows": [
+            [
+              "Entre secciones construidas en fábrica",
+              "Sistema de conexión listado del fabricante y sus instrucciones",
+              "Documentación del programa modular estatal"
+            ],
+            [
+              "El edificio a su acometida o alimentador",
+              "Reglas ordinarias de servicio y alimentadores una vez el edificio está instalado",
+              "La AHJ local"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-545-two-joints.svg",
+          "alt": "Dos secciones de edificio construidas en fábrica unidas en el sitio, con un marcador dorado en la unión de interconexión listada entre las secciones y un segundo marcador en la conexión de acometida, además de un panel de inspección de fábrica contra sitio.",
+          "caption": "Dos uniones: la conexión listada entre secciones, y la conexión de acometida.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Cómo se interconectan eléctricamente las secciones construidas en fábrica?",
+          "choices": [
+            "Cualquier caja de conexiones y conectores listados",
+            "El sistema de conexión listado del fabricante, según sus instrucciones",
+            "Puentes de Romex entre secciones",
+            "Como prefiera el equipo de sitio"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La interconexión entre secciones se hace con el sistema de conexión listado del fabricante y sus instrucciones — un empalme de campo no listado es el señalamiento clásico.",
+          "nec_ref": "Article 545"
+        },
+        {
+          "question": "¿Qué decide si una unión se inspecciona en la fábrica o en el sitio?",
+          "choices": [
+            "El horario del equipo",
+            "La documentación del programa modular estatal",
+            "El tamaño del edificio",
+            "La carga de trabajo de la AHJ"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El programa modular estatal y su documentación de insignia deciden qué partes se inspeccionan en la fábrica y cuáles en el sitio — consígala antes de la instalación en bruto.",
+          "nec_ref": "Article 545"
+        },
+        {
+          "question": "Una vez instalado un edificio manufacturado, su conexión de acometida sigue ¿qué?",
+          "choices": [
+            "Solo el Artículo 545",
+            "Solo las instrucciones del fabricante",
+            "Las reglas ordinarias de servicio y alimentadores",
+            "Ninguna regla — ya se inspeccionó en la fábrica"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La conexión del alimentador o servicio al edificio terminado sigue las reglas ordinarias de servicio y alimentadores una vez el edificio está instalado.",
+          "nec_ref": "Article 545"
+        }
+      ],
+      "code_refs": [
+        "Article 545",
+        "Article 230",
+        "Article 225"
+      ],
+      "uncertain": [
+        "Esta página está verificada solo a nivel de artículo. No se dan números de subsección de 545 hasta que la lista de secciones de 2020 se confirme en el texto impreso."
+      ],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-ART-547",
@@ -5564,8 +6412,8 @@
       "article": "550",
       "section": "550.32",
       "title": "Equipo de acometida — a la vista y dentro de 30 ft de la casa",
-      "plain_explanation": "El equipo de acometida de casas móviles se ubica junto a la casa, nunca montado en ella ni sobre ella, a la vista desde la casa y a no más de 30 ft de su pared exterior. Si el equipo de acometida debe estar en otro lugar del predio, un medio de desconexión adecuado para usarse como equipo de acometida todavía tiene que estar a la vista y dentro de 30 ft de la pared, con puesta a tierra en ese medio de desconexión según 250.32. El equipo está clasificado a no menos de 100 amperios a 120/240 voltios y debe permitir que el alimentador se conecte por un método de cableado permanente. La altura de montaje también está fijada: la parte inferior del gabinete al menos a 2 ft por encima del suelo, y el medio de desconexión a no más de 6 ft 7 in. por encima del suelo o la plataforma. Una casa manufacturada sobre una cimentación permanente que cumple las condiciones de 550.32(B) es la excepción — su equipo de acometida puede instalarse en la casa o sobre ella.\n\nCAMBIO NEC 2023:\n• 550.32: El equipo de acometida de casas móviles ahora tiene que estar a la vista desde la casa, lo que significa visible y hasta 50 ft de distancia, en lugar de dentro de 30 ft. Su medio de desconexión puede funcionar también como el medio de desconexión de emergencia. El equipo de acometida de una casa móvil debe estar a la vista desde la casa: visible y a no más de 50 ft de distancia (vea 110.29).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Mida los 30 ft desde la pared exterior antes de colocar el pedestal o el poste, y verifique la altura de montaje contra el nivel terminado del terreno — ambos son puntos de inspección con cinta métrica. Mantenga el medio de desconexión a la vista de la casa a la que sirve.",
+      "plain_explanation": "El equipo de acometida de casas móviles se ubica junto a la casa, nunca montado en ella ni sobre ella, a la vista desde la casa y a no más de 30 ft de su pared exterior. Si el equipo de acometida debe estar en otro lugar del predio, un medio de desconexión adecuado para usarse como equipo de acometida todavía tiene que estar a la vista y dentro de 30 ft de la pared, con puesta a tierra en ese medio de desconexión según 250.32. El equipo está clasificado a no menos de 100 amperios a 120/240 voltios y debe permitir que el alimentador se conecte por un método de cableado permanente. La altura de montaje también está fijada: la parte inferior del gabinete al menos a 2 ft por encima del suelo, y el medio de desconexión a no más de 6 ft 7 in. por encima del suelo o la plataforma. Una casa manufacturada sobre una cimentación permanente que cumple las condiciones de 550.32(B) es la excepción — su equipo de acometida puede instalarse en la casa o sobre ella.",
+      "on_the_job": "Al colocar un pedestal para una casa móvil en un parque de Ocala: mida 30 ft desde la pared exterior de la casa antes de instalar el pedestal — no desde el faldón, y no después de abrir la zanja. El pedestal es de 100 A a 120/240 V, equipo Siemens, y la parte inferior de su gabinete queda a 2 ft sobre el nivel terminado del terreno, lo que también lo mantiene fuera del agua estancada del parque después de una tormenta. Última verificación antes de llamar la inspección: párese junto al medio de desconexión y confirme que la casa está a la vista, y que la manija no está a más de 6 ft 7 in.",
       "sharma_note": "",
       "figure_idea": "Croquis del lote: equipo de acometida en pedestal junto a la casa, una línea de cota de 30 ft hasta la pared exterior, y la parte inferior del gabinete mostrada a 2 ft sobre el nivel del terreno.",
       "related_ids": [],
@@ -5582,7 +6430,104 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/550-32",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 550.32: El equipo de acometida de casas móviles ahora tiene que estar a la vista desde la casa, lo que significa visible y hasta 50 ft de distancia, en lugar de dentro de 30 ft. Su medio de desconexión puede funcionar también como el medio de desconexión de emergencia. El equipo de acometida de una casa móvil debe estar a la vista desde la casa: visible y a no más de 50 ft de distancia (vea 110.29).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "El equipo de acometida es el único medio de desconexión que corta toda la casa. Si está sobre la casa, un incendio en la casa se lleva el medio de desconexión con él, y nadie puede dar servicio ni cortar la energía con seguridad. Mantenerlo junto a la casa, lo bastante cerca para verlo y alcanzarlo, y lo bastante alto para quedar fuera del agua estancada, significa que el medio de desconexión sobrevive a la emergencia para la que existe. La lluvia de Florida hace que la altura mínima de 2 ft sea una regla real, no un detalle.",
+      "inspection_fails": [
+        "Equipo de acometida a 38 ft de la pared exterior — sobre el límite de 30 ft, por visible que sea.",
+        "Parte inferior del gabinete a menos de 2 ft sobre el nivel terminado del terreno.",
+        "Manija del medio de desconexión a más de 6 ft 7 in. sobre el suelo o la plataforma.",
+        "Equipo de acometida montado en la propia casa, sin que aplique la excepción de cimentación permanente.",
+        "Equipo clasificado a menos de 100 A, o el alimentador conectado con un cordón en lugar de un método de cableado permanente."
+      ],
+      "exam_trap": "La trampa es el número de 50 ft. Es real — pero es la definición de «a la vista» de 2023, y no aplica a un permiso de 2020. Bajo la regla de 2020 de esta página, el equipo tiene que estar a la vista Y dentro de 30 ft de la pared exterior. Coloque el pedestal a 45 ft en un trabajo de 2020 y no pasa, por visible que sea.",
+      "tables": [
+        {
+          "caption": "Verificaciones de ubicación de 550.32 (NEC 2020)",
+          "headers": [
+            "Verificación",
+            "Regla de 2020"
+          ],
+          "rows": [
+            [
+              "Ubicación",
+              "Junto a la casa, nunca en ella ni sobre ella"
+            ],
+            [
+              "Distancia",
+              "A la vista y dentro de 30 ft de la pared exterior"
+            ],
+            [
+              "Clasificación",
+              "No menos de 100 A a 120/240 V"
+            ],
+            [
+              "Parte inferior del gabinete",
+              "Al menos 2 ft por encima del suelo"
+            ],
+            [
+              "Altura del medio de desconexión",
+              "No más de 6 ft 7 in. sobre el suelo o la plataforma"
+            ]
+          ],
+          "note": "Excepción: una casa manufacturada sobre una cimentación permanente que cumple 550.32(B) puede tener su equipo de acometida en la casa o sobre ella."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-550.32-lot-layout.svg",
+          "alt": "Plano del lote y elevación para el equipo de acometida de una casa móvil: un pedestal junto a la casa con una cota máxima de 30 ft hasta la pared exterior, una línea discontinua de a la vista, y alturas de montaje de 2 ft mínimo a la parte inferior del gabinete y 6 ft 7 in máximo al medio de desconexión.",
+          "caption": "Junto a la casa, a la vista, dentro de 30 ft — y las alturas también se miden con cinta.",
+          "w": 900,
+          "h": 1640
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Bajo el NEC 2020, el equipo de acometida de una casa móvil debe estar ¿a qué distancia máxima de la pared exterior de la casa?",
+          "choices": [
+            "20 ft",
+            "30 ft",
+            "50 ft",
+            "Cualquier distancia si es visible"
+          ],
+          "answer_index": 1,
+          "explain_plain": "A la vista y a no más de 30 ft de la pared exterior. La cifra de 50 ft es un cambio de 2023.",
+          "nec_ref": "550.32"
+        },
+        {
+          "question": "¿Clasificación mínima del equipo de acometida de una casa móvil?",
+          "choices": [
+            "60 A a 120/240 V",
+            "100 A a 120/240 V",
+            "125 A a 120/240 V",
+            "200 A a 120/240 V"
+          ],
+          "answer_index": 1,
+          "explain_plain": "No menos de 100 amperios a 120/240 voltios, con el alimentador conectado por un método de cableado permanente.",
+          "nec_ref": "550.32"
+        },
+        {
+          "question": "La parte inferior del gabinete de acometida debe estar al menos ¿a qué altura sobre el suelo?",
+          "choices": [
+            "6 in.",
+            "1 ft",
+            "2 ft",
+            "6 ft 7 in."
+          ],
+          "answer_index": 2,
+          "explain_plain": "Al menos 2 ft. La cifra de 6 ft 7 in. es la altura máxima del medio de desconexión, no la mínima de la parte inferior del gabinete.",
+          "nec_ref": "550.32"
+        }
+      ],
+      "code_refs": [
+        "550.32",
+        "550.32(B)",
+        "250.32"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-550.33",
@@ -6149,8 +7094,8 @@
       "article": "552",
       "section": "552",
       "title": "Remolques de parque (park trailers)",
-      "plain_explanation": "El Artículo 552 cubre los remolques de parque — las unidades tipo remolque construidas para colocación en parques en vez de viaje por carretera, definidas alrededor de un umbral de tamaño que las separa de los vehículos recreativos. Sus reglas son paralelas a los artículos de casas móviles y de RV para alimentación y conexión. Confundir un remolque de parque con un RV o una casa móvil manda el trabajo al artículo equivocado, así que la identificación va primero.\n\nLa identificación gira sobre la definición: un remolque de parque (park trailer) se construye sobre un solo chasis con ruedas y, en su modo instalado, se mantiene en o bajo 400 pies cuadrados de área bruta — las unidades más grandes o instaladas permanentemente caen en otros artículos. El suministro sigue el listado de la unidad: los remolques de parque típicamente se sirven con una conexión de cordón o un alimentador permanente dimensionado a la carga de la unidad bajo este artículo, con el desconectivo y la protección en el sitio. Cuando el papeleo y la unidad no coinciden, gobiernan la placa y el listado.",
-      "on_the_job": "Lea la etiqueta y la documentación de la unidad antes de elegir entre 550, 551 y 552. Cuando el tipo de unidad no esté claro, pregunte a la AHJ en vez de adivinar el artículo.",
+      "plain_explanation": "El Artículo 552 cubre los remolques de parque — las unidades tipo remolque construidas para colocación en parques en vez de viaje por carretera, definidas alrededor de un umbral de tamaño que las separa de los vehículos recreativos. Sus reglas son paralelas a los artículos de casas móviles y de RV para alimentación y conexión. Confundir un remolque de parque con un RV o una casa móvil manda el trabajo al artículo equivocado, así que la identificación va primero.\n\nLa identificación gira sobre la definición:\n• Construido sobre un solo chasis con ruedas\n• 400 pies cuadrados o menos de área bruta en su modo instalado\n• Las unidades más grandes, o instaladas permanentemente, caen en otros artículos\n\nEl suministro sigue el listado de la unidad: los remolques de parque típicamente se sirven con una conexión de cordón o un alimentador permanente dimensionado a la carga de la unidad bajo este artículo, con el desconectivo y la protección en el sitio. Cuando el papeleo y la unidad no coinciden, gobiernan la placa y el listado.",
+      "on_the_job": "Una unidad modelo parque se entrega en un lote de un parque en Florida Central. Antes de elegir entre 550, 551 y 552, lea la etiqueta y la documentación de la unidad: un solo chasis con ruedas, en o bajo 400 pies cuadrados instalada — un remolque de parque, Artículo 552. El trabajo de Sharma es el lado del sitio: la conexión de cordón o el alimentador permanente que pide el listado de la unidad, dimensionado a su carga, con el desconectivo y la protección en el sitio. Cuando el tipo de unidad no esté claro, pregunte a la AHJ en vez de adivinar el artículo.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -6160,7 +7105,95 @@
       "verified": true,
       "prev_id": "C5-551.73",
       "next_id": "C5-ART-553",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Tres artículos distintos cubren unidades que todas llegan sobre ruedas, y no piden el mismo suministro, desconectivo ni protección. Cablee un remolque de parque bajo las reglas de RV o de casa móvil y el trabajo está mal antes de montar la primera caja — alimentador equivocado, desconectivo equivocado, una inspección fallida. Identificar es barato; rehacer no.",
+      "inspection_fails": [
+        "Unidad cableada bajo el artículo equivocado — un remolque de parque tratado como RV (551) o como casa móvil (550).",
+        "Suministro dimensionado desde el papeleo de venta en vez de la placa y el listado de la unidad.",
+        "Sin desconectivo ni protección en el sitio para el suministro del remolque de parque.",
+        "Unidad de más de 400 pies cuadrados en modo instalado permitida y cableada como remolque de parque."
+      ],
+      "exam_trap": "La trampa es llamar RV a toda unidad con ruedas y trabajar bajo el 551 — o casa móvil bajo el 550. El artículo gira sobre la definición, no sobre el nombre de venta: un solo chasis con ruedas y 400 pies cuadrados o menos de área bruta en modo instalado es un remolque de parque bajo el 552. Por encima de ese tamaño, la unidad pertenece a otro artículo.",
+      "tables": [
+        {
+          "caption": "¿Qué artículo? Identifique primero la unidad",
+          "headers": [
+            "Unidad",
+            "Artículo"
+          ],
+          "rows": [
+            [
+              "Casa móvil / manufacturada",
+              "550"
+            ],
+            [
+              "Vehículo recreativo y suministro de parques de RV",
+              "551"
+            ],
+            [
+              "Remolque de parque — un solo chasis, 400 pies cuadrados o menos instalado",
+              "552"
+            ]
+          ],
+          "note": "Cuando el papeleo y la unidad no coinciden, gobiernan la placa y el listado."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-552-identify-first.svg",
+          "alt": "Diagrama de flujo de identificación de un remolque de parque: una unidad construida sobre un solo chasis con ruedas, luego la prueba de 400 pies cuadrados o menos de área bruta en modo instalado, que lleva al Artículo 552 para un remolque de parque o a los Artículos 550 y 551 si no lo es.",
+          "caption": "Identifique primero la unidad: la prueba de los 400 pies cuadrados elige el artículo.",
+          "w": 900,
+          "h": 1440
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Una unidad sobre un solo chasis con ruedas mide 380 pies cuadrados de área bruta en modo instalado. ¿Qué artículo la cubre?",
+          "choices": [
+            "Artículo 550 — casas móviles",
+            "Artículo 551 — vehículos recreativos",
+            "Artículo 552 — remolques de parque",
+            "Artículo 555 — marinas"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Un solo chasis con ruedas con 400 pies cuadrados o menos en modo instalado es la definición de remolque de parque — Artículo 552.",
+          "nec_ref": "Article 552"
+        },
+        {
+          "question": "El papeleo de venta llama RV a una unidad, pero su placa y su listado dicen remolque de parque. ¿Qué gobierna?",
+          "choices": [
+            "El papeleo de venta",
+            "La placa y el listado",
+            "El artículo que salga más barato cablear",
+            "La preferencia del administrador del parque"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Cuando el papeleo y la unidad no coinciden, gobiernan la placa y el listado — identifique la unidad antes de elegir el artículo.",
+          "nec_ref": "Article 552"
+        },
+        {
+          "question": "Una unidad instalada sobre un chasis con ruedas mide 450 pies cuadrados de área bruta. ¿Qué pasa?",
+          "choices": [
+            "Sigue siendo un remolque de parque bajo el 552",
+            "Cae en otro artículo — el 552 se detiene en 400 pies cuadrados",
+            "Se convierte automáticamente en RV bajo el 551",
+            "Nada cambia"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El umbral de 400 pies cuadrados es la línea: las unidades más grandes caen en otros artículos.",
+          "nec_ref": "Article 552"
+        }
+      ],
+      "code_refs": [
+        "Article 552",
+        "Article 550",
+        "Article 551"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-ART-553",
@@ -7885,8 +8918,8 @@
       "article": "590",
       "section": "590.6",
       "title": "Protección GFCI y el programa de puesta a tierra asegurada",
-      "plain_explanation": "Los tomacorrientes que alimentan energía temporal para trabajo estilo construcción necesitan protección GFCI para el personal: los tomacorrientes de 125 voltios, de 15, 20 y 30 amperios están cubiertos directamente por 590.6(A)(1) y (A)(2); los tomacorrientes de 125/250 voltios se suman a la lista de GFCI solo bajo (A)(3), y solo donde son salidas de tomacorriente en un generador portátil clasificado a no más de 15 kW, incluidos los tomacorrientes que son parte del cableado permanente del edificio cuando se están usando para el trabajo temporal. Para los tomacorrientes fuera de esa lista, la elección es protección GFCI o un programa escrito de conductor de puesta a tierra de equipo asegurado, con pruebas documentadas de cables y equipo. Todos los tomacorrientes usados para energía temporal son del tipo con puesta a tierra.\n\nDonde el programa de conductor de puesta a tierra de equipo asegurado cubre los tomacorrientes fuera de la lista de GFCI, el NEC (590.6(B)(2)) exige procedimientos escritos y pruebas antes del primer uso en el sitio, cuando haya evidencia de daño, antes de que el equipo vuelva a servicio después de reparaciones, y a intervalos que no excedan 3 meses, registrados y puestos a disposición de la AHJ. OSHA 29 CFR 1926.404(b)(1)(iii), no el NEC, agrega los siguientes detalles: antes del primer uso, antes de que el equipo vuelva a servicio después de una reparación, después de cualquier incidente del que razonablemente se pueda sospechar que causó daño, y a intervalos que no excedan 3 meses — 6 meses solo para conjuntos de cordones y tomacorrientes que están fijos en su lugar y no expuestos a daño. Cada prueba verifica la continuidad del conductor de puesta a tierra de equipo y que termina correctamente, y el programa se documenta, por código de colores o etiquetado y por registros. Un programa no documentado se trata como ningún programa. En el NEC 2020 el alcance del GFCI es: (A)(1) todas las salidas de tomacorriente de 125V, monofásicas, de 15, 20 y 30A que no son parte del cableado permanente y están en uso por el personal; (A)(2) los tomacorrientes de cualquier otra capacidad, incluidos los tomacorrientes permanentes del edificio, usados para alimentar energía temporal a equipo usado por el personal durante construcción, remodelación, mantenimiento, reparación o demolición — protección GFCI o un conjunto de cordón o dispositivo listado con protección GFCI listada; (A)(3) salidas de tomacorriente de 125V y 125/250V, monofásicas, de 15, 20 y 30A en un generador portátil clasificado a 15 kW o menos — protección GFCI listada. El intervalo de 6 meses para conjuntos de cordones y tomacorrientes fijos y el código de colores son reglas de OSHA, no reglas del NEC.",
-      "on_the_job": "Pruebe los dispositivos GFCI temporales en un programa y mantenga el registro de pruebas con el tablero temporal. Si un sitio usa en su lugar un programa de puesta a tierra asegurada para los tomacorrientes más grandes, la documentación y el código de colores de los cables tienen que existir antes de que el inspector lo pida, no después.",
+      "plain_explanation": "Los tomacorrientes de energía temporal necesitan protección GFCI para el personal — o, fuera de la lista GFCI, un programa escrito de conductor de puesta a tierra de equipo asegurado. Todos los tomacorrientes usados para energía temporal son del tipo con puesta a tierra.\n• La lista GFCI, 590.6(A): (A)(1) todas las salidas de tomacorriente de 125 voltios, monofásicas, de 15, 20 y 30 amperios que no son parte del cableado permanente y están en uso por el personal; (A)(2) los tomacorrientes de cualquier otra capacidad — incluidos los tomacorrientes permanentes del edificio — usados para energía temporal durante construcción, remodelación, mantenimiento, reparación o demolición: protección GFCI, o un conjunto de cordón o dispositivo listado con protección GFCI listada; (A)(3) salidas de tomacorriente de 125 voltios y 125/250 voltios, monofásicas, de 15, 20 y 30 amperios en un generador portátil clasificado a 15 kW o menos, con protección GFCI listada.\n• La alternativa del programa, 590.6(B): para los tomacorrientes fuera de esa lista, la elección es protección GFCI o el programa asegurado — procedimientos escritos; pruebas antes del primer uso, cuando haya evidencia de daño, y antes de que el equipo vuelva a servicio después de reparaciones; intervalos que no excedan 3 meses; registros a disposición de la AHJ.\nDos de los detalles conocidos son reglas de OSHA, no del NEC — ambos de OSHA 29 CFR 1926.404(b)(1)(iii): el intervalo de prueba de 6 meses, permitido solo para conjuntos de cordones y tomacorrientes fijos en su lugar y no expuestos a daño, y el código de colores o etiquetado de los cordones probados. Cada prueba verifica la continuidad del conductor de puesta a tierra y su terminación correcta. Un programa no documentado se trata como ningún programa.",
+      "on_the_job": "En una remodelación de Sharma en Orlando, la caja de distribución (spider box) desde el tablero temporal alimenta las sierras y los cargadores; cada tomacorriente en ella tiene protección GFCI y se prueba dispositivo por dispositivo en la instalación (S-07: el patrón del tablero de la casa no cubre una caja de distribución de obra), y el registro de pruebas se queda con el tablero temporal. Los tomacorrientes más grandes fuera de la lista (A) funcionan bajo el programa de puesta a tierra asegurada: cordones probados antes del primer uso y cada 3 meses o menos, etiquetados, registros en el tráiler de la obra antes de que el inspector lo pida, no después.",
       "sharma_note": "Precaución S-07: un interruptor termomagnético DFN que alimenta un tomacorriente puede ser el método GFCI en el cableado permanente de una casa usado temporalmente, pero una caja de distribución (spider box) o un tablero temporal en el sitio necesita su propia protección GFCI verificada dispositivo por dispositivo — no suponga que el patrón de la casa aguas arriba cubre una caja de distribución de obra.",
       "figure_idea": "",
       "related_ids": [
@@ -7901,7 +8934,130 @@
       "next_id": "C5-590.8",
       "sharma_rule_ids": [
         "S-07"
-      ]
+      ],
+      "why_it_exists": "La energía de construcción es el servicio más duro del oficio: cordones arrastrados sobre losas mojadas, cortados, empalmados y pisados, alimentando herramientas en manos de personas paradas sobre el terreno. Una falla a tierra ahí no se anuncia — la herramienta sigue funcionando mientras su marco queda al voltaje de línea. La protección GFCI, o un programa de puesta a tierra realmente probado y documentado, es lo que se interpone entre esa falla y el trabajador que sostiene la herramienta.",
+      "exam_trap": "La trampa es estirar el intervalo de prueba a 6 meses para cada cordón en el sitio, o tratar el programa como una alternativa sin documentación. Bajo el NEC el intervalo es de 3 meses; la tolerancia de 6 meses es de OSHA, solo para conjuntos de cordones y tomacorrientes fijos en su lugar y no expuestos a daño. Sin programa escrito y sin registros no hay programa.",
+      "tables": [
+        {
+          "caption": "Quién recibe GFCI — 590.6(A)",
+          "headers": [
+            "Tomacorriente",
+            "Regla"
+          ],
+          "rows": [
+            [
+              "125 V, monofásico, 15/20/30 A, no parte del cableado permanente",
+              "Protección GFCI para el personal — (A)(1)"
+            ],
+            [
+              "Cualquier otra capacidad, incl. tomacorrientes permanentes usados para energía temporal",
+              "GFCI, o un conjunto de cordón o dispositivo listado con GFCI listado — (A)(2)"
+            ],
+            [
+              "125 V y 125/250 V, 15/20/30 A, en un generador portátil de 15 kW o menos",
+              "Protección GFCI listada — (A)(3)"
+            ],
+            [
+              "Tomacorrientes fuera de la lista (A)",
+              "GFCI, o el programa de conductor de puesta a tierra de equipo asegurado — (B)"
+            ]
+          ]
+        },
+        {
+          "caption": "Pruebas del programa de puesta a tierra asegurada — 590.6(B)",
+          "headers": [
+            "Cuándo",
+            "NEC 590.6(B)",
+            "OSHA agrega"
+          ],
+          "rows": [
+            [
+              "Antes del primer uso en el sitio",
+              "Probar cordones y equipo",
+              "Lo mismo"
+            ],
+            [
+              "Daño o reparaciones",
+              "Probar cuando haya evidencia de daño, y antes de que el equipo vuelva a servicio después de reparaciones",
+              "Probar después de cualquier incidente del que razonablemente se pueda sospechar que causó daño"
+            ],
+            [
+              "Intervalo",
+              "Que no exceda 3 meses",
+              "6 meses solo para conjuntos de cordones y tomacorrientes fijos en su lugar y no expuestos a daño"
+            ],
+            [
+              "Registros",
+              "Procedimientos escritos; registros a disposición de la AHJ",
+              "El código de colores o etiquetado identifica los cordones probados"
+            ]
+          ]
+        }
+      ],
+      "inspection_fails": [
+        "Tomacorrientes de una caja de distribución (spider box) sin protección GFCI, suponiendo que el tablero aguas arriba cubre la caja de distribución de obra — la protección se verifica dispositivo por dispositivo (S-07).",
+        "Un programa de conductor de puesta a tierra de equipo asegurado declarado en el sitio sin procedimientos escritos y sin registros de pruebas — un programa no documentado se trata como ningún programa.",
+        "Conjunto de cordón devuelto a servicio después de una reparación sin nueva prueba, y sin registros de pruebas por intervalos mayores de 3 meses.",
+        "Tomacorrientes sin puesta a tierra instalados para energía temporal."
+      ],
+      "page_quiz": [
+        {
+          "question": "Un tomacorriente de 125 voltios y 20 amperios en una caja de distribución (spider box) — no parte del cableado permanente — lo usa el equipo de trabajo. Necesita:",
+          "choices": [
+            "Nada, si el tablero tiene puesta a tierra",
+            "Protección GFCI para el personal",
+            "Solo un tomacorriente del tipo con puesta a tierra",
+            "Pruebas cada 6 meses"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Los tomacorrientes que no son parte del cableado permanente y están en uso por el personal están en la lista de 590.6(A)(1) — se exige protección GFCI para el personal.",
+          "nec_ref": "590.6(A)(1)"
+        },
+        {
+          "question": "Bajo el NEC, las pruebas de un programa de conductor de puesta a tierra de equipo asegurado se repiten a intervalos que no excedan:",
+          "choices": [
+            "6 meses",
+            "12 meses",
+            "3 meses",
+            "Solo al inicio del trabajo"
+          ],
+          "answer_index": 2,
+          "explain_plain": "590.6(B) fija el intervalo en no más de 3 meses. La cifra de 6 meses es una tolerancia de OSHA solo para cordones y tomacorrientes fijos.",
+          "nec_ref": "590.6(B)"
+        },
+        {
+          "question": "El intervalo de prueba de 6 meses y el código de colores de los cordones probados vienen de:",
+          "choices": [
+            "NEC 590.6",
+            "OSHA 29 CFR 1926.404(b)(1)(iii)",
+            "El listado del tomacorriente",
+            "Una enmienda local"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Ambos detalles son reglas de construcción de OSHA, no del NEC — el programa del NEC funciona con un intervalo de 3 meses y registros escritos.",
+          "nec_ref": "29 CFR 1926.404(b)(1)(iii)"
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios del NEC 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "590.6(A)(1)",
+        "590.6(A)(2)",
+        "590.6(A)(3)",
+        "590.6(B)",
+        "29 CFR 1926.404(b)(1)(iii)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "figures": [
+        {
+          "src": "fig/c5/C5-590.6-decision.svg",
+          "alt": "Diagrama de decisión para tomacorrientes de energía temporal bajo 590.6: un tomacorriente en la lista de 590.6(A) recibe protección GFCI para el personal, y un tomacorriente fuera de la lista recibe protección GFCI o un programa escrito de conductor de puesta a tierra de equipo asegurado con pruebas a intervalos que no excedan 3 meses y registros a disposición de la AHJ.",
+          "caption": "GFCI para los tomacorrientes de la lista; GFCI o el programa documentado para el resto.",
+          "w": 900,
+          "h": 1700
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C5-590.8",
