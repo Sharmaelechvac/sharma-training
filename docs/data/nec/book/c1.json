@@ -218,8 +218,8 @@
       "article": "90",
       "section": "90.9",
       "title": "Units of measurement",
-      "plain_explanation": "Measurements in the Code are shown with metric values and inch-pound values. Where the two do not match exactly because of rounding or a soft conversion, the section explains which value is treated as the requirement. In United States field work the inch-pound value is the one crews measure with.",
-      "on_the_job": "Measure in inches and feet as printed in the rule you are using. Do not convert a Code dimension yourself and then argue from your conversion at inspection.",
+      "plain_explanation": "Every measurement in the Code is printed twice: a metric (SI) value and an inch-pound value. The pair is joined by soft conversion — each side is rounded to a clean number in its own system — so the two do not convert exactly:\n• The 3 ft working-space depth is printed as 900 mm. Converted exactly, 3 ft is 914 mm.\n• The 3 ft 6 in depth is printed as 1.0 m; the exact conversion is 1.07 m.\n• The 4 ft depth is printed as 1.2 m; the exact conversion is 1.22 m.\n• The 6½ ft headroom is printed as 2.0 m; the exact conversion is 1.98 m.\nNeither printed value is a misprint, and one inch is exactly 25.4 mm — the rounding is deliberate. Build to the value printed in the rule you are using, in the system your tape reads. In United States field work, that is the inch-pound value.",
+      "on_the_job": "Measure in inches and feet as printed in the rule you are using. On a small commercial job, a metric set of plans shows the panel working space at 900 mm; the crew tapes 3 ft, and it is the same box the inspector measures, because the Code prints the pair together. The miss to avoid is converting 900 mm back to 35.4 in and taping the shallower number. Do not convert a Code dimension yourself and then argue from your conversion at inspection.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -227,7 +227,107 @@
       "verified": true,
       "prev_id": "C1-90.8",
       "next_id": "C1-ART-100",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Two crews can measure the same box in different systems and both be right only if everyone builds to the printed pair. Let each installer convert for himself and the roundings stack in both directions — one man's 900 mm becomes another man's 35 in — and the argument lands at inspection, where the printed rule was going to win anyway.",
+      "inspection_fails": [
+        "Working space taped at 35 in after the installer converted the printed 900 mm himself (90.9, 110.26(A)(1)).",
+        "Dimension built from a home-made conversion instead of the value printed in the rule (90.9).",
+        "Inspection argument made from a converted value instead of the printed pair (90.9)."
+      ],
+      "exam_trap": "The trap is doing the math 'properly': converting 3 ft to exactly 914 mm and failing the metric drawing, or converting 900 mm to 35.4 in and building the working space shallow. 90.9 exists to kill that argument. The printed value, in the system you are measuring in, is the requirement — your calculator does not outrank the book.",
+      "tables": [
+        {
+          "caption": "Printed pairs vs exact conversions (110.26 working space)",
+          "headers": [
+            "Rule value",
+            "Code prints",
+            "Exact"
+          ],
+          "rows": [
+            [
+              "3 ft",
+              "900 mm",
+              "914 mm"
+            ],
+            [
+              "3 ft 6 in",
+              "1.0 m",
+              "1.07 m"
+            ],
+            [
+              "4 ft",
+              "1.2 m",
+              "1.22 m"
+            ],
+            [
+              "6½ ft",
+              "2.0 m",
+              "1.98 m"
+            ]
+          ],
+          "note": "Soft conversions round to a clean number in each system — sometimes above the exact figure, sometimes below."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-90.9-soft-conversions.svg",
+          "alt": "Bar chart comparing the metric values the Code prints for four working-space dimensions with their exact conversions: 3 ft prints as 900 mm against an exact 914 mm, 3 ft 6 in prints as 1.0 m against 1.07 m, 4 ft prints as 1.2 m against 1.22 m, and 6-1/2 ft prints as 2.0 m against 1.98 m.",
+          "caption": "The printed pair is the requirement — not your conversion.",
+          "w": 900,
+          "h": 1580
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Table 110.26(A)(1) prints the 3 ft working-space depth in metric as:",
+          "choices": [
+            "914 mm",
+            "900 mm",
+            "1000 mm",
+            "750 mm"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The Code's soft conversion prints 900 mm with 3 ft. The exact conversion, 914 mm, is not the printed requirement.",
+          "nec_ref": "90.9"
+        },
+        {
+          "question": "Your exact conversion of a Code dimension disagrees with the printed pair. What governs?",
+          "choices": [
+            "Your conversion, if the math is right",
+            "The value printed in the rule, in the system you measure in",
+            "Whichever value is larger",
+            "The AHJ's preference on the day"
+          ],
+          "answer_index": 1,
+          "explain_plain": "90.9 pairs the values by soft conversion on purpose. Build and measure to the printed value; do not argue from a conversion you made yourself.",
+          "nec_ref": "90.9"
+        }
+      ],
+      "code_refs": [
+        "90.9",
+        "Table 110.26(A)(1)",
+        "110.26(A)(3)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "Table 110.26(A)(1) prints the working-space depths as 900 mm (3 ft), 1.0 m (3 ft 6 in), and 1.2 m (4 ft)",
+          "source": "NFPA Link, NEC 110.26 / Table 110.26(A)(1)",
+          "url": "https://link.nfpa.org/public/pages/d681cd11-fd70-4670-888c-dcc00b697bb1"
+        },
+        {
+          "claim": "110.26(A)(3) headroom printed as 6.5 ft (2.0 m)",
+          "source": "SparkShift Arkansas Master Electrician exam prep, NEC 110.26(A)(3)",
+          "url": "https://sparkshift.app/test-prep/arkansas/master"
+        },
+        {
+          "claim": "1 inch = 25.4 millimeters exactly (so 3 ft converts exactly to 914 mm)",
+          "source": "NIST Handbook 44, Appendix B — Units and Systems of Measurement",
+          "url": "https://www.nist.gov/document/appb-18-hb44-finalpdf"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C1-ART-100",
@@ -994,8 +1094,8 @@
       "article": "110",
       "section": "110.2",
       "title": "Approval of equipment and conductors",
-      "plain_explanation": "Conductors and equipment required or permitted by the Code must be approved, which in practice means acceptable to the AHJ. Approval is normally shown through listing and labeling by a qualified testing laboratory. Equipment with no path to approval does not become acceptable because it was cheap, available, or already on the truck.",
-      "on_the_job": "Check approvals at order and delivery time. A non-listed substitute discovered at trim-out costs a return trip and can hold up the whole job.",
+      "plain_explanation": "Conductors and equipment required or permitted by the Code are acceptable only if approved. Approved is an Article 100 word: it means acceptable to the authority having jurisdiction. In practice, approval is shown through listing and labeling by a qualified testing laboratory, and the four words of the family are not interchangeable:\n• Approved — acceptable to the AHJ.\n• Listed — the product appears in the testing organization's published list of products it has evaluated.\n• Labeled — the testing organization has attached its label to the product.\n• Identified — recognizable as suitable for the specific use in question.\nEquipment with no path to approval does not become acceptable because it was cheap, available, or already on the truck. A product can be well made and still not be listed, and a breaker that physically fits a foreign panel is not thereby identified for that panel.",
+      "on_the_job": "Check approvals at order and delivery time, not at trim-out. The breaker question is settled before the truck rolls: Siemens gear for new work (S-02), and in an existing panel only the breakers listed for that panel — a Square D panel gets Square D breakers (S-03), even when another brand snaps in and 'works.' A non-listed substitute discovered at trim-out costs a return trip and can hold up the whole job.",
       "sharma_note": "S-02 and S-03 keep Sharma inside this rule: Siemens gear for new work, and only breakers listed for the panel in existing panels.",
       "figure_idea": "",
       "related_ids": [
@@ -1010,7 +1110,98 @@
       "sharma_rule_ids": [
         "S-02",
         "S-03"
-      ]
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Listing is the evidence that a product was tested against the hazards it will meet — heat, fault current, flame, and how it behaves when it fails. Unapproved gear has no evaluated failure story, so when it lets go, it lets go as a surprise: the breaker that never trips, the driver that cooks in a closed ceiling. AHJ acceptance is also the practical gate to a passed inspection and an energized building.",
+      "inspection_fails": [
+        "Breaker of a different brand installed in a panel it is not listed or identified for (110.2).",
+        "Unlisted luminaire or driver with no qualified laboratory mark, installed where listing is required (110.2).",
+        "Equipment in service with its listing label removed or unreadable, so approval cannot be verified (110.2).",
+        "Listed equipment used in a way its listing does not cover — not identified for that use (110.2)."
+      ],
+      "exam_trap": "The trap is 'it fits and it works, so it is approved.' Fit is mechanical. Approval is acceptance by the AHJ, normally proven by listing and labeling, and identified is use-specific: the same breaker can be listed as a product and still not be identified for the panel it was forced into.",
+      "tables": [
+        {
+          "caption": "The approval family (Article 100)",
+          "headers": [
+            "Term",
+            "Means"
+          ],
+          "rows": [
+            [
+              "Approved",
+              "Acceptable to the AHJ"
+            ],
+            [
+              "Listed",
+              "In the lab's published list of evaluated products"
+            ],
+            [
+              "Labeled",
+              "The lab's label is attached to the product"
+            ],
+            [
+              "Identified",
+              "Recognizable as suitable for the specific use"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-110.2-approval-path.svg",
+          "alt": "Approval flow for NEC 110.2: equipment must be listed and labeled by a qualified testing laboratory and identified for its specific use before the AHJ accepts it as approved; gear with no listing, or listed gear forced into a panel it is not identified for, has no path to approval and must not be installed.",
+          "caption": "Listing and labeling are the normal road to approved.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "In the NEC, 'approved' means:",
+          "choices": [
+            "Made by a major manufacturer",
+            "Acceptable to the authority having jurisdiction",
+            "Sold by an electrical supply house",
+            "Carrying any factory sticker"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Approved is an Article 100 definition: acceptable to the AHJ. Listing and labeling are how that acceptance is normally shown.",
+          "nec_ref": "110.2"
+        },
+        {
+          "question": "A breaker snaps into a panel of another brand and works. May it stay?",
+          "choices": [
+            "Yes — fit is approval",
+            "Yes, if the amp rating matches",
+            "No — it must be listed and identified for that panel",
+            "Yes, on residential work only"
+          ],
+          "answer_index": 2,
+          "explain_plain": "A breaker that physically fits a foreign panel is not identified for it. Sharma S-03: only breakers listed for the panel go in the panel.",
+          "nec_ref": "110.2"
+        },
+        {
+          "question": "When should approval be checked?",
+          "choices": [
+            "At final inspection",
+            "At order and delivery time",
+            "After the building is energized",
+            "Only on commercial work"
+          ],
+          "answer_index": 1,
+          "explain_plain": "A non-listed substitute found at trim-out costs a return trip and can hold the job. Check when the material is ordered and when it lands.",
+          "nec_ref": "110.2"
+        }
+      ],
+      "code_refs": [
+        "110.2",
+        "110.3(B)",
+        "Article 100"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C1-110.3",
@@ -1227,8 +1418,8 @@
       "article": "110",
       "section": "110.11",
       "title": "Deteriorating agents",
-      "plain_explanation": "Equipment must not sit in conditions that will destroy it — dampness, corrosive gases or liquids, heat, mechanical damage and similar agents — unless it is identified for that environment. Ordinary equipment in a corrosive or wet environment fails early and can fail dangerously.",
-      "on_the_job": "Coastal Florida air, pool equipment rooms, fertilizer storage and car washes are the usual traps. Identify the environment first, then pick equipment identified for it.",
+      "plain_explanation": "Equipment must not sit in conditions that will destroy it. Unless equipment is identified for the operating environment, it does not go where it will be exposed to:\n• Damp or wet locations.\n• Gases, fumes, vapors, liquids, or other agents that have a deteriorating effect on the equipment or the conductors.\n• Excessive temperatures.\nOrdinary equipment in a corrosive or wet environment fails early, and it can fail dangerously. The answer is not paint or tape; the answer is equipment identified for that environment, which in practice means the enclosure type marked on the gear. The types Sharma meets most, from 110.28:\n• Type 1 — indoor, general purpose.\n• Type 3R — outdoor and rainproof; the standard house disconnect and meter enclosure.\n• Type 4 — watertight, even against hose-directed water.\n• Type 4X — Type 4 performance plus corrosion resistance, for washdown and coastal work.\n• Type 12 — indoor industrial, against dust and dripping noncorrosive liquids.",
+      "on_the_job": "Coastal Florida is the standing test case. On a service call at a beachside house in Brevard County, the disconnect on the ocean-side wall was rusted through at the bottom seam after a few salt-air seasons, with green corrosion on the lugs. That is a replacement, not a cleanup: Type 3R minimum outside, and Type 4X where hose water or pool chemicals join the salt. In the pool equipment room at the same house, chlorine stored beside the panel had done the same work through the air. Identify the environment first, then pick equipment identified for it.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1238,7 +1429,109 @@
       "verified": true,
       "prev_id": "C1-110.10",
       "next_id": "C1-110.12",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Corrosion does not stop at the cabinet skin. It eats lugs and terminations, raises resistance at every joint, and turns a sound connection into a heater. Moisture and chemical vapor work the same way from the inside, attacking insulation and bus. Gear that rots in place fails years early, and the failure is usually heat or a ground fault, not a clean shutdown.",
+      "inspection_fails": [
+        "Indoor Type 1 panel or disconnect mounted on an exterior coastal wall, rusted at the seams and terminations (110.11).",
+        "Ordinary disconnect in a pool equipment room with chlorine stored in the same room; corroded enclosure and lugs (110.11).",
+        "Standard indoor equipment in a fertilizer storage room or a car wash bay, attacked by chemical vapor and hose-directed water (110.11).",
+        "Equipment mounted where excessive temperatures were never accounted for, with no check that it is identified for the heat (110.11)."
+      ],
+      "exam_trap": "The trap is treating identification as a coating: spray it with rust-proof paint and call it identified for the coast. Identification is the manufacturer's rating, shown by the type marked on the enclosure. Paint does not turn a Type 1 box into a Type 4X, and a stainless look does not either. If the marked type does not cover the exposure, the equipment does not belong there.",
+      "tables": [
+        {
+          "caption": "Enclosure types matched to the exposure (110.28)",
+          "headers": [
+            "Type",
+            "Where",
+            "Built against"
+          ],
+          "rows": [
+            [
+              "Type 1",
+              "Indoors",
+              "Contact and falling dirt"
+            ],
+            [
+              "Type 3R",
+              "Outdoors",
+              "Rain and sleet"
+            ],
+            [
+              "Type 4",
+              "Wet areas",
+              "Hose-directed water"
+            ],
+            [
+              "Type 4X",
+              "Coast / washdown",
+              "Water plus corrosion"
+            ],
+            [
+              "Type 12",
+              "Indoor industrial",
+              "Dust and dripping liquid"
+            ]
+          ],
+          "note": "The type marked on the enclosure is the rating — never the paint or the shape."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-110.11-environments.svg",
+          "alt": "Three locations with the enclosure type each one needs — a dry indoor room with Type 1, an outdoor coastal wall with Type 3R or 4X, a pool equipment room with Type 4X — and an indoor Type 1 box shown rusting in the pool room as the wrong installation.",
+          "caption": "Match the marked enclosure type to the real exposure.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A disconnect is going in a pool equipment room where chlorine is stored. What does 110.11 require?",
+          "choices": [
+            "Any disconnect, as long as it is off the floor",
+            "Equipment identified for that operating environment",
+            "A standard indoor disconnect with a coat of rust-proof paint",
+            "Nothing special; a pool room is a dry location"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Chlorine vapor is a deteriorating agent. The equipment must be identified for the environment — in practice a corrosion-resistant enclosure such as Type 4X.",
+          "nec_ref": "110.11"
+        },
+        {
+          "question": "Which enclosure type adds corrosion resistance to watertight (Type 4) performance?",
+          "choices": [
+            "Type 1",
+            "Type 3R",
+            "Type 4X",
+            "Type 12"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Type 4X is Type 4 watertight performance plus corrosion resistance — the washdown and coastal choice in 110.28.",
+          "nec_ref": "110.28"
+        },
+        {
+          "question": "Salt air at a Florida coastal home counts as:",
+          "choices": [
+            "A cosmetic issue only",
+            "A deteriorating agent the equipment must be identified for",
+            "A problem only after visible rust",
+            "Something handled by painting the enclosure every year"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Salt air corrodes enclosures and terminations. 110.11 requires equipment identified for the environment it will live in.",
+          "nec_ref": "110.11"
+        }
+      ],
+      "code_refs": [
+        "110.11",
+        "110.28",
+        "Table 110.28"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C1-110.12",
@@ -1447,8 +1740,8 @@
       "article": "110",
       "section": "110.18",
       "title": "Arcing parts",
-      "plain_explanation": "Parts of electrical equipment that can produce arcs in normal operation — switch and breaker contacts, motor brushes and similar devices — have to be enclosed or kept separated and isolated from combustible material. An arc is expected inside properly enclosed equipment; it becomes a fire problem when arcing parts sit open near material that can ignite.",
-      "on_the_job": "Keep enclosures intact around switching equipment, and flag arcing or sparking equipment found open or mounted tight against combustible storage for correction.",
+      "plain_explanation": "Some parts of electrical equipment arc in normal operation. Switch and breaker contacts open under load, contactors pull in and drop out, motor brushes ride a commutator — arcs, sparks, and sometimes molten metal are part of how the equipment works. 110.18 does not try to ban the arc. It controls where the arc may happen:\n• Parts that in ordinary operation produce arcs, sparks, flames, or molten metal must be enclosed, or separated and isolated from all combustible material.\n• An arc inside properly enclosed equipment is expected, and contained.\n• The same arcing part sitting open near material that can ignite is a fire waiting for its fuel.\nThere is no distance in inches in this section. The test is a condition: enclosed, or separated and isolated.",
+      "on_the_job": "On a service call in a Marion Oaks garage, the pattern is familiar: a contactor or an old open switch with its cover long gone, cycling a load, with paint cans and cardboard stacked against the same wall. Keep enclosures intact around switching equipment. Put the cover back or replace the device, move the storage off the gear, and flag arcing or sparking equipment found open or mounted tight against combustible storage for correction before you leave.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -1456,7 +1749,86 @@
       "verified": true,
       "prev_id": "C1-110.17",
       "next_id": "C1-110.19",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Every switching operation throws a small, very hot plasma event. Inside an enclosure it dies against metal. In the open — next to cardboard, paint, solvents, or stored household goods — it is an ignition source that fires on a schedule, every time the equipment cycles. Florida garages and storage rooms put the fuel and the arcing parts within the same few feet, which is exactly the pairing this rule breaks up.",
+      "inspection_fails": [
+        "Contactor or switch cover missing, arcing parts exposed beside stored paint and cardboard (110.18).",
+        "Open arcing equipment mounted tight against combustible storage, with no separation or isolation (110.18).",
+        "Brush-type motor run open next to hay, straw, or feed storage in a barn (110.18).",
+        "Damaged enclosure left in service so the arcing parts inside are no longer enclosed (110.18)."
+      ],
+      "exam_trap": "The trap is hunting for a number: 'how many inches from combustibles does 110.18 require?' It gives none — the rule is a condition, not a dimension. The second trap is calling arcing parts defects by themselves. They are normal in switching equipment; the violation is leaving them open to fuel, not the arc itself.",
+      "tables": [
+        {
+          "caption": "Arcing parts you will actually meet",
+          "headers": [
+            "Part",
+            "Why it arcs"
+          ],
+          "rows": [
+            [
+              "Switch and breaker contacts",
+              "They open under load"
+            ],
+            [
+              "Contactors and relays",
+              "They pull in and drop out under load"
+            ],
+            [
+              "Motor brushes",
+              "They ride the commutator"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-110.18-arcing-parts.svg",
+          "alt": "Comparison panel for NEC 110.18: on the left an enclosed switch with its cover on and the arc contained inside the enclosure, marked OK; on the right an open contactor with the cover missing, sparking beside stacked paint cans and cardboard boxes, marked as a violation.",
+          "caption": "Same arc — contained on the left, open to fuel on the right.",
+          "w": 900,
+          "h": 1480
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "What does 110.18 require of parts that arc in normal operation?",
+          "choices": [
+            "They must be taken out of service",
+            "They must be enclosed, or separated and isolated from combustible material",
+            "They must be at least 36 in from any combustible",
+            "They must be coated with fireproof paint"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The rule states a condition, not a distance: enclosed, or separated and isolated from all combustible material.",
+          "nec_ref": "110.18"
+        },
+        {
+          "question": "Which of these is an arcing part in ordinary operation?",
+          "choices": [
+            "A conduit body",
+            "Motor brushes and switch contacts",
+            "A wire-nut splice",
+            "A panelboard bus with the deadfront on"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Contacts open under load and brushes ride a commutator — both produce arcs, sparks, or molten metal as part of normal operation.",
+          "nec_ref": "110.18"
+        }
+      ],
+      "code_refs": [
+        "110.18"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "110.18 rule text: parts of electrical equipment that in ordinary operation produce arcs, sparks, flames, or molten metal shall be enclosed or separated and isolated from all combustible material",
+          "source": "Article 110 study guide quoting NEC 110.18 (Docsity)",
+          "url": "https://www.docsity.com/en/docs/code-article-110-test-questions-and-answers/13147432/"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C1-110.19",
@@ -1464,8 +1836,8 @@
       "article": "110",
       "section": "110.19",
       "title": "Light and power from railway conductors (orientation)",
-      "plain_explanation": "This section covers the special conditions for taking light and power from railway conductors. It is a legacy, specialized provision that ordinary premises wiring never uses: railway power systems are outside the installations Sharma designs or installs. It is included so the numbering of Article 110 reads complete, not as a working rule.",
-      "on_the_job": "If a job ever genuinely touches railway power conductors, stop and escalate — that is engineered, specialized work, not a field improvisation.",
+      "plain_explanation": "110.19 draws one hard line: circuits for lighting and power shall not be connected to any system that contains trolley wires with a ground return.\n• The ban is on the connection itself, not on the voltage. A ground-return trolley system carries its return current through the rails and the earth, and a building's lighting and power circuits must never be tied into that.\n• One exception: the connection is permitted in car houses, power houses, and passenger and freight stations operated in connection with electric railways — the railway's own buildings, run by the railway.\n• Nothing else in premises wiring uses this section. Railway power installations themselves sit largely outside the Code's scope (90.2). The page is in the book so the numbering of Article 110 reads complete, not as a working rule.",
+      "on_the_job": "Sharma does not design or install railway power, so the field case is a request, not an installation: on a commercial job near a rail corridor, someone proposes feeding site lighting or a temporary circuit from 'railway power' because it is close. The answer is the one this page exists for — stop and escalate. Temporary power comes from the premises service under the ordinary rules, engineered work stays engineered, and no Sharma circuit connects to a trolley ground-return system.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -1473,7 +1845,86 @@
       "verified": true,
       "prev_id": "C1-110.18",
       "next_id": "C1-110.20",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "A ground return puts traction current in the earth and in every buried metal path it can find. Tie a building system into that and you import stray current, shock exposure, and electrolytic corrosion of piping and conductors. The rule keeps two incompatible systems apart, and the exception stays inside buildings the railway itself operates, where the railway's own engineering controls both sides.",
+      "inspection_fails": [
+        "Lighting circuit found connected to a system that contains trolley wires with a ground return (110.19).",
+        "Connection to a railway ground-return system made in an ordinary commercial building — not a car house, power house, or station (110.19).",
+        "Premises wiring served from railway conductors as if they were a service, with no exception applying (110.19)."
+      ],
+      "exam_trap": "The trap answer is that the connection is fine if the voltages match. 110.19 is not a voltage rule. It bans the connection to a ground-return trolley system outright, and the only exception is inside the railway's own car houses, power houses, and stations — not in any building that happens to stand near tracks.",
+      "tables": [
+        {
+          "caption": "The connection, case by case",
+          "headers": [
+            "Case",
+            "Verdict"
+          ],
+          "rows": [
+            [
+              "Warehouse lighting tied to a trolley ground-return system",
+              "Prohibited"
+            ],
+            [
+              "Circuits inside a railway car house or power house",
+              "Permitted by the exception"
+            ],
+            [
+              "Ordinary house or shop circuit",
+              "Never connected — this section does not apply"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-110.19-boundary.svg",
+          "alt": "Decision chart for NEC 110.19: a circuit that would connect to a system containing trolley wires with a ground return must not be connected; the only exception is inside car houses, power houses, and passenger and freight stations operated in connection with electric railways; otherwise ordinary premises wiring rules apply.",
+          "caption": "One hard line, one narrow exception.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "What does 110.19 prohibit?",
+          "choices": [
+            "Lighting inside railway stations",
+            "Connecting lighting and power circuits to a system that contains trolley wires with a ground return",
+            "Any wiring within sight of a railway",
+            "DC circuits in commercial buildings"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The ban is on the connection to a ground-return trolley system, whatever the voltage.",
+          "nec_ref": "110.19"
+        },
+        {
+          "question": "Where does the exception permit such a connection?",
+          "choices": [
+            "Any building the railway owns",
+            "Car houses, power houses, and passenger and freight stations operated in connection with electric railways",
+            "Anywhere, with the crew lead's permission",
+            "In parking garages near a station"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The exception names the railway's own operating buildings — car houses, power houses, and stations — and nothing else.",
+          "nec_ref": "110.19"
+        }
+      ],
+      "code_refs": [
+        "110.19",
+        "90.2"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "110.19 rule and exception: lighting and power circuits shall not be connected to a system containing trolley wires with a ground return; exception for car houses, power houses, and passenger and freight stations operated in connection with electric railways",
+          "source": "Article 110 study guide quoting NEC 110.19 (Docsity)",
+          "url": "https://www.docsity.com/en/docs/code-article-110-test-questions-and-answers/13147432/"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C1-110.20",
@@ -1992,8 +2443,8 @@
       "article": "110",
       "section": "110.26(F)",
       "title": "Locked electrical equipment rooms or enclosures",
-      "plain_explanation": "Electrical equipment rooms or enclosures housing electrical apparatus that are controlled by a lock are considered accessible to qualified persons.",
-      "on_the_job": "A locked electrical room still counts as 'accessible' for the qualified-person rules. Locking the room doesn't get you out of working space, and it doesn't let you put equipment where unqualified people can reach it.",
+      "plain_explanation": "110.26(F) is one sentence at the head of the working-space rules: electrical equipment rooms or enclosures housing electrical apparatus that are controlled by a lock are considered accessible to qualified persons.\n• 'Accessible' is the Article 100 idea — the equipment can be approached and reached. The lock does not make the gear 'not accessible' to the people the Code counts.\n• It is accessible to qualified persons — the people trained for that equipment — not to everyone. The lock is what keeps it that way.\n• The sentence settles access only. It changes nothing else in 110.26: the working space in front of the gear, the clear space, and the dedicated space all still apply inside the locked room, exactly as they would in an open one.",
+      "on_the_job": "A small strip plaza on Silver Springs Boulevard in Ocala: the service room holds a 400 A switchboard and two panelboards, and the landlord keeps the door locked, with keys held by the property manager and by Sharma's foreman. That lock is fine — the room counts as accessible to qualified persons. What failed the walk-through was inside the room: paint cans and a ladder stored in front of the switchboard. The lock never waived the working space; the room has to be kept clear like any other gear location, and the key has to actually reach a qualified person when a breaker trips at night.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -2004,7 +2455,108 @@
       "unverified_reason": "New page written 2026-11-25 from Mike Holt's recheck draft (ruling 3). Verified=false until checked against the printed NEC 2020.",
       "prev_id": "C1-110.26(E)",
       "next_id": "C1-110.27",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Live gear has to be reachable by the people qualified to work it, and unreachable by everyone else. Without this sentence, a locked door could be argued both ways — an owner claiming the gear is 'not accessible,' so working space does not apply, or an inspector treating a locked room itself as an access violation. The rule closes both arguments: lock the room, control the keys, and the qualified crew is deemed to have access.",
+      "inspection_fails": [
+        "Locked electrical room used for storage — paint, ladders and spare material stacked in the working space in front of the gear.",
+        "The only key held off-site by the owner, so no qualified person on the job can actually get in — access that exists only on paper.",
+        "Key handed to unqualified staff to 'go reset the breaker' — accessible to qualified persons is not accessible to everyone.",
+        "Gear roughed in with no working space because 'the room will be locked anyway.'"
+      ],
+      "exam_trap": "The room is locked, so the equipment is not accessible and no working space is required? Wrong on both ends. 110.26(F) deems the locked room accessible to qualified persons, and the working-space rules apply in full inside it — the lock controls who gets in, it does not shrink the space.",
+      "tables": [
+        {
+          "caption": "What the lock does — and does not do",
+          "headers": [
+            "Question",
+            "Answer"
+          ],
+          "rows": [
+            [
+              "Counts as accessible?",
+              "Yes — to qualified persons"
+            ],
+            [
+              "Working space waived?",
+              "No — it applies in full"
+            ],
+            [
+              "Open to unqualified persons?",
+              "No — the lock is the control"
+            ],
+            [
+              "Storage in the working space?",
+              "Not allowed — it stays clear"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-110.26F-locked-room.svg",
+          "alt": "Plan view of a locked electrical room: panelboard with a gold working space zone dimensioned only by reference to Table 110.26(A)(1), a locked door, stored material in the zone marked as a fail, and a red unverified banner.",
+          "caption": "A locked room is accessible to qualified persons — and nothing else changes.",
+          "w": 900,
+          "h": 1360
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A locked electrical equipment room is considered accessible to whom?",
+          "choices": [
+            "No one — a lock makes it inaccessible",
+            "The general public",
+            "Qualified persons",
+            "Only the building owner"
+          ],
+          "answer_index": 2,
+          "explain_plain": "That is the whole sentence of 110.26(F): controlled by a lock, the room is considered accessible to qualified persons.",
+          "nec_ref": "110.26(F)"
+        },
+        {
+          "question": "Locking the room does what to the working-space requirements inside it?",
+          "choices": [
+            "Waives them",
+            "Cuts the depth in half",
+            "Nothing — they apply in full",
+            "Doubles them"
+          ],
+          "answer_index": 2,
+          "explain_plain": "110.26(F) settles access only. Working space, clear space and dedicated space apply inside a locked room exactly as in an open one.",
+          "nec_ref": "110.26(F), 110.26(A)"
+        },
+        {
+          "question": "For the access to be real, who has to be able to get the key?",
+          "choices": [
+            "Only the AHJ",
+            "A qualified person who needs the gear",
+            "The utility meter reader",
+            "No one — it stays locked"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The room is deemed accessible to qualified persons; a key nobody qualified can reach makes that access fiction.",
+          "nec_ref": "110.26(F)"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "110.26(F)",
+        "110.26(A)",
+        "110.26(B)",
+        "Article 100 — Accessible; Qualified Person"
+      ],
+      "uncertain": [
+        "This page is unverified: it was written from Mike Holt's recheck draft (ruling 3) and has not been checked against the printed NEC 2020 — see unverified_reason. Confirm the exact printed wording of 110.26(F) in print.",
+        "Whether the printed 110.26(F) carries exceptions, list items or cross-references beyond the single sentence carried here is not confirmed. No working-space dimensions are stated on this page for that reason — check in print."
+      ],
+      "rich_sources": [
+        {
+          "claim": "110.26(F): rooms or enclosures containing electrical equipment controlled by a lock are considered accessible to qualified persons",
+          "source": "Mike Holt, 'Working Clearances, based on the 2020 NEC'",
+          "url": "https://www.mikeholt.com/newsletters.php?action=display&letterID=2595"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C1-110.27",

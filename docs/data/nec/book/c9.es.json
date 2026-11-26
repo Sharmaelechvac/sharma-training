@@ -426,7 +426,7 @@
       "id": "C9-Table1-Nipples",
       "next_id": "C9-Table2",
       "on_the_job": "Revisión trabajada: un niple de EMT de 1/2 in tiene un área al 60 por ciento de 0.182 sq in en la Tabla 4. Con 0.0133 sq in para un THHN de 12 AWG, eso da 0.182 / 0.0133 = 13.68, o sea 13 conductores solo por llenado. Y la Nota 4 de la Tabla 1 va más allá del 60%: los factores de ajuste de ampacidad de 310.15(C)(1) NO tienen que aplicarse a los conductores en un niple de 24 in o menos — el Código exime expresamente esa revisión aquí, así que no cargues el niple con ella.",
-      "plain_explanation": "Un niple corto de canalización — 24 inches o menos entre cajas, gabinetes o cerramientos similares — puede llenarse hasta el 60 por ciento en vez de los porcentajes de la Tabla 1. El espacio extra se permite porque un tramo corto y recto es mucho más fácil de cablear y mucho menos propenso a atascarse que un tramo largo. El margen es solo para el niple; los tramos largos a cada lado siguen usando 53, 31 o 40 por ciento, según la cantidad de conductores.",
+      "plain_explanation": "Un niple corto de canalización — 24 in o menos entre cajas, gabinetes o cerramientos similares — puede llenarse hasta el 60 por ciento en vez de los porcentajes de la Tabla 1. El espacio extra se permite porque un tramo corto y recto es mucho más fácil de cablear y mucho menos propenso a atascarse que un tramo largo. El margen es solo para el niple; los tramos largos a cada lado siguen usando 53, 31 o 40 por ciento, según la cantidad de conductores. La Nota 4 de la Tabla 1 trae un segundo regalo: los factores de ajuste de ampacidad de 310.15(C)(1) no tienen que aplicarse a los conductores en un niple de 24 in o menos.",
       "prev_id": "C9-Table1",
       "related_ids": [
         "C9-L-005",
@@ -439,7 +439,104 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "El margen del 60 por ciento para niples",
-      "verified": true
+      "verified": true,
+      "why_it_exists": "Los porcentajes de llenado protegen el tendido y el aislamiento: los conductores apretados en una canalización sobrellenada se raspan contra la pared en cada curva, y un tendido agrupado necesita espacio para disipar calor. Un niple es corto y recto, con un cerramiento abierto en ambos extremos, así que el riesgo de atasco que impulsa los porcentajes menores casi no existe — por eso el Código sube al 60 por ciento ahí, y exime el ajuste por agrupamiento ahí, y solo ahí.",
+      "exam_trap": "La trampa es llevarse el 60 por ciento más allá del niple. El margen termina a las 24 in y en las paredes del propio niple: un tramo de 30 in, o el tendido completo entre los mismos dos tableros, vuelve a 53, 31 o 40 por ciento. La segunda trampa va al revés — reducir la ampacidad de un niple legal de todos modos y sobredimensionar equipo que nunca lo necesitó.",
+      "tables": [
+        {
+          "caption": "Porcentajes de la Tabla 1, y lo que permiten en EMT de 1/2 in (Tabla 4)",
+          "headers": [
+            "Conductores",
+            "Llenado máx.",
+            "Área utilizable"
+          ],
+          "rows": [
+            [
+              "1",
+              "53%",
+              "0.161 sq in"
+            ],
+            [
+              "2",
+              "31%",
+              "0.094 sq in"
+            ],
+            [
+              "3 o más",
+              "40%",
+              "0.122 sq in"
+            ],
+            [
+              "Niple ≤ 24 in",
+              "60%",
+              "0.182 sq in"
+            ]
+          ],
+          "note": "El área interior total del EMT de 1/2 in es 0.304 sq in; la Tabla 4 imprime el área utilizable en cada porcentaje."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-Table1-Nipples-nipple.svg",
+          "alt": "Elevación de dos cerramientos de tablero unidos por un niple corto de canalización dimensionado en 24 pulgadas máximo, con la nota de llenado del 60 por ciento de 0.182 pulgadas cuadradas utilizables y la revisión trabajada de 13 conductores THHN de 12 AWG.",
+          "caption": "Un niple de 24 in o menos: 60 por ciento, y sin ajuste por agrupamiento.",
+          "w": 900,
+          "h": 1330
+        }
+      ],
+      "inspection_fails": [
+        "El margen del 60 por ciento para niples aplicado a un tendido completo entre tableros.",
+        "Un tramo de 30 in calculado como niple — sobre 24 in, mandan los porcentajes de la Tabla 1.",
+        "El ajuste de 310.15(C)(1) eximido en los tramos largos porque el niple del medio ganó la exención."
+      ],
+      "page_quiz": [
+        {
+          "question": "Un niple de canalización puede llenarse al 60 por ciento cuando mide:",
+          "choices": [
+            "Cualquier longitud entre tableros",
+            "24 in o menos entre cerramientos",
+            "Solo con THHN",
+            "Es un conjunto listado"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La Nota 4 de la Tabla 1 permite el llenado del 60 por ciento para un niple de 24 in o menos entre cerramientos.",
+          "nec_ref": "Table 1, Note 4"
+        },
+        {
+          "question": "¿Cuántos THHN de 12 AWG (0.0133 sq in) caben en un niple de EMT de 1/2 in (0.182 sq in al 60 por ciento) solo por llenado?",
+          "choices": [
+            "9",
+            "12",
+            "13",
+            "14"
+          ],
+          "answer_index": 2,
+          "explain_plain": "0.182 / 0.0133 = 13.68, y no existe una fracción de conductor — 13 solo por llenado.",
+          "nec_ref": "Tables 1 and 4; Table 5"
+        },
+        {
+          "question": "Los conductores en un niple de 24 in o menos:",
+          "choices": [
+            "Igual toman el ajuste de 310.15(C)(1)",
+            "No tienen que tomar el ajuste de 310.15(C)(1)",
+            "Están exentos de los límites de llenado",
+            "Cuentan doble en el llenado"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La Nota 4 de la Tabla 1 exime los factores de ajuste de 310.15(C)(1) para conductores en un niple de 24 in o menos.",
+          "nec_ref": "Table 1, Note 4"
+        }
+      ],
+      "code_refs": [
+        "Table 1, Note 4",
+        "Table 1",
+        "Table 4",
+        "310.15(C)(1)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich": 1
     },
     {
       "article": "9",
@@ -448,8 +545,8 @@
       "florida_note": "",
       "id": "C9-Table2",
       "next_id": "C9-Table4",
-      "on_the_job": "La zapata del doblador fija el radio por ti: usa la zapata hecha para el tipo y tamaño de tubería y la curva cae en la primera columna por construcción. El PVC doblado con calor es donde las cuadrillas caen — forma la curva por lo menos al número de 'otras curvas', porque una curva con calor apretada que se dobla o se aplana también falla la mitad de 'no dañar, no reducir efectivamente el diámetro interior' de las secciones de doblado.\n\nRevisión trabajada: una curva de subida (stub-up) de PVC de 2 in formada a un radio a la línea central de 10 in falla la Tabla 2 por 2 in aunque se vea suave. Vuelve a formarla a 12 in o mejor antes de que se llame el camión de concreto.",
-      "plain_explanation": "La Tabla 2 fija el radio más pequeño que puede tener una curva hecha en el campo, medido a la línea central de la tubería — no a la cara interior de la curva. Tiene dos columnas. Las curvas hechas con un doblador de un solo tiro (one-shot) o de zapata completa (full-shoe) usan la primera; todas las demás curvas usan la segunda, y una curva de PVC con calor cae en la segunda columna. La columna la fija el método de doblado, no un número de sección. Los radios mínimos a la línea central para los tamaños que Sharma dobla más: • 1/2 in — 4 in one-shot / zapata completa, 4 in otras curvas\n• 3/4 in — 4-1/2 in one-shot / zapata completa, 5 in otras curvas\n• 1 in — 5-3/4 in one-shot / zapata completa, 6 in otras curvas\n• 1-1/4 in — 7-1/4 in one-shot / zapata completa, 8 in otras curvas\n• 1-1/2 in — 8-1/4 in one-shot / zapata completa, 10 in otras curvas\n• 2 in — 9-1/2 in one-shot / zapata completa, 12 in otras curvas La tabla sigue subiendo más allá de 2 in — 2-1/2 in es 10-1/2 / 15 in y 4 in es 16 / 24 in — y llega hasta 6 in en el libro impreso. Una curva de fábrica o una curva segmentada trazada bien por encima de estos números está bien; la tabla es un piso, no una meta.",
+      "on_the_job": "La zapata del doblador fija el radio por usted: use la zapata hecha para el tipo y tamaño de tubería y la curva cae en la primera columna por construcción. El PVC doblado con calor es donde las cuadrillas se meten en problemas: forme el codo con al menos el número de «otros dobleces», porque una curva con calor apretada que se dobla o se aplana también incumple la otra mitad de las secciones de doblado: no dañar, y no reducir efectivamente el diámetro interior.\n\nVerificación trabajada: un codo de subida de PVC de 2 in formado a un radio de línea central de 10 in incumple la Tabla 2 por 2 in aunque se vea liso. Vuelva a formarlo a 12 in o más antes de llamar al camión de concreto.",
+      "plain_explanation": "La Tabla 2 fija el radio más pequeño que puede tener una curva hecha en el campo, medido a la línea central de la tubería — no a la cara interior de la curva. Tiene dos columnas, y el método de doblado escoge la columna, no un número de sección:\n• Doblador de un solo tiro (one-shot) o de zapata completa (full-shoe): la primera columna. La zapata está hecha para el tipo y tamaño de tubería, así que una curva con la zapata correcta cae en esta columna por construcción.\n• Todos los demás dobleces: la segunda columna. Una curva de PVC con calor cae aquí, por lisa que se vea.\nLa tabla es un piso, no una meta. Un codo de fábrica o una curva segmentada trazada muy por encima de estos números está bien. La tabla impresa llega hasta 6 in; los tamaños que Sharma dobla más están abajo.",
       "prev_id": "C9-Table1-Nipples",
       "related_ids": [
         "C9-Table1",
@@ -459,7 +556,122 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Tabla 2 — radio mínimo de las curvas de la tubería",
-      "verified": true
+      "verified": true,
+      "why_it_exists": "Una curva demasiado apretada dobla o aplana la canalización, y una curva aplanada arrastra cada conductor que pasa por ella: el aislamiento se raspa, los conductores se atascan, y el diámetro interior que asumió el cálculo de llenado ya no está ahí. El piso de radio mantiene la curva lo bastante suave para que el cable sobreviva el jalado y la tubería conserve su forma.",
+      "inspection_fails": [
+        "Codo de subida de PVC doblado con calor formado a un radio de línea central de 10 in en tubería de 2 in — la Tabla 2 exige 12 in para otros dobleces.",
+        "Curva doblada o aplanada de modo que el diámetro interior se reduce efectivamente, aunque el radio en sí sea legal.",
+        "Radio verificado a la parte exterior de la curva en vez de a la línea central, así una curva apretada pasa solo en papel."
+      ],
+      "exam_trap": "¿Una curva con calor de PVC de 2 in formada a 9½ in coincide con la Tabla 2? Columna equivocada. 9½ in es el número de one-shot / zapata completa para 2 in; una curva con calor es un «otro doblez» y necesita 12 in. El método escoge la columna antes de que el tamaño escoja el número.",
+      "tables": [
+        {
+          "caption": "Tabla 2 — radio mínimo de las curvas, a la línea central (in)",
+          "headers": [
+            "Tamaño",
+            "One-shot / zapata completa",
+            "Otros dobleces"
+          ],
+          "rows": [
+            [
+              "1/2 in",
+              "4",
+              "4"
+            ],
+            [
+              "3/4 in",
+              "4-1/2",
+              "5"
+            ],
+            [
+              "1 in",
+              "5-3/4",
+              "6"
+            ],
+            [
+              "1-1/4 in",
+              "7-1/4",
+              "8"
+            ],
+            [
+              "1-1/2 in",
+              "8-1/4",
+              "10"
+            ],
+            [
+              "2 in",
+              "9-1/2",
+              "12"
+            ],
+            [
+              "2-1/2 in",
+              "10-1/2",
+              "15"
+            ],
+            [
+              "4 in",
+              "16",
+              "24"
+            ]
+          ],
+          "note": "Todos los radios en pulgadas, a la línea central de la tubería. La tabla impresa sigue subiendo después de 2 in y llega hasta 6 in."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-Table2-bend-arcs.svg",
+          "alt": "Dos curvas de 90 grados dibujadas desde un mismo punto central para tubería de 2 pulgadas: el arco azul más apretado de one-shot a nueve pulgadas y media y el arco dorado más ancho de otros dobleces a doce pulgadas, ambos medidos a la línea central.",
+          "caption": "Las dos columnas de la Tabla 2, dibujadas para tubería de 2 in.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un codo de subida de PVC de 2 in se dobla con calor. ¿Radio mínimo a la línea central?",
+          "choices": [
+            "9-1/2 in",
+            "10 in",
+            "12 in",
+            "24 in"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Una curva con calor es un «otro doblez». Para 2 in, la columna de otros dobleces de la Tabla 2 es 12 in.",
+          "nec_ref": "Capítulo 9, Tabla 2"
+        },
+        {
+          "question": "¿El radio de la Tabla 2 se mide a qué?",
+          "choices": [
+            "A la cara interior de la curva",
+            "A la línea central de la tubería",
+            "A la parte exterior de la curva",
+            "A la cuerda que cruza la curva"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Los radios de la Tabla 2 son radios a la línea central. Medir a la parte exterior exagera el radio y deja pasar curvas apretadas en papel.",
+          "nec_ref": "Capítulo 9, Tabla 2"
+        },
+        {
+          "question": "Una curva de 3/4 in se hace con un doblador de zapata completa. ¿Radio mínimo?",
+          "choices": [
+            "4 in",
+            "4-1/2 in",
+            "5 in",
+            "6 in"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Los dobleces con zapata completa usan la primera columna: 4-1/2 in para tubería de 3/4 in.",
+          "nec_ref": "Capítulo 9, Tabla 2"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "Capítulo 9, Tabla 2",
+        "352.24"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "article": "9",
@@ -471,8 +683,8 @@
       "florida_note": "",
       "id": "C9-Table4",
       "next_id": "C9-Table5",
-      "on_the_job": "Lee la fila de la canalización exacta que estás instalando, y luego toma la columna que coincide con tu cantidad de conductores según la Tabla 1. Nota arrastrada de v1: el área total del EMT de 1/2 in se lleva como 0.304 sq in; una fuente secundaria mostró 0.305, pero el valor del 40 por ciento, 0.122 sq in, coincide entre las fuentes. No cambies el 0.304 sin volver a revisar la tabla impresa.",
-      "plain_explanation": "La Tabla 4 da, para cada tipo y tamaño comercial de canalización, el diámetro interior, el área interior total y el área utilizable en cada porcentaje de la Tabla 1. El tamaño comercial es un nombre, no una medida: el EMT de 1/2 in en realidad mide 0.622 in por dentro y 0.304 sq in en total, con 0.122 sq in utilizables al 40 por ciento. El tipo de canalización importa tanto como el tamaño comercial — el PVC Schedule 40 de 1/2 in es un poco más chico por dentro (0.285 sq in en total, 0.114 al 40 por ciento), así que una respuesta de EMT no pasa al PVC. Aquí se incluyen dos canalizaciones más para que sus respuestas no se tomen prestadas de la fila equivocada. El PVC Schedule 80, el PVC de pared gruesa que se usa donde la tubería está sujeta a daño físico, es más chico por dentro que el Schedule 40 en todos los tamaños (diámetro interior en inches, área total en sq in, y luego las áreas utilizables al 53, 31 y 40 por ciento): 1/2 in — 0.526, 0.217, 0.115, 0.067, 0.087; 3/4 in — 0.722, 0.409, 0.217, 0.127, 0.164; 1 in — 0.936, 0.688, 0.365, 0.213, 0.275; 1-1/4 in — 1.255, 1.237, 0.656, 0.383, 0.495; 1-1/2 in — 1.476, 1.711, 0.907, 0.530, 0.684; 2 in — 1.913, 2.874, 1.523, 0.891, 1.150. La tubería metálica flexible (FMC) también tiene su propia fila — cerca del EMT en los tamaños chicos, pero nunca la misma fila: 1/2 in — 0.635, 0.317, 0.168, 0.098, 0.127; 3/4 in — 0.824, 0.533, 0.283, 0.165, 0.213; 1 in — 1.020, 0.817, 0.433, 0.253, 0.327; 1-1/4 in — 1.275, 1.277, 0.677, 0.396, 0.511; 1-1/2 in — 1.538, 1.858, 0.985, 0.576, 0.743; 2 in — 2.040, 3.269, 1.732, 1.013, 1.307. Un llenado que pasa en Schedule 40 o en EMT puede fallar en Schedule 80, así que cuando la canalización cambia, vuelve a hacer la división con la fila nueva.\n\nLas dos canalizaciones que Sharma tiende más, incluidas aquí para los tamaños comunes — el área interior total primero, luego el área utilizable al 40 por ciento:\n• 1/2 in EMT — 0.304 in² total, 0.122 in² al 40%\n• 3/4 in EMT — 0.533 in² total, 0.213 in² al 40%\n• 1 in EMT — 0.864 in² total, 0.346 in² al 40%\n• 1-1/4 in EMT — 1.496 in² total, 0.598 in² al 40%\n• 1-1/2 in EMT — 2.036 in² total, 0.814 in² al 40%\n• 2 in EMT — 3.356 in² total, 1.342 in² al 40%\nEl PVC Schedule 40 es un poco más chico por dentro que el EMT en cada tamaño comercial:\n• 1/2 in PVC Schedule 40 — 0.285 in² total, 0.114 in² al 40%\n• 3/4 in PVC Schedule 40 — 0.508 in² total, 0.203 in² al 40%\n• 1 in PVC Schedule 40 — 0.832 in² total, 0.333 in² al 40%\n• 1-1/4 in PVC Schedule 40 — 1.453 in² total, 0.581 in² al 40%\n• 1-1/2 in PVC Schedule 40 — 1.986 in² total, 0.794 in² al 40%\n• 2 in PVC Schedule 40 — 3.291 in² total, 1.316 in² al 40%",
+      "on_the_job": "Lea la fila de la canalización exacta que está instalando, y luego tome la columna que coincide con su cantidad de conductores según la Tabla 1. Nota arrastrada de v1: el área total del EMT de 1/2 in se lleva como 0.304 sq in; una fuente secundaria mostró 0.305, pero el valor del 40 por ciento, 0.122 sq in, coincide entre fuentes. No cambie 0.304 sin volver a verificar la tabla impresa.",
+      "plain_explanation": "La Tabla 4 da, para cada tipo y tamaño comercial de canalización, el diámetro interior, el área interior total y el área utilizable en cada porcentaje de la Tabla 1. Es el denominador de cada verificación de llenado: las áreas de los conductores de la Tabla 5 se suman y luego se comparan contra el área utilizable que esta tabla permite.\n• El tamaño comercial es un nombre, no una medida: el EMT de 1/2 in en realidad mide 0.622 in por dentro y 0.304 sq in en total, con 0.122 sq in utilizables al 40 por ciento.\n• El tipo de canalización importa tanto como el tamaño comercial: el PVC Schedule 40 de 1/2 in es un poco más pequeño por dentro (0.285 sq in en total, 0.114 al 40 por ciento), así que una respuesta de EMT nunca se traslada al PVC.\n• El PVC Schedule 80, el PVC de pared gruesa que se usa donde la tubería está sujeta a daño físico, es más pequeño por dentro que el Schedule 40 en cada tamaño. La tubería metálica flexible (FMC) también tiene su propia fila: cerca del EMT en los tamaños pequeños, pero nunca la misma fila.\nUn llenado que pasa en Schedule 40 o EMT puede fallar en Schedule 80, así que cuando la canalización cambia, vuelva a hacer la división con la fila nueva.",
       "prev_id": "C9-Table2",
       "related_ids": [
         "Ch9-T4",
@@ -485,7 +697,320 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Tabla 4 — dimensiones interiores de la canalización y área utilizable",
-      "verified": true
+      "verified": true,
+      "why_it_exists": "Cada verificación de llenado es una división, y la Tabla 4 es la mitad de abajo. Use la fila de la canalización equivocada y la respuesta sale mal con confianza: la cuadrilla jala un llenado que pasó en papel y se atasca en la tubería, o un inspector vuelve a hacer la cuenta con la fila correcta y la corrida falla después de estar bajo tierra.",
+      "inspection_fails": [
+        "Verificación de llenado hecha con la fila de EMT para una corrida en Schedule 80: pasa en papel, sobrellenada en la tubería.",
+        "El tamaño comercial usado como diámetro interior (1/2 in tomado como un agujero de 0.500 in) en vez de la fila de la Tabla 4.",
+        "El llenado nunca se volvió a calcular cuando la especificación cambió la canalización de Schedule 40 a Schedule 80."
+      ],
+      "exam_trap": "¿Tubería de media pulgada, así que el agujero mide 1/2 in de ancho y unas 0.196 sq in? Mal dos veces. El tamaño comercial es un nombre: la Tabla 4 pone el EMT de 1/2 in en 0.622 in por dentro y 0.304 sq in en total — y el número que una verificación de llenado realmente usa al 40 por ciento es 0.122 sq in, no el total.",
+      "tables": [
+        {
+          "caption": "EMT — área interior total y área utilizable al 40%",
+          "headers": [
+            "Tamaño",
+            "Total (sq in)",
+            "Utilizable 40%"
+          ],
+          "rows": [
+            [
+              "1/2 in",
+              "0.304",
+              "0.122"
+            ],
+            [
+              "3/4 in",
+              "0.533",
+              "0.213"
+            ],
+            [
+              "1 in",
+              "0.864",
+              "0.346"
+            ],
+            [
+              "1-1/4 in",
+              "1.496",
+              "0.598"
+            ],
+            [
+              "1-1/2 in",
+              "2.036",
+              "0.814"
+            ],
+            [
+              "2 in",
+              "3.356",
+              "1.342"
+            ]
+          ]
+        },
+        {
+          "caption": "PVC Schedule 40 — área interior total y área utilizable al 40%",
+          "headers": [
+            "Tamaño",
+            "Total (sq in)",
+            "Utilizable 40%"
+          ],
+          "rows": [
+            [
+              "1/2 in",
+              "0.285",
+              "0.114"
+            ],
+            [
+              "3/4 in",
+              "0.508",
+              "0.203"
+            ],
+            [
+              "1 in",
+              "0.832",
+              "0.333"
+            ],
+            [
+              "1-1/4 in",
+              "1.453",
+              "0.581"
+            ],
+            [
+              "1-1/2 in",
+              "1.986",
+              "0.794"
+            ],
+            [
+              "2 in",
+              "3.291",
+              "1.316"
+            ]
+          ],
+          "note": "El Schedule 40 es un poco más pequeño por dentro que el EMT en cada tamaño comercial."
+        },
+        {
+          "caption": "PVC Schedule 80 — diámetro interior, área total, utilizable al 40%",
+          "headers": [
+            "Tamaño",
+            "DI (in)",
+            "Total (sq in)",
+            "Utilizable 40%"
+          ],
+          "rows": [
+            [
+              "1/2 in",
+              "0.526",
+              "0.217",
+              "0.087"
+            ],
+            [
+              "3/4 in",
+              "0.722",
+              "0.409",
+              "0.164"
+            ],
+            [
+              "1 in",
+              "0.936",
+              "0.688",
+              "0.275"
+            ],
+            [
+              "1-1/4 in",
+              "1.255",
+              "1.237",
+              "0.495"
+            ],
+            [
+              "1-1/2 in",
+              "1.476",
+              "1.711",
+              "0.684"
+            ],
+            [
+              "2 in",
+              "1.913",
+              "2.874",
+              "1.150"
+            ]
+          ]
+        },
+        {
+          "caption": "FMC — diámetro interior, área total, utilizable al 40%",
+          "headers": [
+            "Tamaño",
+            "DI (in)",
+            "Total (sq in)",
+            "Utilizable 40%"
+          ],
+          "rows": [
+            [
+              "1/2 in",
+              "0.635",
+              "0.317",
+              "0.127"
+            ],
+            [
+              "3/4 in",
+              "0.824",
+              "0.533",
+              "0.213"
+            ],
+            [
+              "1 in",
+              "1.020",
+              "0.817",
+              "0.327"
+            ],
+            [
+              "1-1/4 in",
+              "1.275",
+              "1.277",
+              "0.511"
+            ],
+            [
+              "1-1/2 in",
+              "1.538",
+              "1.858",
+              "0.743"
+            ],
+            [
+              "2 in",
+              "2.040",
+              "3.269",
+              "1.307"
+            ]
+          ]
+        },
+        {
+          "caption": "Schedule 80 y FMC — área utilizable al 53% (1 conductor) y al 31% (2 conductores)",
+          "headers": [
+            "Canalización — tamaño",
+            "Utilizable 53%",
+            "Utilizable 31%"
+          ],
+          "rows": [
+            [
+              "Sch 80 — 1/2 in",
+              "0.115",
+              "0.067"
+            ],
+            [
+              "Sch 80 — 3/4 in",
+              "0.217",
+              "0.127"
+            ],
+            [
+              "Sch 80 — 1 in",
+              "0.365",
+              "0.213"
+            ],
+            [
+              "Sch 80 — 1-1/4 in",
+              "0.656",
+              "0.383"
+            ],
+            [
+              "Sch 80 — 1-1/2 in",
+              "0.907",
+              "0.530"
+            ],
+            [
+              "Sch 80 — 2 in",
+              "1.523",
+              "0.891"
+            ],
+            [
+              "FMC — 1/2 in",
+              "0.168",
+              "0.098"
+            ],
+            [
+              "FMC — 3/4 in",
+              "0.283",
+              "0.165"
+            ],
+            [
+              "FMC — 1 in",
+              "0.433",
+              "0.253"
+            ],
+            [
+              "FMC — 1-1/4 in",
+              "0.677",
+              "0.396"
+            ],
+            [
+              "FMC — 1-1/2 in",
+              "0.985",
+              "0.576"
+            ],
+            [
+              "FMC — 2 in",
+              "1.732",
+              "1.013"
+            ]
+          ],
+          "note": "Porcentajes de la Tabla 1: 53% para un conductor, 31% para dos, 40% para más de dos."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-Table4-one-row.svg",
+          "alt": "Cuatro tarjetas siguen la fila del EMT de 1/2 pulgada de la Tabla 4 desde el tamaño comercial hasta el diámetro interior de 0.622 pulgadas, el área total de 0.304 pulgadas cuadradas y el área utilizable de 0.122 al 40 por ciento, sobre un gráfico de barras que compara cuatro canalizaciones.",
+          "caption": "Siga una fila completa — y después revise la trampa de la canalización.",
+          "w": 900,
+          "h": 1400
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Área utilizable al 40% para EMT de 3/4 in?",
+          "choices": [
+            "0.122 sq in",
+            "0.213 sq in",
+            "0.346 sq in",
+            "0.533 sq in"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La Tabla 4 da al EMT de 3/4 in un total de 0.533 sq in; el 40% de eso, el número de llenado, es 0.213 sq in.",
+          "nec_ref": "Capítulo 9, Tabla 4"
+        },
+        {
+          "question": "Los mismos conductores pasan de Schedule 40 a Schedule 80, mismo tamaño comercial. La verificación de llenado:",
+          "choices": [
+            "Sigue válida — tamaño comercial es tamaño comercial",
+            "Debe rehacerse — el Schedule 80 es más pequeño por dentro",
+            "Mejora — paredes más gruesas, agujero más grande",
+            "Solo cambia para FMC"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La pared más gruesa del Schedule 80 deja un área interior menor en cada tamaño. Un llenado que pasa en Schedule 40 puede fallar en Schedule 80.",
+          "nec_ref": "Capítulo 9, Tabla 4"
+        },
+        {
+          "question": "¿Área interior total del EMT de 1/2 in?",
+          "choices": [
+            "0.122 sq in",
+            "0.285 sq in",
+            "0.304 sq in",
+            "0.622 sq in"
+          ],
+          "answer_index": 2,
+          "explain_plain": "0.304 sq in es el total; 0.122 es el área utilizable al 40%, 0.285 es el total del PVC Schedule 40, y 0.622 es el diámetro interior en pulgadas.",
+          "nec_ref": "Capítulo 9, Tabla 4"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "Capítulo 9, Tabla 4",
+        "Capítulo 9, Tabla 1",
+        "Capítulo 9, Tabla 5"
+      ],
+      "uncertain": [
+        "El área total del EMT de 1/2 in se lleva como 0.304 sq in; una fuente secundaria mostró 0.305. El valor del 40% (0.122 sq in) coincide entre fuentes — no cambie 0.304 sin volver a verificar la tabla impresa."
+      ],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "article": "9",
@@ -494,8 +1019,8 @@
       "florida_note": "",
       "id": "C9-Table5",
       "next_id": "C9-Table5A",
-      "on_the_job": "Confirma el tipo de aislamiento en el carrete antes de calcular. Si el trabajo cambia de THHN a un tipo de aislamiento más grueso, vuelve a hacer las cuentas de llenado con el área de la Tabla 5 de ese tipo, en vez de suponer que la cantidad todavía cabe.",
-      "plain_explanation": "La Tabla 5 da el diámetro y el área aproximados de los conductores aislados y los cables de luminarias, por calibre y tipo de aislamiento. El llenado se calcula con el conductor aislado que realmente estás tendiendo, aislamiento incluido — no con el metal desnudo. En los datos de v1 usados en todo este capítulo, el THHN/THWN/THWN-2 de 12 AWG mide 0.0133 sq in, el de 10 AWG 0.0211, el de 8 AWG 0.0366 y el de 6 AWG 0.0507. Un tipo de aislamiento diferente en el mismo AWG puede tener un área diferente, así que la columna del aislamiento es parte de la respuesta.\n\nLa lista de trabajo para el tipo de aislamiento que Sharma tiende más — THHN / THWN / THWN-2, área aproximada en pulgadas cuadradas:\n• 14 AWG THHN — 0.0097 in²\n• 12 AWG THHN — 0.0133 in²\n• 10 AWG THHN — 0.0211 in²\n• 8 AWG THHN — 0.0366 in²\n• 6 AWG THHN — 0.0507 in²\n• 4 AWG THHN — 0.0824 in²\n• 3 AWG THHN — 0.0973 in²\n• 2 AWG THHN — 0.1158 in²\n• 1 AWG THHN — 0.1562 in²\n• 1/0 AWG THHN — 0.1855 in²\n• 2/0 AWG THHN — 0.2223 in²\n• 3/0 AWG THHN — 0.2679 in²\n• 4/0 AWG THHN — 0.3237 in²",
+      "on_the_job": "En un rough-in de Sharma, la revisión de llenado de un tramo corto de EMT de 1/2 in lleno de circuitos de 12 AWG THHN va así: cada conductor ocupa 0.0133 sq in de la Tabla 5. Nueve conductores suman 0.1197 sq in — dentro de las 0.122 sq in que la Tabla 4 permite al 40 por ciento en EMT de 1/2 in. Un décimo conductor suma 0.1330 sq in, que se pasa, así que el tramo sube a EMT de 3/4 in antes de que alguien tienda. Y confirme primero el tipo de aislamiento en el carrete: si el trabajo cambia de THHN a un tipo de aislamiento más grueso, vuelva a hacer las cuentas con el área de la Tabla 5 de ese tipo en vez de suponer que la cantidad todavía cabe.",
+      "plain_explanation": "La Tabla 5 da el diámetro y el área aproximados de los conductores aislados y los cables de luminarias, por calibre y tipo de aislamiento. El llenado se calcula con el conductor aislado que realmente está tendiendo, aislamiento incluido — no con el metal desnudo.\n• Lea tres cosas juntas: el calibre AWG, el tipo de aislamiento y la columna de ese tipo. Un tipo de aislamiento diferente en el mismo AWG puede tener un área diferente, así que la columna del aislamiento es parte de la respuesta.\n• La tabla de abajo trae la columna THHN / THWN / THWN-2 — el aislamiento que Sharma tiende más.\n• Los conductores desnudos no se dimensionan con esta tabla; el área de un conductor de puesta a tierra desnudo se calcula desde sus propias dimensiones en la Tabla 8.",
       "prev_id": "C9-Table4",
       "related_ids": [
         "C9-L-010",
@@ -510,7 +1035,134 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Tabla 5 — cuánto espacio ocupa un conductor aislado",
-      "verified": true
+      "verified": true,
+      "figures": [
+        {
+          "src": "fig/c9/C9-Table5-areas.svg",
+          "alt": "Secciones transversales de conductores THHN de 14, 12, 10 y 8 AWG dibujadas a escala según sus áreas de la Tabla 5: 0.0097, 0.0133, 0.0211 y 0.0366 pulgadas cuadradas, con el círculo aislado exterior y el núcleo de metal mostrados en cada una.",
+          "caption": "Áreas aisladas a escala: el círculo completo es lo que cuenta el llenado.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "code_refs": [
+        "Chapter 9, Table 5",
+        "Chapter 9, Table 1",
+        "Chapter 9, Table 4",
+        "Chapter 9, Table 8"
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich_sources": [],
+      "rich": 1,
+      "tables": [
+        {
+          "caption": "Tabla 5 — THHN / THWN / THWN-2, área aproximada",
+          "headers": [
+            "Calibre",
+            "Área (sq in)"
+          ],
+          "rows": [
+            [
+              "14 AWG",
+              "0.0097"
+            ],
+            [
+              "12 AWG",
+              "0.0133"
+            ],
+            [
+              "10 AWG",
+              "0.0211"
+            ],
+            [
+              "8 AWG",
+              "0.0366"
+            ],
+            [
+              "6 AWG",
+              "0.0507"
+            ],
+            [
+              "4 AWG",
+              "0.0824"
+            ],
+            [
+              "3 AWG",
+              "0.0973"
+            ],
+            [
+              "2 AWG",
+              "0.1158"
+            ],
+            [
+              "1 AWG",
+              "0.1562"
+            ],
+            [
+              "1/0 AWG",
+              "0.1855"
+            ],
+            [
+              "2/0 AWG",
+              "0.2223"
+            ],
+            [
+              "3/0 AWG",
+              "0.2679"
+            ],
+            [
+              "4/0 AWG",
+              "0.3237"
+            ]
+          ]
+        }
+      ],
+      "why_it_exists": "Los límites de llenado existen porque una canalización atestada daña el aislamiento al tirar y atrapa el calor en servicio. La Tabla 5 es de donde sale el tamaño honesto de cada conductor — el círculo aislado completo, no el metal de adentro. Si subestima el área, la canalización que cabe en el papel se atasca a mitad del tendido.",
+      "inspection_fails": [
+        "Llenado calculado con las dimensiones del conductor desnudo — el recuento con las áreas aisladas de la Tabla 5 pone la canalización por encima de su allowance de la Tabla 4.",
+        "Conductores atascados y aislamiento rayado al tirar: canalización llenada más allá del porcentaje de la Tabla 1.",
+        "Cálculo de llenado hecho con la columna THHN para un tipo de aislamiento más grueso realmente instalado — áreas subestimadas, canalización sobre el límite."
+      ],
+      "exam_trap": "La trampa: calcular el llenado desde el conductor desnudo, o desde el área de otro tipo de aislamiento en el mismo AWG. La respuesta de la Tabla 5 es el área aislada en la columna del aislamiento que realmente trae el cable. Si lee el tamaño en una tabla de cable desnudo, cada cuenta sale demasiado pequeña.",
+      "page_quiz": [
+        {
+          "question": "El llenado de canalizaciones se calcula usando ¿qué tamaño para cada conductor?",
+          "choices": [
+            "El diámetro del metal desnudo",
+            "El diámetro y el área aislados de la Tabla 5",
+            "Solo el número AWG",
+            "El tamaño comercial de la canalización"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El llenado se calcula con el conductor aislado que realmente se tiende, aislamiento incluido, usando la Tabla 5.",
+          "nec_ref": "Ch. 9, Table 5"
+        },
+        {
+          "question": "Nueve conductores THHN de 12 AWG a 0.0133 sq in cada uno ocupan ¿cuánta área?",
+          "choices": [
+            "0.0133 sq in",
+            "0.1197 sq in",
+            "0.1330 sq in",
+            "1.197 sq in"
+          ],
+          "answer_index": 1,
+          "explain_plain": "9 × 0.0133 = 0.1197 sq in. Eso cabe en el allowance de 0.122 sq in para EMT de 1/2 in al 40 por ciento; un décimo conductor no cabe.",
+          "nec_ref": "Ch. 9, Table 5"
+        },
+        {
+          "question": "Mismo calibre AWG, otro tipo de aislamiento. El área de la Tabla 5:",
+          "choices": [
+            "Es siempre la misma",
+            "Puede diferir — lea la columna del aislamiento instalado",
+            "Sale de la Tabla 8",
+            "No importa para el llenado"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La Tabla 5 está organizada por calibre y tipo de aislamiento. Un aislamiento diferente en el mismo AWG puede tener un área diferente.",
+          "nec_ref": "Ch. 9, Table 5"
+        }
+      ],
+      "uncertain": []
     },
     {
       "id": "C9-Table5A",
@@ -518,8 +1170,8 @@
       "article": "9",
       "section": "Table 5A",
       "title": "Tabla 5A — dimensiones y áreas de conductores compactos",
-      "plain_explanation": "La Tabla 5A es la hermana de la Tabla 5 para conductores de trenzado compacto. En un conductor compacto los hilos se comprimen durante la fabricación, así que el conductor terminado es más redondo y de menor diámetro que un conductor estándar de trenzado concéntrico del mismo AWG — un trenzado común en los alimentadores de aluminio de mayor tamaño. El llenado se calcula sobre el conductor que realmente está en la canalización: los conductores compactos toman su diámetro y área de la Tabla 5A, los estándar de la Tabla 5. Calcular un conductor compacto desde la Tabla 5 sobreestima su área, así que un llenado puede reprobar en papel lo que pasaría en la canalización; calcular un conductor estándar desde la Tabla 5A lo subestima, y esa dirección sí es la violación. La marcación del conductor y su fabricante le dicen qué trenzado tiene en la mano.",
-      "on_the_job": "Un alimentador compacto de aluminio 4/0: abra la Tabla 5A, no la Tabla 5, antes de decirle al capataz el tamaño del conduit. La diferencia entre las dos tablas es regularmente la diferencia entre el conduit del camión y el siguiente tamaño.",
+      "plain_explanation": "La Tabla 5A es la hermana de la Tabla 5 para conductores de trenzado compacto. En un conductor compacto los hilos se comprimen durante la fabricación, así que el conductor terminado es más redondo y de menor diámetro que un conductor estándar de trenzado concéntrico del mismo AWG — un trenzado común en los alimentadores de aluminio de mayor tamaño.\n• El llenado se calcula sobre el conductor que realmente está en la canalización: los conductores compactos toman su diámetro y área de la Tabla 5A, los estándar de la Tabla 5.\n• Calcular un conductor compacto desde la Tabla 5 sobreestima su área, así que un llenado puede reprobar en papel lo que pasaría en la canalización.\n• Calcular un conductor estándar desde la Tabla 5A lo subestima, y esa dirección sí es la violación.\nLa marcación del conductor y su fabricante le dicen qué trenzado tiene en la mano.",
+      "on_the_job": "Un alimentador compacto de aluminio 4/0: abra la Tabla 5A, no la Tabla 5, antes de decirle al capataz el tamaño del conduit. La diferencia entre las dos tablas es regularmente la diferencia entre el conduit del camión y el siguiente tamaño. Confirme el trenzado antes del cálculo: «compact» está en la leyenda impresa del conductor y en la ficha técnica. Como referencia, un THHN 4/0 de trenzado estándar marca 0.3237 sq in en la Tabla 5 — si el carrete no dice compacto, la tabla estándar es la que el llenado debe cargar.",
       "sharma_note": "",
       "florida_note": "",
       "figure_idea": "Cortes transversales: trenzado concéntrico vs compacto en el mismo AWG, diámetros comparados.",
@@ -532,7 +1184,95 @@
       "sharma_rule_ids": [],
       "verified": true,
       "prev_id": "C9-Table5",
-      "next_id": "C9-FILL-METHOD"
+      "next_id": "C9-FILL-METHOD",
+      "why_it_exists": "Los límites de llenado existen para que los conductores se puedan instalar sin daño y puedan disipar calor dentro de la canalización, y ambas protecciones dependen de la sección real dentro del tubo. Si lee un conductor compacto en la tabla estándar, desperdicia canalización y dinero en un tamaño fantasma. Si lee un conductor estándar en la tabla compacta, la canalización queda sobrellenada en los hechos mientras el papel dice que pasa — aislamiento raspado y un tendido atascado son la forma en que eso aparece.",
+      "exam_trap": "La trampa es tratar la Tabla 5A como una tabla de descuento que cualquiera puede reclamar. No es un número menor para el mismo cable — pertenece solo a conductores fabricados realmente con trenzado compacto. Un conductor de trenzado estándar calculado desde la Tabla 5A es un llenado subestimado y una violación, por buena que se vea la matemática.",
+      "tables": [
+        {
+          "caption": "Qué tabla, y qué cuesta la equivocada",
+          "headers": [
+            "Conductor en mano",
+            "Área de",
+            "La tabla equivocada le cuesta"
+          ],
+          "rows": [
+            [
+              "Trenzado compacto",
+              "Tabla 5A",
+              "La Tabla 5 lo sobreestima — reprueba en papel"
+            ],
+            [
+              "Trenzado estándar",
+              "Tabla 5",
+              "La Tabla 5A lo subestima — sobrellenado, violación"
+            ]
+          ],
+          "note": "Como referencia: un THHN 4/0 estándar marca 0.3237 sq in en la Tabla 5. Las filas compactas viven en la Tabla 5A — lea la fila de su calibre en el libro impreso."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-Table5A-stranding.svg",
+          "alt": "Dos cortes transversales de conductor del mismo AWG: el trenzado concéntrico estándar dibujado como hilos redondos con huecos entre ellos, y el trenzado compacto con los hilos comprimidos en un círculo menor con los huecos eliminados.",
+          "caption": "Mismo AWG: los hilos compactos ocupan un círculo menor.",
+          "w": 900,
+          "h": 1240
+        }
+      ],
+      "inspection_fails": [
+        "Alimentador compacto calculado desde la Tabla 5 — el cálculo reprueba un llenado que la canalización sí pasaría, y la canalización se sobredimensionó por nada.",
+        "Conductores de trenzado estándar calculados desde la Tabla 5A para hacer pasar un llenado justo en papel.",
+        "Cálculo de llenado sin identificar el trenzado — la ficha técnica dice compacto, pero el carrete que llegó es de trenzado estándar."
+      ],
+      "page_quiz": [
+        {
+          "question": "Un conductor de alimentador está marcado con trenzado compacto. Su diámetro y área para un cálculo de llenado vienen de:",
+          "choices": [
+            "La Tabla 5",
+            "La Tabla 5A",
+            "La Tabla 8",
+            "El Anexo C"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Los conductores de trenzado compacto toman sus dimensiones de la Tabla 5A; los conductores estándar usan la Tabla 5.",
+          "nec_ref": "Table 5A"
+        },
+        {
+          "question": "Calcular un conductor de trenzado estándar desde la Tabla 5A hace qué?",
+          "choices": [
+            "Sobreestima su área",
+            "Subestima su área — la dirección de la violación",
+            "No cambia nada",
+            "Aumenta su ampacidad"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Las áreas de la Tabla 5A son menores. Aplicadas a un conductor estándar subestiman el llenado, así que la canalización queda sobrellenada mientras el papel pasa.",
+          "nec_ref": "Tables 5 and 5A"
+        },
+        {
+          "question": "¿Cómo sabe qué trenzado tiene en la mano?",
+          "choices": [
+            "Por el color del conductor",
+            "Por su marcación y su fabricante",
+            "Por el tamaño de la canalización",
+            "Solo por el AWG"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La marcación del conductor y su fabricante le dicen si es de trenzado compacto o estándar.",
+          "nec_ref": "Table 5A"
+        }
+      ],
+      "code_refs": [
+        "Table 5A",
+        "Table 5",
+        "Table 4"
+      ],
+      "uncertain": [
+        "Las filas impresas de diámetro y área de la Tabla 5A no se reproducen en esta página — lea la fila del calibre compacto en mano en el Capítulo 9 impreso antes de hacer el llenado."
+      ],
+      "rich_sources": [],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich": 1
     },
     {
       "article": "9",
@@ -673,7 +1413,7 @@
       "id": "C9-FILL-SAME",
       "next_id": "C9-FILL-MIXED",
       "on_the_job": "Por defecto, redondea hacia abajo. Usa el redondeo hacia arriba del 0.8 solo cuando cada conductor en la canalización es de verdad del mismo calibre y tipo, y prepárate para mostrarle la división al inspector. Los calibres mixtos nunca reciben el redondeo hacia arriba — suma sus áreas en su lugar.",
-      "plain_explanation": "Cuando todos los conductores son del mismo calibre y tipo, la cantidad es una sola división: el área utilizable de la canalización dividida entre el área de un conductor. Ejemplo trabajado de v1: ¿cuántos THHN de 12 AWG caben en un EMT de 1/2 in? El área al 40 por ciento es 0.122 sq in y un THHN de 12 AWG mide 0.0133 sq in, así que 0.122 / 0.0133 = 9.17 — la respuesta es 9, porque no existe una décima de conductor. Una excepción, de las notas del Capítulo 9 arrastradas en v1: cuando todos los conductores son del mismo calibre y la división deja un decimal de 0.8 o más, la cantidad puede redondearse hacia arriba al siguiente conductor completo — el THHN de 8 AWG en EMT de 3/4 in da 0.213 / 0.0366 = 5.82, así que esa nota permite 6.",
+      "plain_explanation": "Cuando todos los conductores son del mismo calibre y tipo, la cantidad es una sola división: el área utilizable de la canalización dividida entre el área de un conductor.\n• Ejemplo trabajado: ¿cuántos THHN de 12 AWG caben en un EMT de 1/2 in? El área al 40 por ciento es 0.122 sq in y un THHN de 12 AWG mide 0.0133 sq in, así que 0.122 / 0.0133 = 9.17 — la respuesta es 9, porque no existe una décima de conductor.\n• Una excepción, de las notas del Capítulo 9: cuando todos los conductores son del mismo calibre y la división deja un decimal de 0.8 o más, la cantidad puede redondearse hacia arriba al siguiente conductor completo — el THHN de 8 AWG en EMT de 3/4 in da 0.213 / 0.0366 = 5.82, así que esa nota permite 6.",
       "prev_id": "C9-FILL-METHOD",
       "related_ids": [
         "Q-068",
@@ -688,7 +1428,98 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Llenado con un solo calibre — divide y luego redondea hacia abajo",
-      "verified": true
+      "verified": true,
+      "why_it_exists": "La regla de redondear hacia abajo es el margen de seguridad de la canalización haciendo su trabajo silencioso: 9.17 es un número de papel, y el 0.17 que «casi cabe» es exactamente el conductor que se habría raspado en el tendido o cocido en el grupo. La excepción del 0.8 es estrecha a propósito — confía en la geometría solo cuando cada conductor es idéntico, para que el acomodo que la tabla supuso sea el acomodo que usted realmente obtiene.",
+      "exam_trap": "Dos trampas comparten esta página. Primera: redondear 9.17 hacia arriba a 10 porque «está cerca» — el redondeo hacia arriba existe solo con un decimal de 0.8 o más. Segunda: usar el redondeo del 0.8 en un tendido de calibres mixtos. Los calibres mixtos nunca se dividen y nunca se redondean hacia arriba; sus áreas se suman, conductor por conductor.",
+      "tables": [
+        {
+          "caption": "Divisiones de un solo calibre, trabajadas",
+          "headers": [
+            "Tendido",
+            "División",
+            "Respuesta"
+          ],
+          "rows": [
+            [
+              "THHN 12 AWG, EMT 1/2 in",
+              "0.122 ÷ 0.0133 = 9.17",
+              "9"
+            ],
+            [
+              "THHN 8 AWG, EMT 3/4 in",
+              "0.213 ÷ 0.0366 = 5.82",
+              "6 — la excepción del 0.8"
+            ],
+            [
+              "Calibres mixtos",
+              "Sin división",
+              "Sume las áreas"
+            ]
+          ],
+          "note": "Áreas utilizables al 40 por ciento de la Tabla 4; áreas de conductor de la Tabla 5."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-FILL-SAME-division.svg",
+          "alt": "Una tarjeta de trabajo con la división 0.122 pulgadas cuadradas entre 0.0133 pulgadas cuadradas igual a 9.17, respondida como 9 conductores con el sobrante 0.17 tachado, más la excepción de redondeo del 0.8 trabajada para THHN de 8 AWG en EMT de 3/4 de pulgada.",
+          "caption": "Una división, luego redondee hacia abajo — salvo la excepción del 0.8.",
+          "w": 900,
+          "h": 1180
+        }
+      ],
+      "inspection_fails": [
+        "9.17 redondeado hacia arriba a 10 conductores — el redondeo empieza en un decimal de 0.8, no en «está cerca».",
+        "El redondeo del 0.8 usado en un tendido de calibres mixtos calculado por división en vez de sumando áreas.",
+        "La tierra fuera de la cantidad de un solo calibre, así que la división se hizo para un conductor de menos."
+      ],
+      "page_quiz": [
+        {
+          "question": "0.122 ÷ 0.0133 = 9.17. ¿Cuántos THHN de 12 AWG van en la canalización?",
+          "choices": [
+            "10",
+            "9",
+            "9.17",
+            "8"
+          ],
+          "answer_index": 1,
+          "explain_plain": "No existe una décima de conductor. Bajo un decimal de 0.8, la cantidad redondea hacia abajo: 9.",
+          "nec_ref": "Tables 4 and 5"
+        },
+        {
+          "question": "El decimal que gana el redondeo hacia arriba al siguiente conductor completo es:",
+          "choices": [
+            "0.5 o más",
+            "0.8 o más",
+            "Cualquier decimal",
+            "0.9 o más"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Las notas del Capítulo 9 permiten el redondeo hacia arriba solo cuando la división deja un decimal de 0.8 o más, y solo para conductores del mismo calibre.",
+          "nec_ref": "Chapter 9, Notes"
+        },
+        {
+          "question": "Un tendido de calibres mixtos se calcula:",
+          "choices": [
+            "Dividiendo entre el conductor mayor",
+            "Dividiendo entre el conductor menor",
+            "Sumando el área de cada conductor",
+            "Con el Anexo C"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Los calibres mixtos nunca se dividen. Sume el área de la Tabla 5 de cada conductor y compare la suma con el área utilizable de la canalización.",
+          "nec_ref": "Tables 4 and 5"
+        }
+      ],
+      "code_refs": [
+        "Table 4",
+        "Table 5",
+        "Table 1"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich": 1
     },
     {
       "article": "9",
@@ -1092,8 +1923,8 @@
       "florida_note": "El Anexo C es informativo, no obligatorio. Los límites obligatorios de llenado están en las Tablas 1, 4 y 5 del Capítulo 9 tal como fueron adoptadas; el anexo es una conveniencia para un caso estrecho.",
       "id": "C9-ANNEXC",
       "next_id": "C9-Table8",
-      "on_the_job": "Usa el Anexo C para verificar en segundos una cantidad de un solo calibre, y luego sé capaz de mostrar la división de las Tablas 4 y 5 que la respalda. Si la cantidad del anexo y tu división no coinciden, no confíes en ninguna hasta encontrar qué dato — tipo de canalización, tipo de aislamiento o tierra — era diferente.",
-      "plain_explanation": "El Anexo C es un conjunto de tablas de llenado ya trabajadas para el caso estrecho en que cada conductor de la canalización es del mismo calibre y tipo: buscas la canalización y lees una cantidad máxima en vez de dividir. Es la matemática de las Tablas 1, 4 y 5 hecha por adelantado, y coincide con esa matemática — el ejemplo de v1 de nueve THHN de 12 AWG en EMT de 1/2 in coincide con la tabla del Anexo C para esa combinación. El Anexo C no puede responder un tendido de calibres mixtos, un tipo de aislamiento distinto al que la tabla supone, ni una tierra desnuda, y este libro no reproduce sus tablas; aprende la división y usa el anexo solo como revisión.",
+      "on_the_job": "Use el Anexo C para verificar en segundos una cantidad de un solo calibre, y luego sea capaz de mostrar la división de las Tablas 4 y 5 que la respalda: 0.122 sq in de área utilizable en EMT de 1/2 in, dividido entre 0.0133 sq in de un THHN de 12 AWG, da 9.17 — o sea 9, el mismo 9 que imprime el anexo. Si la cantidad del anexo y su división no coinciden, no confíe en ninguna hasta encontrar qué dato — tipo de canalización, tipo de aislamiento o tierra — era diferente.",
+      "plain_explanation": "El Anexo C es un conjunto de tablas de llenado ya trabajadas para el caso estrecho en que cada conductor de la canalización es del mismo calibre y tipo: busca la canalización y lee una cantidad máxima en vez de dividir. Es la matemática de las Tablas 1, 4 y 5 hecha por adelantado, y coincide con esa matemática — el ejemplo de v1 de nueve THHN de 12 AWG en EMT de 1/2 in coincide con la tabla del Anexo C para esa combinación.\n• Lo que responde: una canalización, un calibre de conductor, un tipo de aislamiento — una cantidad máxima.\n• Lo que no puede responder: un tendido de calibres mixtos, un tipo de aislamiento distinto al que la tabla supone, ni una tierra desnuda.\nEste libro no reproduce sus tablas; aprenda la división y use el anexo solo como revisión.",
       "prev_id": "C9-ANNEXB",
       "related_ids": [
         "Q-068",
@@ -1107,7 +1938,99 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Anexo C — el atajo para un solo calibre, y sus límites",
-      "verified": true
+      "verified": true,
+      "why_it_exists": "El Anexo C es un atajo, y los atajos se estiran. Usado fuera de su único caso estrecho, le entrega un número confiado con los datos equivocados ya metidos — un tendido mixto «verificado» contra una tabla de un solo calibre está sobrellenado antes de que se mueva el primer conductor. Los porcentajes de llenado protegen el tendido y el aislamiento; la división es como usted sabe que se cumplen. El anexo es solo un segundo par de ojos sobre esa matemática.",
+      "exam_trap": "La trampa es usar el Anexo C porque es rápido, en un tendido para el que nunca fue hecho. El anexo supone que cada conductor es del mismo calibre y tipo. En el momento en que el tendido mezcla calibres, cambia el tipo de aislamiento o agrega una tierra desnuda, no hay fila del anexo para eso — y una cantidad leída de la tabla equivocada es solo una cantidad equivocada con una cita.",
+      "tables": [
+        {
+          "caption": "Anexo C vs la división",
+          "headers": [
+            "Pregunta",
+            "Anexo C",
+            "La división"
+          ],
+          "rows": [
+            [
+              "Todo del mismo calibre y tipo",
+              "Lee la cantidad directo",
+              "0.122 ÷ 0.0133 = 9"
+            ],
+            [
+              "Calibres mixtos",
+              "No puede responder",
+              "Sume el área de cada calibre"
+            ],
+            [
+              "Tierra desnuda en el tendido",
+              "No puede responder",
+              "Área de la tierra desde la Tabla 8"
+            ]
+          ],
+          "note": "Revisión trabajada: THHN de 12 AWG en EMT de 1/2 in — ambos caminos llegan a 9."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-ANNEXC-two-paths.svg",
+          "alt": "Dos tarjetas de método apiladas: dividir el área utilizable de la canalización, 0.122 pulgadas cuadradas, entre un conductor de 0.0133 pulgadas cuadradas para obtener 9 conductores, y leer la cantidad máxima de 9 en el Anexo C, con un panel rojo que muestra el tendido de calibres mixtos que el Anexo C no puede responder.",
+          "caption": "Dos caminos, una respuesta: ambos llegan a 9.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "inspection_fails": [
+        "Cantidad del Anexo C usada para un tendido de calibres mixtos — no hay fila del anexo para esa canalización.",
+        "Cantidad del anexo leída de la tabla de otro tipo de aislamiento, así que la «revisión» confirmó un número construido sobre otro conductor.",
+        "Tierra desnuda agregada a una cantidad del Anexo C como si fuera una más del mismo tipo — el anexo supone conductores aislados de un solo tipo."
+      ],
+      "page_quiz": [
+        {
+          "question": "El Anexo C se puede usar cuando:",
+          "choices": [
+            "El tendido mezcla dos calibres",
+            "Cada conductor es del mismo calibre y tipo",
+            "Hay una tierra desnuda en la canalización",
+            "La canalización es un niple"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El Anexo C cubre solo el caso estrecho en que cada conductor es del mismo calibre y tipo.",
+          "nec_ref": "Annex C"
+        },
+        {
+          "question": "Su división da 9 y la tabla del Anexo C da 10 para el mismo tendido. ¿Qué hace?",
+          "choices": [
+            "Usa 10 — el anexo manda",
+            "Usa 9 — la división manda",
+            "No confía en ninguna hasta encontrar el dato diferente",
+            "Las promedia"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Las dos deben coincidir. Una diferencia significa que un dato — tipo de canalización, tipo de aislamiento o tierra — era diferente. Encuéntrelo primero.",
+          "nec_ref": "Annex C; Tables 4 and 5"
+        },
+        {
+          "question": "El estatus del Anexo C en el Código es:",
+          "choices": [
+            "Obligatorio, como la Tabla 1",
+            "Informativo — una conveniencia, no un límite",
+            "Un reemplazo de la Tabla 5",
+            "Requerido para tendidos de un solo calibre"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El Anexo C es informativo, no obligatorio. Los límites obligatorios de llenado están en las Tablas 1, 4 y 5.",
+          "nec_ref": "Annex C"
+        }
+      ],
+      "code_refs": [
+        "Annex C",
+        "Table 1",
+        "Table 4",
+        "Table 5"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich": 1
     },
     {
       "article": "9",
@@ -1116,8 +2039,8 @@
       "florida_note": "",
       "id": "C9-Table8",
       "next_id": "C9-Table8-CCA",
-      "on_the_job": "Para una revisión de caída de voltaje necesitas tres cosas de esta tabla y del trabajo: la columna del metal correcto, la fila del cableado correcto, y la resistencia en ohms por mil pies — la fórmula divide entre 1000 porque la tabla está calculada por mil pies, no por pie.",
-      "plain_explanation": "La Tabla 8 describe el conductor mismo: área en circular mils, cableado, diámetro total y resistencia en corriente directa a 75 grados C en ohms por mil pies, para cobre y para aluminio. En los datos de v1, el cobre cableado corre a 3.14 ohm/kft en 14 AWG, 1.98 en 12 AWG, 1.24 en 10 AWG, 0.778 en 8 AWG y 0.491 en 6 AWG — cada paso hacia arriba en calibre baja la resistencia bruscamente, y eso es exactamente por qué subir el calibre cura la caída de voltaje. Las versiones sólida y cableada del mismo AWG tienen una resistencia un poco diferente, así que lee la fila que coincide con el conductor en mano.\n\nCobre cableado sin recubrimiento, resistencia en DC a 75°C en ohms por 1000 ft — la corrida completa de tamaños comunes, para que una revisión de caída de voltaje nunca tenga que parar en 6 AWG:\n• 14 AWG cobre cableado — 3.14 Ω/kft\n• 12 AWG cobre cableado — 1.98 Ω/kft\n• 10 AWG cobre cableado — 1.24 Ω/kft\n• 8 AWG cobre cableado — 0.778 Ω/kft\n• 6 AWG cobre cableado — 0.491 Ω/kft\n• 4 AWG cobre cableado — 0.308 Ω/kft\n• 3 AWG cobre cableado — 0.245 Ω/kft\n• 2 AWG cobre cableado — 0.194 Ω/kft\n• 1 AWG cobre cableado — 0.154 Ω/kft\n• 1/0 AWG cobre cableado — 0.122 Ω/kft\n• 2/0 AWG cobre cableado — 0.0967 Ω/kft\n• 3/0 AWG cobre cableado — 0.0766 Ω/kft\n• 4/0 AWG cobre cableado — 0.0608 Ω/kft",
+      "on_the_job": "Un ejemplo de Sharma, trabajado desde esta tabla: una carga de 20 A al final de un tramo de 75 ft en una vía con cobre de 12 AWG. VD = 2 × L × R × I ÷ 1000 = 2 × 75 × 1.98 × 20 ÷ 1000 = 5.94 V — cerca del 5 por ciento de 120 V, pasado de la recomendación del 3 por ciento. Con 10 AWG (1.24 Ω/kft) el mismo tramo cae 3.72 V — todavía pasado. Con 8 AWG (0.778 Ω/kft) cae 2.33 V, cerca del 2 por ciento — dentro. Tres cosas hacen honesta la revisión: la columna del metal correcto, la fila de cableado correcta y la resistencia por mil pies — la fórmula divide entre 1000 porque la tabla está calculada por mil pies, no por pie.",
+      "plain_explanation": "La Tabla 8 describe el conductor mismo: área en circular mils, cableado, diámetro total y resistencia en corriente directa a 75 °C en ohms por mil pies, para cobre y para aluminio.\n• Lea primero la columna del metal — el cobre y el aluminio son juegos de números distintos en la misma página.\n• Lea la fila de cableado que coincide con el conductor en mano. Las versiones sólida y cableada del mismo AWG tienen una resistencia un poco diferente.\n• La resistencia cae fuerte al subir el calibre: el cobre cableado corre a 3.14 Ω/kft en 14 AWG y 0.491 en 6 AWG. Esa caída es exactamente por qué subir el calibre cura la caída de voltaje.\nLa tabla de abajo trae la corrida completa de tamaños comunes de cobre cableado, para que una revisión de caída de voltaje nunca tenga que parar en 6 AWG.",
       "prev_id": "C9-ANNEXC",
       "related_ids": [
         "Ch9-T8",
@@ -1131,7 +2054,132 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Tabla 8 — propiedades del conductor y resistencia en DC",
-      "verified": true
+      "verified": true,
+      "figures": [
+        {
+          "src": "fig/c9/C9-Table8-staircase.svg",
+          "alt": "Gráfico de barras de la resistencia del cobre cableado de la Tabla 8 para 14, 12, 10, 8 y 6 AWG: 3.14, 1.98 con la barra de 12 AWG resaltada en dorado, 1.24, 0.778 y 0.491 ohms por mil pies, mostrando cómo la resistencia cae bruscamente al subir el calibre.",
+          "caption": "Resistencia del cobre cableado, de 14 a 6 AWG — el calibre es la cura.",
+          "w": 900,
+          "h": 1380
+        }
+      ],
+      "code_refs": [
+        "Chapter 9, Table 8",
+        "Chapter 9, Table 9"
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich_sources": [],
+      "rich": 1,
+      "tables": [
+        {
+          "caption": "Tabla 8 — cobre cableado sin recubrimiento, resistencia en DC a 75 °C",
+          "headers": [
+            "Calibre",
+            "Ω por 1000 ft"
+          ],
+          "rows": [
+            [
+              "14 AWG",
+              "3.14"
+            ],
+            [
+              "12 AWG",
+              "1.98"
+            ],
+            [
+              "10 AWG",
+              "1.24"
+            ],
+            [
+              "8 AWG",
+              "0.778"
+            ],
+            [
+              "6 AWG",
+              "0.491"
+            ],
+            [
+              "4 AWG",
+              "0.308"
+            ],
+            [
+              "3 AWG",
+              "0.245"
+            ],
+            [
+              "2 AWG",
+              "0.194"
+            ],
+            [
+              "1 AWG",
+              "0.154"
+            ],
+            [
+              "1/0 AWG",
+              "0.122"
+            ],
+            [
+              "2/0 AWG",
+              "0.0967"
+            ],
+            [
+              "3/0 AWG",
+              "0.0766"
+            ],
+            [
+              "4/0 AWG",
+              "0.0608"
+            ]
+          ]
+        }
+      ],
+      "why_it_exists": "La resistencia es lo que convierte un tramo largo en un problema de caída de voltaje: cada ohm del lazo baja un voltaje que la carga nunca ve. La Tabla 8 es la fuente honesta de esa resistencia — por metal, por cableado, a una temperatura indicada. Si adivina la resistencia, o lee la fila equivocada, el cálculo es ficción con buen formato.",
+      "inspection_fails": [
+        "Cálculo de caída de voltaje hecho con la fila de conductor sólido para conductores cableados — resistencia subestimada, caída subestimada.",
+        "Caída calculada desde la columna de cobre para un alimentador de aluminio.",
+        "Cálculo trabajado en ohms por pie contra una tabla por mil pies — la caída reportada está fuera por un factor de 1000."
+      ],
+      "exam_trap": "La trampa: leer la fila de sólido para un conductor cableado — o la columna de cobre para un tramo de aluminio — porque el AWG coincide. La respuesta de la Tabla 8 depende del metal y del cableado, no solo del calibre. La otra clásica: olvidar el ÷ 1000 y reportar una caída mil veces demasiado grande.",
+      "page_quiz": [
+        {
+          "question": "La Tabla 8 indica la resistencia en DC en:",
+          "choices": [
+            "Ohms por pie",
+            "Ohms por mil pies a 75 °C",
+            "Circular mils",
+            "Ohms por milla"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La Tabla 8 da la resistencia en corriente directa a 75 °C en ohms por mil pies. Por eso la fórmula de caída de voltaje divide entre 1000.",
+          "nec_ref": "Ch. 9, Table 8"
+        },
+        {
+          "question": "La resistencia en DC de la Tabla 8 del cobre cableado de 12 AWG es:",
+          "choices": [
+            "3.14 Ω/kft",
+            "1.98 Ω/kft",
+            "1.24 Ω/kft",
+            "0.778 Ω/kft"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El cobre cableado de 12 AWG mide 1.98 Ω/kft a 75 °C. 3.14 es 14 AWG, 1.24 es 10 AWG y 0.778 es 8 AWG.",
+          "nec_ref": "Ch. 9, Table 8"
+        },
+        {
+          "question": "Subir el calibre de un conductor cura la caída de voltaje porque:",
+          "choices": [
+            "El cable más grande tiene aislamiento más grueso",
+            "La resistencia por mil pies cae al subir el calibre",
+            "El breaker también se hace más grande",
+            "La Tabla 8 solo lista cobre"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Cada paso hacia arriba en calibre baja la resistencia bruscamente — el cobre cableado cae de 3.14 Ω/kft en 14 AWG a 0.491 en 6 AWG — y menos resistencia significa menos caída.",
+          "nec_ref": "Ch. 9, Table 8"
+        }
+      ],
+      "uncertain": []
     },
     {
       "article": "9",
@@ -1144,7 +2192,7 @@
       "id": "C9-Table8-CCA",
       "next_id": "C9-VD-METHOD",
       "on_the_job": "Si un tramo de CCA necesita una respuesta de caída de voltaje, no tomes prestada la columna de aluminio y reportes el resultado como la caída del CCA — el número de aluminio pertenece al aluminio. Consigue la resistencia en DC del fabricante para el cable real a 75 grados C, escribe la fuente en el cálculo, y solo entonces corre la fórmula. Si ese número no está a la mano, el estado honesto es 'todavía no calculado', y eso es lo que va en el takeoff.",
-      "plain_explanation": "El aluminio revestido de cobre (CCA) no está en la Tabla 8. La tabla impresa trae cobre — sin recubrimiento y recubierto — y aluminio, y nada más: no hay columna de CCA, no hay fila de CCA, y este libro no inventa una. La ampacidad es otra pregunta — ahí, la Tabla 310.16 lee el CCA en su columna de aluminio y aluminio revestido de cobre, y la S-10 dimensiona el CCA un AWG más grande. La caída de voltaje es donde el hueco muerde, porque la resistencia tiene que describir el conductor real. La columna de aluminio describe aluminio — el aluminio cableado de 12 AWG mide 3.25 ohm/kft a 75 grados C — y no es un valor de CCA: una caída calculada con ella nunca debe reportarse como la caída de un conductor CCA. La resistencia de un CCA tiene que venir de los datos del fabricante del cable para el producto real a la temperatura de operación. Hasta que un valor citado del fabricante para el producto CCA que Sharma instala esté en archivo, este libro no publica ninguna cifra de caída de voltaje para CCA — el mismo punto abierto que se lleva en C3-310.16-CCA.",
+      "plain_explanation": "El aluminio revestido de cobre (CCA) no está en la Tabla 8. La tabla impresa trae cobre — sin recubrimiento y recubierto — y aluminio, y nada más: no hay columna de CCA, no hay fila de CCA, y este libro no inventa una.\n• La ampacidad es otra pregunta. Ahí, la Tabla 310.16 lee el CCA en su columna de aluminio y aluminio revestido de cobre, y la S-10 dimensiona el CCA un AWG más grande.\n• La caída de voltaje es donde el hueco muerde, porque la resistencia tiene que describir el conductor real. La columna de aluminio describe aluminio, y no es un valor de CCA: una caída calculada con ella nunca debe reportarse como la caída de un conductor CCA.\n• La resistencia de un CCA tiene que venir de los datos del fabricante del cable para el producto real, a la temperatura de operación. Hasta que un valor citado del fabricante para el producto CCA que Sharma instala esté en archivo, este libro no publica ninguna cifra de caída de voltaje para CCA — el mismo punto abierto que se lleva en C3-310.16-CCA.",
       "prev_id": "C9-Table8",
       "related_ids": [
         "310.16",
@@ -1167,7 +2215,73 @@
       ],
       "title": "El CCA en la Tabla 8 — no está listado, y no hay valor sustituto",
       "verified": false,
-      "unverified_reason": "Sigue sin verificar después de la revisión de Mike Holt (2026-11-25): Mantenga verified=false. Confirmado: la Tabla 8 no tiene datos de CCA, y la página se niega correctamente a sustituir la columna de aluminio. Sigue abierto: no hay una resistencia en DC a 75°C del fabricante (Copperweld) citada para el producto real de NM-B de CCA. Promueva solo cuando un valor de la hoja de datos del fabricante esté en archivo con su fuente. Revise también la cifra de aluminio de 3.25 Ω/kft contra la tabla impresa (la fila de sólido contra la de cableado)."
+      "unverified_reason": "Sigue sin verificar después de la revisión de Mike Holt (2026-11-25): Mantenga verified=false. Confirmado: la Tabla 8 no tiene datos de CCA, y la página se niega correctamente a sustituir la columna de aluminio. Sigue abierto: no hay una resistencia en DC a 75°C del fabricante (Copperweld) citada para el producto real de NM-B de CCA. Promueva solo cuando un valor de la hoja de datos del fabricante esté en archivo con su fuente. Revise también la cifra de aluminio de 3.25 Ω/kft contra la tabla impresa (la fila de sólido contra la de cableado).",
+      "figures": [
+        {
+          "src": "fig/c9/C9-Table8-CCA-gap.svg",
+          "alt": "La Tabla 8 dibujada con las columnas de cobre y aluminio marcadas como listadas y una tercera columna punteada para el aluminio revestido de cobre marcada como no listado, bajo una franja roja de página sin verificar, con los tres pasos que necesita una cifra de caída de voltaje de CCA: datos del fabricante, la fuente escrita en el cálculo y luego la fórmula. El dibujo no trae ningún valor de resistencia.",
+          "caption": "No existe columna de CCA — una cifra de caída de CCA empieza con los datos del fabricante.",
+          "w": 900,
+          "h": 1620
+        }
+      ],
+      "code_refs": [
+        "Chapter 9, Table 8",
+        "Table 310.16"
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich_sources": [],
+      "rich": 1,
+      "why_it_exists": "La caída de voltaje es una promesa sobre cómo se va a comportar realmente un circuito. Si mete la resistencia del metal equivocado en la fórmula, la aritmética igual corre — solo que describe un conductor que no está en la pared. Un tramo de CCA revisado con números de aluminio puede pasar en el papel y fallar en la casa, y nadie puede decir desde el papeleo por qué.",
+      "inspection_fails": [
+        "Cálculo de caída de voltaje en el juego de permisos que corre un conductor CCA con la columna de aluminio de la Tabla 8 — sin datos del fabricante citados.",
+        "Cifra de caída de voltaje de CCA entregada sin indicar la fuente del valor de resistencia usado.",
+        "Tramo de CCA reportado como aprobado en caída de voltaje donde el cálculo describe un conductor distinto al instalado."
+      ],
+      "exam_trap": "La trampa, en el examen y en el campo: «el CCA es mayormente aluminio, así que use la columna de aluminio». La Tabla 8 no da ningún valor de CCA, y un sustituto no es un valor. En el examen la respuesta es que el CCA no está listado en la Tabla 8; en el trabajo la respuesta es datos del fabricante, o «todavía no calculado».",
+      "tables": [],
+      "page_quiz": [
+        {
+          "question": "¿Dónde lista la Tabla 8 el aluminio revestido de cobre?",
+          "choices": [
+            "En la columna de aluminio",
+            "En su propia columna de CCA",
+            "No lo lista — la Tabla 8 trae solo cobre y aluminio",
+            "En la Tabla 5A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La Tabla 8 impresa trae cobre, sin recubrimiento y recubierto, y aluminio. No hay columna de CCA ni fila de CCA.",
+          "nec_ref": "Ch. 9, Table 8"
+        },
+        {
+          "question": "Un tramo de CCA necesita una revisión de caída de voltaje. La resistencia tiene que venir de:",
+          "choices": [
+            "La columna de aluminio de la Tabla 8",
+            "La columna de cobre de la Tabla 8",
+            "Los datos del fabricante del cable para el producto real",
+            "La Tabla 310.16"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La resistencia de un CCA tiene que venir de los datos del fabricante para el cable real a la temperatura de operación, con la fuente escrita en el cálculo.",
+          "nec_ref": "Ch. 9, Table 8"
+        },
+        {
+          "question": "Para ampacidad, la Tabla 310.16 lee el CCA en:",
+          "choices": [
+            "La columna de cobre",
+            "La columna de aluminio y aluminio revestido de cobre",
+            "Solo la columna de 90 °C",
+            "El CCA tampoco está en la Tabla 310.16"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Ampacidad y caída de voltaje son preguntas distintas. La Tabla 310.16 sí tiene una columna de aluminio y aluminio revestido de cobre para ampacidad; la Tabla 8 no tiene resistencia de CCA.",
+          "nec_ref": "Table 310.16"
+        }
+      ],
+      "uncertain": [
+        "No hay en archivo una resistencia en DC a 75 °C del fabricante (Copperweld) citada para el producto real de NM-B de CCA que Sharma instala. Hasta que un valor de la hoja de datos con su fuente esté en archivo, este libro no publica ninguna cifra de caída de voltaje para CCA — consiga los datos del fabricante antes de usar cualquier número de diseño de caída de voltaje para CCA.",
+        "El texto anterior de esta página indicaba el valor cableado de 12 AWG de la columna de aluminio como 3.25 Ω/kft; ese emparejamiento se retiró de la prosa porque no está confirmado — la revisión de Mike Holt del 2026-11-25 marca la cifra de aluminio de 3.25 Ω/kft para una revisión contra la Tabla 8 impresa (fila de sólido contra la de cableado). Lea la resistencia del aluminio en la Tabla 8 impresa."
+      ]
     },
     {
       "article": "9",
@@ -1659,8 +2773,8 @@
       "florida_note": "",
       "id": "C9-Table9",
       "next_id": "C9-Table11",
-      "on_the_job": "Si una respuesta de caída de voltaje importa lo suficiente para pelear por ella — un alimentador largo, un motor grande, un comentario de revisión de planos — no la resuelvas con la aproximación de la Tabla 8. Márcala para que Mike la corra con la Tabla 9 y la canalización y el factor de potencia reales.\n\nEjemplo trabajado con la columna de Z efectiva: un alimentador trifásico de 208 V que lleva 100 A a 0.85 de factor de potencia, 200 ft en un sentido, con cobre de 2 AWG en PVC (Z = 0.19 ohm/kft). VD = 1.732 × 200 × 0.19 × 100 / 1000 = 6.58 V, como 3.2 por ciento de 208 V — por encima de la recomendación del 3 por ciento solo en el alimentador, así que la conversación de diseño empieza en 1 AWG o 1/0, no en la esperanza.",
-      "plain_explanation": "La Tabla 9 es el siguiente paso después de la Tabla 8 para la caída de voltaje. Su título completo es 'Alternating-Current Resistance and Reactance for 600-Volt Cables, 3-Phase, 60 Hz, 75 degrees C — Three Single Conductors in Conduit', y en vez de solo la resistencia en DC da, en ohms al neutro por 1000 ft, la reactancia inductiva para todos los cables, la resistencia en corriente alterna para cobre sin recubrimiento y para aluminio, y la impedancia efectiva Z a 0.85 de factor de potencia — cada una desglosada para tubería de PVC, aluminio y acero, porque una canalización magnética de acero sube la reactancia y, en los tamaños más grandes, también la resistencia en AC. La Nota 1 de la tabla limita sus valores a conductores a 75 grados C bajo las condiciones que dice su título. La enseñanza aquí es cuándo acudir a ella — conductores grandes, tramos trifásicos largos, canalización de acero, o una aproximación de la Tabla 8 que cae cerca de un límite — y correr esos casos desde la tabla impresa en vez de hacerlo de memoria. Los tamaños comunes de cobre se incluyen abajo (el aluminio y los tamaños por encima de 4/0 se quedan en la tabla impresa) — cobre sin recubrimiento, ohms al neutro por 1000 ft. La reactancia y la columna de Z efectiva son las partes que la Tabla 8 no te puede dar; la columna de resistencia en AC sigue de cerca a la Tabla 8 en los tamaños chicos y sube por encima de ella en tubería de acero a medida que los tamaños crecen. Los tamaños por encima de 4/0, y las columnas de aluminio, se quedan en la tabla impresa:\n• 14 AWG cobre — reactancia 0.058 en tubería de PVC o aluminio, 0.073 en acero; resistencia en AC 3.1 en PVC; Z efectiva a 0.85 de factor de potencia 2.7 en PVC\n• 12 AWG cobre — reactancia 0.054 en tubería de PVC o aluminio, 0.068 en acero; resistencia en AC 2.0 en PVC; Z efectiva a 0.85 de factor de potencia 1.7 en PVC\n• 10 AWG cobre — reactancia 0.050 en tubería de PVC o aluminio, 0.063 en acero; resistencia en AC 1.2 en PVC; Z efectiva a 0.85 de factor de potencia 1.1 en PVC\n• 8 AWG cobre — reactancia 0.052 en tubería de PVC o aluminio, 0.065 en acero; resistencia en AC 0.78 en PVC; Z efectiva a 0.85 de factor de potencia 0.69 en PVC\n• 6 AWG cobre — reactancia 0.051 en tubería de PVC o aluminio, 0.064 en acero; resistencia en AC 0.49 en PVC; Z efectiva a 0.85 de factor de potencia 0.44 en PVC\n• 4 AWG cobre — reactancia 0.048 en tubería de PVC o aluminio, 0.060 en acero; resistencia en AC 0.31 en PVC; Z efectiva a 0.85 de factor de potencia 0.29 en PVC\n• 3 AWG cobre — reactancia 0.047 en tubería de PVC o aluminio, 0.059 en acero; resistencia en AC 0.25 en PVC; Z efectiva a 0.85 de factor de potencia 0.23 en PVC\n• 2 AWG cobre — reactancia 0.045 en tubería de PVC o aluminio, 0.057 en acero; resistencia en AC 0.19 en PVC; Z efectiva a 0.85 de factor de potencia 0.19 en PVC\n• 1 AWG cobre — reactancia 0.046 en tubería de PVC o aluminio, 0.057 en acero; resistencia en AC 0.15 en PVC; Z efectiva a 0.85 de factor de potencia 0.16 en PVC\n• 1/0 AWG cobre — reactancia 0.044 en tubería de PVC o aluminio, 0.055 en acero; resistencia en AC 0.12 en PVC; Z efectiva a 0.85 de factor de potencia 0.13 en PVC\n• 4/0 AWG cobre — reactancia 0.041 en tubería de PVC o aluminio, 0.051 en acero; resistencia en AC 0.062 en PVC Las cifras de caída de voltaje del 3 por ciento / 5 por ciento son recomendaciones de las Notas Informativas, no requisitos.",
+      "on_the_job": "Si una respuesta de caída de voltaje importa lo suficiente para pelear por ella — un alimentador largo, un motor grande, un comentario de revisión de planos — no la resuelva con la aproximación de la Tabla 8. Márquela para que Mike la calcule con la Tabla 9 y la canalización y el factor de potencia reales.\n\nEjemplo trabajado con la columna Z efectiva: un alimentador trifásico de 208 V que lleva 100 A a 0.85 de factor de potencia, 200 ft en un sentido, con cobre 2 AWG en PVC (Z = 0.19 ohm/kft). VD = 1.732 × 200 × 0.19 × 100 / 1000 = 6.58 V, alrededor del 3.2 por ciento de 208 V — por encima de la recomendación del 3 por ciento solo en el alimentador, así que la conversación de diseño empieza en 1 AWG o 1/0, no en la esperanza.",
+      "plain_explanation": "La Tabla 9 es el siguiente paso después de la Tabla 8 para la caída de voltaje. Su título completo es 'Alternating-Current Resistance and Reactance for 600-Volt Cables, 3-Phase, 60 Hz, 75 °C — Three Single Conductors in Conduit', y en vez de solo la resistencia en DC da, en ohms al neutro por 1000 ft:\n• La reactancia inductiva para todos los cables: un valor para tubería de PVC o aluminio, y uno mayor para acero.\n• La resistencia en corriente alterna para cobre sin recubrimiento y para aluminio.\n• La impedancia efectiva Z a 0.85 de factor de potencia: el número que ya combina resistencia y reactancia para la fórmula de caída.\nUna canalización de acero magnético sube la reactancia y, en los tamaños grandes, también la resistencia en AC. La columna de resistencia en AC sigue de cerca a la Tabla 8 en los tamaños pequeños y la supera en tubería de acero a medida que crecen los tamaños.\nLa Nota 1 de la tabla limita sus valores a conductores a 75 °C bajo las condiciones que dice su título. La enseñanza de esta página es cuándo acudir a ella — conductores grandes, corridas trifásicas largas, canalización de acero, o una aproximación de la Tabla 8 que cae cerca de un límite — y calcular esos casos desde la tabla impresa en vez de memoria. Los tamaños comunes de cobre se llevan en las tablas de abajo; el aluminio y los tamaños sobre 4/0 quedan en la tabla impresa.\nLas cifras de caída de voltaje del 3 por ciento / 5 por ciento son recomendaciones de Notas Informativas, no requisitos.",
       "prev_id": "C9-VD-LIMITS",
       "related_ids": [
         "C9-L-043",
@@ -1671,7 +2785,203 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Tabla 9 — resistencia y reactancia en AC, para un trabajo de caída de voltaje más fino",
-      "verified": true
+      "verified": true,
+      "why_it_exists": "El número de solo DC de la Tabla 8 subestima en silencio la caída en conductores grandes, porque la reactancia — que la Tabla 8 ignora — carga más de la caída a medida que crecen los conductores, y una canalización de acero lo empeora. Un alimentador dimensionado con la aproximación puede entrar en servicio con luces tenues, motores que arrancan con dificultad y una pelea de revisión de planos que nadie puede resolver. La Tabla 9 existe para que esa discusión se resuelva con la impedancia real.",
+      "inspection_fails": [
+        "Caída de voltaje de un alimentador largo calculada solo con la resistencia DC de la Tabla 8 en tubería de acero: falta la reactancia que lleva la Tabla 9 y la respuesta sale baja.",
+        "La columna Z efectiva usada con el factor de potencia equivocado: la columna Z impresa está construida a 0.85 PF.",
+        "Valores de la Tabla 9 aplicados a temperaturas de conductor distintas de 75 °C: la Nota 1 limita la tabla a las condiciones de su título."
+      ],
+      "exam_trap": "¿El alimentador dio 3.2 por ciento, así que incumple el Código? No. Las cifras del 3 y el 5 por ciento son recomendaciones de Notas Informativas, no requisitos — la pelea real es de diseño, y debe pelearse con el número exacto: la Z efectiva de la Tabla 9, no una aproximación de la Tabla 8 que cae cerca de la línea.",
+      "tables": [
+        {
+          "caption": "Tabla 9 — reactancia y resistencia en AC, cobre sin recubrimiento (ohms al neutro por 1000 ft)",
+          "headers": [
+            "Tamaño",
+            "Reactancia PVC/Al",
+            "Reactancia acero",
+            "Resist. AC PVC"
+          ],
+          "rows": [
+            [
+              "14 AWG",
+              "0.058",
+              "0.073",
+              "3.1"
+            ],
+            [
+              "12 AWG",
+              "0.054",
+              "0.068",
+              "2.0"
+            ],
+            [
+              "10 AWG",
+              "0.050",
+              "0.063",
+              "1.2"
+            ],
+            [
+              "8 AWG",
+              "0.052",
+              "0.065",
+              "0.78"
+            ],
+            [
+              "6 AWG",
+              "0.051",
+              "0.064",
+              "0.49"
+            ],
+            [
+              "4 AWG",
+              "0.048",
+              "0.060",
+              "0.31"
+            ],
+            [
+              "3 AWG",
+              "0.047",
+              "0.059",
+              "0.25"
+            ],
+            [
+              "2 AWG",
+              "0.045",
+              "0.057",
+              "0.19"
+            ],
+            [
+              "1 AWG",
+              "0.046",
+              "0.057",
+              "0.15"
+            ],
+            [
+              "1/0 AWG",
+              "0.044",
+              "0.055",
+              "0.12"
+            ],
+            [
+              "4/0 AWG",
+              "0.041",
+              "0.051",
+              "0.062"
+            ]
+          ],
+          "note": "La reactancia es para todos los cables. La resistencia en AC se muestra para tubería de PVC; el acero la sube en los tamaños grandes."
+        },
+        {
+          "caption": "Tabla 9 — Z efectiva a 0.85 de factor de potencia, tubería de PVC (ohms al neutro por 1000 ft)",
+          "headers": [
+            "Tamaño",
+            "Z efectiva"
+          ],
+          "rows": [
+            [
+              "14 AWG",
+              "2.7"
+            ],
+            [
+              "12 AWG",
+              "1.7"
+            ],
+            [
+              "10 AWG",
+              "1.1"
+            ],
+            [
+              "8 AWG",
+              "0.69"
+            ],
+            [
+              "6 AWG",
+              "0.44"
+            ],
+            [
+              "4 AWG",
+              "0.29"
+            ],
+            [
+              "3 AWG",
+              "0.23"
+            ],
+            [
+              "2 AWG",
+              "0.19"
+            ],
+            [
+              "1 AWG",
+              "0.16"
+            ],
+            [
+              "1/0 AWG",
+              "0.13"
+            ],
+            [
+              "4/0 AWG",
+              "—"
+            ]
+          ],
+          "note": "La Z efectiva de 4/0 no se lleva en esta página — léala en la Tabla 9 impresa."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-Table9-fork.svg",
+          "alt": "Una bifurcación en el camino: las corridas cortas de circuitos derivados toman el camino de la Tabla 8 con resistencia DC, y las corridas largas, grandes, trifásicas o en acero toman el camino de la Tabla 9 con Z efectiva a 0.85 de factor de potencia, sobre el ejemplo trabajado del alimentador 2 AWG.",
+          "caption": "Las corridas cortas toman la Tabla 8; los alimentadores largos o grandes toman la Tabla 9.",
+          "w": 900,
+          "h": 1220
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿La columna Z efectiva de la Tabla 9 está construida a qué factor de potencia?",
+          "choices": [
+            "1.0",
+            "0.95",
+            "0.85",
+            "0.80"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La columna Z efectiva impresa combina resistencia y reactancia a 0.85 de factor de potencia.",
+          "nec_ref": "Capítulo 9, Tabla 9"
+        },
+        {
+          "question": "Un alimentador trifásico de 208 V, 100 A, 200 ft en un sentido, cobre 2 AWG en PVC (Z = 0.19 ohm/kft). ¿Caída de voltaje?",
+          "choices": [
+            "3.29 V",
+            "6.58 V",
+            "13.2 V",
+            "0.66 V"
+          ],
+          "answer_index": 1,
+          "explain_plain": "VD = 1.732 × 200 × 0.19 × 100 / 1000 = 6.58 V, alrededor del 3.2 por ciento de 208 V.",
+          "nec_ref": "Capítulo 9, Tabla 9"
+        },
+        {
+          "question": "¿Cuándo es la Tabla 9 la herramienta correcta en vez de la Tabla 8?",
+          "choices": [
+            "Cada circuito derivado de 120 V",
+            "Corridas cortas en una vivienda",
+            "Conductores grandes, corridas trifásicas largas o canalización de acero",
+            "Nunca — la Tabla 8 siempre basta"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La reactancia importa más en conductores grandes, corridas trifásicas largas y canalización de acero magnético: exactamente los casos para los que está construida la Tabla 9.",
+          "nec_ref": "Capítulo 9, Tabla 9"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "Capítulo 9, Tabla 9",
+        "Capítulo 9, Tabla 8"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C9-Table11",
@@ -1679,8 +2989,8 @@
       "article": "9",
       "section": "Tables 11(A) and 11(B)",
       "title": "Tablas 11(A) y 11(B) — cuánta energía puede entregar una fuente Clase 2 o Clase 3",
-      "plain_explanation": "Las Tablas 11(A) y 11(B) son los números detrás de las palabras «potencia limitada». Para circuitos Clase 2 y Clase 3, las tablas limitan lo que la fuente de energía puede entregar — voltaje máximo del circuito, corriente máxima y volt-amperios máximos — con una tabla para fuentes de corriente alterna y otra para fuentes de corriente continua. Cada tabla divide las fuentes en dos: fuentes inherentemente limitadas, cuya construcción las mantiene dentro de los límites bajo cualquier carga o falla, y fuentes que no son inherentemente limitadas y por tanto dependen de una protección contra sobrecorriente dimensionada desde la tabla. El Artículo 725 le envía aquí para decidir si un transformador o una fuente realmente es una fuente Clase 2; la afirmación «Clase 2» en una placa se verifica contra estas tablas, no se acepta por fe.",
-      "on_the_job": "Un transformador de control de puerta marcado Clase 2: la fila de la tabla para su voltaje es lo que hace verdadera esa marcación, y también lo que gana las libertades de método de cableado que el Capítulo 7 da a los circuitos Clase 2. Sin coincidencia con la tabla, no hay trato Clase 2: el circuito se cablea como energía.",
+      "plain_explanation": "Las Tablas 11(A) y 11(B) son los números detrás de las palabras «potencia limitada». Para circuitos Clase 2 y Clase 3, las tablas limitan lo que la fuente de energía puede entregar — voltaje máximo del circuito, corriente máxima y volt-amperios máximos — con una tabla para fuentes de corriente alterna y otra para fuentes de corriente continua. Cada tabla divide las fuentes en dos: fuentes inherentemente limitadas, cuya construcción las mantiene dentro de los límites bajo cualquier carga o falla, y fuentes que no son inherentemente limitadas y por tanto dependen de una protección contra sobrecorriente dimensionada desde la tabla. El Artículo 725 le envía aquí para decidir si un transformador o una fuente realmente es una fuente Clase 2; la afirmación «Clase 2» en una placa se verifica contra estas tablas, no se acepta por fe.\n• El techo de placa bajo el que viven ambas clases: 100 VA máximo.\n• Una fuente Clase 2 que trabaja sobre 30 V queda limitada a 0.005 A — cinco miliamperios — y por eso la Clase 2 gana su reputación de segura contra descargas.\n• A 20 V una placa Clase 2 puede mostrar hasta 5.0 A; el techo de corriente baja a medida que el voltaje sube.",
+      "on_the_job": "Un transformador de control de puerta marcado Clase 2: la fila de la tabla para su voltaje es lo que hace verdadera esa marcación, y también lo que gana las libertades de método de cableado que el Capítulo 7 da a los circuitos Clase 2. Sin coincidencia con la tabla, no hay trato Clase 2: el circuito se cablea como energía. Lea los VA de la placa antes de conectar los conductores: con 100 VA o menos la fuente puede ser una fuente Clase 2; un transformador de 250 VA no puede, diga lo que diga la cubierta del cable.",
       "sharma_note": "",
       "florida_note": "",
       "figure_idea": "Esqueleto de tabla: tablas de ca y cc, columnas de inherentemente limitada vs protegida por sobrecorriente.",
@@ -1692,7 +3002,114 @@
       "sharma_rule_ids": [],
       "verified": true,
       "prev_id": "C9-Table9",
-      "next_id": "C9-ANNEXD"
+      "next_id": "C9-ANNEXD",
+      "why_it_exists": "El cableado Clase 2 recibe libertades que ningún circuito de potencia recibe — métodos de cableado más ligeros y separación relajada — porque la fuente no puede entregar energía suficiente para iniciar un incendio o dar una descarga peligrosa. Ese trato solo se sostiene si la fuente se mantiene de verdad dentro de la tabla. Una fuente que puede pasar su fila es un circuito de potencia con etiqueta Clase 2, cableado con libertades Clase 2 que nunca ganó.",
+      "exam_trap": "La trampa es creer las palabras de la cubierta. «Clase 2» es una conclusión a la que las tablas llegan sobre una fuente, no una descripción del cable ni del marco del transformador. La versión del examen: una fuente que no es inherentemente limitada todavía no es una fuente Clase 2 hasta que se combina con una protección contra sobrecorriente dimensionada desde la tabla — la protección es parte de la fuente.",
+      "tables": [
+        {
+          "caption": "Las revisiones que deciden una fuente Clase 2 o Clase 3",
+          "headers": [
+            "Revisión",
+            "Clase 2",
+            "Clase 3"
+          ],
+          "rows": [
+            [
+              "Capacidad de placa, máx.",
+              "100 VA",
+              "100 VA"
+            ],
+            [
+              "Inherentemente limitada",
+              "Por construcción",
+              "Por construcción"
+            ],
+            [
+              "No inherentemente limitada",
+              "Fuente + OCP",
+              "Fuente + OCP"
+            ],
+            [
+              "Corriente sobre 30 V",
+              "0.005 A máx.",
+              "Según la fila"
+            ]
+          ],
+          "note": "Valores mostrados para fuentes de ca, Tabla 11(A); las fuentes de cc leen la Tabla 11(B). OCP = protección contra sobrecorriente dimensionada desde la tabla."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-Table11-power-limits.svg",
+          "alt": "Dos paneles que comparan las fuentes inherentemente limitadas, cuya construcción mantiene los límites y que no necesitan protección contra sobrecorriente, con las fuentes que no son inherentemente limitadas y deben combinarse con una protección contra sobrecorriente dimensionada desde la tabla, bajo un techo de placa de 100 volt-amperios para Clase 2 y Clase 3.",
+          "caption": "Dos tipos de fuentes, un techo de placa de 100 VA.",
+          "w": 900,
+          "h": 1250
+        }
+      ],
+      "inspection_fails": [
+        "«Clase 2» tomado de la cubierta del cable o del marco del transformador sin verificar la fuente contra las Tablas 11(A)/(B).",
+        "Una fuente que no es inherentemente limitada instalada sin protección contra sobrecorriente — el segundo camino de la tabla nunca se completó.",
+        "Transformador de reemplazo sobredimensionado conectado a un tendido Clase 2 — VA de placa sobre el techo de 100 VA, trato Clase 2 mantenido."
+      ],
+      "page_quiz": [
+        {
+          "question": "Si una fuente realmente es una fuente Clase 2 lo decide:",
+          "choices": [
+            "La marcación de la cubierta del cable",
+            "Las Tablas 11(A) y 11(B)",
+            "La carga que alimenta",
+            "Su tamaño físico"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El Artículo 725 le envía a las Tablas 11(A) y 11(B); la afirmación «Clase 2» se verifica contra las tablas, no se acepta por fe.",
+          "nec_ref": "Tables 11(A) and 11(B)"
+        },
+        {
+          "question": "La capacidad máxima de placa para una fuente de energía Clase 2 o Clase 3 es:",
+          "choices": [
+            "250 VA",
+            "100 VA",
+            "1000 VA",
+            "Sin límite"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Ambas clases viven bajo un techo de placa de 100 VA en las Tablas 11(A) y 11(B).",
+          "nec_ref": "Table 11(A)"
+        },
+        {
+          "question": "Una fuente que no es inherentemente limitada se vuelve una fuente Clase 2 cuando:",
+          "choices": [
+            "Está etiquetada Clase 2",
+            "Se combina con una protección contra sobrecorriente dimensionada desde la tabla",
+            "El circuito es menor de 30 V",
+            "Alimenta un termostato"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Las fuentes que no son inherentemente limitadas dependen de una protección contra sobrecorriente dimensionada desde la tabla — la protección es parte de la fuente.",
+          "nec_ref": "Table 11(A)"
+        }
+      ],
+      "code_refs": [
+        "Table 11(A)",
+        "Table 11(B)",
+        "725.121"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "Class 2 and Class 3 power source nameplate maximum is 100 VA; Class 2 current over 30 V is limited to 0.005 A; nameplate current is 5.0 A at 20 V and falls as voltage rises",
+          "source": "EC&M, Know the Current (Tables 11(A)/(B) explained)",
+          "url": "https://www.ecmag.com/magazine/articles/article-detail/codes-standards-know-current"
+        },
+        {
+          "claim": "Tables 11(A) and 11(B) limitation structure: inherently limited sources need no overcurrent protection; sources not inherently limited rely on overcurrent protection sized from the table",
+          "source": "Reproduction of NEC Tables 11(A) and 11(B), Chapter 9 (mailing-list archive)",
+          "url": "https://www.mail-archive.com/emc-pstc@listserv.ieee.org/msg26885.html"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich": 1
     },
     {
       "article": "9",
@@ -1701,8 +3118,8 @@
       "florida_note": "El Anexo D es informativo. Las reglas obligatorias de cálculo son los artículos del Capítulo 2 tal como fueron adoptados en Florida; el anexo solo los ilustra.",
       "id": "C9-ANNEXD",
       "next_id": "C9-ANNEXI",
-      "on_the_job": "Cuando toque hacer un cálculo de carga, trabájalo en el orden del anexo — cargas generales, luego los aparatos y motores nombrados, luego la demanda, luego el tamaño de la acometida — y guarda la aritmética con el estimado para que Mike pueda volver a correrla. Si tu total y el patrón del anexo no coinciden, los datos están mal en alguna parte, no el patrón.",
-      "plain_explanation": "El Anexo D muestra los artículos de cálculo de carga trabajados de principio a fin en edificios de ejemplo: suma las cargas que los artículos nombran, aplica los factores de demanda que los artículos permiten, y llega a un tamaño de acometida o alimentador. El anexo de 2020 trabaja ocho familias de ejemplos: D1, una vivienda unifamiliar por el método estándar, con y sin aire acondicionado; D2, una vivienda unifamiliar por el método opcional de 220.82, incluyendo una versión con bomba de calor y calor de respaldo; D3, un edificio de tienda; D4 y D5, viviendas multifamiliares — D5 servida a 208Y/120 volts, trifásica; D6, demanda máxima para cargas de estufas según la Tabla 220.55; D7, conductores de acometida de vivienda dimensionados con 310.12; y D8, conductores y protección de motores bajo el Artículo 430. Este libro enseña ese método y te dirige al trabajo real en el Capítulo 2 — en especial los datos del cálculo opcional de vivienda que v1 lleva como tabla 220.82 — en vez de copiar un ejemplo del anexo. Un ejemplo de Sharma debe calcularse fresco desde la casa real, etiquetarse como ejemplo de Sharma y revisarse; un ejemplo del anexo es un patrón a seguir, no un número para tomar prestado para otro edificio.",
+      "on_the_job": "Trabaje un ejemplo de Sharma fresco desde la casa real, en el orden del anexo. Cargas generales primero, con el método opcional de 220.82(B): una casa de 2,000 sq ft toma 2,000 × 3 VA = 6,000 VA por área de piso, más dos circuitos de aparatos pequeños a 1,500 VA cada uno y el circuito de lavandería a 1,500 VA — 10,500 VA antes de la demanda. Los primeros 10 kVA cuentan al 100 por ciento y los 500 VA restantes al 40 por ciento, así que la demanda de cargas generales es 10,200 VA; la calefacción y el aire acondicionado se seleccionan después por separado bajo 220.82(C), solo la selección mayor. Guarde la aritmética con el estimado para que Mike pueda volver a correrla. Si su total y el patrón del anexo no coinciden, los datos están mal en alguna parte, no el patrón.",
+      "plain_explanation": "El Anexo D muestra los artículos de cálculo de carga trabajados de principio a fin en edificios de ejemplo: sume las cargas que los artículos nombran, aplique los factores de demanda que los artículos permiten y llegue a un tamaño de acometida o alimentador. El anexo de 2020 trabaja ocho familias de ejemplos:\n• D1 — una vivienda unifamiliar por el método estándar, con y sin aire acondicionado.\n• D2 — una vivienda unifamiliar por el método opcional de 220.82, incluyendo una versión con bomba de calor y calor de respaldo.\n• D3 — un edificio de tienda.\n• D4 y D5 — viviendas multifamiliares; D5 se sirve a 208Y/120 volts, trifásica.\n• D6 — demanda máxima para cargas de estufas según la Tabla 220.55.\n• D7 — conductores de acometida de vivienda dimensionados con 310.12.\n• D8 — conductores y protección de motores bajo el Artículo 430.\nEste libro enseña ese método y le dirige al trabajo real en el Capítulo 2 — en especial el cálculo opcional de vivienda de 220.82 — en vez de copiar un ejemplo del anexo. Un ejemplo de Sharma debe calcularse fresco desde la casa real, etiquetarse como ejemplo de Sharma y revisarse; un ejemplo del anexo es un patrón a seguir, no un número para tomar prestado para otro edificio.",
       "prev_id": "C9-Table11",
       "related_ids": [
         "220.82",
@@ -1713,7 +3130,117 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Anexo D — ejemplos trabajados de cálculo de carga",
-      "verified": true
+      "verified": true,
+      "figures": [
+        {
+          "src": "fig/c9/C9-ANNEXD-flow.svg",
+          "alt": "Diagrama de flujo del método del Anexo D desde la lista de cargas, pasando por los factores de demanda, hasta un tamaño de acometida o alimentador, un panel que apunta de vuelta al Capítulo 2 y al Artículo 220, y un ejemplo trabajado de Sharma del paso de demanda de cargas generales de 220.82(B) para una casa de 2,000 pies cuadrados que llega a 10,200 VA.",
+          "caption": "El patrón del anexo: lista, demanda, tamaño — las reglas viven en el Capítulo 2.",
+          "w": 900,
+          "h": 1460
+        }
+      ],
+      "code_refs": [
+        "Annex D",
+        "220.82",
+        "220.82(B)",
+        "220.82(C)",
+        "Table 220.55",
+        "310.12",
+        "Article 430"
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich_sources": [],
+      "rich": 1,
+      "why_it_exists": "Las acometidas se dimensionan desde cálculos, no desde lo que llevó la casa anterior. Los ejemplos trabajados existen para que el método se mantenga visible: cada carga que los artículos nombran, en el orden de los artículos, con solo los factores de demanda que los artículos permiten. Si omite una carga nombrada o inventa un factor de demanda, la acometida queda del tamaño equivocado con un papeleo que se ve seguro detrás.",
+      "inspection_fails": [
+        "Tamaño de acometida en el juego de permisos copiado de un ejemplo del anexo en vez de calculado desde las cargas reales del edificio.",
+        "Cálculo de carga al que le falta una carga que los artículos nombran — sin circuito de lavandería, o un aparato fijo dejado fuera de la lista.",
+        "Factor de demanda aplicado a una carga para la que el artículo no lo permite."
+      ],
+      "exam_trap": "La trampa: sacar un número terminado de un ejemplo del anexo porque la casa «se ve más o menos igual». Los ejemplos son patrones, no respuestas — el total de D1 pertenece a la casa de D1. Un tamaño de acometida de Sharma se calcula desde las cargas reales del edificio real y se etiqueta como ejemplo de Sharma.",
+      "tables": [
+        {
+          "caption": "Anexo D — las ocho familias de ejemplos",
+          "headers": [
+            "Ejemplo",
+            "Edificio y método"
+          ],
+          "rows": [
+            [
+              "D1",
+              "Vivienda unifamiliar, método estándar, con y sin aire acondicionado"
+            ],
+            [
+              "D2",
+              "Vivienda unifamiliar, método opcional 220.82, incl. bomba de calor con calor de respaldo"
+            ],
+            [
+              "D3",
+              "Edificio de tienda"
+            ],
+            [
+              "D4",
+              "Vivienda multifamiliar"
+            ],
+            [
+              "D5",
+              "Vivienda multifamiliar a 208Y/120 V, trifásica"
+            ],
+            [
+              "D6",
+              "Demanda máxima para cargas de estufas, Tabla 220.55"
+            ],
+            [
+              "D7",
+              "Conductores de acometida de vivienda dimensionados con 310.12"
+            ],
+            [
+              "D8",
+              "Conductores y protección de motores, Artículo 430"
+            ]
+          ]
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "El Anexo D es:",
+          "choices": [
+            "Un juego de reglas obligatorias de cálculo",
+            "Ejemplos trabajados informativos de los artículos de cálculo del Capítulo 2",
+            "Una enmienda de Florida al Artículo 220",
+            "Un sustituto de hacer el cálculo"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El Anexo D es informativo. Trabaja los artículos obligatorios del Capítulo 2 de principio a fin en edificios de ejemplo; los artículos traen las reglas.",
+          "nec_ref": "Annex D"
+        },
+        {
+          "question": "En el método opcional, el paso de demanda de cargas generales de 220.82(B) es:",
+          "choices": [
+            "Todo al 100 por ciento",
+            "Primeros 10 kVA al 100 por ciento, el resto al 40 por ciento",
+            "Todo al 40 por ciento",
+            "Primeros 10 kVA al 40 por ciento, el resto al 100 por ciento"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Los primeros 10 kVA de las cargas generales se toman a valor completo y el resto al 40 por ciento. La calefacción y el aire acondicionado se seleccionan por separado bajo 220.82(C).",
+          "nec_ref": "220.82(B)"
+        },
+        {
+          "question": "El ejemplo D5 del Anexo D es:",
+          "choices": [
+            "Un edificio de tienda",
+            "Una vivienda multifamiliar servida a 208Y/120 V, trifásica",
+            "Una vivienda unifamiliar por el método estándar",
+            "Demanda de estufas de la Tabla 220.55"
+          ],
+          "answer_index": 1,
+          "explain_plain": "D4 y D5 son los ejemplos multifamiliares; D5 es el servido a 208Y/120 volts, trifásica. D3 es la tienda y D6 es el ejemplo de demanda de estufas.",
+          "nec_ref": "Annex D5"
+        }
+      ],
+      "uncertain": []
     },
     {
       "article": "9",
@@ -1722,8 +3249,8 @@
       "florida_note": "",
       "id": "C9-ANNEXI",
       "next_id": "C9-ANNEXES-INFORMATIVE",
-      "on_the_job": "Acude primero a la marca del equipo, segundo a la instrucción del fabricante, y a una tabla general recomendada solo cuando no exista ninguna de las dos — y usa una herramienta de torque, no una adivinanza al tacto, en los terminales de acometida y alimentadores.",
-      "plain_explanation": "El Anexo Informativo I se titula 'Recommended Tightening Torque Tables from UL Standard 486A-B', y reúne los valores recomendados de torque de apriete para conexiones en tres tablas: la Tabla I.1, para tornillos No. 10 y más grandes, incluidos los conectores split-bolt y otros; la Tabla I.2, para tornillos de cabeza ranurada más chicos que el No. 10, pensados para usarse con conductores de 8 AWG y menores; y la Tabla I.3, para tornillos con hueco Allen o cuadrado. Es un respaldo, no la primera parada: 110.14(D) hace que el torque indicado por el fabricante sea la regla, logrado por un medio aprobado, y las tablas del anexo sirven para la conexión donde el equipo no da ningún valor de torque y no se puede obtener ninguno del fabricante. Esta página no publica valores de torque — el torque sale de la marca del equipo, de las instrucciones del fabricante o de las tablas del anexo en el libro impreso, nunca de memoria.",
+      "on_the_job": "En un cambio de acometida de Sharma en Orlando, trabaje la escalera en orden. Lea primero las marcas del panel y de los terminales — el valor impreso ahí es la regla. ¿El equipo no trae marca? Vaya a las instrucciones del fabricante del equipo. Solo cuando no exista ninguna de las dos, las tablas del Anexo I en el libro impreso dan el número. Sea cual sea la fuente, el apriete se hace con una herramienta de torque, no al tacto, en los terminales de acometida y alimentadores — y la fuente del valor se anota en las notas del trabajo para que la siguiente persona pueda verificarla.",
+      "plain_explanation": "El Anexo Informativo I se titula «Recommended Tightening Torque Tables from UL Standard 486A-B». Reúne los valores recomendados de torque de apriete para conexiones en tres tablas:\n• Tabla I.1 — tornillos No. 10 y más grandes, incluidos los conectores split-bolt y otros.\n• Tabla I.2 — tornillos de cabeza ranurada más pequeños que el No. 10, pensados para conductores de 8 AWG y menores.\n• Tabla I.3 — tornillos con hueco Allen o cuadrado.\nEl anexo es un respaldo, no la primera parada. La sección 110.14(D) hace que el torque indicado por el fabricante sea la regla, logrado por un medio aprobado, como una herramienta de torque. Las tablas del anexo sirven solo para la conexión donde el equipo no da ningún valor de torque y no se puede obtener ninguno del fabricante. Esta página no publica valores de torque — el torque sale de la marca del equipo, de las instrucciones del fabricante o de las tablas del anexo en el libro impreso, nunca de memoria.",
       "prev_id": "C9-ANNEXD",
       "related_ids": [
         "C9-L-047",
@@ -1733,7 +3260,100 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Anexo I — torque de apriete recomendado",
-      "verified": true
+      "verified": true,
+      "figures": [
+        {
+          "src": "fig/c9/C9-ANNEXI-torque-ladder.svg",
+          "alt": "Escalera de decisión para el torque de apriete: paso 1 la marca del equipo, paso 2 las instrucciones del fabricante, paso 3 las tablas I.1, I.2 e I.3 del Anexo I solo como respaldo, con un panel rojo que prohíbe los valores de memoria y el apriete al tacto.",
+          "caption": "Escalera de torque: primero la marca, segundo el fabricante, el Anexo I al final.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "code_refs": [
+        "110.14(D)",
+        "Annex I",
+        "Table I.1",
+        "Table I.2",
+        "Table I.3"
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich_sources": [],
+      "rich": 1,
+      "why_it_exists": "Un terminal flojo es un calentador. Una conexión que no se aprieta al torque especificado se afloja con los ciclos de carga, se sobrecalienta y puede formar arcos o quemarse — así empiezan las acometidas falladas. Un terminal demasiado apretado no es mejor: deforma el conductor y el conector. El valor especificado existe para que la conexión quede apretada tal como fue probada y listada.",
+      "inspection_fails": [
+        "Terminal de alimentador encontrado flojo con el aislamiento decolorado por el calor — la conexión se apretó al tacto, sin herramienta de torque (110.14(D)).",
+        "Torque tomado de una tabla general recomendada donde la etiqueta del equipo indicaba su propio valor — la etiqueta manda (110.14(D)).",
+        "Conexión con conector split-bolt hecha sin obtener el valor de torque del fabricante y sin registro de torque — rehacer con herramienta de torque y documentar el valor."
+      ],
+      "exam_trap": "La trampa: acudir primero a la tabla del Anexo I porque está impresa al final del libro. El anexo es el último recurso. Donde la marca del equipo o el fabricante indica un torque, la sección 110.14(D) hace que ese valor sea el requisito, y una tabla general recomendada no lo anula.",
+      "tables": [
+        {
+          "caption": "Las tres tablas del Anexo I — valores de respaldo solamente",
+          "headers": [
+            "Tabla",
+            "Cubre",
+            "Úsela cuando"
+          ],
+          "rows": [
+            [
+              "Tabla I.1",
+              "Tornillos No. 10 y más grandes, incl. split-bolt y otros conectores",
+              "No existe valor del equipo ni del fabricante"
+            ],
+            [
+              "Tabla I.2",
+              "Tornillos de cabeza ranurada menores que el No. 10; conductores de 8 AWG y menores",
+              "No existe valor del equipo ni del fabricante"
+            ],
+            [
+              "Tabla I.3",
+              "Tornillos con hueco Allen o cuadrado",
+              "No existe valor del equipo ni del fabricante"
+            ]
+          ],
+          "note": "Esta página no publica valores de torque. Los valores salen de la marca del equipo, del fabricante o de estas tablas en el libro impreso."
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "La etiqueta de un panel indica el torque del terminal, y una tabla del Anexo I da un valor diferente. ¿Cuál manda?",
+          "choices": [
+            "La tabla del Anexo I",
+            "La etiqueta del equipo, según 110.14(D)",
+            "El valor que sea mayor",
+            "El valor que sea menor"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La sección 110.14(D) hace que el torque indicado por el fabricante sea la regla. El Anexo I es un respaldo para las conexiones donde no se da ningún valor.",
+          "nec_ref": "110.14(D)"
+        },
+        {
+          "question": "¿Cuándo aplican las tablas de torque del Anexo I?",
+          "choices": [
+            "En cada terminación",
+            "Solo en conductores de acometida",
+            "Solo cuando ni el equipo ni el fabricante dan un valor",
+            "Solo en conductores de aluminio"
+          ],
+          "answer_index": 2,
+          "explain_plain": "El Anexo I reúne valores recomendados para la conexión donde el equipo no da torque y no se puede obtener ninguno del fabricante.",
+          "nec_ref": "Annex I, 110.14(D)"
+        },
+        {
+          "question": "La Tabla I.2 cubre ¿qué tornillos?",
+          "choices": [
+            "Tornillos No. 10 y más grandes",
+            "Tornillos de cabeza ranurada menores que el No. 10, para conductores de 8 AWG y menores",
+            "Tornillos con hueco Allen",
+            "Conectores split-bolt"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La Tabla I.2 es para tornillos de cabeza ranurada menores que el No. 10, pensados para conductores de 8 AWG y menores. La Tabla I.1 cubre el No. 10 y más grandes; la I.3, los huecos Allen y cuadrados.",
+          "nec_ref": "Annex I, Table I.2"
+        }
+      ],
+      "uncertain": []
     },
     {
       "article": "9",
@@ -1745,8 +3365,8 @@
       "florida_note": "Si la ordenanza de adopción de una jurisdicción de Florida adopta expresamente un anexo o una enmienda local, esa acción local gobierna para esa jurisdicción — revisa con la AHJ.",
       "id": "C9-ANNEXES-INFORMATIVE",
       "next_id": null,
-      "on_the_job": "Cuando alguien te cita un anexo en un trabajo, haz la pregunta decisiva: ¿eso está en una sección obligatoria, o en un anexo o una nota? Ambos pueden ser buena práctica; solo uno puede exigirse tal como está escrito, y saber cuál te evita discutir el punto equivocado con un inspector.",
-      "plain_explanation": "Los anexos están detrás de los capítulos obligatorios como explicación, ejemplos y datos de referencia. A menos que una ordenanza de adopción adopte específicamente un anexo, su contenido no es un requisito que un inspector pueda citar como puede citar la sección numerada de un artículo — ese es el mismo estado que las cifras de caída de voltaje del 3 y 5 por ciento llevan como Notas Informativas. Este capítulo cubre los anexos que el trabajo de Sharma realmente toca — C para revisiones de llenado de un solo calibre, D para ejemplos de cálculo e I para torque. Las demás letras de anexos no se escribieron como páginas en esta pasada, porque sus letras y temas no se confirmaron contra el libro impreso de 2020, y este libro no inventa un anexo.\n\nActualización desde que esta página se escribió por primera vez: el Anexo B ya se añadió como una página breve (C9-ANNEXB), con el mismo alcance que los anexos de arriba — qué es, cuándo se usa, y sin tablas de ampacidad reproducidas. La Tabla 5A, las Tablas 11(A)/(B) y el Anexo B ahora tienen sus propias páginas. Siguen contenidos: la Tabla 10 (cableado), la Tabla 12 (límites de la fuente de energía PLFA), y las letras de anexos aún no escritas. Los anexos informativos de 2020 son A (normas de seguridad de productos), B (cálculo de ampacidad), C (tablas de llenado de un solo calibre), D (ejemplos), E (tipos de construcción), F (sistemas de energía de operaciones críticas), G (SCADA), H (administración y aplicación), I (tablas de torque de UL 486A-B) y J (normas ADA). El Anexo K es nuevo en el NEC 2023, así que el libro de 2020 no tiene ninguno.\n\nCAMBIO NEC 2023:\n• Annex K: Nuevo Anexo Informativo K, Uso de Equipo Eléctrico Médico en Viviendas y Ocupaciones Residenciales de Board-and-Care. (Así que el libro de 2020 correctamente no tiene ningún Anexo K.)\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "on_the_job": "Cuando alguien le cita un anexo en un trabajo, haga la pregunta decisiva: ¿eso está en una sección obligatoria, o en un anexo o una nota? Ambos pueden ser buena práctica; solo uno puede exigirse tal como está escrito, y saber cuál es le evita discutir el punto equivocado con un inspector.\n\nEjemplo: un inspector del condado de Marion revisa un rough-in con el Anexo C abierto en su teléfono. El atajo es una buena verificación, pero una corrección tiene que citar la Tabla 1 y la Tabla 4 — el anexo no puede sostenerla solo.",
+      "plain_explanation": "Los anexos están detrás de los capítulos obligatorios como explicación, ejemplos y datos de referencia. Un anexo es solo informativo: a menos que una ordenanza de adopción lo adopte específicamente, su contenido no es un requisito que un inspector pueda citar como puede citar la sección numerada de un artículo. Ese es el mismo estado que las cifras de caída de voltaje del 3 y el 5 por ciento llevan como Notas Informativas.\n• Lo que un anexo sí puede hacer: explicar una regla, desarrollar un ejemplo o llevar datos de referencia que la cuadrilla puede usar.\n• Lo que no puede hacer: añadir un requisito, ni quitar uno.\nEste capítulo cubre los anexos que el trabajo de Sharma realmente toca: el C para verificaciones de llenado con conductores del mismo tamaño, el D para ejemplos de cálculo y el I para torque. El Anexo B tiene su propia página (C9-ANNEXB), escrita de la misma manera: qué es, cuándo se usa, y sin tablas de ampacidad reproducidas. La Tabla 5A y las Tablas 11(A)/(B) también tienen ahora sus propias páginas.\nSiguen fuera de este libro: la Tabla 10 (trenzado), la Tabla 12 (límites de fuentes de poder PLFA) y las letras de anexo no listadas como cubiertas — no se confirmaron contra el libro impreso de 2020, y este libro no inventa un anexo.\nLos anexos informativos de 2020 van de la A a la J: A normas de seguridad de productos, B cálculo de ampacidad, C tablas de llenado del mismo tamaño, D ejemplos, E tipos de construcción, F sistemas de poder de operaciones críticas, G SCADA, H administración y aplicación, I tablas de torque de UL 486A-B, y J normas ADA. No hay Anexo K en el libro de 2020.",
       "prev_id": "C9-ANNEXI",
       "related_ids": [
         "C9-L-049",
@@ -1766,7 +3386,138 @@
           "url": "https://www.electricallicenserenewal.com/Electrical-Continuing-Education-Courses/NEC-Content.php?sectionID=1378",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Las cuadrillas y los inspectores hablan sin entenderse cuando nadie dice qué clase de texto está citando. La etiqueta de informativo resuelve la discusión antes de que empiece: un anexo puede enseñar y persuadir, pero una corrección tiene que rastrearse hasta una sección obligatoria. También funciona al revés: una buena práctica de un anexo — los ejemplos del Anexo D, los valores de torque del Anexo I — vale la pena seguirla aunque nadie pueda citarle por saltársela.",
+      "inspection_fails": [
+        "Una corrección discutida citando el Anexo D al inspector, en vez de responder a la sección obligatoria que la corrección realmente cita.",
+        "Los valores de torque del Anexo I saltados porque «el anexo no es obligatorio» — y después las terminales flojas se sobrecalientan. Informativo no significa inútil.",
+        "Una oferta presupuestada desde un ejemplo de un anexo tratado como mínimo de código, añadiendo trabajo que las secciones obligatorias nunca exigieron."
+      ],
+      "exam_trap": "¿El Anexo D desarrolla un ejemplo de una manera, así que esa manera es obligatoria? No. Los ejemplos muestran un camino que cumple a través de las secciones obligatorias; el requisito vive en las secciones, no en el ejemplo. Las tablas de llenado del Anexo C son lo mismo: acortan la Tabla 1 y la Tabla 4, no las reemplazan.",
+      "tables": [
+        {
+          "caption": "Los anexos informativos de 2020 — y qué hizo este libro con cada uno",
+          "headers": [
+            "Anexo",
+            "Qué contiene",
+            "En este libro"
+          ],
+          "rows": [
+            [
+              "A",
+              "Normas de seguridad de productos",
+              "No escrito"
+            ],
+            [
+              "B",
+              "Cálculo de ampacidad",
+              "C9-ANNEXB"
+            ],
+            [
+              "C",
+              "Tablas de llenado del mismo tamaño",
+              "C9-ANNEXC"
+            ],
+            [
+              "D",
+              "Ejemplos trabajados",
+              "C9-ANNEXD"
+            ],
+            [
+              "E",
+              "Tipos de construcción",
+              "No escrito"
+            ],
+            [
+              "F",
+              "Poder de operaciones críticas",
+              "No escrito"
+            ],
+            [
+              "G",
+              "SCADA",
+              "No escrito"
+            ],
+            [
+              "H",
+              "Administración y aplicación",
+              "No escrito"
+            ],
+            [
+              "I",
+              "Tablas de torque (UL 486A-B)",
+              "C9-ANNEXI"
+            ],
+            [
+              "J",
+              "Normas ADA",
+              "No escrito"
+            ]
+          ],
+          "note": "Letras y temas tal como se llevan en el libro de 2020. Las letras no confirmadas en el impreso se contuvieron, no se adivinaron."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-ANNEXES-INFORMATIVE-two-parts.svg",
+          "alt": "El libro dibujado en dos partes: los capítulos obligatorios 1 a 9 en azul sólido al frente, y los anexos informativos A a J, más claros, detrás de un divisor dorado que dice informativo, explica, no exige.",
+          "caption": "Capítulos obligatorios al frente, anexos informativos detrás del divisor.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Una corrección de un inspector cita solo un anexo informativo. ¿Cuál es el problema?",
+          "choices": [
+            "Ninguno — los anexos son totalmente exigibles",
+            "Un anexo no es exigible a menos que se adopte; la corrección tiene que rastrearse hasta una sección obligatoria",
+            "Los anexos aplican solo en Florida",
+            "La corrección necesita la firma de un segundo inspector"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El contenido de un anexo es informativo. A menos que una ordenanza de adopción adopte el anexo, una citación tiene que caer en una sección numerada.",
+          "nec_ref": "Anexos Informativos (general)"
+        },
+        {
+          "question": "¿Qué anexo lleva las tablas de torque tomadas de UL 486A-B?",
+          "choices": [
+            "Anexo C",
+            "Anexo D",
+            "Anexo I",
+            "Anexo K"
+          ],
+          "answer_index": 2,
+          "explain_plain": "El Anexo I es el anexo de torque. El Anexo K ni siquiera existe en el libro de 2020.",
+          "nec_ref": "Anexo I"
+        },
+        {
+          "question": "El Anexo K, sobre equipo eléctrico médico en viviendas, aparece por primera vez en qué edición?",
+          "choices": [
+            "NEC 2017",
+            "NEC 2020",
+            "NEC 2023",
+            "No existe"
+          ],
+          "answer_index": 2,
+          "explain_plain": "El Anexo K es nuevo en el NEC 2023. El libro de 2020 correctamente no tiene Anexo K.",
+          "nec_ref": "Anexo K (NEC 2023)"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• Annex K: Nuevo Anexo Informativo K, Uso de Equipo Eléctrico Médico en Viviendas y Ocupaciones Residenciales de Board-and-Care. (Así que el libro de 2020 correctamente no tiene ningún Anexo K.)\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "Anexos Informativos A–J",
+        "Anexo B",
+        "Anexo C",
+        "Anexo D",
+        "Anexo I",
+        "90.4"
+      ],
+      "uncertain": [
+        "Las letras y los temas de los anexos más allá de B, C, D e I se llevan del texto existente de esta página; todo lo no confirmado contra el NEC 2020 impreso sigue contenido — vea las notas (flags) de esta página. Verifique en el impreso."
+      ],
+      "rich_sources": [],
+      "rich": 1
     }
   ],
   "toc": [

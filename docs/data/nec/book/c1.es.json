@@ -218,8 +218,8 @@
       "article": "90",
       "section": "90.9",
       "title": "Unidades de medida",
-      "plain_explanation": "Las medidas en el Código se muestran con valores métricos y valores en pulgadas-libras. Cuando los dos no coinciden exactamente por redondeo o por una conversión suave, la sección explica qué valor se trata como el requisito. En el trabajo de campo en Estados Unidos, el valor en pulgadas-libras es el que las cuadrillas usan para medir.",
-      "on_the_job": "Mida en pulgadas y pies tal como está impreso en la regla que está usando. No convierta usted mismo una dimensión del Código para luego discutir en la inspección a partir de su conversión.",
+      "plain_explanation": "Cada medida en el Código está impresa dos veces: un valor métrico (SI) y un valor en pulgadas-libras. La pareja está unida por conversión suave: cada lado se redondea a un número limpio en su propio sistema, así que los dos no convierten exactamente:\n• La profundidad de espacio de trabajo de 3 ft se imprime como 900 mm. Convertida exactamente, 3 ft es 914 mm.\n• La profundidad de 3 ft 6 in se imprime como 1.0 m; la conversión exacta es 1.07 m.\n• La profundidad de 4 ft se imprime como 1.2 m; la conversión exacta es 1.22 m.\n• La altura libre de 6½ ft se imprime como 2.0 m; la conversión exacta es 1.98 m.\nNingún valor impreso es un error de imprenta, y una pulgada es exactamente 25.4 mm: el redondeo es deliberado. Construya con el valor impreso en la regla que está usando, en el sistema que lee su cinta. En el trabajo de campo en Estados Unidos, ese es el valor en pulgadas-libras.",
+      "on_the_job": "Mida en pulgadas y pies tal como está impreso en la regla que está usando. En un trabajo comercial pequeño, un juego de planos métricos muestra el espacio de trabajo del tablero en 900 mm; la cuadrilla mide 3 ft con la cinta, y es la misma caja que mide el inspector, porque el Código imprime la pareja junta. El error a evitar es convertir 900 mm de vuelta a 35.4 in y medir el número más corto. No convierta usted mismo una dimensión del Código para luego discutir en la inspección a partir de su conversión.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -227,7 +227,107 @@
       "verified": true,
       "prev_id": "C1-90.8",
       "next_id": "C1-ART-100",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Dos cuadrillas pueden medir la misma caja en sistemas distintos y ambas tener razón solo si todos construyen con la pareja impresa. Si cada instalador convierte por su cuenta, los redondeos se acumulan en ambas direcciones — los 900 mm de uno se vuelven las 35 in de otro — y la discusión aterriza en la inspección, donde la regla impresa iba a ganar de todos modos.",
+      "inspection_fails": [
+        "Espacio de trabajo medido en 35 in después de que el instalador convirtió por su cuenta los 900 mm impresos (90.9, 110.26(A)(1)).",
+        "Dimensión construida desde una conversión casera en vez del valor impreso en la regla (90.9).",
+        "Discusión en la inspección basada en un valor convertido en vez de la pareja impresa (90.9)."
+      ],
+      "exam_trap": "La trampa es hacer la matemática «correctamente»: convertir 3 ft a exactamente 914 mm y reprobar el plano métrico, o convertir 900 mm a 35.4 in y construir el espacio de trabajo corto. 90.9 existe para matar esa discusión. El valor impreso, en el sistema en que usted está midiendo, es el requisito: su calculadora no está por encima del libro.",
+      "tables": [
+        {
+          "caption": "Parejas impresas vs conversiones exactas (espacio de trabajo de 110.26)",
+          "headers": [
+            "Valor de la regla",
+            "El Código imprime",
+            "Exacto"
+          ],
+          "rows": [
+            [
+              "3 ft",
+              "900 mm",
+              "914 mm"
+            ],
+            [
+              "3 ft 6 in",
+              "1.0 m",
+              "1.07 m"
+            ],
+            [
+              "4 ft",
+              "1.2 m",
+              "1.22 m"
+            ],
+            [
+              "6½ ft",
+              "2.0 m",
+              "1.98 m"
+            ]
+          ],
+          "note": "Las conversiones suaves redondean a un número limpio en cada sistema — a veces por encima de la cifra exacta, a veces por debajo."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-90.9-soft-conversions.svg",
+          "alt": "Gráfico de barras que compara los valores métricos que el Código imprime para cuatro dimensiones del espacio de trabajo con sus conversiones exactas: 3 ft se imprime como 900 mm contra un exacto de 914 mm, 3 ft 6 in se imprime como 1.0 m contra 1.07 m, 4 ft se imprime como 1.2 m contra 1.22 m, y 6½ ft se imprime como 2.0 m contra 1.98 m.",
+          "caption": "La pareja impresa es el requisito — no su conversión.",
+          "w": 900,
+          "h": 1580
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "La Tabla 110.26(A)(1) imprime la profundidad de espacio de trabajo de 3 ft en métrico como:",
+          "choices": [
+            "914 mm",
+            "900 mm",
+            "1000 mm",
+            "750 mm"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La conversión suave del Código imprime 900 mm junto a 3 ft. La conversión exacta, 914 mm, no es el requisito impreso.",
+          "nec_ref": "90.9"
+        },
+        {
+          "question": "Su conversión exacta de una dimensión del Código no coincide con la pareja impresa. ¿Qué gobierna?",
+          "choices": [
+            "Su conversión, si la matemática está bien",
+            "El valor impreso en la regla, en el sistema en que usted mide",
+            "El valor que sea mayor",
+            "La preferencia del AHJ ese día"
+          ],
+          "answer_index": 1,
+          "explain_plain": "90.9 empareja los valores por conversión suave a propósito. Construya y mida con el valor impreso; no discuta desde una conversión hecha por usted.",
+          "nec_ref": "90.9"
+        }
+      ],
+      "code_refs": [
+        "90.9",
+        "Table 110.26(A)(1)",
+        "110.26(A)(3)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "La Tabla 110.26(A)(1) imprime las profundidades del espacio de trabajo como 900 mm (3 ft), 1.0 m (3 ft 6 in) y 1.2 m (4 ft)",
+          "source": "NFPA Link, NEC 110.26 / Tabla 110.26(A)(1)",
+          "url": "https://link.nfpa.org/public/pages/d681cd11-fd70-4670-888c-dcc00b697bb1"
+        },
+        {
+          "claim": "Altura libre de 110.26(A)(3) impresa como 6.5 ft (2.0 m)",
+          "source": "SparkShift, preparación de examen de maestro electricista de Arkansas, NEC 110.26(A)(3)",
+          "url": "https://sparkshift.app/test-prep/arkansas/master"
+        },
+        {
+          "claim": "1 pulgada = 25.4 milímetros exactamente (así que 3 ft convierte exactamente a 914 mm)",
+          "source": "NIST Handbook 44, Apéndice B — Unidades y sistemas de medida",
+          "url": "https://www.nist.gov/document/appb-18-hb44-finalpdf"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C1-ART-100",
@@ -994,8 +1094,8 @@
       "article": "110",
       "section": "110.2",
       "title": "Aprobación de equipos y conductores",
-      "plain_explanation": "Los conductores y equipos que el Código exige o permite deben estar aprobados, lo que en la práctica significa aceptables para el AHJ. La aprobación normalmente se demuestra mediante el listado y rotulado por un laboratorio de pruebas calificado. Un equipo sin ruta hacia la aprobación no se vuelve aceptable porque era barato, estaba disponible o ya venía en el camión.",
-      "on_the_job": "Verifique las aprobaciones al momento de pedir y de recibir. Un sustituto no listado descubierto en el trim cuesta un viaje de regreso y puede detener todo el trabajo.",
+      "plain_explanation": "Los conductores y equipos que el Código exige o permite son aceptables solo si están aprobados. Aprobado es una palabra del Artículo 100: significa aceptable para la autoridad con jurisdicción (AHJ). En la práctica, la aprobación se demuestra mediante el listado y rotulado por un laboratorio de pruebas calificado, y las cuatro palabras de la familia no son intercambiables:\n• Aprobado — aceptable para el AHJ.\n• Listado — el producto aparece en la lista publicada de productos evaluados de la organización de pruebas.\n• Rotulado — la organización de pruebas ha fijado su rótulo al producto.\n• Identificado — reconocible como adecuado para el uso específico en cuestión.\nUn equipo sin ruta hacia la aprobación no se vuelve aceptable porque era barato, estaba disponible o ya venía en el camión. Un producto puede estar bien hecho y aun así no estar listado, y un breaker que encaja físicamente en un tablero ajeno no queda por eso identificado para ese tablero.",
+      "on_the_job": "Verifique las aprobaciones al momento de pedir y de recibir, no en el trim. La pregunta del breaker se resuelve antes de que el camión salga: equipo Siemens para trabajo nuevo (S-02), y en un tablero existente solo los breakers listados para ese tablero — un tablero Square D recibe breakers Square D (S-03), aunque otra marca encaje y «funcione». Un sustituto no listado descubierto en el trim cuesta un viaje de regreso y puede detener todo el trabajo.",
       "sharma_note": "S-02 y S-03 mantienen a Sharma dentro de esta regla: equipo Siemens para trabajo nuevo, y solo breakers listados para el tablero en tableros existentes.",
       "figure_idea": "",
       "related_ids": [
@@ -1010,7 +1110,98 @@
       "sharma_rule_ids": [
         "S-02",
         "S-03"
-      ]
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "El listado es la evidencia de que un producto fue probado contra los peligros que encontrará: calor, corriente de falla, flama y cómo se comporta cuando falla. El equipo no aprobado no tiene una historia de falla evaluada, así que cuando falla, falla como sorpresa: el breaker que nunca dispara, el driver que se cocina dentro de un techo cerrado. La aceptación del AHJ también es la puerta práctica hacia una inspección aprobada y un edificio energizado.",
+      "inspection_fails": [
+        "Breaker de otra marca instalado en un tablero para el cual no está listado ni identificado (110.2).",
+        "Luminaria o driver no listado, sin marca de un laboratorio calificado, instalado donde se exige listado (110.2).",
+        "Equipo en servicio con su rótulo de listado retirado o ilegible, de modo que la aprobación no puede verificarse (110.2).",
+        "Equipo listado usado de una manera que su listado no cubre — no identificado para ese uso (110.2)."
+      ],
+      "exam_trap": "La trampa es «encaja y funciona, así que está aprobado». El encaje es mecánico. La aprobación es la aceptación del AHJ, demostrada normalmente por el listado y el rotulado, e identificado es específico del uso: el mismo breaker puede estar listado como producto y aun así no estar identificado para el tablero en el que fue forzado.",
+      "tables": [
+        {
+          "caption": "La familia de la aprobación (Artículo 100)",
+          "headers": [
+            "Término",
+            "Significa"
+          ],
+          "rows": [
+            [
+              "Aprobado",
+              "Aceptable para el AHJ"
+            ],
+            [
+              "Listado",
+              "En la lista publicada de productos evaluados del laboratorio"
+            ],
+            [
+              "Rotulado",
+              "El rótulo del laboratorio está fijado al producto"
+            ],
+            [
+              "Identificado",
+              "Reconocible como adecuado para el uso específico"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-110.2-approval-path.svg",
+          "alt": "Flujo de aprobación para NEC 110.2: el equipo debe estar listado y rotulado por un laboratorio de pruebas calificado e identificado para su uso específico antes de que el AHJ lo acepte como aprobado; el equipo sin listado, o el equipo listado forzado en un tablero para el cual no está identificado, no tiene ruta hacia la aprobación y no debe instalarse.",
+          "caption": "El listado y el rotulado son la ruta normal hacia aprobado.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "En el NEC, «aprobado» significa:",
+          "choices": [
+            "Fabricado por un fabricante importante",
+            "Aceptable para la autoridad con jurisdicción",
+            "Vendido por una casa de suministros eléctricos",
+            "Con cualquier calcomanía de fábrica"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Aprobado es una definición del Artículo 100: aceptable para el AHJ. El listado y el rotulado son la forma normal de demostrar esa aceptación.",
+          "nec_ref": "110.2"
+        },
+        {
+          "question": "Un breaker encaja en un tablero de otra marca y funciona. ¿Puede quedarse?",
+          "choices": [
+            "Sí — el encaje es aprobación",
+            "Sí, si la capacidad en amperios coincide",
+            "No — debe estar listado e identificado para ese tablero",
+            "Sí, solo en trabajo residencial"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Un breaker que encaja físicamente en un tablero ajeno no está identificado para él. S-03 de Sharma: en el tablero van solo los breakers listados para ese tablero.",
+          "nec_ref": "110.2"
+        },
+        {
+          "question": "¿Cuándo debe verificarse la aprobación?",
+          "choices": [
+            "En la inspección final",
+            "Al momento de pedir y de recibir",
+            "Después de energizar el edificio",
+            "Solo en trabajo comercial"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Un sustituto no listado encontrado en el trim cuesta un viaje de regreso y puede detener el trabajo. Verifique cuando se pide el material y cuando llega.",
+          "nec_ref": "110.2"
+        }
+      ],
+      "code_refs": [
+        "110.2",
+        "110.3(B)",
+        "Article 100"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C1-110.3",
@@ -1227,8 +1418,8 @@
       "article": "110",
       "section": "110.11",
       "title": "Agentes deteriorantes",
-      "plain_explanation": "El equipo no debe quedar en condiciones que lo destruyan — humedad, gases o líquidos corrosivos, calor, daño mecánico y agentes similares — a menos que esté identificado para ese ambiente. El equipo ordinario en un ambiente corrosivo o mojado falla temprano y puede fallar de forma peligrosa.",
-      "on_the_job": "El aire costero de Florida, los cuartos de equipos de piscina, el almacenamiento de fertilizantes y los lavados de autos son las trampas habituales. Identifique primero el ambiente y luego elija equipo identificado para él.",
+      "plain_explanation": "El equipo no debe quedar en condiciones que lo destruyan. A menos que el equipo esté identificado para el ambiente de operación, no se instala donde quedará expuesto a:\n• Lugares húmedos o mojados.\n• Gases, emanaciones, vapores, líquidos u otros agentes que tengan un efecto deteriorante sobre el equipo o los conductores.\n• Temperaturas excesivas.\nEl equipo ordinario en un ambiente corrosivo o mojado falla temprano, y puede fallar de forma peligrosa. La respuesta no es pintura ni cinta; la respuesta es equipo identificado para ese ambiente, lo que en la práctica significa el tipo de gabinete marcado en el equipo. Los tipos que Sharma encuentra más seguido, según 110.28:\n• Tipo 1 — interiores, uso general.\n• Tipo 3R — exteriores, a prueba de lluvia; el tipo estándar de los desconectores y gabinetes de medidor en casas.\n• Tipo 4 — hermético al agua, incluso contra agua dirigida con manguera.\n• Tipo 4X — desempeño Tipo 4 más resistencia a la corrosión, para lavado a presión y trabajo costero.\n• Tipo 12 — industrial interior, contra polvo y líquidos no corrosivos que gotean.",
+      "on_the_job": "La costa de Florida es el caso de prueba permanente. En una llamada de servicio en una casa frente a la playa en el condado de Brevard, el desconector en la pared del lado del océano estaba oxidado hasta atravesar la costura inferior tras unas temporadas de aire salado, con corrosión verde en las zapatas. Eso es un reemplazo, no una limpieza: Tipo 3R mínimo afuera, y Tipo 4X donde el agua de manguera o los químicos de piscina se suman a la sal. En el cuarto de equipos de la piscina de la misma casa, el cloro almacenado junto al tablero había hecho el mismo trabajo a través del aire. Identifique primero el ambiente y luego elija equipo identificado para él.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1238,7 +1429,109 @@
       "verified": true,
       "prev_id": "C1-110.10",
       "next_id": "C1-110.12",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "La corrosión no se detiene en la cubierta del gabinete. Ataca las terminales y zapatas, eleva la resistencia en cada unión y convierte una conexión sana en un calentador. La humedad y los vapores químicos trabajan igual desde adentro, atacando el aislamiento y las barras. El equipo que se pudre en su sitio falla años antes, y la falla suele ser calor o una falla a tierra, no una desconexión limpia.",
+      "inspection_fails": [
+        "Tablero o desconector interior Tipo 1 montado en una pared exterior costera, oxidado en las costuras y terminales (110.11).",
+        "Desconector ordinario en un cuarto de equipos de piscina con cloro almacenado en el mismo cuarto; gabinete y zapatas corroídos (110.11).",
+        "Equipo interior estándar en un cuarto de almacenamiento de fertilizantes o en un lavado de autos, atacado por vapor químico y agua dirigida con manguera (110.11).",
+        "Equipo montado donde nunca se tomaron en cuenta las temperaturas excesivas, sin verificar que esté identificado para el calor (110.11)."
+      ],
+      "exam_trap": "La trampa es tratar la identificación como un recubrimiento: rociarlo con pintura antioxidante y llamarlo identificado para la costa. La identificación es la clasificación del fabricante, mostrada por el tipo marcado en el gabinete. La pintura no convierte una caja Tipo 1 en una Tipo 4X, y tampoco lo hace el aspecto de acero inoxidable. Si el tipo marcado no cubre la exposición, el equipo no pertenece ahí.",
+      "tables": [
+        {
+          "caption": "Tipos de gabinete según la exposición (110.28)",
+          "headers": [
+            "Tipo",
+            "Dónde",
+            "Protege contra"
+          ],
+          "rows": [
+            [
+              "Tipo 1",
+              "Interiores",
+              "Contacto y suciedad que cae"
+            ],
+            [
+              "Tipo 3R",
+              "Exteriores",
+              "Lluvia y aguanieve"
+            ],
+            [
+              "Tipo 4",
+              "Áreas mojadas",
+              "Agua dirigida con manguera"
+            ],
+            [
+              "Tipo 4X",
+              "Costa / lavado",
+              "Agua más corrosión"
+            ],
+            [
+              "Tipo 12",
+              "Industrial interior",
+              "Polvo y líquidos que gotean"
+            ]
+          ],
+          "note": "El tipo marcado en el gabinete es la clasificación — nunca la pintura ni la forma."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-110.11-environments.svg",
+          "alt": "Tres ubicaciones con el tipo de gabinete que cada una necesita — un cuarto interior seco con Tipo 1, una pared exterior costera con Tipo 3R o 4X, un cuarto de equipos de piscina con Tipo 4X — y una caja interior Tipo 1 oxidándose en el cuarto de piscina como la instalación incorrecta.",
+          "caption": "Iguale el tipo de gabinete marcado con la exposición real.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Se va a instalar un desconector en un cuarto de equipos de piscina donde se almacena cloro. ¿Qué exige 110.11?",
+          "choices": [
+            "Cualquier desconector, siempre que quede elevado del piso",
+            "Equipo identificado para ese ambiente de operación",
+            "Un desconector interior estándar con una capa de pintura antioxidante",
+            "Nada especial; un cuarto de piscina es un lugar seco"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El vapor de cloro es un agente deteriorante. El equipo debe estar identificado para el ambiente — en la práctica, un gabinete resistente a la corrosión como el Tipo 4X.",
+          "nec_ref": "110.11"
+        },
+        {
+          "question": "¿Qué tipo de gabinete agrega resistencia a la corrosión al desempeño hermético (Tipo 4)?",
+          "choices": [
+            "Tipo 1",
+            "Tipo 3R",
+            "Tipo 4X",
+            "Tipo 12"
+          ],
+          "answer_index": 2,
+          "explain_plain": "El Tipo 4X es el desempeño hermético del Tipo 4 más resistencia a la corrosión — la elección para lavado y costa en 110.28.",
+          "nec_ref": "110.28"
+        },
+        {
+          "question": "El aire salado en una casa costera de Florida cuenta como:",
+          "choices": [
+            "Solo un problema cosmético",
+            "Un agente deteriorante para el cual el equipo debe estar identificado",
+            "Un problema solo después de que aparece óxido visible",
+            "Algo que se resuelve pintando el gabinete cada año"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El aire salado corroe gabinetes y terminales. 110.11 exige equipo identificado para el ambiente en el que vivirá.",
+          "nec_ref": "110.11"
+        }
+      ],
+      "code_refs": [
+        "110.11",
+        "110.28",
+        "Table 110.28"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C1-110.12",
@@ -1447,8 +1740,8 @@
       "article": "110",
       "section": "110.18",
       "title": "Partes que producen arcos",
-      "plain_explanation": "Las partes de equipos eléctricos que pueden producir arcos en operación normal — contactos de interruptores y breakers, escobillas de motores y dispositivos similares — deben estar encerradas o mantenerse separadas y aisladas de material combustible. Un arco es esperado dentro de un equipo debidamente encerrado; se vuelve un problema de incendio cuando las partes que producen arcos quedan abiertas cerca de material que puede encenderse.",
-      "on_the_job": "Mantenga intactos los gabinetes alrededor de los equipos de interrupción, y reporte para corrección cualquier equipo que produzca arcos o chispas encontrado abierto o montado pegado contra almacenamiento combustible.",
+      "plain_explanation": "Algunas partes de los equipos eléctricos producen arcos en operación normal. Los contactos de interruptores y breakers abren bajo carga, los contactores entran y salen, las escobillas de los motores rozan un conmutador: los arcos, las chispas y a veces el metal fundido son parte de cómo trabaja el equipo. 110.18 no intenta prohibir el arco. Controla dónde puede ocurrir el arco:\n• Las partes que en operación ordinaria producen arcos, chispas, llamas o metal fundido deben estar encerradas, o separadas y aisladas de todo material combustible.\n• Un arco dentro de un equipo debidamente encerrado es esperado, y queda contenido.\n• La misma parte que produce arcos, abierta cerca de material que puede encenderse, es un incendio esperando su combustible.\nNo hay ninguna distancia en pulgadas en esta sección. La prueba es una condición: encerrado, o separado y aislado.",
+      "on_the_job": "En una llamada de servicio en un garaje de Marion Oaks, el patrón es conocido: un contactor o un interruptor abierto viejo con la tapa perdida hace tiempo, ciclando una carga, con latas de pintura y cartón apilados contra la misma pared. Mantenga intactos los gabinetes alrededor de los equipos de interrupción. Vuelva a poner la tapa o reemplace el dispositivo, retire el almacenamiento del equipo, y reporte para corrección cualquier equipo que produzca arcos o chispas encontrado abierto o montado pegado contra almacenamiento combustible, antes de irse.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -1456,7 +1749,86 @@
       "verified": true,
       "prev_id": "C1-110.17",
       "next_id": "C1-110.19",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Cada operación de interrupción lanza un evento de plasma pequeño y muy caliente. Dentro de un gabinete, muere contra el metal. Al aire libre — junto a cartón, pintura, solventes o artículos domésticos almacenados — es una fuente de ignición que se dispara con horario, cada vez que el equipo cicla. Los garajes y cuartos de almacenamiento de Florida ponen el combustible y las partes que producen arcos a unos pocos pies de distancia, que es exactamente la pareja que esta regla separa.",
+      "inspection_fails": [
+        "Tapa de contactor o interruptor faltante, partes que producen arcos expuestas junto a pintura y cartón almacenados (110.18).",
+        "Equipo abierto que produce arcos montado pegado contra almacenamiento combustible, sin separación ni aislamiento (110.18).",
+        "Motor de escobillas operando abierto junto a almacenamiento de heno, paja o alimento en un establo (110.18).",
+        "Gabinete dañado dejado en servicio, de modo que las partes que producen arcos ya no quedan encerradas (110.18)."
+      ],
+      "exam_trap": "La trampa es buscar un número: «¿cuántas pulgadas desde los combustibles exige 110.18?» No da ninguna: la regla es una condición, no una dimensión. La segunda trampa es llamar defectos a las partes que producen arcos por sí mismas. Son normales en los equipos de interrupción; la violación es dejarlas abiertas junto al combustible, no el arco en sí.",
+      "tables": [
+        {
+          "caption": "Partes que producen arcos que usted sí encontrará",
+          "headers": [
+            "Parte",
+            "Por qué produce arcos"
+          ],
+          "rows": [
+            [
+              "Contactos de interruptores y breakers",
+              "Abren bajo carga"
+            ],
+            [
+              "Contactores y relés",
+              "Entran y salen bajo carga"
+            ],
+            [
+              "Escobillas de motores",
+              "Rozan el conmutador"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-110.18-arcing-parts.svg",
+          "alt": "Panel de comparación para NEC 110.18: a la izquierda un interruptor encerrado con su tapa puesta y el arco contenido dentro del gabinete, marcado correcto; a la derecha un contactor abierto sin tapa, echando chispas junto a latas de pintura y cajas de cartón apiladas, marcado como violación.",
+          "caption": "El mismo arco: contenido a la izquierda, abierto al combustible a la derecha.",
+          "w": 900,
+          "h": 1480
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Qué exige 110.18 de las partes que producen arcos en operación normal?",
+          "choices": [
+            "Deben retirarse de servicio",
+            "Deben estar encerradas, o separadas y aisladas de todo material combustible",
+            "Deben estar a por lo menos 36 in de cualquier combustible",
+            "Deben recubrirse con pintura ignífuga"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La regla establece una condición, no una distancia: encerradas, o separadas y aisladas de todo material combustible.",
+          "nec_ref": "110.18"
+        },
+        {
+          "question": "¿Cuál de estas es una parte que produce arcos en operación ordinaria?",
+          "choices": [
+            "Un cuerpo de conduit",
+            "Las escobillas de motores y los contactos de interruptores",
+            "Un empalme con conector de rosca",
+            "Las barras de un tablero con el frente muerto puesto"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Los contactos abren bajo carga y las escobillas rozan un conmutador: ambos producen arcos, chispas o metal fundido como parte de la operación normal.",
+          "nec_ref": "110.18"
+        }
+      ],
+      "code_refs": [
+        "110.18"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "Texto de la regla 110.18: las partes de equipos eléctricos que en operación ordinaria producen arcos, chispas, llamas o metal fundido deben estar encerradas o separadas y aisladas de todo material combustible",
+          "source": "Guía de estudio del Artículo 110 que cita NEC 110.18 (Docsity)",
+          "url": "https://www.docsity.com/en/docs/code-article-110-test-questions-and-answers/13147432/"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C1-110.19",
@@ -1464,8 +1836,8 @@
       "article": "110",
       "section": "110.19",
       "title": "Luz y energía desde conductores ferroviarios (orientación)",
-      "plain_explanation": "Esta sección cubre las condiciones especiales para tomar luz y energía desde conductores ferroviarios. Es una disposición heredada y especializada que el cableado ordinario de predios nunca usa: los sistemas de energía ferroviaria están fuera de las instalaciones que Sharma diseña o instala. Se incluye para que la numeración del Artículo 110 se lea completa, no como una regla de trabajo.",
-      "on_the_job": "Si un trabajo alguna vez toca de verdad conductores de energía ferroviaria, deténgase y escale el caso: es trabajo de ingeniería especializado, no una improvisación en campo.",
+      "plain_explanation": "110.19 traza una línea firme: los circuitos de alumbrado y energía no se conectarán a ningún sistema que contenga cables de trole con retorno por tierra.\n• La prohibición es sobre la conexión misma, no sobre el voltaje. Un sistema de trole con retorno por tierra lleva su corriente de retorno por los rieles y por la tierra, y los circuitos de alumbrado y energía de un edificio nunca deben amarrarse a eso.\n• Una excepción: la conexión se permite en casas de coches, casas de máquinas y estaciones de pasajeros y carga operadas en conexión con ferrocarriles eléctricos — los propios edificios del ferrocarril, operados por el ferrocarril.\n• Ningún otro trabajo de cableado de predios usa esta sección. Las instalaciones de energía ferroviaria en sí quedan en gran parte fuera del alcance del Código (90.2). La página está en el libro para que la numeración del Artículo 110 se lea completa, no como una regla de trabajo.",
+      "on_the_job": "Sharma no diseña ni instala energía ferroviaria, así que el caso de campo es una solicitud, no una instalación: en un trabajo comercial cerca de un corredor ferroviario, alguien propone alimentar el alumbrado del sitio o un circuito temporal desde la «energía del ferrocarril» porque queda cerca. La respuesta es la razón de ser de esta página: deténgase y escale el caso. La energía temporal viene del servicio del predio bajo las reglas ordinarias, el trabajo de ingeniería sigue siendo de ingeniería, y ningún circuito de Sharma se conecta a un sistema de trole con retorno por tierra.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -1473,7 +1845,86 @@
       "verified": true,
       "prev_id": "C1-110.18",
       "next_id": "C1-110.20",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Un retorno por tierra pone la corriente de tracción en la tierra y en cada trayectoria metálica enterrada que pueda encontrar. Si usted amarra el sistema de un edificio a eso, importa corriente vagabunda, exposición a choque y corrosión electrolítica de tuberías y conductores. La regla mantiene separados dos sistemas incompatibles, y la excepción se queda dentro de edificios que el propio ferrocarril opera, donde la ingeniería del ferrocarril controla ambos lados.",
+      "inspection_fails": [
+        "Circuito de alumbrado encontrado conectado a un sistema que contiene cables de trole con retorno por tierra (110.19).",
+        "Conexión a un sistema ferroviario con retorno por tierra hecha en un edificio comercial ordinario — no una casa de coches, casa de máquinas ni estación (110.19).",
+        "Cableado de predio alimentado desde conductores ferroviarios como si fueran un servicio, sin que aplique ninguna excepción (110.19)."
+      ],
+      "exam_trap": "La respuesta trampa es que la conexión está bien si los voltajes coinciden. 110.19 no es una regla de voltaje. Prohíbe de plano la conexión a un sistema de trole con retorno por tierra, y la única excepción es dentro de las propias casas de coches, casas de máquinas y estaciones del ferrocarril — no en cualquier edificio que casualmente esté cerca de las vías.",
+      "tables": [
+        {
+          "caption": "La conexión, caso por caso",
+          "headers": [
+            "Caso",
+            "Veredicto"
+          ],
+          "rows": [
+            [
+              "Alumbrado de bodega amarrado a un sistema de trole con retorno por tierra",
+              "Prohibido"
+            ],
+            [
+              "Circuitos dentro de una casa de coches o casa de máquinas ferroviaria",
+              "Permitido por la excepción"
+            ],
+            [
+              "Circuito ordinario de casa o taller",
+              "Nunca conectado — esta sección no aplica"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-110.19-boundary.svg",
+          "alt": "Diagrama de decisión para NEC 110.19: un circuito que se conectaría a un sistema que contiene cables de trole con retorno por tierra no debe conectarse; la única excepción es dentro de casas de coches, casas de máquinas y estaciones de pasajeros y carga operadas en conexión con ferrocarriles eléctricos; en los demás casos aplican las reglas ordinarias del cableado de predios.",
+          "caption": "Una línea firme, una excepción estrecha.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Qué prohíbe 110.19?",
+          "choices": [
+            "El alumbrado dentro de estaciones ferroviarias",
+            "Conectar circuitos de alumbrado y energía a un sistema que contiene cables de trole con retorno por tierra",
+            "Cualquier cableado a la vista de un ferrocarril",
+            "Circuitos de corriente continua en edificios comerciales"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La prohibición es sobre la conexión a un sistema de trole con retorno por tierra, sea cual sea el voltaje.",
+          "nec_ref": "110.19"
+        },
+        {
+          "question": "¿Dónde permite la excepción esa conexión?",
+          "choices": [
+            "Cualquier edificio propiedad del ferrocarril",
+            "Casas de coches, casas de máquinas y estaciones de pasajeros y carga operadas en conexión con ferrocarriles eléctricos",
+            "En cualquier lugar, con el permiso del jefe de cuadrilla",
+            "En garajes de estacionamiento cerca de una estación"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La excepción nombra los edificios operativos del propio ferrocarril — casas de coches, casas de máquinas y estaciones — y nada más.",
+          "nec_ref": "110.19"
+        }
+      ],
+      "code_refs": [
+        "110.19",
+        "90.2"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "Regla y excepción de 110.19: los circuitos de alumbrado y energía no se conectarán a un sistema que contenga cables de trole con retorno por tierra; excepción para casas de coches, casas de máquinas y estaciones de pasajeros y carga operadas en conexión con ferrocarriles eléctricos",
+          "source": "Guía de estudio del Artículo 110 que cita NEC 110.19 (Docsity)",
+          "url": "https://www.docsity.com/en/docs/code-article-110-test-questions-and-answers/13147432/"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C1-110.20",
@@ -1992,8 +2443,8 @@
       "article": "110",
       "section": "110.26(F)",
       "title": "Cuartos o gabinetes de equipos eléctricos con cerradura",
-      "plain_explanation": "Los cuartos o gabinetes de equipos eléctricos que alojan aparatos eléctricos y están controlados por una cerradura se consideran accesibles para las personas calificadas.",
-      "on_the_job": "Un cuarto eléctrico con cerradura sigue contando como «accesible» para las reglas de personas calificadas. Cerrar el cuarto con llave no lo exime del espacio de trabajo, y no le permite poner equipos donde las personas no calificadas puedan alcanzarlos.",
+      "plain_explanation": "110.26(F) es una sola oración a la cabeza de las reglas de espacio de trabajo: los cuartos o gabinetes de equipos eléctricos que alojan aparatos eléctricos y están controlados por una cerradura se consideran accesibles para las personas calificadas.\n• «Accesible» es la idea del Artículo 100: el equipo puede abordarse y alcanzarse. La cerradura no hace que el equipo sea «no accesible» para las personas que el Código cuenta.\n• Es accesible para las personas calificadas — las personas capacitadas para ese equipo — no para todo el mundo. La cerradura es lo que lo mantiene así.\n• La oración resuelve solo el acceso. No cambia nada más en 110.26: el espacio de trabajo frente al equipo, el espacio libre y el espacio dedicado siguen aplicando dentro del cuarto con cerradura, exactamente como aplicarían en uno abierto.",
+      "on_the_job": "Una plaza comercial pequeña en Silver Springs Boulevard en Ocala: el cuarto de servicio aloja un tablero de distribución de 400 A y dos paneles, y el propietario mantiene la puerta con cerradura, con llaves en manos del administrador de la propiedad y del capataz de Sharma. Esa cerradura está bien: el cuarto cuenta como accesible para las personas calificadas. Lo que falló la revisión fue dentro del cuarto: latas de pintura y una escalera guardadas frente al tablero. La cerradura nunca eximió el espacio de trabajo; el cuarto tiene que mantenerse libre como cualquier otro lugar con equipo, y la llave tiene que llegar de verdad a una persona calificada cuando un breaker se dispara de noche.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -2004,7 +2455,108 @@
       "unverified_reason": "Página nueva escrita el 2026-11-25 a partir del borrador de revisión de Mike Holt (decisión 3). Verified=false hasta que se verifique contra el NEC 2020 impreso.",
       "prev_id": "C1-110.26(E)",
       "next_id": "C1-110.27",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "El equipo energizado tiene que ser alcanzable por las personas calificadas para trabajarlo, e inalcanzable para todos los demás. Sin esta oración, una puerta con cerradura podría argumentarse en los dos sentidos: un propietario alegando que el equipo «no es accesible» y que el espacio de trabajo no aplica, o un inspector tratando el cuarto con cerradura en sí como una violación de acceso. La regla cierra los dos argumentos: cierre el cuarto, controle las llaves, y se considera que la cuadrilla calificada tiene acceso.",
+      "inspection_fails": [
+        "Cuarto eléctrico con cerradura usado como almacén: pintura, escaleras y material de repuesto apilados en el espacio de trabajo frente al equipo.",
+        "La única llave guardada fuera del sitio por el propietario, así que ninguna persona calificada en el trabajo puede entrar de verdad: un acceso que existe solo en papel.",
+        "La llave entregada a personal no calificado para «ir a restablecer el breaker»: accesible para personas calificadas no es accesible para todo el mundo.",
+        "Equipo instalado sin espacio de trabajo porque «el cuarto va a estar con cerradura de todos modos»."
+      ],
+      "exam_trap": "¿El cuarto está con cerradura, así que el equipo no es accesible y no se requiere espacio de trabajo? Mal en los dos extremos. 110.26(F) considera el cuarto con cerradura accesible para las personas calificadas, y las reglas de espacio de trabajo aplican completas dentro de él: la cerradura controla quién entra, no reduce el espacio.",
+      "tables": [
+        {
+          "caption": "Lo que la cerradura hace — y lo que no hace",
+          "headers": [
+            "Pregunta",
+            "Respuesta"
+          ],
+          "rows": [
+            [
+              "¿Cuenta como accesible?",
+              "Sí — para personas calificadas"
+            ],
+            [
+              "¿Exime el espacio de trabajo?",
+              "No — aplica completo"
+            ],
+            [
+              "¿Abierto a personas no calificadas?",
+              "No — la cerradura es el control"
+            ],
+            [
+              "¿Almacén en el espacio de trabajo?",
+              "No se permite — se mantiene libre"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-110.26F-locked-room.svg",
+          "alt": "Vista en planta de un cuarto eléctrico con cerradura: un panel con su zona dorada de espacio de trabajo dimensionada solo por referencia a la Tabla 110.26(A)(1), una puerta con cerradura, material guardado en la zona marcado como falla, y una franja roja de página no verificada.",
+          "caption": "Un cuarto con cerradura es accesible para las personas calificadas — y nada más cambia.",
+          "w": 900,
+          "h": 1360
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un cuarto de equipos eléctricos con cerradura se considera accesible para quién?",
+          "choices": [
+            "Para nadie — una cerradura lo hace inaccesible",
+            "Para el público general",
+            "Para las personas calificadas",
+            "Solo para el propietario del edificio"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Esa es la oración completa de 110.26(F): controlado por una cerradura, el cuarto se considera accesible para las personas calificadas.",
+          "nec_ref": "110.26(F)"
+        },
+        {
+          "question": "¿Cerrar el cuarto con cerradura hace qué con los requisitos de espacio de trabajo dentro de él?",
+          "choices": [
+            "Los exime",
+            "Reduce la profundidad a la mitad",
+            "Nada — aplican completos",
+            "Los duplica"
+          ],
+          "answer_index": 2,
+          "explain_plain": "110.26(F) resuelve solo el acceso. El espacio de trabajo, el espacio libre y el espacio dedicado aplican dentro de un cuarto con cerradura igual que en uno abierto.",
+          "nec_ref": "110.26(F), 110.26(A)"
+        },
+        {
+          "question": "¿Para que el acceso sea real, quién tiene que poder conseguir la llave?",
+          "choices": [
+            "Solo la AHJ",
+            "Una persona calificada que necesita el equipo",
+            "El lector de medidores de la utility",
+            "Nadie — se queda cerrado"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El cuarto se considera accesible para las personas calificadas; una llave que ninguna persona calificada puede alcanzar hace ese acceso una ficción.",
+          "nec_ref": "110.26(F)"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "110.26(F)",
+        "110.26(A)",
+        "110.26(B)",
+        "Artículo 100 — Accesible; Persona Calificada"
+      ],
+      "uncertain": [
+        "Esta página no está verificada: se escribió desde el borrador de revisión de Mike Holt (decisión 3) y no se ha verificado contra el NEC 2020 impreso — vea unverified_reason. Confirme la redacción exacta impresa de 110.26(F) en el impreso.",
+        "No se ha confirmado si el 110.26(F) impreso lleva excepciones, incisos o referencias cruzadas más allá de la única oración que se lleva aquí. Por esa razón esta página no declara ninguna dimensión de espacio de trabajo — verifique en el impreso."
+      ],
+      "rich_sources": [
+        {
+          "claim": "110.26(F): los cuartos o gabinetes que contienen equipo eléctrico controlado por una cerradura se consideran accesibles para las personas calificadas",
+          "source": "Mike Holt, 'Working Clearances, based on the 2020 NEC'",
+          "url": "https://www.mikeholt.com/newsletters.php?action=display&letterID=2595"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C1-110.27",

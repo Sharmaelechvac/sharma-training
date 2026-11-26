@@ -426,7 +426,7 @@
       "id": "C9-Table1-Nipples",
       "next_id": "C9-Table2",
       "on_the_job": "Worked check: a 1/2 in EMT nipple has a 60 percent area of 0.182 sq in in Table 4. At 0.0133 sq in for one 12 AWG THHN, that is 0.182 / 0.0133 = 13.68, so 13 conductors by fill alone. And Note 4 to Table 1 goes further than the 60%: the 310.15(C)(1) ampacity adjustment factors do NOT have to be applied to conductors in a nipple 24 in or shorter — the Code waives that check here expressly, so do not saddle the nipple with it.",
-      "plain_explanation": "A short raceway nipple — 24 inches or less between boxes, cabinets, or similar enclosures — may be filled to 60 percent instead of the Table 1 percentages. The extra room is allowed because a short, straight stub is far easier to pull and far less likely to jam than a long run. The allowance belongs to the nipple only; the long runs on either side of it still use 53, 31, or 40 percent as their conductor count requires.",
+      "plain_explanation": "A short raceway nipple — 24 in or less between boxes, cabinets, or similar enclosures — may be filled to 60 percent instead of the Table 1 percentages. The extra room is allowed because a short, straight stub is far easier to pull and far less likely to jam than a long run. The allowance belongs to the nipple only; the long runs on either side of it still use 53, 31, or 40 percent as their conductor count requires. Note 4 to Table 1 carries a second gift: the 310.15(C)(1) ampacity adjustment factors do not have to be applied to conductors in a nipple 24 in or shorter.",
       "prev_id": "C9-Table1",
       "related_ids": [
         "C9-L-005",
@@ -439,7 +439,104 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "The 60 percent nipple allowance",
-      "verified": true
+      "verified": true,
+      "why_it_exists": "The fill percentages protect the pull and the insulation: conductors jammed into an overfilled raceway skin against the wall at every bend, and a bundled run needs room to shed heat. A nipple is short and straight, with an enclosure open at both ends, so the jam risk that drives the lower percentages barely exists — that is why the Code trades up to 60 percent there, and waives the bundling adjustment there, and only there.",
+      "exam_trap": "The trap is carrying the 60 percent past the nipple. The allowance ends at 24 in and at the nipple's own walls: a 30 in stub, or the full run between the same two panels, is back to 53, 31, or 40 percent. The second trap runs the other way — derating a legal nipple anyway and upsizing gear that never needed it.",
+      "tables": [
+        {
+          "caption": "Table 1 percentages, and what they allow in 1/2 in EMT (Table 4)",
+          "headers": [
+            "Conductors",
+            "Max fill",
+            "Usable area"
+          ],
+          "rows": [
+            [
+              "1",
+              "53%",
+              "0.161 sq in"
+            ],
+            [
+              "2",
+              "31%",
+              "0.094 sq in"
+            ],
+            [
+              "3 or more",
+              "40%",
+              "0.122 sq in"
+            ],
+            [
+              "Nipple ≤ 24 in",
+              "60%",
+              "0.182 sq in"
+            ]
+          ],
+          "note": "1/2 in EMT total inside area is 0.304 sq in; Table 4 prints the usable area at each percentage."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-Table1-Nipples-nipple.svg",
+          "alt": "Elevation of two panel enclosures joined by a short raceway nipple dimensioned 24 inches maximum, with a 60 percent fill callout of 0.182 square inches usable and the worked check of 13 conductors of 12 AWG THHN.",
+          "caption": "A nipple 24 in or less: 60 percent, and no bundling adjustment.",
+          "w": 900,
+          "h": 1330
+        }
+      ],
+      "inspection_fails": [
+        "The 60 percent nipple allowance applied to a full-length run between panels.",
+        "A 30 in stub figured as a nipple — over 24 in, the Table 1 percentages govern.",
+        "310.15(C)(1) adjustment waived on the long runs because the nipple in the middle earned the waiver."
+      ],
+      "page_quiz": [
+        {
+          "question": "A raceway nipple may be filled to 60 percent when it is:",
+          "choices": [
+            "Any length between panels",
+            "24 in or less between enclosures",
+            "Filled with THHN only",
+            "A listed assembly"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Note 4 to Table 1 allows 60 percent fill for a nipple 24 in or less between enclosures.",
+          "nec_ref": "Table 1, Note 4"
+        },
+        {
+          "question": "How many 12 AWG THHN (0.0133 sq in) fit in a 1/2 in EMT nipple (0.182 sq in at 60 percent) by fill alone?",
+          "choices": [
+            "9",
+            "12",
+            "13",
+            "14"
+          ],
+          "answer_index": 2,
+          "explain_plain": "0.182 / 0.0133 = 13.68, and a fraction of a conductor does not exist — 13 by fill alone.",
+          "nec_ref": "Tables 1 and 4; Table 5"
+        },
+        {
+          "question": "Conductors in a nipple 24 in or shorter:",
+          "choices": [
+            "Still take the 310.15(C)(1) adjustment",
+            "Do not have to take the 310.15(C)(1) adjustment",
+            "Are exempt from fill limits",
+            "Count double in the fill"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Note 4 to Table 1 waives the 310.15(C)(1) adjustment factors for conductors in a nipple 24 in or shorter.",
+          "nec_ref": "Table 1, Note 4"
+        }
+      ],
+      "code_refs": [
+        "Table 1, Note 4",
+        "Table 1",
+        "Table 4",
+        "310.15(C)(1)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "article": "9",
@@ -449,7 +546,7 @@
       "id": "C9-Table2",
       "next_id": "C9-Table4",
       "on_the_job": "A bender's shoe sets the radius for you: use the shoe made for the conduit type and size and the bend lands on the first column by construction. Heat-bent PVC is where crews get caught — form the sweep to at least the 'other bends' number, because a tight heat bend that kinks or flattens also fails the 'do not damage, do not effectively reduce the inside diameter' half of the bending sections.\n\nWorked check: a 2 in PVC stub-up sweep formed at a 10 in centerline radius fails Table 2 by 2 in even if it looks smooth. Re-form it at 12 in or better before the concrete truck is called.",
-      "plain_explanation": "Table 2 sets the smallest radius a field bend may have, measured to the centerline of the conduit — not to the inside face of the bend. It has two columns. Bends made on a one-shot or full-shoe bender use the first; all other bends use the second, and a PVC heat bend falls in the second column. The column is set by the bending method, not by a section number. The minimum centerline radii for the sizes Sharma bends most: • 1/2 in — 4 in one-shot / full-shoe, 4 in other bends\n• 3/4 in — 4-1/2 in one-shot / full-shoe, 5 in other bends\n• 1 in — 5-3/4 in one-shot / full-shoe, 6 in other bends\n• 1-1/4 in — 7-1/4 in one-shot / full-shoe, 8 in other bends\n• 1-1/2 in — 8-1/4 in one-shot / full-shoe, 10 in other bends\n• 2 in — 9-1/2 in one-shot / full-shoe, 12 in other bends The table keeps climbing past 2 in — 2-1/2 in is 10-1/2 / 15 in and 4 in is 16 / 24 in — and runs to 6 in in the printed book. A factory sweep or a segmented bend laid out well above these numbers is fine; the table is a floor, not a target.",
+      "plain_explanation": "Table 2 sets the smallest radius a field bend may have, measured to the centerline of the conduit — not to the inside face of the bend. It has two columns, and the bending method picks the column, not a section number:\n• One-shot or full-shoe bender: the first column. The shoe is made for the conduit type and size, so a bend on the right shoe lands on this column by construction.\n• All other bends: the second column. A PVC heat bend falls here, however smooth it looks.\nThe table is a floor, not a target. A factory sweep or a segmented bend laid out well above these numbers is fine. The printed table runs to 6 in; the sizes Sharma bends most are below.",
       "prev_id": "C9-Table1-Nipples",
       "related_ids": [
         "C9-Table1",
@@ -459,7 +556,122 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Table 2 — minimum radius of conduit bends",
-      "verified": true
+      "verified": true,
+      "why_it_exists": "A bend that is too tight kinks or flattens the raceway, and a flattened bend drags on every conductor pulled through it — insulation scrapes, conductors jam, and the inside diameter the fill math assumed is no longer there. The radius floor keeps the bend gentle enough that the wire survives the pull and the conduit keeps its shape.",
+      "inspection_fails": [
+        "Heat-bent PVC stub-up sweep formed at a 10 in centerline radius on 2 in conduit — Table 2 needs 12 in for other bends.",
+        "Bend kinked or flattened so the inside diameter is effectively reduced, even where the radius itself is legal.",
+        "Radius checked to the outside of the bend instead of the centerline, so a tight bend passes on paper only."
+      ],
+      "exam_trap": "A 2 in PVC heat bend formed at 9½ in matches Table 2, right? Wrong column. 9½ in is the one-shot / full-shoe number for 2 in; a heat bend is an 'other bend' and needs 12 in. The method picks the column before the size picks the number.",
+      "tables": [
+        {
+          "caption": "Table 2 — minimum centerline radius of bends (in)",
+          "headers": [
+            "Size",
+            "One-shot / full-shoe",
+            "Other bends"
+          ],
+          "rows": [
+            [
+              "1/2 in",
+              "4",
+              "4"
+            ],
+            [
+              "3/4 in",
+              "4-1/2",
+              "5"
+            ],
+            [
+              "1 in",
+              "5-3/4",
+              "6"
+            ],
+            [
+              "1-1/4 in",
+              "7-1/4",
+              "8"
+            ],
+            [
+              "1-1/2 in",
+              "8-1/4",
+              "10"
+            ],
+            [
+              "2 in",
+              "9-1/2",
+              "12"
+            ],
+            [
+              "2-1/2 in",
+              "10-1/2",
+              "15"
+            ],
+            [
+              "4 in",
+              "16",
+              "24"
+            ]
+          ],
+          "note": "All radii in inches, to the conduit centerline. The printed table keeps climbing past 2 in and runs to 6 in."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-Table2-bend-arcs.svg",
+          "alt": "Two 90 degree bends drawn from one center point for 2 inch conduit: the tighter navy one-shot arc at nine and a half inches and the wider gold other-bends arc at twelve inches, both measured to the centerline.",
+          "caption": "The two Table 2 columns, drawn for 2 in conduit.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A 2 in PVC stub-up is heat-bent. Minimum centerline radius?",
+          "choices": [
+            "9-1/2 in",
+            "10 in",
+            "12 in",
+            "24 in"
+          ],
+          "answer_index": 2,
+          "explain_plain": "A heat bend is an 'other bend.' For 2 in, the other-bends column of Table 2 is 12 in.",
+          "nec_ref": "Chapter 9, Table 2"
+        },
+        {
+          "question": "Table 2 bend radius is measured to what?",
+          "choices": [
+            "The inside face of the bend",
+            "The centerline of the conduit",
+            "The outside of the bend",
+            "The chord across the bend"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Table 2 radii are centerline radii. Measuring to the outside overstates the radius and passes tight bends on paper.",
+          "nec_ref": "Chapter 9, Table 2"
+        },
+        {
+          "question": "A 3/4 in bend is made on a full-shoe bender. Minimum radius?",
+          "choices": [
+            "4 in",
+            "4-1/2 in",
+            "5 in",
+            "6 in"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Full-shoe bends use the first column: 4-1/2 in for 3/4 in conduit.",
+          "nec_ref": "Chapter 9, Table 2"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "Chapter 9, Table 2",
+        "352.24"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "article": "9",
@@ -472,7 +684,7 @@
       "id": "C9-Table4",
       "next_id": "C9-Table5",
       "on_the_job": "Read the row for the exact raceway you are installing, then take the column that matches your conductor count from Table 1. Flag carried from v1: the 1/2 in EMT total area is carried as 0.304 sq in; one secondary source showed 0.305, but the 40 percent value of 0.122 sq in agrees across sources. Do not change 0.304 without re-checking the printed table.",
-      "plain_explanation": "Table 4 gives, for each raceway type and trade size, the inside diameter, the total inside area, and the usable area at each Table 1 percentage. Trade size is a name, not a measurement: 1/2 in EMT is actually 0.622 in inside and 0.304 sq in total, with 0.122 sq in usable at 40 percent. Raceway type matters as much as trade size — 1/2 in PVC Schedule 40 is a little smaller inside (0.285 sq in total, 0.114 at 40 percent), so an EMT answer does not carry over to PVC. Two more raceways are carried here so their answers are not borrowed from the wrong row. PVC Schedule 80, the thick-wall PVC used where conduit is subject to physical damage, runs smaller inside than Schedule 40 at every size (inside diameter in inches, total area in sq in, then the usable areas at 53, 31, and 40 percent): 1/2 in — 0.526, 0.217, 0.115, 0.067, 0.087; 3/4 in — 0.722, 0.409, 0.217, 0.127, 0.164; 1 in — 0.936, 0.688, 0.365, 0.213, 0.275; 1-1/4 in — 1.255, 1.237, 0.656, 0.383, 0.495; 1-1/2 in — 1.476, 1.711, 0.907, 0.530, 0.684; 2 in — 1.913, 2.874, 1.523, 0.891, 1.150. Flexible metal conduit (FMC) is its own row too — close to EMT at the small sizes, but never the same row: 1/2 in — 0.635, 0.317, 0.168, 0.098, 0.127; 3/4 in — 0.824, 0.533, 0.283, 0.165, 0.213; 1 in — 1.020, 0.817, 0.433, 0.253, 0.327; 1-1/4 in — 1.275, 1.277, 0.677, 0.396, 0.511; 1-1/2 in — 1.538, 1.858, 0.985, 0.576, 0.743; 2 in — 2.040, 3.269, 1.732, 1.013, 1.307. A fill that passes in Schedule 40 or EMT can fail in Schedule 80, so when the raceway changes, rerun the division with the new row.\n\nThe two raceways Sharma pulls most, carried here for the common sizes — total inside area first, then the usable area at 40 percent:\n• 1/2 in EMT — 0.304 in² total, 0.122 in² at 40%\n• 3/4 in EMT — 0.533 in² total, 0.213 in² at 40%\n• 1 in EMT — 0.864 in² total, 0.346 in² at 40%\n• 1-1/4 in EMT — 1.496 in² total, 0.598 in² at 40%\n• 1-1/2 in EMT — 2.036 in² total, 0.814 in² at 40%\n• 2 in EMT — 3.356 in² total, 1.342 in² at 40%\nPVC Schedule 40 runs a little smaller inside than EMT at every trade size:\n• 1/2 in PVC Schedule 40 — 0.285 in² total, 0.114 in² at 40%\n• 3/4 in PVC Schedule 40 — 0.508 in² total, 0.203 in² at 40%\n• 1 in PVC Schedule 40 — 0.832 in² total, 0.333 in² at 40%\n• 1-1/4 in PVC Schedule 40 — 1.453 in² total, 0.581 in² at 40%\n• 1-1/2 in PVC Schedule 40 — 1.986 in² total, 0.794 in² at 40%\n• 2 in PVC Schedule 40 — 3.291 in² total, 1.316 in² at 40%",
+      "plain_explanation": "Table 4 gives, for each raceway type and trade size, the inside diameter, the total inside area, and the usable area at each Table 1 percentage. It is the denominator of every fill check: conductor areas from Table 5 are added up, then compared against the usable area this table allows.\n• Trade size is a name, not a measurement: 1/2 in EMT is actually 0.622 in inside and 0.304 sq in total, with 0.122 sq in usable at 40 percent.\n• Raceway type matters as much as trade size: 1/2 in PVC Schedule 40 is a little smaller inside (0.285 sq in total, 0.114 at 40 percent), so an EMT answer does not carry over to PVC.\n• PVC Schedule 80, the thick-wall PVC used where conduit is subject to physical damage, runs smaller inside than Schedule 40 at every size. Flexible metal conduit (FMC) is its own row too — close to EMT at the small sizes, but never the same row.\nA fill that passes in Schedule 40 or EMT can fail in Schedule 80, so when the raceway changes, rerun the division with the new row.",
       "prev_id": "C9-Table2",
       "related_ids": [
         "Ch9-T4",
@@ -485,7 +697,320 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Table 4 — raceway inside dimensions and usable area",
-      "verified": true
+      "verified": true,
+      "why_it_exists": "Every fill check is a division, and Table 4 is the bottom half of it. Use the wrong raceway's row and the answer is wrong with confidence — the crew pulls a fill that passed on paper and jams in the pipe, or an inspector reruns the math with the right row and the run fails after it is in the ground.",
+      "inspection_fails": [
+        "Fill check run on the EMT row for a Schedule 80 run — passes on paper, overfilled in the pipe.",
+        "Trade size used as the inside diameter (1/2 in taken as a 0.500 in hole) instead of the Table 4 row.",
+        "Fill never rerun when the spec changed the raceway from Schedule 40 to Schedule 80."
+      ],
+      "exam_trap": "Half-inch conduit, so the hole is 1/2 in across and about 0.196 sq in? Wrong twice. Trade size is a name: Table 4 puts 1/2 in EMT at 0.622 in inside and 0.304 sq in total — and the number a fill check actually uses at 40 percent is 0.122 sq in, not the total.",
+      "tables": [
+        {
+          "caption": "EMT — total inside area and usable area at 40%",
+          "headers": [
+            "Size",
+            "Total (sq in)",
+            "40% usable"
+          ],
+          "rows": [
+            [
+              "1/2 in",
+              "0.304",
+              "0.122"
+            ],
+            [
+              "3/4 in",
+              "0.533",
+              "0.213"
+            ],
+            [
+              "1 in",
+              "0.864",
+              "0.346"
+            ],
+            [
+              "1-1/4 in",
+              "1.496",
+              "0.598"
+            ],
+            [
+              "1-1/2 in",
+              "2.036",
+              "0.814"
+            ],
+            [
+              "2 in",
+              "3.356",
+              "1.342"
+            ]
+          ]
+        },
+        {
+          "caption": "PVC Schedule 40 — total inside area and usable area at 40%",
+          "headers": [
+            "Size",
+            "Total (sq in)",
+            "40% usable"
+          ],
+          "rows": [
+            [
+              "1/2 in",
+              "0.285",
+              "0.114"
+            ],
+            [
+              "3/4 in",
+              "0.508",
+              "0.203"
+            ],
+            [
+              "1 in",
+              "0.832",
+              "0.333"
+            ],
+            [
+              "1-1/4 in",
+              "1.453",
+              "0.581"
+            ],
+            [
+              "1-1/2 in",
+              "1.986",
+              "0.794"
+            ],
+            [
+              "2 in",
+              "3.291",
+              "1.316"
+            ]
+          ],
+          "note": "Schedule 40 runs a little smaller inside than EMT at every trade size."
+        },
+        {
+          "caption": "PVC Schedule 80 — inside diameter, total area, usable at 40%",
+          "headers": [
+            "Size",
+            "ID (in)",
+            "Total (sq in)",
+            "40% usable"
+          ],
+          "rows": [
+            [
+              "1/2 in",
+              "0.526",
+              "0.217",
+              "0.087"
+            ],
+            [
+              "3/4 in",
+              "0.722",
+              "0.409",
+              "0.164"
+            ],
+            [
+              "1 in",
+              "0.936",
+              "0.688",
+              "0.275"
+            ],
+            [
+              "1-1/4 in",
+              "1.255",
+              "1.237",
+              "0.495"
+            ],
+            [
+              "1-1/2 in",
+              "1.476",
+              "1.711",
+              "0.684"
+            ],
+            [
+              "2 in",
+              "1.913",
+              "2.874",
+              "1.150"
+            ]
+          ]
+        },
+        {
+          "caption": "FMC — inside diameter, total area, usable at 40%",
+          "headers": [
+            "Size",
+            "ID (in)",
+            "Total (sq in)",
+            "40% usable"
+          ],
+          "rows": [
+            [
+              "1/2 in",
+              "0.635",
+              "0.317",
+              "0.127"
+            ],
+            [
+              "3/4 in",
+              "0.824",
+              "0.533",
+              "0.213"
+            ],
+            [
+              "1 in",
+              "1.020",
+              "0.817",
+              "0.327"
+            ],
+            [
+              "1-1/4 in",
+              "1.275",
+              "1.277",
+              "0.511"
+            ],
+            [
+              "1-1/2 in",
+              "1.538",
+              "1.858",
+              "0.743"
+            ],
+            [
+              "2 in",
+              "2.040",
+              "3.269",
+              "1.307"
+            ]
+          ]
+        },
+        {
+          "caption": "Schedule 80 and FMC — usable area at 53% (1 conductor) and 31% (2 conductors)",
+          "headers": [
+            "Raceway — size",
+            "53% usable",
+            "31% usable"
+          ],
+          "rows": [
+            [
+              "Sch 80 — 1/2 in",
+              "0.115",
+              "0.067"
+            ],
+            [
+              "Sch 80 — 3/4 in",
+              "0.217",
+              "0.127"
+            ],
+            [
+              "Sch 80 — 1 in",
+              "0.365",
+              "0.213"
+            ],
+            [
+              "Sch 80 — 1-1/4 in",
+              "0.656",
+              "0.383"
+            ],
+            [
+              "Sch 80 — 1-1/2 in",
+              "0.907",
+              "0.530"
+            ],
+            [
+              "Sch 80 — 2 in",
+              "1.523",
+              "0.891"
+            ],
+            [
+              "FMC — 1/2 in",
+              "0.168",
+              "0.098"
+            ],
+            [
+              "FMC — 3/4 in",
+              "0.283",
+              "0.165"
+            ],
+            [
+              "FMC — 1 in",
+              "0.433",
+              "0.253"
+            ],
+            [
+              "FMC — 1-1/4 in",
+              "0.677",
+              "0.396"
+            ],
+            [
+              "FMC — 1-1/2 in",
+              "0.985",
+              "0.576"
+            ],
+            [
+              "FMC — 2 in",
+              "1.732",
+              "1.013"
+            ]
+          ],
+          "note": "Percentages from Table 1: 53% for one conductor, 31% for two, 40% for over two."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-Table4-one-row.svg",
+          "alt": "Four cards follow the 1/2 inch EMT row of Table 4 from trade size to 0.622 inch inside diameter to 0.304 square inch total area to 0.122 square inch usable at 40 percent, over a bar chart comparing four raceways.",
+          "caption": "Follow one row across — then check the raceway trap below.",
+          "w": 900,
+          "h": 1400
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Usable area at 40% for 3/4 in EMT?",
+          "choices": [
+            "0.122 sq in",
+            "0.213 sq in",
+            "0.346 sq in",
+            "0.533 sq in"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Table 4 gives 3/4 in EMT a 0.533 sq in total; 40% of it, the fill number, is 0.213 sq in.",
+          "nec_ref": "Chapter 9, Table 4"
+        },
+        {
+          "question": "The same conductors move from Schedule 40 to Schedule 80, same trade size. The fill check:",
+          "choices": [
+            "Stays valid — trade size is trade size",
+            "Must be rerun — Schedule 80 is smaller inside",
+            "Improves — thicker walls, bigger hole",
+            "Only changes for FMC"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Schedule 80's thicker wall leaves a smaller inside area at every size. A passing fill in Schedule 40 can fail in Schedule 80.",
+          "nec_ref": "Chapter 9, Table 4"
+        },
+        {
+          "question": "Total inside area of 1/2 in EMT?",
+          "choices": [
+            "0.122 sq in",
+            "0.285 sq in",
+            "0.304 sq in",
+            "0.622 sq in"
+          ],
+          "answer_index": 2,
+          "explain_plain": "0.304 sq in is the total; 0.122 is the 40% usable area, 0.285 is PVC Schedule 40's total, and 0.622 is the inside diameter in inches.",
+          "nec_ref": "Chapter 9, Table 4"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "Chapter 9, Table 4",
+        "Chapter 9, Table 1",
+        "Chapter 9, Table 5"
+      ],
+      "uncertain": [
+        "1/2 in EMT total area is carried as 0.304 sq in; one secondary source showed 0.305. The 40% value (0.122 sq in) agrees across sources — do not change 0.304 without re-checking the printed table."
+      ],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "article": "9",
@@ -494,8 +1019,8 @@
       "florida_note": "",
       "id": "C9-Table5",
       "next_id": "C9-Table5A",
-      "on_the_job": "Confirm the insulation type on the reel before you calculate. If the job switches from THHN to a thicker insulation type, redo the fill math with that type's Table 5 area instead of assuming the count still fits.",
-      "plain_explanation": "Table 5 gives the approximate diameter and area of insulated conductors and fixture wires, by size and insulation type. Fill is figured on the insulated conductor you are actually pulling, insulation included — not on the bare metal. In the v1 data used throughout this chapter, 12 AWG THHN/THWN/THWN-2 is 0.0133 sq in, 10 AWG is 0.0211, 8 AWG is 0.0366, and 6 AWG is 0.0507. A different insulation type in the same AWG can have a different area, so the insulation column is part of the answer.\n\nThe working list for the insulation type Sharma pulls most — THHN / THWN / THWN-2, approximate area in square inches:\n• 14 AWG THHN — 0.0097 in²\n• 12 AWG THHN — 0.0133 in²\n• 10 AWG THHN — 0.0211 in²\n• 8 AWG THHN — 0.0366 in²\n• 6 AWG THHN — 0.0507 in²\n• 4 AWG THHN — 0.0824 in²\n• 3 AWG THHN — 0.0973 in²\n• 2 AWG THHN — 0.1158 in²\n• 1 AWG THHN — 0.1562 in²\n• 1/0 AWG THHN — 0.1855 in²\n• 2/0 AWG THHN — 0.2223 in²\n• 3/0 AWG THHN — 0.2679 in²\n• 4/0 AWG THHN — 0.3237 in²",
+      "on_the_job": "On a Sharma rough-in, the fill check for a 1/2 in EMT stub full of 12 AWG THHN home runs goes like this: each conductor takes 0.0133 sq in from Table 5. Nine conductors total 0.1197 sq in — inside the 0.122 sq in that Table 4 allows at 40 percent in 1/2 in EMT. A tenth conductor makes 0.1330 sq in, which is over, so the run moves up to 3/4 in EMT before anyone pulls. And confirm the insulation type on the reel first: if the job switches from THHN to a thicker insulation type, redo the math with that type's Table 5 area instead of assuming the count still fits.",
+      "plain_explanation": "Table 5 gives the approximate diameter and area of insulated conductors and fixture wires, by size and insulation type. Fill is figured on the insulated conductor you are actually pulling, insulation included — not on the bare metal.\n• Read three things together: the AWG size, the insulation type, and that type's column. A different insulation type in the same AWG can have a different area, so the insulation column is part of the answer.\n• The table below carries the THHN / THWN / THWN-2 column — the insulation Sharma pulls most.\n• Bare conductors are not sized from this table; a bare grounding conductor's area is figured from its own dimensions in Table 8.",
       "prev_id": "C9-Table4",
       "related_ids": [
         "C9-L-010",
@@ -510,7 +1035,134 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Table 5 — how much room an insulated conductor takes",
-      "verified": true
+      "verified": true,
+      "tables": [
+        {
+          "caption": "Table 5 — THHN / THWN / THWN-2, approximate area",
+          "headers": [
+            "Size",
+            "Area (sq in)"
+          ],
+          "rows": [
+            [
+              "14 AWG",
+              "0.0097"
+            ],
+            [
+              "12 AWG",
+              "0.0133"
+            ],
+            [
+              "10 AWG",
+              "0.0211"
+            ],
+            [
+              "8 AWG",
+              "0.0366"
+            ],
+            [
+              "6 AWG",
+              "0.0507"
+            ],
+            [
+              "4 AWG",
+              "0.0824"
+            ],
+            [
+              "3 AWG",
+              "0.0973"
+            ],
+            [
+              "2 AWG",
+              "0.1158"
+            ],
+            [
+              "1 AWG",
+              "0.1562"
+            ],
+            [
+              "1/0 AWG",
+              "0.1855"
+            ],
+            [
+              "2/0 AWG",
+              "0.2223"
+            ],
+            [
+              "3/0 AWG",
+              "0.2679"
+            ],
+            [
+              "4/0 AWG",
+              "0.3237"
+            ]
+          ]
+        }
+      ],
+      "why_it_exists": "Fill limits exist because a stuffed raceway damages insulation on the pull and traps heat in service. Table 5 is where the honest size of each conductor comes from — the whole insulated circle, not the metal inside it. Understate the area and the conduit that fits on paper jams halfway through the pull.",
+      "inspection_fails": [
+        "Fill figured from bare-conductor dimensions — the recount with Table 5 insulated areas puts the raceway over its Table 4 allowance.",
+        "Conductors jammed and insulation scored on the pull: raceway filled past the Table 1 percentage.",
+        "Fill calculation run with the THHN column for a thicker insulation type actually installed — areas understated, raceway over the limit."
+      ],
+      "exam_trap": "The trap: figuring fill from the bare conductor, or from the area of a different insulation type in the same AWG. Table 5's answer is the insulated area in the column for the insulation actually on the wire. Read the size off a bare-wire table and every count comes out too small.",
+      "figures": [
+        {
+          "src": "fig/c9/C9-Table5-areas.svg",
+          "alt": "Cross-sections of 14, 12, 10 and 8 AWG THHN conductors drawn to scale by their Table 5 areas, 0.0097, 0.0133, 0.0211 and 0.0366 square inches, with the insulated outer circle and the metal core shown on each.",
+          "caption": "Insulated areas to scale: the whole circle is what fill counts.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Raceway fill is figured using which size for each conductor?",
+          "choices": [
+            "The bare metal diameter",
+            "The insulated diameter and area from Table 5",
+            "The AWG number alone",
+            "The conduit trade size"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Fill is figured on the insulated conductor actually being pulled, insulation included, using Table 5.",
+          "nec_ref": "Ch. 9, Table 5"
+        },
+        {
+          "question": "Nine 12 AWG THHN conductors at 0.0133 sq in each take how much area?",
+          "choices": [
+            "0.0133 sq in",
+            "0.1197 sq in",
+            "0.1330 sq in",
+            "1.197 sq in"
+          ],
+          "answer_index": 1,
+          "explain_plain": "9 × 0.0133 = 0.1197 sq in. That fits the 0.122 sq in allowance for 1/2 in EMT at 40 percent; a tenth conductor does not.",
+          "nec_ref": "Ch. 9, Table 5"
+        },
+        {
+          "question": "Same AWG size, different insulation type. The Table 5 area:",
+          "choices": [
+            "Is always the same",
+            "Can differ — read the column for the insulation installed",
+            "Comes from Table 8",
+            "Does not matter for fill"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Table 5 is organized by size and insulation type. A different insulation in the same AWG can have a different area.",
+          "nec_ref": "Ch. 9, Table 5"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "Chapter 9, Table 5",
+        "Chapter 9, Table 1",
+        "Chapter 9, Table 4",
+        "Chapter 9, Table 8"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C9-Table5A",
@@ -518,8 +1170,8 @@
       "article": "9",
       "section": "Table 5A",
       "title": "Table 5A — compact conductor dimensions and areas",
-      "plain_explanation": "Table 5A is Table 5's sibling for compact-stranded conductors. In a compact conductor the strands are compressed during manufacture, so the finished conductor is rounder and smaller across than a standard concentric-stranded conductor of the same AWG — a stranding common in larger aluminum feeder conductors. Fill is figured on the conductor actually in the raceway: compact conductors take their diameter and area from Table 5A, standard conductors from Table 5. Figuring a compact conductor from Table 5 overstates its area, so a fill can fail on paper that would pass in the raceway; figuring a standard conductor from Table 5A understates it, and that direction is the violation. The conductor's marking and its manufacturer tell you which stranding you hold.",
-      "on_the_job": "A 4/0 aluminum compact feeder: open Table 5A, not Table 5, before you tell the foreman the conduit size. The difference between the two tables is regularly the difference between the conduit on the truck and the next size up.",
+      "plain_explanation": "Table 5A is Table 5's sibling for compact-stranded conductors. In a compact conductor the strands are compressed during manufacture, so the finished conductor is rounder and smaller across than a standard concentric-stranded conductor of the same AWG — a stranding common in larger aluminum feeder conductors.\n• Fill is figured on the conductor actually in the raceway: compact conductors take their diameter and area from Table 5A, standard conductors from Table 5.\n• Figuring a compact conductor from Table 5 overstates its area, so a fill can fail on paper that would pass in the raceway.\n• Figuring a standard conductor from Table 5A understates it, and that direction is the violation.\nThe conductor's marking and its manufacturer tell you which stranding you hold.",
+      "on_the_job": "A 4/0 aluminum compact feeder: open Table 5A, not Table 5, before you tell the foreman the conduit size. The difference between the two tables is regularly the difference between the conduit on the truck and the next size up. Confirm the stranding before the math: \"compact\" is in the conductor's print legend and in the submittal. For scale, a standard-stranded 4/0 THHN reads 0.3237 sq in in Table 5 — if the reel does not say compact, the standard table is the one the fill has to carry.",
       "sharma_note": "",
       "florida_note": "",
       "figure_idea": "Cross-sections: concentric vs compact stranding at the same AWG, diameters compared.",
@@ -532,7 +1184,95 @@
       "sharma_rule_ids": [],
       "verified": true,
       "prev_id": "C9-Table5",
-      "next_id": "C9-FILL-METHOD"
+      "next_id": "C9-FILL-METHOD",
+      "why_it_exists": "Fill limits exist so conductors can be pulled without damage and can shed heat inside the raceway, and both protections depend on the real cross-section in the pipe. Read a compact conductor out of the standard table and you waste raceway and money on a phantom size. Read a standard conductor out of the compact table and the raceway is overfilled in fact while the paperwork says it passes — skinned insulation and a jammed pull are how that shows up.",
+      "exam_trap": "The trap is treating Table 5A as a discount table anyone can claim. It is not a smaller number for the same wire — it belongs only to conductors actually manufactured as compact strand. A standard-stranded conductor figured from Table 5A is an understated fill and a violation, however good the math looks.",
+      "tables": [
+        {
+          "caption": "Which table, and what the wrong one costs",
+          "headers": [
+            "Conductor in hand",
+            "Area from",
+            "Wrong table costs you"
+          ],
+          "rows": [
+            [
+              "Compact-stranded",
+              "Table 5A",
+              "Table 5 overstates it — fill fails on paper"
+            ],
+            [
+              "Standard-stranded",
+              "Table 5",
+              "Table 5A understates it — overfill, a violation"
+            ]
+          ],
+          "note": "For scale: a standard 4/0 THHN reads 0.3237 sq in in Table 5. Compact rows live in Table 5A — read the row for your size in print."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-Table5A-stranding.svg",
+          "alt": "Two conductor cross-sections at the same AWG: standard concentric stranding drawn as round strands with voids between them, and compact stranding with the strands compressed into a smaller circle with the voids squeezed out.",
+          "caption": "Same AWG: compact strands pack into a smaller circle.",
+          "w": 900,
+          "h": 1240
+        }
+      ],
+      "inspection_fails": [
+        "Compact feeder figured from Table 5 — the calculation fails a fill the raceway would actually pass, and the raceway got upsized for nothing.",
+        "Standard-stranded conductors figured from Table 5A to make a tight fill pass on paper.",
+        "Fill calculation with no stranding identified — the submittal says compact, but the reel that arrived is standard strand."
+      ],
+      "page_quiz": [
+        {
+          "question": "A feeder conductor is marked compact strand. Its diameter and area for a fill calculation come from:",
+          "choices": [
+            "Table 5",
+            "Table 5A",
+            "Table 8",
+            "Annex C"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Compact-stranded conductors take their dimensions from Table 5A; standard conductors use Table 5.",
+          "nec_ref": "Table 5A"
+        },
+        {
+          "question": "Figuring a standard-stranded conductor from Table 5A does what?",
+          "choices": [
+            "Overstates its area",
+            "Understates its area — the violation direction",
+            "Changes nothing",
+            "Raises its ampacity"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Table 5A areas are smaller. Applied to a standard conductor they understate the fill, so the raceway is overfilled while the paper passes.",
+          "nec_ref": "Tables 5 and 5A"
+        },
+        {
+          "question": "How do you know which stranding you hold?",
+          "choices": [
+            "By the conductor color",
+            "By its marking and manufacturer",
+            "By the raceway size",
+            "By the AWG alone"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The conductor's marking and its manufacturer tell you whether it is compact or standard strand.",
+          "nec_ref": "Table 5A"
+        }
+      ],
+      "code_refs": [
+        "Table 5A",
+        "Table 5",
+        "Table 4"
+      ],
+      "uncertain": [
+        "Table 5A's printed diameter and area rows are not reproduced on this page — read the row for the compact size in hand in the printed Chapter 9 before you run the fill."
+      ],
+      "rich_sources": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "article": "9",
@@ -673,7 +1413,7 @@
       "id": "C9-FILL-SAME",
       "next_id": "C9-FILL-MIXED",
       "on_the_job": "Default to rounding down. Use the 0.8 round-up only when every conductor in the raceway is truly the same size and type, and be ready to show the inspector the division. Mixed sizes never get the round-up — add their areas instead.",
-      "plain_explanation": "When every conductor is the same size and type, the count is one division: the raceway's usable area divided by one conductor's area. Worked example from v1: how many 12 AWG THHN fit in 1/2 in EMT? The 40 percent area is 0.122 sq in and one 12 AWG THHN is 0.0133 sq in, so 0.122 / 0.0133 = 9.17 — the answer is 9, because a tenth of a conductor does not exist. One exception, from the Chapter 9 notes carried in v1: when all conductors are the same size and the division leaves a decimal of 0.8 or more, the count may be rounded up to the next whole conductor — 8 AWG THHN in 3/4 in EMT is 0.213 / 0.0366 = 5.82, so 6 are permitted by that note.",
+      "plain_explanation": "When every conductor is the same size and type, the count is one division: the raceway's usable area divided by one conductor's area.\n• Worked example: how many 12 AWG THHN fit in 1/2 in EMT? The 40 percent area is 0.122 sq in and one 12 AWG THHN is 0.0133 sq in, so 0.122 / 0.0133 = 9.17 — the answer is 9, because a tenth of a conductor does not exist.\n• One exception, from the Chapter 9 notes: when all conductors are the same size and the division leaves a decimal of 0.8 or more, the count may be rounded up to the next whole conductor — 8 AWG THHN in 3/4 in EMT is 0.213 / 0.0366 = 5.82, so 6 are permitted by that note.",
       "prev_id": "C9-FILL-METHOD",
       "related_ids": [
         "Q-068",
@@ -688,7 +1428,98 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Same-size fill — divide, then round down",
-      "verified": true
+      "verified": true,
+      "why_it_exists": "The round-down rule is the raceway's safety margin doing its quiet work: 9.17 is a paper number, and the 0.17 that 'almost fits' is exactly the conductor that would have been skinned on the pull or cooked in the bundle. The 0.8 exception is narrow on purpose — it trusts the geometry only when every conductor is identical, so the packing the table assumed is the packing you actually get.",
+      "exam_trap": "Two traps share this page. First: rounding 9.17 up to 10 because 'it is close' — the round-up exists only at a decimal of 0.8 or more. Second: using the 0.8 round-up on a mixed-size pull. Mixed sizes never divide and never round up; their areas are added, conductor by conductor.",
+      "tables": [
+        {
+          "caption": "Same-size divisions, worked",
+          "headers": [
+            "Run",
+            "Division",
+            "Answer"
+          ],
+          "rows": [
+            [
+              "12 AWG THHN, 1/2 in EMT",
+              "0.122 ÷ 0.0133 = 9.17",
+              "9"
+            ],
+            [
+              "8 AWG THHN, 3/4 in EMT",
+              "0.213 ÷ 0.0366 = 5.82",
+              "6 — the 0.8 exception"
+            ],
+            [
+              "Mixed sizes",
+              "No division",
+              "Add the areas"
+            ]
+          ],
+          "note": "Usable areas at 40 percent from Table 4; conductor areas from Table 5."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-FILL-SAME-division.svg",
+          "alt": "A job card working the division 0.122 square inches divided by 0.0133 square inches equals 9.17, answered as 9 conductors with the leftover 0.17 crossed out, plus the 0.8 round-up exception worked for 8 AWG THHN in 3/4 inch EMT.",
+          "caption": "One division, then round down — the 0.8 exception aside.",
+          "w": 900,
+          "h": 1180
+        }
+      ],
+      "inspection_fails": [
+        "9.17 rounded up to 10 conductors — the round-up starts at a 0.8 decimal, not at 'close enough.'",
+        "The 0.8 round-up used on a mixed-size pull figured by division instead of by adding areas.",
+        "Ground left out of the same-size count, so the division was run for one conductor too few."
+      ],
+      "page_quiz": [
+        {
+          "question": "0.122 ÷ 0.0133 = 9.17. How many 12 AWG THHN go in the raceway?",
+          "choices": [
+            "10",
+            "9",
+            "9.17",
+            "8"
+          ],
+          "answer_index": 1,
+          "explain_plain": "A tenth of a conductor does not exist. Below a 0.8 decimal, the count rounds down: 9.",
+          "nec_ref": "Tables 4 and 5"
+        },
+        {
+          "question": "The decimal that earns the round-up to the next whole conductor is:",
+          "choices": [
+            "0.5 or more",
+            "0.8 or more",
+            "Any decimal",
+            "0.9 or more"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The Chapter 9 notes allow the round-up only when the division leaves a decimal of 0.8 or more, and only for same-size conductors.",
+          "nec_ref": "Chapter 9, Notes"
+        },
+        {
+          "question": "A mixed-size pull is figured by:",
+          "choices": [
+            "Dividing by the largest conductor",
+            "Dividing by the smallest conductor",
+            "Adding each conductor's area",
+            "Annex C"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Mixed sizes never divide. Add each conductor's Table 5 area and compare the sum with the raceway's usable area.",
+          "nec_ref": "Tables 4 and 5"
+        }
+      ],
+      "code_refs": [
+        "Table 4",
+        "Table 5",
+        "Table 1"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "article": "9",
@@ -1092,8 +1923,8 @@
       "florida_note": "Annex C is informative, not mandatory. The mandatory fill limits are in Chapter 9 Tables 1, 4, and 5 as adopted; the annex is a convenience for one narrow case.",
       "id": "C9-ANNEXC",
       "next_id": "C9-Table8",
-      "on_the_job": "Use Annex C to sanity-check a same-size count in seconds, then be able to show the Tables 4 and 5 division behind it. If the annex count and your division disagree, trust neither until you find which input — raceway type, insulation type, or ground — was different.",
-      "plain_explanation": "Annex C is a set of pre-worked fill tables for the narrow case where every conductor in the raceway is the same size and type: you look up the raceway and read off a maximum count instead of dividing. It is the Tables 1, 4, and 5 math done ahead of time, and it agrees with that math — the v1 example of nine 12 AWG THHN in 1/2 in EMT matches the Annex C table for that combination. Annex C cannot answer a mixed-size pull, a different insulation type than the table assumes, or a bare ground, and this book does not reproduce its tables; learn the division and use the annex only as a check.",
+      "on_the_job": "Use Annex C to sanity-check a same-size count in seconds, then be able to show the Tables 4 and 5 division behind it: 0.122 sq in of usable area in 1/2 in EMT, divided by 0.0133 sq in for one 12 AWG THHN, is 9.17 — so 9, the same 9 the annex prints. If the annex count and your division disagree, trust neither until you find which input — raceway type, insulation type, or ground — was different.",
+      "plain_explanation": "Annex C is a set of pre-worked fill tables for the narrow case where every conductor in the raceway is the same size and type: you look up the raceway and read off a maximum count instead of dividing. It is the Tables 1, 4, and 5 math done ahead of time, and it agrees with that math — the v1 example of nine 12 AWG THHN in 1/2 in EMT matches the Annex C table for that combination.\n• What it answers: one raceway, one conductor size, one insulation type — a maximum count.\n• What it cannot answer: a mixed-size pull, a different insulation type than the table assumes, or a bare ground.\nThis book does not reproduce its tables; learn the division and use the annex only as a check.",
       "prev_id": "C9-ANNEXB",
       "related_ids": [
         "Q-068",
@@ -1107,7 +1938,99 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Annex C — the same-size shortcut, and its limits",
-      "verified": true
+      "verified": true,
+      "why_it_exists": "Annex C is a shortcut, and shortcuts get stretched. Used outside its one narrow case, it hands you a confident number with the wrong inputs baked in — a mixed pull 'checked' against a same-size table is overfilled before the first conductor moves. The fill percentages protect the pull and the insulation; the division is how you know they hold. The annex is only a second pair of eyes on that math.",
+      "exam_trap": "The trap is using Annex C because it is fast, on a pull it was never built for. The annex assumes every conductor is the same size and type. The moment the pull mixes sizes, changes insulation type, or adds a bare ground, there is no annex row for it — and a count read off the wrong table is just a wrong count with a citation.",
+      "tables": [
+        {
+          "caption": "Annex C vs the division",
+          "headers": [
+            "Question",
+            "Annex C",
+            "The division"
+          ],
+          "rows": [
+            [
+              "All same size and type",
+              "Reads the count off",
+              "0.122 ÷ 0.0133 = 9"
+            ],
+            [
+              "Mixed sizes",
+              "Cannot answer",
+              "Add each size's area"
+            ],
+            [
+              "Bare ground in the pull",
+              "Cannot answer",
+              "Ground's area from Table 8"
+            ]
+          ],
+          "note": "Worked check: 12 AWG THHN in 1/2 in EMT — both paths land on 9."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-ANNEXC-two-paths.svg",
+          "alt": "Two stacked method cards: dividing the usable raceway area 0.122 square inches by one conductor at 0.0133 square inches to get 9 conductors, and reading the maximum count of 9 from Annex C, with a red panel showing the mixed-size pull Annex C cannot answer.",
+          "caption": "Two paths, one answer: both land on 9.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "inspection_fails": [
+        "Annex C count used for a mixed-size pull — there is no annex row for that raceway.",
+        "Annex count read from the wrong insulation-type table, so the 'check' confirmed a number built on a different conductor.",
+        "Bare ground added to an Annex C count as if it were one more of the same — the annex assumes insulated conductors of one type."
+      ],
+      "page_quiz": [
+        {
+          "question": "Annex C can be used when:",
+          "choices": [
+            "The pull mixes two sizes",
+            "Every conductor is the same size and type",
+            "A bare ground is in the raceway",
+            "The raceway is a nipple"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Annex C covers only the narrow case where every conductor is the same size and type.",
+          "nec_ref": "Annex C"
+        },
+        {
+          "question": "Your division gives 9 and the Annex C table gives 10 for the same pull. What now?",
+          "choices": [
+            "Use 10 — the annex governs",
+            "Use 9 — the division governs",
+            "Trust neither until the differing input is found",
+            "Average them"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The two must agree. A disagreement means an input — raceway type, insulation type, or ground — was different. Find it first.",
+          "nec_ref": "Annex C; Tables 4 and 5"
+        },
+        {
+          "question": "Annex C's standing in the Code is:",
+          "choices": [
+            "Mandatory, like Table 1",
+            "Informative — a convenience, not a limit",
+            "A replacement for Table 5",
+            "Required for same-size pulls"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Annex C is informative, not mandatory. The mandatory fill limits are in Tables 1, 4, and 5.",
+          "nec_ref": "Annex C"
+        }
+      ],
+      "code_refs": [
+        "Annex C",
+        "Table 1",
+        "Table 4",
+        "Table 5"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "article": "9",
@@ -1116,8 +2039,8 @@
       "florida_note": "",
       "id": "C9-Table8",
       "next_id": "C9-Table8-CCA",
-      "on_the_job": "For a voltage-drop check you need three things off this table and the job: the right metal column, the right stranding row, and resistance in ohm per thousand feet — the formula divides by 1000 because the table is priced per thousand feet, not per foot.",
-      "plain_explanation": "Table 8 describes the conductor itself: area in circular mils, stranding, overall diameter, and direct-current resistance at 75 degrees C in ohms per thousand feet, for copper and for aluminum. In the v1 data, stranded copper runs 3.14 ohm/kft at 14 AWG, 1.98 at 12 AWG, 1.24 at 10 AWG, 0.778 at 8 AWG, and 0.491 at 6 AWG — each step up in size drops resistance sharply, which is exactly why upsizing cures voltage drop. Solid and stranded versions of the same AWG have slightly different resistance, so read the row that matches the conductor in hand.\n\nStranded uncoated copper, DC resistance at 75°C in ohms per 1000 ft — the full run of common sizes, so a voltage-drop check never has to stop at 6 AWG:\n• 14 AWG stranded copper — 3.14 Ω/kft\n• 12 AWG stranded copper — 1.98 Ω/kft\n• 10 AWG stranded copper — 1.24 Ω/kft\n• 8 AWG stranded copper — 0.778 Ω/kft\n• 6 AWG stranded copper — 0.491 Ω/kft\n• 4 AWG stranded copper — 0.308 Ω/kft\n• 3 AWG stranded copper — 0.245 Ω/kft\n• 2 AWG stranded copper — 0.194 Ω/kft\n• 1 AWG stranded copper — 0.154 Ω/kft\n• 1/0 AWG stranded copper — 0.122 Ω/kft\n• 2/0 AWG stranded copper — 0.0967 Ω/kft\n• 3/0 AWG stranded copper — 0.0766 Ω/kft\n• 4/0 AWG stranded copper — 0.0608 Ω/kft",
+      "on_the_job": "A Sharma example, worked from this table: a 20 A load at the end of a 75 ft one-way run on 12 AWG copper. VD = 2 × L × R × I ÷ 1000 = 2 × 75 × 1.98 × 20 ÷ 1000 = 5.94 V — about 5 percent of 120 V, past the 3 percent recommendation. On 10 AWG (1.24 Ω/kft) the same run drops 3.72 V — still past it. On 8 AWG (0.778 Ω/kft) it drops 2.33 V, about 2 percent — inside. Three things make the check honest: the right metal column, the right stranding row, and resistance per thousand feet — the formula divides by 1000 because the table is priced per thousand feet, not per foot.",
+      "plain_explanation": "Table 8 describes the conductor itself: area in circular mils, stranding, overall diameter, and direct-current resistance at 75 °C in ohms per thousand feet, for copper and for aluminum.\n• Read the metal column first — copper and aluminum are different sets of numbers on the same page.\n• Read the stranding row that matches the conductor in hand. Solid and stranded versions of the same AWG have slightly different resistance.\n• Resistance falls hard as size rises: stranded copper runs 3.14 Ω/kft at 14 AWG and 0.491 Ω/kft at 6 AWG. That drop is exactly why upsizing cures voltage drop.\nThe table below carries the full run of common stranded-copper sizes, so a voltage-drop check never has to stop at 6 AWG.",
       "prev_id": "C9-ANNEXC",
       "related_ids": [
         "Ch9-T8",
@@ -1131,7 +2054,132 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Table 8 — conductor properties and DC resistance",
-      "verified": true
+      "verified": true,
+      "tables": [
+        {
+          "caption": "Table 8 — stranded uncoated copper, DC resistance at 75 °C",
+          "headers": [
+            "Size",
+            "Ω per 1000 ft"
+          ],
+          "rows": [
+            [
+              "14 AWG",
+              "3.14"
+            ],
+            [
+              "12 AWG",
+              "1.98"
+            ],
+            [
+              "10 AWG",
+              "1.24"
+            ],
+            [
+              "8 AWG",
+              "0.778"
+            ],
+            [
+              "6 AWG",
+              "0.491"
+            ],
+            [
+              "4 AWG",
+              "0.308"
+            ],
+            [
+              "3 AWG",
+              "0.245"
+            ],
+            [
+              "2 AWG",
+              "0.194"
+            ],
+            [
+              "1 AWG",
+              "0.154"
+            ],
+            [
+              "1/0 AWG",
+              "0.122"
+            ],
+            [
+              "2/0 AWG",
+              "0.0967"
+            ],
+            [
+              "3/0 AWG",
+              "0.0766"
+            ],
+            [
+              "4/0 AWG",
+              "0.0608"
+            ]
+          ]
+        }
+      ],
+      "why_it_exists": "Resistance is what turns a long run into a voltage-drop problem: every ohm in the loop drops voltage the load never sees. Table 8 is the honest source for that resistance — by metal, by stranding, at a stated temperature. Guess the resistance, or read the wrong row, and the calculation is fiction with good formatting.",
+      "inspection_fails": [
+        "Voltage-drop calculation run on the solid-conductor row for stranded conductors — resistance understated, drop understated.",
+        "Drop figured from the copper column for an aluminum feeder.",
+        "Calculation worked in ohms per foot against a per-thousand-feet table — the reported drop is off by a factor of 1000."
+      ],
+      "exam_trap": "The trap: reading the solid row for a stranded conductor — or the copper column for an aluminum run — because the AWG matches. Table 8's answer depends on metal and stranding, not just size. The other classic: forgetting the ÷ 1000 and reporting a drop a thousand times too big.",
+      "figures": [
+        {
+          "src": "fig/c9/C9-Table8-staircase.svg",
+          "alt": "Bar chart of Table 8 stranded copper resistance for 14, 12, 10, 8 and 6 AWG: 3.14, 1.98 with the 12 AWG bar highlighted in gold, 1.24, 0.778 and 0.491 ohms per thousand feet, showing resistance falling sharply as size rises.",
+          "caption": "Stranded copper resistance, 14 to 6 AWG — size is the cure.",
+          "w": 900,
+          "h": 1380
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Table 8 states DC resistance in:",
+          "choices": [
+            "Ohms per foot",
+            "Ohms per thousand feet at 75 °C",
+            "Circular mils",
+            "Ohms per mile"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Table 8 gives direct-current resistance at 75 °C in ohms per thousand feet. The voltage-drop formula divides by 1000 for that reason.",
+          "nec_ref": "Ch. 9, Table 8"
+        },
+        {
+          "question": "The Table 8 DC resistance of 12 AWG stranded copper is:",
+          "choices": [
+            "3.14 Ω/kft",
+            "1.98 Ω/kft",
+            "1.24 Ω/kft",
+            "0.778 Ω/kft"
+          ],
+          "answer_index": 1,
+          "explain_plain": "12 AWG stranded copper is 1.98 Ω/kft at 75 °C. 3.14 is 14 AWG, 1.24 is 10 AWG and 0.778 is 8 AWG.",
+          "nec_ref": "Ch. 9, Table 8"
+        },
+        {
+          "question": "Upsizing a conductor cures voltage drop because:",
+          "choices": [
+            "Bigger wire has thicker insulation",
+            "Resistance per thousand feet falls as size rises",
+            "The breaker gets bigger too",
+            "Table 8 only lists copper"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Each step up in size drops the resistance sharply — stranded copper falls from 3.14 Ω/kft at 14 AWG to 0.491 at 6 AWG — and lower resistance means lower drop.",
+          "nec_ref": "Ch. 9, Table 8"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "Chapter 9, Table 8",
+        "Chapter 9, Table 9"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "article": "9",
@@ -1144,7 +2192,7 @@
       "id": "C9-Table8-CCA",
       "next_id": "C9-VD-METHOD",
       "on_the_job": "If a CCA run needs a voltage-drop answer, do not borrow the aluminum column and report the result as the CCA drop — the aluminum number belongs to aluminum. Get the maker's DC resistance for the actual cable at 75 degrees C, write the source on the calculation, and only then run the formula. If that number is not on hand, the honest status is 'not yet calculated,' and that is what goes on the takeoff.",
-      "plain_explanation": "Copper-clad aluminum is not in Table 8. The printed table carries copper — uncoated and coated — and aluminum, and nothing else: no CCA column, no CCA row, and this book does not invent one. Ampacity is a different question — there, Table 310.16 reads CCA in its aluminum and copper-clad aluminum column, and S-10 sizes CCA one AWG larger. Voltage drop is where the gap bites, because the resistance has to describe the actual conductor. The aluminum column describes aluminum — 12 AWG stranded aluminum is 3.25 ohm/kft at 75 degrees C — and it is not a CCA value: a drop computed from it must never be reported as a CCA conductor's drop. A CCA resistance has to come from the cable maker's data for the actual product at the operating temperature. Until a cited manufacturer value for the CCA product Sharma installs is on file, this book publishes no CCA voltage-drop figure — the same open point carried on C3-310.16-CCA.",
+      "plain_explanation": "Copper-clad aluminum is not in Table 8. The printed table carries copper — uncoated and coated — and aluminum, and nothing else: no CCA column, no CCA row, and this book does not invent one.\n• Ampacity is a different question. There, Table 310.16 reads CCA in its aluminum and copper-clad aluminum column, and S-10 sizes CCA one AWG larger.\n• Voltage drop is where the gap bites, because the resistance has to describe the actual conductor. The aluminum column describes aluminum, and it is not a CCA value: a drop computed from it must never be reported as a CCA conductor's drop.\n• A CCA resistance has to come from the cable maker's data for the actual product, at the operating temperature. Until a cited manufacturer value for the CCA product Sharma installs is on file, this book publishes no CCA voltage-drop figure — the same open point carried on C3-310.16-CCA.",
       "prev_id": "C9-Table8",
       "related_ids": [
         "310.16",
@@ -1167,7 +2215,73 @@
       ],
       "title": "CCA in Table 8 — not listed, and no substitute value",
       "verified": false,
-      "unverified_reason": "Still unverified after Mike Holt recheck (2026-11-25): Keep verified=false. Confirmed: Table 8 has no CCA data, and the page correctly refuses to substitute the aluminum column. Still open: no cited manufacturer (Copperweld) 75°C DC resistance for the actual CCA NM-B product. Promote only when a manufacturer datasheet value is on file with its source. Also check the 3.25 Ω/kft aluminum figure against the printed table (solid vs stranded row)."
+      "unverified_reason": "Still unverified after Mike Holt recheck (2026-11-25): Keep verified=false. Confirmed: Table 8 has no CCA data, and the page correctly refuses to substitute the aluminum column. Still open: no cited manufacturer (Copperweld) 75°C DC resistance for the actual CCA NM-B product. Promote only when a manufacturer datasheet value is on file with its source. Also check the 3.25 Ω/kft aluminum figure against the printed table (solid vs stranded row).",
+      "why_it_exists": "Voltage drop is a promise about how a circuit will actually perform. Put the wrong metal's resistance in the formula and the arithmetic still runs — it just describes a conductor that is not in the wall. A CCA run checked with aluminum numbers can pass on paper and fail in the house, and nobody can tell from the paperwork why.",
+      "inspection_fails": [
+        "Voltage-drop calculation on the permit set runs a CCA conductor on the Table 8 aluminum column — no manufacturer data cited.",
+        "CCA voltage-drop figure submitted with no source stated for the resistance value used.",
+        "CCA run reported as passing on voltage drop where the calculation describes a different conductor than the one installed."
+      ],
+      "exam_trap": "The trap, on the exam and in the field: “CCA is mostly aluminum, so use the aluminum column.” Table 8 gives no CCA value, and a substitute is not a value. On the exam the answer is that CCA is not listed in Table 8; on the job the answer is manufacturer data, or “not yet calculated.”",
+      "tables": [],
+      "figures": [
+        {
+          "src": "fig/c9/C9-Table8-CCA-gap.svg",
+          "alt": "Table 8 drawn with copper and aluminum columns marked listed and a third dashed column for copper-clad aluminum marked not listed, under a red unverified banner, with the three steps a CCA voltage-drop number needs: manufacturer data, the source written on the calculation, then the formula. The drawing carries no resistance values.",
+          "caption": "No CCA column exists — a CCA drop number starts with maker data.",
+          "w": 900,
+          "h": 1620
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Where does Table 8 list copper-clad aluminum?",
+          "choices": [
+            "In the aluminum column",
+            "In its own CCA column",
+            "It does not — Table 8 lists copper and aluminum only",
+            "In Table 5A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The printed Table 8 carries copper, uncoated and coated, and aluminum. There is no CCA column and no CCA row.",
+          "nec_ref": "Ch. 9, Table 8"
+        },
+        {
+          "question": "A CCA run needs a voltage-drop check. The resistance must come from:",
+          "choices": [
+            "The aluminum column of Table 8",
+            "The copper column of Table 8",
+            "The cable manufacturer's data for the actual product",
+            "Table 310.16"
+          ],
+          "answer_index": 2,
+          "explain_plain": "A CCA resistance has to come from the maker's data for the actual cable at the operating temperature, with the source written on the calculation.",
+          "nec_ref": "Ch. 9, Table 8"
+        },
+        {
+          "question": "For ampacity, Table 310.16 reads CCA in:",
+          "choices": [
+            "The copper column",
+            "The aluminum and copper-clad aluminum column",
+            "The 90 °C column only",
+            "CCA is not in Table 310.16 either"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Ampacity and voltage drop are different questions. Table 310.16 has an aluminum and copper-clad aluminum column for ampacity; Table 8 has no CCA resistance.",
+          "nec_ref": "Table 310.16"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "Chapter 9, Table 8",
+        "Table 310.16"
+      ],
+      "uncertain": [
+        "No cited manufacturer (Copperweld) 75 °C DC resistance for the actual CCA NM-B product Sharma installs is on file. Until a datasheet value with its source is on file, this book publishes no CCA voltage-drop figure — get the manufacturer's data before any CCA voltage-drop design number is used.",
+        "The old text of this page stated the aluminum column's 12 AWG stranded value as 3.25 Ω/kft; that pairing was removed from the prose because it is unconfirmed — Mike Holt's 2026-11-25 recheck flags the 3.25 Ω/kft aluminum figure for a check against the printed Table 8 (solid vs stranded row). Read aluminum resistance from the printed Table 8."
+      ],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "article": "9",
@@ -1660,7 +2774,7 @@
       "id": "C9-Table9",
       "next_id": "C9-Table11",
       "on_the_job": "If a voltage-drop answer matters enough to fight over — a long feeder, a big motor, a plan review comment — do not settle it with the Table 8 approximation. Flag it for Mike to run with Table 9 and the actual raceway and power factor.\n\nWorked example with the effective-Z column: a 208 V three-phase feeder carrying 100 A at 0.85 power factor, 200 ft one-way, on 2 AWG copper in PVC (Z = 0.19 ohm/kft). VD = 1.732 × 200 × 0.19 × 100 / 1000 = 6.58 V, about 3.2 percent of 208 V — over the 3 percent recommendation on the feeder alone, so the design conversation starts at 1 AWG or 1/0, not at hope.",
-      "plain_explanation": "Table 9 is the next step past Table 8 for voltage drop. Its full title is 'Alternating-Current Resistance and Reactance for 600-Volt Cables, 3-Phase, 60 Hz, 75 degrees C — Three Single Conductors in Conduit,' and instead of DC resistance alone it gives, in ohms to neutral per 1000 ft, the inductive reactance for all wires, the alternating-current resistance for uncoated copper and for aluminum, and the effective impedance Z at 0.85 power factor — each broken out for PVC, aluminum, and steel conduit, because a magnetic steel raceway raises reactance and, in the larger sizes, AC resistance as well. The table's Note 1 limits its values to conductors at 75 degrees C under the conditions its title states. the teaching here is when to reach for it — large conductors, long three-phase runs, steel raceway, or a Table 8 approximation that lands near a limit — and to run those cases from the printed table rather than from memory. Common copper sizes are carried below (aluminum and sizes above 4/0 stay in the printed table) — uncoated copper, ohms to neutral per 1000 ft. Reactance and the effective-Z column are the parts Table 8 cannot give you; the AC resistance column tracks Table 8 closely at small sizes and climbs above it in steel conduit as sizes grow. Sizes above 4/0, and the aluminum columns, stay in the printed table:\n• 14 AWG copper — reactance 0.058 in PVC or aluminum conduit, 0.073 in steel; AC resistance 3.1 in PVC; effective Z at 0.85 PF 2.7 in PVC\n• 12 AWG copper — reactance 0.054 in PVC or aluminum conduit, 0.068 in steel; AC resistance 2.0 in PVC; effective Z at 0.85 PF 1.7 in PVC\n• 10 AWG copper — reactance 0.050 in PVC or aluminum conduit, 0.063 in steel; AC resistance 1.2 in PVC; effective Z at 0.85 PF 1.1 in PVC\n• 8 AWG copper — reactance 0.052 in PVC or aluminum conduit, 0.065 in steel; AC resistance 0.78 in PVC; effective Z at 0.85 PF 0.69 in PVC\n• 6 AWG copper — reactance 0.051 in PVC or aluminum conduit, 0.064 in steel; AC resistance 0.49 in PVC; effective Z at 0.85 PF 0.44 in PVC\n• 4 AWG copper — reactance 0.048 in PVC or aluminum conduit, 0.060 in steel; AC resistance 0.31 in PVC; effective Z at 0.85 PF 0.29 in PVC\n• 3 AWG copper — reactance 0.047 in PVC or aluminum conduit, 0.059 in steel; AC resistance 0.25 in PVC; effective Z at 0.85 PF 0.23 in PVC\n• 2 AWG copper — reactance 0.045 in PVC or aluminum conduit, 0.057 in steel; AC resistance 0.19 in PVC; effective Z at 0.85 PF 0.19 in PVC\n• 1 AWG copper — reactance 0.046 in PVC or aluminum conduit, 0.057 in steel; AC resistance 0.15 in PVC; effective Z at 0.85 PF 0.16 in PVC\n• 1/0 AWG copper — reactance 0.044 in PVC or aluminum conduit, 0.055 in steel; AC resistance 0.12 in PVC; effective Z at 0.85 PF 0.13 in PVC\n• 4/0 AWG copper — reactance 0.041 in PVC or aluminum conduit, 0.051 in steel; AC resistance 0.062 in PVC The 3 percent / 5 percent voltage-drop figures are Informational Note recommendations, not requirements.",
+      "plain_explanation": "Table 9 is the next step past Table 8 for voltage drop. Its full title is 'Alternating-Current Resistance and Reactance for 600-Volt Cables, 3-Phase, 60 Hz, 75 °C — Three Single Conductors in Conduit,' and instead of DC resistance alone it gives, in ohms to neutral per 1000 ft:\n• Inductive reactance for all wires — one value for PVC or aluminum conduit, and a higher one for steel.\n• Alternating-current resistance for uncoated copper and for aluminum.\n• Effective impedance Z at 0.85 power factor — the number that already blends resistance and reactance for the drop formula.\nA magnetic steel raceway raises reactance and, in the larger sizes, AC resistance as well. The AC resistance column tracks Table 8 closely at small sizes and climbs above it in steel conduit as sizes grow.\nThe table's Note 1 limits its values to conductors at 75 °C under the conditions its title states. This page's teaching is when to reach for it — large conductors, long three-phase runs, steel raceway, or a Table 8 approximation that lands near a limit — and to run those cases from the printed table rather than from memory. Common copper sizes are carried in the tables below; aluminum and sizes above 4/0 stay in the printed table.\nThe 3 percent / 5 percent voltage-drop figures are Informational Note recommendations, not requirements.",
       "prev_id": "C9-VD-LIMITS",
       "related_ids": [
         "C9-L-043",
@@ -1671,7 +2785,203 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Table 9 — AC resistance and reactance, for finer voltage-drop work",
-      "verified": true
+      "verified": true,
+      "why_it_exists": "Table 8's DC-only number quietly understates the drop on big conductors, because reactance — which Table 8 ignores — carries more of the drop as conductors grow, and a steel raceway makes it worse. A feeder sized on the approximation can land in service with dim lights, hard-starting motors, and a plan-review fight nobody can settle. Table 9 exists so that argument is settled with the real impedance.",
+      "inspection_fails": [
+        "Voltage drop on a long feeder figured from Table 8 DC resistance alone in steel conduit — the reactance Table 9 carries is missing, and the answer comes in low.",
+        "Effective-Z column used at the wrong power factor — the printed Z column is built at 0.85 PF.",
+        "Table 9 values applied at conductor temperatures other than 75 °C — Note 1 limits the table to the conditions in its title."
+      ],
+      "exam_trap": "The feeder came to 3.2 percent, so it fails the Code? No. The 3 percent and 5 percent figures are Informational Note recommendations, not requirements — the real fight is about design, and it should be fought with the accurate number: Table 9's effective Z, not a Table 8 approximation that lands near the line.",
+      "tables": [
+        {
+          "caption": "Table 9 — reactance and AC resistance, uncoated copper (ohms to neutral per 1000 ft)",
+          "headers": [
+            "Size",
+            "Reactance PVC/Al",
+            "Reactance steel",
+            "AC resist. PVC"
+          ],
+          "rows": [
+            [
+              "14 AWG",
+              "0.058",
+              "0.073",
+              "3.1"
+            ],
+            [
+              "12 AWG",
+              "0.054",
+              "0.068",
+              "2.0"
+            ],
+            [
+              "10 AWG",
+              "0.050",
+              "0.063",
+              "1.2"
+            ],
+            [
+              "8 AWG",
+              "0.052",
+              "0.065",
+              "0.78"
+            ],
+            [
+              "6 AWG",
+              "0.051",
+              "0.064",
+              "0.49"
+            ],
+            [
+              "4 AWG",
+              "0.048",
+              "0.060",
+              "0.31"
+            ],
+            [
+              "3 AWG",
+              "0.047",
+              "0.059",
+              "0.25"
+            ],
+            [
+              "2 AWG",
+              "0.045",
+              "0.057",
+              "0.19"
+            ],
+            [
+              "1 AWG",
+              "0.046",
+              "0.057",
+              "0.15"
+            ],
+            [
+              "1/0 AWG",
+              "0.044",
+              "0.055",
+              "0.12"
+            ],
+            [
+              "4/0 AWG",
+              "0.041",
+              "0.051",
+              "0.062"
+            ]
+          ],
+          "note": "Reactance is for all wires. AC resistance shown for PVC conduit; steel raises it in the larger sizes."
+        },
+        {
+          "caption": "Table 9 — effective Z at 0.85 power factor, PVC conduit (ohms to neutral per 1000 ft)",
+          "headers": [
+            "Size",
+            "Effective Z"
+          ],
+          "rows": [
+            [
+              "14 AWG",
+              "2.7"
+            ],
+            [
+              "12 AWG",
+              "1.7"
+            ],
+            [
+              "10 AWG",
+              "1.1"
+            ],
+            [
+              "8 AWG",
+              "0.69"
+            ],
+            [
+              "6 AWG",
+              "0.44"
+            ],
+            [
+              "4 AWG",
+              "0.29"
+            ],
+            [
+              "3 AWG",
+              "0.23"
+            ],
+            [
+              "2 AWG",
+              "0.19"
+            ],
+            [
+              "1 AWG",
+              "0.16"
+            ],
+            [
+              "1/0 AWG",
+              "0.13"
+            ],
+            [
+              "4/0 AWG",
+              "—"
+            ]
+          ],
+          "note": "The 4/0 effective Z is not carried on this page — read it in the printed Table 9."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-Table9-fork.svg",
+          "alt": "A fork in the road: short branch runs take the Table 8 DC resistance path, long large three-phase or steel runs take the Table 9 path with effective Z at 0.85 power factor, over the worked 2 AWG feeder example.",
+          "caption": "Short branch runs take Table 8; long or large feeders take Table 9.",
+          "w": 900,
+          "h": 1220
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Table 9's effective Z column is built at what power factor?",
+          "choices": [
+            "1.0",
+            "0.95",
+            "0.85",
+            "0.80"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The printed effective-Z column blends resistance and reactance at 0.85 power factor.",
+          "nec_ref": "Chapter 9, Table 9"
+        },
+        {
+          "question": "A 208 V three-phase feeder, 100 A, 200 ft one-way, 2 AWG copper in PVC (Z = 0.19 ohm/kft). Voltage drop?",
+          "choices": [
+            "3.29 V",
+            "6.58 V",
+            "13.2 V",
+            "0.66 V"
+          ],
+          "answer_index": 1,
+          "explain_plain": "VD = 1.732 × 200 × 0.19 × 100 / 1000 = 6.58 V, about 3.2 percent of 208 V.",
+          "nec_ref": "Chapter 9, Table 9"
+        },
+        {
+          "question": "When is Table 9 the right tool instead of Table 8?",
+          "choices": [
+            "Every 120 V branch circuit",
+            "Short runs in a dwelling",
+            "Large conductors, long three-phase runs, or steel raceway",
+            "Never — Table 8 is always enough"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Reactance matters most on large conductors, long three-phase runs, and in magnetic steel raceway — exactly the cases Table 9 is built for.",
+          "nec_ref": "Chapter 9, Table 9"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "Chapter 9, Table 9",
+        "Chapter 9, Table 8"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C9-Table11",
@@ -1679,8 +2989,8 @@
       "article": "9",
       "section": "Tables 11(A) and 11(B)",
       "title": "Tables 11(A) and 11(B) — how much power a Class 2 or Class 3 source may deliver",
-      "plain_explanation": "Tables 11(A) and 11(B) are the numbers behind the words 'power limited.' For Class 2 and Class 3 circuits, the tables cap what the power source may deliver — maximum circuit voltage, maximum current, and maximum volt-amperes — with one table for ac sources and one for dc sources. Each table splits sources two ways: inherently limited sources, whose construction keeps them inside the limits under any load or fault, and sources that are not inherently limited and therefore rely on overcurrent protection sized from the table. Article 725 sends you here to decide whether a transformer or supply really is a Class 2 source; a 'Class 2' claim on a nameplate is checked against these tables, not taken on faith.",
-      "on_the_job": "A door-control transformer marked Class 2: the table row for its voltage is what makes that marking true, and it is also what earns the wiring-method freedoms Chapter 7 gives Class 2 circuits. No table match, no Class 2 treatment — the circuit is wired like power.",
+      "plain_explanation": "Tables 11(A) and 11(B) are the numbers behind the words 'power limited.' For Class 2 and Class 3 circuits, the tables cap what the power source may deliver — maximum circuit voltage, maximum current, and maximum volt-amperes — with one table for ac sources and one for dc sources. Each table splits sources two ways: inherently limited sources, whose construction keeps them inside the limits under any load or fault, and sources that are not inherently limited and therefore rely on overcurrent protection sized from the table. Article 725 sends you here to decide whether a transformer or supply really is a Class 2 source; a 'Class 2' claim on a nameplate is checked against these tables, not taken on faith.\n• The nameplate ceiling both classes live under: 100 VA maximum.\n• A Class 2 source running over 30 V is held to 0.005 A — five milliamps — which is why Class 2 earns its shock-safe reputation.\n• At 20 V a Class 2 nameplate may show up to 5.0 A; the current ceiling falls as the voltage rises.",
+      "on_the_job": "A door-control transformer marked Class 2: the table row for its voltage is what makes that marking true, and it is also what earns the wiring-method freedoms Chapter 7 gives Class 2 circuits. No table match, no Class 2 treatment — the circuit is wired like power. Read the nameplate VA before you land the conductors: at 100 VA or less the supply can be a Class 2 source; a 250 VA transformer cannot, whatever is printed on the cable jacket.",
       "sharma_note": "",
       "florida_note": "",
       "figure_idea": "Table skeleton: ac and dc tables, inherently limited vs overcurrent-protected columns.",
@@ -1692,7 +3002,114 @@
       "sharma_rule_ids": [],
       "verified": true,
       "prev_id": "C9-Table9",
-      "next_id": "C9-ANNEXD"
+      "next_id": "C9-ANNEXD",
+      "why_it_exists": "Class 2 wiring gets freedoms no power circuit gets — lighter wiring methods and relaxed separation — because the source cannot deliver enough energy to start a fire or give a dangerous shock. That bargain only holds if the source truly stays inside the table. A supply that can push past its row is a power circuit wearing a Class 2 label, wired with Class 2 freedoms it never earned.",
+      "exam_trap": "The trap is believing the words on the jacket. 'Class 2' is a conclusion the tables reach about a source, not a description of the cable or the transformer frame. The exam version: a source that is not inherently limited is still not a Class 2 source until it is paired with overcurrent protection sized from the table — the protection is part of the source.",
+      "tables": [
+        {
+          "caption": "The checks that decide a Class 2 or Class 3 source",
+          "headers": [
+            "Check",
+            "Class 2",
+            "Class 3"
+          ],
+          "rows": [
+            [
+              "Nameplate rating, max",
+              "100 VA",
+              "100 VA"
+            ],
+            [
+              "Inherently limited",
+              "By construction",
+              "By construction"
+            ],
+            [
+              "Not inherently limited",
+              "Source + OCP",
+              "Source + OCP"
+            ],
+            [
+              "Current over 30 V",
+              "0.005 A max",
+              "Per table row"
+            ]
+          ],
+          "note": "Values shown for ac sources, Table 11(A); dc sources read Table 11(B). OCP = overcurrent protection sized from the table."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-Table11-power-limits.svg",
+          "alt": "Two panels comparing inherently limited sources, whose construction holds the limits and which need no overcurrent protection, with sources that are not inherently limited and must be paired with overcurrent protection sized from the table, under a 100 volt-ampere nameplate ceiling for Class 2 and Class 3.",
+          "caption": "Two kinds of sources, one 100 VA nameplate ceiling.",
+          "w": 900,
+          "h": 1250
+        }
+      ],
+      "inspection_fails": [
+        "'Class 2' taken from the cable jacket or the transformer frame without checking the source against Tables 11(A)/(B).",
+        "A source that is not inherently limited installed with no overcurrent protection — the table's second path was never completed.",
+        "Oversized replacement transformer landed on a Class 2 run — nameplate VA over the 100 VA ceiling, Class 2 treatment kept."
+      ],
+      "page_quiz": [
+        {
+          "question": "Whether a supply really is a Class 2 source is decided by:",
+          "choices": [
+            "The cable jacket marking",
+            "Tables 11(A) and 11(B)",
+            "The load it feeds",
+            "Its physical size"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Article 725 sends you to Tables 11(A) and 11(B); a 'Class 2' claim is checked against the tables, not taken on faith.",
+          "nec_ref": "Tables 11(A) and 11(B)"
+        },
+        {
+          "question": "The maximum nameplate rating for a Class 2 or Class 3 power source is:",
+          "choices": [
+            "250 VA",
+            "100 VA",
+            "1000 VA",
+            "No limit"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Both classes live under a 100 VA nameplate ceiling in Tables 11(A) and 11(B).",
+          "nec_ref": "Table 11(A)"
+        },
+        {
+          "question": "A source that is not inherently limited becomes a Class 2 source when:",
+          "choices": [
+            "It is labeled Class 2",
+            "It is paired with overcurrent protection sized from the table",
+            "The circuit is under 30 V",
+            "It feeds a thermostat"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Sources that are not inherently limited rely on overcurrent protection sized from the table — the protection is part of the source.",
+          "nec_ref": "Table 11(A)"
+        }
+      ],
+      "code_refs": [
+        "Table 11(A)",
+        "Table 11(B)",
+        "725.121"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "Class 2 and Class 3 power source nameplate maximum is 100 VA; Class 2 current over 30 V is limited to 0.005 A; nameplate current is 5.0 A at 20 V and falls as voltage rises",
+          "source": "EC&M, Know the Current (Tables 11(A)/(B) explained)",
+          "url": "https://www.ecmag.com/magazine/articles/article-detail/codes-standards-know-current"
+        },
+        {
+          "claim": "Tables 11(A) and 11(B) limitation structure: inherently limited sources need no overcurrent protection; sources not inherently limited rely on overcurrent protection sized from the table",
+          "source": "Reproduction of NEC Tables 11(A) and 11(B), Chapter 9 (mailing-list archive)",
+          "url": "https://www.mail-archive.com/emc-pstc@listserv.ieee.org/msg26885.html"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "article": "9",
@@ -1701,8 +3118,8 @@
       "florida_note": "Annex D is informative. The mandatory calculation rules are the Chapter 2 articles as adopted in Florida; the annex only illustrates them.",
       "id": "C9-ANNEXD",
       "next_id": "C9-ANNEXI",
-      "on_the_job": "When a load calc is due, work it in the annex's order — general loads, then the named appliances and motors, then demand, then the service size — and keep the arithmetic with the estimate so Mike can re-run it. If your total and the annex pattern disagree, the inputs are wrong somewhere, not the pattern.",
-      "plain_explanation": "Annex D shows the load-calculation articles worked end to end on example buildings: add the loads the articles name, apply the demand factors the articles allow, and arrive at a service or feeder size. The 2020 annex works eight example families: D1, a one-family dwelling by the standard method, with and without air conditioning; D2, a one-family dwelling by the optional method of 220.82, including a heat-pump version with backup heat; D3, a store building; D4 and D5, multifamily dwellings — D5 served at 208Y/120 volts, three-phase; D6, maximum demand for range loads from Table 220.55; D7, dwelling service conductors sized with 310.12; and D8, motor conductors and protection under Article 430. This book teaches that method and points you to the real work in Chapter 2 — especially the optional dwelling calculation data carried in v1 as table 220.82 — rather than copying an annex example. A Sharma example must be computed fresh from the actual house, labeled as a Sharma example, and checked; an annex example is a pattern to follow, not a number to borrow for a different building.",
+      "on_the_job": "Work a Sharma example fresh from the actual house, in the annex's order. General loads first, on the optional method of 220.82(B): a 2,000 sq ft house takes 2,000 × 3 VA = 6,000 VA for floor area, plus two small-appliance circuits at 1,500 VA each and the laundry circuit at 1,500 VA — 10,500 VA before demand. The first 10 kVA counts at 100 percent and the remaining 500 VA at 40 percent, so the general-load demand is 10,200 VA; heating and cooling are then selected separately under 220.82(C), largest selection only. Keep the arithmetic with the estimate so Mike can re-run it. If your total and the annex pattern disagree, the inputs are wrong somewhere, not the pattern.",
+      "plain_explanation": "Annex D shows the load-calculation articles worked end to end on example buildings: add the loads the articles name, apply the demand factors the articles allow, and arrive at a service or feeder size. The 2020 annex works eight example families:\n• D1 — a one-family dwelling by the standard method, with and without air conditioning.\n• D2 — a one-family dwelling by the optional method of 220.82, including a heat-pump version with backup heat.\n• D3 — a store building.\n• D4 and D5 — multifamily dwellings; D5 is served at 208Y/120 volts, three-phase.\n• D6 — maximum demand for range loads from Table 220.55.\n• D7 — dwelling service conductors sized with 310.12.\n• D8 — motor conductors and protection under Article 430.\nThis book teaches that method and points you to the real work in Chapter 2 — especially the optional dwelling calculation of 220.82 — rather than copying an annex example. A Sharma example must be computed fresh from the actual house, labeled as a Sharma example, and checked; an annex example is a pattern to follow, not a number to borrow for a different building.",
       "prev_id": "C9-Table11",
       "related_ids": [
         "220.82",
@@ -1713,7 +3130,117 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Annex D — worked load-calculation examples",
-      "verified": true
+      "verified": true,
+      "why_it_exists": "Services are sized from calculations, not from what the last house took. The worked examples exist so the method stays visible: every load the articles name, in the articles' order, with only the demand factors the articles allow. Skip a named load or invent a demand factor and the service is the wrong size with confident-looking paperwork behind it.",
+      "inspection_fails": [
+        "Service size on the permit set copied from an annex example instead of calculated from the building's actual loads.",
+        "Load calculation missing a load the articles name — no laundry circuit, or a fastened-in-place appliance left off the list.",
+        "Demand factor applied to a load that the article does not allow it for."
+      ],
+      "exam_trap": "The trap: lifting a finished number out of an annex example because the house “looks about the same.” The examples are patterns, not answers — D1's total belongs to D1's house. A Sharma service size is computed from the actual loads of the actual building and labeled as a Sharma example.",
+      "tables": [
+        {
+          "caption": "Annex D — the eight example families",
+          "headers": [
+            "Example",
+            "Building and method"
+          ],
+          "rows": [
+            [
+              "D1",
+              "One-family dwelling, standard method, with and without air conditioning"
+            ],
+            [
+              "D2",
+              "One-family dwelling, optional method 220.82, incl. heat pump with backup heat"
+            ],
+            [
+              "D3",
+              "Store building"
+            ],
+            [
+              "D4",
+              "Multifamily dwelling"
+            ],
+            [
+              "D5",
+              "Multifamily dwelling at 208Y/120 V, three-phase"
+            ],
+            [
+              "D6",
+              "Maximum demand for range loads, Table 220.55"
+            ],
+            [
+              "D7",
+              "Dwelling service conductors sized with 310.12"
+            ],
+            [
+              "D8",
+              "Motor conductors and protection, Article 430"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-ANNEXD-flow.svg",
+          "alt": "Flowchart of the Annex D method from load list through demand factors to a service or feeder size, a panel pointing back to Chapter 2 and Article 220, and a worked Sharma example of the 220.82(B) general-load demand step for a 2,000 square foot house landing at 10,200 VA.",
+          "caption": "The annex pattern: list, demand, size — rules live in Chapter 2.",
+          "w": 900,
+          "h": 1460
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Annex D is:",
+          "choices": [
+            "A set of mandatory calculation rules",
+            "Informative worked examples of the Chapter 2 calculation articles",
+            "A Florida amendment to Article 220",
+            "A substitute for doing the calculation"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Annex D is informative. It works the mandatory Chapter 2 articles end to end on example buildings; the articles carry the rules.",
+          "nec_ref": "Annex D"
+        },
+        {
+          "question": "In the optional method, the general-load demand step of 220.82(B) is:",
+          "choices": [
+            "Everything at 100 percent",
+            "First 10 kVA at 100 percent, remainder at 40 percent",
+            "Everything at 40 percent",
+            "First 10 kVA at 40 percent, remainder at 100 percent"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The first 10 kVA of the general loads is taken at full value and the remainder at 40 percent. Heating and cooling are selected separately under 220.82(C).",
+          "nec_ref": "220.82(B)"
+        },
+        {
+          "question": "Example D5 in Annex D is:",
+          "choices": [
+            "A store building",
+            "A multifamily dwelling served at 208Y/120 V, three-phase",
+            "A one-family dwelling by the standard method",
+            "Range demand from Table 220.55"
+          ],
+          "answer_index": 1,
+          "explain_plain": "D4 and D5 are the multifamily examples; D5 is the one served at 208Y/120 volts, three-phase. D3 is the store and D6 is the range-demand example.",
+          "nec_ref": "Annex D5"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "Annex D",
+        "220.82",
+        "220.82(B)",
+        "220.82(C)",
+        "Table 220.55",
+        "310.12",
+        "Article 430"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "article": "9",
@@ -1722,8 +3249,8 @@
       "florida_note": "",
       "id": "C9-ANNEXI",
       "next_id": "C9-ANNEXES-INFORMATIVE",
-      "on_the_job": "Reach for the equipment marking first, the manufacturer instruction second, and a general recommended table only when neither exists — and use a torque tool, not a guess by feel, on service and feeder lugs.",
-      "plain_explanation": "Informative Annex I is titled 'Recommended Tightening Torque Tables from UL Standard 486A-B,' and it collects recommended tightening-torque values for connections in three tables: Table I.1, for screws No. 10 and larger, including split-bolt and other connectors; Table I.2, for slotted head screws smaller than No. 10, intended for use with conductors 8 AWG and smaller; and Table I.3, for screws with recessed Allen or square drives. It is a fallback, not the first stop: 110.14(D) makes the manufacturer's stated torque the rule, achieved by an approved means, and the annex tables serve the connection where the equipment gives no torque value and none can be obtained from the manufacturer. This page publishes no torque values — torque comes off the equipment marking, the manufacturer's instructions, or the annex tables in the printed book, never from memory.",
+      "on_the_job": "On a Sharma service change in Orlando, work the ladder in order. Read the panel and lug markings first — the value printed there is the rule. No marking on the equipment? Go to the manufacturer instructions for the gear. Only when neither exists do the Annex I tables in the printed book supply the number. Whatever the source, the tightening is done with a torque tool, not by feel, on service and feeder lugs — and the source of the value goes in the job notes so the next person can check it.",
+      "plain_explanation": "Informative Annex I is titled “Recommended Tightening Torque Tables from UL Standard 486A-B.” It collects recommended tightening-torque values for connections in three tables:\n• Table I.1 — screws No. 10 and larger, including split-bolt and other connectors.\n• Table I.2 — slotted head screws smaller than No. 10, intended for use with conductors 8 AWG and smaller.\n• Table I.3 — screws with recessed Allen or square drives.\nThe annex is a fallback, not the first stop. 110.14(D) makes the manufacturer's stated torque the rule, achieved by an approved means such as a torque tool. The annex tables serve only the connection where the equipment gives no torque value and none can be obtained from the manufacturer. This page publishes no torque values — torque comes off the equipment marking, the manufacturer's instructions, or the annex tables in the printed book, never from memory.",
       "prev_id": "C9-ANNEXD",
       "related_ids": [
         "C9-L-047",
@@ -1733,7 +3260,100 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Annex I — recommended tightening torque",
-      "verified": true
+      "verified": true,
+      "why_it_exists": "A loose lug is a heater. A connection that is not tightened to its specified torque works loose under load cycling, overheats, and can arc or burn — failed services start here. An over-tightened lug is no better: it deforms the conductor and the connector. The specified value exists so the connection is clamped the way it was tested and listed.",
+      "inspection_fails": [
+        "Feeder lug found loose with heat-discolored insulation — the connection was tightened by feel, no torque tool used (110.14(D)).",
+        "Torque taken from a general recommended table where the equipment label stated its own value — the label governs (110.14(D)).",
+        "Split-bolt tap connection made up with no manufacturer torque value obtained and no torque record — redo with a torque tool and document the value."
+      ],
+      "exam_trap": "The trap: reaching for the Annex I table first because it is printed in the back of the book. The annex is the last resort. Where the equipment marking or the manufacturer states a torque, 110.14(D) makes that value the requirement, and a general recommended table does not override it.",
+      "tables": [
+        {
+          "caption": "The three Annex I tables — fallback values only",
+          "headers": [
+            "Table",
+            "Covers",
+            "Use when"
+          ],
+          "rows": [
+            [
+              "Table I.1",
+              "Screws No. 10 and larger, incl. split-bolt and other connectors",
+              "No equipment or maker value exists"
+            ],
+            [
+              "Table I.2",
+              "Slotted head screws smaller than No. 10; conductors 8 AWG and smaller",
+              "No equipment or maker value exists"
+            ],
+            [
+              "Table I.3",
+              "Screws with recessed Allen or square drives",
+              "No equipment or maker value exists"
+            ]
+          ],
+          "note": "This page publishes no torque values. Values come from the equipment marking, the manufacturer, or these tables in the printed book."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-ANNEXI-torque-ladder.svg",
+          "alt": "Decision ladder for tightening torque: step 1 the equipment marking, step 2 the manufacturer instructions, step 3 the Annex I tables I.1, I.2 and I.3 as a fallback only, with a red panel barring values from memory or tightening by feel.",
+          "caption": "Torque ladder: marking first, maker second, Annex I last.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A panel label states the lug torque, and an Annex I table gives a different value. Which governs?",
+          "choices": [
+            "The Annex I table",
+            "The equipment label, per 110.14(D)",
+            "Whichever value is larger",
+            "Whichever value is smaller"
+          ],
+          "answer_index": 1,
+          "explain_plain": "110.14(D) makes the manufacturer's stated torque the rule. Annex I is a fallback for connections where no value is given.",
+          "nec_ref": "110.14(D)"
+        },
+        {
+          "question": "When do the Annex I torque tables apply?",
+          "choices": [
+            "On every termination",
+            "Only on service conductors",
+            "Only when neither the equipment nor the manufacturer gives a value",
+            "Only on aluminum conductors"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Annex I collects recommended values for the connection where the equipment gives no torque and none can be obtained from the manufacturer.",
+          "nec_ref": "Annex I, 110.14(D)"
+        },
+        {
+          "question": "Table I.2 covers which screws?",
+          "choices": [
+            "Screws No. 10 and larger",
+            "Slotted head screws smaller than No. 10, for conductors 8 AWG and smaller",
+            "Recessed Allen-drive screws",
+            "Split-bolt connectors"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Table I.2 is for slotted head screws smaller than No. 10, intended for use with conductors 8 AWG and smaller. Table I.1 takes No. 10 and larger; Table I.3 takes Allen and square drives.",
+          "nec_ref": "Annex I, Table I.2"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "110.14(D)",
+        "Annex I",
+        "Table I.1",
+        "Table I.2",
+        "Table I.3"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "article": "9",
@@ -1745,8 +3365,8 @@
       "florida_note": "If a Florida jurisdiction's adopting ordinance expressly adopts an annex or a local amendment, that local action governs for that jurisdiction — check the AHJ.",
       "id": "C9-ANNEXES-INFORMATIVE",
       "next_id": null,
-      "on_the_job": "When someone quotes an annex at you on a job, ask the deciding question: is that in a mandatory section, or in an annex or a note? Both can be good practice; only one can be enforced as written, and knowing which keeps you from arguing the wrong point with an inspector.",
-      "plain_explanation": "The annexes sit behind the mandatory chapters as explanation, examples, and reference data. Unless an adopting ordinance specifically adopts an annex, its content is not a requirement an inspector can cite the way a numbered article section can be cited — that is the same status the 3 and 5 percent voltage-drop figures carry as Informational Notes. This chapter covers the annexes Sharma work actually touches — C for same-size fill checks, D for calculation examples, and I for torque. The remaining annex letters were not written as pages in this pass, because their letters and subjects were not confirmed against the printed 2020 book, and this book does not invent an annex.\n\nUpdate since this page was first written: Annex B has since been added as a brief page (C9-ANNEXB), scoped the same way as the annexes above — what it is, when it is used, and no reproduced ampacity tables. Table 5A, Tables 11(A)/(B) and Annex B now have their own pages. Still held back: Table 10 (stranding), Table 12 (PLFA power source limits), and the annex letters not yet written. The 2020 informative annexes are A (product safety standards), B (ampacity calculation), C (same-size fill tables), D (examples), E (types of construction), F (critical operations power systems), G (SCADA), H (administration and enforcement), I (torque tables from UL 486A-B) and J (ADA standards). Annex K is new in NEC 2023, so the 2020 book has none.\n\nNEC 2023 CHANGE:\n• Annex K: New Informative Annex K, Use of Medical Electrical Equipment in Dwellings and Residential Board-and-Care Occupancies. (So the 2020 book correctly has no Annex K.)\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "on_the_job": "When someone quotes an annex at you on a job, ask the deciding question: is that in a mandatory section, or in an annex or a note? Both can be good practice; only one can be enforced as written, and knowing which keeps you from arguing the wrong point with an inspector.\n\nExample: a Marion County inspector walks a rough-in with Annex C open on his phone. The shortcut is a fine check, but a correction has to cite Table 1 and Table 4 — the annex cannot carry it.",
+      "plain_explanation": "The annexes sit behind the mandatory chapters as explanation, examples, and reference data. An annex is informative only: unless an adopting ordinance specifically adopts it, its content is not a requirement an inspector can cite the way a numbered article section can be cited. That is the same status the 3 percent and 5 percent voltage-drop figures carry as Informational Notes.\n• What an annex can do: explain a rule, work an example, or carry reference data a crew can use.\n• What it cannot do: add a requirement, or take one away.\nThis chapter covers the annexes Sharma work actually touches: C for same-size fill checks, D for calculation examples, and I for torque. Annex B has its own page (C9-ANNEXB), scoped the same way — what it is, when it is used, and no reproduced ampacity tables. Table 5A and Tables 11(A)/(B) now have their own pages too.\nStill held back: Table 10 (stranding), Table 12 (PLFA power source limits), and the annex letters not listed as covered — not confirmed against the printed 2020 book, and this book does not invent an annex.\nThe 2020 informative annexes run A through J: A product safety standards, B ampacity calculation, C same-size fill tables, D examples, E types of construction, F critical operations power systems, G SCADA, H administration and enforcement, I torque tables from UL 486A-B, and J ADA standards. There is no Annex K in the 2020 book.",
       "prev_id": "C9-ANNEXI",
       "related_ids": [
         "C9-L-049",
@@ -1766,7 +3386,138 @@
           "url": "https://www.electricallicenserenewal.com/Electrical-Continuing-Education-Courses/NEC-Content.php?sectionID=1378",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Crews and inspectors talk past each other when nobody says which kind of text they are quoting. The informative label settles the argument before it starts: an annex can teach and persuade, but a correction notice has to trace to a mandatory section. It cuts the other way too: a good annex practice — Annex D's examples, Annex I's torque values — is worth following even though nobody can cite you for skipping it.",
+      "inspection_fails": [
+        "A correction argued down by quoting Annex D back at the inspector, instead of answering the mandatory section the correction actually cites.",
+        "Annex I torque values skipped because 'the annex is not mandatory' — then loose lugs overheat. Informative does not mean useless.",
+        "A bid priced off an annex example treated as a code minimum, adding work the mandatory sections never required."
+      ],
+      "exam_trap": "Annex D works an example one way, so that way is required? No. The examples show one compliant path through the mandatory sections; the requirement lives in the sections, not in the example. Annex C's fill tables are the same: they shortcut Table 1 and Table 4, they do not replace them.",
+      "tables": [
+        {
+          "caption": "The 2020 informative annexes — and what this book did with each",
+          "headers": [
+            "Annex",
+            "What it holds",
+            "In this book"
+          ],
+          "rows": [
+            [
+              "A",
+              "Product safety standards",
+              "Not written"
+            ],
+            [
+              "B",
+              "Ampacity calculation",
+              "C9-ANNEXB"
+            ],
+            [
+              "C",
+              "Same-size fill tables",
+              "C9-ANNEXC"
+            ],
+            [
+              "D",
+              "Worked examples",
+              "C9-ANNEXD"
+            ],
+            [
+              "E",
+              "Types of construction",
+              "Not written"
+            ],
+            [
+              "F",
+              "Critical operations power",
+              "Not written"
+            ],
+            [
+              "G",
+              "SCADA",
+              "Not written"
+            ],
+            [
+              "H",
+              "Administration, enforcement",
+              "Not written"
+            ],
+            [
+              "I",
+              "Torque tables (UL 486A-B)",
+              "C9-ANNEXI"
+            ],
+            [
+              "J",
+              "ADA standards",
+              "Not written"
+            ]
+          ],
+          "note": "Letters and subjects as carried in the 2020 book. Letters not confirmed in print were held back, not guessed."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-ANNEXES-INFORMATIVE-two-parts.svg",
+          "alt": "The book drawn in two parts: solid navy mandatory chapters 1 to 9 in front, and the lighter informative annexes A to J behind a gold divider labeled informative, explains, does not require.",
+          "caption": "Mandatory chapters in front, informative annexes behind the divider.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "An inspector's correction cites only an informative annex. What is the problem?",
+          "choices": [
+            "Nothing — annexes are fully enforceable",
+            "An annex is not enforceable unless adopted; the correction must trace to a mandatory section",
+            "Annexes apply only in Florida",
+            "The correction needs a second inspector's signature"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Annex content is informative. Unless an adopting ordinance adopts the annex, a citation has to land on a numbered section.",
+          "nec_ref": "Informative Annexes (general)"
+        },
+        {
+          "question": "Which annex carries the torque tables taken from UL 486A-B?",
+          "choices": [
+            "Annex C",
+            "Annex D",
+            "Annex I",
+            "Annex K"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Annex I is the torque annex. Annex K does not exist in the 2020 book at all.",
+          "nec_ref": "Annex I"
+        },
+        {
+          "question": "Annex K, on medical electrical equipment in dwellings, first appears in which edition?",
+          "choices": [
+            "NEC 2017",
+            "NEC 2020",
+            "NEC 2023",
+            "It does not exist"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Annex K is new in NEC 2023. The 2020 book correctly has no Annex K.",
+          "nec_ref": "Annex K (NEC 2023)"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• Annex K: New Informative Annex K, Use of Medical Electrical Equipment in Dwellings and Residential Board-and-Care Occupancies. (So the 2020 book correctly has no Annex K.)\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "Informative Annexes A–J",
+        "Annex B",
+        "Annex C",
+        "Annex D",
+        "Annex I",
+        "90.4"
+      ],
+      "uncertain": [
+        "Annex letters and subjects beyond B, C, D and I are carried from this page's existing text; anything not confirmed against the printed 2020 book stays held back — see the flags on this page. Check in print."
+      ],
+      "rich_sources": [],
+      "rich": 1
     }
   ],
   "toc": [
