@@ -160,10 +160,10 @@
       "id": "C3-300.3",
       "article": "300",
       "section": "300.3(B)",
-      "title": "Conductores — tamaños y materiales (y qué no cuenta)",
-      "plain_explanation": "El Capítulo 3 tiene un piso de tamaño para los conductores de circuitos en locales: 14 AWG de cobre es el conductor de circuito más pequeño, 12 AWG de aluminio. Un conductor menor que eso no puede ser parte del cableado permanente de un edificio — el cable flexible y el cable para artefactos viven bajo sus propias reglas y no son sustitutos del cableado de circuitos derivados. Los materiales también son parte de la regla: los conductores son de cobre, aluminio o aluminio recubierto de cobre, y un conductor menor de 8 AWG debe ser trenzado. El dimensionamiento de ampacidad trabaja desde ahí: tamaño, material y aislamiento fijan la columna de la Tabla 310.16 desde donde empieza cada cálculo.",
-      "on_the_job": "Cuando aparece un carrete marcado 16 AWG en una instalación preliminar, es cable para otra cosa — no es un conductor de circuito y no entra en la pared. La distinción cobre frente a CCA importa en la misma tirada: el CCA se dimensiona una talla mayor para la misma ampacidad (vea la página de 310.3), así que mezclar carretes en una misma tirada de circuito es un error de dimensionamiento silencioso.",
-      "sharma_note": "S-10: el valor por defecto de Sharma es cobre. El CCA, donde se use, va una talla mayor — el carrete y el trabajo deben mostrar el mismo material de principio a fin.",
+      "title": "Todos los conductores de un circuito van juntos",
+      "plain_explanation": "Cada conductor de un circuito — los conductores no puestos a tierra, el conductor puesto a tierra (neutro) y el conductor de puesta a tierra del equipo — se instala en la misma canalización, cable, zanja o cordón.\n• Conductores no puestos a tierra (fases): en el mismo tramo que el resto del circuito.\n• Conductor puesto a tierra (neutro): en el mismo tramo.\n• Conductor de puesta a tierra del equipo: en el mismo tramo.\nLa regla mantiene los campos magnéticos del circuito cancelándose entre sí (los conductores corridos por separado calientan el metal que los rodea y se comportan de forma impredecible), y garantiza que el camino de tierra viaje con el circuito que protege. Las excepciones son estrechas — conductores en conjuntos en paralelo, y algunos arreglos subterráneos y de instalaciones existentes que esta sección nombra — y aun así exigen que los conductores se agrupen para que cada canalización o cable lleve un conjunto completo y balanceado.",
+      "on_the_job": "La falla de campo es la tierra prestada o el neutro solitario: una tierra jalada de un cable diferente, o el neutro de un circuito corrido en otro conducto. En un circuito derivado multiconductor, el neutro compartido se queda en el mismo cable que ambas fases, de principio a fin. Si los conductores no llegaron juntos, no se empalman juntos — vuelva a jalar el tramo.",
+      "sharma_note": "",
       "figure_idea": "Tarjeta de mínimos: 14 AWG Cu / 12 AWG Al como piso de circuito, con carretes menores tachados y el recordatorio de conductores trenzados por debajo de 8 AWG.",
       "related_ids": [
         "C3-ART-300",
@@ -176,7 +176,95 @@
       "prev_id": "C3-ART-300",
       "next_id": "C3-300.4",
       "chapter": 3,
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "La corriente que sale por un camino y regresa por otro forma un lazo, y ese lazo induce voltaje y calor en cada pieza de metal que rodea. Una tierra tomada de otro lado puede no estar — o puede no cargar la falla de este circuito — el único día que se necesita. Corridos juntos, los campos se cancelan y el camino de falla es el que usted puede ver y probar.",
+      "inspection_fails": [
+        "Una tierra de equipo de un circuito jalada de un cable diferente porque la tierra propia del tramo se cortó corta.",
+        "El neutro de un circuito corrido en un conducto separado de sus conductores de fase.",
+        "Conductores de fase en una canalización y el neutro en otra en un tramo comercial largo.",
+        "Un conjunto en paralelo agrupado por fase — toda una fase en una canalización, la siguiente en otra — en vez de un conjunto completo en cada canalización."
+      ],
+      "exam_trap": "Un alimentador en paralelo puede correr todos los conductores de la fase A en un conducto y todos los de la fase B en otro — el mismo cobre total, un jalón más fácil. Incorrecto. Cada canalización de un conjunto en paralelo lleva un conjunto completo y balanceado: un conductor de cada fase, el neutro donde se use, y el conductor de puesta a tierra del equipo.",
+      "tables": [
+        {
+          "caption": "Lo que viaja junto — 300.3(B)",
+          "headers": [
+            "Parte del circuito",
+            "Dónde corre"
+          ],
+          "rows": [
+            [
+              "Conductores no puestos a tierra (fases)",
+              "Misma canalización, cable, zanja o cordón"
+            ],
+            [
+              "Conductor puesto a tierra (neutro)",
+              "Misma canalización, cable, zanja o cordón"
+            ],
+            [
+              "Conductor de puesta a tierra del equipo",
+              "Misma canalización, cable, zanja o cordón"
+            ],
+            [
+              "Conjunto en paralelo, cada canalización",
+              "Un conjunto completo y balanceado"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c3/C3-300.3-together.svg",
+          "alt": "Dos tramos de canalización: el conducto superior lleva juntos la fase, el neutro y el conductor de puesta a tierra de un circuito y está marcado correcto; el conducto inferior lleva fase y neutro mientras una tierra solitaria tomada de otro tramo entra por separado y está tachada.",
+          "caption": "Un circuito, un tramo — la tierra viaja con su circuito.",
+          "w": 900,
+          "h": 1320
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Según 300.3(B), el conductor de puesta a tierra del equipo de un circuito debe instalarse:",
+          "choices": [
+            "En cualquier canalización que sea conveniente",
+            "En la misma canalización o cable que los conductores del circuito",
+            "Solo en canalización metálica",
+            "Directo en la tierra junto al tramo"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Todos los conductores de un circuito — no puestos a tierra, puesto a tierra y de puesta a tierra del equipo — se instalan en la misma canalización, cable, zanja o cordón.",
+          "nec_ref": "300.3(B)"
+        },
+        {
+          "question": "El neutro de un circuito se corrió en un conducto diferente de sus fases para ahorrar un jalón. ¿Está permitido?",
+          "choices": [
+            "Sí — los neutros son intercambiables",
+            "Sí, si ambos conductos son del mismo tamaño",
+            "No — el neutro corre con su circuito",
+            "Solo en trabajo residencial"
+          ],
+          "answer_index": 2,
+          "explain_plain": "El conductor puesto a tierra es parte del circuito y debe instalarse con sus conductores no puestos a tierra, no prestado ni ruteado por separado.",
+          "nec_ref": "300.3(B)"
+        },
+        {
+          "question": "Los conductores se instalan en paralelo en dos canalizaciones. Cada canalización debe contener:",
+          "choices": [
+            "Todos los conductores de una fase",
+            "Un conjunto completo y balanceado del circuito",
+            "Solo los conductores no puestos a tierra",
+            "El neutro por sí solo"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Aun bajo la excepción de paralelo, cada canalización o cable lleva un conjunto completo — uno de cada fase, el neutro donde se use, y el conductor de puesta a tierra — para que los campos se cancelen.",
+          "nec_ref": "300.3(B), 310.10(H)"
+        }
+      ],
+      "code_refs": [
+        "300.3(B)",
+        "310.10(H)"
+      ],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich": 1
     },
     {
       "id": "C3-300.4",
@@ -784,8 +872,8 @@
       "article": "300",
       "section": "300.14",
       "title": "Largo libre de conductor en las cajas",
-      "plain_explanation": "En cada punto de salida, unión e interruptor, deja al menos 6 in de conductor libre, medido desde donde el conductor sale de su canalización o de la funda del cable. Donde la abertura de la caja sea menor de 8 in en cualquier dirección, los conductores también tienen que sobresalir de la abertura al menos 3 in, para que los dispositivos se puedan conectar y doblar hacia adentro sin pelear con cables cortos. Los conductores que pasan recto a través de una caja sin empalme ni terminación no cuentan en esta regla.\n\nCAMBIO NEC 2023:\n• 300.14: Quedó resuelto: las 6 inches de conductor libre en una caja pueden estar empalmadas o sin empalmar, así que un conductor corto puede completarse con un chicote. Las 6 inches de conductor libre en cada punto de salida, unión o interruptor ahora pueden estar empalmadas o sin empalmar.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Pela y conecta teniendo las 6 in completas en la mano. Si te falta, la solución es un jalón más grande o volver a jalar — no una tuerca para cable enterrada con puntas de 2 in. Deja el mismo largo de trabajo en los conductores de repuesto que tapes.",
+      "plain_explanation": "En cada punto de salida, unión e interruptor, deje al menos 6 in de conductor libre, medido desde donde el conductor sale de su canalización o de la funda del cable.\n• Al menos 6 in de conductor libre en el punto, medido desde donde sale de la canalización o de la funda.\n• Donde la abertura de la caja sea menor de 8 in en cualquier dirección, los conductores también tienen que sobresalir de la abertura al menos 3 in, para que los dispositivos se puedan conectar y doblar hacia adentro sin pelear con cables cortos.\n• Los conductores que pasan recto a través de una caja sin empalme ni terminación no cuentan en esta regla.\nLa regla aplica también en los puntos de interruptor — un lazo de interruptor conectado corto es la misma violación que una punta corta en un receptáculo.",
+      "on_the_job": "Pele y conecte teniendo las 6 in completas en la mano. Si le falta, la solución es un jalón más grande o volver a jalar — no una tuerca para cable enterrada con puntas de 2 in. Deje el mismo largo de trabajo en los conductores de repuesto que tape.",
       "sharma_note": "",
       "figure_idea": "Vista lateral de una caja de un solo espacio con 6 in de conductor saliendo en lazo, y una medida de 3 in desde la abertura de la caja.",
       "related_ids": [
@@ -806,7 +894,90 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/300-14",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Los conductores cortos son una falla lenta: los dispositivos se conectan bajo tensión, los empalmes quedan en el borde de la caja donde se rozan, y el próximo electricista no puede rehacer una conexión sin volver a jalar todo el tramo. El largo extra es espacio de trabajo y vida útil, no desperdicio — es lo que permite sacar un dispositivo, probarlo y reemplazarlo años después.",
+      "inspection_fails": [
+        "Tuercas para cable conectadas en puntas de 2 in en un receptáculo — sin largo de trabajo para doblar el dispositivo hacia adentro.",
+        "Conductores cortados al ras de la funda del cable, así que nada llega fuera de la abertura de la caja.",
+        "Un lazo de interruptor con puntas tan cortas que el interruptor no se puede sacar de la caja para probarlo.",
+        "Conductores de repuesto en una caja de unión recortados en vez de tapados a largo completo."
+      ],
+      "exam_trap": "Mida las 6 in desde el fondo de la caja, o desde el conector. Punto de partida incorrecto, cables cortos. La medida empieza donde el conductor sale de su canalización o de la funda del cable. Y las 3 in fuera de la abertura no reemplazan las 6 in — en una caja pequeña usted debe ambas.",
+      "tables": [
+        {
+          "caption": "Las dos medidas de 300.14",
+          "headers": [
+            "Medido desde",
+            "Mínimo"
+          ],
+          "rows": [
+            [
+              "Donde el conductor sale de la canalización o de la funda",
+              "6 in de conductor libre"
+            ],
+            [
+              "La abertura de la caja, donde la abertura es menor de 8 in en cualquier dirección",
+              "3 in sobresaliendo de la abertura"
+            ],
+            [
+              "Un conductor que pasa recto, sin empalme ni terminación",
+              "No cuenta en esta regla"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c3/C3-300.14-free-conductor.svg",
+          "alt": "Vista lateral de una caja de un espacio en una pared: los conductores salen de la funda del cable dentro de la caja, salen en lazo por la abertura, con una medida de 6 in desde la salida de la funda hasta el extremo del conductor y una medida de 3 in fuera de la abertura de la caja.",
+          "caption": "Conductor libre: 6 in para trabajar, 3 in fuera de la abertura.",
+          "w": 900,
+          "h": 1250
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Cuánto conductor libre se requiere en cada punto de salida, unión e interruptor?",
+          "choices": [
+            "3 in",
+            "6 in",
+            "8 in",
+            "12 in"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Al menos 6 in, medido desde donde el conductor sale de su canalización o de la funda del cable.",
+          "nec_ref": "300.14"
+        },
+        {
+          "question": "La abertura de la caja mide 4 in de ancho. ¿Cuánto deben sobresalir los conductores de la abertura?",
+          "choices": [
+            "Solo necesitan llegar a la abertura",
+            "1 in",
+            "3 in",
+            "6 in"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Donde la abertura es menor de 8 in en cualquier dirección, al menos 3 in deben sobresalir de la abertura — además de las 6 in de conductor libre.",
+          "nec_ref": "300.14"
+        },
+        {
+          "question": "Un conductor pasa recto a través de una caja de unión sin empalme ni terminación. ¿300.14 fija su largo?",
+          "choices": [
+            "Sí — 6 in como todo conductor",
+            "Sí — 3 in fuera de la abertura",
+            "No — los conductores de paso no cuentan en esta regla",
+            "Sí — debe dar una vuelta en la caja"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Los conductores que pasan a través de una caja sin empalme ni terminación no cuentan en 300.14.",
+          "nec_ref": "300.14"
+        }
+      ],
+      "code_refs": [
+        "300.14"
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 300.14: Quedó resuelto: las 6 inches de conductor libre en una caja pueden estar empalmadas o sin empalmar, así que un conductor corto puede completarse con un chicote. Las 6 inches de conductor libre en cada punto de salida, unión o interruptor ahora pueden estar empalmadas o sin empalmar.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich": 1
     },
     {
       "id": "C3-300.15",
@@ -963,8 +1134,8 @@
       "article": "300",
       "section": "300.22",
       "title": "Cableado en ductos, plenos y otros espacios de manejo de aire",
-      "plain_explanation": "Los espacios hechos para mover aire ambiental — ductos, plenos y el espacio sobre un techo usado como pleno de aire de retorno — restringen qué cableado puede pasar por ahí y cómo, porque cualquier cosa que arda o eche humo en ese espacio alimenta el aire de todo el edificio. Solo pueden instalarse los métodos de cableado y materiales que permite esta sección, y el equipo en esos espacios se limita a lo que permiten la sección y las reglas mecánicas.",
-      "on_the_job": "La trampa en campo es el techo de pleno que parece un techo común: antes de pasar un método por un espacio de techo en trabajo comercial, pregunta si ese espacio es un pleno de aire de retorno. Si lo es, la lista de métodos se reduce — ante la duda, pregunta a la AHJ antes del rough-in, no en la inspección.",
+      "plain_explanation": "Los espacios hechos para mover aire ambiental — ductos, plenos y el espacio sobre un techo usado como pleno de aire de retorno — restringen qué cableado puede pasar por ahí y cómo, porque cualquier cosa que arda o eche humo en ese espacio alimenta el aire de todo el edificio. La sección divide los espacios en tres:\n• Ductos para remoción de polvo, material suelto o vapores (300.22(A)): ningún sistema de cableado de ningún tipo adentro.\n• Ductos o plenos fabricados específicamente para transportar aire ambiental (300.22(B)): equipo solo donde es necesario para la acción directa sobre el aire contenido, o para sensarlo. Los métodos de cableado son cable Tipo MI; cable Tipo MC con cubierta metálica impermeable lisa o corrugada y sin cubierta no metálica general; EMT; tubería metálica flexible; IMC; y RMC sin cubierta no metálica. El conduit metálico flexible de hasta 4 ft puede conectar equipo físicamente ajustable.\n• Otros espacios usados para aire ambiental (300.22(C)) — el espacio sobre un techo suspendido o bajo un piso elevado que lleva el aire de retorno: canalizaciones metálicas como EMT, IMC, RMC y conduit metálico flexible, cable Tipo AC, cable Tipo MC sin cubierta no metálica, y, donde sean accesibles, canalización metálica superficial o wireway metálico con tapas metálicas. El equipo necesita una envolvente metálica, o una envolvente no metálica listada para ese uso.\n• El cable NM no está en ninguna de las dos listas. No entra en un techo de pleno.",
+      "on_the_job": "La trampa en campo es el techo de pleno que parece un techo común: antes de pasar un método por un espacio de techo en trabajo comercial, pregunte si ese espacio es un pleno de aire de retorno. Si lo es, la lista de métodos se reduce — ante la duda, pregunte a la AHJ antes del rough-in, no en la inspección. En un acondicionamiento de local de Sharma, los home runs de alumbrado sobre ese techo van en EMT o en MC sin chaqueta. El whip de NM que pasa en una casa, aquí falla.",
       "sharma_note": "",
       "figure_idea": "Plano de techo reflejado con el pleno de aire de retorno sombreado y dos métodos de cableado mostrados: un recorrido permitido etiquetado y un recorrido prohibido tachado.",
       "related_ids": [],
@@ -972,7 +1143,106 @@
       "verified": true,
       "prev_id": "C3-300.21",
       "next_id": "C3-300.25",
-      "chapter": 3
+      "chapter": 3,
+      "why_it_exists": "El aire de retorno toca cada cuarto al que sirve el sistema. Una falla que echa humo en un techo de pleno se reparte por todo el edificio como humo mucho antes de que se vean llamas en alguna parte. Los métodos de cableado metálicos y las envolventes listadas mantienen el combustible fuera de la corriente de aire, y la lista del ducto fabricado es la más corta porque ese cableado queda directamente en el paso del aire.",
+      "inspection_fails": [
+        "Cable NM pasado sobre un techo de pleno de aire de retorno — NM no es un método de cableado de 300.22(C).",
+        "Cable MC con chaqueta instalado en un ducto fabricado — 300.22(B) exige una cubierta metálica impermeable sin cubierta no metálica general.",
+        "Equipo dentro de un ducto fabricado que ni actúa sobre el aire contenido ni lo sensa.",
+        "Cable en un espacio de pleno asegurado con amarres plásticos comunes no listados para uso en ese espacio.",
+        "Caja de conexiones no metálica, no listada para uso en manejo de aire, instalada en un techo de pleno (300.22(C))."
+      ],
+      "exam_trap": "Dos respuestas incorrectas se reflejan. Una trata el espacio sobre un techo suspendido como un ducto fabricado y aplica solo la lista corta de 300.22(B) — ese espacio es un otro espacio de 300.22(C), con su propia lista más amplia. La otra dice que el cable NM está bien sobre cualquier techo — NM no está en ninguna de las dos listas, así que falla en ambos espacios.",
+      "tables": [
+        {
+          "caption": "Los tres espacios de manejo de aire",
+          "headers": [
+            "Espacio",
+            "Regla de cableado"
+          ],
+          "rows": [
+            [
+              "Ducto de polvo / vapor (A)",
+              "Ningún cableado de ningún tipo"
+            ],
+            [
+              "Ducto de aire fabricado (B)",
+              "Solo MI, MC de cubierta impermeable, EMT, FMT, IMC, RMC"
+            ],
+            [
+              "Espacio de techo pleno (C)",
+              "Canalizaciones metálicas, AC, MC sin chaqueta — sin NM"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c3/C3-300.22-plenum.svg",
+          "alt": "Plano de techo de un pleno de aire de retorno con un tramo en EMT marcado como permitido bajo 300.22(C), un tramo de cable NM tachado como no permitido, y un ducto fabricado donde solo pueden entrar los métodos de 300.22(B).",
+          "caption": "Un techo, dos listas: ducto fabricado (B) frente a espacio de pleno (C).",
+          "w": 900,
+          "h": 1450
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "El espacio de techo de una oficina es el pleno de aire de retorno. ¿Qué método de circuito ramal se permite sobre ese techo?",
+          "choices": [
+            "Cable NM",
+            "Cable MC con chaqueta no metálica sobre la cubierta",
+            "EMT",
+            "Cordón flexible"
+          ],
+          "answer_index": 2,
+          "explain_plain": "300.22(C)(1) permite canalizaciones metálicas, Tipo AC y Tipo MC sin chaqueta. El cable NM no está en la lista.",
+          "nec_ref": "300.22(C)(1)"
+        },
+        {
+          "question": "Dentro de un ducto fabricado de aire de suministro, un motor de compuerta que actúa directamente sobre el aire contenido puede cablearse con:",
+          "choices": [
+            "Cable NM",
+            "Tipo MC con cubierta metálica impermeable lisa y sin cubierta no metálica",
+            "Cable MC con chaqueta",
+            "Cable Tipo AC"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La lista de 300.22(B) es la corta: MI, MC de cubierta impermeable sin chaqueta, EMT, FMT, IMC y RMC. El cable AC es un método de los espacios (C), no del ducto fabricado.",
+          "nec_ref": "300.22(B)"
+        },
+        {
+          "question": "El conduit metálico flexible dentro de un ducto fabricado de aire ambiental puede conectar equipo físicamente ajustable en longitudes de hasta:",
+          "choices": [
+            "4 ft",
+            "6 ft",
+            "10 ft",
+            "Cualquier longitud"
+          ],
+          "answer_index": 0,
+          "explain_plain": "300.22(B) permite conduit metálico flexible de hasta 4 ft para conectar equipo y dispositivos físicamente ajustables en el ducto.",
+          "nec_ref": "300.22(B)"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "300.22(A)",
+        "300.22(B)",
+        "300.22(C)(1)",
+        "300.22(C)(2)"
+      ],
+      "rich_sources": [
+        {
+          "claim": "300.22(B) and (C)(1) permitted wiring method lists, the 4 ft flexible metal conduit limit in fabricated ducts, and cable ties listed for plenum use",
+          "source": "Mike Holt, NEC Questions and Answers based on the 2020 NEC (Jan 2023), Q.2 and Q.3",
+          "url": "https://www.mikeholt.com/newsletters.php?action=reply&inResponseTo=24256&letterID=2610"
+        },
+        {
+          "claim": "300.22(B) fabricated-duct method list: MI, MC with smooth or corrugated impervious metal sheath, EMT, FMT, IMC, RMC; equipment only where it acts on or senses the contained air",
+          "source": "Electrical Contractor Magazine, Getting Your Ducts In a Row",
+          "url": "https://www.ecmag.com/magazine/articles/article-detail/codes-standards-getting-your-ducts-row"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C3-300.25",
@@ -1258,7 +1528,7 @@
       "article": "310",
       "section": "310.3",
       "title": "Mínimos del conductor — tamaño, material, trenzado",
-      "plain_explanation": "Esta sección fija el piso para el cable de construcción. El conductor más pequeño para circuitos ramales y alimentadores es 14 AWG de cobre o 12 AWG de aluminio o aluminio revestido de cobre — por eso no existe cable ramal de CCA de 14 AWG en trabajo de 2020. Los conductores son de cobre, aluminio o aluminio revestido de cobre, y el material decide qué columna de ampacidad y qué reglas de terminación aplican. Los conductores de 8 AWG y mayores instalados en canalizaciones son trenzados. Los conductores más pequeños y los circuitos especiales (cables de luminaria, circuitos de control y señalización, y los demás casos que gobiernan otros artículos) siguen sus propios artículos — este piso es para cableado general.\n\nCAMBIO NEC 2023:\n• 310.3: El aluminio revestido de cobre obtuvo su propia regla de material en 310.3(B): un núcleo de aluminio serie AA-8000 envuelto en cobre que constituye el 10 percent o más de la sección transversal. El aluminio revestido de cobre (CCA) ahora tiene su propio punto en 310.3(B): el núcleo de aluminio tiene que ser de aleación serie AA-8000.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "plain_explanation": "Esta sección fija el piso para el cable de construcción. El conductor más pequeño para circuitos ramales y alimentadores es 14 AWG de cobre o 12 AWG de aluminio o aluminio revestido de cobre — por eso no existe cable ramal de CCA de 14 AWG en trabajo de 2020. Los conductores son de cobre, aluminio o aluminio revestido de cobre, y el material decide qué columna de ampacidad y qué reglas de terminación aplican. Los conductores de 8 AWG y mayores instalados en canalizaciones son trenzados. Los conductores más pequeños y los circuitos especiales (cables de luminaria, circuitos de control y señalización, y los demás casos que gobiernan otros artículos) siguen sus propios artículos — este piso es para cableado general.",
       "on_the_job": "Regla de pedido que se sigue de esta página: una línea de «14 AWG» en un takeoff significa cobre. Si el trabajo es de CCA, el carrete ramal más pequeño en el camión es 12 AWG — y según S-10 se conecta a un breaker de 15A, no a uno de 20A.",
       "sharma_note": "S-10: cobre por defecto; CCA un tamaño mayor. Esta sección es donde vive la regla de «sin CCA de 14 AWG».",
       "figure_idea": "Tres carretes etiquetados por material con sus tamaños mínimos de circuito ramal: cobre 14 AWG, aluminio 12 AWG, CCA 12 AWG.",
@@ -1284,7 +1554,92 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/310-3",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Un cable demasiado pequeño para su breaker se sobrecalienta dentro de la pared, y el metal equivocado en la terminal equivocada se afloja con los ciclos de calor y frío. El piso de 310.3 mantiene el conductor ramal más pequeño lo bastante grande para su dispositivo de sobrecorriente y sus terminaciones — y está escrito por material, porque el cobre, el aluminio y el CCA no llevan la corriente igual al mismo tamaño. El material también decide las reglas de terminación y la columna de ampacidad, así que un tamaño legal en cobre no es automáticamente legal en aluminio o CCA.",
+      "inspection_fails": [
+        "CCA de 14 AWG instalado en un circuito ramal — el CCA empieza en 12 AWG (310.3).",
+        "Aluminio o CCA de 12 AWG conectado a un breaker de 20 A: su tope es 15 A (240.4(D)).",
+        "Conductor sólido de 8 AWG instalado en una canalización: de 8 AWG en adelante, en canalizaciones, debe ser trenzado."
+      ],
+      "exam_trap": "La respuesta trampa es «14 AWG es el mínimo, sea cual sea el metal». En trabajo de 2020 no existe conductor ramal de CCA de 14 AWG: el mínimo es 14 AWG de cobre o 12 AWG de aluminio o CCA. La trampa que sigue es conectar CCA de 12 AWG a un breaker de 20 A porque «12 es de 20 A»: según S-10 y 240.4(D) es un conductor de 15 A.",
+      "tables": [
+        {
+          "caption": "310.3: tamaños mínimos del conductor",
+          "headers": [
+            "Material",
+            "Tamaño mínimo"
+          ],
+          "rows": [
+            [
+              "Cobre",
+              "14 AWG"
+            ],
+            [
+              "Aluminio",
+              "12 AWG"
+            ],
+            [
+              "Aluminio revestido de cobre",
+              "12 AWG"
+            ]
+          ],
+          "note": "Los conductores de 8 AWG y mayores instalados en canalizaciones deben ser trenzados."
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿El conductor de CCA más pequeño para un circuito ramal de 2020?",
+          "choices": [
+            "14 AWG",
+            "12 AWG",
+            "10 AWG",
+            "8 AWG"
+          ],
+          "answer_index": 1,
+          "explain_plain": "310.3 fija el piso por material: 14 AWG de cobre, 12 AWG de aluminio o aluminio revestido de cobre.",
+          "nec_ref": "310.3"
+        },
+        {
+          "question": "Los conductores de 8 AWG y mayores instalados en canalizaciones deben ser:",
+          "choices": [
+            "Sólidos",
+            "Trenzados",
+            "Solo de cobre",
+            "De 90 °C"
+          ],
+          "answer_index": 1,
+          "explain_plain": "310.3 requiere que los conductores de 8 AWG y mayores en canalizaciones sean trenzados.",
+          "nec_ref": "310.3"
+        },
+        {
+          "question": "Una línea del takeoff dice «14 AWG» sin material. Según esta página y S-10, significa:",
+          "choices": [
+            "CCA está bien",
+            "Aluminio",
+            "Cobre",
+            "Cobre o CCA, cualquiera"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La regla de pedido que se sigue de 310.3: una línea de 14 AWG significa cobre; un trabajo de CCA empieza en 12 AWG.",
+          "nec_ref": "310.3"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 310.3: El aluminio revestido de cobre obtuvo su propia regla de material en 310.3(B): un núcleo de aluminio serie AA-8000 envuelto en cobre que constituye el 10 percent o más de la sección transversal. El aluminio revestido de cobre (CCA) ahora tiene su propio punto en 310.3(B): el núcleo de aluminio tiene que ser de aleación serie AA-8000.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "figures": [
+        {
+          "src": "fig/c3/C3-310.3-reels.svg",
+          "alt": "Tres carretes de cable etiquetados cobre, aluminio y aluminio revestido de cobre con sus tamaños mínimos de circuito ramal: 14 AWG de cobre, 12 AWG de aluminio y 12 AWG de CCA.",
+          "caption": "Tamaños mínimos por material — y nada de CCA de 14 AWG.",
+          "w": 900,
+          "h": 1250
+        }
+      ],
+      "code_refs": [
+        "310.3",
+        "Table 310.16",
+        "240.4(D)"
+      ],
+      "rich": 1
     },
     {
       "id": "C3-310.12",
@@ -1728,8 +2083,8 @@
       "article": "312",
       "section": "312",
       "title": "Gabinetes, cajas de corte y gabinetes de base de medidor",
-      "plain_explanation": "El Artículo 312 cubre los gabinetes donde terminan los conductores del Artículo 310: gabinetes de tablero, cajas de corte y bases de medidor. Su trabajo es el espacio y la protección dentro del gabinete — suficiente espacio para desviar y doblar los conductores que entran por arriba o por abajo, ningún borde afilado que corte el aislamiento, puertas y tapas que cierren bien, y gabinetes fuera de lugares húmedos y mojados a menos que estén clasificados para ellos. El espacio de trabajo frente al gabinete es una regla del Capítulo 1 (110.26), no de este artículo.\n\nCAMBIO NEC 2023:\n• 312.10: Por primera vez, los tornillos que entran en un gabinete, una caja de corte o una lata de medidor están limitados: solo puntas romas, y 1/4 in. de alcance a menos que la punta esté protegida. Un tornillo agregado en campo para una etiqueta u otro equipo debe ser un tornillo de máquina romo que alcance 1/4 in. o menos, a menos que su punta esté protegida.\n• 312.102: Nuevo en 2023: los gabinetes, las cajas de corte y las latas de medidor necesitan todos una puerta o una tapa. Nada de latas abiertas. Las puertas o tapas ahora son obligatorias en los tres gabinetes del Artículo 312: gabinetes, cajas de corte y latas de medidor (312.102).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "En una casa de Sharma esto es el gabinete del medidor y el gabinete del tablero. Revisa el espacio para doblar conductores antes de conectar un conductor de acometida 4/0, no después, y mantén el gabinete a plomo para que el frente muerto y la puerta asienten correctamente.",
+      "plain_explanation": "El Artículo 312 cubre los gabinetes donde terminan los conductores del Artículo 310: gabinetes de tablero, cajas de corte y bases de medidor. Su trabajo es el espacio y la protección dentro del gabinete:\n• Suficiente espacio para desviar y doblar los conductores que entran por arriba o por abajo — la desviación y el espacio para doblar los fijan 312.6 y las Tablas 312.6(A) y (B).\n• Ningún borde afilado que corte el aislamiento, y las aberturas no usadas cerradas (312.5(A)).\n• Puertas y tapas que cierren bien.\n• Gabinetes fuera de lugares húmedos y mojados a menos que estén clasificados para ellos. En un lugar húmedo o mojado, un gabinete superficial se monta con al menos 1/4 in. de espacio de aire detrás, y un gabinete en un lugar mojado debe ser a prueba de intemperie (312.2). Una envolvente no metálica sobre concreto, mampostería o loseta puede ir sin el espacio de aire.\n• El espacio de trabajo frente al gabinete es una regla del Capítulo 1 (110.26), no de este artículo.",
+      "on_the_job": "En una casa de Sharma esto es el gabinete del medidor y el gabinete del tablero. Revise el espacio para doblar conductores antes de conectar un conductor de acometida 4/0, no después, y mantenga el gabinete a plomo para que el frente muerto y la puerta asienten correctamente. En el arreglo espalda con espalda de S-09, la lata del medidor queda en una pared exterior en un lugar mojado — se instala a prueba de intemperie, sobre su espacio de aire de 1/4 in., no sellada plana contra el estuco.",
       "sharma_note": "S-09 pone el medidor afuera y el tablero adentro, espalda con espalda, donde la casa lo permite — ambos gabinetes igual tienen que cumplir este artículo y el espacio de trabajo de 110.26.",
       "figure_idea": "Elevación de una base de medidor junto a un gabinete de tablero, con el espacio para doblar conductores sombreado en la entrada superior.",
       "related_ids": [
@@ -1759,7 +2114,107 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/312-102",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "El gabinete es donde los conductores más grandes del edificio se doblan, se conectan y se trabajan por décadas. Un espacio para doblar apretado presiona el aislamiento contra bordes de acero, un knockout abierto invita plagas y dedos, y una lata oxidándose contra una pared húmeda falla por detrás, donde nadie mira. El espacio, los cierres y el espacio de aire evitan que la envolvente se convierta en la falla.",
+      "inspection_fails": [
+        "Gabinete de montaje superficial en una pared de lugar húmedo o mojado sin el espacio de aire de 1/4 in. detrás (312.2).",
+        "Aberturas de knockout no usadas dejadas abiertas en el gabinete del tablero (312.5(A)).",
+        "Conductores de acometida 4/0 forzados contra un borde afilado del gabinete sin espacio para doblar (312.6).",
+        "Gabinete fuera de plomo, de modo que el frente muerto y la puerta no asientan ni cierran."
+      ],
+      "exam_trap": "El examen intercambia los artículos: le acredita al Artículo 312 la regla del espacio de trabajo. El espacio de trabajo frente al tablero es 110.26, del Capítulo 1. El Artículo 312 gobierna la envolvente misma — el espacio para doblar adentro (312.6), el montaje en lugares húmedos y mojados (312.2), y las aberturas no usadas cerradas (312.5(A)).",
+      "tables": [
+        {
+          "caption": "Las tres envolventes del Artículo 312",
+          "headers": [
+            "Envolvente",
+            "En una casa de Sharma"
+          ],
+          "rows": [
+            [
+              "Gabinete",
+              "El gabinete del tablero donde terminan los circuitos ramales"
+            ],
+            [
+              "Caja de corte",
+              "Envolvente para interruptores de corte y switches encerrados"
+            ],
+            [
+              "Gabinete de base de medidor",
+              "La lata del medidor — también debe estar en la lista aprobada de la compañía que da el servicio"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c3/C3-ART-312-enclosures.svg",
+          "alt": "Corte de pared del servicio espalda con espalda de S-09: una base de medidor exterior sobre separadores con el espacio de aire de 1/4 in. de 312.2 dimensionado, y un gabinete de tablero interior con el espacio para doblar de 312.6 sombreado en su entrada superior.",
+          "caption": "Medidor afuera, tablero adentro: espacio de aire detrás de la lata, espacio para doblar dentro del gabinete.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un gabinete de tipo superficial en un lugar húmedo debe montarse con al menos cuánto espacio de aire entre él y la pared?",
+          "choices": [
+            "Ninguno",
+            "1/8 in.",
+            "1/4 in.",
+            "1 in."
+          ],
+          "answer_index": 2,
+          "explain_plain": "312.2 exige al menos 1/4 in. de espacio de aire en lugares húmedos o mojados, para que la humedad no quede atrapada detrás de la lata.",
+          "nec_ref": "312.2"
+        },
+        {
+          "question": "El espacio para doblar conductores dentro de un gabinete de tablero lo fijan:",
+          "choices": [
+            "110.26",
+            "Las Tablas 312.6(A) y (B)",
+            "La Tabla 310.16",
+            "Solo la etiqueta del fabricante del tablero"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La desviación y el espacio para doblar son 312.6, dimensionados por las Tablas 312.6(A) y (B). 110.26 es el espacio de trabajo frente a la envolvente, otra regla.",
+          "nec_ref": "312.6"
+        },
+        {
+          "question": "¿Qué envolvente NO cubre el Artículo 312?",
+          "choices": [
+            "Gabinete",
+            "Caja de corte",
+            "Gabinete de base de medidor",
+            "Caja de salida"
+          ],
+          "answer_index": 3,
+          "explain_plain": "Las cajas de salida, de dispositivos, de paso y de conexiones son del Artículo 314. El Artículo 312 cubre gabinetes, cajas de corte y gabinetes de base de medidor.",
+          "nec_ref": "Article 312"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 312.10: Por primera vez, los tornillos que entran en un gabinete, una caja de corte o una lata de medidor están limitados: solo puntas romas, y 1/4 in. de alcance a menos que la punta esté protegida. Un tornillo agregado en campo para una etiqueta u otro equipo debe ser un tornillo de máquina romo que alcance 1/4 in. o menos, a menos que su punta esté protegida.\n• 312.102: Nuevo en 2023: los gabinetes, las cajas de corte y las latas de medidor necesitan todos una puerta o una tapa. Nada de latas abiertas. Las puertas o tapas ahora son obligatorias en los tres gabinetes del Artículo 312: gabinetes, cajas de corte y latas de medidor (312.102).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "312.2",
+        "312.5(A)",
+        "312.6",
+        "Table 312.6(A)",
+        "Table 312.6(B)",
+        "110.26"
+      ],
+      "rich_sources": [
+        {
+          "claim": "312.2: surface enclosures in damp or wet locations mount with at least 1/4 in. air space behind them; wet-location enclosures must be weatherproof; nonmetallic enclosures on concrete, masonry or tile are excepted",
+          "source": "Alachua County (FL), Generator Permanent Installation — Residential, quoting NEC 312.2",
+          "url": "https://growth-management.alachuacounty.us/formsdocs/BLD_20260224181516_Generator_Installation_Residential_2-26.pdf"
+        },
+        {
+          "claim": "Closure of unused openings in cabinets and cutout boxes is checked under 312.5(A)",
+          "source": "Miami-Dade County electrical inspection checklist",
+          "url": "http://www.miamidade.gov/permits/library/checklists/electrical-inspection.pdf"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C3-312.5(C)",
@@ -1806,8 +2261,8 @@
       "article": "312",
       "section": "312.8",
       "title": "Qué puede vivir dentro de un gabinete para interruptores y dispositivos de sobrecorriente",
-      "plain_explanation": "Un gabinete que alberga interruptores o dispositivos de sobrecorriente no es una caja de unión de uso general, pero tampoco está sellado contra todo otro cableado: esta sección permite que los conductores pasen a través y se empalmen dentro de él con límites definidos — comúnmente se enseña como que el espacio de cableado usado por conductores de paso se limita a una parte del espacio de cableado de la sección transversal del gabinete (40%), y los empalmes y derivaciones a una parte mayor (75%), con las condiciones exactas en la sección. Los cambios de 2020 también trataron el equipo de monitoreo de energía y de gestión de energía instalado en estos gabinetes.\n\nCAMBIO NEC 2023:\n• 312.8: Los gabinetes de interruptores y breakers que llevan conductores de paso, empalmes o derivaciones ahora necesitan suficiente espacio para doblar para conductores de 4 AWG y mayores, además de los viejos límites de llenado de 40 y 75 percent. Nuevo punto (3): los conductores de 4 AWG y mayores en el espacio de cableado necesitan espacio para doblar que cumpla 314.28(A)(2), la regla de jalón en ángulo para cajas de paso.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "No trates un tablero como espacio libre de empalmes en una remodelación. Si se planean conductores de paso o empalmes en un gabinete de sobrecorriente, cuenta el espacio, mantenlo en el área de canaleta de cableado y prepárate para mostrarle al inspector la sección en la que te apoyaste.",
+      "plain_explanation": "Un gabinete que alberga interruptores o dispositivos de sobrecorriente no es una caja de unión de uso general, pero tampoco está sellado contra todo otro cableado. Según 312.8(A), los conductores pueden pasar a través, empalmarse y derivarse dentro del espacio de cableado, con límites definidos:\n• Conductores de paso: el total de todos los conductores en cualquier sección transversal del espacio de cableado no excede el 40 por ciento de ese espacio.\n• Empalmes y derivaciones: todos los conductores, empalmes y derivaciones juntos no exceden el 75 por ciento en cualquier sección transversal.\n• Una etiqueta de advertencia en el gabinete identifica la ubicación del medio de desconexión de los conductores de paso.\nEl equipo de monitoreo de energía y de gestión de energía también puede vivir en el espacio de cableado según 312.8(B): debe estar identificado como accesorio instalable en campo de un equipo listado, o ser un kit listado evaluado para instalación en campo en estos gabinetes, y todo en cualquier sección transversal — conductores, empalmes, derivaciones y el equipo — se mantiene en 75 por ciento o menos.",
+      "on_the_job": "No trate un tablero como espacio libre de empalmes en una remodelación. Si se planean conductores de paso o empalmes en un gabinete de sobrecorriente, cuente el espacio y manténgalo en el área de canaleta de cableado. Ejemplo: una sección transversal de canaleta de 20 sq in permite 8 sq in de conductores de paso al límite de 40 por ciento, y 15 sq in en total cuando se agregan empalmes y derivaciones al límite de 75 por ciento. Prepárese para mostrarle al inspector la sección en la que se apoyó.",
       "sharma_note": "",
       "figure_idea": "Detalle de la canaleta de un tablero con conductores de paso ocupando una parte medida del espacio de cableado, con el manojo de empalmes etiquetado por separado.",
       "related_ids": [
@@ -1826,7 +2281,105 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/312-8",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "El espacio de cableado en un gabinete de breakers está dimensionado para que los conductores propios del gabinete se doblen, se conecten y reciban servicio. Los empalmes ajenos apretados en la canaleta atrapan calor, bloquean el trabajo en los breakers y dejan conductores de paso energizados dentro de un tablero que el próximo electricista abrió esperando que una sola desconexión lo hiciera seguro. Los límites y la etiqueta mantienen posible el trabajo propio del gabinete y anuncian sus peligros ocultos.",
+      "inspection_fails": [
+        "Un tablero usado como caja de unión para circuitos sin relación, sin ningún conteo de llenado.",
+        "Empalmes y derivaciones apretados en la canaleta más allá del 75 por ciento del espacio de cableado en una sección transversal.",
+        "Conductores de paso que atraviesan un tablero sin etiqueta de advertencia que identifique dónde está su medio de desconexión.",
+        "Equipo de monitoreo atornillado en la canaleta que no es un kit listado ni un accesorio identificado para el gabinete."
+      ],
+      "exam_trap": "Los empalmes y derivaciones pueden llenar el 75 por ciento del espacio de cableado, así que los conductores de paso también. Intercambio incorrecto. Los conductores de paso solos están limitados al 40 por ciento de la sección transversal. La cifra de 75 por ciento es el total — conductores, empalmes y derivaciones juntos.",
+      "tables": [
+        {
+          "caption": "Límites de llenado en el espacio de cableado — 312.8",
+          "headers": [
+            "Qué hay en el espacio",
+            "Llenado máx."
+          ],
+          "rows": [
+            [
+              "Conductores de paso",
+              "40% de la sección transversal"
+            ],
+            [
+              "Conductores, empalmes y derivaciones juntos",
+              "75% de la sección transversal"
+            ],
+            [
+              "Equipo de monitoreo / gestión de energía, con todo el cableado",
+              "75% de la sección transversal"
+            ]
+          ],
+          "note": "Los conductores de paso también necesitan una etiqueta de advertencia que identifique la ubicación de su medio de desconexión — 312.8(A)."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c3/C3-312.8-gutter-fill.svg",
+          "alt": "Elevación de un tablero con conductores de paso corriendo en la canaleta lateral y un manojo de empalmes, junto a dos barras de llenado: conductores de paso limitados al 40 por ciento del espacio de cableado, conductores más empalmes y derivaciones limitados al 75 por ciento, y un marcador de etiqueta de advertencia.",
+          "caption": "La canaleta es espacio compartido — 40 por ciento de paso, 75 por ciento total.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Los conductores de paso en un gabinete de breakers pueden llenar el espacio de cableado en cualquier sección transversal hasta no más de:",
+          "choices": [
+            "25 por ciento",
+            "40 por ciento",
+            "60 por ciento",
+            "75 por ciento"
+          ],
+          "answer_index": 1,
+          "explain_plain": "312.8(A) limita el total de todos los conductores instalados en cualquier sección transversal al 40 por ciento del espacio de cableado.",
+          "nec_ref": "312.8(A)"
+        },
+        {
+          "question": "Conductores, empalmes y derivaciones juntos pueden llenar el espacio de cableado hasta no más de:",
+          "choices": [
+            "40 por ciento",
+            "50 por ciento",
+            "75 por ciento",
+            "100 por ciento, si está ordenado"
+          ],
+          "answer_index": 2,
+          "explain_plain": "El área total de todos los conductores, empalmes y derivaciones en cualquier sección transversal no puede exceder el 75 por ciento de ese espacio.",
+          "nec_ref": "312.8(A)"
+        },
+        {
+          "question": "Unos conductores de paso atraviesan un tablero. ¿Qué debe llevar el gabinete?",
+          "choices": [
+            "Un directorio de circuitos del otro tablero",
+            "Una etiqueta de advertencia que identifique la ubicación del medio de desconexión de los conductores de paso",
+            "Un segundo breaker principal",
+            "Nada — las etiquetas son opcionales"
+          ],
+          "answer_index": 1,
+          "explain_plain": "312.8(A) exige una etiqueta de advertencia en el gabinete que identifique la ubicación del medio de desconexión de cualquier conductor de paso.",
+          "nec_ref": "312.8(A)"
+        }
+      ],
+      "code_refs": [
+        "312.8(A)",
+        "312.8(B)",
+        "314.28(A)(2)"
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 312.8: Los gabinetes de interruptores y breakers que llevan conductores de paso, empalmes o derivaciones ahora necesitan suficiente espacio para doblar para conductores de 4 AWG y mayores, además de los viejos límites de llenado de 40 y 75 percent. Nuevo punto (3): los conductores de 4 AWG y mayores en el espacio de cableado necesitan espacio para doblar que cumpla 314.28(A)(2), la regla de jalón en ángulo para cajas de paso.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich_sources": [
+        {
+          "claim": "312.8(B) 2020: power monitoring or energy management equipment must be identified as a field-installable accessory or listed kit, and total area of conductors, splices, taps and equipment at any cross section may not exceed 75 percent",
+          "source": "Electrical License Renewal, NEC 2020 code change summary for 312.8(B)",
+          "url": "https://www.electricallicenserenewal.com/Electrical-Continuing-Education-Courses/NEC-Content.php?sectionID=883"
+        },
+        {
+          "claim": "312.8(A) conditions: conductors at any cross section not over 40 percent, conductors/splices/taps not over 75 percent, and a warning label identifying the disconnecting means for feed-through conductors",
+          "source": "Mike Holt, NEC Questions and Answers (312.8)",
+          "url": "https://www.mikeholt.com:443/newsletters.php?action=display&letterID=1817"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C3-ART-314",
@@ -2049,8 +2602,8 @@
       "article": "314",
       "section": "314.16(C)",
       "title": "Cajas para canalización (conduit bodies) — llenado y marcas",
-      "plain_explanation": "Una caja para canalización (un LB, LL, LR o T) es un volumen de caja como cualquier otra cuando contiene empalmes, derivaciones o dispositivos: su capacidad cúbica marcada limita el llenado de conductores según las mismas reglas de la Tabla 314.16(A), usando los valores de volumen por conductor de la Tabla 314.16(B). Las cajas para canalización no marcadas con su capacidad cúbica solo pueden llevar conductores según las tablas de llenado de canalizaciones — en la práctica, eso significa que no empalme dentro de un conduit body sin marca de capacidad. La capacidad marcada está moldeada o estampada en la pieza; léala antes de planear un empalme en un tramo, no después de que el tramo esté cerrado.",
-      "on_the_job": "Si un plano muestra un empalme dentro de un LB, verifique el número de capacidad cúbica de la pieza en la mano. Sin marca legible de capacidad, el empalme se traslada a una caja — planifique la caja en la instalación preliminar en vez de descubrirlo en la inspección final.",
+      "plain_explanation": "Las cajas para canalización (conduit bodies) también siguen reglas de llenado.\n• Conductores que pasan de largo: el llenado no puede superar lo que las tablas del Capítulo 9 permiten para el tamaño de canalización al que pertenece la caja.\n• Empalmes, derivaciones y dispositivos: permitidos dentro de una caja para canalización solo donde la caja esté marcada de forma durable y legible con su capacidad en pulgadas cúbicas por el fabricante. Entonces el llenado se cuenta igual que el llenado de una caja, contra ese volumen marcado, usando los valores de la Tabla 314.16(B) — 2.00 cu in por cada 14 AWG, 2.25 por cada 12 AWG, 2.50 por cada 10 AWG.\n• Un LB sin marca es un accesorio de jalado, no una caja de conexiones: ningún empalme vive en él.",
+      "on_the_job": "Lea la marca de la pieza antes de empalmar: sin marca de pulgadas cúbicas, no hay empalme. El conteo, resuelto: un empalme que une dos conductores de 12 AWG carga 2 × 2.25 = 4.50 cu in, las tierras cuentan una vez a 2.25, total 6.75 cu in — así que la pieza tiene que marcar al menos 6.75 cu in antes de que ese empalme sea legal en esa caja. Si el trabajo necesita un empalme en ese punto y la caja no tiene marca, la solución es una caja marcada o una caja de verdad — no un conector más grande. Planifique la caja en la instalación preliminar en vez de descubrirlo en la inspección final.",
       "sharma_note": "",
       "figure_idea": "Un LB con su capacidad cúbica estampada señalada, junto a un conteo de llenado de ejemplo usando la Tabla 314.16(B).",
       "related_ids": [
@@ -2063,15 +2616,121 @@
       "prev_id": "C3-314.16(B)",
       "next_id": "C3-314.17",
       "chapter": 3,
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "CAMBIO NEC 2023: No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Una caja para canalización es un bolsillo pequeño y sellado. Si usted mete empalmes a la fuerza en una que nunca fue dimensionada para ellos, los conectores quedan aplastados contra la tapa, el aislamiento roza con la pieza fundida y el calor de un empalme cargado no tiene a dónde ir. La regla de la marca hace que el fabricante declare el volumen por adelantado, de modo que el conteo de empalmes es un problema de matemáticas con respuesta — no una adivinanza con la tapa en la mano.",
+      "inspection_fails": [
+        "Empalmes con conectores dentro de un LB sin marca — sin marca de pulgadas cúbicas, no hay empalmes (314.16(C)).",
+        "Caja marcada llenada más allá de su volumen marcado — la carga del empalme superó el número de la pieza.",
+        "Marca de capacidad raspada o ilegible — la capacidad debe estar marcada de forma durable y legible.",
+        "Dispositivo montado en una caja para canalización que nunca fue marcada para uno."
+      ],
+      "exam_trap": "La trampa es llamar al LB una caja de conexiones pequeña. Una caja para canalización sin marca es solo un accesorio de jalado; los empalmes, derivaciones y dispositivos necesitan una caja marcada de forma durable y legible con su capacidad en pulgadas cúbicas, y el llenado entonces cuenta exactamente como el llenado de una caja. La trampa espejo es usar el llenado de canalizaciones del Capítulo 9 para una caja que contiene empalmes — esas tablas gobiernan los conductores que pasan de largo, no los empalmes.",
+      "tables": [
+        {
+          "caption": "Qué limita el llenado",
+          "headers": [
+            "Contenido",
+            "Límite"
+          ],
+          "rows": [
+            [
+              "Conductores que pasan de largo",
+              "Llenado del Capítulo 9 para el tamaño de canalización"
+            ],
+            [
+              "Empalmes, derivaciones, dispositivos",
+              "La capacidad marcada en pulgadas cúbicas"
+            ],
+            [
+              "Caja sin marca",
+              "Sin empalmes, derivaciones ni dispositivos"
+            ]
+          ]
+        },
+        {
+          "caption": "Volumen por conductor (Tabla 314.16(B))",
+          "headers": [
+            "Conductor",
+            "Volumen"
+          ],
+          "rows": [
+            [
+              "14 AWG",
+              "2.00 cu in"
+            ],
+            [
+              "12 AWG",
+              "2.25 cu in"
+            ],
+            [
+              "10 AWG",
+              "2.50 cu in"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c3/C3-314.16C-marked-body.svg",
+          "alt": "Dos cajas para canalización lado a lado: una marcada con su capacidad en pulgadas cúbicas con un empalme y una marca verde de aprobado, y una sin marca con un empalme tachado en rojo, con el conteo de llenado resuelto abajo.",
+          "caption": "Caja marcada: el empalme cuenta como en una caja. Caja sin marca: solo jalado.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Los empalmes están permitidos dentro de una caja para canalización cuando…",
+          "choices": [
+            "Siempre — es una caja pequeña",
+            "La caja está marcada de forma durable y legible con su capacidad en pulgadas cúbicas",
+            "La caja es metálica",
+            "El empalme está soldado"
+          ],
+          "answer_index": 1,
+          "explain_plain": "314.16(C) permite empalmes, derivaciones y dispositivos solo en una caja marcada con su capacidad, contados como llenado de caja.",
+          "nec_ref": "314.16(C)"
+        },
+        {
+          "question": "Un empalme une dos conductores de 12 AWG en una caja marcada, y también entran tierras. La carga es…",
+          "choices": [
+            "4.50 cu in",
+            "6.75 cu in",
+            "9.00 cu in",
+            "11.25 cu in"
+          ],
+          "answer_index": 1,
+          "explain_plain": "2 conductores × 2.25 = 4.50, más las tierras contadas una vez a 2.25 — 6.75 cu in en total, y la capacidad marcada debe cubrirlo.",
+          "nec_ref": "314.16(C), Tabla 314.16(B)"
+        },
+        {
+          "question": "Los conductores que pasan de largo por una caja para canalización están limitados por…",
+          "choices": [
+            "La capacidad marcada en pulgadas cúbicas",
+            "El llenado del Capítulo 9 para el tamaño de canalización",
+            "Los volúmenes de caja de la Tabla 314.16(A)",
+            "Ningún límite"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Los conductores de paso siguen las tablas de llenado de canalizaciones; el volumen marcado gobierna empalmes, derivaciones y dispositivos.",
+          "nec_ref": "314.16(C)"
+        }
+      ],
+      "code_refs": [
+        "314.16(C)",
+        "Tabla 314.16(B)",
+        "Tablas del Capítulo 9"
+      ],
+      "rich": 1
     },
     {
       "id": "C3-314.17",
       "article": "314",
       "section": "314.17",
       "title": "Conductores y cables que entran a las cajas",
-      "plain_explanation": "Los cables que entran a una caja tienen que sujetarse a ella, o el cable tiene que fijarse lo suficientemente cerca para que la entrada a la caja se mantenga en su lugar, y la funda del cable tiene que continuar dentro de la caja para que los conductores estén protegidos donde entran. La regla de campo v1 (L-065): la funda se extiende al menos 1/4 in dentro de la caja más allá de cualquier abrazadera, y con cajas no metálicas de un solo espacio el cable se fija dentro de 8 in de la caja, mientras la funda igual entra 1/4 in.\n\nCAMBIO NEC 2023:\n• 314.17: La sección ahora nombra los cables en su título junto a los conductores y se reformuló para mayor precisión. Las reglas prácticas para cerrar aberturas y fijar cable NM y UF se mantienen. NM o UF a través de una abrazadera: funda de 1/4 in. o más dentro de la caja y más allá de la abrazadera, y el cable fijado a la caja.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Pela la funda fuera de la caja, no dentro: 1/4 in de funda más allá de la abrazadera es protección; 2 in de funda dentro de la caja es llenado que no contaste y una pelea al conectar en el trim.",
+      "plain_explanation": "Los cables que entran a una caja tienen que sujetarse a ella, o fijarse lo suficientemente cerca para que la entrada se mantenga en su lugar, y la funda del cable tiene que continuar dentro de la caja para que los conductores estén protegidos donde entran. Las cajas metálicas con abrazadera fijan el cable en la propia caja; una caja sin abrazadera depende de la distancia de fijación.\n• Funda: al menos 1/4 in dentro de la caja, más allá de cualquier abrazadera (la regla de campo v1, L-065).\n• Cajas no metálicas de un solo espacio: fije el cable dentro de 8 in de la caja — la funda igual entra 1/4 in.\n• Las aberturas sin usar se cierran. Un knockout abierto es un hueco en la envolvente, no una reserva.",
+      "on_the_job": "En una instalación preliminar en Florida con cajas no metálicas de un solo espacio, la grapa es la fijación: engrape el NM dentro de 8 in de cada caja, siempre. Pele la funda fuera de la caja, no dentro: 1/4 in de funda más allá de la abrazadera es protección; 2 in de funda dentro de la caja es llenado que no contó y una pelea al conectar en el trim.",
       "sharma_note": "",
       "figure_idea": "Primer plano de un cable NM entrando a una caja de plástico: la funda termina 1/4 in más allá del knockout, y los conductores se separan después de ese punto.",
       "related_ids": [
@@ -2092,7 +2751,91 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/314-17",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 314.17: La sección ahora nombra los cables en su título junto a los conductores y se reformuló para mayor precisión. Las reglas prácticas para cerrar aberturas y fijar cable NM y UF se mantienen. NM o UF a través de una abrazadera: funda de 1/4 in. o más dentro de la caja y más allá de la abrazadera, y el cable fijado a la caja.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "La entrada es donde el cable recibe tirones y roces. Si el cable no está fijado, cada tirón cae sobre las terminales y las va aflojando — y las terminales flojas forman arcos y se sobrecalientan. El 1/4 in de funda más allá de la abrazadera hace que la abrazadera muerda la cubierta, no los conductores desnudos, de modo que el aislamiento nunca es lo que se aprieta. Una abertura sin usar cerrada mantiene la envolvente como envolvente: los dedos, el polvo y las chispas quedan de su lado de la pared de la caja.",
+      "inspection_fails": [
+        "Funda pelada al ras de la abrazadera — sin cubierta dentro de la caja más allá de la abrazadera (314.17).",
+        "NM entrando suelto a una caja plástica de un solo espacio con la grapa más cercana a 2 ft — no fijado dentro de 8 in.",
+        "Knockout abierto dejado en el fondo de una caja — abertura sin usar nunca cerrada.",
+        "Dos pulgadas de funda dejadas dentro de la caja, comiendo llenado que nunca se contó."
+      ],
+      "exam_trap": "La respuesta trampa es pelar la funda al ras de la cara de la caja «para que la caja quede limpia». La regla pide lo contrario: la funda continúa al menos 1/4 in dentro de la caja, más allá de la abrazadera. La segunda trampa es fijar «lo bastante cerca» en una caja no metálica de un solo espacio — el número es 8 in, no «a un pie más o menos».",
+      "tables": [
+        {
+          "caption": "La lista de verificación de la entrada",
+          "headers": [
+            "Punto",
+            "Regla"
+          ],
+          "rows": [
+            [
+              "Funda más allá de la abrazadera",
+              "1/4 in o más"
+            ],
+            [
+              "Fijación, caja no metálica de un espacio",
+              "Dentro de 8 in"
+            ],
+            [
+              "Aberturas sin usar",
+              "Cerradas"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c3/C3-314.17-entry.svg",
+          "alt": "Cable NM engrapado dentro de 8 pulgadas sobre una caja no metálica de un solo espacio, con un detalle ampliado de la entrada que muestra la funda extendiéndose 1/4 de pulgada más allá de la abrazadera antes de que los conductores se separen.",
+          "caption": "Fijado afuera, funda adentro: los dos números son 8 in y 1/4 in.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Cuánto debe extenderse la funda del NM dentro de la caja, más allá de la abrazadera?",
+          "choices": [
+            "Al ras de la abrazadera",
+            "Al menos 1/4 in",
+            "Al menos 1 in",
+            "Al menos 6 in"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La cubierta continúa al menos 1/4 in dentro de la caja, más allá de cualquier abrazadera, para que la abrazadera muerda la cubierta — no los conductores (regla de campo L-065).",
+          "nec_ref": "314.17"
+        },
+        {
+          "question": "Una caja no metálica de un solo espacio no tiene abrazadera. ¿A qué distancia de la caja debe fijarse el cable?",
+          "choices": [
+            "8 in",
+            "12 in",
+            "4-1/2 ft",
+            "No se requiere fijación"
+          ],
+          "answer_index": 0,
+          "explain_plain": "Sin abrazadera que lo fije, el cable se fija dentro de 8 in de la caja — y la funda igual se extiende 1/4 in adentro.",
+          "nec_ref": "314.17"
+        },
+        {
+          "question": "Un knockout sin usar en una caja es…",
+          "choices": [
+            "Una reserva para después",
+            "Aceptable si mira hacia el montante",
+            "Una abertura que debe cerrarse",
+            "Solo un problema en lugares mojados"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Las aberturas sin usar se cierran para que la envolvente quede completa.",
+          "nec_ref": "314.17"
+        }
+      ],
+      "code_refs": [
+        "314.17",
+        "334.30"
+      ],
+      "rich": 1
     },
     {
       "id": "C3-314.20",
@@ -2346,9 +3089,9 @@
       "id": "C3-314.27(A)",
       "article": "314",
       "section": "314.27(A)",
-      "title": "Cajas de salida — cargas de alumbrado y ventiladores de techo",
-      "plain_explanation": "Una caja de salida que sostiene equipo de alumbrado tiene límites de peso y una caja que sostiene un ventilador de techo es una pieza especial:\n• Una caja ordinaria puede sostener un equipo de alumbrado de hasta 50 lb; uno más pesado necesita una caja listada para el peso real (marcada con él) o soporte independiente\n• Un ventilador de techo se sostiene SOLO de una caja listada para soporte de ventilador y marcada como tal, con capacidad de hasta 70 lb para el ventilador (un ventilador más pesado necesita soporte independiente del sistema estructural)\n• Una caja no listada para soporte de ventilador nunca sostiene un ventilador, ni siquiera uno ligero — la carga es dinámica (vibración y oscilación), no solo peso",
-      "on_the_job": "Revise la caja del ventilador en la instalación preliminar, no en la inspección final: la caja marcada para ventilador cuesta poco más y el cambio después del panel de yeso cuesta un parche en el techo. Donde un plano muestre un candelabro pesado, confirme el peso del equipo y la capacidad marcada de la caja antes de que se instale la caja.",
+      "title": "Cajas en salidas de alumbrado — la regla de las 50 lb",
+      "plain_explanation": "Una caja usada en una salida de alumbrado tiene que estar listada para ese fin, y puede sostener una luminaria (o portalámparas) que pese hasta 50 lb. Una luminaria más pesada solo puede sostenerse de la caja cuando la caja está listada y marcada para el peso real que va a cargar; en caso contrario, el equipo se sostiene de forma independiente de la caja.\n• Hasta 50 lb: una caja de salida de alumbrado listada carga la luminaria.\n• Más de 50 lb: la caja debe estar listada y marcada para el peso real, o el equipo recibe soporte independiente de la estructura.\n• Los ventiladores de techo no son luminarias bajo esta regla — un ventilador necesita una caja con capacidad para ventilador según 314.27(C), aunque pese menos de 50 lb. Las cajas para ventilador están listadas para soporte de ventilador y marcadas con el peso que pueden cargar, hasta 70 lb; un ventilador más pesado se sostiene de forma independiente.",
+      "on_the_job": "Los equipos grandes de vestíbulo y terraza son la trampa: pese el equipo o busque su peso antes del acabado. Un candelabro de 62 lb en un vestíbulo de dos pisos en Kissimmee pasa el límite de una caja ordinaria — si la caja no está listada y marcada para 62 lb, el equipo recibe un soporte independiente de la estructura. Planee ese soporte en la instalación preliminar, no con el equipo colgando de su elevador.",
       "sharma_note": "",
       "figure_idea": "Tres cajas lado a lado: caja ordinaria (equipo hasta 50 lb), caja marcada para ventilador (ventilador hasta 70 lb) y soporte independiente para cualquier cosa más pesada, con las marcas señaladas.",
       "related_ids": [
@@ -2361,15 +3104,104 @@
       "prev_id": "C3-314.23",
       "next_id": "C3-314.27(C)",
       "chapter": 3,
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Una luminaria cuelga sobre las personas que viven y trabajan debajo de ella, sostenida por tornillos y orejas de caja que también cargan sus conexiones de cableado. Una caja que se suelta deja caer un equipo energizado en el cuarto y arranca los conductores al caer. El límite de peso, la regla de la marca y la regla separada para ventiladores existen porque el peso más la vibración es lo que afloja un soporte con el tiempo.",
+      "inspection_fails": [
+        "Un candelabro de 65 lb colgado de una caja de techo estándar sin marca de peso en la caja.",
+        "Un ventilador de techo montado en una caja de alumbrado ordinaria porque «solo pesa 30 lb» — sin listado ni marca de soporte para ventilador.",
+        "Un equipo de más de 50 lb sostenido por una caja marcada para menos del peso real del equipo.",
+        "Un «soporte independiente» atornillado a la propia caja en vez de a la estructura del edificio."
+      ],
+      "exam_trap": "El ventilador pesa 42 lb — menos del límite de 50 lb, así que una caja de alumbrado estándar sirve. Incorrecto. El límite de 50 lb es para luminarias. Un ventilador de techo es una carga que se mueve y vibra, y 314.27(C) exige una caja listada y marcada para soporte de ventilador sin importar lo que pese el ventilador.",
+      "tables": [
+        {
+          "caption": "¿Quién carga el peso?",
+          "headers": [
+            "Carga",
+            "Qué la sostiene"
+          ],
+          "rows": [
+            [
+              "Luminaria, 50 lb o menos",
+              "Caja de salida de alumbrado listada"
+            ],
+            [
+              "Luminaria de más de 50 lb",
+              "Caja listada y marcada para el peso real, o soporte independiente"
+            ],
+            [
+              "Ventilador de techo, cualquier peso",
+              "Caja para ventilador listada y marcada para soporte de ventilador — 314.27(C)"
+            ],
+            [
+              "Ventilador de más de 70 lb",
+              "Soporte independiente de la estructura"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c3/C3-314.27A-weight.svg",
+          "alt": "Tres cajas de techo: un equipo de 45 lb en una caja listada marcado correcto, un equipo de 65 lb en una caja sin marca tachado, y un equipo de 65 lb cargado por una varilla de soporte independiente hasta la estructura marcado correcto.",
+          "caption": "El límite de 50 lb: lo que la caja puede cargar y cuándo debe cargar la estructura.",
+          "w": 900,
+          "h": 1400
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Una caja de salida de alumbrado listada puede sostener una luminaria de hasta:",
+          "choices": [
+            "35 lb",
+            "50 lb",
+            "70 lb",
+            "Cualquier peso, si los tornillos son largos"
+          ],
+          "answer_index": 1,
+          "explain_plain": "314.27(A) permite que una caja listada sostenga una luminaria o portalámparas de hasta 50 lb. Más peso necesita una caja listada y marcada para el peso, o soporte independiente.",
+          "nec_ref": "314.27(A)"
+        },
+        {
+          "question": "Un candelabro pesa 62 lb. La caja de techo no tiene marca de peso. ¿Qué se requiere?",
+          "choices": [
+            "Colgarlo — la caja está listada",
+            "Sostener el equipo de forma independiente de la caja",
+            "Agregar una segunda caja al lado",
+            "Usar tornillos más largos"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Con más de 50 lb, la caja debe estar listada y marcada para el peso real que carga. Una caja sin marca no puede cargarlo, así que el equipo se sostiene de forma independiente.",
+          "nec_ref": "314.27(A)"
+        },
+        {
+          "question": "Un ventilador de techo pesa 38 lb. ¿Puede colgar de una caja de salida de alumbrado listada estándar?",
+          "choices": [
+            "Sí — pesa menos de 50 lb",
+            "Sí, si la caja es de metal",
+            "No — un ventilador necesita una caja listada y marcada para soporte de ventilador",
+            "No — los ventiladores no pueden colgar de cajas"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Los ventiladores no son luminarias bajo 314.27(A). 314.27(C) exige una caja con capacidad para ventilador a cualquier peso; los ventiladores de más de 70 lb se sostienen de forma independiente.",
+          "nec_ref": "314.27(C)"
+        }
+      ],
+      "code_refs": [
+        "314.27(A)",
+        "314.27(C)",
+        "314.23"
+      ],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich": 1
     },
     {
       "id": "C3-314.27(C)",
       "article": "314",
       "section": "314.27(C)",
       "title": "Cajas en salidas de ventilador de techo",
-      "plain_explanation": "Donde una salida en el techo de un cuarto habitable está en un lugar que podría soportar un ventilador de techo — cableada y colocada como se coloca un lugar para ventilador — la caja tiene que estar listada para soporte de ventilador, y el peso máximo que puede llevar está marcado en ella. Un ventilador de más de 35 lb hasta 70 lb necesita una caja marcada para ese peso; un ventilador más pesado de 70 lb se soporta independientemente de la caja.\n\nCAMBIO NEC 2023:\n• 314.27: Las reglas para receptáculos de techo enchufables que sostienen una luminaria o un ventilador ahora usan los nombres definidos WSCR y WSAF, y explican cuándo el par puede llevar un ventilador de aspas. Un receptáculo de techo listado para soporte de peso (WSCR) combinado con un accesorio de fijación compatible (WSAF) puede soportar por sí solo un ventilador de aspas, si se cumple 314.27(C).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Si hay una salida de techo en un dormitorio o sala con una pata de interruptor, haz el rough-in con una caja clasificada para ventilador, muestre o no el plano un ventilador hoy — el próximo dueño colgará uno ahí. Eso es la lista de revisión BL-09.",
+      "plain_explanation": "Donde una salida en el techo de un cuarto habitable está en un lugar que podría soportar un ventilador de techo — cableada y colocada como se coloca un lugar para ventilador — la caja tiene que estar listada para soporte de ventilador, y el peso máximo que puede llevar está marcado en ella.\n• La caja debe estar listada para ese fin y marcada por el fabricante como apta para soporte de ventilador.\n• Un ventilador de más de 35 lb hasta 70 lb necesita una caja marcada para ese peso.\n• Un ventilador más pesado de 70 lb se soporta independientemente de la caja.\n• Una caja de salida de alumbrado no califica, ni siquiera para un ventilador liviano: bajo 314.27(A) un ventilador no es una luminaria, así que una salida para ventilador siempre necesita la caja clasificada para ventilador.",
+      "on_the_job": "Si hay una salida de techo en un dormitorio o sala con una pata de interruptor, haga el rough-in con una caja clasificada para ventilador, muestre o no el plano un ventilador hoy — el próximo dueño colgará uno ahí. Eso es la lista de revisión BL-09. En el trim, lea el marcado dentro de la caja antes de subir el ventilador: si el ventilador que entra pesa 48 lb, el marcado de la caja tiene que cubrir 48 lb. Una caja marcada para un ventilador más liviano, o sin ningún marcado de ventilador, no pasa.",
       "sharma_note": "",
       "figure_idea": "Caja de techo vista desde abajo con su marcado de soporte de ventilador ampliado, y el contorno de un ventilador encima.",
       "related_ids": [
@@ -2390,7 +3222,91 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/314-27",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Un ventilador de techo es una carga en movimiento: vibra, se balancea y tira de su soporte cada hora que gira, sobre las cabezas de las personas abajo. Una caja elegida para una luminaria estática se afloja con ese movimiento. La caja listada, el marcado de peso y el límite de 70 lb mantienen una carga giratoria en herrajes probados para sostenerla.",
+      "inspection_fails": [
+        "Ventilador de techo colgado en una caja común de salida de alumbrado — sin listado ni marcado de soporte de ventilador (314.27(C)).",
+        "Ventilador de más de 35 lb en una caja cuyo marcado no cubre el peso del ventilador.",
+        "Ventilador de más de 70 lb cargado por la caja en vez de soportado independientemente de ella.",
+        "Salida de techo apta para ventilador en un dormitorio con el rough-in hecho con una caja común de alumbrado porque el plano mostraba una luminaria."
+      ],
+      "exam_trap": "La respuesta de examen es que un ventilador de 40 lb puede colgar de una caja listada para una luminaria de 50 lb, porque 40 es menos que 50. Mal dos veces: el valor de 50 lb en 314.27(A) cubre solo luminarias, y un ventilador de más de 35 lb necesita una caja listada para soporte de ventilador y marcada para el peso del ventilador bajo 314.27(C).",
+      "tables": [
+        {
+          "caption": "Peso del ventilador: qué regla de soporte aplica",
+          "headers": [
+            "Peso del ventilador",
+            "Regla de soporte"
+          ],
+          "rows": [
+            [
+              "Hasta 35 lb",
+              "Caja listada para soporte de ventilador, peso máximo marcado"
+            ],
+            [
+              "Más de 35 lb hasta 70 lb",
+              "Caja listada y marcada para el peso del ventilador"
+            ],
+            [
+              "Más de 70 lb",
+              "Soportado independientemente de la caja"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c3/C3-314.27C-fan-box.svg",
+          "alt": "Corte de techo con una caja clasificada para ventilador sobre un soporte listado entre dos vigas, un ventilador de aspas debajo, el marcado de la caja ampliado, y tres bandas de peso para ventiladores de hasta 35 lb, de más de 35 a 70 lb, y de más de 70 lb.",
+          "caption": "Listada, marcada y con tope de 70 lb: la regla de la caja para ventilador.",
+          "w": 900,
+          "h": 1650
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Se va a instalar un ventilador de aspas de 55 lb en una salida de techo de dormitorio. La caja debe ser:",
+          "choices": [
+            "Cualquier caja octagonal de 4 in.",
+            "Una caja listada para una luminaria de 50 lb",
+            "Una caja listada y marcada para soporte de ventilador, clasificada para al menos 55 lb",
+            "Ninguna caja — fije la base del ventilador a la viga con tirafondos"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Con más de 35 lb, la caja debe estar listada para soporte de ventilador y marcada para el peso que lleva. La regla de 50 lb para luminarias en 314.27(A) no cubre ventiladores.",
+          "nec_ref": "314.27(C)"
+        },
+        {
+          "question": "Un ventilador de techo pesa 78 lb. ¿Cómo se soporta?",
+          "choices": [
+            "En una caja marcada 70 lb, con tornillos extra",
+            "En dos cajas de ventilador lado a lado",
+            "Independientemente de la caja",
+            "No se puede instalar"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Con más de 70 lb, el ventilador se soporta independientemente de la caja. La caja nunca es la estructura para un ventilador tan pesado.",
+          "nec_ref": "314.27(C)"
+        },
+        {
+          "question": "Una salida de techo en una sala está cableada y con interruptor como un lugar para ventilador, pero el plano de hoy muestra solo una luminaria. En el rough-in la caja debe ser:",
+          "choices": [
+            "Una caja común de salida de alumbrado",
+            "Una caja clasificada para ventilador, listada para soporte de ventilador",
+            "Ninguna caja hasta que se elija un ventilador",
+            "Una caja marcada para 50 lb"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Donde la salida está en un lugar que podría soportar un ventilador, cableada y colocada como lugar para ventilador, 314.27(C) exige la caja de soporte de ventilador ahora, no cuando llegue el ventilador.",
+          "nec_ref": "314.27(C)"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 314.27: Las reglas para receptáculos de techo enchufables que sostienen una luminaria o un ventilador ahora usan los nombres definidos WSCR y WSAF, y explican cuándo el par puede llevar un ventilador de aspas. Un receptáculo de techo listado para soporte de peso (WSCR) combinado con un accesorio de fijación compatible (WSAF) puede soportar por sí solo un ventilador de aspas, si se cumple 314.27(C).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "314.27(C)",
+        "314.27(A)"
+      ],
+      "rich": 1
     },
     {
       "id": "C3-314.28",
@@ -2526,8 +3442,8 @@
       "article": "320",
       "section": "320",
       "title": "Cable blindado — Tipo AC",
-      "plain_explanation": "El Tipo AC es un cable de fábrica con sus conductores dentro de una armadura metálica flexible, con una tira interna de unión en contacto con la armadura para que la armadura pueda servir como camino de tierra del equipo. Sharma encuentra este artículo más seguido por una referencia cruzada: 334.23 envía el cable NM en áticos accesibles a las reglas de protección de ático escritas aquí en 320.23. El cable mismo aparece en trabajos de Sharma principalmente en trabajo viejo y en algún trabajo comercial ocasional.\n\nCAMBIO NEC 2023:\n• 320.23: La regla del ático ahora habla de miembros estructurales en vez de vigas de piso, y mide la zona de 7 ft desde el piso o una superficie horizontal equivalente. Las distancias no cambiaron. El cable colocado sobre la parte superior de los miembros estructurales en un ático accesible necesita tiras de protección tan altas como el cable o más altas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "No confundas AC con MC: AC lleva su tira de unión y usa accesorios listados para AC; MC (Artículo 330) normalmente lleva un conductor de puesta a tierra verde separado. Los accesorios no son intercambiables por costumbre — usa el accesorio listado para el cable que tienes en la mano.",
+      "plain_explanation": "El Tipo AC es un cable de fábrica con sus conductores dentro de una armadura metálica flexible, con una tira interna de unión en contacto con la armadura para que la armadura pueda servir como camino de tierra del equipo. Sharma encuentra este artículo más seguido por una referencia cruzada: 334.23 envía el cable NM en áticos accesibles a las reglas de protección de ático escritas aquí en 320.23.\n• Sobre la parte superior de las vigas de piso, o dentro de 7 ft del piso o de las vigas de piso sobre la cara de cabios o montantes, el cable en un ático accesible debe protegerse con tiras de protección sustanciales al menos tan altas como el cable (320.23(A)).\n• Donde el ático no es accesible por escaleras permanentes o una escalera de mano, esa protección se exige solo dentro de 6 ft del borde más cercano del hueco de acceso o entrada del ático.\n• El cable colocado paralelo a los lados de cabios, montantes, o vigas de techo o piso no necesita tiras de protección ni tablas de apoyo (320.23(B)) — y el tramo igual debe cumplir 300.4(D).\n• El cable mismo aparece en trabajos de Sharma principalmente en trabajo viejo y en algún trabajo comercial ocasional.",
+      "on_the_job": "No confunda AC con MC: AC lleva su tira de unión y usa accesorios listados para AC; MC (Artículo 330) normalmente lleva un conductor de puesta a tierra verde separado. Los accesorios no son intercambiables por costumbre — use el accesorio listado para el cable que tiene en la mano. En un ático de Florida este artículo es trabajo diario aunque no haya cable AC en el camión: 334.23 aplica la regla de tiras de protección de 320.23 al cable NM que las cuadrillas de Sharma instalan cada día.",
       "sharma_note": "",
       "figure_idea": "Detalle de la punta de un cable AC: armadura, tira de unión doblada hacia atrás, buje anti-corte en el conector.",
       "related_ids": [
@@ -2548,7 +3464,93 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/320-23",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "El cable de ático se pisa, se le arrodillan encima y queda enterrado bajo cajas guardadas. Un cable aplastado sobre una viga es una falla esperando el próximo paso, así que las tiras de protección reciben el tráfico en su lugar. En el cable mismo, la tira de unión mantiene la armadura como un camino de tierra continuo, para que una falla a la armadura dispare el breaker en vez de energizar el tramo.",
+      "inspection_fails": [
+        "Accesorio de MC usado en cable Tipo AC, o un accesorio de AC en MC — el accesorio debe estar listado para el tipo de cable en la mano.",
+        "Cable sobre la parte superior de las vigas de piso del ático, dentro de 7 ft del piso, sin tiras de protección (320.23(A), aplicado a NM por 334.23).",
+        "Tiras de protección más bajas que el cable que deben proteger.",
+        "Tira de unión cortada al ras en el conector en vez de doblada hacia atrás, rompiendo el camino de tierra de la armadura."
+      ],
+      "exam_trap": "Dos trampas. Primera: AC y MC son el mismo cable con dos nombres — no lo son. El camino de tierra de AC es su armadura con la tira interna de unión; MC normalmente lleva un conductor verde separado, y cada uno usa sus propios accesorios listados. Segunda: las tiras de protección son una regla de NM — están escritas aquí en 320.23 para AC, y 334.23 es lo que las aplica a NM.",
+      "tables": [
+        {
+          "caption": "Protección de ático de 320.23 de un vistazo",
+          "headers": [
+            "El tramo",
+            "La regla"
+          ],
+          "rows": [
+            [
+              "Sobre las vigas, dentro de 7 ft del piso",
+              "Tiras de protección al menos tan altas como el cable"
+            ],
+            [
+              "Ático sin escaleras permanentes ni escalera",
+              "Protección solo dentro de 6 ft del borde del hueco"
+            ],
+            [
+              "Paralelo a cabios, montantes o vigas",
+              "Sin tiras ni tablas de apoyo; igual cumpla 300.4(D)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c3/C3-ART-320-cable-end.svg",
+          "alt": "Extremo ampliado de un cable Tipo AC en un conector de caja: armadura metálica flexible, la tira interna de unión doblada hacia atrás sobre la armadura, un buje anti-corte en el extremo cortado, y un conector listado para Tipo AC.",
+          "caption": "Armadura más tira de unión es el camino de tierra — sin conductor verde adentro.",
+          "w": 900,
+          "h": 1400
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "En un ático accesible, el cable colocado sobre la parte superior de las vigas de piso debe tener protección con tiras donde esté dentro de ___ del piso o de las vigas de piso.",
+          "choices": [
+            "4 ft",
+            "6 ft",
+            "7 ft",
+            "10 ft"
+          ],
+          "answer_index": 2,
+          "explain_plain": "320.23(A) fija la zona en 7 ft, sobre la cara de cabios o montantes igual que sobre las vigas.",
+          "nec_ref": "320.23(A)"
+        },
+        {
+          "question": "El camino de puesta a tierra del equipo en el cable Tipo AC es:",
+          "choices": [
+            "Un conductor verde separado dentro de la armadura",
+            "La armadura, con su tira interna de unión en contacto con ella",
+            "El acero del edificio",
+            "Una varilla de tierra en cada salida"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El AC se fabrica con una tira de unión en contacto con la armadura, para que la armadura misma sirva como camino de tierra del equipo.",
+          "nec_ref": "Article 320"
+        },
+        {
+          "question": "A un ático se llega solo por un hueco de acceso. La protección con tiras sobre las vigas se exige solo dentro de ___ del borde más cercano de la abertura.",
+          "choices": [
+            "3 ft",
+            "6 ft",
+            "7 ft",
+            "Todo el ático"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Donde el espacio no es accesible por escaleras permanentes o una escalera de mano, 320.23(A) exige la protección solo dentro de 6 ft del borde del hueco de acceso o entrada del ático.",
+          "nec_ref": "320.23(A)"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 320.23: La regla del ático ahora habla de miembros estructurales en vez de vigas de piso, y mide la zona de 7 ft desde el piso o una superficie horizontal equivalente. Las distancias no cambiaron. El cable colocado sobre la parte superior de los miembros estructurales en un ático accesible necesita tiras de protección tan altas como el cable o más altas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "320.23(A)",
+        "320.23(B)",
+        "334.23",
+        "300.4(D)"
+      ],
+      "rich": 1
     },
     {
       "id": "C3-ART-322",
@@ -2710,8 +3712,8 @@
       "article": "326",
       "section": "326",
       "title": "Cable con espaciador de gas integrado — Tipo IGS",
-      "plain_explanation": "El Tipo IGS es un cable subterráneo especializado: un conjunto de fábrica de uno o más conductores aislados individualmente — varillas sólidas de aluminio colocadas en paralelo — encerrados en un tubo conduit flexible no metálico de ajuste holgado, aislados con papel kraft seco y gas hexafluoruro de azufre (SF6) presurizado, y clasificado de 0 a 600 volts. Es un método bajo nivel de terreno para conductores de acometida, alimentadores y circuitos ramales, incluido el entierro directo en tierra. No debe usarse como cableado interior, no debe exponerse en contacto con un edificio y no debe usarse sobre el nivel del terreno. Está en el libro para que el mapa esté completo, muy fuera del trabajo ramal de casas y comercial ligero.",
-      "on_the_job": "Sin uso en campo para Sharma. Si IGS aparece en un plano, es un sistema de ingeniería — escala el caso, no sustituyas un cable familiar.",
+      "plain_explanation": "El Tipo IGS es un cable subterráneo especializado: un conjunto de fábrica de uno o más conductores aislados individualmente — varillas sólidas de aluminio colocadas en paralelo — encerrados en un tubo conduit flexible no metálico de ajuste holgado, aislados con papel kraft seco y gas hexafluoruro de azufre (SF6) presurizado.\n• Clasificación: de 0 a 600 volts.\n• Uso: solo bajo el nivel del terreno — conductores de acometida, alimentadores y circuitos ramales, incluido el entierro directo en tierra.\n• Nunca: como cableado interior, expuesto en contacto con un edificio, ni sobre el nivel del terreno.\nEstá en el libro para que el mapa esté completo — muy fuera del trabajo ramal de casas y comercial ligero.",
+      "on_the_job": "Sin uso en campo para Sharma. Si IGS aparece en un plano, es un sistema de ingeniería — escale el caso, no sustituya un cable familiar. Eso significa una llamada al ingeniero responsable antes de la instalación preliminar, no un cambio a cable UF o SE desde el camión: nada de lo que Sharma almacena reemplaza un conjunto aislado con gas, y la clasificación de 600 V no lo hace intercambiable con el cable común de construcción de 600 V.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -2719,7 +3721,98 @@
       "verified": true,
       "prev_id": "C3-ART-324",
       "next_id": "C3-ART-330",
-      "chapter": 3
+      "chapter": 3,
+      "edition_note": "CAMBIO NEC 2023: No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "El gas es parte del sistema de aislamiento: el SF6 presurizado dentro de un conjunto sellado mantiene la humedad fuera y le da al cable su rigidez dieléctrica bajo tierra, donde una cubierta convencional quedaría en suelo mojado por décadas. Por eso también las prohibiciones son absolutas. El conjunto está diseñado como un sistema enterrado; llevado al interior, instalado sobre el nivel del terreno o apoyado contra un edificio, queda fuera de todo aquello para lo que fue construido y certificado.",
+      "inspection_fails": [
+        "IGS instalado sobre el nivel del terreno en una obra — el Artículo 326 es un método solo bajo el nivel del terreno.",
+        "IGS llevado al interior y usado como cableado interior — un uso prohibido.",
+        "IGS dejado expuesto en contacto con el edificio en vez de quedarse bajo el nivel del terreno.",
+        "IGS cambiado por un cable familiar en campo — un conjunto de ingeniería no se sustituye en campo."
+      ],
+      "exam_trap": "La trampa es tratar el IGS como otro cable de entierro directo que usted puede subir al interior del edificio. No puede: solo bajo el nivel del terreno — nunca cableado interior, nunca expuesto contra un edificio, nunca sobre el nivel del terreno. La segunda trampa es el gas: es hexafluoruro de azufre (SF6), y es parte del aislamiento, no un gas trazador ni un relleno de envío.",
+      "tables": [
+        {
+          "caption": "Tipo IGS de un vistazo",
+          "headers": [
+            "Punto",
+            "Regla"
+          ],
+          "rows": [
+            [
+              "Conductores",
+              "Varillas sólidas de aluminio, en paralelo"
+            ],
+            [
+              "Aislamiento",
+              "Papel kraft seco + gas SF6 presurizado"
+            ],
+            [
+              "Clasificación",
+              "0–600 V"
+            ],
+            [
+              "Dónde va",
+              "Bajo el nivel del terreno — entierro directo permitido"
+            ],
+            [
+              "Dónde nunca va",
+              "Interior, sobre el terreno, contra un edificio"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c3/C3-ART-326-section.svg",
+          "alt": "Sección transversal del cable Tipo IGS: tres varillas sólidas de aluminio dentro de papel kraft seco y gas SF6 presurizado, dentro de un tubo conduit no metálico de ajuste holgado, clasificado de 0 a 600 volts, con los usos bajo el nivel del terreno y los usos prohibidos listados.",
+          "caption": "Un sistema enterrado de ingeniería: solo bajo el nivel del terreno, 0–600 V.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "El Tipo IGS está clasificado…",
+          "choices": [
+            "0–600 V",
+            "601–1,000 V",
+            "5 kV",
+            "15 kV"
+          ],
+          "answer_index": 0,
+          "explain_plain": "IGS es un conjunto de fábrica de 0 a 600 V para acometidas, alimentadores y circuitos ramales bajo el nivel del terreno.",
+          "nec_ref": "Artículo 326"
+        },
+        {
+          "question": "El IGS puede usarse…",
+          "choices": [
+            "Como cableado interior",
+            "Sobre el nivel del terreno en una bandeja",
+            "Expuesto contra la pared de un edificio",
+            "Enterrado directo para un alimentador"
+          ],
+          "answer_index": 3,
+          "explain_plain": "Solo bajo el nivel del terreno, incluido el entierro directo en tierra; los usos interiores, sobre el terreno y en contacto con un edificio están prohibidos.",
+          "nec_ref": "Artículo 326"
+        },
+        {
+          "question": "El gas dentro del Tipo IGS es…",
+          "choices": [
+            "Nitrógeno",
+            "Hexafluoruro de azufre (SF6)",
+            "Argón",
+            "Aire seco"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El papel kraft seco y el gas SF6 presurizado forman el sistema de aislamiento.",
+          "nec_ref": "Artículo 326"
+        }
+      ],
+      "code_refs": [
+        "Artículo 326"
+      ],
+      "rich": 1
     },
     {
       "id": "C3-ART-330",
@@ -3611,8 +4704,8 @@
       "article": "334",
       "section": "334.80",
       "title": "Ampacidad del cable NM — el límite de 60°C",
-      "plain_explanation": "Los conductores dentro de NM están clasificados a 90°C, pero la ampacidad del cable se limita a la columna de 60°C de la Tabla 310.16. Igual puedes empezar el cálculo de corrección y ajuste desde el valor de 90°C — eso es lo que hace que un tramo de NM agrupado o en un ático caliente sobreviva en papel — siempre que la ampacidad final después de 310.15 no supere el valor de 60°C, y los topes para conductores pequeños de 240.4(D) sigan aplicando encima.",
-      "on_the_job": "Traducción de campo: NM de 14 AWG en un breaker de 15A y NM de 12 AWG en un breaker de 20A, punto — y si reduces la capacidad de un manojo de circuitos derivados, haz el cálculo desde 90°C y después limita la respuesta a la columna de 60°C (20A para 12 AWG — el mismo punto donde cae el tope del breaker de 240.4(D)).",
+      "plain_explanation": "Los conductores dentro del NM están clasificados a 90 °C, pero la ampacidad del cable se toma de la columna de 60 °C de la Tabla 310.16.\n• Empiece a 90 °C. La corrección y el ajuste según 310.15 pueden comenzar desde el valor de 90 °C — eso es lo que hace que un tramo de NM agrupado o en un ático caliente sobreviva en papel.\n• Termine a 60 °C. La ampacidad final después de 310.15 no puede superar el valor de 60 °C.\n• Los topes para conductores pequeños de 240.4(D) siguen aplicando encima: 15 A para cobre de 14 AWG, 20 A para cobre de 12 AWG.",
+      "on_the_job": "Traducción de campo: NM de 14 AWG en un breaker de 15 A y NM de 12 AWG en un breaker de 20 A, punto. Verificación en un ático de Florida: dos circuitos derivados de NM de 20 A comparten un hueco sellado con espuma en un ático a 104 °F — cuatro conductores portadores de corriente. Empiece a 90 °C: 30 A × 0.91 × 0.80 = 21.8 A en papel. Pero 334.80 limita la respuesta al valor de 60 °C, 20 A, así que el breaker de 20 A se mantiene y el 1.8 A extra no compra nada. Haga el cálculo desde 90 °C y después limite la respuesta a la columna de 60 °C — el mismo punto donde cae el tope del breaker de 240.4(D).",
       "sharma_note": "S-10 sigue gobernando la elección del cable: cobre por defecto; CCA un tamaño arriba. Los límites de ampacidad de NM aplican igual en ambos casos, leídos en la columna correcta de 310.16 para el metal.",
       "figure_idea": "Mini-tabla de dos columnas: NM de 12 AWG — inicio a 90°C 30A (Cu) para reducción, tope final a 60°C 20A, tope de breaker 20A.",
       "related_ids": [
@@ -3628,7 +4721,108 @@
       ],
       "prev_id": "C3-334.30",
       "next_id": "C3-ART-336",
-      "chapter": 3
+      "chapter": 3,
+      "edition_note": "CAMBIO NEC 2023: No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "El tope de 60 °C es el límite del cable terminado, no del aislamiento del conductor. Los conductores aguantan 90 °C; el conjunto del cable — cubierta y todo — queda sujeto a la columna de 60 °C por 334.80. Si usted opera el NM a las ampacidades de 90 °C año tras año, la cubierta envejece temprano y se vuelve quebradiza, y el margen con el que se construyó la certificación desaparece. El cálculo en dos pasos conserva el beneficio de reducción de la columna de 90 °C sin cocinar el cable.",
+      "inspection_fails": [
+        "NM de 12 AWG en un breaker de 25 A porque «los conductores son de 90 °C» — la ampacidad final se sujeta a la columna de 60 °C (334.80).",
+        "Circuitos derivados de NM agrupados por un hueco sellado con espuma sin aplicar ningún ajuste.",
+        "NM de 10 AWG protegido a 40 A desde la columna de 90 °C — el valor de 60 °C y el tope de 240.4(D) son ambos 30 A.",
+        "Reducción iniciada desde la columna de 60 °C, y un circuito reprobado en papel que el código habría aprobado."
+      ],
+      "exam_trap": "La trampa: «Los conductores del NM son de 90 °C, así que se dimensiona desde la columna de 90 °C». Final equivocado — la columna de 90 °C es solo el punto de partida para corrección y ajuste, y el resultado nunca puede quedar por encima del valor de 60 °C. La trampa espejo es reducir desde la columna de 60 °C, que desperdicia ampacidad que el código le permite conservar en papel.",
+      "tables": [
+        {
+          "caption": "Ampacidad de NM: inicio, tope, breaker (de la Tabla 310.16)",
+          "headers": [
+            "Tamaño",
+            "Inicio 90 °C",
+            "Tope 60 °C",
+            "Tope breaker"
+          ],
+          "rows": [
+            [
+              "14 AWG Cu",
+              "25 A",
+              "15 A",
+              "15 A"
+            ],
+            [
+              "12 AWG Cu",
+              "30 A",
+              "20 A",
+              "20 A"
+            ],
+            [
+              "10 AWG Cu",
+              "40 A",
+              "30 A",
+              "30 A"
+            ],
+            [
+              "12 AWG CCA",
+              "25 A",
+              "15 A",
+              "15 A"
+            ]
+          ],
+          "note": "El CCA se lee en las columnas de aluminio de la Tabla 310.16; S-10 pone el CCA un tamaño arriba."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c3/C3-334.80-caps.svg",
+          "alt": "Diagrama de flujo para cable NM de 12 AWG y 14 AWG: la reducción comienza en el valor de 90 grados, la ampacidad final se limita al valor de 60 grados y luego se aplica el tope de breaker de 240.4(D).",
+          "caption": "Empiece a 90 °C para el cálculo; la respuesta cae a 60 °C.",
+          "w": 900,
+          "h": 1380
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "NM de 12 AWG, sin necesidad de reducción. El breaker más grande permitido es…",
+          "choices": [
+            "15 A",
+            "20 A",
+            "25 A",
+            "30 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "334.80 sujeta el NM a la columna de 60 °C (20 A para 12 AWG), y 240.4(D) también lo limita a 20 A.",
+          "nec_ref": "334.80"
+        },
+        {
+          "question": "Al reducir NM en un ático caliente: usted empieza desde ___ y el resultado se limita a ___.",
+          "choices": [
+            "60 °C / 60 °C",
+            "90 °C / 60 °C",
+            "90 °C / 75 °C",
+            "75 °C / 90 °C"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La corrección y el ajuste pueden comenzar desde el valor de 90 °C; la ampacidad final no puede superar el valor de 60 °C.",
+          "nec_ref": "334.80"
+        },
+        {
+          "question": "Cuatro conductores portadores de corriente de NM de 12 AWG a 104 °F se reducen a 21.8 A desde la columna de 90 °C. La ampacidad final permitida es…",
+          "choices": [
+            "21.8 A",
+            "20 A",
+            "25 A",
+            "30 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "21.8 A es el resultado en papel; 334.80 limita el cable terminado al valor de 60 °C, 20 A.",
+          "nec_ref": "334.80, Tabla 310.16"
+        }
+      ],
+      "code_refs": [
+        "334.80",
+        "Tabla 310.16",
+        "310.15",
+        "240.4(D)"
+      ],
+      "rich": 1
     },
     {
       "id": "C3-ART-336",
@@ -3940,8 +5134,8 @@
       "article": "340",
       "section": "340",
       "title": "Cable alimentador subterráneo — Tipo UF",
-      "plain_explanation": "UF es el hermano subterráneo de NM: los conductores están incrustados en una cubierta sólida resistente a la humedad, así que el cable mismo está clasificado para entierro directo y lugares mojados, y para exposición a la luz del sol donde esté marcado como resistente a la luz solar. Se usa para luces de patio, edificaciones separadas, alimentaciones de piscina y jardines y otros circuitos ramales y alimentadores subterráneos, enterrado a la profundidad de cobertura que el Artículo 300.5 fija para él — 24 in para entierro directo en el caso general, con la excepción residencial de GFCI de 12 in que enseña L-061.",
-      "on_the_job": "UF es rígido y no perdona al pelarlo — marca la cubierta con cuidado y no cortes los conductores. Sobre el nivel del terreno, protégelo donde pueda dañarse, igual que cualquier cable expuesto, y pon fundas en los tubos ascendentes donde 300.5 requiera protección.",
+      "plain_explanation": "UF es el hermano subterráneo de NM: los conductores están incrustados en una cubierta sólida resistente a la humedad, así que el cable mismo está clasificado para entierro directo y lugares mojados, y para la luz del sol donde esté marcado resistente a la luz solar.\n• Usos: luces de patio, edificaciones separadas, alimentaciones de piscina y jardines, y otros circuitos ramales y alimentadores subterráneos.\n• Cobertura: enterrado a la profundidad de la Tabla 300.5 para el lugar — 24 in para entierro directo en el caso general. La columna de 12 in es solo para un circuito ramal residencial de 120 V, 20 A o menos, protegido con GFCI (L-061).\n• No permitido: como cable de entrada de acometida; en garajes comerciales, teatros, estudios de cine, salas de baterías o huecos de ascensor; incrustado en concreto vertido; expuesto a daño físico sin protección; en lugares (clasificados) peligrosos excepto donde se permita específicamente.\n• Ampacidad: se lee con el límite de 60 °C, igual que NM (340.80).",
+      "on_the_job": "Un patio en Winter Garden: la alimentación del cobertizo es un circuito ramal de 120 V, 20 A, protegido con GFCI, así que su tramo de UF toma la columna de 12 in; la alimentación del equipo de piscina es un alimentador de 240 V, así que el mismo patio se excava a las 24 in para ese tramo. Dos profundidades, un solo día de zanja — lea la fila del circuito, no la costumbre. UF es rígido y no perdona al pelarlo: marque la cubierta con cuidado y no corte los conductores. Sobre el terreno, protéjalo donde pueda dañarse, igual que cualquier cable expuesto, y ponga fundas en los tubos ascendentes donde 300.5 lo requiera.",
       "sharma_note": "",
       "figure_idea": "Detalle de zanja: UF a 24 in con un tubo ascendente con funda en la pared de la casa, con advertencia de que la excepción residencial de GFCI de 12 in se señala como caso separado.",
       "related_ids": [
@@ -3954,7 +5148,106 @@
       "verified": true,
       "prev_id": "C3-338.12",
       "next_id": "C3-340.10",
-      "chapter": 3
+      "chapter": 3,
+      "edition_note": "CAMBIO NEC 2023: No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Bajo tierra es el puesto más duro de la obra: el cable queda en suelo mojado por décadas, lo encuentran las palas y nadie puede verlo envejecer. La cubierta sólida del UF mantiene la humedad fuera de los conductores en todo el tramo — no hay una cubierta hueca por donde el agua pueda viajar. La cobertura de la Tabla 300.5 es la otra mitad de la protección: las herramientas de jardín, los aireadores y los postes quedan por encima del cable.",
+      "inspection_fails": [
+        "UF enterrado a 12 in en un alimentador de piscina de 240 V — la columna de 12 in es solo el circuito ramal residencial de 120 V protegido con GFCI.",
+        "UF instalado como la acometida de un garaje separado — UF no es cable de entrada de acometida (340.12).",
+        "Tubo ascendente de UF en la pared sin protección donde lo alcanzan la podadora y la desbrozadora.",
+        "UF incrustado en la plataforma de concreto vertido de la piscina — no permitido en concreto vertido."
+      ],
+      "exam_trap": "La respuesta trampa es «el UF solo necesita 12 in de cobertura». Doce pulgadas es una columna estrecha de la Tabla 300.5 — 120 V, 20 A o menos, protegido con GFCI, circuito ramal residencial. La profundidad general de entierro directo es 24 in. Segunda trampa: «el UF está clasificado para bajo tierra, así que puede servir como cable de acometida». No puede — 340.12 lo mantiene fuera de ese uso.",
+      "tables": [
+        {
+          "caption": "La cobertura que Sharma excava más (Tabla 300.5)",
+          "headers": [
+            "Lugar y método",
+            "Cobertura"
+          ],
+          "rows": [
+            [
+              "Cable de entierro directo, terreno abierto",
+              "24 in"
+            ],
+            [
+              "Canalización no metálica (PVC), terreno abierto",
+              "18 in"
+            ],
+            [
+              "Conduit metálico rígido, terreno abierto",
+              "6 in"
+            ],
+            [
+              "Entrada de vehículos de vivienda — cualquiera de estos métodos",
+              "18 in"
+            ],
+            [
+              "Calles y entradas comerciales — todo método",
+              "24 in"
+            ],
+            [
+              "Circuito ramal residencial de 120 V, 20 A o menos, con GFCI",
+              "12 in"
+            ]
+          ],
+          "note": "La cobertura se mide desde la parte superior del cable o la canalización hasta el nivel de terreno terminado."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c3/C3-ART-340-trench.svg",
+          "alt": "Sección de zanja que muestra cable UF enterrado directo con 24 pulgadas de cobertura en terreno abierto, subiendo con una funda protectora en la pared de la casa hasta un desconectador, con el caso GFCI de 12 pulgadas señalado por separado.",
+          "caption": "24 in es la profundidad general; 12 in es una columna estrecha, no la regla.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Cobertura general de entierro directo para UF en terreno abierto?",
+          "choices": [
+            "6 in",
+            "12 in",
+            "18 in",
+            "24 in"
+          ],
+          "answer_index": 3,
+          "explain_plain": "La Tabla 300.5 pone el cable de entierro directo a 24 in de cobertura en el caso general.",
+          "nec_ref": "Tabla 300.5"
+        },
+        {
+          "question": "La columna de cobertura de 12 in aplica cuando el circuito es…",
+          "choices": [
+            "Cualquier circuito residencial",
+            "Circuito ramal residencial de 120 V, 20 A o menos, protegido con GFCI",
+            "Cualquier circuito bajo una entrada de vehículos",
+            "Cualquier circuito en PVC"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La cifra de 12 in pertenece solo a esa columna — no es una profundidad general para UF.",
+          "nec_ref": "Tabla 300.5"
+        },
+        {
+          "question": "El UF puede usarse…",
+          "choices": [
+            "Como cable de entrada de acometida",
+            "Incrustado en concreto vertido",
+            "Como alimentador enterrado directo a una edificación separada",
+            "Expuesto en un hueco de ascensor"
+          ],
+          "answer_index": 2,
+          "explain_plain": "El terreno del UF son los circuitos ramales y alimentadores subterráneos; 340.12 prohíbe el uso de acometida, el concreto vertido y los huecos de ascensor.",
+          "nec_ref": "340.10, 340.12"
+        }
+      ],
+      "code_refs": [
+        "340.10",
+        "340.12",
+        "340.80",
+        "Tabla 300.5"
+      ],
+      "rich": 1
     },
     {
       "id": "C3-340.10",
@@ -4122,8 +5415,8 @@
       "article": "352",
       "section": "352.30",
       "title": "Soporte y fijación del PVC — la tabla de espaciamiento",
-      "plain_explanation": "El PVC se sostiene según su propia tabla, y el espaciamiento se agranda a medida que la tubería crece, porque la tubería más grande es más rígida:\n• PVC de 1/2 in a 1 in — soporte cada 3 pies\n• PVC de 1-1/4 in a 2 in — cada 5 pies\n• PVC de 2-1/2 in a 3 in — cada 6 pies\n• PVC de 3-1/2 in a 5 in — cada 7 pies\n• PVC de 6 in — cada 8 pies\nCada tramo también se fija donde termina, y el PVC debe poder moverse con la temperatura — la fijación rígida en ambos extremos de un tramo largo y recto es como un tramo se sale de sus accesorios en el calor de Florida (vea la página de 352.44 sobre expansión).",
-      "on_the_job": "Memorice los dos primeros renglones — 3 pies para tamaños de hasta 1 in, 5 pies hasta 2 in — porque cubren casi todo el PVC residencial y comercial ligero que Sharma instala. Cuente las abrazaderas en el plano antes de la inspección final; el PVC con poco soporte es visible desde el suelo.",
+      "plain_explanation": "El PVC se fija a menos de 3 pies de cada caja, gabinete o terminación, y se soporta a los intervalos de la Tabla 352.30, que crecen con el tamaño de la tubería:\n• 1/2 in a 1 in — cada 3 pies\n• 1-1/4 in a 2 in — cada 5 pies\n• 2-1/2 in a 3 in — cada 6 pies\n• 3-1/2 in a 5 in — cada 7 pies\n• 6 in — cada 8 pies\nLa tabla supone que la tubería queda soportada de modo que no pueda colgar entre abrazaderas; un tramo que se pandea entre soportes se pandeará peor cuando entren el sol de la Florida y los conductores.",
+      "on_the_job": "En un tramo de patio de 1 in, una abrazadera cada 3 pies parece mucho — hasta que usted ve el mismo tramo en agosto con dos abrazaderas menos. Fije según la tabla en el rough-in; agregar abrazaderas después de cerrada la zanja significa excavar a mano su propio trabajo. Un tramo de 30 pies de 1 in lleva unas diez abrazaderas al espaciamiento de la tabla, más una a menos de 3 pies de cada extremo: cuéntelas en el takeoff, no en la zanja. Y cuando el tramo sube a 2 in, deje que el espaciamiento se abra a los 5 pies de la tabla en vez de fijarlo como si fuera de 1 in.",
       "sharma_note": "",
       "figure_idea": "Los cinco renglones de la Tabla 352.30 como una tabla gráfica, con los renglones de 1/2–1 in y 1-1/4–2 in resaltados como los tamaños de uso diario.",
       "related_ids": [
@@ -4136,7 +5429,101 @@
       "prev_id": "C3-ART-352",
       "next_id": "C3-352.44",
       "chapter": 3,
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "El PVC está rígido en la mañana y blando en la tarde. El calor y el peso de los conductores hacen que un tramo con poco soporte se arrastre hacia abajo entre abrazaderas hasta pandearse, tirar de sus cajas y forzar sus uniones. Los tamaños mayores reciben más espaciamiento solo porque la tubería mayor es más rígida: la tabla es un límite de pandeo, no una sugerencia.",
+      "inspection_fails": [
+        "PVC de 1 in soportado cada 10 pies con el patrón del EMT — la Tabla 352.30 permite 3 pies.",
+        "Sin abrazadera a menos de 3 pies del panel, la caja o la terminación.",
+        "Tramo de PVC pandeado entre soportes: espaciamiento demasiado ancho para el tamaño, peor con el calor del verano.",
+        "Tramo largo y recto expuesto al sol, fijo rígido en ambos extremos y sin provisión de expansión (352.44)."
+      ],
+      "exam_trap": "La trampa es fijar el PVC con el patrón del EMT: a menos de 3 pies de la caja y luego cada 10 pies. El intervalo de 10 pies del EMT no está en la Tabla 352.30: el PVC pequeño se fija cada 3 pies, y el espaciamiento solo se abre cuando la tubería crece y se vuelve más rígida. La otra respuesta incorrecta invierte la tabla: tubería mayor, abrazaderas más cercanas.",
+      "tables": [
+        {
+          "caption": "Tabla 352.30: intervalos de soporte del PVC",
+          "headers": [
+            "Tamaño del PVC",
+            "Soporte cada"
+          ],
+          "rows": [
+            [
+              "1/2 – 1 in",
+              "3 pies"
+            ],
+            [
+              "1-1/4 – 2 in",
+              "5 pies"
+            ],
+            [
+              "2-1/2 – 3 in",
+              "6 pies"
+            ],
+            [
+              "3-1/2 – 5 in",
+              "7 pies"
+            ],
+            [
+              "6 in",
+              "8 pies"
+            ]
+          ],
+          "note": "Fije a menos de 3 pies de cada caja, gabinete o terminación (352.30)."
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Intervalo máximo de soporte para PVC de 1 in?",
+          "choices": [
+            "3 pies",
+            "5 pies",
+            "6 pies",
+            "10 pies"
+          ],
+          "answer_index": 0,
+          "explain_plain": "La Tabla 352.30 pone el PVC de 1/2 in a 1 in cada 3 pies: el renglón más cerrado de la tabla.",
+          "nec_ref": "Tabla 352.30"
+        },
+        {
+          "question": "¿Intervalo máximo de soporte para PVC de 2 in?",
+          "choices": [
+            "3 pies",
+            "5 pies",
+            "6 pies",
+            "8 pies"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El PVC de 1-1/4 in a 2 in se soporta cada 5 pies.",
+          "nec_ref": "Tabla 352.30"
+        },
+        {
+          "question": "¿A qué distancia máxima de cada caja o terminación debe fijarse el PVC?",
+          "choices": [
+            "12 in",
+            "18 in",
+            "3 pies",
+            "4 pies"
+          ],
+          "answer_index": 2,
+          "explain_plain": "352.30: fijado a menos de 3 pies de cada caja, gabinete o terminación, y luego soportado según la tabla.",
+          "nec_ref": "352.30"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023: No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "figures": [
+        {
+          "src": "fig/c3/C3-352.30-supports.svg",
+          "alt": "Dos tramos de PVC en una pared con el espaciamiento de soportes dimensionado: PVC de 1 pulgada fijado cada 3 pies y PVC de 2 pulgadas cada 5 pies, cada uno fijado a menos de 3 pies del panel.",
+          "caption": "La Tabla 352.30 en la pared: 1 in cada 3 pies, 2 in cada 5 pies.",
+          "w": 900,
+          "h": 1400
+        }
+      ],
+      "code_refs": [
+        "352.30",
+        "Table 352.30",
+        "352.44"
+      ],
+      "rich": 1
     },
     {
       "id": "C3-352.44",
@@ -4417,8 +5804,8 @@
       "article": "355",
       "section": "355",
       "title": "Tubo conduit de resina termoestable reforzada — Tipo RTRC",
-      "plain_explanation": "RTRC es una canalización de resina reforzada con fibra de vidrio, elegida donde importan la resistencia a la corrosión y la fuerza y las canalizaciones metálicas se pudrirían o están prohibidas — ambientes industriales químicos, de aguas residuales y exteriores duros. Se une con sus propios accesorios y adhesivos y se soporta según su propio artículo. Su tabla base de soporte, la Tabla 355.30, lleva las mismas separaciones que la Tabla 352.30 de PVC — 3 ft para tamaños comerciales 1/2 a 1, subiendo a 8 ft para tamaño comercial 6 — y el tubo conduit listado para soporte a una separación diferente se permite instalar de acuerdo con ese listado.",
-      "on_the_job": "Solo trabajo especializado. Si un trabajo en ambiente corrosivo especifica RTRC, su tabla de soporte y sus instrucciones de unión vienen con el material — consíguelas antes de trazar el tramo.",
+      "plain_explanation": "RTRC es una canalización de resina reforzada con fibra de vidrio, elegida donde importan la resistencia a la corrosión y la fuerza y las canalizaciones metálicas se pudrirían o están prohibidas — ambientes industriales químicos, de aguas residuales y exteriores duros. Se une con sus propios accesorios y adhesivos y se soporta según su propio artículo.\n• Su tabla base de soporte, la Tabla 355.30, lleva las mismas separaciones que la Tabla 352.30 de PVC — 3 ft para tamaños comerciales 1/2 a 1, subiendo a 8 ft para tamaño comercial 6.\n• El tubo conduit listado para soporte a una separación diferente se permite instalar de acuerdo con ese listado.",
+      "on_the_job": "Solo trabajo especializado. Si un trabajo en ambiente corrosivo especifica RTRC, su tabla de soporte y sus instrucciones de unión vienen con el material — consígalas antes de trazar el tramo. Coloque los straps según la tabla, no por costumbre: un tramo de 3/4 in. se asegura cada 3 ft, uno de 2 in. cada 5 ft, y el tramo grande de 6 in. cada 8 ft. Presupueste los accesorios y el adhesivo del fabricante con el tubo, no como un extra al final. Si el material llega listado para una separación de soporte diferente, ese listado es el número que el inspector le va a exigir — guárdelo con los papeles del trabajo.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -4426,7 +5813,101 @@
       "verified": true,
       "prev_id": "C3-ART-354",
       "next_id": "C3-ART-356",
-      "chapter": 3
+      "chapter": 3,
+      "why_it_exists": "El tubo de resina resiste los químicos que se comen el acero, pero el tramo solo es tan bueno como sus soportes y uniones. Un tramo con vanos demasiado largos se cuelga y trabaja sus uniones pegadas, y una unión hecha con el cemento equivocado falla en el mismo aire corrosivo para el que se eligió el tubo. La tabla de soporte y el sistema de unión del fabricante son parte de la protección contra la corrosión. Por eso este artículo lleva su propia tabla de soporte en vez de tomar prestada la de otra canalización.",
+      "inspection_fails": [
+        "RTRC de 2-1/2 in. asegurado cada 8 ft — la Tabla 355.30 permite 6 ft para ese tamaño.",
+        "Uniones hechas con cemento de PVC o accesorios que no son parte del sistema RTRC, en vez del adhesivo y los accesorios del fabricante.",
+        "RTRC listado para una separación de soporte diferente instalado con la separación de la tabla en contra de su listado.",
+        "Tubo metálico instalado en lugar del RTRC especificado en un ambiente corrosivo."
+      ],
+      "exam_trap": "La trampa es buscar la tabla de soporte de EMT porque RTRC es 'otro conduit más'. RTRC tiene su propia tabla — 355.30 — y sus separaciones coinciden con la Tabla 352.30 de PVC, no con las de EMT. La segunda trampa es ignorar la tabla para un producto listado: donde el tubo está listado para una separación de soporte diferente, manda el listado.",
+      "tables": [
+        {
+          "caption": "Tabla 355.30, separación de soporte (la misma que la Tabla 352.30)",
+          "headers": [
+            "Tamaño comercial",
+            "Soporte cada"
+          ],
+          "rows": [
+            [
+              "1/2 in. a 1 in.",
+              "3 ft"
+            ],
+            [
+              "1-1/4 in. a 2 in.",
+              "5 ft"
+            ],
+            [
+              "2-1/2 in. a 3 in.",
+              "6 ft"
+            ],
+            [
+              "3-1/2 in. a 5 in.",
+              "7 ft"
+            ],
+            [
+              "6 in.",
+              "8 ft"
+            ]
+          ],
+          "note": "El tubo listado para soporte a una separación diferente se instala según su listado."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c3/C3-ART-355-supports.svg",
+          "alt": "Elevación de un tramo de RTRC de 2 in. en una pared con straps dimensionados a 5 ft según la Tabla 355.30, una unión con el adhesivo del fabricante, y la separación de soporte para cada tamaño comercial.",
+          "caption": "Sopórtelo según su propia tabla: la Tabla 355.30.",
+          "w": 900,
+          "h": 1350
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "La Tabla 355.30 exige soportar el RTRC de 2 in. a intervalos no mayores de:",
+          "choices": [
+            "3 ft",
+            "5 ft",
+            "6 ft",
+            "8 ft"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La Tabla 355.30 coincide con la Tabla 352.30: los tamaños comerciales de 1-1/4 a 2 in. se soportan cada 5 ft.",
+          "nec_ref": "Table 355.30"
+        },
+        {
+          "question": "Un tramo de RTRC está listado para soporte a una separación diferente de la Tabla 355.30. Se puede instalar:",
+          "choices": [
+            "Solo con la separación de la tabla",
+            "De acuerdo con su listado",
+            "Con la separación de soporte de EMT",
+            "Solo en exteriores"
+          ],
+          "answer_index": 1,
+          "explain_plain": "355.30 permite instalar el tubo listado para soporte a una separación diferente de acuerdo con ese listado.",
+          "nec_ref": "355.30"
+        },
+        {
+          "question": "El RTRC es la canalización preferida principalmente donde:",
+          "choices": [
+            "Techos secos de oficinas",
+            "Ambientes industriales corrosivos",
+            "Áticos de viviendas",
+            "Techos de pleno"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La resina reforzada con fibra de vidrio se elige donde importan la resistencia a la corrosión y la fuerza y las canalizaciones metálicas se pudrirían o están prohibidas.",
+          "nec_ref": "Article 355"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "355.30",
+        "Table 355.30",
+        "Table 352.30"
+      ],
+      "rich": 1
     },
     {
       "id": "C3-ART-356",
@@ -4524,8 +6005,8 @@
       "article": "358",
       "section": "358.22",
       "title": "Cuántos conductores caben en EMT — la entrega al Capítulo 9",
-      "plain_explanation": "Esta sección no lleva sus propios números de llenado: la cantidad de conductores en EMT es lo que permita el Capítulo 9 — los porcentajes de la Tabla 1 (53% para un conductor, 31% para dos, 40% para más de dos, 60% para un niple de 24 in o más corto), las áreas de la Tabla 4 para la canalización y las áreas de la Tabla 5 para los conductores. Ejemplo trabajado de las tablas v1 del Capítulo 9: EMT de 1/2 in tiene un área al 40% de 0.122 sq in; un conductor THHN de 12 AWG ocupa 0.0133 sq in; 0.122 / 0.0133 = 9.17, así que caben nueve THHN de 12 AWG. Las tierras de equipo cuentan para el llenado.",
-      "on_the_job": "Haz el cálculo de área, no adivines a ojo una tubería llena al momento del trim. Cuando todos los conductores son del mismo tamaño, el Anexo C da la misma respuesta como atajo — pero las tablas son la regla, el Anexo C es el atajo.",
+      "plain_explanation": "Esta sección no lleva sus propios números de llenado: la cantidad de conductores en EMT es lo que permita el Capítulo 9.\n• Porcentajes de la Tabla 1: 53% para un conductor, 31% para dos, 40% para más de dos, y 60% para un niple de 24 in o más corto.\n• La Tabla 4 da las áreas útiles de la canalización; la Tabla 5 da el área que ocupa cada conductor.\n• Ejemplo trabajado de las tablas del Capítulo 9: EMT de 1/2 in tiene un área al 40% de 0.122 sq in; un conductor THHN de 12 AWG ocupa 0.0133 sq in; 0.122 / 0.0133 = 9.17, así que caben nueve THHN de 12 AWG.\n• Las tierras de equipo cuentan para el llenado.\nLas mismas tablas del Capítulo 9 sirven para cada tipo de canalización del Capítulo 3 — esta sección es simplemente la puerta del EMT hacia ellas, y el conteo se hace antes del jalón, no se descubre durante el jalón.",
+      "on_the_job": "Haga el cálculo de área, no adivine a ojo una tubería llena al momento del acabado. Cuando todos los conductores son del mismo tamaño, el Anexo C da la misma respuesta como atajo — pero las tablas son la regla, el Anexo C es el atajo.",
       "sharma_note": "",
       "figure_idea": "Tarjeta de cálculo: 0.122 ÷ 0.0133 = 9.17 → 9 conductores, con un corte transversal de EMT de 1/2 in con nueve puntos.",
       "related_ids": [
@@ -4538,7 +6019,98 @@
       "verified": true,
       "prev_id": "C3-358.10",
       "next_id": "C3-358.24-26",
-      "chapter": 3
+      "chapter": 3,
+      "why_it_exists": "Una canalización sobrellenada se daña al entrar: el jalón arrastra el aislamiento contra cada acople y curva, y el manojo terminado corre caliente sin espacio alrededor. Los límites de llenado mantienen el jalón sobrevivible, evitan que el calor se acumule en una tubería apretada, y dejan suficiente espacio para que un conductor se pueda sacar y reemplazar años después.",
+      "inspection_fails": [
+        "Un conducto llenado a ojo, con más conductores de los que permite el porcentaje del Capítulo 9.",
+        "Conductores de puesta a tierra del equipo fuera del conteo de llenado, dejando el tramo sobre el límite.",
+        "Un tramo largo llenado al 60 por ciento como si fuera un niple — la cifra de 60 por ciento es solo para niples de 24 in o más cortos.",
+        "El Anexo C usado para un jalón de tamaños mezclados, donde solo el cálculo de las Tablas 1, 4 y 5 da la respuesta."
+      ],
+      "exam_trap": "El Anexo C está en el libro de códigos, así que úselo para toda pregunta de llenado. El Anexo C solo funciona cuando cada conductor es del mismo tamaño y del mismo tipo de aislamiento. Mezcle tamaños y vuelve a las Tablas 1, 4 y 5 — y el conductor de puesta a tierra del equipo cuenta para el llenado de cualquier forma.",
+      "tables": [
+        {
+          "caption": "Capítulo 9, Tabla 1 — porcentajes de llenado de canalización",
+          "headers": [
+            "Conductores",
+            "Llenado máx."
+          ],
+          "rows": [
+            [
+              "1",
+              "53%"
+            ],
+            [
+              "2",
+              "31%"
+            ],
+            [
+              "Más de 2",
+              "40%"
+            ],
+            [
+              "Niple, 24 in o más corto",
+              "60%"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c3/C3-358.22-fill-calc.svg",
+          "alt": "Corte transversal de un EMT de 1/2 in con nueve puntos de conductor, junto a una tarjeta de cálculo: la Tabla 4 da 0.122 sq in al 40 por ciento, la Tabla 5 da 0.0133 sq in para THHN de 12 AWG, 0.122 dividido entre 0.0133 es igual a 9.17, así que caben nueve conductores; una franja abajo muestra los porcentajes de la Tabla 1: 53, 31, 40 y 60.",
+          "caption": "El ejemplo trabajado: área dividida entre área, redondeado hacia abajo.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Cuatro conductores portadores de corriente más una tierra van en un EMT. El límite de llenado de la Tabla 1 es:",
+          "choices": [
+            "53 por ciento",
+            "31 por ciento",
+            "40 por ciento",
+            "60 por ciento"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Más de dos conductores: 40 por ciento. La cifra de 60 por ciento es solo para niples de 24 in o más cortos, y la tierra cuenta para el llenado.",
+          "nec_ref": "Capítulo 9, Tabla 1; 358.22"
+        },
+        {
+          "question": "Usando las Tablas 4 y 5, ¿cuántos conductores THHN de 12 AWG caben en EMT de 1/2 in?",
+          "choices": [
+            "7",
+            "8",
+            "9",
+            "10"
+          ],
+          "answer_index": 2,
+          "explain_plain": "0.122 sq in (40 por ciento del EMT) dividido entre 0.0133 sq in por conductor = 9.17, que se redondea hacia abajo a nueve conductores.",
+          "nec_ref": "Capítulo 9, Tablas 4 y 5"
+        },
+        {
+          "question": "¿Los conductores de puesta a tierra del equipo cuentan para el llenado de la canalización?",
+          "choices": [
+            "No — las tierras son gratis",
+            "Solo cuentan las tierras desnudas",
+            "Sí — cuentan para el llenado",
+            "Solo en niples"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Las tierras de equipo ocupan área como cualquier otro conductor y cuentan para los porcentajes de llenado del Capítulo 9.",
+          "nec_ref": "Capítulo 9, Tabla 1; 358.22"
+        }
+      ],
+      "code_refs": [
+        "358.22",
+        "Capítulo 9, Tabla 1",
+        "Capítulo 9, Tabla 4",
+        "Capítulo 9, Tabla 5",
+        "Anexo C"
+      ],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich": 1
     },
     {
       "id": "C3-358.24-26",
@@ -4546,7 +6118,7 @@
       "section": "358.24 / 358.26",
       "title": "Curvas de EMT — radio y la regla de 360 grados",
       "plain_explanation": "Las curvas en EMT tienen que hacerse de modo que la tubería no se dañe y su diámetro interior no se reduzca efectivamente. El radio de la curva de cualquier doblez de campo, medido hasta la línea central de la tubería, no debe ser menor que el radio mostrado en la Tabla 2 del Capítulo 9 para ese tamaño comercial. Los desvíos (offsets) y las monturas (saddles) cuentan para el total de curvas del tramo. Entre puntos de jalón, el total de curvas en un tramo no puede superar 360 grados: el equivalente de cuatro curvas de un cuarto, en cualquier combinación. Un tramo que necesita más de 360 grados necesita un punto de jalón — una caja o un cuerpo de conduit — no un jalón más fuerte.",
-      "on_the_job": "Cuenta cada curva con los dedos mientras trazas: subida de 90, desvío 30 + 30, montura de tres puntos 22.5 + 45 + 22.5 — ya vas en 240 antes de que el tramo salga del cuarto. Planifica los puntos de jalón mientras el techo está abierto.",
+      "on_the_job": "Cuenta cada curva con los dedos mientras trazas: subida de 90, desvío 30 + 30, montura de tres puntos 22.5 + 45 + 22.5 — ya vas en 240 antes de que el tramo salga del cuarto, con 120 grados de margen. Planifica los puntos de jalón mientras el techo está abierto; una caja agregada en el trazado cuesta minutos, y la misma caja agregada con el techo cerrado cuesta un día.",
       "sharma_note": "",
       "figure_idea": "Diagrama de un tramo con los ángulos de curva sumados en un total acumulado: 90 + 30 + 30 + 45 = 195°, marcado 'menos de 360 — OK'.",
       "related_ids": [
@@ -4557,7 +6129,100 @@
       "verified": true,
       "prev_id": "C3-358.22",
       "next_id": "C3-358.30",
-      "chapter": 3
+      "chapter": 3,
+      "why_it_exists": "Cada curva agrega fricción, y la fricción es lo que pela el aislamiento y atasca los jalones. Un tramo doblado más allá de 360 grados puede ser imposible de jalar sin dañar los conductores, y una curva aplastada para ahorrar espacio reduce el diámetro interior de la tubería de la misma manera. La regla del radio protege el cable al entrar; la regla de los 360 grados lo protege durante todo el jalón. La cuenta corre entre puntos de jalón, así que la regla se gana en el trazado, no en el jalón.",
+      "inspection_fails": [
+        "Cinco curvas de 90 grados entre cajas: 450 grados sin punto de jalón (358.26).",
+        "Desvíos y monturas fuera de la cuenta de curvas, dejando el tramo sobre 360 grados.",
+        "Curva de campo aplastada, con el diámetro interior reducido efectivamente (358.24).",
+        "Radio de curva menor que el de la Tabla 2 del Capítulo 9 para ese tamaño comercial."
+      ],
+      "exam_trap": "La trampa es contar solo las curvas de 90. Los desvíos y las monturas también cuentan, y el límite es el total entre puntos de jalón: 360 grados en cualquier combinación, no cuatro curvas de cualquier tamaño. La segunda trampa es la cura: más lubricante y un jalón más fuerte no curan un tramo pasado de curvas. La cura es un punto de jalón.",
+      "tables": [
+        {
+          "caption": "Cuenta de curvas del tramo de En la obra",
+          "headers": [
+            "Curva",
+            "Grados"
+          ],
+          "rows": [
+            [
+              "Subida (stub-up)",
+              "90"
+            ],
+            [
+              "Desvío (offset)",
+              "30 + 30"
+            ],
+            [
+              "Montura de tres puntos",
+              "22.5 + 45 + 22.5"
+            ],
+            [
+              "Total",
+              "240"
+            ],
+            [
+              "Límite (358.26)",
+              "360"
+            ]
+          ]
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Curva total máxima entre puntos de jalón en un tramo de EMT?",
+          "choices": [
+            "180 grados",
+            "270 grados",
+            "360 grados",
+            "Cuatro de 90 y los desvíos libres"
+          ],
+          "answer_index": 2,
+          "explain_plain": "358.26 pone el tope en 360 grados: el equivalente de cuatro curvas de un cuarto, en cualquier combinación.",
+          "nec_ref": "358.26"
+        },
+        {
+          "question": "Un tramo tiene una subida de 90, un desvío de 30 + 30 y una montura de 22.5 + 45 + 22.5. ¿Total de curvas?",
+          "choices": [
+            "150 grados",
+            "195 grados",
+            "240 grados",
+            "360 grados"
+          ],
+          "answer_index": 2,
+          "explain_plain": "90 + 60 + 90 = 240 grados. Cada curva cuenta, incluidos desvíos y monturas.",
+          "nec_ref": "358.26"
+        },
+        {
+          "question": "El radio de un doblez de campo se mide hasta la línea central de la tubería y no debe ser menor que:",
+          "choices": [
+            "La marca de la zapata del doblador",
+            "La Tabla 2 del Capítulo 9 para ese tamaño",
+            "Cinco veces el diámetro de la tubería",
+            "El radio del plano"
+          ],
+          "answer_index": 1,
+          "explain_plain": "358.24 manda el radio mínimo a la Tabla 2 del Capítulo 9 para ese tamaño comercial.",
+          "nec_ref": "358.24"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023: No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "figures": [
+        {
+          "src": "fig/c3/C3-358.24-26-bend-total.svg",
+          "alt": "Un tramo de EMT dibujado con cada curva numerada — subida de 90, desvío de 30 más 30, montura de 22.5 más 45 más 22.5 sobre un ducto — y una barra de total que muestra 240 de los 360 grados permitidos.",
+          "caption": "Cuente cada curva: este tramo suma 240 de 360 grados.",
+          "w": 900,
+          "h": 1350
+        }
+      ],
+      "code_refs": [
+        "358.24",
+        "358.26",
+        "Chapter 9, Table 2"
+      ],
+      "rich": 1
     },
     {
       "id": "C3-358.30",
@@ -4594,7 +6259,90 @@
       "verified": true,
       "prev_id": "C3-358.30",
       "next_id": "C3-ART-360",
-      "chapter": 3
+      "chapter": 3,
+      "why_it_exists": "El EMT no es solo una tubería: bien apretado, también es el camino de tierra. Un acoplamiento flojo es una ruptura en ese camino, y un accesorio sin el listado para su lugar deja entrar la lechada del concreto o el agua de lluvia a la canalización, donde se queda sobre los conductores por años. El listado es como el Código sabe que el accesorio sella y aguanta donde está instalado. En la Florida ambos casos se ven cada semana: accesorios que desaparecen en vaciados de concreto y tramos exteriores que viven mojados medio año.",
+      "inspection_fails": [
+        "Accesorios comunes enterrados en un vaciado de concreto, sin listado hermético al concreto.",
+        "Accesorios en un lugar mojado sin listado para lugares mojados: agua parada dentro de la canalización (314.15).",
+        "Acoplamientos apretados solo con los dedos: la canalización no queda continua mecánica ni eléctricamente."
+      ],
+      "exam_trap": "La trampa es la regla práctica del estilo: «compresión para mojado, tornillo para seco». El Código no califica el estilo: califica el listado. Un accesorio de tornillo listado hermético al concreto es legal en concreto; uno de compresión sin listado para mojado no es legal en un lugar mojado. Ajuste el listado al lugar.",
+      "tables": [
+        {
+          "caption": "358.42: el accesorio según el lugar",
+          "headers": [
+            "Lugar",
+            "El accesorio debe ser"
+          ],
+          "rows": [
+            [
+              "Seco, sin enterrar",
+              "Bien apretado — cualquier estilo"
+            ],
+            [
+              "Enterrado en mampostería o concreto",
+              "Tipo hermético al concreto"
+            ],
+            [
+              "Lugar mojado",
+              "Listado para lugares mojados — 314.15"
+            ]
+          ]
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Los accesorios de EMT enterrados en concreto deben ser:",
+          "choices": [
+            "De compresión",
+            "De tornillo de fijación",
+            "Del tipo hermético al concreto",
+            "Solo listados para lugares mojados"
+          ],
+          "answer_index": 2,
+          "explain_plain": "358.42: donde se entierren en mampostería o concreto, los acoplamientos y conectores deben ser del tipo hermético al concreto.",
+          "nec_ref": "358.42"
+        },
+        {
+          "question": "Los accesorios de EMT en lugares mojados deben cumplir:",
+          "choices": [
+            "352.30",
+            "314.15",
+            "300.4(G)",
+            "358.30"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Los accesorios en lugares mojados deben cumplir 314.15: listados para lugares mojados e instalados de modo que la humedad no entre ni se acumule.",
+          "nec_ref": "358.42, 314.15"
+        },
+        {
+          "question": "¿Qué decide si un accesorio es legal en un lugar mojado?",
+          "choices": [
+            "Que sea de compresión",
+            "Que sea de tornillo",
+            "Su listado para el lugar",
+            "Que sea de acero"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La regla del Código es el listado para el lugar, no el estilo del accesorio.",
+          "nec_ref": "358.42"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023: No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "figures": [
+        {
+          "src": "fig/c3/C3-358.42-fittings.svg",
+          "alt": "Accesorios de EMT de tornillo y de compresión lado a lado, sobre tres paneles de lugar — seco, enterrado en concreto y mojado — cada uno con el listado de accesorio que requiere.",
+          "caption": "El listado decide — no el estilo del accesorio.",
+          "w": 900,
+          "h": 1350
+        }
+      ],
+      "code_refs": [
+        "358.42",
+        "314.15"
+      ],
+      "rich": 1
     },
     {
       "id": "C3-ART-360",
@@ -6727,8 +8475,8 @@
       "article": "399",
       "section": "399",
       "title": "Conductores aéreos exteriores de más de 1,000 volts",
-      "plain_explanation": "El último artículo del capítulo cubre conductores aéreos exteriores que operan a más de 1,000 volts en el cableado de una propiedad — la distribución de media tensión tipo campus o planta que posee un propietario, no la compañía que da el servicio. Es un artículo corto, de ingeniería, no una tabla de alturas libres: no fija alturas libres prescriptivas propias, 399.30 requiere que las estructuras de soporte sean diseñadas y documentadas por un ingeniero profesional con licencia, y las reglas detalladas de alturas libres y construcción viven en el National Electrical Safety Code. Las instalaciones de compañías eléctricas bajo el control exclusivo de una compañía quedan fuera del NEC por completo según 90.2(B)(5). (Nota el número: en el NEC 2020 este artículo es 399, no 395 — el cuerpo del borrador de investigación usó 395 antes de que su propio índice lo corrigiera).\n\nCAMBIO NEC 2023:\n• 395: El Artículo 399 fue renumerado como Artículo 395, Conductores Aéreos Exteriores de más de 1000 Volts.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "No es trabajo de campo de Sharma. Su página existe para que el libro termine donde termina el capítulo impreso, con el número correcto.",
+      "plain_explanation": "El Artículo 399 es el último artículo del Capítulo 3. Cubre los conductores aéreos exteriores que operan a más de 1,000 volts y pertenecen al propietario de la propiedad — la distribución de media tensión tipo campus o planta de un sitio grande — no las líneas de la compañía que da el servicio.\n• Qué es: un artículo corto, de ingeniería. No fija alturas libres prescriptivas propias.\n• Estructuras: 399.30 requiere que las estructuras de soporte sean diseñadas y documentadas por un ingeniero profesional con licencia.\n• Alturas libres: las reglas detalladas de alturas libres y construcción viven en el National Electrical Safety Code (NESC), no en el NEC.\n• Qué no es: las instalaciones de una compañía eléctrica bajo su control exclusivo quedan fuera del NEC por completo, según 90.2(B)(5).\n• El número: en el NEC 2020 este artículo es 399, no 395 — el cuerpo del borrador de investigación usó 395 antes de que su propio índice lo corrigiera.",
+      "on_the_job": "No es trabajo de campo de Sharma, y la habilidad en el campo es saber dónde termina nuestro trabajo. En un trabajo de parque industrial o campus en el centro de la Florida, si el propietario nos pide reinstalar o extender un tramo aéreo propio de más de 1,000 volts, la respuesta es que ese tramo pertenece al ingeniero del propietario según 399.30 y el NESC: lo documentamos, lo avisamos al propietario por escrito y mantenemos nuestro alcance en el cableado de la propiedad a 1,000 volts o menos.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -6745,7 +8493,95 @@
           "url": "https://dailyreporter.com/2023/01/13/changes-to-the-2023-national-electric-code-2/",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Un tramo que lleva miles de volts sobre un estacionamiento o una acera puede matar sin que nadie lo toque, y la falla suele ser estructural: un poste, un retenido o una cruceta que nunca fueron calculados. Por eso este artículo no le entrega al instalador una tabla de alturas libres: manda el diseño a un ingeniero con licencia y las alturas libres al NESC, el código escrito para la construcción de líneas aéreas.",
+      "inspection_fails": [
+        "Tramo aéreo propio de más de 1,000 volts sin diseño de ingeniería ni documentación para sus estructuras de soporte (399.30).",
+        "Tramo de la propiedad de más de 1,000 volts trazado con las tablas de alturas libres de 225.18 / 230 en vez del NESC.",
+        "Personal trabajando en el lado de control exclusivo de la compañía, más allá del punto de acometida, como si fuera cableado de la propiedad (90.2(B)(5))."
+      ],
+      "exam_trap": "La trampa es responder desde las tablas conocidas: 399 no tiene una tabla de alturas libres como 225.18, y su número en 2020 es 399 — escoger «395» importa la renumeración de 2023 a un permiso de 2020. La otra respuesta incorrecta es tratar el tramo del propietario como una acometida de la compañía; el trabajo de la compañía bajo control exclusivo queda fuera del NEC, pero un tramo propio del propietario es cableado de la propiedad con un artículo de ingeniería.",
+      "tables": [
+        {
+          "caption": "El propietario del tramo decide las reglas",
+          "headers": [
+            "Situación",
+            "Reglas que aplican"
+          ],
+          "rows": [
+            [
+              "Línea de la compañía, control exclusivo",
+              "Fuera del NEC — 90.2(B)(5)"
+            ],
+            [
+              "Tramo propio de más de 1,000 V",
+              "Artículo 399"
+            ],
+            [
+              "Estructuras de soporte",
+              "Diseño y documentación de un PE — 399.30"
+            ],
+            [
+              "Detalle de alturas y construcción",
+              "NESC"
+            ]
+          ]
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Quién diseña y documenta las estructuras de soporte de los conductores aéreos propios de más de 1,000 volts?",
+          "choices": [
+            "El maestro electricista del permiso",
+            "Un ingeniero profesional con licencia",
+            "La compañía que da el servicio",
+            "El oficial de construcción"
+          ],
+          "answer_index": 1,
+          "explain_plain": "399.30 pone las estructuras en manos de un ingeniero profesional con licencia: este artículo es de ingeniería, no prescriptivo.",
+          "nec_ref": "399.30"
+        },
+        {
+          "question": "¿Dónde viven las reglas detalladas de alturas libres para un tramo aéreo de la propiedad de más de 1,000 volts?",
+          "choices": [
+            "Tabla 225.18",
+            "Artículo 230",
+            "El National Electrical Safety Code",
+            "Capítulo 9, Tabla 2"
+          ],
+          "answer_index": 2,
+          "explain_plain": "El Artículo 399 no trae su propia tabla de alturas libres; el detalle vive en el NESC.",
+          "nec_ref": "Artículo 399"
+        },
+        {
+          "question": "Una línea aérea de la compañía eléctrica bajo su control exclusivo está:",
+          "choices": [
+            "Cubierta por el Artículo 399",
+            "Cubierta por el Artículo 225",
+            "Fuera del NEC",
+            "Cubierta por el Artículo 230"
+          ],
+          "answer_index": 2,
+          "explain_plain": "90.2(B)(5) saca del NEC las instalaciones bajo el control exclusivo de la compañía.",
+          "nec_ref": "90.2(B)(5)"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 395: El Artículo 399 fue renumerado como Artículo 395, Conductores Aéreos Exteriores de más de 1000 Volts.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "figures": [
+        {
+          "src": "fig/c3/C3-ART-399-scope.svg",
+          "alt": "Dos tramos aéreos lado a lado: una línea de la compañía bajo control exclusivo, fuera del NEC, y un tramo propio de la propiedad de más de 1,000 volts bajo el Artículo 399 con estructuras diseñadas por un ingeniero.",
+          "caption": "El propietario decide las reglas: lado de la compañía contra lado del propietario.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "code_refs": [
+        "Article 399",
+        "399.30",
+        "90.2(B)(5)"
+      ],
+      "rich": 1
     }
   ],
   "toc": [
