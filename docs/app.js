@@ -221,19 +221,53 @@ function paras(text, lead) {
     return out;
   }).join("");
 }
+/* ---------------- Rich Field Book pages (Mike 2026-11-26: "Graphics are everything") ----------------
+   Optional page fields, all rendered as escaped text or sandboxed <img>:
+   figures[{src,alt,caption,w,h}] (src must be fig/cN/<name>.svg under data/nec/), tables[{caption,headers,rows,note}],
+   why_it_exists, inspection_fails[], exam_trap, page_quiz[{question,choices,answer_index,explain_plain,nec_ref}],
+   edition_note, code_refs[], uncertain[]. Pages without them render exactly as before. */
+const FIG_OK = /^fig\/c[1-9]\/[A-Za-z0-9._()\-]+\.svg$/;
+function figHtml(f) {
+  if (!f || !FIG_OK.test(String(f.src || ""))) return "";
+  const u = NEC_BASE + f.src + "?v=1";
+  const wh = (+f.w > 0 && +f.h > 0) ? ` width="${+f.w}" height="${+f.h}"` : "";
+  return `<figure class="tr-fig"><a href="${$esc(u)}" target="_blank" rel="noopener"><img src="${$esc(u)}" alt="${$esc(f.alt || "")}"${wh} loading="lazy" decoding="async"></a>${f.caption ? `<figcaption>${$esc(f.caption)}<span class="tr-fig__zoom">${t("Tap to enlarge")}</span></figcaption>` : ""}</figure>`;
+}
+function richTableHtml(tb) {
+  if (!tb || !Array.isArray(tb.headers) || !Array.isArray(tb.rows)) return "";
+  return sectionHtml({ type: "table", caption: tb.caption, headers: tb.headers, rows: tb.rows }) + (tb.note ? `<p class="tr-note">${$esc(tb.note)}</p>` : "");
+}
+function pageQuizHtml(qs) {
+  return qs.map(q => {
+    const ai = q.answer_index | 0, L = i => String.fromCharCode(65 + i);
+    return `<div class="tr-pq"><p class="tr-pq__q">${$esc(q.question || "")}</p><ol class="tr-pq__c">${(q.choices || []).map((c, ci) => `<li><b>${L(ci)}</b> ${$esc(c)}</li>`).join("")}</ol><details><summary>${t("Show answer")}</summary><p><b>${L(ai)}. ${$esc((q.choices || [])[ai] || "")}</b> ${$esc(q.explain_plain || "")}${q.nec_ref ? ` <span class="tr-cite">NEC ${$esc(q.nec_ref)}</span>` : ""}</p></details></div>`;
+  }).join("");
+}
+const listBox = (cls, title, items) => (Array.isArray(items) && items.length) ? `<div class="${cls}"><b>${title}</b><ul>${items.map(i => `<li>${$esc(i)}</li>`).join("")}</ul></div>` : "";
 async function bookPageFill(page, id) {
   await ensureIndex();
   const hit = await bookSectionFull(id);
   if (!hit) { page.html(`<div class="tr-wrap"><h1 class="tr-h1">${t("Page not found")}</h1><p class="tr-note">${t("That Field Book page is not loaded.")}</p></div>`); return; }
   const s = hit.s;
+  const figs = Array.isArray(s.figures) ? s.figures : [];
   const rel = (s.related_ids || []).map(r => bookSectionLight(r)).filter(Boolean).map(r => `<a class="tr-card" href="#/code/page/${r.s.id}"><span class="tr-card__t">${$esc(r.s.title)}</span><span class="tr-card__s">NEC ${$esc(r.s.section || "")}</span></a>`).join("");
   page.html(`<div class="tr-wrap">
   <div class="tr-kicker">${tf("Chapter {n} · NEC {s}", { n: hit.ch, s: $esc(s.section || "") })}</div>
   <h1 class="tr-h1">${$esc(s.title)}${s.verified === false ? `<span class="tr-pill tr-pill--warn">${t("Not yet verified")}</span>` : `<span class="tr-pill tr-pill--ok">${t("Verified")}</span>`}</h1>
+  ${figs.length ? figHtml(figs[0]) : ""}
   <div class="tr-body">${paras(s.plain_explanation, true)}
+  ${s.why_it_exists ? `<div class="tr-why"><b>${t("Why it exists")}</b>${paras(s.why_it_exists)}</div>` : ""}
+  ${(Array.isArray(s.tables) ? s.tables : []).map(richTableHtml).join("")}
+  ${figs.slice(1).map(figHtml).join("")}
   ${s.on_the_job ? `<div class="tr-job"><b>${t("On the job")}</b>${paras(s.on_the_job)}</div>` : ""}
+  ${listBox("tr-never", t("Inspection fails"), s.inspection_fails)}
+  ${s.exam_trap ? `<div class="tr-trap"><b>${t("Exam trap")}</b>${paras(s.exam_trap)}</div>` : ""}
+  ${Array.isArray(s.page_quiz) && s.page_quiz.length ? `<div class="tr-sec">${t("Quick quiz")}</div>${pageQuizHtml(s.page_quiz)}` : ""}
+  ${s.edition_note ? `<div class="tr-ed"><b>${t("2020 vs 2023")}</b>${paras(s.edition_note)}</div>` : ""}
   ${s.sharma_note ? `<div class="tr-notebox"><b>${t("Sharma note")}</b>${paras(s.sharma_note)}</div>` : ""}
   ${s.florida_note ? `<div class="tr-fla"><b>${t("Florida")}</b>${paras(s.florida_note)}</div>` : ""}
+  ${Array.isArray(s.code_refs) && s.code_refs.length ? `<p class="tr-cite tr-refs">${t("Code references")}: NEC ${s.code_refs.map($esc).join(" · ")}</p>` : ""}
+  ${listBox("tr-notebox tr-check", t("Check in print"), s.uncertain)}
   </div>
   <div class="tr-rowbtns">
     <button class="tr-markbtn ${learned.has(s.id) ? "on" : ""}" data-learned="${s.id}">${learned.has(s.id) ? t("Learned") : t("Mark as learned")}</button>

@@ -524,8 +524,8 @@
       "article": "310",
       "section": "310.16",
       "title": "Tabla 310.16 — cómo leer la tabla de ampacidad",
-      "plain_explanation": "La Tabla 310.16 da la ampacidad permitida de un conductor aislado por tamaño, material y columna de temperatura: 60°C, 75°C y 90°C, para cobre a la izquierda y para aluminio y aluminio revestido de cobre juntos a la derecha. Léela en cuatro pasos. Uno, encuentra el tamaño. Dos, elige la columna del material — CCA se lee en las columnas de aluminio, nunca en las de cobre. Tres, elige la columna de temperatura que permitan tus terminaciones según 110.14(C); la mayoría del equipo de casa es de 75°C, y la columna de 90°C es principalmente un punto de partida para corrección y ajuste. Cuatro, aplica 310.15 y después revisa los topes para conductores pequeños en 240.4(D): el cobre 14/12/10 AWG tiene tope de 15/20/30A, y el aluminio/CCA 12/10 AWG tiene tope de 15/25A, sin importar lo que diga la fila de la tabla.\n\nLas filas que Sharma lee a diario, expresadas como 60°C / 75°C / 90°C. Cobre:\n• 14 AWG — 15 / 20 / 25 A\n• 12 AWG — 20 / 25 / 30 A\n• 10 AWG — 30 / 35 / 40 A\n• 8 AWG — 40 / 50 / 55 A\n• 6 AWG — 55 / 65 / 75 A\n• 4 AWG — 70 / 85 / 95 A\n• 3 AWG — 85 / 100 / 115 A\n• 2 AWG — 95 / 115 / 130 A\n• 1/0 AWG — 125 / 150 / 170 A\n• 2/0 AWG — 145 / 175 / 195 A\n• 3/0 AWG — 165 / 200 / 225 A\n• 4/0 AWG — 195 / 230 / 260 A\n• 250 kcmil — 215 / 255 / 290 A\nAluminio y aluminio revestido de cobre, mismo formato:\n• 12 AWG — 15 / 20 / 25 A\n• 10 AWG — 25 / 30 / 35 A\n• 8 AWG — 35 / 40 / 45 A\n• 6 AWG — 40 / 50 / 55 A\n• 4 AWG — 55 / 65 / 75 A\n• 2 AWG — 75 / 90 / 100 A\n• 1/0 AWG — 100 / 120 / 135 A\n• 2/0 AWG — 115 / 135 / 150 A\n• 3/0 AWG — 130 / 155 / 175 A\n• 4/0 AWG — 150 / 180 / 205 A\n• 250 kcmil — 170 / 205 / 230 A\nEstos son valores de tabla antes de la corrección y el ajuste de 310.15, y antes de los topes para conductores pequeños de 240.4(D) — los topes, no la columna de 90°C, fijan el breaker en los conductores pequeños.",
-      "on_the_job": "Lecturas trabajadas de la tabla v1: el cobre 12 AWG es 20/25/30A a 60/75/90°C. El CCA 12 AWG es 15/20/25A en las columnas de aluminio — y 240.4(D) le pone tope de un breaker de 15A. El CCA 10 AWG es 25/30/35A, con tope de 25A. Ese cambio de una columna es exactamente por lo que un circuito de CCA sube un tamaño desde el cobre para el mismo breaker.",
+      "plain_explanation": "La Tabla 310.16 da la ampacidad permitida de conductores aislados clasificados hasta 2000 V, con no más de tres conductores portadores de corriente en una canalización, cable o tierra, a una temperatura ambiente de 30 °C (86 °F). Léala en cuatro pasos:\n• Tamaño y metal. El cobre está a la izquierda. El aluminio y el aluminio revestido de cobre comparten las columnas de la derecha.\n• Columna de temperatura: 60, 75 o 90 °C. El aislamiento define la columna más alta desde la que puede empezar. Las terminaciones definen la columna en la que termina (110.14(C)): circuitos de 100 A o menos, o de 14 a 1 AWG, usan 60 °C a menos que el equipo esté listado y marcado para 75 °C; más de 100 A o mayor de 1 AWG, 75 °C.\n• Corrija y ajuste. ¿Más de 30 °C, o más de tres conductores portadores de corriente? Aplique 310.15(B) y 310.15(C)(1), normalmente empezando desde el valor de 90 °C.\n• Verifique el tope del breaker. 240.4(D) limita los conductores pequeños diga lo que diga la tabla: cobre 14, 12 y 10 AWG a 15, 20 y 30 A; aluminio o CCA 12 y 10 AWG a 15 y 25 A.",
+      "on_the_job": "Una tirada de Sharma: dos circuitos de 20 A de cobre THHN de 12 AWG en un EMT por un espacio mecánico a 104 °F, o sea cuatro conductores portadores de corriente. 30 A (90 °C) × 0.91 × 0.80 = 21.8 A. Eso está por encima del breaker de 20 A y por debajo del valor de 25 A a 75 °C, así que el breaker de 20 A se mantiene. El mismo circuito en cable NM queda limitado al resultado de 60 °C (20 A) por 334.80. En un trabajo comercial de inquilino, un alimentador de 100 A con cobre THHN de 3 AWG funciona con terminales de 75 °C (100 A) pero no a 60 °C (85 A), así que lea el marcado de la terminal antes de tender el cable.",
       "sharma_note": "S-10: los circuitos ramales son de cobre por defecto — 14 AWG en 15A, 12 AWG en 20A. Cuando se usa CCA, sube un AWG (12 en 15A, 10 en 20A) porque la Tabla 310.16 clasifica CCA en la columna de aluminio. Las terminaciones deben estar marcadas para el conductor (110.14); los conectores de cable y las terminales necesitan marcado AL-CU / CU-AL, los conectores solo CU no están clasificados para CCA, y los terminales de presión son solo para cobre sólido 14 AWG. Nunca uses conexión por presión trasera (backstab). El cable del circuito del microondas está PENDING según S-06 (12 AWG de cobre contra 10 AWG de CCA).",
       "figure_idea": "Un extracto impreso de la Tabla 310.16 con las filas de 12 AWG y 10 AWG resaltadas, una flecha desde 'CCA' hacia las columnas de aluminio, y los topes de 240.4(D) escritos debajo de las filas.",
       "related_ids": [
@@ -546,7 +546,301 @@
       ],
       "prev_id": "C3-310.15",
       "next_id": "C3-310.16-CCA",
-      "chapter": 3
+      "chapter": 3,
+      "why_it_exists": "Todo conductor se calienta al fluir la corriente, y un aislamiento que corre demasiado caliente por años se agrieta y falla. La tabla mantiene la corriente dentro de lo que el aislamiento soporta. La regla de terminaciones existe porque las terminales de breakers y dispositivos a menudo solo se prueban a 60 o 75 °C. Los topes de 240.4(D) agregan margen al cable pequeño que corre agrupado y aislado por cada pared.",
+      "inspection_fails": [
+        "12 AWG en un breaker de 25 A o 30 A porque «el THHN aguanta 30 A» (240.4(D)).",
+        "Cable NM dimensionado desde la columna de 90 °C. 334.80 limita el resultado al valor de 60 °C.",
+        "Más de dos cables NM agrupados a través de un hueco sellado contra fuego o espumado sin reducción (334.80).",
+        "CCA dimensionado como cobre. El CCA lee las columnas de aluminio.",
+        "Aluminio o CCA conectados en terminales marcadas solo CU (110.14)."
+      ],
+      "exam_trap": "El THHN es de 90 °C, ¿así que el 12 AWG THHN lleva 30 A? En el examen, la ampacidad utilizable es el valor de 75 °C o 60 °C que las terminaciones permiten, y el breaker sigue limitado a 20 A por 240.4(D). La columna de 90 °C es solo el punto de partida para la reducción. Y el aluminio de 12 AWG es 15 A a 60 °C, no 20 A.",
+      "tables": [
+        {
+          "caption": "Extracto de la Tabla 310.16: cobre (60 / 75 / 90 °C)",
+          "headers": [
+            "Tamaño",
+            "60 °C",
+            "75 °C",
+            "90 °C"
+          ],
+          "rows": [
+            [
+              "14 AWG",
+              "15",
+              "20",
+              "25"
+            ],
+            [
+              "12 AWG",
+              "20",
+              "25",
+              "30"
+            ],
+            [
+              "10 AWG",
+              "30",
+              "35",
+              "40"
+            ],
+            [
+              "8 AWG",
+              "40",
+              "50",
+              "55"
+            ],
+            [
+              "6 AWG",
+              "55",
+              "65",
+              "75"
+            ],
+            [
+              "4 AWG",
+              "70",
+              "85",
+              "95"
+            ],
+            [
+              "3 AWG",
+              "85",
+              "100",
+              "115"
+            ],
+            [
+              "2 AWG",
+              "95",
+              "115",
+              "130"
+            ],
+            [
+              "1/0",
+              "125",
+              "150",
+              "170"
+            ],
+            [
+              "2/0",
+              "145",
+              "175",
+              "195"
+            ],
+            [
+              "3/0",
+              "165",
+              "200",
+              "225"
+            ],
+            [
+              "4/0",
+              "195",
+              "230",
+              "260"
+            ],
+            [
+              "250 kcmil",
+              "215",
+              "255",
+              "290"
+            ]
+          ]
+        },
+        {
+          "caption": "Extracto de la Tabla 310.16: aluminio y aluminio revestido de cobre (60 / 75 / 90 °C)",
+          "headers": [
+            "Tamaño",
+            "60 °C",
+            "75 °C",
+            "90 °C"
+          ],
+          "rows": [
+            [
+              "12 AWG",
+              "15",
+              "20",
+              "25"
+            ],
+            [
+              "10 AWG",
+              "25",
+              "30",
+              "35"
+            ],
+            [
+              "8 AWG",
+              "35",
+              "40",
+              "45"
+            ],
+            [
+              "6 AWG",
+              "40",
+              "50",
+              "55"
+            ],
+            [
+              "4 AWG",
+              "55",
+              "65",
+              "75"
+            ],
+            [
+              "2 AWG",
+              "75",
+              "90",
+              "100"
+            ],
+            [
+              "1/0",
+              "100",
+              "120",
+              "135"
+            ],
+            [
+              "2/0",
+              "115",
+              "135",
+              "150"
+            ],
+            [
+              "3/0",
+              "130",
+              "155",
+              "175"
+            ],
+            [
+              "4/0",
+              "150",
+              "180",
+              "205"
+            ],
+            [
+              "250 kcmil",
+              "170",
+              "205",
+              "230"
+            ]
+          ]
+        },
+        {
+          "caption": "Topes de breaker para conductores pequeños de 240.4(D)",
+          "headers": [
+            "Conductor",
+            "NEC 2020",
+            "NEC 2023"
+          ],
+          "rows": [
+            [
+              "14 AWG CCA",
+              "No listado",
+              "10 A, carga continua 8 A máx., OCPD listado y marcado para 14 CCA"
+            ],
+            [
+              "14 AWG Cu",
+              "15 A",
+              "15 A"
+            ],
+            [
+              "12 AWG Al/CCA",
+              "15 A",
+              "15 A"
+            ],
+            [
+              "12 AWG Cu",
+              "20 A",
+              "20 A"
+            ],
+            [
+              "10 AWG Al/CCA",
+              "25 A",
+              "25 A"
+            ],
+            [
+              "10 AWG Cu",
+              "30 A",
+              "30 A"
+            ]
+          ],
+          "note": "El cobre de 18 y 16 AWG tiene sus propias condiciones limitadas en 240.4(D)(1) y (2)."
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Cobre THHN de 12 AWG en un breaker con terminales de 75 °C, sin necesidad de reducción. ¿Dispositivo de sobrecorriente máximo?",
+          "choices": [
+            "15 A",
+            "20 A",
+            "25 A",
+            "30 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La ampacidad a 75 °C es 25 A, pero 240.4(D) limita el cobre de 12 AWG a 20 A.",
+          "nec_ref": "240.4(D)"
+        },
+        {
+          "question": "Cuatro conductores portadores de corriente de cobre THHN de 10 AWG comparten una canalización a 30 °C. ¿Ampacidad ajustada desde la columna de 90 °C?",
+          "choices": [
+            "28 A",
+            "32 A",
+            "35 A",
+            "40 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "40 A × 0.80 para 4–6 conductores = 32 A. Luego verifique la columna de terminaciones y el tope de breaker de 30 A.",
+          "nec_ref": "310.15(C)(1), Table 310.16"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 240.4(D)(3) / Tabla 240.6(A): El aluminio revestido de cobre de 14 AWG se protege a no más de 10 A, con carga continua no mayor de 8 A, mediante un breaker o fusible listado y marcado para CCA de 14 AWG. 10 A es ahora una capacidad estándar en la Tabla 240.6(A). Los puntos de 240.4(D) se renumeran como (D)(1)–(D)(8).\n• Tabla 310.16: las fuentes públicas de cambios 2023 revisadas no muestran cambio en los valores de las tablas de esta página. Confírmelo en un libro impreso de 2023.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "figures": [
+        {
+          "src": "fig/c3/C3-310.16-columns.svg",
+          "alt": "La fila de cobre de 12 AWG de la Tabla 310.16, 20, 25 y 30 amperios, y cuatro filtros: aislamiento, terminales, método de cableado, y el tope de breaker de 240.4(D).",
+          "caption": "Qué columna puede usar: los cuatro filtros.",
+          "w": 900,
+          "h": 1700
+        },
+        {
+          "src": "fig/c3/C3-310.16-derate-example.svg",
+          "alt": "Gráfico de barras que muestra 30 A reducidos por 0.91 y 0.80 hasta 21.8 A, verificados contra el valor de 25 A a 75 grados, y luego limitados a 20 A.",
+          "caption": "Ejemplo resuelto: reduzca, verifique la columna de terminales y luego aplique el tope del breaker.",
+          "w": 900,
+          "h": 1290
+        }
+      ],
+      "code_refs": [
+        "Table 310.16",
+        "310.15(B)(1)",
+        "310.15(C)(1)",
+        "110.14(C)(1)",
+        "334.80",
+        "240.4(D)"
+      ],
+      "uncertain": [
+        "Ninguna fuente pública de 2023 revisada lista un cambio en los valores de la Tabla 310.16; «sin cambio» se expresa como no encontrado, no como confirmado."
+      ],
+      "rich_sources": [
+        {
+          "claim": "2023 240.4(D)(3) 14 AWG CCA: 10 A, 8 A continuous, OCPD listed and marked",
+          "source": "ExpertCE, Electrician's Guide for NEC 2023: 14 AWG CCA in LED lighting circuits (quotes 2023 text)",
+          "url": "https://expertce.com/courses/electricians-guide-for-nec-2023/lessons/can-i-use-14-awg-copper-clad-aluminum-conductors-in-my-led-lighting-circuits/"
+        },
+        {
+          "claim": "Same, independent",
+          "source": "EC&M Code Quiz: Copper-Clad Aluminum Wire Requirements (Aug 3, 2023)",
+          "url": "https://www.ecmweb.com/national-electrical-code/quizzes/article/21270791/code-quiz"
+        }
+      ],
+      "nec2023_change": [
+        {
+          "section": "240.4(D)(3) / Table 240.6(A)",
+          "change": "CCA de 14 AWG: OCPD de 10 A máx., carga continua de 8 A máx., OCPD listado y marcado para CCA de 14 AWG; 10 A agregado a las capacidades estándar.",
+          "source": "ExpertCE Electrician's Guide for NEC 2023; EC&M Code Quiz Aug 3 2023",
+          "url": "https://expertce.com/courses/electricians-guide-for-nec-2023/lessons/can-i-use-14-awg-copper-clad-aluminum-conductors-in-my-led-lighting-circuits/",
+          "confirmed": true
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C3-310.16-CCA",

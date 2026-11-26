@@ -524,8 +524,8 @@
       "article": "310",
       "section": "310.16",
       "title": "Table 310.16 — how to read the ampacity table",
-      "plain_explanation": "Table 310.16 gives the allowable ampacity of an insulated conductor by size, material and temperature column: 60°C, 75°C and 90°C, for copper on the left and for aluminum and copper-clad aluminum together on the right. Read it in four steps. One, find the size. Two, pick the material column — CCA is read in the aluminum columns, never the copper columns. Three, pick the temperature column your terminations allow under 110.14(C); most house equipment is 75°C, and the 90°C column is mainly a starting point for correction and adjustment. Four, apply 310.15, then check the small-conductor caps in 240.4(D): copper 14/12/10 AWG is capped at 15/20/30A, and aluminum/CCA 12/10 AWG is capped at 15/25A, no matter what the table row says.\n\nThe rows Sharma reads daily, stated as 60°C / 75°C / 90°C. Copper:\n• 14 AWG — 15 / 20 / 25 A\n• 12 AWG — 20 / 25 / 30 A\n• 10 AWG — 30 / 35 / 40 A\n• 8 AWG — 40 / 50 / 55 A\n• 6 AWG — 55 / 65 / 75 A\n• 4 AWG — 70 / 85 / 95 A\n• 3 AWG — 85 / 100 / 115 A\n• 2 AWG — 95 / 115 / 130 A\n• 1/0 AWG — 125 / 150 / 170 A\n• 2/0 AWG — 145 / 175 / 195 A\n• 3/0 AWG — 165 / 200 / 225 A\n• 4/0 AWG — 195 / 230 / 260 A\n• 250 kcmil — 215 / 255 / 290 A\nAluminum and copper-clad aluminum, same format:\n• 12 AWG — 15 / 20 / 25 A\n• 10 AWG — 25 / 30 / 35 A\n• 8 AWG — 35 / 40 / 45 A\n• 6 AWG — 40 / 50 / 55 A\n• 4 AWG — 55 / 65 / 75 A\n• 2 AWG — 75 / 90 / 100 A\n• 1/0 AWG — 100 / 120 / 135 A\n• 2/0 AWG — 115 / 135 / 150 A\n• 3/0 AWG — 130 / 155 / 175 A\n• 4/0 AWG — 150 / 180 / 205 A\n• 250 kcmil — 170 / 205 / 230 A\nThese are table values before 310.15 correction and adjustment, and before the 240.4(D) small-conductor caps — the caps, not the 90°C column, set the breaker on small conductors.",
-      "on_the_job": "Worked reads from the v1 table: 12 AWG copper is 20/25/30A at 60/75/90°C. 12 AWG CCA is 15/20/25A in the aluminum columns — and 240.4(D) caps it at a 15A breaker. 10 AWG CCA is 25/30/35A, capped at 25A. That one-column shift is exactly why a CCA circuit goes one size up from copper for the same breaker.",
+      "plain_explanation": "Table 310.16 gives the allowable ampacity of insulated conductors rated up to 2000 V, with not more than three current-carrying conductors in a raceway, cable or earth, at an ambient of 30 °C (86 °F). Read it in four steps:\n• Size and metal. Copper is on the left. Aluminum and copper-clad aluminum share the right-hand columns.\n• Temperature column: 60, 75 or 90 °C. The insulation sets the highest column you may start from. The terminations set the column you finish in (110.14(C)): circuits of 100 A or less, or 14 through 1 AWG, use 60 °C unless the equipment is listed and marked for 75 °C; over 100 A or larger than 1 AWG, 75 °C.\n• Correct and adjust. Hotter than 30 °C, or more than three current-carrying conductors? Apply 310.15(B) and 310.15(C)(1), normally starting from the 90 °C value.\n• Check the breaker cap. 240.4(D) limits small conductors whatever the table says: copper 14, 12 and 10 AWG at 15, 20 and 30 A; aluminum or CCA 12 and 10 AWG at 15 and 25 A.",
+      "on_the_job": "A Sharma home run: two 20 A circuits of 12 AWG THHN copper in one EMT through a 104 °F mechanical space, so four current-carrying conductors. 30 A (90 °C) × 0.91 × 0.80 = 21.8 A. That is above the 20 A breaker and below the 25 A 75 °C value, so the 20 A breaker stands. The same circuit in NM cable is held to the 60 °C result (20 A) by 334.80. On a commercial tenant job, a 100 A feeder on 3 AWG copper THHN works with 75 °C lugs (100 A) but not at 60 °C (85 A), so read the lug marking before you pull wire.",
       "sharma_note": "S-10: branch circuits are copper by default — 14 AWG on 15A, 12 AWG on 20A. When CCA is used, go one AWG larger (12 on 15A, 10 on 20A) because Table 310.16 rates CCA in the aluminum column. Terminations must be marked for the conductor (110.14); wire connectors and lugs need AL-CU / CU-AL marking, CU-only connectors are not rated for CCA, and push-in terminals are 14 AWG solid copper only. Never backstab. The microwave circuit wire is PENDING under S-06 (12 AWG copper versus 10 AWG CCA).",
       "figure_idea": "A printed Table 310.16 excerpt with the 12 AWG and 10 AWG rows highlighted, an arrow from 'CCA' into the aluminum columns, and the 240.4(D) caps written under the rows.",
       "related_ids": [
@@ -546,7 +546,301 @@
       ],
       "prev_id": "C3-310.15",
       "next_id": "C3-310.16-CCA",
-      "chapter": 3
+      "chapter": 3,
+      "edition_note": "NEC 2023 CHANGE:\n• 240.4(D)(3) / Table 240.6(A): 14 AWG copper-clad aluminum is protected at not more than 10 A, with continuous load not over 8 A, by a breaker or fuse listed and marked for 14 AWG CCA. 10 A is now a standard rating in Table 240.6(A). The 240.4(D) items renumber as (D)(1)–(D)(8).\n• Table 310.16: the 2023 change sources reviewed show no change to the values in this page's tables. Confirm in a printed 2023 book.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Every conductor heats as current flows, and insulation that runs too hot for years cracks and fails. The table keeps current within what the insulation can take. The termination rule exists because breaker and device lugs are often tested only at 60 or 75 °C. The 240.4(D) caps build margin into the small wire that runs bundled and insulated through every wall.",
+      "inspection_fails": [
+        "12 AWG on a 25 A or 30 A breaker because 'THHN is good for 30 A' (240.4(D)).",
+        "NM cable sized from the 90 °C column. 334.80 holds the result to the 60 °C value.",
+        "More than two NM cables bundled through a fire-caulked or foamed hole without derating (334.80).",
+        "CCA sized like copper. CCA reads the aluminum columns.",
+        "Aluminum or CCA landed on lugs marked CU only (110.14)."
+      ],
+      "exam_trap": "THHN is 90 °C, so 12 AWG THHN carries 30 A? On the exam, the usable ampacity is the 75 °C or 60 °C value the terminations allow, and the breaker is still capped at 20 A by 240.4(D). The 90 °C column is only the starting point for derating. And 12 AWG aluminum is 15 A at 60 °C, not 20 A.",
+      "tables": [
+        {
+          "caption": "Table 310.16 excerpt: copper (60 / 75 / 90 °C)",
+          "headers": [
+            "Size",
+            "60 °C",
+            "75 °C",
+            "90 °C"
+          ],
+          "rows": [
+            [
+              "14 AWG",
+              "15",
+              "20",
+              "25"
+            ],
+            [
+              "12 AWG",
+              "20",
+              "25",
+              "30"
+            ],
+            [
+              "10 AWG",
+              "30",
+              "35",
+              "40"
+            ],
+            [
+              "8 AWG",
+              "40",
+              "50",
+              "55"
+            ],
+            [
+              "6 AWG",
+              "55",
+              "65",
+              "75"
+            ],
+            [
+              "4 AWG",
+              "70",
+              "85",
+              "95"
+            ],
+            [
+              "3 AWG",
+              "85",
+              "100",
+              "115"
+            ],
+            [
+              "2 AWG",
+              "95",
+              "115",
+              "130"
+            ],
+            [
+              "1/0",
+              "125",
+              "150",
+              "170"
+            ],
+            [
+              "2/0",
+              "145",
+              "175",
+              "195"
+            ],
+            [
+              "3/0",
+              "165",
+              "200",
+              "225"
+            ],
+            [
+              "4/0",
+              "195",
+              "230",
+              "260"
+            ],
+            [
+              "250 kcmil",
+              "215",
+              "255",
+              "290"
+            ]
+          ]
+        },
+        {
+          "caption": "Table 310.16 excerpt: aluminum and copper-clad aluminum (60 / 75 / 90 °C)",
+          "headers": [
+            "Size",
+            "60 °C",
+            "75 °C",
+            "90 °C"
+          ],
+          "rows": [
+            [
+              "12 AWG",
+              "15",
+              "20",
+              "25"
+            ],
+            [
+              "10 AWG",
+              "25",
+              "30",
+              "35"
+            ],
+            [
+              "8 AWG",
+              "35",
+              "40",
+              "45"
+            ],
+            [
+              "6 AWG",
+              "40",
+              "50",
+              "55"
+            ],
+            [
+              "4 AWG",
+              "55",
+              "65",
+              "75"
+            ],
+            [
+              "2 AWG",
+              "75",
+              "90",
+              "100"
+            ],
+            [
+              "1/0",
+              "100",
+              "120",
+              "135"
+            ],
+            [
+              "2/0",
+              "115",
+              "135",
+              "150"
+            ],
+            [
+              "3/0",
+              "130",
+              "155",
+              "175"
+            ],
+            [
+              "4/0",
+              "150",
+              "180",
+              "205"
+            ],
+            [
+              "250 kcmil",
+              "170",
+              "205",
+              "230"
+            ]
+          ]
+        },
+        {
+          "caption": "240.4(D) small-conductor breaker caps",
+          "headers": [
+            "Conductor",
+            "NEC 2020",
+            "NEC 2023"
+          ],
+          "rows": [
+            [
+              "14 AWG CCA",
+              "Not listed",
+              "10 A, continuous load 8 A max, OCPD listed and marked for 14 CCA"
+            ],
+            [
+              "14 AWG Cu",
+              "15 A",
+              "15 A"
+            ],
+            [
+              "12 AWG Al/CCA",
+              "15 A",
+              "15 A"
+            ],
+            [
+              "12 AWG Cu",
+              "20 A",
+              "20 A"
+            ],
+            [
+              "10 AWG Al/CCA",
+              "25 A",
+              "25 A"
+            ],
+            [
+              "10 AWG Cu",
+              "30 A",
+              "30 A"
+            ]
+          ],
+          "note": "18 and 16 AWG copper have their own limited conditions in 240.4(D)(1) and (2)."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c3/C3-310.16-columns.svg",
+          "alt": "The 12 AWG copper row of Table 310.16, 20, 25 and 30 amps, and four gates: insulation, terminals, wiring method, and the 240.4(D) breaker cap.",
+          "caption": "Which column you may use: the four gates.",
+          "w": 900,
+          "h": 1700
+        },
+        {
+          "src": "fig/c3/C3-310.16-derate-example.svg",
+          "alt": "Bar chart showing 30 A reduced by 0.91 and 0.80 to 21.8 A, checked against the 25 A 75 degree value, then capped at 20 A.",
+          "caption": "Worked example: derate, check the terminal column, then apply the breaker cap.",
+          "w": 900,
+          "h": 1290
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "12 AWG THHN copper on a breaker with 75 °C terminals, no derating needed. Maximum overcurrent device?",
+          "choices": [
+            "15 A",
+            "20 A",
+            "25 A",
+            "30 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The 75 °C ampacity is 25 A, but 240.4(D) caps 12 AWG copper at 20 A.",
+          "nec_ref": "240.4(D)"
+        },
+        {
+          "question": "Four current-carrying 10 AWG THHN copper conductors share one raceway at 30 °C. Adjusted ampacity from the 90 °C column?",
+          "choices": [
+            "28 A",
+            "32 A",
+            "35 A",
+            "40 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "40 A × 0.80 for 4–6 conductors = 32 A. Then check the termination column and the 30 A breaker cap.",
+          "nec_ref": "310.15(C)(1), Table 310.16"
+        }
+      ],
+      "code_refs": [
+        "Table 310.16",
+        "310.15(B)(1)",
+        "310.15(C)(1)",
+        "110.14(C)(1)",
+        "334.80",
+        "240.4(D)"
+      ],
+      "uncertain": [
+        "No public 2023 source reviewed lists a change to Table 310.16 values; 'no change' is stated as not found, not as confirmed."
+      ],
+      "rich_sources": [
+        {
+          "claim": "2023 240.4(D)(3) 14 AWG CCA: 10 A, 8 A continuous, OCPD listed and marked",
+          "source": "ExpertCE, Electrician's Guide for NEC 2023: 14 AWG CCA in LED lighting circuits (quotes 2023 text)",
+          "url": "https://expertce.com/courses/electricians-guide-for-nec-2023/lessons/can-i-use-14-awg-copper-clad-aluminum-conductors-in-my-led-lighting-circuits/"
+        },
+        {
+          "claim": "Same, independent",
+          "source": "EC&M Code Quiz: Copper-Clad Aluminum Wire Requirements (Aug 3, 2023)",
+          "url": "https://www.ecmweb.com/national-electrical-code/quizzes/article/21270791/code-quiz"
+        }
+      ],
+      "nec2023_change": [
+        {
+          "section": "240.4(D)(3) / Table 240.6(A)",
+          "change": "14 AWG CCA: OCPD 10 A max, continuous load 8 A max, OCPD listed and marked for 14 AWG CCA; 10 A added to standard ratings.",
+          "source": "ExpertCE Electrician's Guide for NEC 2023; EC&M Code Quiz Aug 3 2023",
+          "url": "https://expertce.com/courses/electricians-guide-for-nec-2023/lessons/can-i-use-14-awg-copper-clad-aluminum-conductors-in-my-led-lighting-circuits/",
+          "confirmed": true
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C3-310.16-CCA",
