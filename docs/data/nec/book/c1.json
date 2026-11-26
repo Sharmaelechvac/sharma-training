@@ -1495,8 +1495,8 @@
       "article": "100",
       "section": "100",
       "title": "Conductors — bare, covered, insulated, and the neutral",
-      "plain_explanation": "Article 100 sorts conductors by what is on the metal. A bare conductor has no covering or insulation at all. A covered conductor has a covering that is not recognized insulation — it may protect against weather or abrasion, but it earns the wire no insulation rating. An insulated conductor has insulation that is recognized for the use, which is the normal building wire a crew handles. The neutral conductor is the conductor connected to the system's neutral point that is intended to carry current under normal conditions; the neutral point is the common point of a wye connection, or the midpoint of a single-phase or DC system, from which the circuit conductors are referenced.",
-      "on_the_job": "Do not treat a covered conductor as insulated when a rule calls for insulation — service-drop covering is the classic example. And the neutral is a current-carrying working conductor, not a spare ground: it lands on the neutral bar and is only bonded to ground where the Code allows the bond.",
+      "plain_explanation": "Article 100 sorts conductors by what is on the metal:\n• Bare conductor: no covering or insulation at all.\n• Covered conductor: a covering that is not recognized insulation. It may protect against weather or abrasion, but it earns the wire no insulation rating.\n• Insulated conductor: insulation that is recognized for the use — the normal building wire a crew handles.\n• Neutral conductor: the conductor connected to the system's neutral point, intended to carry current under normal conditions.\n• Neutral point: the common point of a wye connection, or the midpoint of a single-phase or DC system, from which the circuit conductors are referenced.",
+      "on_the_job": "On an overhead service to a Florida house, the covering on the drop is weather protection, not insulation: do not treat a covered conductor as insulated when a rule calls for insulation. Inside the building, the neutral is a current-carrying working conductor, not a spare ground — it lands on the neutral bar and is bonded to ground only where the Code allows the bond, at the service and not in every subpanel downstream.",
       "sharma_note": "",
       "figure_idea": "Three wire cross-sections side by side: bare metal, a weather covering, and full insulation, with the neutral point of a wye drawn beside them.",
       "related_ids": [
@@ -1508,7 +1508,101 @@
       "verified": true,
       "prev_id": "C1-100-AMPACITY",
       "next_id": "C1-100-VOLTAGE-FAMILY",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "The word in the definition decides which rules apply. Treat a covered conductor as insulated and you have put wire with no insulation rating where the Code counted on insulation — service-drop covering is the classic case. Treat the neutral as a spare ground and you have put normal load current on a path that was never meant to carry it.",
+      "exam_trap": "The trap answer is “covered means insulated — something is over the metal.” A covering that is not recognized insulation earns no insulation rating, whatever it looks like. The mirror-image trap: “the neutral is basically a ground.” The neutral carries normal return current; the grounding path is a different conductor with a different job.",
+      "tables": [
+        {
+          "caption": "Three conductors, three different words",
+          "headers": [
+            "Conductor",
+            "On the metal",
+            "Insulation rating?"
+          ],
+          "rows": [
+            [
+              "Bare",
+              "Nothing at all",
+              "No"
+            ],
+            [
+              "Covered",
+              "A covering not recognized as insulation",
+              "No"
+            ],
+            [
+              "Insulated",
+              "Recognized insulation",
+              "Yes"
+            ]
+          ],
+          "note": "The neutral is defined by its job — connected to the neutral point and carrying current — not by what is on the metal."
+        }
+      ],
+      "inspection_fails": [
+        "Covered service conductor treated as insulated where the rule requires an insulated conductor.",
+        "Neutral landed on the grounding bar in a subpanel, putting normal load current on the grounding path.",
+        "Bare conductor run where an insulated conductor is required.",
+        "Neutral used as the equipment grounding conductor on a branch circuit."
+      ],
+      "page_quiz": [
+        {
+          "question": "A covered conductor is best described as:",
+          "choices": [
+            "Insulated, with a thin jacket",
+            "Covered with a material that is not recognized as insulation",
+            "Always a bare copper conductor",
+            "Another name for the neutral"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The covering may shed weather or abrasion, but it is not recognized insulation and earns no insulation rating.",
+          "nec_ref": "Article 100 — Covered Conductor"
+        },
+        {
+          "question": "The neutral point of a wye system is:",
+          "choices": [
+            "The grounding electrode connection",
+            "The common point the circuit conductors are referenced from",
+            "The midpoint of one phase winding only",
+            "Any white-insulated conductor"
+          ],
+          "answer_index": 1,
+          "explain_plain": "It is the common point of the wye connection (or the midpoint of a single-phase or DC system) from which the circuit conductors are referenced.",
+          "nec_ref": "Article 100 — Neutral Point"
+        },
+        {
+          "question": "The neutral conductor's normal job is to:",
+          "choices": [
+            "Carry fault current only",
+            "Carry current under normal conditions",
+            "Bond every enclosure together",
+            "Serve as a spare grounding conductor"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The neutral is connected to the neutral point and is intended to carry current under normal conditions — it is a working conductor.",
+          "nec_ref": "Article 100 — Neutral Conductor"
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-100-CONDUCTORS-cross-sections.svg",
+          "alt": "Three wire cross-sections side by side — bare metal, a thin weather covering, and full recognized insulation — with a wye diagram below showing the neutral point and the neutral conductor leaving it.",
+          "caption": "What is on the metal — and where the neutral comes from.",
+          "w": 900,
+          "h": 1340
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "Article 100 — Bare Conductor",
+        "Article 100 — Covered Conductor",
+        "Article 100 — Insulated Conductor",
+        "Article 100 — Neutral Conductor",
+        "Article 100 — Neutral Point"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C1-100-VOLTAGE-FAMILY",
@@ -1887,8 +1981,8 @@
       "article": "100",
       "section": "100",
       "title": "Equipment, utilization equipment, enclosures, and fittings",
-      "plain_explanation": "Equipment is the Code's umbrella word for the apparatus of an installation — fittings, devices, appliances, luminaires, machines and the like, whether they carry current or just support the parts that do. Utilization equipment is the narrower slice that actually uses electric energy to do work: heating, lighting, cooling, data processing and similar jobs. An enclosure is the case or housing around apparatus that keeps people away from live parts and protects the contents; enclosed describes apparatus that has such a case. A fitting is an accessory — a locknut, bushing or similar part — that does a mechanical job rather than an electrical one. A handhole enclosure is a small below-grade access enclosure, set flush or buried, whose cover a worker removes by hand to reach the conductors inside.",
-      "on_the_job": "Calling something 'equipment' is what brings the Article 110 rules with it — approval, working space, guarding. Handholes are the buried splice points on site work: they are enclosures, so the splices inside still have to be made with listed methods and the cover kept accessible, not paved over.",
+      "plain_explanation": "Equipment is the Code's umbrella word for the apparatus of an installation. The family, piece by piece:\n• Equipment: a general term for fittings, devices, appliances, luminaires, machines and the like, used as part of or in connection with an installation — whether they carry current or just support the parts that do.\n• Utilization equipment: the narrower slice that actually uses electric energy to do work — heating, lighting, cooling, data processing and similar jobs.\n• Enclosure: the case or housing around apparatus. It keeps people away from live parts and protects the contents. Enclosed describes apparatus that has such a case.\n• Fitting: an accessory — a locknut, bushing or similar part — that does a mechanical job rather than an electrical one.\n• Handhole enclosure: a small below-grade access enclosure, set flush or buried, whose cover a worker removes by hand to reach the conductors inside.",
+      "on_the_job": "Calling something 'equipment' is what brings the Article 110 rules with it — approval, working space, guarding. Handholes are the buried splice points on site work: they are enclosures, so the splices inside still have to be made with listed methods and the cover kept accessible, not paved over. On a Marion Oaks site package, the handholes at the monument sign and the lot corners get wet-location listed splices, and their covers stay at grade where the paving crew can see them.",
       "sharma_note": "",
       "figure_idea": "A panel, a luminaire and a handhole in grade, each tagged with the term that covers it.",
       "related_ids": [
@@ -1899,7 +1993,107 @@
       "verified": true,
       "prev_id": "C1-100-APPROVAL-FAMILY",
       "next_id": "C1-100-BONDING",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "The umbrella word is what drags the safety rules along with it. The moment a thing is equipment, Article 110 wants it approved, guarded, and given working space — and the enclosure is what stands between a helper's hand and a live bus. Fittings look too small to matter, but the missing bushing is exactly how conductor insulation gets cut through.",
+      "inspection_fails": [
+        "Handhole enclosure paved over or buried under sod — the cover has to stay accessible.",
+        "Dry-location wire connectors on splices inside a below-grade handhole — a wet location needs listed methods.",
+        "Damaged enclosure with live parts reachable — the apparatus is no longer enclosed.",
+        "Conduit entering a box with no bushing, insulation worn through on the sharp edge."
+      ],
+      "exam_trap": "The trap is treating 'equipment' as only the big gear — panels and air handlers. Under the definition a locknut is equipment too, as a fitting, and the exam turns on the narrower slice: utilization equipment is the part that uses the energy to do work, not everything connected to it.",
+      "tables": [
+        {
+          "caption": "The family at a glance",
+          "headers": [
+            "Term",
+            "What it covers",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Equipment",
+              "Everything in the installation",
+              "Panel, luminaire, locknut"
+            ],
+            [
+              "Utilization equipment",
+              "Uses electric energy to do work",
+              "Air handler, water heater"
+            ],
+            [
+              "Enclosure",
+              "Case or housing around apparatus",
+              "Panel cabinet, handhole"
+            ],
+            [
+              "Fitting",
+              "A mechanical accessory",
+              "Locknut, bushing"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-100-EQUIPMENT-FAMILY-lineup.svg",
+          "alt": "Four labeled panels: a panelboard tagged equipment in an enclosure, a luminaire tagged utilization equipment, a handhole enclosure at grade, and a locknut and bushing tagged fitting.",
+          "caption": "One umbrella word, four members of the family.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A locknut falls under which Article 100 term?",
+          "choices": [
+            "Utilization equipment",
+            "Fitting",
+            "Service equipment",
+            "Disconnecting means"
+          ],
+          "answer_index": 1,
+          "explain_plain": "A fitting is an accessory that does a mechanical job — locknuts and bushings are the everyday examples.",
+          "nec_ref": "Article 100, Fitting"
+        },
+        {
+          "question": "Utilization equipment is the equipment that:",
+          "choices": [
+            "Carries current without using it",
+            "Uses electric energy to do work",
+            "Encloses live parts",
+            "Connects two raceways"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Heating, lighting, cooling, data processing — if it uses the energy to do a job, it is utilization equipment.",
+          "nec_ref": "Article 100, Utilization Equipment"
+        },
+        {
+          "question": "A handhole enclosure is:",
+          "choices": [
+            "A junction box in a wall",
+            "A below-grade access enclosure with a hand-removable cover",
+            "A pull point inside a conduit run",
+            "Part of the service equipment"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Small, below grade, set flush or buried — the cover comes off by hand to reach the conductors inside.",
+          "nec_ref": "Article 100, Handhole Enclosure"
+        }
+      ],
+      "code_refs": [
+        "Article 100 — Equipment",
+        "Article 100 — Utilization Equipment",
+        "Article 100 — Enclosure",
+        "Article 100 — Fitting",
+        "Article 100 — Handhole Enclosure",
+        "110.3",
+        "110.28"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C1-100-BONDING",
@@ -2025,8 +2219,8 @@
       "article": "100",
       "section": "100",
       "title": "Grounding conductors and electrodes — EGC, GEC, and bonding jumpers",
-      "plain_explanation": "The grounding family splits by job. The equipment grounding conductor (EGC) connects the metal frames of equipment back to the source so a ground fault becomes a big fault current that trips the breaker — it is usually the green or bare wire, but 250.118 also lets certain raceways and cable armor serve as the EGC.. The grounding electrode conductor (GEC) connects the system to the grounding electrode — the rod, plate, concrete-encased electrode or other recognized earth connection itself. The main bonding jumper is the connection at the service between the grounded conductor and the EGC side; a system bonding jumper does the same job at a separately derived system. The existing Bonding and Grounded/Grounding pages cover the base words; this page is the conductor-by-conductor map.",
-      "on_the_job": "Mixing up the EGC and the GEC is the classic exam and inspection trap: the EGC protects people from energized metal, the GEC connects the system to earth, and they are sized from different tables (250.122 for the EGC, 250.66 for the GEC). In a normal house the only neutral-to-ground bond is the main bonding jumper at the service; a separately derived system (for example a transformer or a generator switched as an SDS) gets its own system bonding jumper, and downstream panels keep neutral and ground separate. — downstream panels keep them separate.",
+      "plain_explanation": "The grounding family splits by job:\n• Equipment grounding conductor (EGC): connects the metal frames of equipment back to the source, so a ground fault becomes a big fault current that trips the breaker. It is usually the green or bare wire, but 250.118 also lets certain raceways and cable armor serve as the EGC.\n• Grounding electrode conductor (GEC): connects the system to the grounding electrode — the rod, plate, concrete-encased electrode or other recognized earth connection itself.\n• Main bonding jumper: the connection at the service between the grounded conductor and the EGC side.\n• System bonding jumper: the same connection made at a separately derived system instead of at a service.\nThe Bonding page and the Grounded/Grounding page cover the base words; this page is the conductor-by-conductor map.",
+      "on_the_job": "On a 200 A house service in Ocala, the EGCs run with the branch circuits back to the service panel, the GEC runs from the neutral bar to the ground rods, and the main bonding jumper ties the neutral bar to the enclosure. That is the only neutral-to-ground bond in the house: the subpanel in the detached garage keeps neutral and ground on separate bars, with no bond. If the house later adds a generator switched as a separately derived system, that system gets its own system bonding jumper. And before any wire is pulled, the sizing check: EGCs come from Table 250.122, the GEC from Table 250.66 — different tables, different jobs.",
       "sharma_note": "",
       "figure_idea": "A house service diagram tracing three paths in three colours: EGC back to the panel, GEC down to the rod, and the main bonding jumper tying neutral to the enclosure at the service only.",
       "related_ids": [
@@ -2038,7 +2232,107 @@
       "verified": true,
       "prev_id": "C1-100-BONDING",
       "next_id": "C1-100-GROUNDED-GROUNDING",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1,
+      "why_it_exists": "Each conductor in this family does a different protective job, and they are not interchangeable. The EGC is the fault's road home: without it, a short to a metal frame leaves the frame energized and waiting for someone's hand. The GEC ties the system to earth for lightning and surges; it was never meant to clear faults. Swap the jobs, or bond neutral to ground in the wrong place, and fault current rides neutrals and piping instead of tripping the breaker.",
+      "exam_trap": "The classic trap, on exams and on inspections: \"The EGC and the GEC are both ground wires, so size them from the same table.\" Wrong. The EGC is sized from Table 250.122, by the overcurrent device ahead of it; the GEC is sized from Table 250.66, by the service conductors. The companion trap is bonding neutral to ground again at a subpanel — the bond lives at the service, or at a separately derived system, and nowhere downstream.",
+      "inspection_fails": [
+        "Equipment grounding conductor sized from Table 250.66 — the GEC's table — instead of Table 250.122.",
+        "Neutral bonded to ground at a subpanel; the bond belongs at the service only.",
+        "Separately derived system with no system bonding jumper installed.",
+        "No EGC path back to the source — the ground rod and GEC left to clear a ground fault."
+      ],
+      "tables": [
+        {
+          "caption": "The family, conductor by conductor",
+          "headers": [
+            "Conductor",
+            "Its job",
+            "Where it lives"
+          ],
+          "rows": [
+            [
+              "EGC",
+              "Carries fault current back to trip the breaker",
+              "With the circuit, to the source"
+            ],
+            [
+              "GEC",
+              "Ties the system to earth",
+              "Service to the electrode"
+            ],
+            [
+              "Main bonding jumper",
+              "Bonds neutral to the EGC side",
+              "At the service only"
+            ],
+            [
+              "System bonding jumper",
+              "Bonds neutral to the EGC side",
+              "At a separately derived system"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-100-GROUNDING-FAMILY-paths.svg",
+          "alt": "House service panel with neutral and ground bars joined by a gold main bonding jumper, a green equipment grounding conductor running to a metal-frame load, and a grounding electrode conductor running down to a ground rod.",
+          "caption": "EGC back to the source, GEC down to earth, bond at the service only.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Which table sizes the equipment grounding conductor?",
+          "choices": [
+            "Table 250.66",
+            "Table 250.122",
+            "Table 310.16",
+            "Table 110.26(A)(1)"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The EGC is sized from Table 250.122, by the overcurrent device ahead of it. Table 250.66 sizes the grounding electrode conductor instead.",
+          "nec_ref": "250.122"
+        },
+        {
+          "question": "In a normal house, where is the only neutral-to-ground bond?",
+          "choices": [
+            "At every panel",
+            "At the service, made by the main bonding jumper",
+            "At the ground rod",
+            "At the first receptacle"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The main bonding jumper makes the one bond, at the service. Downstream panels keep neutral and ground separate.",
+          "nec_ref": "Article 100 — Main Bonding Jumper"
+        },
+        {
+          "question": "A generator is switched as a separately derived system. What bonds its grounded conductor to the equipment grounding side?",
+          "choices": [
+            "The main bonding jumper at the service",
+            "A system bonding jumper at the derived system",
+            "The grounding electrode conductor",
+            "Nothing — a derived system is never bonded"
+          ],
+          "answer_index": 1,
+          "explain_plain": "A separately derived system gets its own bond: the system bonding jumper, doing at the derived system what the main bonding jumper does at a service.",
+          "nec_ref": "Article 100 — System Bonding Jumper"
+        }
+      ],
+      "code_refs": [
+        "Article 100 — Equipment Grounding Conductor",
+        "Article 100 — Grounding Electrode Conductor",
+        "Article 100 — Main Bonding Jumper",
+        "Article 100 — System Bonding Jumper",
+        "250.118",
+        "Table 250.122",
+        "Table 250.66"
+      ]
     },
     {
       "id": "C1-100-GROUNDED-GROUNDING",
@@ -2169,8 +2463,8 @@
       "article": "100",
       "section": "100",
       "title": "Ground fault, GFCI, and ground-fault protection of equipment",
-      "plain_explanation": "A ground fault is an unintended connection between an ungrounded conductor and normally non-current-carrying metal or the earth — the fault the EGC exists to turn into a breaker trip. Two protective terms build on it and are not interchangeable. A ground-fault circuit interrupter (GFCI) protects people: it watches for current leaking outside the intended path and opens the circuit at a few milliamperes, the personnel-protection level (a Class A GFCI must trip when ground-fault current reaches 6 mA and must not trip below 4 mA — Art. 100 GFCI Informational Note, from UL 943).. Ground-fault protection of equipment (GFPE) protects equipment and conductors from damaging fault currents at much higher levels — hundreds of amperes on large services — and is not intended to protect a person from shock.",
-      "on_the_job": "A GFPE breaker on a big service will not save a helper who contacts a live part, and a receptacle GFCI is not equipment protection for a service. When a spec or an inspector says 'ground-fault protection,' ask which of the two is meant before ordering gear.",
+      "plain_explanation": "A ground fault is an unintended connection between an ungrounded (hot) conductor and normally non-current-carrying metal parts, or the earth. It is the fault the equipment grounding conductor exists to turn into a breaker trip. Two protective terms build on that definition, and they are not interchangeable:\n• Ground fault: the fault itself — current reaching metal or earth it was never supposed to touch.\n• GFCI (ground-fault circuit interrupter): protects people. It watches for current leaking outside the intended path and opens the circuit at a few milliamperes — the personnel-protection level. A Class A GFCI must trip when ground-fault current reaches 6 mA, and must not trip below 4 mA (Article 100 GFCI Informational Note, from UL 943).\n• GFPE (ground-fault protection of equipment): protects equipment and conductors from damaging fault currents at much higher levels — hundreds of amperes on large services. It is not intended to protect a person from shock.",
+      "on_the_job": "A GFPE breaker on a big service will not save a helper who contacts a live part, and a receptacle GFCI is not equipment protection for a service. When a spec or an inspector says 'ground-fault protection,' ask which of the two is meant before ordering gear. On a 480Y/277 V retail service in Ocala, the gear arrives with GFPE as specified — and the crew still roughs GFCI protection at the wet-location receptacles, because the two devices answer two different hazards.",
       "sharma_note": "",
       "figure_idea": "Two trip curves side by side: a GFCI opening at a few milliamperes for personnel, and GFPE opening at hundreds of amperes for equipment.",
       "related_ids": [
@@ -2181,7 +2475,100 @@
       "verified": true,
       "prev_id": "C1-100-GROUNDED-GROUNDING",
       "next_id": "C1-100-BRANCH-CIRCUIT",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "A ground fault through a person's body can kill at currents far below any breaker rating, so the GFCI watches in milliamperes and opens fast. GFPE exists for the opposite problem: a fault on a large service can sit at hundreds of amperes — too much current to ignore, not enough to trip an ordinary breaker — and burn until something fails. Two hazards, two devices; mixing the names mixes up the protection.",
+      "inspection_fails": [
+        "GFPE service breaker offered as personnel protection for a wet-location task — wrong device; no GFCI protection present.",
+        "Receptacle GFCI removed after nuisance trips instead of finding the load that is leaking.",
+        "Spec said 'ground-fault protection' and a receptacle GFCI was installed where the service needed GFPE — the names were never sorted out.",
+        "Class A GFCI still holding at 8 mA on the tester — outside its 4–6 mA window; replace it."
+      ],
+      "exam_trap": "The trap answer says the service 'has ground-fault protection,' so the worker is protected. Wrong device: that protection is GFPE, set in the hundreds of amperes to protect equipment. Personnel protection is the GFCI's 4–6 mA window, and nothing else on this page substitutes for it.",
+      "tables": [
+        {
+          "caption": "Two devices, two jobs",
+          "headers": [
+            "Device",
+            "Protects",
+            "Opens at"
+          ],
+          "rows": [
+            [
+              "GFCI, Class A",
+              "People",
+              "6 mA (never below 4 mA)"
+            ],
+            [
+              "GFPE",
+              "Equipment and conductors",
+              "Hundreds of amperes on large services"
+            ],
+            [
+              "Standard breaker",
+              "Conductors, overload and short circuit",
+              "Its ampere rating and above"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-100-GROUND-FAULT-FAMILY-levels.svg",
+          "alt": "Two horizontal trip-level bars: a GFCI bar marked in milliamperes, must not trip below 4 mA and must trip at 6 mA, and a GFPE bar marked in hundreds of amperes, with a red strip warning that GFPE is not personnel protection.",
+          "caption": "Milliamperes protect people; hundreds of amperes protect equipment.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A Class A GFCI must trip when ground-fault current reaches:",
+          "choices": [
+            "4 mA",
+            "6 mA",
+            "30 mA",
+            "100 mA"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Class A: must trip at 6 mA, must not trip below 4 mA. That window is the personnel-protection level.",
+          "nec_ref": "Article 100, GFCI Informational Note (UL 943)"
+        },
+        {
+          "question": "Ground-fault protection of equipment (GFPE) is intended to protect:",
+          "choices": [
+            "People from shock",
+            "Equipment and conductors",
+            "Bathroom receptacles",
+            "Lighting circuits"
+          ],
+          "answer_index": 1,
+          "explain_plain": "GFPE works at hundreds of amperes on large services. It protects equipment — it will not save a person.",
+          "nec_ref": "Article 100, Ground-Fault Protection of Equipment"
+        },
+        {
+          "question": "A ground fault is:",
+          "choices": [
+            "An overloaded circuit",
+            "An unintended connection between a hot conductor and non-current-carrying metal or earth",
+            "A short between two hot conductors",
+            "A breaker that has tripped"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Hot conductor to metal or earth, outside the intended path. The EGC exists to turn it into a breaker trip.",
+          "nec_ref": "Article 100, Ground Fault"
+        }
+      ],
+      "code_refs": [
+        "Article 100 — Ground Fault",
+        "Article 100 — Ground-Fault Circuit Interrupter (GFCI)",
+        "Article 100 — Ground-Fault Protection of Equipment",
+        "210.8",
+        "230.95"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C1-100-BRANCH-CIRCUIT",
@@ -2418,8 +2805,8 @@
       "article": "100",
       "section": "100",
       "title": "Circuit breaker, panelboard, cabinet, and the fault ratings",
-      "plain_explanation": "A circuit breaker is a device that opens and closes a circuit by nonautomatic means and opens it automatically at a preset overcurrent — an adjustable-trip breaker lets that trip setting be changed without swapping internal parts. A panelboard is a single panel, or group of panel units, of switches or breakers in a cabinet, designed to mount in or against a wall; the enclosure is a cabinet or a cutout box — two separately defined terms (a cabinet has a frame/trim for a swinging door; a cutout box has a door or cover hinged directly to the box walls)., surface or flush, with doors or trim as designed. Two fault ratings live here and are constantly confused: interrupting rating is the highest fault current a device itself can safely open at its rated voltage; short-circuit current rating (SCCR) is the fault current a piece of equipment as a whole can withstand or be protected at. The 110.9 and 110.10 pages carry the rules behind both ratings.",
-      "on_the_job": "A breaker that fits is not a breaker that belongs: its interrupting rating must meet or beat the available fault current at its terminals, and the panel's SCCR must cover the installation — check the labels before the gear is set, not at inspection.",
+      "plain_explanation": "• Circuit breaker: a device that opens and closes a circuit by nonautomatic means and opens it automatically at a preset overcurrent. An adjustable-trip breaker lets that trip setting be changed without swapping internal parts.\n• Panelboard: a single panel, or a group of panel units, of switches or breakers designed to mount in or against a wall, inside an enclosure. The enclosure is a cabinet or a cutout box — two separately defined terms. A cabinet has a frame or trim for a swinging door; a cutout box has its door or cover hinged directly to the box walls. Either may be surface or flush, with doors or trim as designed.\n• Interrupting rating: the highest fault current a device itself can safely open at its rated voltage.\n• Short-circuit current rating (SCCR): the fault current a piece of equipment as a whole can withstand, or be protected at.\nThe two fault ratings are constantly confused — and they answer different questions. The 110.9 and 110.10 pages carry the rules behind both.",
+      "on_the_job": "Small commercial service in Ocala: the fault-current calculation comes back at 22 kA. The new Siemens panelboard gets checked at delivery, not at inspection: every breaker's interrupting rating must meet or beat 22 kA — a panel full of 10 kAIC breakers is under-rated gear — and the panelboard's own SCCR on its label must cover the installation the same way. A breaker that fits the bus is not a breaker that belongs; check both labels while the gear is still on the pallet.",
       "sharma_note": "",
       "figure_idea": "A panelboard cutaway: breakers inside, cabinet around them, with callouts for the interrupting rating on a breaker label and the SCCR on the panel label.",
       "related_ids": [
@@ -2432,7 +2819,96 @@
       "verified": true,
       "prev_id": "C1-100-BRANCH-CIRCUIT-TYPES",
       "next_id": "C1-100-FEEDER",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "A fault is the worst second of an installation's life. If the breaker cannot interrupt what the service can deliver, it can fail violently instead of clearing. If the assembly's SCCR is below the fault current, the panel itself becomes the damage. Both numbers are printed on labels — but they only help if somebody reads them before the gear is set.",
+      "inspection_fails": [
+        "Breakers installed with interrupting ratings below the available fault current at their terminals (110.9).",
+        "Panelboard SCCR below the available fault current — the assembly rating never checked against the fault calculation (110.10).",
+        "Replacement breaker that physically fits the bus but is not the type identified for that panelboard.",
+        "Adjustable-trip breaker setting changed in the field with no record — the setting no longer matches the job's fault paperwork."
+      ],
+      "exam_trap": "The trap is swapping the two ratings: 'The panel's SCCR is 22 kA, so the breakers interrupt 22 kA.' No. SCCR belongs to the equipment as a whole; interrupting rating belongs to the device itself. A panel can carry a high SCCR and still be filled with breakers whose own interrupting ratings fall short.",
+      "tables": [
+        {
+          "caption": "Two fault ratings, two owners",
+          "headers": [
+            "Rating",
+            "Belongs to",
+            "The question it answers"
+          ],
+          "rows": [
+            [
+              "Interrupting rating",
+              "The device itself — breaker or fuse",
+              "Can it safely open the biggest fault at its terminals?"
+            ],
+            [
+              "SCCR",
+              "The equipment as a whole",
+              "Can the assembly withstand, or be protected at, that fault?"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-100-CIRCUIT-BREAKER-panel.svg",
+          "alt": "Cutaway of a panelboard inside its cabinet, calling out a breaker, the interrupting rating on a breaker label, the SCCR on the panelboard label, and the cabinet frame.",
+          "caption": "Two labels, two ratings: the breaker's and the assembly's.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "SCCR is the fault current rating of:",
+          "choices": [
+            "A single breaker",
+            "A piece of equipment as a whole",
+            "The utility transformer",
+            "The service conductors"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Short-circuit current rating belongs to the equipment as a whole; interrupting rating belongs to the device itself.",
+          "nec_ref": "Article 100 — Short-Circuit Current Rating"
+        },
+        {
+          "question": "A cutout box differs from a cabinet because its:",
+          "choices": [
+            "Door or cover is hinged directly to the box walls",
+            "Door has a frame and trim",
+            "Breakers are larger",
+            "Rating is higher"
+          ],
+          "answer_index": 0,
+          "explain_plain": "Cabinet: a frame or trim for a swinging door. Cutout box: the door or cover hinges to the box itself.",
+          "nec_ref": "Article 100 — Cabinet; Cutout Box"
+        },
+        {
+          "question": "An adjustable-trip breaker lets the crew change:",
+          "choices": [
+            "The frame size",
+            "The trip setting, without swapping internal parts",
+            "The interrupting rating",
+            "The SCCR"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Adjustable trip means the setting can be changed without changing internal parts — it does not change the frame or the ratings.",
+          "nec_ref": "Article 100 — Circuit Breaker"
+        }
+      ],
+      "code_refs": [
+        "Article 100 — Circuit Breaker",
+        "Article 100 — Panelboard",
+        "Article 100 — Interrupting Rating",
+        "Article 100 — Short-Circuit Current Rating",
+        "110.9",
+        "110.10"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C1-100-FEEDER",
@@ -2657,8 +3133,8 @@
       "article": "100",
       "section": "100",
       "title": "Demand factor, nonlinear load, and overcurrent",
-      "plain_explanation": "Demand factor is the ratio of the maximum demand of a system (or part of one) to the total connected load — it is always 1.0 or less, and it is what lets a feeder be smaller than the sum of everything plugged into it, because not everything runs at once. A nonlinear load is a load whose current waveform does not follow the voltage waveform — LED drivers, electronic ballasts, variable-speed drives and most plug-in electronics — which pushes harmonic current onto the system, especially the shared neutral. Overcurrent is any current above a conductor's or equipment's rating, from either of two causes crews must tell apart: an overload is too much legitimate load in an otherwise sound circuit, while a short circuit or ground fault is a failure — the protection and the troubleshooting are different for each.",
-      "on_the_job": "Demand factor is why the service math in Chapter 2 never just adds every breaker. Nonlinear loads are why a shared neutral on a multiwire circuit feeding LED lighting may need to be treated as current-carrying and sometimes upsized — the harmonics add on the neutral instead of cancelling.",
+      "plain_explanation": "Three Article 100 words that run load calculations and troubleshooting:\n• Demand factor: the ratio of a system's maximum demand to its total connected load. It is always 1.0 or less. It is what lets a feeder be smaller than the sum of everything connected to it, because not everything runs at once.\n• Nonlinear load: a load whose current waveform does not follow the voltage waveform — LED drivers, electronic ballasts, variable-speed drives and most plug-in electronics. It pushes harmonic current onto the system, especially the shared neutral of a multiwire circuit.\n• Overcurrent: any current above a conductor's or equipment's rating. Crews must tell its two causes apart: an overload is too much legitimate load on an otherwise sound circuit, while a short circuit or ground fault is a failure. The protection and the troubleshooting are different for each.",
+      "on_the_job": "Marion Oaks house, standard-method check: the general load adds up to 18,000 VA connected. Table 220.42 takes the first 3,000 VA at 100 percent and the rest at 35 percent, so the maximum demand is 8,250 VA — a demand factor of 8,250 ÷ 18,000, about 0.46. The feeder is sized from the demand, not the connected total. Same house, different word: the LED lighting home runs share a neutral, and because those drivers are nonlinear loads, the harmonics add on that neutral instead of cancelling — treat it as a current-carrying conductor.",
       "sharma_note": "",
       "figure_idea": "A bar chart: connected load tall, maximum demand shorter, the ratio labelled demand factor; beside it a distorted current waveform labelled nonlinear.",
       "related_ids": [
@@ -2670,7 +3146,99 @@
       "verified": true,
       "prev_id": "C1-100-CONTINUOUS-LOAD",
       "next_id": "C1-100-DWELLING-UNIT",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Each word guards against a different expensive mistake. Size everything as if it all ran at once and you bury copper nobody needed. Ignore harmonics and a shared neutral quietly overheats while both breakers stay happy. Treat a fault like an overload and 'fix' it with a bigger breaker, and the failure stays in the wall with more energy behind it.",
+      "inspection_fails": [
+        "Feeder calculation rejected at plan review: connected load used with no demand factors applied (220.42).",
+        "Shared neutral on a multiwire circuit feeding LED lighting not counted as a current-carrying conductor, with the load mostly nonlinear.",
+        "Breaker upsized to stop tripping; the 'overload' was a short circuit left in place in the wall."
+      ],
+      "exam_trap": "The trap is answering a demand-factor question with a number over 1.0 — usually 1.25, stolen from the continuous-load rule. Demand factor is a ratio of demand to connected load, so it can never exceed 1.0. The 125 percent sizing rule belongs to continuous loads, a different definition on a different page.",
+      "tables": [
+        {
+          "caption": "Overcurrent: tell the causes apart",
+          "headers": [
+            "Cause",
+            "What it is",
+            "Crew response"
+          ],
+          "rows": [
+            [
+              "Overload",
+              "Too much legitimate load on a sound circuit",
+              "Find the added load; split or shed it"
+            ],
+            [
+              "Short circuit",
+              "Hot touches hot or neutral — a failure",
+              "Find and repair the fault before re-energizing"
+            ],
+            [
+              "Ground fault",
+              "Hot touches ground or grounded metal — a failure",
+              "Find and repair; GFCI/GFPE where required"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-100-LOAD-TERMS-demand.svg",
+          "alt": "Bar chart of an 18,000 VA connected load against an 8,250 VA maximum demand, demand factor about 0.46, with clean voltage and distorted nonlinear current waveforms.",
+          "caption": "Demand factor: the feeder is sized from the demand, not the connected total.",
+          "w": 900,
+          "h": 1340
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Demand factor is the ratio of:",
+          "choices": [
+            "Maximum demand to total connected load",
+            "Total connected load to maximum demand",
+            "Continuous load to noncontinuous load",
+            "Feeder ampacity to service ampacity"
+          ],
+          "answer_index": 0,
+          "explain_plain": "Demand over connected load — which is why the answer is always 1.0 or less.",
+          "nec_ref": "Article 100 — Demand Factor"
+        },
+        {
+          "question": "A breaker trips the instant it is reset, and testing finds hot-to-ground contact in the run. This overcurrent is:",
+          "choices": [
+            "An overload — fit a bigger breaker",
+            "A ground fault — a failure, not an overload",
+            "A nonlinear load",
+            "A demand factor problem"
+          ],
+          "answer_index": 1,
+          "explain_plain": "A fault is a failure in the circuit, not too much legitimate load. Find it and repair it; never answer a fault with a larger breaker.",
+          "nec_ref": "Article 100 — Overcurrent"
+        },
+        {
+          "question": "Why can a shared neutral feeding LED drivers need to count as a current-carrying conductor?",
+          "choices": [
+            "LED loads draw no neutral current",
+            "Harmonic currents add on the neutral instead of cancelling",
+            "Every neutral is always current-carrying",
+            "The drivers raise the voltage on the neutral"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Nonlinear loads push harmonic current onto the system; on a shared neutral the harmonics add rather than cancel.",
+          "nec_ref": "Article 100 — Nonlinear Load"
+        }
+      ],
+      "code_refs": [
+        "Article 100 — Demand Factor",
+        "Article 100 — Nonlinear Load",
+        "Article 100 — Overcurrent",
+        "Table 220.42",
+        "310.15"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C1-100-DWELLING-UNIT",
@@ -2795,8 +3363,8 @@
       "article": "100",
       "section": "100",
       "title": "Bathroom and clothes closet",
-      "plain_explanation": "A bathroom, in Article 100, is an area that includes a basin plus one or more of a toilet, a urinal, a tub, a shower, a bidet, or a similar plumbing fixture. — a room with only a toilet and no basin is not a bathroom under the Code, and a basin with nothing else is not either. The definition matters because whole rule sets switch on it: the 20A bathroom receptacle circuit, GFCI protection for bathroom receptacles, and the ban on receptacles inside tub and shower spaces. A clothes closet is the nonhabitable room or space meant for storing clothes — the definition behind the luminaire rules that keep hot, exposed lamps away from stored clothing and shelving.",
-      "on_the_job": "On plans, check the fixture list before applying bathroom rules: a powder room with a basin and toilet is a bathroom; a water closet alone is not. In closets, the clothes-closet definition is what triggers the luminaire type and clearance rules in 410.16 — treat any closet with a rod and shelf as one unless the plans say otherwise.",
+      "plain_explanation": "Two definitions on this page switch whole rule sets on and off.\n• Bathroom: an area that includes a basin, plus one or more of a toilet, a urinal, a tub, a shower, a bidet, or a similar plumbing fixture. Both halves must be there. A room with only a toilet and no basin is not a bathroom under the Code, and a basin with nothing else is not one either.\n• Clothes closet: a nonhabitable room or space meant for storing clothes.\nThe bathroom definition matters because the 20 A bathroom receptacle circuit, GFCI protection for bathroom receptacles, and the ban on receptacles inside tub and shower spaces all switch on it. The closet definition is behind the luminaire rules in 410.16 that keep hot, exposed lamps away from stored clothing and shelving.",
+      "on_the_job": "On plans, check the fixture list before applying bathroom rules: a powder room with a basin and toilet is a bathroom; a water closet alone is not. In closets, the clothes-closet definition is what triggers the luminaire type and clearance rules in 410.16 — treat any closet with a rod and shelf as one unless the plans say otherwise. The Sharma default in a closet is an enclosed LED: surface-mounted at 12 in clear of the storage space, or recessed at 6 in — never an open lamp or a pendant.",
       "sharma_note": "",
       "figure_idea": "Two small floor plans: basin + toilet ticked as a bathroom, toilet alone crossed, with a closet plan showing shelf and rod.",
       "related_ids": [
@@ -2808,7 +3376,105 @@
       "verified": true,
       "prev_id": "C1-100-DWELLING-UNIT",
       "next_id": "C1-100-EXPOSED",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Water, bare skin, and electricity are the combination the bathroom rules exist for — but they only protect rooms that meet the definition. Call a toilet-only room a bathroom and a circuit gets wasted; miss a real bathroom and the GFCI and circuit rules never get applied where the hazard actually is. In the closet, the hazard is different: a hot lamp resting against stored clothes.",
+      "inspection_fails": [
+        "Bathroom receptacles fed from a general lighting circuit — the 20 A bathroom circuit was never run, because the room was never counted as a bathroom.",
+        "No GFCI protection on the receptacle beside the basin.",
+        "Receptacle installed inside the tub or shower space.",
+        "Open-lamp luminaire inside a clothes closet, closer to the storage space than 410.16 allows."
+      ],
+      "exam_trap": "The trap is the toilet-only powder room: it feels like a bathroom, but with no basin the definition is not met and the bathroom rules stay off. The mirror-image trap catches just as many people — a basin and a shower with no toilet is a bathroom, because the basin plus any one listed fixture is enough.",
+      "tables": [
+        {
+          "caption": "Is it a bathroom? (Article 100)",
+          "headers": [
+            "Room",
+            "Bathroom?",
+            "Why"
+          ],
+          "rows": [
+            [
+              "Basin + toilet",
+              "Yes",
+              "Basin plus a listed fixture"
+            ],
+            [
+              "Basin + shower",
+              "Yes",
+              "Basin plus a listed fixture"
+            ],
+            [
+              "Toilet only, no basin",
+              "No",
+              "The basin is missing"
+            ],
+            [
+              "Basin only",
+              "No",
+              "Nothing from the list with it"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-100-BATHROOM-plans.svg",
+          "alt": "Two small floor plans and a closet: basin plus toilet checked as a bathroom, toilet alone crossed out as not a bathroom, and a clothes closet with rod, shelf, storage space and an enclosed LED luminaire.",
+          "caption": "The basin decides the bathroom; the rod and shelf decide the closet.",
+          "w": 900,
+          "h": 1620
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Which room is a bathroom under Article 100?",
+          "choices": [
+            "A room with a toilet but no basin",
+            "A room with a basin but no other fixture",
+            "A room with a basin and a tub",
+            "Any room with plumbing in it"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The definition needs both halves: a basin, plus at least one of toilet, urinal, tub, shower, bidet or similar.",
+          "nec_ref": "Article 100, Bathroom"
+        },
+        {
+          "question": "A powder room has a basin and a toilet. The bathroom receptacle rules:",
+          "choices": [
+            "Do not apply",
+            "Apply — the room meets the definition",
+            "Apply only if it also has a tub",
+            "Apply only in houses over 2,000 sq ft"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Basin plus toilet is a bathroom, so the 20 A circuit and GFCI rules switch on.",
+          "nec_ref": "Article 100, Bathroom; 210.11(C)(3)"
+        },
+        {
+          "question": "The clothes-closet definition drives which luminaire rules?",
+          "choices": [
+            "210.52 spacing",
+            "410.16 type and clearance",
+            "406.9 locations",
+            "220.12 lighting load"
+          ],
+          "answer_index": 1,
+          "explain_plain": "410.16 controls what may light a clothes closet and how far it sits from the storage space.",
+          "nec_ref": "410.16"
+        }
+      ],
+      "code_refs": [
+        "Article 100 — Bathroom",
+        "Article 100 — Clothes Closet",
+        "210.11(C)(3)",
+        "210.8(A)(1)",
+        "410.16"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C1-100-EXPOSED",
@@ -3609,8 +4275,8 @@
       "article": "100",
       "section": "100",
       "title": "Service conductors, drop, lateral, entrance, equipment, and point",
-      "plain_explanation": "The service family, piece by piece. The service point is the point where the utility's facilities meet the premises wiring — the boundary of responsibility. Service conductors run from the service point to the service disconnecting means. Overhead, they split into the service drop (the utility's overhead conductors from its system to the service point) and service-entrance conductors (on the customer side, from the service point to the service equipment). Underground, the utility's run to the service point is the service lateral. Service equipment is the gear — usually the main disconnect and its enclosure — that controls and cuts off the supply to the building. The base Service page introduces the family; this page is the map of who owns what, where.",
-      "on_the_job": "Nearly every service argument is a service-point argument: whose conductor, whose repair, whose standard. On Sharma services the meter sits outside and the panel inside, back to back, so the service-entrance run stays as short as the layout allows — and the utility's requirements govern everything on its side of the point.",
+      "plain_explanation": "Article 100 splits the service into named pieces, and each name carries an owner. Learn the pieces and most service arguments settle themselves.\n• Service point: the point where the utility's facilities meet the premises wiring. It is the boundary of responsibility — the utility's rules govern on its side of the point, the NEC governs on ours.\n• Service conductors: the conductors from the service point to the service disconnecting means.\n• Service drop: the utility's overhead conductors, from its system to the service point.\n• Service-entrance conductors: the customer-side run, from the service point to the service equipment. The overhead and underground definitions name the same job two ways.\n• Service lateral: the utility's underground run to the service point.\n• Service equipment: the gear — usually the main disconnect and its enclosure — that controls and cuts off the supply to the building.\nThe base Service page introduces the family; this page is the map of who owns what, where.",
+      "on_the_job": "Nearly every service argument is a service-point argument: whose conductor, whose repair, whose standard. On Sharma services the meter sits outside and the panel inside, back to back, so the service-entrance run stays as short as the layout allows — and the utility's requirements govern everything on its side of the point. After a storm in Marion County, a limb takes down the overhead drop and bends the mast. The drop is the utility's to restring; the mast and the entrance conductors below the weatherhead are the customer's — Sharma's repair, permitted and inspected.",
       "sharma_note": "S-09: meter outside and panel inside, back to back, where the layout allows — the arrangement that keeps the service-entrance conductors short.",
       "figure_idea": "An overhead and an underground service side by side, each split at a marked service point: drop/lateral on the utility side, entrance conductors and service equipment on the building side.",
       "related_ids": [
@@ -3623,7 +4289,106 @@
       "next_id": "C1-100-IN-SIGHT",
       "sharma_rule_ids": [
         "S-09"
-      ]
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "The names exist so a fault, a bill, or a repair lands on the right party the first time. A crew that cannot say whether a damaged conductor is the drop, the lateral, or the entrance run cannot say whose it is to fix — and a damaged live service conductor is the wrong place to argue about it. The names also aim the NEC's service rules at the right conductors: those rules bite on the customer's side of the point.",
+      "inspection_fails": [
+        "Service equipment set so the unfused service-entrance conductors run long inside the building — the panel was never set back to back with the meter.",
+        "Crew opened the utility's lateral on a service upgrade — not the customer's conductor to touch, on either side of the argument.",
+        "A damaged service drop written up as a premises-wiring violation; the drop is the utility's, on its side of the service point.",
+        "Meter base landed on the wrong side of the agreed service point and moved at re-inspection."
+      ],
+      "exam_trap": "The trap is calling everything from the pole to the panel 'the service drop.' On an exam — and on a work order — the drop is only the utility's overhead span to the service point. From the point to the service equipment the conductors are service-entrance conductors, and underground the utility's run is the lateral, never a drop.",
+      "tables": [
+        {
+          "caption": "Who owns which piece",
+          "headers": [
+            "Piece",
+            "Runs",
+            "Whose"
+          ],
+          "rows": [
+            [
+              "Service drop",
+              "Utility system → service point (overhead)",
+              "Utility"
+            ],
+            [
+              "Service lateral",
+              "Utility system → service point (underground)",
+              "Utility"
+            ],
+            [
+              "Service-entrance conductors",
+              "Service point → service equipment",
+              "Customer"
+            ],
+            [
+              "Service equipment",
+              "Main disconnect and its enclosure",
+              "Customer"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-100-SERVICE-FAMILY-map.svg",
+          "alt": "Overhead and underground services drawn side by side, each split by a gold service-point line: drop and lateral on the utility side, entrance conductors and service equipment on the building side.",
+          "caption": "Overhead and underground: the service point splits utility from customer.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Where do the utility's facilities end and the premises wiring begin?",
+          "choices": [
+            "At the meter",
+            "At the service point",
+            "At the main breaker",
+            "At the pole"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The service point is the boundary. Utility rules govern on one side, the NEC on the other.",
+          "nec_ref": "Article 100, Service Point"
+        },
+        {
+          "question": "On an overhead service, the utility's conductors from its system to the service point are the:",
+          "choices": [
+            "Service-entrance conductors",
+            "Service lateral",
+            "Service drop",
+            "Feeder"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The drop is the utility's overhead span. The customer's run from the point to the equipment is the service-entrance conductors.",
+          "nec_ref": "Article 100, Service Drop"
+        },
+        {
+          "question": "The utility's underground run to the service point is called the:",
+          "choices": [
+            "Service drop",
+            "Service lateral",
+            "Service-entrance conductors",
+            "Service raceway"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Underground, the utility's run is the lateral. 'Drop' is overhead only.",
+          "nec_ref": "Article 100, Service Lateral"
+        }
+      ],
+      "code_refs": [
+        "Article 100 — Service Point",
+        "Article 100 — Service Conductors",
+        "Article 100 — Service Drop",
+        "Article 100 — Service Lateral",
+        "Article 100 — Service-Entrance Conductors",
+        "Article 100 — Service Equipment"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C1-100-IN-SIGHT",
@@ -3754,8 +4519,8 @@
       "article": "100",
       "section": "100",
       "title": "Device, disconnecting means, and switch types",
-      "plain_explanation": "A device is a unit of an electrical system, other than a conductor, that carries or controls electric energy — switches, receptacles, breakers and thermostats are devices; wire and conduit are not. A disconnecting means is a device, group of devices, or other means by which the conductors of a circuit can be disconnected from their source — the thing the In Sight page measures from. Three switch types round out the family: a general-use switch controls lighting and appliance loads and is rated in amperes at its marked voltage; an isolating switch is meant to isolate a circuit from its source and is not intended to interrupt current under load; a motor-circuit switch is rated in horsepower and is built to interrupt the maximum operating overload current of the motor it serves.",
-      "on_the_job": "An isolating switch is not a load-break switch — opening one under load is an arc event, not a disconnect. When a rule calls for a disconnecting means, check that the device in hand is actually rated to do the disconnecting job for that load type.",
+      "plain_explanation": "Three layers of words keep the disconnect rules straight.\n• Device: a unit of an electrical system, other than a conductor, that carries or controls electric energy. Switches, receptacles, breakers and thermostats are devices; wire and conduit are not.\n• Disconnecting means: a device, a group of devices, or another means by which the conductors of a circuit can be disconnected from their source. It is the thing the In Sight page measures from — visible, and not more than 50 ft away.\n• General-use switch: controls lighting and appliance loads, and is rated in amperes at its marked voltage.\n• Isolating switch: meant to isolate a circuit from its source. It has no interrupting rating and is not intended to interrupt current under load.\n• Motor-circuit switch: rated in horsepower, and built to interrupt the maximum operating overload current of the motor it serves.",
+      "on_the_job": "An isolating switch is not a load-break switch — opening one under load is an arc event, not a disconnect. When a rule calls for a disconnecting means, check that the device in hand is actually rated to do the disconnecting job for that load type. On a rooftop change-out, the crew kills the load at the breaker first and only then opens the isolating switch beside the unit; the disconnect that serves the condenser still has to sit in sight of it — visible and within 50 ft.",
       "sharma_note": "",
       "figure_idea": "Three switches in a row — general-use, isolating, motor-circuit — with the load each is built to interrupt drawn beside it.",
       "related_ids": [
@@ -3767,7 +4532,102 @@
       "verified": true,
       "prev_id": "C1-100-IN-SIGHT",
       "next_id": "C1-100-SYSTEMS-WIRING",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "A disconnect is a promise: pull it, and the equipment is dead. The promise only holds if the device was built to break the load in front of it. An isolating switch opened under load draws an arc it was never designed to quench, in front of the person holding the handle. The definitions are the warning label — they tell you which switch keeps the promise and which one never made it.",
+      "inspection_fails": [
+        "Isolating switch opened under load — arc damage at the blades; it was never rated to break that current.",
+        "Thermostat accepted as the disconnecting means for a rooftop unit — a control device is not a disconnect.",
+        "Condenser disconnect out of sight of the unit and past 50 ft — fails the in-sight rule these definitions feed.",
+        "General-use snap switch carrying a motor load it was never rated to switch."
+      ],
+      "exam_trap": "The trap answer treats every switch as a disconnect. An isolating switch can serve as a disconnecting means for isolation, but it is not built to interrupt load current — and a thermostat, though it is a device, is a control, not a disconnecting means for the equipment it runs.",
+      "tables": [
+        {
+          "caption": "Three switch types",
+          "headers": [
+            "Switch",
+            "Rated in",
+            "Built to interrupt"
+          ],
+          "rows": [
+            [
+              "General-use",
+              "Amperes at marked voltage",
+              "Lighting and appliance loads"
+            ],
+            [
+              "Isolating",
+              "No interrupting rating",
+              "Nothing under load — isolation only"
+            ],
+            [
+              "Motor-circuit",
+              "Horsepower",
+              "The motor's maximum operating overload current"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-100-DEVICE-DISCONNECT-switches.svg",
+          "alt": "Three switches in a row: a general-use switch with a lamp and appliance, an isolating switch with a red strip saying not for breaking load, and a motor-circuit switch beside a motor, each with its rating basis.",
+          "caption": "Same handle, three different promises — check the rating.",
+          "w": 900,
+          "h": 1480
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Which of these is NOT a device under Article 100?",
+          "choices": [
+            "A switch",
+            "A thermostat",
+            "A conductor",
+            "A receptacle"
+          ],
+          "answer_index": 2,
+          "explain_plain": "A device carries or controls electric energy, and the definition leaves conductors out on purpose.",
+          "nec_ref": "Article 100, Device"
+        },
+        {
+          "question": "An isolating switch is intended to:",
+          "choices": [
+            "Interrupt load current every day",
+            "Isolate a circuit after it has been opened by other means",
+            "Serve as the service disconnect",
+            "Control lighting loads"
+          ],
+          "answer_index": 1,
+          "explain_plain": "It has no interrupting rating. Kill the load elsewhere first, then isolate.",
+          "nec_ref": "Article 100, Isolating Switch"
+        },
+        {
+          "question": "A motor-circuit switch is rated in:",
+          "choices": [
+            "Amperes only",
+            "Horsepower",
+            "Volts only",
+            "Volt-amperes"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Horsepower — and it is built to interrupt the maximum operating overload current of the motor it serves.",
+          "nec_ref": "Article 100, Motor-Circuit Switch"
+        }
+      ],
+      "code_refs": [
+        "Article 100 — Device",
+        "Article 100 — Disconnecting Means",
+        "Article 100 — General-Use Switch",
+        "Article 100 — Isolating Switch",
+        "Article 100 — Motor-Circuit Switch",
+        "110.22",
+        "110.25"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C1-100-SYSTEMS-WIRING",
@@ -3775,8 +4635,8 @@
       "article": "100",
       "section": "100",
       "title": "Premises wiring, separately derived systems, raceway, and splices",
-      "plain_explanation": "The premises wiring system is all the wiring inside (and attached to) a building, from the service point — or from another power source such as a generator or solar system — out to the outlets; it does not include the internal wiring of equipment itself. A separately derived system is a premises wiring system fed from a source other than a service — a transformer, generator, converter or battery — that has no direct electrical connection to the supply conductors of another system, other than through grounding and bonding. A raceway is an enclosed channel built to hold conductors or cables — conduit and tubing are raceways; cable is not. A splice is the connection between conductors, and a splicing wire connector is the device — wire nut, lever connector, terminal block — listed to make that connection under pressure. A hoistway is the shaft-like space an elevator, dumbwaiter or similar equipment travels in, a space with its own wiring rules in Article 620.",
-      "on_the_job": "A transformer-fed panel is a separately derived system, which is why it gets its own neutral-to-ground bond through a system bonding jumper — the bond the Grounding family page describes. And every splice a crew makes lives or dies by the connector's listing: the connector, not the tape over it, is the splice.",
+      "plain_explanation": "Five Article 100 words that draw the map of a job:\n• Premises wiring system: all the wiring inside a building and attached to it, from the service point — or from another power source such as a generator or a solar system — out to the outlets. It does not include the internal wiring of equipment itself.\n• Separately derived system: a premises wiring system fed from a source other than a service — a transformer, generator, converter or battery — that has no direct electrical connection to the supply conductors of another system, other than through grounding and bonding.\n• Raceway: an enclosed channel built to hold conductors or cables. Conduit and tubing are raceways; a cable assembly is not.\n• Splice: the connection between conductors. A splicing wire connector — a wire nut, lever connector or terminal block — is the device listed to make that connection under pressure.\n• Hoistway: the shaft-like space an elevator, dumbwaiter or similar equipment travels in. It has its own wiring rules in Article 620.",
+      "on_the_job": "A transformer in a small Orlando medical office steps 480 V down to 208Y/120 V for a panel. That panel is a separately derived system, which is why it gets its own neutral-to-ground bond through a system bonding jumper — the bond the Grounding family page describes. And every splice the crew makes on the same job lives or dies by the connector's listing: the connector, not the tape over it, is the splice.",
       "sharma_note": "",
       "figure_idea": "A building outline from service point to last outlet labelled premises wiring, a transformer feeding its own panel labelled separately derived, and a raceway cut open to show the conductors inside.",
       "related_ids": [
@@ -3788,7 +4648,110 @@
       "verified": true,
       "prev_id": "C1-100-DEVICE-DISCONNECT",
       "next_id": "C1-100-SPECIAL-PERMISSION",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1,
+      "why_it_exists": "These words decide where one system ends and another begins — and that decides where the neutral gets bonded, which fill and support rules apply, and whether a connection is legal at all. Call a transformer-fed panel \"just another panel\" and its bonding jumper gets missed. Call a cable a raceway and every rule you reach for afterward is the wrong one.",
+      "exam_trap": "The trap: \"The standby generator makes this a separately derived system.\" Not by itself. The definition turns on the connection — if the generator's grounded conductor stays solidly connected to the service's, there is a direct electrical connection and the system is not separately derived. It becomes separately derived only when that connection is broken, as with a switched neutral.",
+      "inspection_fails": [
+        "Transformer-fed panel with no system bonding jumper — a separately derived system treated like an ordinary panel.",
+        "Splices made with tape over twisted conductors and no listed splicing wire connector.",
+        "Cable assembly counted as a raceway when fill was figured — a cable is not a raceway.",
+        "Hoistway wired with methods Article 620 does not permit in the shaft."
+      ],
+      "tables": [
+        {
+          "caption": "The five words at a glance",
+          "headers": [
+            "Word",
+            "Plain meaning",
+            "Where it bites"
+          ],
+          "rows": [
+            [
+              "Premises wiring",
+              "Service point (or other source) to the outlets",
+              "Where the wiring rules start"
+            ],
+            [
+              "Separately derived",
+              "Own source, no direct connection to another system",
+              "Gets its own bonding jumper"
+            ],
+            [
+              "Raceway",
+              "Enclosed channel for conductors",
+              "Conduit and tubing — cable is not"
+            ],
+            [
+              "Splice",
+              "Connection between conductors",
+              "Made by a listed connector"
+            ],
+            [
+              "Hoistway",
+              "Elevator and dumbwaiter shaft space",
+              "Article 620 rules apply"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-100-SYSTEMS-WIRING-map.svg",
+          "alt": "Three-part diagram: a building wired from the service point to its outlets, a transformer feeding its own panel as a separately derived system with its own bonding jumper, and a raceway cross-section with conductors inside.",
+          "caption": "Premises wiring, a separately derived system, and a raceway.",
+          "w": 900,
+          "h": 1360
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A panel is fed by a transformer whose secondary has no direct connection to the supply conductors of any other system, except through grounding and bonding. That panel's system is:",
+          "choices": [
+            "A service",
+            "A separately derived system",
+            "A feeder",
+            "A branch circuit"
+          ],
+          "answer_index": 1,
+          "explain_plain": "A premises wiring system with its own source and no direct electrical connection to another system is separately derived — which is why it gets its own system bonding jumper.",
+          "nec_ref": "Article 100 — Separately Derived System"
+        },
+        {
+          "question": "Which one is a raceway?",
+          "choices": [
+            "A Type NM cable assembly",
+            "Electrical metallic tubing (EMT)",
+            "A flexible cord",
+            "The internal wiring of equipment"
+          ],
+          "answer_index": 1,
+          "explain_plain": "A raceway is an enclosed channel built to hold conductors or cables. Tubing is one; a cable assembly is not.",
+          "nec_ref": "Article 100 — Raceway"
+        },
+        {
+          "question": "What makes a field splice a Code splice?",
+          "choices": [
+            "Tape over twisted conductors",
+            "Solder, if it is neat",
+            "A listed splicing wire connector making the connection under pressure",
+            "Any connection inside a box"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The splice is the connection between conductors, and the splicing wire connector is the listed device that makes it under pressure. Tape is not the splice.",
+          "nec_ref": "Article 100 — Splicing Wire Connector"
+        }
+      ],
+      "code_refs": [
+        "Article 100 — Premises Wiring (System)",
+        "Article 100 — Separately Derived System",
+        "Article 100 — Raceway",
+        "Article 100 — Splicing Wire Connector",
+        "Article 620"
+      ]
     },
     {
       "id": "C1-100-SPECIAL-PERMISSION",
@@ -3893,8 +4856,8 @@
       "article": "100",
       "section": "100",
       "title": "Garage, kitchen, and laundry area — how the Code uses area names",
-      "plain_explanation": "Of these three area names, only one is a formal Article 100 definition: a kitchen is \"an area with a sink and permanent provisions for food preparation and cooking\" — both halves must be present, and a portable appliance plugged in on the counter does not create one. Garage and laundry area carry no standalone Article 100 definition in the 2020 Code. The Code uses both terms in its rules — garage receptacles and their GFCI protection in 210.8(A)(2) and 210.52(G), the laundry area branch circuit in 210.11(C)(2) and laundry-area GFCI in 210.8(A)(10) — and they take their ordinary meaning: the garage is the vehicle space and its attached unfinished areas, and the laundry area is where laundry equipment is installed or intended to be. So treat the kitchen test as a definition to apply exactly, and the other two as usage terms settled by the plan's intended use of the space.",
-      "on_the_job": "When a plan is vague about a room's use, settle it before rough-in — a laundry area moved after wiring changes GFCI protection and circuit requirements. The detailed area rules live in Article 210 and are covered in Chapter 2 of this book.",
+      "plain_explanation": "Of these three area names, only one is a formal Article 100 definition:\n• Kitchen: \"an area with a sink and permanent provisions for food preparation and cooking.\" Both halves must be present — a portable appliance plugged in on the counter does not create a kitchen.\n• Garage: no standalone Article 100 definition in the 2020 Code. The Code uses the word in its rules — garage receptacles and their GFCI protection in 210.8(A)(2) and 210.52(G) — and it takes its ordinary meaning: the vehicle space and its attached unfinished areas.\n• Laundry area: also no standalone definition. The laundry branch circuit is 210.11(C)(2) and laundry-area GFCI is 210.8(A)(10); the term means where laundry equipment is installed or intended to be.\nTreat the kitchen test as a definition to apply exactly, and the other two as usage terms settled by the plan's intended use of the space.",
+      "on_the_job": "On a Marion Oaks plan, the 'bonus room' over the garage shows a sink and a cooktop on the drawings. Both halves of the kitchen test are present, so wire it as a kitchen — its Chapter 2 circuit and GFCI rules follow the name. Same job, second change: the owner moves the laundry from the mud room to an upstairs closet after rough-in. The 210.11(C)(2) laundry circuit and the 210.8(A)(10) GFCI protection have to move with it. Settle every room's use before rough-in; a moved area after wiring is rework. The detailed area rules live in Article 210, covered in Chapter 2 of this book.",
       "sharma_note": "S-08: the dryer circuit uses a Siemens Q230GF 30A 2-pole GFCI breaker, because NEC 2020 requires GFCI protection for receptacles in laundry areas, including 250V receptacles.",
       "figure_idea": "House plan with garage, kitchen and laundry shaded in three colors, each tagged with the chapter that carries its main rules.",
       "related_ids": [
@@ -3908,7 +4871,99 @@
       "next_id": "C1-ART-110",
       "sharma_rule_ids": [
         "S-08"
-      ]
+      ],
+      "why_it_exists": "The room's name is a switch that turns whole rule sets on and off. Call a wet bar a kitchen and you owe small-appliance circuits and countertop GFCI it never needed. Miss a real kitchen, or a laundry that moved, and the required circuits and GFCI protection land in the wrong room — found at inspection, after the walls are closed.",
+      "inspection_fails": [
+        "Garage receptacles installed without GFCI protection — 210.8(A)(2).",
+        "Laundry area relocated after rough-in; the 210.11(C)(2) circuit and 210.8(A)(10) GFCI protection left in the old room.",
+        "Room with a sink and a permanent cooktop wired as a dining area — the kitchen definition was met and its Chapter 2 rules were missed."
+      ],
+      "exam_trap": "The trap answer: 'A room with a sink and a microwave on the counter is a kitchen.' It is not. The definition needs permanent provisions for food preparation and cooking; a portable appliance plugged in for the inspection does not create them. Both halves of the test, or it is not a kitchen.",
+      "tables": [
+        {
+          "caption": "Three names, three treatments",
+          "headers": [
+            "Area",
+            "Art. 100 definition?",
+            "Rules that use it"
+          ],
+          "rows": [
+            [
+              "Kitchen",
+              "Yes — sink + permanent cooking provisions",
+              "Article 210 circuit and GFCI rules (Ch. 2)"
+            ],
+            [
+              "Garage",
+              "No — ordinary meaning",
+              "210.8(A)(2), 210.52(G)"
+            ],
+            [
+              "Laundry area",
+              "No — ordinary meaning",
+              "210.11(C)(2), 210.8(A)(10)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-100-AREAS-IN-USE-plan.svg",
+          "alt": "House plan marking the garage, kitchen and laundry: only the kitchen is an Article 100 definition, while garage and laundry are usage terms with rules in Article 210.",
+          "caption": "Same house, three names — only one is a definition.",
+          "w": 900,
+          "h": 1260
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Which room meets the Article 100 definition of a kitchen?",
+          "choices": [
+            "A dining room with a countertop microwave",
+            "An area with a sink and permanent provisions for cooking",
+            "Any room that has a sink",
+            "A pantry with a refrigerator"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Both halves must be present: a sink, and permanent provisions for food preparation and cooking.",
+          "nec_ref": "Article 100 — Kitchen"
+        },
+        {
+          "question": "GFCI protection for garage receptacles is required by:",
+          "choices": [
+            "210.8(A)(2)",
+            "210.11(C)(2)",
+            "210.52(C)",
+            "110.26(A)"
+          ],
+          "answer_index": 0,
+          "explain_plain": "Garage receptacles take their GFCI protection from 210.8(A)(2); 210.52(G) covers the garage receptacle outlets themselves.",
+          "nec_ref": "210.8(A)(2)"
+        },
+        {
+          "question": "The laundry area branch circuit is required by:",
+          "choices": [
+            "210.52(G)",
+            "210.8(A)(10)",
+            "210.11(C)(2)",
+            "220.42"
+          ],
+          "answer_index": 2,
+          "explain_plain": "210.11(C)(2) is the circuit; 210.8(A)(10) is the laundry-area GFCI rule. The two travel together.",
+          "nec_ref": "210.11(C)(2)"
+        }
+      ],
+      "code_refs": [
+        "Article 100 — Kitchen",
+        "210.8(A)(2)",
+        "210.52(G)",
+        "210.11(C)(2)",
+        "210.8(A)(10)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C1-ART-110",
@@ -4556,8 +5611,8 @@
       "article": "110",
       "section": "110.4",
       "title": "Voltages",
-      "plain_explanation": "The voltage considered is the voltage at which the circuit operates, and equipment's voltage rating may not be less than the nominal voltage of the circuit it is connected to. Equipment is used at the voltage it is rated for, and where the Code states a voltage it means the nominal system voltage the circuit actually operates at, unless a rule says otherwise. A device rated for a lower voltage does not become suitable on a higher-voltage circuit because its terminals fit, and the nominal voltage is what load, protection and clearance rules are keyed to.\n\nCommon nominal system voltages (the list itself is in 220.5(A), not 110.4):\n• 120 V — single-phase branch circuits\n• 120/240 V — the standard one-family house service\n• 208Y/120 V — three-phase wye, common in commercial buildings and multifamily services\n• 240 V — single-phase or three-phase delta\n• 277 V — one leg of a 480Y/277 V system to neutral, the commercial lighting voltage\n• 480Y/277 V and 480 V — larger commercial services\nEquipment is rated for the nominal voltage of the system it is connected to; a device marked for one system voltage is not interchangeable with another just because the plugs look alike.",
-      "on_the_job": "Check the nameplate voltage against the system in front of you — 120/240 single-phase, 208Y/120 and 480Y/277 three-phase are different worlds for device ratings even when the hardware looks similar.",
+      "plain_explanation": "The voltage the Code means is the nominal system voltage — the voltage the circuit actually operates at — unless a rule says otherwise. Equipment's voltage rating may not be less than the nominal voltage of the circuit it is connected to, and a device rated for a lower voltage does not become suitable on a higher-voltage circuit just because its terminals fit. Load, protection and clearance rules are all keyed to that nominal voltage.\nCommon nominal system voltages (the list itself is in 220.5(A), not in 110.4):\n• 120 V — single-phase branch circuits\n• 120/240 V — the standard one-family house service\n• 208Y/120 V — three-phase wye, common in commercial buildings and multifamily services\n• 240 V — single-phase or three-phase delta\n• 277 V — one leg of a 480Y/277 V system to neutral, the commercial lighting voltage\n• 480Y/277 V and 480 V — larger commercial services\nA device marked for one system voltage is not interchangeable with another just because the plugs look alike.",
+      "on_the_job": "On a strip-plaza retrofit in Kissimmee, the existing lighting runs at 277 V from a 480Y/277 V service. The replacement drivers the supplier shipped are marked 120 V only. They fit the same boxes and land on the same wires — and they cannot go in. The crew holds that part of the job at the supply-house counter: 277 V drivers, or a different fixture. The nameplate gets checked against the system in front of you — 120/240 V single-phase, 208Y/120 V and 480Y/277 V three-phase are different worlds for device ratings, even when the hardware looks similar.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -4565,7 +5620,105 @@
       "verified": true,
       "prev_id": "C1-110.3(B)",
       "next_id": "C1-110.5",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1,
+      "why_it_exists": "A voltage rating is a safety rating, not a suggestion. Put a device on a higher voltage than it is marked for and its insulation, its contact gaps and its ability to interrupt an arc are all undersized for the fault it may have to break. The nominal-voltage rule also keeps everyone's math on the same page: loads, protection and clearances are figured from the name of the system, not from whatever the meter reads that afternoon.",
+      "exam_trap": "The trap: \"The terminals fit and the breaker holds, so the 120 V device is fine on the 277 V lighting circuit.\" Wrong — fit is not a rating. Section 110.4 keys the rule to the nominal voltage of the circuit, and equipment may not be rated below it. The mirror-image trap is hunting for the list of system voltages in 110.4: the list lives in 220.5(A).",
+      "inspection_fails": [
+        "Device rated 120 V installed on a 277 V commercial lighting circuit because the terminals fit.",
+        "Equipment whose voltage rating is less than the nominal voltage of the circuit it is connected to.",
+        "Equipment replaced like-for-like on a multifamily retrofit without checking the nameplate against a 208Y/120 V system.",
+        "Nameplate voltage never verified at a service change before the new equipment was landed."
+      ],
+      "tables": [
+        {
+          "caption": "Nominal system voltages (list at 220.5(A))",
+          "headers": [
+            "System",
+            "Where you meet it"
+          ],
+          "rows": [
+            [
+              "120 V",
+              "Single-phase branch circuits"
+            ],
+            [
+              "120/240 V",
+              "The standard one-family house service"
+            ],
+            [
+              "208Y/120 V",
+              "Three-phase wye — commercial and multifamily"
+            ],
+            [
+              "240 V",
+              "Single-phase or three-phase delta"
+            ],
+            [
+              "277 V",
+              "One leg of 480Y/277 V — commercial lighting"
+            ],
+            [
+              "480Y/277 V and 480 V",
+              "Larger commercial services"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-110.4-nominal-voltages.svg",
+          "alt": "Bar chart of nominal system voltages drawn to scale — 120, 208, 240, 277 and 480 volts — with the typical use of each system and a warning that a lower-rated device never becomes suitable.",
+          "caption": "The nominal voltages, drawn to scale.",
+          "w": 900,
+          "h": 1380
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A lighting circuit operates at a nominal 277 V. A replacement device is rated 120 V, and its terminals fit. May it be installed?",
+          "choices": [
+            "Yes — fit is what matters",
+            "No — its rating is below the circuit's nominal voltage",
+            "Yes, if it is fused",
+            "Yes, in a metal box"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Equipment's voltage rating may not be less than the nominal voltage of the circuit it is connected to. Fit is not a rating.",
+          "nec_ref": "110.4"
+        },
+        {
+          "question": "Where does the Code list the common nominal system voltages?",
+          "choices": [
+            "110.4",
+            "220.5(A)",
+            "90.2",
+            "Table 310.16"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Section 110.4 states the rule about nominal voltage; the list of voltages itself is in 220.5(A).",
+          "nec_ref": "220.5(A)"
+        },
+        {
+          "question": "When the Code states a voltage, it means:",
+          "choices": [
+            "The voltage measured on the day",
+            "The nominal system voltage",
+            "The peak voltage",
+            "The utility's billing voltage"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Unless a rule says otherwise, a stated voltage is the nominal system voltage the circuit actually operates at.",
+          "nec_ref": "110.4"
+        }
+      ],
+      "code_refs": [
+        "110.4",
+        "220.5(A)"
+      ]
     },
     {
       "id": "C1-110.5",
@@ -4690,8 +5843,8 @@
       "article": "110",
       "section": "110.6",
       "title": "Conductor sizes — AWG and circular mils",
-      "plain_explanation": "Conductor sizes are expressed in American Wire Gauge for the smaller sizes and in circular mil area for the larger ones. The size designation is a standard language: the same AWG number means the same conductor size whoever made the cable. Size by itself is not ampacity — the rating still comes from the ampacity tables, the termination limits and the conditions of use.\n\nCircular-mil areas for the sizes Sharma pulls most (above 4/0, the kcmil number is the area in thousands of circular mils):\n• 14 AWG — 4,110 circular mils\n• 12 AWG — 6,530 circular mils\n• 10 AWG — 10,380 circular mils\n• 8 AWG — 16,510 circular mils\n• 6 AWG — 26,240 circular mils\n• 4 AWG — 41,740 circular mils\n• 2 AWG — 66,360 circular mils\n• 1/0 AWG — 105,600 circular mils\n• 2/0 AWG — 133,100 circular mils\n• 3/0 AWG — 167,800 circular mils\n• 4/0 AWG — 211,600 circular mils\nThese areas are what the proportional upsizing rules work from — when conductors are upsized, grounding conductors are upsized by the ratio of these numbers (see 250.122 in Chapter 2).",
-      "on_the_job": "Speak sizes in AWG up through 4/0 and in kcmil above that, and never let a breaker handle rating substitute for the ampacity check behind it.",
+      "plain_explanation": "Conductor sizes are expressed in American Wire Gauge (AWG) for the smaller sizes and in circular mil area for the larger ones. Above 4/0 AWG, the kcmil number is the area in thousands of circular mils: 500 kcmil is 500,000 circular mils.\nThe size designation is a standard language — the same AWG number means the same conductor size whoever made the cable.\nSize by itself is not ampacity. The rating still comes from the ampacity tables, the termination limits and the conditions of use.\nThe circular-mil areas in the table are what the proportional upsizing rules work from: when ungrounded conductors are upsized, the equipment grounding conductor is upsized by the ratio of these numbers (250.122).",
+      "on_the_job": "Long run from a Marion Oaks house panel to a detached garage: voltage drop pushes the ungrounded conductors from 12 AWG up to 10 AWG. The grounding conductor goes up by the same ratio — 10,380 ÷ 6,530 is about 1.59, and 6,530 × 1.59 lands on 10,380, so the 12 AWG equipment grounding conductor becomes a 10 AWG (250.122). Speak sizes in AWG up through 4/0 and in kcmil above that, and never let a breaker handle rating substitute for the ampacity check behind it.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -4701,7 +5854,126 @@
       "verified": true,
       "prev_id": "C1-110.5",
       "next_id": "C1-110.7",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Crews who treat size as a rating get both directions wrong: a fat conductor read on the wrong table column still overheats, and a grounding conductor left small after an upsize becomes the weak link in the fault path. The areas look like trivia until a voltage-drop upsize turns them into a ratio you have to run.",
+      "inspection_fails": [
+        "Equipment grounding conductor left at 12 AWG after the ungrounded conductors were upsized to 10 AWG for voltage drop — the 250.122 proportional increase was missed.",
+        "12 AWG conductors protected at 30 A — the size was treated as the ampacity instead of checking the tables (240.4(D)).",
+        "Panel schedule rejected: feeder sizes above 4/0 written in AWG instead of kcmil."
+      ],
+      "exam_trap": "The trap: '2 AWG is bigger than 2/0 — the 2/0 is a fraction.' Backwards. The ought sizes run the other way: 2/0 is 133,100 circular mils against 66,360 for 2 AWG — twice the metal. Once the numbers run out at 4/0, sizes switch to kcmil.",
+      "tables": [
+        {
+          "caption": "Circular-mil areas for the sizes Sharma pulls most",
+          "headers": [
+            "Size",
+            "Area (cmil)"
+          ],
+          "rows": [
+            [
+              "14 AWG",
+              "4,110"
+            ],
+            [
+              "12 AWG",
+              "6,530"
+            ],
+            [
+              "10 AWG",
+              "10,380"
+            ],
+            [
+              "8 AWG",
+              "16,510"
+            ],
+            [
+              "6 AWG",
+              "26,240"
+            ],
+            [
+              "4 AWG",
+              "41,740"
+            ],
+            [
+              "2 AWG",
+              "66,360"
+            ],
+            [
+              "1/0 AWG",
+              "105,600"
+            ],
+            [
+              "2/0 AWG",
+              "133,100"
+            ],
+            [
+              "3/0 AWG",
+              "167,800"
+            ],
+            [
+              "4/0 AWG",
+              "211,600"
+            ]
+          ],
+          "note": "Areas from Chapter 9, Table 8 — the basis for the proportional upsizing in 250.122."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-110.6-areas.svg",
+          "alt": "Four conductor cross-sections drawn to scale by circular-mil area — 12 AWG, 8 AWG, 4 AWG and 4/0 AWG — showing the metal area doubling about every three AWG sizes.",
+          "caption": "Drawn to scale: 4/0 carries about 32 times the metal of 12 AWG.",
+          "w": 900,
+          "h": 1200
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Which conductor has more metal?",
+          "choices": [
+            "2 AWG",
+            "2/0 AWG",
+            "They are equal",
+            "12 AWG"
+          ],
+          "answer_index": 1,
+          "explain_plain": "2/0 is 133,100 circular mils; 2 AWG is 66,360. The ought sizes are the big ones.",
+          "nec_ref": "110.6"
+        },
+        {
+          "question": "500 kcmil means an area of:",
+          "choices": [
+            "500 circular mils",
+            "5,000 circular mils",
+            "500,000 circular mils",
+            "500 square mils"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Above 4/0, the kcmil number is the area in thousands of circular mils.",
+          "nec_ref": "110.6"
+        },
+        {
+          "question": "Ungrounded conductors are upsized from 12 AWG to 10 AWG for voltage drop. The equipment grounding conductor:",
+          "choices": [
+            "Stays 12 AWG",
+            "Goes up by the same ratio — to 10 AWG",
+            "Drops to 14 AWG",
+            "Is not required"
+          ],
+          "answer_index": 1,
+          "explain_plain": "250.122 works from the circular-mil ratio: 10,380 ÷ 6,530 ≈ 1.59, and 6,530 × 1.59 ≈ 10,380 — a 10 AWG ground.",
+          "nec_ref": "250.122"
+        }
+      ],
+      "code_refs": [
+        "110.6",
+        "Chapter 9, Table 8",
+        "250.122"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C1-110.7",
@@ -5286,8 +6558,8 @@
       "article": "110",
       "section": "110.12",
       "title": "Mechanical execution of work — workmanship and unused openings",
-      "plain_explanation": "Electrical work has to be done in a neat and workmanlike manner. Unused openings in enclosures, boxes and equipment have to be closed with closures that give protection much like the wall of the equipment itself — a missing knockout blank is an open door for fingers, pests and arc products. Conductors must also be protected where insulation can be damaged. (Keeping water out of enclosures in wet locations is a different rule — see 312.2 and 314.15 — not part of 110.12.) Part (B) covers integrity of equipment and connections: internal parts, busbars, wiring terminals, and other components must not be damaged or contaminated by foreign materials, and there must be no damaged, broken, bent, cut, or deteriorated parts.\n\nNEC 2023 CHANGE:\n• 110.12: Neat and workmanlike is out. The standard for every electrical install is now professional and skillful work. The workmanship standard changed from neat and workmanlike to professional and skillful.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Close every unused opening with a listed blank or plug, not tape or a folded piece of can. Neat work is not cosmetic here — it is the section the inspector cites when a panel looks like a hazard even before testing anything.",
+      "plain_explanation": "Electrical work has to be done in a neat and workmanlike manner — that is a code rule, not a compliment. It covers how the whole job is put together:\n• Unused openings in enclosures, boxes and equipment must be closed with closures that give protection much like the wall of the equipment itself. A missing knockout blank is an open door for fingers, pests and arc products.\n• Conductors must be protected where their insulation can be damaged.\n• 110.12(B) covers integrity of equipment and connections: internal parts, busbars, wiring terminals and other components must not be damaged or contaminated by foreign materials, and there must be no damaged, broken, bent, cut or deteriorated parts.\nKeeping water out of enclosures in wet locations is a different rule — see 312.2 and 314.15 — not part of 110.12.",
+      "on_the_job": "On a garage panel in a new Marion Oaks house, close every unused opening with a listed blank or plug the day the gear is set — not tape, and not a folded piece of can. On exterior Florida gear the same open hole is also a pest and water entry, so it does not wait for trim-out. Neat work is not cosmetic here: 110.12 is the section the inspector cites when a panel looks like a hazard before he has tested a single thing.",
       "sharma_note": "",
       "figure_idea": "Before/after panel photos in drawing form: open knockouts and stray conductors on one side, blanks fitted and conductors dressed on the other.",
       "related_ids": [
@@ -5308,7 +6580,96 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/110-12",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Sloppy work is a hazard, not just an eyesore. An open knockout lets a finger, a lizard or a nest reach live parts, and in a fault it vents arc products straight out of the box. Paint, drywall dust and bent or damaged parts inside equipment raise resistance, trap heat and hide the defect until it fails under load — usually on the hottest afternoon of the year.",
+      "exam_trap": "The trap answer is that “neat and workmanlike” is the inspector's personal taste — a style preference you can argue about at the truck. It is a code requirement with teeth: an unused opening closed with tape fails, and paint or drywall dust on the busbars is a 110.12(B) violation, not a cleanup note.",
+      "tables": [
+        {
+          "caption": "110.12 in two parts",
+          "headers": [
+            "Part",
+            "Covers",
+            "Field test"
+          ],
+          "rows": [
+            [
+              "110.12(A)",
+              "Unused openings, closed up",
+              "Closure protects ≈ the enclosure wall"
+            ],
+            [
+              "110.12(B)",
+              "Integrity of equipment and connections",
+              "No damaged or contaminated parts"
+            ]
+          ],
+          "note": "The neat-and-workmanlike sentence covers the whole installation; (A) and (B) are the two parts an inspector can point to."
+        }
+      ],
+      "inspection_fails": [
+        "Unused knockout opening in a panel or disconnect left open — or “closed” with electrical tape.",
+        "Paint overspray or drywall dust contaminating busbars and breaker stabs inside a panel: 110.12(B).",
+        "Bent, broken or damaged breaker, lug or enclosure parts left in service.",
+        "Conductors rubbing a sharp enclosure edge, insulation damaged, no protection fitted."
+      ],
+      "page_quiz": [
+        {
+          "question": "An unused knockout in a disconnect is covered with electrical tape. Does it pass?",
+          "choices": [
+            "Yes — the opening is covered",
+            "Yes, if the tape is listed",
+            "No — the closure must protect much like the enclosure wall",
+            "Only in dwelling units"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Tape is not a closure. Unused openings take blanks or plugs that give protection much like the wall of the equipment itself.",
+          "nec_ref": "110.12(A)"
+        },
+        {
+          "question": "Which of these is a 110.12(B) violation?",
+          "choices": [
+            "A listed blank fitted in an unused opening",
+            "Drywall dust and paint on the busbars",
+            "Conductors protected where they pass a sharp edge",
+            "A panel door that opens a full 90 degrees"
+          ],
+          "answer_index": 1,
+          "explain_plain": "110.12(B) requires internal parts, busbars and terminals to be free of damage and of contamination by foreign materials.",
+          "nec_ref": "110.12(B)"
+        },
+        {
+          "question": "Keeping water out of an enclosure in a wet location is covered by:",
+          "choices": [
+            "110.12",
+            "312.2 and 314.15",
+            "110.3(B)",
+            "Article 100"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Not 110.12. The wet-location water rules live in 312.2 for cabinets and enclosures and 314.15 for boxes.",
+          "nec_ref": "312.2, 314.15"
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-110.12-before-after.svg",
+          "alt": "Two panel drawings side by side: the first with open knockouts, a damaged conductor and dust on the bus, the second with listed blanks fitted, conductors dressed and parts clean.",
+          "caption": "110.12 in one look: openings closed, parts sound, work dressed.",
+          "w": 900,
+          "h": 1380
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 110.12: Neat and workmanlike is out. The standard for every electrical install is now professional and skillful work. The workmanship standard changed from neat and workmanlike to professional and skillful.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "110.12",
+        "110.12(A)",
+        "110.12(B)",
+        "312.2",
+        "314.15"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C1-110.13",
@@ -5941,8 +7302,8 @@
       "article": "110",
       "section": "110.16",
       "title": "Arc-flash hazard warning marking",
-      "plain_explanation": "Certain equipment that is likely to be examined, adjusted or worked on while energized — such as switchboards, panelboards and motor control centers in other than dwelling settings — must carry a durable field-applied warning marking telling people about the arc-flash hazard. The marking warns; it does not replace safe work practice, and it belongs where a person approaching the gear will see it. 110.16(B) (NEC 2020): in other than dwelling units, service equipment rated 1200A or more also needs a permanent label (meeting 110.21(B)) showing the nominal system voltage, the available fault current at the service overcurrent devices, the clearing time of those devices based on that fault current, and the date the label was applied; it is not required where an arc-flash label is applied per acceptable industry practice.\n\nNEC 2023 CHANGE:\n• 110.16(B): 110.16(B) now covers service equipment AND feeder-supplied equipment rated 1000A or more (was service equipment 1200A or more), and the permanent label must be an arc-flash label per applicable industry practice, with the date applied.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "On commercial work, confirm the arc-flash warning label is present and legible before final. Houses are not the target of this section, but the hazard it names is real on any energized panel.",
+      "plain_explanation": "Equipment that is likely to be examined, adjusted, serviced or maintained while energized — such as switchboards, panelboards and motor control centers in other than dwelling settings — must carry a durable, field-applied warning marking about the arc-flash hazard:\n• 110.16(A) is the warning marking itself. It warns the person approaching the gear; it does not replace safe work practice, and it belongs where that person will see it before anything is opened.\n• 110.16(B): in other than dwelling units, service equipment rated 1200A or more also needs a permanent label meeting 110.21(B). The label shows the nominal system voltage, the available fault current at the service overcurrent devices, the clearing time of those devices based on that fault current, and the date the label was applied. It is not required where an arc-flash label is applied per acceptable industry practice.",
+      "on_the_job": "On a small commercial job — a 1600A, 480Y/277 V service for an Ocala retail plaza — the (B) label is filled in from the fault-current figures before final: nominal voltage, the available fault current at the service devices, their clearing time at that current, and the date it went on. Confirm the general arc-flash warning is present and legible before you call final. Houses are not the target of this section, but the hazard it names is real on any energized panel.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -5961,7 +7322,99 @@
           "url": "https://www.ecmag.com/magazine/articles/article-detail/arc-flash-hazard-warning-and-labeling-what-the-2023-nec-has-to-say-on-these-requirements",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Arc flash is the hazard you cannot see coming: opening a dead-front over a faulted or miswired bus can release an arc blast before a hand can pull back. The warning makes the next person stop, suit up and plan before the cover comes off — and the (B) label puts the numbers that drive the safety decisions on the gear itself, where they are still needed ten years later.",
+      "exam_trap": "Two traps. First: “Once the label is on, the gear is protected.” The marking only warns — PPE and safe work practice still do the protecting. Second, the 2023 answer on a 2020 exam: 1000A and feeder-supplied equipment. Under NEC 2020, (B) covers service equipment rated 1200A or more; the wider 2023 net is labeled in the edition box and does not apply yet.",
+      "tables": [
+        {
+          "caption": "The 110.16(B) permanent label — four required items",
+          "headers": [
+            "Item on the label",
+            "Comes from"
+          ],
+          "rows": [
+            [
+              "Nominal system voltage",
+              "The service as built"
+            ],
+            [
+              "Available fault current",
+              "At the service overcurrent devices"
+            ],
+            [
+              "Clearing time",
+              "Of those devices, at that fault current"
+            ],
+            [
+              "Date applied",
+              "The day the label goes on"
+            ]
+          ],
+          "note": "The label must meet 110.21(B). It is not required where an arc-flash label is applied per acceptable industry practice."
+        }
+      ],
+      "inspection_fails": [
+        "No arc-flash warning marking on a commercial panelboard or switchboard likely to be worked energized.",
+        "Service equipment rated 1200A or more with no permanent 110.16(B) label — and no industry-practice arc-flash label in its place.",
+        "Label missing one of the four items: no clearing time, or no date applied.",
+        "Handwritten paper label, faded and peeling — neither durable nor permanent."
+      ],
+      "page_quiz": [
+        {
+          "question": "Under NEC 2020, the 110.16(B) permanent label is required on:",
+          "choices": [
+            "Every dwelling-unit panelboard",
+            "Service equipment rated 1200A or more, in other than dwelling units",
+            "All feeder-supplied equipment rated 1000A or more",
+            "Equipment over 1000V only"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The 2020 threshold is 1200A, service equipment, other than dwelling units. The 1000A, feeder-supplied version is the 2023 widening.",
+          "nec_ref": "110.16(B)"
+        },
+        {
+          "question": "Which item is NOT one of the four things the 110.16(B) label must show?",
+          "choices": [
+            "Nominal system voltage",
+            "Available fault current",
+            "Clearing time of the service devices",
+            "The installing contractor's license number"
+          ],
+          "answer_index": 3,
+          "explain_plain": "The four items are nominal voltage, available fault current, clearing time at that current, and the date applied.",
+          "nec_ref": "110.16(B)"
+        },
+        {
+          "question": "The arc-flash warning marking on a switchboard:",
+          "choices": [
+            "Replaces PPE once it is applied",
+            "Warns of the hazard; safe work practice still applies",
+            "Is required only above 1000V",
+            "May be handwritten on tape"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The marking warns. It does not replace safe work practice, and it must be durable and field-applied where the person approaching will see it.",
+          "nec_ref": "110.16(A)"
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-110.16-label.svg",
+          "alt": "A switchboard door carrying a red arc-flash warning label and, below it, the permanent service label with its four required items numbered: voltage, fault current, clearing time and date applied.",
+          "caption": "110.16: the warning everyone gets, and the label the big service gets.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 110.16(B): 110.16(B) now covers service equipment AND feeder-supplied equipment rated 1000A or more (was service equipment 1200A or more), and the permanent label must be an arc-flash label per applicable industry practice, with the date applied.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "110.16(A)",
+        "110.16(B)",
+        "110.21(B)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C1-110.17",
@@ -5969,8 +7422,8 @@
       "article": "110",
       "section": "110.17",
       "title": "Servicing and maintenance of equipment",
-      "plain_explanation": "This section is new in the 2023 NEC (it does not exist in NEC 2020, the edition Florida enforces), addresses the servicing and maintenance of electrical equipment: servicing is to be done by qualified persons, and replacement parts and components are to be suitable for the equipment — identified for it or the manufacturer's specified replacements. Experience alone is not the standard; the person doing the work needs the training and knowledge the task and its hazards require. The 2023 rule also says the work is done per the manufacturer's instructions or listing information, industry standards, or as approved by the AHJ, and replacement parts must be identified and come from the original manufacturer, be designed by an engineer experienced in replacement parts for that equipment, or be approved by the AHJ.\n\nNEC 2023 CHANGE:\n• 110.17: New section: only qualified, trained persons can service and maintain electrical equipment, and replacement parts have to be identified and verified to product standards. Only qualified persons, trained in servicing and maintaining equipment, can do that work.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "On service calls, replace failed components with parts identified for that equipment, and treat unfamiliar gear — especially commercial switchgear — as a qualified-persons-only job until the right person is on it.",
+      "plain_explanation": "Start with the edition: this section does not exist in NEC 2020, the edition Florida enforces today. 110.17 is new in NEC 2023, and it sets the rules for servicing and maintaining electrical equipment:\n• Servicing and maintenance are done by qualified persons. Experience alone is not the standard — the person doing the work needs the training and knowledge the task and its hazards require.\n• The work is done per the manufacturer's instructions or listing information, industry standards, or as approved by the AHJ.\n• Replacement parts and components must be suitable for the equipment: identified for it, from the original manufacturer, designed by an engineer experienced in replacement parts for that equipment, or approved by the AHJ.",
+      "on_the_job": "On service calls, Sharma already works this way: replace a failed component with the part identified for that equipment — the breaker type the Siemens panel is listed for, not one that happens to fit the stab. Treat unfamiliar gear, especially commercial switchgear, as a qualified-persons-only job until the right person is on it. On Florida permits applied for through Dec 30, 2026, this section is not yet the enforced text; it becomes the rule with the FBC 9th Ed. for permits applied for on or after Dec 31, 2026.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -5987,7 +7440,97 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/110-17",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Equipment gets serviced for decades after the install crew leaves. A will-fit part that almost matches, or a helper set loose on gear he was never trained on, turns a repair into the next failure — a lug that overheats, a breaker that will not trip, a fault nobody can clear. The rule ties the work to trained people and identified parts so a repair restores the equipment instead of quietly changing it.",
+      "exam_trap": "Two trap answers. First: “He has twenty years in the trade, so he is qualified to service anything.” The section measures training and knowledge for the task and its hazards, not years. Second: “A replacement part that physically fits is suitable.” It is not — unless it is identified for the equipment or comes through the original manufacturer, an experienced engineer, or the AHJ.",
+      "tables": [
+        {
+          "caption": "Where a replacement part may come from (110.17)",
+          "headers": [
+            "Source",
+            "What it means"
+          ],
+          "rows": [
+            [
+              "Identified for the equipment",
+              "The part is identified as suitable for that gear"
+            ],
+            [
+              "Original manufacturer",
+              "The maker's own specified replacement"
+            ],
+            [
+              "Experienced engineer",
+              "Designed by an engineer experienced in parts for that equipment"
+            ],
+            [
+              "AHJ approval",
+              "Approved by the authority having jurisdiction"
+            ]
+          ]
+        }
+      ],
+      "inspection_fails": [
+        "Equipment serviced by a person with no training on that equipment or its hazards.",
+        "Replacement breaker or component installed that is not identified for the equipment it went into.",
+        "Will-fit replacement part with no manufacturer, engineer or AHJ basis behind it.",
+        "Servicing done against the manufacturer's instructions or listing information."
+      ],
+      "page_quiz": [
+        {
+          "question": "Under 110.17, who may service and maintain electrical equipment?",
+          "choices": [
+            "Any employee with five years in the trade",
+            "Qualified persons, trained for the task and its hazards",
+            "Only the original installer",
+            "Anyone the customer approves"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The standard is training and knowledge for the task and its hazards. Experience alone does not make a person qualified.",
+          "nec_ref": "110.17"
+        },
+        {
+          "question": "A failed component must be replaced. Which replacement is acceptable under 110.17?",
+          "choices": [
+            "Any part that physically fits",
+            "The cheapest equivalent on the shelf",
+            "A part identified for the equipment, or from the OEM, an experienced engineer, or the AHJ",
+            "A used part of the same brand"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Suitable means identified for the equipment, the manufacturer's specified replacement, engineer-designed for it, or AHJ-approved.",
+          "nec_ref": "110.17"
+        },
+        {
+          "question": "On a Florida permit applied for in November 2026, is 110.17 the enforced servicing rule?",
+          "choices": [
+            "Yes — NEC 2023 is already enforced",
+            "No — Florida enforces NEC 2020, where 110.17 does not exist",
+            "Yes, but only in commercial work",
+            "Only if the AHJ asks for it"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Permits applied for through Dec 30, 2026 stay on NEC 2020. 110.17 arrives with the FBC 9th Ed. (NEC 2023) for permits applied for on or after Dec 31, 2026.",
+          "nec_ref": "110.17; FBC 9th Ed."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-110.17-parts-flow.svg",
+          "alt": "Decision flow for servicing work: a qualified-person gate at the top, then a replacement-part check that passes identified parts and stops will-fit parts with no maker, engineer or AHJ basis.",
+          "caption": "110.17 in one flow: the right person, then the right part.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 110.17: New section: only qualified, trained persons can service and maintain electrical equipment, and replacement parts have to be identified and verified to product standards. Only qualified persons, trained in servicing and maintaining equipment, can do that work.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "110.17",
+        "110.3(B)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C1-110.18",
@@ -7190,8 +8733,8 @@
       "article": "110",
       "section": "110.26(A)(1)",
       "title": "Depth of working space and the three conditions",
-      "plain_explanation": "Depth is read from the table in this section, which sets the distance by the voltage to ground and by what faces the worker. Condition 1 is exposed live parts on one side of the space with no live or grounded parts on the other side. Condition 2 puts a grounded surface, such as a concrete or masonry wall, on the far side. Condition 3 puts exposed live parts on both sides. At 0 to 150 volts to ground the table gives 3 ft for all three conditions; the conditions only change the depth at higher voltages — at 151 to 600 volts to ground the depths are 3 ft, 3 ft 6 in, and 4 ft. The worse the exposure across the aisle, the deeper the space must be once voltage makes the conditions diverge.\n\nTable 110.26(A)(1) — minimum depth of working space, by voltage to ground:\n• 0–150 V to ground — Condition 1: 3 ft · Condition 2: 3 ft · Condition 3: 3 ft\n• 151–600 V to ground — Condition 1: 3 ft · Condition 2: 3½ ft · Condition 3: 4 ft\n• 601–1000 V to ground — Condition 1: 3 ft · Condition 2: 4 ft · Condition 3: 5 ft",
-      "on_the_job": "For a house panel on a wood-framed wall with nothing live across the aisle, Condition 1 and its 3 ft depth for up to 150V to ground is the everyday case. A second panel facing the first makes it Condition 3 — still 3 ft at house voltage, because at 150V or less to ground all three conditions are 3 ft. Recheck the table when the voltage to ground goes above 150V.",
+      "plain_explanation": "Depth is read from Table 110.26(A)(1). The table sets the distance by two things: the voltage to ground, and what faces the worker across the space.\n• Condition 1: exposed live parts on one side of the space, with no live or grounded parts on the other side.\n• Condition 2: a grounded surface on the far side — concrete, brick, tile and masonry walls count as grounded.\n• Condition 3: exposed live parts on both sides of the space.\nAt 0–150 V to ground the table gives 3 ft for all three conditions, so at house voltage the condition never changes the depth. The conditions only start to matter above 150 V: at 151–600 V to ground the depths are 3 ft, 3½ ft and 4 ft, and at 601–1000 V they are 3 ft, 4 ft and 5 ft. The worse the exposure across the aisle, the deeper the space must be once voltage makes the conditions diverge.",
+      "on_the_job": "For a house panel on a wood-framed wall with nothing live across the aisle, Condition 1 and its 3 ft depth — at up to 150 V to ground — is the everyday case. A second panel facing the first makes it Condition 3, and it is still 3 ft at house voltage, because at 150 V or less to ground all three conditions read 3 ft. Where crews get caught is the small commercial panel: a 480Y/277 V panelboard facing a block wall is 277 V to ground in Condition 2, so the depth is 3½ ft — and the tape comes out at rough-in, not at inspection. Recheck the table whenever the voltage to ground goes above 150 V.",
       "sharma_note": "",
       "figure_idea": "Three aisle cross-sections labelled Condition 1, 2 and 3, showing what is on the far wall in each and an arrow pointing to the table for the depth.",
       "related_ids": [
@@ -7205,7 +8748,102 @@
       "verified": true,
       "prev_id": "C1-110.26(A)",
       "next_id": "C1-110.26(A)(2)",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1,
+      "why_it_exists": "Depth is the worker's reaction room. What stands across the aisle is what the worker falls against or reaches toward when something goes wrong: nothing at all (Condition 1), a grounded wall that completes the shock path (Condition 2), or more live parts (Condition 3). The higher the voltage to ground, the more distance the Code buys back — which is why the table's rows split only above 150 V.",
+      "exam_trap": "The trap: \"Two panels face each other, so the depth must be 4 ft — that is Condition 3.\" Not at house voltage. At 0–150 V to ground, Conditions 1, 2 and 3 are all 3 ft; the 4 ft Condition 3 depth starts in the 151–600 V row. Read the row first, then the condition.",
+      "inspection_fails": [
+        "Working space 3 ft deep in front of a 480Y/277 V panelboard facing a concrete block wall — Condition 2 at 277 V to ground requires 3½ ft.",
+        "Depth measured from the wall face instead of from the enclosure front or the exposed live parts.",
+        "Condition 3 aisle, live parts on both sides, taped out at the Condition 1 depth on a 480 V job.",
+        "Material staged inside the taped working-space depth before the inspection."
+      ],
+      "tables": [
+        {
+          "caption": "Table 110.26(A)(1): minimum depth of working space (NEC 2020)",
+          "headers": [
+            "V to ground",
+            "Cond 1",
+            "Cond 2",
+            "Cond 3"
+          ],
+          "rows": [
+            [
+              "0–150 V",
+              "3 ft",
+              "3 ft",
+              "3 ft"
+            ],
+            [
+              "151–600 V",
+              "3 ft",
+              "3½ ft",
+              "4 ft"
+            ],
+            [
+              "601–1000 V",
+              "3 ft",
+              "4 ft",
+              "5 ft"
+            ]
+          ],
+          "note": "Condition 1: nothing live or grounded across the aisle. Condition 2: grounded parts across (concrete, brick and tile count as grounded). Condition 3: exposed live parts on both sides."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-110.26A1-depth-conditions.svg",
+          "alt": "Three aisle cross-sections drawn to scale at 151 to 600 volts to ground: Condition 1 with nothing across the aisle at 3 feet, Condition 2 with a grounded concrete wall across at 3 and a half feet, and Condition 3 with live parts on both sides at 4 feet.",
+          "caption": "What is across the aisle sets the condition; the voltage row sets the depth.",
+          "w": 900,
+          "h": 1600
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A 480Y/277 V panelboard faces a grounded concrete block wall. Minimum working-space depth?",
+          "choices": [
+            "3 ft",
+            "3½ ft",
+            "4 ft",
+            "5 ft"
+          ],
+          "answer_index": 1,
+          "explain_plain": "277 V to ground is the 151–600 V row, and a grounded wall across the aisle is Condition 2: 3½ ft.",
+          "nec_ref": "Table 110.26(A)(1)"
+        },
+        {
+          "question": "Two 120/240 V house panels face each other across an aisle. Condition and depth?",
+          "choices": [
+            "Condition 3, 4 ft",
+            "Condition 3, 3 ft",
+            "Condition 2, 3 ft",
+            "Condition 1, 3 ft"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Live parts on both sides is Condition 3 — but at 0–150 V to ground every condition is 3 ft.",
+          "nec_ref": "Table 110.26(A)(1)"
+        },
+        {
+          "question": "At 601–1000 V to ground, the Condition 2 depth is:",
+          "choices": [
+            "3 ft",
+            "3½ ft",
+            "4 ft",
+            "5 ft"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The 601–1000 V row reads 3 ft, 4 ft and 5 ft for Conditions 1, 2 and 3.",
+          "nec_ref": "Table 110.26(A)(1)"
+        }
+      ],
+      "code_refs": [
+        "110.26(A)(1)",
+        "Table 110.26(A)(1)"
+      ]
     },
     {
       "id": "C1-110.26(A)(2)",
@@ -7331,8 +8969,8 @@
       "article": "110",
       "section": "110.26(A)(3)",
       "title": "Height of working space",
-      "plain_explanation": "The working space must extend from the floor or platform up to a height of 6½ ft, or the height of the equipment itself, whichever is greater. Two everyday exceptions temper the number: in existing buildings, smaller service equipment or panelboards (200A or less, in dwelling-related installations) that do not meet the height may be permitted where the AHJ allows, and meters and meter sockets may project into the space within limits. Equipment above the space — a sprinkler pipe or a duct that is not electrical — is a dedicated-space question under 110.26(E), not a reason to shrink the height.\n• Height: 6½ ft minimum, or the height of the equipment if the equipment is taller",
-      "on_the_job": "Six and a half feet is taller than most helpers pace it off — a standard door header sits right at the line. Check the height before a soffit or duct gets framed over a panel location, and the existing-dwelling exception applies only to existing dwelling units, never to new construction., not assumptions.",
+      "plain_explanation": "The working space in front of equipment must run from the floor or platform up to a height of 6½ ft, or to the height of the equipment itself, whichever is greater:\n• Height: 6½ ft minimum, or the height of the equipment if the equipment is taller.\n• One everyday exception tempers the number: in existing buildings, smaller service equipment or panelboards — 200A or less, in dwelling-related installations — that do not meet the height may be permitted where the AHJ allows.\n• Meters and meter sockets may project into the space within limits.\nEquipment above the space — a sprinkler pipe or a duct that is not electrical — is a dedicated-space question under 110.26(E), not a reason to shrink the height.",
+      "on_the_job": "Six and a half feet is taller than most helpers pace it off — a standard door header sits right at the line. On a new Marion Oaks house, tape the height at the garage panel location before anything is framed: if a soffit or a duct is planned over that wall, it gets caught on paper, not at final. And the reduced-height exception is narrow — it applies only to existing dwelling units, never to new construction.",
       "sharma_note": "",
       "figure_idea": "A panel elevation with a 6½ ft dimension line from floor to the top of the working space and a duct drawn above the line.",
       "related_ids": [
@@ -7344,7 +8982,95 @@
       "verified": true,
       "prev_id": "C1-110.26(A)(2)",
       "next_id": "C1-110.26(A)(4)",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "The height is work room and escape room at head level. A worker standing on a step in front of live parts, ducking under a soffit, is one startle away from falling into the bus. Framing and ductwork get built once; if they close over the panel location, every service call for the life of the building happens in a crouch.",
+      "exam_trap": "The trap answer is that the height is always exactly 6½ ft. It is 6½ ft or the height of the equipment, whichever is greater — tall switchgear needs its full height cleared. The second trap is using the existing-building allowance on a new build: that allowance is for existing dwelling-related equipment of 200A or less, and only where the AHJ permits it.",
+      "tables": [
+        {
+          "caption": "How high the working space must run",
+          "headers": [
+            "Case",
+            "Required height"
+          ],
+          "rows": [
+            [
+              "Standard equipment",
+              "6½ ft from the floor or platform"
+            ],
+            [
+              "Equipment taller than 6½ ft",
+              "The height of the equipment"
+            ],
+            [
+              "Existing building, dwelling-related, 200A or less",
+              "Less may be permitted — only where the AHJ allows"
+            ]
+          ],
+          "note": "Meters and meter sockets may project into the space within limits. Foreign pipes and ducts above the space are a 110.26(E) dedicated-space question."
+        }
+      ],
+      "inspection_fails": [
+        "Soffit framed at 6 ft over a new panel location, closing down the working-space height.",
+        "Duct dropped through the space above a panel in new construction.",
+        "Existing-dwelling reduced-height allowance claimed on a new build.",
+        "Tall switchboard installed with the working space stopped at 6½ ft, short of the equipment's own height."
+      ],
+      "page_quiz": [
+        {
+          "question": "Minimum height of the working space in front of a standard panelboard?",
+          "choices": [
+            "6 ft",
+            "6½ ft",
+            "7 ft",
+            "Whatever the ceiling allows"
+          ],
+          "answer_index": 1,
+          "explain_plain": "6½ ft, or the height of the equipment, whichever is greater.",
+          "nec_ref": "110.26(A)(3)"
+        },
+        {
+          "question": "A switchboard stands 7 ft tall. The working space must extend up to:",
+          "choices": [
+            "6½ ft",
+            "6 ft above the equipment",
+            "7 ft — the height of the equipment",
+            "The structural ceiling"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Whichever is greater: 6½ ft or the height of the equipment itself. A 7 ft board needs the full 7 ft.",
+          "nec_ref": "110.26(A)(3)"
+        },
+        {
+          "question": "The reduced-height allowance for smaller equipment applies to:",
+          "choices": [
+            "Any dwelling unit",
+            "New construction where space is tight",
+            "Existing buildings, 200A or less, where the AHJ permits",
+            "Commercial tenant spaces"
+          ],
+          "answer_index": 2,
+          "explain_plain": "It is an existing-buildings allowance for dwelling-related service equipment and panelboards of 200A or less — never a new-construction shortcut.",
+          "nec_ref": "110.26(A)(3)"
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-110.26A3-height.svg",
+          "alt": "Elevation of a panel on a wall with the gold working space running from the floor to a dimensioned 6 and a half foot line, and a duct drawn above that line in the dedicated space.",
+          "caption": "The height runs from the floor to 6½ ft — or to the top of the gear, if the gear is taller.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "110.26(A)(3)",
+        "110.26(E)",
+        "Table 110.26(A)(1)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C1-110.26(A)(4)",
@@ -7352,8 +9078,8 @@
       "article": "110",
       "section": "110.26(A)(4)",
       "title": "Limited access — working space above ceilings and in crawl spaces",
-      "plain_explanation": "Where equipment of 1000V or less that is likely to need examination, adjustment, servicing or maintenance while energized has to sit in a limited-access space (above a lay-in ceiling, in a crawl space), all of these apply. (a) Above a lay-in ceiling, the opening must be at least 22 in. x 22 in. In a crawl space, the accessible opening must be at least 22 in. x 30 in. (b) The working space width is the equipment width or 30 in., whichever is greater. (c) Enclosure doors and hinged panels must open at least 90 degrees. (d) The depth in front must meet Table 110.26(A)(1). The maximum height is whatever is needed to install the equipment, and a horizontal ceiling structural member or access panel is permitted in the space. NEC 2023 retains this rule; its paragraph number there is to be confirmed against the printed 2023 book.",
-      "on_the_job": "Air handler disconnects and RTU or attic equipment above T-bar: plan the 22x22 tile and the 90-degree door swing before rough-in.",
+      "plain_explanation": "Where equipment of 1000V or less that is likely to need examination, adjustment, servicing or maintenance while energized has to sit in a limited-access space — above a lay-in ceiling, or in a crawl space — 110.26(A)(4) adjusts the usual working-space rules to the space that exists:\n• The access opening has a minimum size, with one minimum above a lay-in ceiling and a larger one for a crawl space.\n• The working-space width is the width of the equipment or a stated minimum, whichever is greater.\n• Enclosure doors and hinged panels must open to a stated minimum angle.\n• The depth in front of the equipment must meet Table 110.26(A)(1).\n• The height is capped at what is needed to install the equipment, and a horizontal ceiling structural member or an access panel is permitted in the space.\nThe specific sizes behind those minimums are held off this page until they are checked against the printed book — see the Check in print box.",
+      "on_the_job": "Air handler disconnects and rooftop-unit equipment above T-bar ceilings are the everyday Florida case: plan the ceiling access and the door swing before rough-in, while the grid and the equipment layout can still move. A disconnect that lands where its door cannot open, or where nobody can get squarely in front of it, becomes a service call nobody can work safely — and a write-up nobody can fix cheaply once the ceiling is in.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -7365,7 +9091,106 @@
       "unverified_reason": "New page written 2026-11-25 from Mike Holt's recheck draft (ruling 3). Verified=false until checked against the printed NEC 2020.",
       "prev_id": "C1-110.26(A)(3)",
       "next_id": "C1-110.26(B-D)",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Gear above ceilings and in crawl spaces still gets serviced, often energized — an air handler disconnect does not stop failing because it is hard to reach. Without access rules, the opening is whatever the ceiling grid happened to leave, the door cannot swing, and the tech works the gear lying across a grid wire with no room to pull back from a fault.",
+      "exam_trap": "The trap answer is that the full standard working-space height applies unchanged above a ceiling. It does not: (A)(4) caps the height at what is needed to install the equipment and lets a horizontal ceiling structural member sit in the space. The second trap is quoting the opening and width numbers from memory — on this page, those numbers wait for the printed book.",
+      "tables": [
+        {
+          "caption": "110.26(A)(4) — what the rule controls (sizes live in the printed book)",
+          "headers": [
+            "Item",
+            "What the rule does"
+          ],
+          "rows": [
+            [
+              "Access opening",
+              "Sets a minimum size — one above a lay-in ceiling, a larger one in a crawl space"
+            ],
+            [
+              "Working-space width",
+              "The equipment width or a stated minimum, whichever is greater"
+            ],
+            [
+              "Doors and hinged panels",
+              "Must open to a stated minimum angle"
+            ],
+            [
+              "Depth in front",
+              "Must meet Table 110.26(A)(1)"
+            ],
+            [
+              "Height",
+              "Only what is needed to install the equipment"
+            ]
+          ],
+          "note": "This page is not verified. The minimum sizes and the door angle are deliberately not printed here — check them in the printed NEC 2020."
+        }
+      ],
+      "inspection_fails": [
+        "Disconnect above a lay-in ceiling behind an access opening too small to reach and service it — below the 110.26(A)(4) minimum.",
+        "Enclosure door that cannot open to the required angle because the ceiling grid or a structural member blocks the swing.",
+        "Equipment set in a crawl space with no real working width in front of it.",
+        "Limited-access equipment placed where the depth in front falls short of Table 110.26(A)(1)."
+      ],
+      "page_quiz": [
+        {
+          "question": "Under 110.26(A)(4), the depth of working space in front of equipment in a limited-access space must meet:",
+          "choices": [
+            "Table 110.26(A)(1)",
+            "Whatever the ceiling grid allows",
+            "Half the standard depth",
+            "No requirement — the space is limited"
+          ],
+          "answer_index": 0,
+          "explain_plain": "Limited access changes the opening, width, door swing and height — the depth in front still comes from Table 110.26(A)(1).",
+          "nec_ref": "110.26(A)(4)"
+        },
+        {
+          "question": "The height of the working space above a lay-in ceiling is:",
+          "choices": [
+            "Always the full standard height",
+            "Capped at what is needed to install the equipment",
+            "Set by the ceiling tile size",
+            "Not addressed by the Code"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The maximum height is whatever is needed to install the equipment, and a horizontal ceiling structural member or access panel may sit in the space.",
+          "nec_ref": "110.26(A)(4)"
+        },
+        {
+          "question": "Which spaces does 110.26(A)(4) address?",
+          "choices": [
+            "Electrical rooms only",
+            "Above lay-in ceilings and in crawl spaces",
+            "Outdoor equipment pads",
+            "Bathrooms and clothes closets"
+          ],
+          "answer_index": 1,
+          "explain_plain": "It is the limited-access rule: equipment above a lay-in ceiling or in a crawl space that still needs servicing while energized.",
+          "nec_ref": "110.26(A)(4)"
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-110.26A4-limited-access.svg",
+          "alt": "Section view of a disconnect above a lay-in ceiling with a gold working space, an access opening in the ceiling and a swinging door, every dimension labeled only by its governing reference, under a red unverified banner.",
+          "caption": "Limited access changes the opening, width, swing and height — the sizes wait for the printed book.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "110.26(A)(4)",
+        "Table 110.26(A)(1)"
+      ],
+      "uncertain": [
+        "Values removed from the draft this page was written from: it stated an access opening of 22 in. × 22 in. above a lay-in ceiling, 22 in. × 30 in. in a crawl space, a working-space width minimum of 30 in., and enclosure doors opening at least 90 degrees. Those values have not been checked against the printed NEC 2020, so they are not stated as rules anywhere on this page — check in print before relying on any of them.",
+        "This page is not verified: it was written from a recheck draft and has not been checked against the printed NEC 2020. Confirm the exact printed wording of 110.26(A)(4) in print.",
+        "The draft also stated that NEC 2023 retains this rule, with its paragraph number there to be confirmed against the printed 2023 book. That is not confirmed, so this page's edition note uses the no-change form — check in print."
+      ],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C1-110.26(B-D)",
@@ -7490,8 +9315,8 @@
       "article": "110",
       "section": "110.26(C)",
       "title": "Entrance to and exit from working space",
-      "plain_explanation": "There must be at least one entrance to and exit from the working space, sized and arranged so a worker can get in, work, and get out without squeezing past the equipment. For large equipment — rated 1200A or more and over 6 ft wide, containing overcurrent, switching or control devices — there must be one entrance to and egress from the working space at each end, at least 24 in. wide and 6½ ft high; a single entrance is permitted where the egress is unobstructed, or where the working space depth is doubled per Table 110.26(A)(1). Doors serving these spaces that open into the working-space area are part of the rule's concern: personnel doors where equipment rated 800A or more containing overcurrent, switching or control devices is installed, personnel doors intended for entrance to and egress from the working space that are less than 25 ft from the nearest edge of the working space must open in the direction of egress and have listed panic hardware. of the equipment must open in the direction of exit travel and be fitted with listed panic hardware, so a worker reacting to an arc event pushes out instead of pulling a door against the blast.",
-      "on_the_job": "Houses rarely trip the 1200A rule, but the one-entrance principle applies everywhere: never let a panel room get framed so the only way out is past the gear. On commercial jobs with big switchboards, count the entrances at layout, and check the door swing and panic hardware before the doors are hung.",
+      "plain_explanation": "There must be at least one entrance to and exit from the working space, sized and arranged so a worker can get in, work, and get out without squeezing past the equipment.\n• Large equipment — rated 1200A or more and over 6 ft wide, containing overcurrent, switching or control devices — needs one entrance to and egress from the working space at each end of the space.\n• Each of those entrances is at least 24 in. wide and 6½ ft high.\n• A single entrance is permitted where the egress is unobstructed, or where the working space depth is doubled per Table 110.26(A)(1).\n• Personnel doors: where equipment rated 800A or more containing overcurrent, switching or control devices is installed, a personnel door intended for entrance to and egress from the working space that is less than 25 ft from the nearest edge of the working space must open in the direction of egress and have listed panic hardware — so a worker reacting to an arc event pushes out instead of pulling a door against the blast.",
+      "on_the_job": "Houses rarely trip the 1200A rule, but the one-entrance principle applies everywhere: never let a panel room get framed so the only way out is past the gear. On a Winter Park commercial job, the 1600A switchboard lineup is over 6 ft wide, so it gets a personnel door at each end of the working space — each at least 24 in. wide and 6½ ft high — and the doors swing out with listed panic hardware. Count the entrances at layout, and check the door swing and panic hardware before the doors are hung.",
       "sharma_note": "",
       "figure_idea": "A switchboard room plan: a wide lineup with a door at each end of the working space, arrows showing exit travel away from the gear.",
       "related_ids": [
@@ -7503,7 +9328,104 @@
       "verified": true,
       "prev_id": "C1-110.26(B-D)",
       "next_id": "C1-110.26(D)",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1,
+      "why_it_exists": "Working-space rules are escape rules. When gear faults, the worker in front of it has a fraction of a second and one direction to move: away. A single pinched entrance, or a door that must be pulled toward the blast, turns an arc event into a trap. The each-end rule exists because a lineup over 6 ft wide can block the near exit with the fault itself.",
+      "exam_trap": "The trap: \"The switchboard room has a door, so entrance and egress are covered.\" For equipment rated 1200A or more and over 6 ft wide, one door is not enough — there must be an entrance at each end of the working space, unless the egress is unobstructed or the depth is doubled. The companion trap is the personnel door near big gear that swings in and carries a knob: within 25 ft of the working space of equipment rated 800A or more, the door must open in the direction of egress and have listed panic hardware.",
+      "inspection_fails": [
+        "Switchboard rated 1200A or more and over 6 ft wide with an entrance at only one end of the working space.",
+        "Personnel door within 25 ft of equipment rated 800A or more that swings into the room and has no listed panic hardware.",
+        "Entrance to the working space at large equipment less than 24 in. wide or less than 6½ ft high.",
+        "Working-space entrance blocked by stored material — no unobstructed way in or out."
+      ],
+      "tables": [
+        {
+          "caption": "Entrances at a glance",
+          "headers": [
+            "Case",
+            "Requirement",
+            "Section"
+          ],
+          "rows": [
+            [
+              "Any working space",
+              "At least one entrance in and out",
+              "110.26(C)(1)"
+            ],
+            [
+              "1200A or more, over 6 ft wide",
+              "Entrance at each end, 24 in. x 6½ ft min",
+              "110.26(C)(2)"
+            ],
+            [
+              "Single entrance, large equipment",
+              "Only if egress unobstructed or depth doubled",
+              "110.26(C)(2)"
+            ],
+            [
+              "Personnel door, 800A or more, within 25 ft",
+              "Opens out, listed panic hardware",
+              "110.26(C)(3)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-110.26C-entrances.svg",
+          "alt": "Plan view of a switchboard room with a wide switchboard, a gold working space in front of it, and a personnel door at each end of the space swinging out with egress arrows and 24 inch minimum dimension lines.",
+          "caption": "Large equipment: an entrance at each end of the working space.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A switchboard is rated 1600A and is 8 ft wide. With no exceptions applied, its working space needs:",
+          "choices": [
+            "One entrance, at either end",
+            "One entrance at each end",
+            "Two entrances, both at the same end",
+            "No entrance — it is indoors"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Equipment rated 1200A or more and over 6 ft wide needs an entrance to and egress from the working space at each end.",
+          "nec_ref": "110.26(C)(2)"
+        },
+        {
+          "question": "What is the minimum size of each of those entrances?",
+          "choices": [
+            "18 in. wide by 6 ft high",
+            "24 in. wide by 6½ ft high",
+            "30 in. wide by 6½ ft high",
+            "24 in. wide by 7 ft high"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Each entrance at large equipment is at least 24 in. wide and 6½ ft high.",
+          "nec_ref": "110.26(C)(2)"
+        },
+        {
+          "question": "A personnel door is 10 ft from the working space of a 1000A switchboard. The door must:",
+          "choices": [
+            "Swing in, for security",
+            "Open in the direction of egress and have listed panic hardware",
+            "Be kept locked at all times",
+            "Have a self-closer and a knob"
+          ],
+          "answer_index": 1,
+          "explain_plain": "A personnel door within 25 ft of the working space of equipment rated 800A or more opens in the direction of egress and carries listed panic hardware.",
+          "nec_ref": "110.26(C)(3)"
+        }
+      ],
+      "code_refs": [
+        "110.26(C)(1)",
+        "110.26(C)(2)",
+        "110.26(C)(3)",
+        "Table 110.26(A)(1)"
+      ]
     },
     {
       "id": "C1-110.26(D)",
@@ -7989,8 +9911,8 @@
       "article": "110",
       "section": "110.28",
       "title": "Enclosure types",
-      "plain_explanation": "Enclosures are selected by type for the environment they will live in, and this section's table matches enclosure types to the exposures they are built to withstand — indoor dust and dripping liquid, outdoor rain and sleet, hose-directed water, corrosion, and the like. The common field types run from a general indoor enclosure, through the outdoor rain-tight type crews see on house disconnects, to the corrosion-resistant types used in washdown and coastal work. The type marked on the enclosure, not its appearance, is what it is rated for.\n\nThe types Sharma meets most, from the section's table:\n• Type 1 — indoor, general purpose; contact and falling-dirt protection\n• Type 3R — outdoor; rainproof and sleet-resistant — the standard house disconnect and meter enclosure type\n• Type 4 — watertight, including against hose-directed water\n• Type 4X — Type 4 performance plus corrosion resistance — washdown and coastal work\n• Type 12 — indoor industrial; dust, lint, and dripping noncorrosive liquids\nA higher-duty type may substitute for a lower one in many cases, but the marked type is the rating — never the paint or the shape.",
-      "on_the_job": "Match the type to the real exposure: indoor-type equipment does not go on an exterior Florida wall, and a corroded or wrong-type enclosure found on a service call is a replacement item, not a paint job.",
+      "plain_explanation": "Enclosures are selected by type for the environment they will live in. Table 110.28 matches each type to the exposures it is built to withstand — indoor dust and dripping liquid, outdoor rain and sleet, hose-directed water, corrosion, and the like.\nThe common field types run from a general indoor enclosure, through the rain-tight type crews see on house disconnects, to the corrosion-resistant types used in washdown and coastal work.\nThe type marked on the enclosure — not its appearance — is what it is rated for. A higher-duty type may substitute for a lower one in many cases, but the marked type is the rating: never the paint, never the shape.",
+      "on_the_job": "Match the type to the real exposure. On a coastal Brevard County service, the meter enclosure and disconnect on the exterior wall are Type 3R at minimum — rainproof and sleet-resistant — and corrosion-resistant Type 4X earns its cost where salt spray reaches the gear. On a service call, a corroded or wrong-type enclosure is a replacement item, not a paint job: the rating was the marked type, and the marking is gone with the metal.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -8000,7 +9922,107 @@
       "verified": true,
       "prev_id": "C1-110.27",
       "next_id": "C1-110.31",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "An enclosure is the only thing between live parts and the weather the building actually gets. Put an indoor type on a Florida exterior wall and rain and salt air do the rest: rusted cans, water in the disconnect, failed gear. The type system exists so the match between box and exposure is a marking you can check, not a guess.",
+      "inspection_fails": [
+        "Indoor Type 1 enclosure installed on an exterior wall — not rated for rain.",
+        "Disconnect enclosure corroded through in coastal service — the type was never matched to the exposure; replacement required.",
+        "Unmarked enclosure accepted as rainproof on appearance — no type marking, no rating."
+      ],
+      "exam_trap": "The trap: 'Type 4 is watertight, so it must handle the coastal job.' Watertight is not corrosion-resistant. Type 4 stops hose-directed water; the corrosion resistance that salt air demands is Type 4X. Reading one type's strength as another's is how the wrong can gets set.",
+      "tables": [
+        {
+          "caption": "The types Sharma meets most (Table 110.28)",
+          "headers": [
+            "Type",
+            "Where",
+            "Built to withstand"
+          ],
+          "rows": [
+            [
+              "Type 1",
+              "Indoor, general purpose",
+              "Contact and falling dirt"
+            ],
+            [
+              "Type 3R",
+              "Outdoor — house disconnects and meters",
+              "Rain and sleet"
+            ],
+            [
+              "Type 4",
+              "Watertight duty",
+              "Hose-directed water"
+            ],
+            [
+              "Type 4X",
+              "Washdown and coastal work",
+              "Type 4 performance plus corrosion"
+            ],
+            [
+              "Type 12",
+              "Indoor industrial",
+              "Dust, lint, dripping noncorrosive liquids"
+            ]
+          ],
+          "note": "A higher-duty type may substitute for a lower one in many cases — the marked type is still the rating."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-110.28-types.svg",
+          "alt": "Three enclosures compared side by side: a Type 1 indoor enclosure, a Type 3R outdoor rainproof disconnect, and a Type 4X corrosion-resistant enclosure for coastal work.",
+          "caption": "Match the marked type to the exposure it will live in.",
+          "w": 900,
+          "h": 1360
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "The standard enclosure type for a house disconnect and meter is:",
+          "choices": [
+            "Type 1",
+            "Type 3R",
+            "Type 12",
+            "Type 4X"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Type 3R is the outdoor rainproof, sleet-resistant type crews see on house disconnects and meter enclosures.",
+          "nec_ref": "110.28"
+        },
+        {
+          "question": "What does Type 4X add to Type 4?",
+          "choices": [
+            "A higher voltage rating",
+            "Corrosion resistance",
+            "A larger cabinet",
+            "A lockable door"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Type 4X is Type 4 watertight performance plus corrosion resistance — the washdown and coastal type.",
+          "nec_ref": "Table 110.28"
+        },
+        {
+          "question": "An enclosure's rating is decided by:",
+          "choices": [
+            "Its paint and shape",
+            "What the supplier calls it",
+            "The type marked on the enclosure",
+            "The inspector's preference"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The marked type is the rating — never the paint or the shape.",
+          "nec_ref": "110.28"
+        }
+      ],
+      "code_refs": [
+        "110.28",
+        "Table 110.28"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C1-110.31",

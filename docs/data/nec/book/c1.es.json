@@ -1495,8 +1495,8 @@
       "article": "100",
       "section": "100",
       "title": "Conductores — desnudo, cubierto, aislado y el neutro",
-      "plain_explanation": "El Artículo 100 clasifica los conductores por lo que lleva el metal. Un conductor desnudo no tiene cubierta ni aislamiento. Un conductor cubierto tiene una cubierta que no se reconoce como aislamiento — puede proteger contra el clima o la abrasión, pero no le da al cable una clasificación de aislamiento. Un conductor aislado tiene un aislamiento reconocido para el uso, que es el cable normal de construcción que maneja la cuadrilla. El conductor neutro es el conductor conectado al punto neutro del sistema, destinado a llevar corriente en condiciones normales; el punto neutro es el punto común de una conexión en estrella (Y), o el punto medio de un sistema monofásico o de DC, desde el cual se referencian los conductores del circuito.",
-      "on_the_job": "No trate un conductor cubierto como aislado cuando una regla exige aislamiento — la cubierta de la bajada de acometida es el ejemplo clásico. Y el neutro es un conductor de trabajo que lleva corriente, no una tierra de repuesto: va a la barra de neutros y solo se une a tierra donde el Código permite la unión.",
+      "plain_explanation": "El Artículo 100 clasifica los conductores por lo que lleva el metal:\n• Conductor desnudo: sin cubierta ni aislamiento.\n• Conductor cubierto: una cubierta que no se reconoce como aislamiento. Puede proteger contra el clima o la abrasión, pero no le da al cable una clasificación de aislamiento.\n• Conductor aislado: un aislamiento reconocido para el uso — el cable normal de construcción que maneja la cuadrilla.\n• Conductor neutro: el conductor conectado al punto neutro del sistema, destinado a llevar corriente en condiciones normales.\n• Punto neutro: el punto común de una conexión en estrella (Y), o el punto medio de un sistema monofásico o de DC, desde el cual se referencian los conductores del circuito.",
+      "on_the_job": "En una acometida aérea a una casa de Florida, la cubierta de la bajada es protección contra el clima, no aislamiento: no trate un conductor cubierto como aislado cuando una regla exige aislamiento. Dentro del edificio, el neutro es un conductor de trabajo que lleva corriente, no una tierra de repuesto — va a la barra de neutros y se une a tierra solo donde el Código permite la unión, en la acometida y no en cada subtablero aguas abajo.",
       "sharma_note": "",
       "figure_idea": "Tres cortes de cable lado a lado: metal desnudo, una cubierta contra el clima y aislamiento completo, con el punto neutro de una estrella (Y) dibujado al lado.",
       "related_ids": [
@@ -1508,7 +1508,101 @@
       "verified": true,
       "prev_id": "C1-100-AMPACITY",
       "next_id": "C1-100-VOLTAGE-FAMILY",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "La palabra de la definición decide qué reglas aplican. Trate un conductor cubierto como aislado y habrá puesto un cable sin clasificación de aislamiento donde el Código contaba con aislamiento — la cubierta de la bajada de acometida es el ejemplo clásico. Trate el neutro como una tierra de repuesto y habrá puesto la corriente normal de carga en un camino que nunca fue pensado para llevarla.",
+      "exam_trap": "La respuesta trampa es «cubierto significa aislado — algo lleva sobre el metal». Una cubierta que no se reconoce como aislamiento no gana ninguna clasificación de aislamiento, se vea como se vea. La trampa en espejo: «el neutro es básicamente una tierra». El neutro lleva la corriente normal de retorno; el camino de puesta a tierra es otro conductor con otro trabajo.",
+      "tables": [
+        {
+          "caption": "Tres conductores, tres palabras distintas",
+          "headers": [
+            "Conductor",
+            "Sobre el metal",
+            "¿Clasificación de aislamiento?"
+          ],
+          "rows": [
+            [
+              "Desnudo",
+              "Nada en absoluto",
+              "No"
+            ],
+            [
+              "Cubierto",
+              "Una cubierta no reconocida como aislamiento",
+              "No"
+            ],
+            [
+              "Aislado",
+              "Aislamiento reconocido",
+              "Sí"
+            ]
+          ],
+          "note": "El neutro se define por su trabajo — conectado al punto neutro y llevando corriente — no por lo que lleva el metal."
+        }
+      ],
+      "inspection_fails": [
+        "Conductor cubierto de acometida tratado como aislado donde la regla exige un conductor aislado.",
+        "Neutro conectado a la barra de tierra en un subtablero, poniendo la corriente normal de carga en el camino de tierra.",
+        "Conductor desnudo instalado donde se requiere un conductor aislado.",
+        "Neutro usado como conductor de puesta a tierra de equipos en un circuito ramal."
+      ],
+      "page_quiz": [
+        {
+          "question": "Un conductor cubierto se describe mejor como:",
+          "choices": [
+            "Aislado, con una chaqueta delgada",
+            "Cubierto con un material que no se reconoce como aislamiento",
+            "Siempre un conductor de cobre desnudo",
+            "Otro nombre para el neutro"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La cubierta puede proteger contra el clima o la abrasión, pero no se reconoce como aislamiento y no gana ninguna clasificación de aislamiento.",
+          "nec_ref": "Artículo 100 — Conductor cubierto"
+        },
+        {
+          "question": "El punto neutro de un sistema en estrella (Y) es:",
+          "choices": [
+            "La conexión al electrodo de tierra",
+            "El punto común desde el cual se referencian los conductores del circuito",
+            "El punto medio de un solo devanado de fase",
+            "Cualquier conductor con aislamiento blanco"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Es el punto común de la conexión en estrella (o el punto medio de un sistema monofásico o de DC) desde el cual se referencian los conductores del circuito.",
+          "nec_ref": "Artículo 100 — Punto neutro"
+        },
+        {
+          "question": "El trabajo normal del conductor neutro es:",
+          "choices": [
+            "Llevar corriente solo en fallas",
+            "Llevar corriente en condiciones normales",
+            "Unir todas las envolventes entre sí",
+            "Servir como conductor de tierra de repuesto"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El neutro está conectado al punto neutro y está destinado a llevar corriente en condiciones normales — es un conductor de trabajo.",
+          "nec_ref": "Artículo 100 — Conductor neutro"
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-100-CONDUCTORS-cross-sections.svg",
+          "alt": "Tres cortes de cable lado a lado — metal desnudo, una cubierta delgada contra el clima y aislamiento completo reconocido — con un diagrama en estrella (Y) debajo que muestra el punto neutro y el conductor neutro saliendo de él.",
+          "caption": "Lo que lleva el metal — y de dónde sale el neutro.",
+          "w": 900,
+          "h": 1340
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "Artículo 100 — Conductor desnudo",
+        "Artículo 100 — Conductor cubierto",
+        "Artículo 100 — Conductor aislado",
+        "Artículo 100 — Conductor neutro",
+        "Artículo 100 — Punto neutro"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C1-100-VOLTAGE-FAMILY",
@@ -1887,8 +1981,8 @@
       "article": "100",
       "section": "100",
       "title": "Equipo, equipo de utilización, envolventes y accesorios",
-      "plain_explanation": "Equipo es la palabra general del Código para los aparatos de una instalación — accesorios, dispositivos, electrodomésticos, luminarias, máquinas y similares, lleven corriente o solo sostengan las partes que la llevan. El equipo de utilización es la parte más reducida que realmente usa la energía eléctrica para trabajar: calefacción, iluminación, enfriamiento, procesamiento de datos y trabajos parecidos. Una envolvente es la caja o carcasa alrededor del aparato que mantiene a las personas alejadas de las partes vivas y protege el contenido; envuelto describe el aparato que tiene esa caja. Un accesorio (fitting) es una pieza — una contratuerca, un buje o similar — que hace un trabajo mecánico y no eléctrico. Una envolvente tipo handhole es una pequeña envolvente de acceso bajo el nivel del suelo, colocada a ras o enterrada, cuya tapa el trabajador retira a mano para llegar a los conductores de adentro.",
-      "on_the_job": "Llamar algo «equipo» es lo que trae consigo las reglas del Artículo 110 — aprobación, espacio de trabajo, protección. Los handholes son los puntos de empalme enterrados en el trabajo de sitio: son envolventes, así que los empalmes de adentro deben hacerse con métodos listados y la tapa debe mantenerse accesible, no pavimentada encima.",
+      "plain_explanation": "Equipo es la palabra general del Código para los aparatos de una instalación. La familia, pieza por pieza:\n• Equipo: un término general para accesorios, dispositivos, electrodomésticos, luminarias, máquinas y similares, usados como parte de una instalación o en conexión con ella — lleven corriente o solo sostengan las partes que la llevan.\n• Equipo de utilización: la parte más reducida que realmente usa la energía eléctrica para trabajar — calefacción, iluminación, enfriamiento, procesamiento de datos y trabajos parecidos.\n• Envolvente: la caja o carcasa alrededor del aparato. Mantiene a las personas alejadas de las partes vivas y protege el contenido. Envuelto describe el aparato que tiene esa caja.\n• Accesorio (fitting): una pieza — una contratuerca, un buje o similar — que hace un trabajo mecánico y no eléctrico.\n• Envolvente tipo handhole: una pequeña envolvente de acceso bajo el nivel del suelo, colocada a ras o enterrada, cuya tapa el trabajador retira a mano para llegar a los conductores de adentro.",
+      "on_the_job": "Llamar algo «equipo» es lo que trae consigo las reglas del Artículo 110 — aprobación, espacio de trabajo, protección. Los handholes son los puntos de empalme enterrados en el trabajo de sitio: son envolventes, así que los empalmes de adentro deben hacerse con métodos listados y la tapa debe mantenerse accesible, no pavimentada encima. En un paquete de sitio en Marion Oaks, los handholes del letrero monumental y de las esquinas de los lotes llevan empalmes listados para lugar húmedo, y sus tapas quedan a nivel donde la cuadrilla de pavimentación pueda verlas.",
       "sharma_note": "",
       "figure_idea": "Un tablero, una luminaria y un handhole a nivel del suelo, cada uno rotulado con el término que lo cubre.",
       "related_ids": [
@@ -1899,7 +1993,107 @@
       "verified": true,
       "prev_id": "C1-100-APPROVAL-FAMILY",
       "next_id": "C1-100-BONDING",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "La palabra general es lo que arrastra las reglas de seguridad con ella. En el momento en que algo es equipo, el Artículo 110 quiere que esté aprobado, protegido y con espacio de trabajo — y la envolvente es lo que se interpone entre la mano de un ayudante y un bus vivo. Los accesorios parecen demasiado pequeños para importar, pero el buje que falta es exactamente cómo se corta el aislamiento de un conductor.",
+      "inspection_fails": [
+        "Envolvente tipo handhole pavimentada encima o enterrada bajo el césped — la tapa debe mantenerse accesible.",
+        "Conectores para lugar seco en empalmes dentro de un handhole bajo el nivel del suelo — un lugar húmedo necesita métodos listados.",
+        "Envolvente dañada con partes vivas al alcance — el aparato ya no está envuelto.",
+        "Tubería que entra a una caja sin buje, aislamiento desgastado en el borde afilado."
+      ],
+      "exam_trap": "La trampa es tratar «equipo» como solo el equipo grande — tableros y manejadoras de aire. Bajo la definición, una contratuerca también es equipo, como accesorio, y el examen gira en la parte más reducida: el equipo de utilización es la parte que usa la energía para trabajar, no todo lo conectado a ella.",
+      "tables": [
+        {
+          "caption": "La familia de un vistazo",
+          "headers": [
+            "Término",
+            "Qué cubre",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "Equipo",
+              "Todo en la instalación",
+              "Tablero, luminaria, contratuerca"
+            ],
+            [
+              "Equipo de utilización",
+              "Usa la energía eléctrica para trabajar",
+              "Manejadora de aire, calentador de agua"
+            ],
+            [
+              "Envolvente",
+              "Caja o carcasa alrededor del aparato",
+              "Gabinete del tablero, handhole"
+            ],
+            [
+              "Accesorio",
+              "Una pieza mecánica",
+              "Contratuerca, buje"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-100-EQUIPMENT-FAMILY-lineup.svg",
+          "alt": "Cuatro paneles rotulados: un tablero como equipo en una envolvente, una luminaria como equipo de utilización, una envolvente tipo handhole a nivel del suelo, y una contratuerca y un buje como accesorio.",
+          "caption": "Una palabra general, cuatro miembros de la familia.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Una contratuerca cae bajo qué término del Artículo 100?",
+          "choices": [
+            "Equipo de utilización",
+            "Accesorio",
+            "Equipo de acometida",
+            "Medio de desconexión"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Un accesorio es una pieza que hace un trabajo mecánico — contratuercas y bujes son los ejemplos de todos los días.",
+          "nec_ref": "Artículo 100, Accesorio"
+        },
+        {
+          "question": "El equipo de utilización es el equipo que:",
+          "choices": [
+            "Lleva corriente sin usarla",
+            "Usa la energía eléctrica para trabajar",
+            "Envuelve partes vivas",
+            "Conecta dos canalizaciones"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Calefacción, iluminación, enfriamiento, procesamiento de datos — si usa la energía para hacer un trabajo, es equipo de utilización.",
+          "nec_ref": "Artículo 100, Equipo de utilización"
+        },
+        {
+          "question": "Una envolvente tipo handhole es:",
+          "choices": [
+            "Una caja de conexiones en una pared",
+            "Una envolvente de acceso bajo el nivel del suelo con tapa removible a mano",
+            "Un punto de jalado dentro de una canalización",
+            "Parte del equipo de acometida"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Pequeña, bajo el nivel del suelo, a ras o enterrada — la tapa se quita a mano para llegar a los conductores de adentro.",
+          "nec_ref": "Artículo 100, Envolvente tipo handhole"
+        }
+      ],
+      "code_refs": [
+        "Artículo 100 — Equipo",
+        "Artículo 100 — Equipo de utilización",
+        "Artículo 100 — Envolvente",
+        "Artículo 100 — Accesorio",
+        "Artículo 100 — Envolvente tipo handhole",
+        "110.3",
+        "110.28"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C1-100-BONDING",
@@ -2025,8 +2219,8 @@
       "article": "100",
       "section": "100",
       "title": "Conductores y electrodos de puesta a tierra — EGC, GEC y puentes de unión",
-      "plain_explanation": "La familia de puesta a tierra se divide por trabajo. El conductor de puesta a tierra de equipos (EGC) conecta las partes metálicas de los equipos de vuelta a la fuente para que una falla a tierra se convierta en una corriente de falla grande que dispare el breaker — normalmente es el cable verde o desnudo, pero 250.118 también permite que ciertas canalizaciones y armaduras de cable sirvan como el EGC.. El conductor del electrodo de puesta a tierra (GEC) conecta el sistema al electrodo de puesta a tierra — la varilla, placa, electrodo embebido en concreto u otra conexión a tierra reconocida en sí misma. El puente de unión principal es la conexión en la acometida entre el conductor puesto a tierra y el lado del EGC; un puente de unión del sistema hace el mismo trabajo en un sistema derivado separadamente. Las páginas existentes de Unión (Bonding) y Puesto a tierra / Puesta a tierra cubren las palabras base; esta página es el mapa conductor por conductor.",
-      "on_the_job": "Confundir el EGC con el GEC es la trampa clásica de examen e inspección: el EGC protege a las personas del metal energizado, el GEC conecta el sistema a tierra, y se dimensionan con tablas distintas (250.122 para el EGC, 250.66 para el GEC). En una casa normal, la única unión neutro-tierra es el puente de unión principal en la acometida; un sistema derivado separadamente (por ejemplo, un transformador o un generador conmutado como SDS) recibe su propio puente de unión del sistema, y los tableros aguas abajo mantienen el neutro y la tierra separados. — los tableros aguas abajo los mantienen separados.",
+      "plain_explanation": "La familia de puesta a tierra se divide por trabajo:\n• Conductor de puesta a tierra de equipos (EGC): conecta las partes metálicas de los equipos de vuelta a la fuente, para que una falla a tierra se convierta en una corriente de falla grande que dispare el breaker. Normalmente es el cable verde o desnudo, pero 250.118 también permite que ciertas canalizaciones y armaduras de cable sirvan como el EGC.\n• Conductor del electrodo de puesta a tierra (GEC): conecta el sistema al electrodo de puesta a tierra: la varilla, la placa, el electrodo embebido en concreto u otra conexión a tierra reconocida en sí misma.\n• Puente de unión principal: la conexión en la acometida entre el conductor puesto a tierra y el lado del EGC.\n• Puente de unión del sistema: la misma conexión hecha en un sistema derivado separadamente en vez de en una acometida.\nLa página de Unión y la página de Puesto a tierra / Puesta a tierra cubren las palabras base; esta página es el mapa conductor por conductor.",
+      "on_the_job": "En una acometida de casa de 200 A en Ocala, los EGC corren con los circuitos ramales de vuelta al tablero de la acometida, el GEC corre desde la barra de neutro hasta las varillas de tierra, y el puente de unión principal une la barra de neutro a la envolvente. Esa es la única unión neutro-tierra de la casa: el subtablero del garaje separado mantiene el neutro y la tierra en barras separadas, sin unión. Si la casa agrega después un generador conmutado como sistema derivado separadamente, ese sistema recibe su propio puente de unión del sistema. Y antes de pasar cualquier cable, la verificación de dimensionado: los EGC salen de la Tabla 250.122, el GEC de la Tabla 250.66 — tablas distintas, trabajos distintos.",
       "sharma_note": "",
       "figure_idea": "Un diagrama de acometida de casa que traza tres caminos en tres colores: el EGC de vuelta al tablero, el GEC hacia abajo a la varilla, y el puente de unión principal uniendo el neutro a la envolvente solo en la acometida.",
       "related_ids": [
@@ -2038,7 +2232,107 @@
       "verified": true,
       "prev_id": "C1-100-BONDING",
       "next_id": "C1-100-GROUNDED-GROUNDING",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1,
+      "why_it_exists": "Cada conductor de esta familia hace un trabajo de protección distinto, y no son intercambiables. El EGC es el camino de regreso de la falla: sin él, un corto a una parte metálica deja esa parte energizada, esperando la mano de alguien. El GEC une el sistema a tierra para rayos y sobretensiones; nunca fue pensado para despejar fallas. Si usted intercambia los trabajos, o une el neutro a tierra en el lugar equivocado, la corriente de falla viajará por neutros y tuberías en vez de disparar el breaker.",
+      "exam_trap": "La trampa clásica, en exámenes y en inspecciones: «El EGC y el GEC son ambos cables de tierra, así que se dimensionan con la misma tabla». Falso. El EGC se dimensiona con la Tabla 250.122, según el dispositivo de sobrecorriente que lo precede; el GEC se dimensiona con la Tabla 250.66, según los conductores de la acometida. La trampa compañera es unir el neutro a tierra otra vez en un subtablero: la unión vive en la acometida, o en un sistema derivado separadamente, y en ningún punto aguas abajo.",
+      "inspection_fails": [
+        "Conductor de puesta a tierra de equipos dimensionado con la Tabla 250.66 — la tabla del GEC — en vez de la Tabla 250.122.",
+        "Neutro unido a tierra en un subtablero; la unión pertenece solo a la acometida.",
+        "Sistema derivado separadamente sin puente de unión del sistema instalado.",
+        "Sin camino de EGC de vuelta a la fuente: la varilla de tierra y el GEC dejados para despejar una falla a tierra."
+      ],
+      "tables": [
+        {
+          "caption": "La familia, conductor por conductor",
+          "headers": [
+            "Conductor",
+            "Su trabajo",
+            "Dónde vive"
+          ],
+          "rows": [
+            [
+              "EGC",
+              "Lleva la corriente de falla de vuelta para disparar el breaker",
+              "Con el circuito, hasta la fuente"
+            ],
+            [
+              "GEC",
+              "Une el sistema a tierra",
+              "De la acometida al electrodo"
+            ],
+            [
+              "Puente de unión principal",
+              "Une el neutro al lado del EGC",
+              "Solo en la acometida"
+            ],
+            [
+              "Puente de unión del sistema",
+              "Une el neutro al lado del EGC",
+              "En un sistema derivado separadamente"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-100-GROUNDING-FAMILY-paths.svg",
+          "alt": "Tablero de acometida de una casa con las barras de neutro y de tierra unidas por un puente de unión principal dorado, un conductor de puesta a tierra de equipos verde que corre hasta una carga de estructura metálica, y un conductor del electrodo de puesta a tierra que baja hasta una varilla de tierra.",
+          "caption": "EGC de vuelta a la fuente, GEC hacia la tierra, unión solo en la acometida.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Qué tabla dimensiona el conductor de puesta a tierra de equipos?",
+          "choices": [
+            "Tabla 250.66",
+            "Tabla 250.122",
+            "Tabla 310.16",
+            "Tabla 110.26(A)(1)"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El EGC se dimensiona con la Tabla 250.122, según el dispositivo de sobrecorriente que lo precede. La Tabla 250.66 dimensiona, en cambio, el conductor del electrodo de puesta a tierra.",
+          "nec_ref": "250.122"
+        },
+        {
+          "question": "En una casa normal, ¿dónde está la única unión neutro-tierra?",
+          "choices": [
+            "En cada tablero",
+            "En la acometida, hecha por el puente de unión principal",
+            "En la varilla de tierra",
+            "En el primer receptáculo"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El puente de unión principal hace la única unión, en la acometida. Los tableros aguas abajo mantienen el neutro y la tierra separados.",
+          "nec_ref": "Article 100 — Main Bonding Jumper"
+        },
+        {
+          "question": "Un generador se conmuta como sistema derivado separadamente. ¿Qué une su conductor puesto a tierra al lado de puesta a tierra de equipos?",
+          "choices": [
+            "El puente de unión principal en la acometida",
+            "Un puente de unión del sistema en el sistema derivado",
+            "El conductor del electrodo de puesta a tierra",
+            "Nada: un sistema derivado nunca se une"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Un sistema derivado separadamente recibe su propia unión: el puente de unión del sistema, que hace en el sistema derivado lo que el puente de unión principal hace en una acometida.",
+          "nec_ref": "Article 100 — System Bonding Jumper"
+        }
+      ],
+      "code_refs": [
+        "Article 100 — Equipment Grounding Conductor",
+        "Article 100 — Grounding Electrode Conductor",
+        "Article 100 — Main Bonding Jumper",
+        "Article 100 — System Bonding Jumper",
+        "250.118",
+        "Table 250.122",
+        "Table 250.66"
+      ]
     },
     {
       "id": "C1-100-GROUNDED-GROUNDING",
@@ -2169,8 +2463,8 @@
       "article": "100",
       "section": "100",
       "title": "Falla a tierra, GFCI y protección de falla a tierra de equipos",
-      "plain_explanation": "Una falla a tierra es una conexión no intencional entre un conductor no puesto a tierra y el metal que normalmente no lleva corriente, o la tierra — la falla que el EGC existe para convertir en un disparo del breaker. Dos términos de protección se basan en ella y no son intercambiables. Un interruptor de circuito por falla a tierra (GFCI) protege a las personas: vigila la corriente que se fuga fuera del camino previsto y abre el circuito a unos pocos miliamperios, el nivel de protección personal (un GFCI Clase A debe disparar cuando la corriente de falla a tierra alcanza 6 mA y no debe disparar por debajo de 4 mA — Nota Informativa de GFCI del Art. 100, de UL 943).. La protección de falla a tierra de equipos (GFPE) protege equipos y conductores contra corrientes de falla dañinas a niveles mucho más altos — cientos de amperios en acometidas grandes — y no está destinada a proteger a una persona de una descarga.",
-      "on_the_job": "Un breaker con GFPE en una acometida grande no salvará a un ayudante que toque una parte viva, y un GFCI de receptáculo no es protección de equipos para una acometida. Cuando una especificación o un inspector dice «protección de falla a tierra», pregunte cuál de las dos se quiere decir antes de pedir el equipo.",
+      "plain_explanation": "Una falla a tierra es una conexión no intencional entre un conductor no puesto a tierra (vivo) y el metal que normalmente no lleva corriente, o la tierra. Es la falla que el conductor de puesta a tierra de equipos existe para convertir en un disparo del breaker. Dos términos de protección se basan en esa definición, y no son intercambiables:\n• Falla a tierra: la falla misma — corriente que llega a un metal o a la tierra que nunca debía tocar.\n• GFCI (interruptor de circuito por falla a tierra): protege a las personas. Vigila la corriente que se fuga fuera del camino previsto y abre el circuito a unos pocos miliamperios — el nivel de protección personal. Un GFCI Clase A debe disparar cuando la corriente de falla a tierra alcanza 6 mA, y no debe disparar por debajo de 4 mA (Nota Informativa de GFCI del Artículo 100, de UL 943).\n• GFPE (protección de falla a tierra de equipos): protege equipos y conductores contra corrientes de falla dañinas a niveles mucho más altos — cientos de amperios en acometidas grandes. No está destinada a proteger a una persona de una descarga.",
+      "on_the_job": "Un breaker con GFPE en una acometida grande no salvará a un ayudante que toque una parte viva, y un GFCI de receptáculo no es protección de equipos para una acometida. Cuando una especificación o un inspector dice «protección de falla a tierra», pregunte cuál de las dos se quiere decir antes de pedir el equipo. En una acometida comercial de 480Y/277 V en Ocala, el equipo llega con GFPE como se especificó — y la cuadrilla aun así instala protección GFCI en los receptáculos de lugares húmedos, porque los dos dispositivos responden a dos peligros distintos.",
       "sharma_note": "",
       "figure_idea": "Dos curvas de disparo lado a lado: un GFCI que abre a unos pocos miliamperios para el personal, y un GFPE que abre a cientos de amperios para los equipos.",
       "related_ids": [
@@ -2181,7 +2475,100 @@
       "verified": true,
       "prev_id": "C1-100-GROUNDED-GROUNDING",
       "next_id": "C1-100-BRANCH-CIRCUIT",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Una falla a tierra a través del cuerpo de una persona puede matar con corrientes muy por debajo de la capacidad de cualquier breaker, por eso el GFCI vigila en miliamperios y abre rápido. El GFPE existe para el problema opuesto: una falla en una acometida grande puede quedarse en cientos de amperios — demasiada corriente para ignorarla, muy poca para disparar un breaker común — y quemar hasta que algo falla. Dos peligros, dos dispositivos; mezclar los nombres mezcla la protección.",
+      "inspection_fails": [
+        "Breaker de acometida con GFPE ofrecido como protección personal para un trabajo en lugar húmedo — dispositivo equivocado; no hay protección GFCI presente.",
+        "GFCI de receptáculo retirado tras disparos molestos en vez de encontrar la carga que está fugando.",
+        "La especificación decía «protección de falla a tierra» y se instaló un receptáculo GFCI donde la acometida necesitaba GFPE — los nombres nunca se aclararon.",
+        "GFCI Clase A que todavía aguanta a 8 mA en el probador — fuera de su ventana de 4–6 mA; reemplácelo."
+      ],
+      "exam_trap": "La respuesta trampa dice que la acometida «tiene protección de falla a tierra», así que el trabajador está protegido. Dispositivo equivocado: esa protección es el GFPE, ajustado en cientos de amperios para proteger equipos. La protección personal es la ventana de 4–6 mA del GFCI, y nada más en esta página la sustituye.",
+      "tables": [
+        {
+          "caption": "Dos dispositivos, dos trabajos",
+          "headers": [
+            "Dispositivo",
+            "Protege",
+            "Abre a"
+          ],
+          "rows": [
+            [
+              "GFCI, Clase A",
+              "Personas",
+              "6 mA (nunca por debajo de 4 mA)"
+            ],
+            [
+              "GFPE",
+              "Equipos y conductores",
+              "Cientos de amperios en acometidas grandes"
+            ],
+            [
+              "Breaker estándar",
+              "Conductores, sobrecarga y cortocircuito",
+              "Su capacidad en amperios y más"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-100-GROUND-FAULT-FAMILY-levels.svg",
+          "alt": "Dos barras horizontales de nivel de disparo: una barra GFCI marcada en miliamperios, no debe disparar por debajo de 4 mA y debe disparar a 6 mA, y una barra GFPE marcada en cientos de amperios, con una franja roja que advierte que el GFPE no es protección personal.",
+          "caption": "Los miliamperios protegen personas; cientos de amperios protegen equipos.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un GFCI Clase A debe disparar cuando la corriente de falla a tierra alcanza:",
+          "choices": [
+            "4 mA",
+            "6 mA",
+            "30 mA",
+            "100 mA"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Clase A: debe disparar a 6 mA, no debe disparar por debajo de 4 mA. Esa ventana es el nivel de protección personal.",
+          "nec_ref": "Artículo 100, Nota Informativa de GFCI (UL 943)"
+        },
+        {
+          "question": "La protección de falla a tierra de equipos (GFPE) está destinada a proteger:",
+          "choices": [
+            "Personas de una descarga",
+            "Equipos y conductores",
+            "Receptáculos de baño",
+            "Circuitos de iluminación"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El GFPE trabaja en cientos de amperios en acometidas grandes. Protege equipos — no salvará a una persona.",
+          "nec_ref": "Artículo 100, Protección de falla a tierra de equipos"
+        },
+        {
+          "question": "Una falla a tierra es:",
+          "choices": [
+            "Un circuito sobrecargado",
+            "Una conexión no intencional entre un conductor vivo y el metal que no lleva corriente o la tierra",
+            "Un corto entre dos conductores vivos",
+            "Un breaker que disparó"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Conductor vivo a metal o tierra, fuera del camino previsto. El EGC existe para convertirla en un disparo del breaker.",
+          "nec_ref": "Artículo 100, Falla a tierra"
+        }
+      ],
+      "code_refs": [
+        "Artículo 100 — Falla a tierra",
+        "Artículo 100 — Interruptor de circuito por falla a tierra (GFCI)",
+        "Artículo 100 — Protección de falla a tierra de equipos",
+        "210.8",
+        "230.95"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C1-100-BRANCH-CIRCUIT",
@@ -2418,8 +2805,8 @@
       "article": "100",
       "section": "100",
       "title": "Breaker, tablero, gabinete y las clasificaciones de falla",
-      "plain_explanation": "Un breaker (interruptor automático) es un dispositivo que abre y cierra un circuito por medios no automáticos y lo abre automáticamente ante una sobrecorriente prefijada — un breaker de disparo ajustable permite cambiar ese ajuste sin cambiar partes internas. Un tablero (panelboard) es un panel único, o grupo de unidades de panel, de interruptores o breakers en un gabinete, diseñado para montarse en o contra una pared; la envolvente es un gabinete o una caja de corte (cutout box) — dos términos definidos por separado (un gabinete tiene un marco con acabado para una puerta batiente; una caja de corte tiene una puerta o cubierta articulada directamente a las paredes de la caja), de superficie o empotrada, con puertas o acabado según su diseño. Aquí viven dos clasificaciones de falla que se confunden constantemente: la capacidad interruptiva es la mayor corriente de falla que el propio dispositivo puede abrir con seguridad a su voltaje nominal; la clasificación de corriente de cortocircuito (SCCR) es la corriente de falla que una pieza de equipo en conjunto puede soportar o ante la cual puede estar protegida. Las páginas de 110.9 y 110.10 llevan las reglas detrás de ambas clasificaciones.",
-      "on_the_job": "Un breaker que encaja no es un breaker que corresponde: su capacidad interruptiva debe igualar o superar la corriente de falla disponible en sus terminales, y el SCCR del tablero debe cubrir la instalación — revise las etiquetas antes de instalar el equipo, no en la inspección.",
+      "plain_explanation": "• Breaker (interruptor automático): un dispositivo que abre y cierra un circuito por medios no automáticos y lo abre automáticamente ante una sobrecorriente prefijada. Un breaker de disparo ajustable permite cambiar ese ajuste sin cambiar partes internas.\n• Tablero (panelboard): un panel único, o un grupo de unidades de panel, de interruptores o breakers diseñado para montarse en o contra una pared, dentro de una envolvente. La envolvente es un gabinete o una caja de corte (cutout box) — dos términos definidos por separado. Un gabinete tiene un marco o acabado para una puerta batiente; una caja de corte tiene su puerta o cubierta articulada directamente a las paredes de la caja. Cualquiera puede ser de superficie o empotrada, con puertas o acabado según su diseño.\n• Capacidad interruptiva: la mayor corriente de falla que el propio dispositivo puede abrir con seguridad a su voltaje nominal.\n• Clasificación de corriente de cortocircuito (SCCR): la corriente de falla que una pieza de equipo en conjunto puede soportar, o ante la cual puede estar protegida.\nLas dos clasificaciones de falla se confunden constantemente — y responden preguntas distintas. Las páginas de 110.9 y 110.10 llevan las reglas detrás de ambas.",
+      "on_the_job": "Acometida comercial pequeña en Ocala: el cálculo de corriente de falla regresa en 22 kA. El tablero Siemens nuevo se revisa a la entrega, no en la inspección: la capacidad interruptiva de cada breaker debe igualar o superar 22 kA — un tablero lleno de breakers de 10 kAIC es equipo subclasificado — y el propio SCCR del tablero en su etiqueta debe cubrir la instalación de la misma manera. Un breaker que encaja en la barra no es un breaker que corresponde; revise ambas etiquetas mientras el equipo sigue en la paleta.",
       "sharma_note": "",
       "figure_idea": "Un corte de tablero: breakers adentro, gabinete alrededor, con llamadas a la capacidad interruptiva en la etiqueta de un breaker y al SCCR en la etiqueta del tablero.",
       "related_ids": [
@@ -2432,7 +2819,96 @@
       "verified": true,
       "prev_id": "C1-100-BRANCH-CIRCUIT-TYPES",
       "next_id": "C1-100-FEEDER",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Una falla es el peor segundo en la vida de una instalación. Si el breaker no puede interrumpir lo que la acometida puede entregar, puede fallar con violencia en vez de despejar. Si el SCCR del conjunto está por debajo de la corriente de falla, el propio tablero se convierte en el daño. Ambos números están impresos en etiquetas — pero solo ayudan si alguien los lee antes de instalar el equipo.",
+      "inspection_fails": [
+        "Breakers instalados con capacidades interruptivas por debajo de la corriente de falla disponible en sus terminales (110.9).",
+        "SCCR del tablero por debajo de la corriente de falla disponible — la clasificación del conjunto nunca se verificó contra el cálculo de falla (110.10).",
+        "Breaker de reemplazo que encaja físicamente en la barra pero no es el tipo identificado para ese tablero.",
+        "Ajuste de un breaker de disparo ajustable cambiado en el campo sin registro — el ajuste ya no coincide con la documentación de falla del trabajo."
+      ],
+      "exam_trap": "La trampa es intercambiar las dos clasificaciones: «El SCCR del tablero es 22 kA, así que los breakers interrumpen 22 kA». No. El SCCR pertenece al equipo en conjunto; la capacidad interruptiva pertenece al propio dispositivo. Un tablero puede llevar un SCCR alto y aun así estar lleno de breakers cuyas propias capacidades interruptivas se quedan cortas.",
+      "tables": [
+        {
+          "caption": "Dos clasificaciones de falla, dos dueños",
+          "headers": [
+            "Clasificación",
+            "Pertenece a",
+            "La pregunta que responde"
+          ],
+          "rows": [
+            [
+              "Capacidad interruptiva",
+              "El propio dispositivo — breaker o fusible",
+              "¿Puede abrir con seguridad la mayor falla en sus terminales?"
+            ],
+            [
+              "SCCR",
+              "El equipo en conjunto",
+              "¿Puede el conjunto soportar esa falla, o estar protegido ante ella?"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-100-CIRCUIT-BREAKER-panel.svg",
+          "alt": "Corte de un tablero dentro de su gabinete, con llamadas a un breaker, la capacidad interruptiva en la etiqueta de un breaker, el SCCR en la etiqueta del tablero y el marco del gabinete.",
+          "caption": "Dos etiquetas, dos clasificaciones: la del breaker y la del conjunto.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "El SCCR es la clasificación de corriente de falla de:",
+          "choices": [
+            "Un solo breaker",
+            "Una pieza de equipo en conjunto",
+            "El transformador de la utility",
+            "Los conductores de acometida"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La clasificación de corriente de cortocircuito pertenece al equipo en conjunto; la capacidad interruptiva pertenece al propio dispositivo.",
+          "nec_ref": "Artículo 100 — Clasificación de corriente de cortocircuito"
+        },
+        {
+          "question": "Una caja de corte se diferencia de un gabinete porque su:",
+          "choices": [
+            "Puerta o cubierta se articula directamente a las paredes de la caja",
+            "Puerta tiene marco y acabado",
+            "Breakers son más grandes",
+            "Clasificación es mayor"
+          ],
+          "answer_index": 0,
+          "explain_plain": "Gabinete: un marco o acabado para una puerta batiente. Caja de corte: la puerta o cubierta se articula a la propia caja.",
+          "nec_ref": "Artículo 100 — Gabinete; Caja de corte"
+        },
+        {
+          "question": "Un breaker de disparo ajustable permite a la cuadrilla cambiar:",
+          "choices": [
+            "El tamaño del marco",
+            "El ajuste de disparo, sin cambiar partes internas",
+            "La capacidad interruptiva",
+            "El SCCR"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Disparo ajustable significa que el ajuste puede cambiarse sin cambiar partes internas — no cambia el marco ni las clasificaciones.",
+          "nec_ref": "Artículo 100 — Breaker"
+        }
+      ],
+      "code_refs": [
+        "Artículo 100 — Breaker",
+        "Artículo 100 — Tablero",
+        "Artículo 100 — Capacidad interruptiva",
+        "Artículo 100 — Clasificación de corriente de cortocircuito",
+        "110.9",
+        "110.10"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios del NEC 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich": 1
     },
     {
       "id": "C1-100-FEEDER",
@@ -2657,8 +3133,8 @@
       "article": "100",
       "section": "100",
       "title": "Factor de demanda, carga no lineal y sobrecorriente",
-      "plain_explanation": "El factor de demanda es la relación entre la demanda máxima de un sistema (o parte de uno) y la carga total conectada — siempre es 1.0 o menos, y es lo que permite que un alimentador sea más pequeño que la suma de todo lo conectado, porque no todo funciona a la vez. Una carga no lineal es una carga cuya forma de onda de corriente no sigue la forma de onda del voltaje — drivers LED, balastos electrónicos, variadores de velocidad y la mayoría de la electrónica enchufable — que empuja corriente armónica al sistema, especialmente al neutro compartido. Sobrecorriente es cualquier corriente por encima de la clasificación de un conductor o equipo, por una de dos causas que la cuadrilla debe distinguir: una sobrecarga es demasiada carga legítima en un circuito por lo demás sano, mientras que un cortocircuito o una falla a tierra es una falla — la protección y la localización del problema son distintas en cada caso.",
-      "on_the_job": "El factor de demanda es la razón por la que el cálculo de acometida del Capítulo 2 nunca suma simplemente cada breaker. Las cargas no lineales son la razón por la que un neutro compartido en un circuito multiwire que alimenta iluminación LED puede necesitar tratarse como conductor portador de corriente y a veces aumentarse de calibre — los armónicos se suman en el neutro en vez de cancelarse.",
+      "plain_explanation": "Tres palabras del Artículo 100 que gobiernan los cálculos de carga y la localización de fallas:\n• Factor de demanda: la relación entre la demanda máxima de un sistema y su carga total conectada. Siempre es 1.0 o menos. Es lo que permite que un alimentador sea más pequeño que la suma de todo lo conectado, porque no todo funciona a la vez.\n• Carga no lineal: una carga cuya forma de onda de corriente no sigue la forma de onda del voltaje — drivers LED, balastos electrónicos, variadores de velocidad y la mayoría de la electrónica enchufable. Empuja corriente armónica al sistema, especialmente al neutro compartido de un circuito multiwire.\n• Sobrecorriente: cualquier corriente por encima de la clasificación de un conductor o equipo. La cuadrilla debe distinguir sus dos causas: una sobrecarga es demasiada carga legítima en un circuito por lo demás sano, mientras que un cortocircuito o una falla a tierra es una falla. La protección y la localización del problema son distintas en cada caso.",
+      "on_the_job": "Casa en Marion Oaks, verificación por el método estándar: la carga general suma 18,000 VA conectados. La Tabla 220.42 toma los primeros 3,000 VA al 100 por ciento y el resto al 35 por ciento, así que la demanda máxima es 8,250 VA — un factor de demanda de 8,250 ÷ 18,000, cerca de 0.46. El alimentador se dimensiona desde la demanda, no desde el total conectado. La misma casa, otra palabra: los circuitos de iluminación LED comparten un neutro, y como esos drivers son cargas no lineales, los armónicos se suman en ese neutro en vez de cancelarse — trátelo como conductor portador de corriente.",
       "sharma_note": "",
       "figure_idea": "Un gráfico de barras: carga conectada alta, demanda máxima más corta, la relación rotulada factor de demanda; al lado, una forma de onda de corriente distorsionada rotulada no lineal.",
       "related_ids": [
@@ -2670,7 +3146,99 @@
       "verified": true,
       "prev_id": "C1-100-CONTINUOUS-LOAD",
       "next_id": "C1-100-DWELLING-UNIT",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Cada palabra protege contra un error costoso distinto. Si dimensiona todo como si funcionara a la vez, entierra cobre que nadie necesitaba. Si ignora los armónicos, un neutro compartido se sobrecalienta en silencio mientras ambos breakers quedan contentos. Si trata una falla como una sobrecarga y la «arregla» con un breaker más grande, la falla se queda en la pared con más energía detrás.",
+      "inspection_fails": [
+        "Cálculo de alimentador rechazado en la revisión de planos: carga conectada usada sin aplicar factores de demanda (220.42).",
+        "Neutro compartido en un circuito multiwire que alimenta iluminación LED no contado como conductor portador de corriente, con la carga mayormente no lineal.",
+        "Breaker aumentado de tamaño para dejar de disparar; la «sobrecarga» era un cortocircuito dejado en su sitio dentro de la pared."
+      ],
+      "exam_trap": "La trampa es responder una pregunta de factor de demanda con un número mayor que 1.0 — normalmente 1.25, robado de la regla de carga continua. El factor de demanda es una relación entre demanda y carga conectada, así que nunca puede pasar de 1.0. La regla del 125 por ciento pertenece a las cargas continuas, otra definición en otra página.",
+      "tables": [
+        {
+          "caption": "Sobrecorriente: distinga las causas",
+          "headers": [
+            "Causa",
+            "Qué es",
+            "Respuesta de la cuadrilla"
+          ],
+          "rows": [
+            [
+              "Sobrecarga",
+              "Demasiada carga legítima en un circuito sano",
+              "Encuentre la carga agregada; divídala o redúzcala"
+            ],
+            [
+              "Cortocircuito",
+              "Fase toca fase o neutro — una falla",
+              "Encuentre y repare la falla antes de re-energizar"
+            ],
+            [
+              "Falla a tierra",
+              "Fase toca tierra o metal puesto a tierra — una falla",
+              "Encuentre y repare; GFCI/GFPE donde se exija"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-100-LOAD-TERMS-demand.svg",
+          "alt": "Gráfico de barras de una carga conectada de 18,000 VA frente a una demanda máxima de 8,250 VA, factor de demanda cerca de 0.46, con formas de onda de voltaje limpias y de corriente no lineal distorsionadas.",
+          "caption": "Factor de demanda: el alimentador se dimensiona desde la demanda, no desde el total conectado.",
+          "w": 900,
+          "h": 1340
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "El factor de demanda es la relación entre:",
+          "choices": [
+            "La demanda máxima y la carga total conectada",
+            "La carga total conectada y la demanda máxima",
+            "La carga continua y la no continua",
+            "La ampacidad del alimentador y la de la acometida"
+          ],
+          "answer_index": 0,
+          "explain_plain": "Demanda sobre carga conectada — por eso la respuesta siempre es 1.0 o menos.",
+          "nec_ref": "Artículo 100 — Factor de demanda"
+        },
+        {
+          "question": "Un breaker dispara en el instante en que se restablece, y las pruebas encuentran contacto de fase a tierra en el tramo. Esta sobrecorriente es:",
+          "choices": [
+            "Una sobrecarga — ponga un breaker más grande",
+            "Una falla a tierra — una falla, no una sobrecarga",
+            "Una carga no lineal",
+            "Un problema de factor de demanda"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Una falla es un desperfecto en el circuito, no demasiada carga legítima. Encuéntrela y repárela; nunca responda a una falla con un breaker más grande.",
+          "nec_ref": "Artículo 100 — Sobrecorriente"
+        },
+        {
+          "question": "¿Por qué un neutro compartido que alimenta drivers LED puede necesitar contarse como conductor portador de corriente?",
+          "choices": [
+            "Las cargas LED no llevan corriente por el neutro",
+            "Las corrientes armónicas se suman en el neutro en vez de cancelarse",
+            "Todo neutro siempre es portador de corriente",
+            "Los drivers elevan el voltaje en el neutro"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Las cargas no lineales empujan corriente armónica al sistema; en un neutro compartido los armónicos se suman en vez de cancelarse.",
+          "nec_ref": "Artículo 100 — Carga no lineal"
+        }
+      ],
+      "code_refs": [
+        "Artículo 100 — Factor de demanda",
+        "Artículo 100 — Carga no lineal",
+        "Artículo 100 — Sobrecorriente",
+        "Tabla 220.42",
+        "310.15"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios del NEC 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich": 1
     },
     {
       "id": "C1-100-DWELLING-UNIT",
@@ -2795,8 +3363,8 @@
       "article": "100",
       "section": "100",
       "title": "Baño y clóset de ropa",
-      "plain_explanation": "Un baño, en el Artículo 100, es un área que incluye un lavabo más al menos uno de: un inodoro, un urinario, una tina, una ducha, un bidé o un aparato de plomería similar. — una habitación con solo un inodoro y sin lavabo no es un baño según el Código, y un lavabo sin nada más tampoco. La definición importa porque conjuntos enteros de reglas se activan con ella: el circuito de 20A para receptáculos de baño, la protección GFCI para receptáculos de baño, y la prohibición de receptáculos dentro de los espacios de tina y ducha. Un clóset de ropa es la habitación o espacio no habitable destinado a guardar ropa — la definición detrás de las reglas de luminarias que mantienen las lámparas calientes y expuestas alejadas de la ropa y los estantes guardados.",
-      "on_the_job": "En los planos, revise la lista de aparatos antes de aplicar las reglas de baño: un tocador con lavabo e inodoro es un baño; un medio baño de solo inodoro no lo es. En los clósets, la definición de clóset de ropa es lo que activa las reglas de tipo y distancia de luminarias en 410.16 — trate cualquier clóset con barra y estante como tal, salvo que los planos digan lo contrario.",
+      "plain_explanation": "Dos definiciones en esta página activan y desactivan conjuntos enteros de reglas.\n• Baño: un área que incluye un lavabo, más al menos uno de: un inodoro, un urinario, una tina, una ducha, un bidé o un aparato de plomería similar. Las dos mitades deben estar. Una habitación con solo un inodoro y sin lavabo no es un baño según el Código, y un lavabo sin nada más tampoco.\n• Clóset de ropa: una habitación o espacio no habitable destinado a guardar ropa.\nLa definición de baño importa porque el circuito de 20 A para receptáculos de baño, la protección GFCI para receptáculos de baño, y la prohibición de receptáculos dentro de los espacios de tina y ducha se activan con ella. La definición de clóset está detrás de las reglas de luminarias en 410.16 que mantienen las lámparas calientes y expuestas alejadas de la ropa y los estantes guardados.",
+      "on_the_job": "En los planos, revise la lista de aparatos antes de aplicar las reglas de baño: un tocador con lavabo e inodoro es un baño; un medio baño de solo inodoro no lo es. En los clósets, la definición de clóset de ropa es lo que activa las reglas de tipo y distancia de luminarias en 410.16 — trate cualquier clóset con barra y estante como tal, salvo que los planos digan lo contrario. El estándar de Sharma en un clóset es un LED envuelto: montado en superficie a 12 in libre del espacio de almacenamiento, o empotrado a 6 in — nunca una lámpara abierta ni un colgante.",
       "sharma_note": "",
       "figure_idea": "Dos plantas pequeñas: lavabo + inodoro marcados como baño, inodoro solo tachado, con una planta de clóset mostrando estante y barra.",
       "related_ids": [
@@ -2808,7 +3376,105 @@
       "verified": true,
       "prev_id": "C1-100-DWELLING-UNIT",
       "next_id": "C1-100-EXPOSED",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Agua, piel desnuda y electricidad son la combinación para la que existen las reglas de baño — pero solo protegen las habitaciones que cumplen la definición. Llamar baño a una habitación de solo inodoro desperdicia un circuito; pasar por alto un baño verdadero deja sin aplicar las reglas de GFCI y de circuito donde el peligro realmente está. En el clóset, el peligro es otro: una lámpara caliente apoyada contra la ropa guardada.",
+      "inspection_fails": [
+        "Receptáculos de baño alimentados desde un circuito general de iluminación — el circuito de 20 A del baño nunca se instaló, porque la habitación nunca se contó como baño.",
+        "Sin protección GFCI en el receptáculo junto al lavabo.",
+        "Receptáculo instalado dentro del espacio de la tina o la ducha.",
+        "Luminaria de lámpara abierta dentro de un clóset de ropa, más cerca del espacio de almacenamiento de lo que permite 410.16."
+      ],
+      "exam_trap": "La trampa es el tocador de solo inodoro: se siente como un baño, pero sin lavabo la definición no se cumple y las reglas de baño quedan desactivadas. La trampa en espejo atrapa a igual cantidad de gente — un lavabo y una ducha sin inodoro sí es un baño, porque el lavabo más cualquiera de los aparatos listados es suficiente.",
+      "tables": [
+        {
+          "caption": "¿Es un baño? (Artículo 100)",
+          "headers": [
+            "Habitación",
+            "¿Baño?",
+            "Por qué"
+          ],
+          "rows": [
+            [
+              "Lavabo + inodoro",
+              "Sí",
+              "Lavabo más un aparato listado"
+            ],
+            [
+              "Lavabo + ducha",
+              "Sí",
+              "Lavabo más un aparato listado"
+            ],
+            [
+              "Solo inodoro, sin lavabo",
+              "No",
+              "Falta el lavabo"
+            ],
+            [
+              "Solo lavabo",
+              "No",
+              "Nada de la lista con él"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-100-BATHROOM-plans.svg",
+          "alt": "Dos plantas pequeñas y un clóset: lavabo más inodoro marcados como baño, inodoro solo tachado como no baño, y un clóset de ropa con barra, estante, espacio de almacenamiento y una luminaria LED envuelta.",
+          "caption": "El lavabo decide el baño; la barra y el estante deciden el clóset.",
+          "w": 900,
+          "h": 1620
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Cuál habitación es un baño bajo el Artículo 100?",
+          "choices": [
+            "Una habitación con inodoro pero sin lavabo",
+            "Una habitación con lavabo pero sin otro aparato",
+            "Una habitación con lavabo y tina",
+            "Cualquier habitación con plomería"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La definición necesita las dos mitades: un lavabo, más al menos uno de inodoro, urinario, tina, ducha, bidé o similar.",
+          "nec_ref": "Artículo 100, Baño"
+        },
+        {
+          "question": "Un tocador tiene lavabo e inodoro. Las reglas de receptáculos de baño:",
+          "choices": [
+            "No aplican",
+            "Aplican — la habitación cumple la definición",
+            "Aplican solo si también tiene tina",
+            "Aplican solo en casas de más de 2,000 pies cuadrados"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Lavabo más inodoro es un baño, así que el circuito de 20 A y las reglas GFCI se activan.",
+          "nec_ref": "Artículo 100, Baño; 210.11(C)(3)"
+        },
+        {
+          "question": "La definición de clóset de ropa impulsa cuáles reglas de luminarias?",
+          "choices": [
+            "La separación de 210.52",
+            "El tipo y la distancia de 410.16",
+            "Las ubicaciones de 406.9",
+            "La carga de iluminación de 220.12"
+          ],
+          "answer_index": 1,
+          "explain_plain": "410.16 controla qué puede iluminar un clóset de ropa y a qué distancia se sienta del espacio de almacenamiento.",
+          "nec_ref": "410.16"
+        }
+      ],
+      "code_refs": [
+        "Artículo 100 — Baño",
+        "Artículo 100 — Clóset de ropa",
+        "210.11(C)(3)",
+        "210.8(A)(1)",
+        "410.16"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C1-100-EXPOSED",
@@ -3609,8 +4275,8 @@
       "article": "100",
       "section": "100",
       "title": "Conductores de acometida, bajada, lateral, entrada, equipo y punto",
-      "plain_explanation": "La familia de la acometida, pieza por pieza. El punto de acometida es el punto donde las instalaciones de la compañía eléctrica se encuentran con el cableado del predio — el límite de responsabilidad. Los conductores de acometida van desde el punto de acometida hasta el desconectador de acometida. Por arriba, se dividen en la bajada de acometida (los conductores aéreos de la compañía, desde su sistema hasta el punto de acometida) y los conductores de entrada de acometida (del lado del cliente, desde el punto de acometida hasta el equipo de acometida). Por debajo del suelo, el recorrido de la compañía hasta el punto de acometida es la lateral de acometida. El equipo de acometida es el equipo — normalmente el desconectador principal y su envolvente — que controla y corta el suministro al edificio. La página base de Acometida presenta la familia; esta página es el mapa de qué es de quién, y dónde.",
-      "on_the_job": "Casi toda discusión de acometida es una discusión del punto de acometida: de quién es el conductor, de quién la reparación, de quién la norma. En las acometidas de Sharma el medidor va afuera y el tablero adentro, espalda con espalda, para que el recorrido de entrada de acometida quede tan corto como permita la distribución — y los requisitos de la compañía gobiernan todo lo que está de su lado del punto.",
+      "plain_explanation": "El Artículo 100 divide la acometida en piezas con nombre, y cada nombre lleva un dueño. Aprenda las piezas y la mayoría de las discusiones de acometida se resuelven solas.\n• Punto de acometida: el punto donde las instalaciones de la compañía eléctrica se encuentran con el cableado del predio. Es el límite de responsabilidad — las reglas de la compañía gobiernan de su lado del punto, el NEC gobierna del nuestro.\n• Conductores de acometida: los conductores desde el punto de acometida hasta el medio de desconexión de la acometida.\n• Bajada de acometida: los conductores aéreos de la compañía, desde su sistema hasta el punto de acometida.\n• Conductores de entrada de acometida: el recorrido del lado del cliente, desde el punto de acometida hasta el equipo de acometida. Las definiciones de aéreo y subterráneo nombran el mismo trabajo de dos maneras.\n• Lateral de acometida: el recorrido subterráneo de la compañía hasta el punto de acometida.\n• Equipo de acometida: el equipo — normalmente el desconectador principal y su envolvente — que controla y corta el suministro al edificio.\nLa página base de Acometida presenta la familia; esta página es el mapa de qué es de quién, y dónde.",
+      "on_the_job": "Casi toda discusión de acometida es una discusión del punto de acometida: de quién es el conductor, de quién la reparación, de quién la norma. En las acometidas de Sharma el medidor va afuera y el tablero adentro, espalda con espalda, para que el recorrido de entrada de acometida quede tan corto como permita la distribución — y los requisitos de la compañía gobiernan todo lo que está de su lado del punto. Después de una tormenta en el condado de Marion, una rama tumba la bajada aérea y dobla el mástil. La bajada es de la compañía para volver a tenderla; el mástil y los conductores de entrada bajo la cabeza de intemperie son del cliente — la reparación de Sharma, con permiso e inspección.",
       "sharma_note": "S-09: meter outside and panel inside, back to back, where the layout allows — the arrangement that keeps the service-entrance conductors short.",
       "figure_idea": "Una acometida aérea y una subterránea lado a lado, cada una dividida en un punto de acometida marcado: bajada/lateral del lado de la compañía, conductores de entrada y equipo de acometida del lado del edificio.",
       "related_ids": [
@@ -3623,7 +4289,106 @@
       "next_id": "C1-100-IN-SIGHT",
       "sharma_rule_ids": [
         "S-09"
-      ]
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Los nombres existen para que una falla, una factura o una reparación caiga en la parte correcta desde la primera vez. Una cuadrilla que no puede decir si un conductor dañado es la bajada, la lateral o el recorrido de entrada no puede decir de quién es la reparación — y un conductor de acometida dañado y energizado es el peor lugar para discutirlo. Los nombres también apuntan las reglas de acometida del NEC a los conductores correctos: esas reglas aplican del lado del cliente del punto.",
+      "inspection_fails": [
+        "Equipo de acometida colocado de modo que los conductores de entrada sin fusible corren largos dentro del edificio — el tablero nunca se puso espalda con espalda con el medidor.",
+        "La cuadrilla abrió la lateral de la compañía en una mejora de acometida — no es un conductor del cliente para tocarlo, desde ningún lado de la discusión.",
+        "Una bajada de acometida dañada marcada como violación del cableado del predio; la bajada es de la compañía, de su lado del punto de acometida.",
+        "Base del medidor instalada del lado equivocado del punto de acometida acordado y movida en la reinspección."
+      ],
+      "exam_trap": "La trampa es llamar «bajada de acometida» a todo lo que va del poste al tablero. En un examen — y en una orden de trabajo — la bajada es solo el tramo aéreo de la compañía hasta el punto de acometida. Del punto al equipo de acometida los conductores son conductores de entrada de acometida, y bajo tierra el recorrido de la compañía es la lateral, nunca una bajada.",
+      "tables": [
+        {
+          "caption": "De quién es cada pieza",
+          "headers": [
+            "Pieza",
+            "Recorrido",
+            "De quién"
+          ],
+          "rows": [
+            [
+              "Bajada de acometida",
+              "Sistema de la compañía → punto de acometida (aéreo)",
+              "Compañía"
+            ],
+            [
+              "Lateral de acometida",
+              "Sistema de la compañía → punto de acometida (subterráneo)",
+              "Compañía"
+            ],
+            [
+              "Conductores de entrada",
+              "Punto de acometida → equipo de acometida",
+              "Cliente"
+            ],
+            [
+              "Equipo de acometida",
+              "Desconectador principal y su envolvente",
+              "Cliente"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-100-SERVICE-FAMILY-map.svg",
+          "alt": "Acometidas aérea y subterránea dibujadas lado a lado, cada una dividida por una línea dorada de punto de acometida: bajada y lateral del lado de la compañía, conductores de entrada y equipo de acometida del lado del edificio.",
+          "caption": "Aérea y subterránea: el punto de acometida separa compañía y cliente.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Dónde terminan las instalaciones de la compañía eléctrica y comienza el cableado del predio?",
+          "choices": [
+            "En el medidor",
+            "En el punto de acometida",
+            "En el breaker principal",
+            "En el poste"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El punto de acometida es el límite. Las reglas de la compañía gobiernan de un lado, el NEC del otro.",
+          "nec_ref": "Artículo 100, Punto de acometida"
+        },
+        {
+          "question": "En una acometida aérea, los conductores de la compañía desde su sistema hasta el punto de acometida son:",
+          "choices": [
+            "Conductores de entrada de acometida",
+            "Lateral de acometida",
+            "Bajada de acometida",
+            "Alimentador"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La bajada es el tramo aéreo de la compañía. El recorrido del cliente del punto al equipo son los conductores de entrada de acometida.",
+          "nec_ref": "Artículo 100, Bajada de acometida"
+        },
+        {
+          "question": "El recorrido subterráneo de la compañía hasta el punto de acometida se llama:",
+          "choices": [
+            "Bajada de acometida",
+            "Lateral de acometida",
+            "Conductores de entrada de acometida",
+            "Canalización de acometida"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Bajo tierra, el recorrido de la compañía es la lateral. «Bajada» es solo aéreo.",
+          "nec_ref": "Artículo 100, Lateral de acometida"
+        }
+      ],
+      "code_refs": [
+        "Artículo 100 — Punto de acometida",
+        "Artículo 100 — Conductores de acometida",
+        "Artículo 100 — Bajada de acometida",
+        "Artículo 100 — Lateral de acometida",
+        "Artículo 100 — Conductores de entrada de acometida",
+        "Artículo 100 — Equipo de acometida"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C1-100-IN-SIGHT",
@@ -3754,8 +4519,8 @@
       "article": "100",
       "section": "100",
       "title": "Dispositivo, medio de desconexión y tipos de interruptores",
-      "plain_explanation": "Un dispositivo es una unidad de un sistema eléctrico, distinta de un conductor, que lleva o controla energía eléctrica — interruptores, receptáculos, breakers y termostatos son dispositivos; el cable y la tubería no lo son. Un medio de desconexión es un dispositivo, grupo de dispositivos u otro medio por el cual los conductores de un circuito pueden desconectarse de su fuente — aquello desde lo que la página de A la vista mide. Tres tipos de interruptores completan la familia: un interruptor de uso general controla cargas de iluminación y electrodomésticos y se clasifica en amperios a su voltaje marcado; un interruptor de aislamiento está destinado a aislar un circuito de su fuente y no está destinado a interrumpir corriente bajo carga; un interruptor de circuito de motor se clasifica en caballos de fuerza y está construido para interrumpir la máxima corriente de sobrecarga de operación del motor al que sirve.",
-      "on_the_job": "Un interruptor de aislamiento no es un interruptor de corte bajo carga — abrir uno bajo carga es un evento de arco, no una desconexión. Cuando una regla pide un medio de desconexión, verifique que el dispositivo en mano esté realmente clasificado para hacer el trabajo de desconexión para ese tipo de carga.",
+      "plain_explanation": "Tres capas de palabras mantienen claras las reglas de desconexión.\n• Dispositivo: una unidad de un sistema eléctrico, distinta de un conductor, que lleva o controla energía eléctrica. Interruptores, receptáculos, breakers y termostatos son dispositivos; el cable y la tubería no lo son.\n• Medio de desconexión: un dispositivo, un grupo de dispositivos u otro medio por el cual los conductores de un circuito pueden desconectarse de su fuente. Es aquello desde lo que la página de A la vista mide — visible, y a no más de 50 pies.\n• Interruptor de uso general: controla cargas de iluminación y electrodomésticos, y se clasifica en amperios a su voltaje marcado.\n• Interruptor de aislamiento: destinado a aislar un circuito de su fuente. No tiene capacidad de interrupción y no está destinado a interrumpir corriente bajo carga.\n• Interruptor de circuito de motor: se clasifica en caballos de fuerza, y está construido para interrumpir la máxima corriente de sobrecarga de operación del motor al que sirve.",
+      "on_the_job": "Un interruptor de aislamiento no es un interruptor de corte bajo carga — abrir uno bajo carga es un evento de arco, no una desconexión. Cuando una regla pide un medio de desconexión, verifique que el dispositivo en mano esté realmente clasificado para hacer el trabajo de desconexión para ese tipo de carga. En un cambio de unidad en azotea, la cuadrilla corta la carga primero en el breaker y solo entonces abre el interruptor de aislamiento junto a la unidad; el desconectador que sirve al condensador aun así debe quedar a la vista de él — visible y dentro de 50 pies.",
       "sharma_note": "",
       "figure_idea": "Tres interruptores en fila — de uso general, de aislamiento, de circuito de motor — con la carga que cada uno está construido para interrumpir dibujada al lado.",
       "related_ids": [
@@ -3767,7 +4532,102 @@
       "verified": true,
       "prev_id": "C1-100-IN-SIGHT",
       "next_id": "C1-100-SYSTEMS-WIRING",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Un desconectador es una promesa: ábralo, y el equipo está muerto. La promesa solo se sostiene si el dispositivo fue construido para cortar la carga que tiene enfrente. Un interruptor de aislamiento abierto bajo carga dibuja un arco que nunca fue diseñado para apagar, frente a la persona que sostiene la manija. Las definiciones son la etiqueta de advertencia — le dicen qué interruptor mantiene la promesa y cuál nunca la hizo.",
+      "inspection_fails": [
+        "Interruptor de aislamiento abierto bajo carga — daño de arco en las cuchillas; nunca estuvo clasificado para cortar esa corriente.",
+        "Termostato aceptado como medio de desconexión de una unidad de azotea — un dispositivo de control no es un desconectador.",
+        "Desconectador del condensador fuera de la vista de la unidad y a más de 50 pies — falla la regla de a la vista que estas definiciones alimentan.",
+        "Interruptor de uso general llevando una carga de motor para la que nunca fue clasificado."
+      ],
+      "exam_trap": "La respuesta trampa trata todo interruptor como un desconectador. Un interruptor de aislamiento puede servir como medio de desconexión para aislar, pero no está construido para interrumpir corriente bajo carga — y un termostato, aunque es un dispositivo, es un control, no un medio de desconexión del equipo que opera.",
+      "tables": [
+        {
+          "caption": "Tres tipos de interruptores",
+          "headers": [
+            "Interruptor",
+            "Clasificado en",
+            "Construido para interrumpir"
+          ],
+          "rows": [
+            [
+              "Uso general",
+              "Amperios a su voltaje marcado",
+              "Cargas de iluminación y electrodomésticos"
+            ],
+            [
+              "Aislamiento",
+              "Sin capacidad de interrupción",
+              "Nada bajo carga — solo aislamiento"
+            ],
+            [
+              "Circuito de motor",
+              "Caballos de fuerza",
+              "La máxima corriente de sobrecarga de operación del motor"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-100-DEVICE-DISCONNECT-switches.svg",
+          "alt": "Tres interruptores en fila: un interruptor de uso general con una lámpara y un electrodoméstico, un interruptor de aislamiento con una franja roja que dice que no es para cortar carga, y un interruptor de circuito de motor junto a un motor, cada uno con su base de clasificación.",
+          "caption": "La misma manija, tres promesas distintas — revise la clasificación.",
+          "w": 900,
+          "h": 1480
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Cuál de estos NO es un dispositivo bajo el Artículo 100?",
+          "choices": [
+            "Un interruptor",
+            "Un termostato",
+            "Un conductor",
+            "Un receptáculo"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Un dispositivo lleva o controla energía eléctrica, y la definición deja fuera a los conductores a propósito.",
+          "nec_ref": "Artículo 100, Dispositivo"
+        },
+        {
+          "question": "Un interruptor de aislamiento está destinado a:",
+          "choices": [
+            "Interrumpir corriente bajo carga todos los días",
+            "Aislar un circuito después de que fue abierto por otro medio",
+            "Servir como desconectador de acometida",
+            "Controlar cargas de iluminación"
+          ],
+          "answer_index": 1,
+          "explain_plain": "No tiene capacidad de interrupción. Corte la carga en otro lugar primero, y después aísle.",
+          "nec_ref": "Artículo 100, Interruptor de aislamiento"
+        },
+        {
+          "question": "Un interruptor de circuito de motor se clasifica en:",
+          "choices": [
+            "Solo amperios",
+            "Caballos de fuerza",
+            "Solo voltios",
+            "Volt-amperios"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Caballos de fuerza — y está construido para interrumpir la máxima corriente de sobrecarga de operación del motor al que sirve.",
+          "nec_ref": "Artículo 100, Interruptor de circuito de motor"
+        }
+      ],
+      "code_refs": [
+        "Artículo 100 — Dispositivo",
+        "Artículo 100 — Medio de desconexión",
+        "Artículo 100 — Interruptor de uso general",
+        "Artículo 100 — Interruptor de aislamiento",
+        "Artículo 100 — Interruptor de circuito de motor",
+        "110.22",
+        "110.25"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C1-100-SYSTEMS-WIRING",
@@ -3775,8 +4635,8 @@
       "article": "100",
       "section": "100",
       "title": "Cableado del predio, sistemas derivados separadamente, raceway y empalmes",
-      "plain_explanation": "El sistema de cableado del predio es todo el cableado dentro de (y adosado a) un edificio, desde el punto de acometida — o desde otra fuente de energía como un generador o un sistema solar — hasta las salidas; no incluye el cableado interno del propio equipo. Un sistema derivado separadamente es un sistema de cableado del predio alimentado desde una fuente distinta de una acometida — un transformador, generador, convertidor o batería — que no tiene conexión eléctrica directa con los conductores de alimentación de otro sistema, salvo a través de la puesta a tierra y la unión. Un raceway es un canal cerrado construido para alojar conductores o cables — la tubería conduit y el tubing son raceways; el cable no lo es. Un empalme es la conexión entre conductores, y un conector de empalme para cables es el dispositivo — tuerca para cables, conector de palanca, bloque de terminales — listado para hacer esa conexión bajo presión. Un hoistway es el espacio tipo hueco por el que viaja un elevador, montaplatos o equipo similar, un espacio con sus propias reglas de cableado en el Artículo 620.",
-      "on_the_job": "Un tablero alimentado por transformador es un sistema derivado separadamente, y por eso recibe su propia unión neutro-tierra a través de un puente de unión del sistema — la unión que describe la página de la familia de puesta a tierra. Y cada empalme que hace una cuadrilla vive o muere por el listado del conector: el conector, no la cinta sobre él, es el empalme.",
+      "plain_explanation": "Cinco palabras del Artículo 100 que dibujan el mapa de un trabajo:\n• Sistema de cableado del predio: todo el cableado dentro de un edificio y adosado a él, desde el punto de acometida — o desde otra fuente de energía, como un generador o un sistema solar — hasta las salidas. No incluye el cableado interno del propio equipo.\n• Sistema derivado separadamente: un sistema de cableado del predio alimentado desde una fuente distinta de una acometida — un transformador, generador, convertidor o batería — que no tiene conexión eléctrica directa con los conductores de alimentación de otro sistema, salvo a través de la puesta a tierra y la unión.\n• Raceway: un canal cerrado construido para alojar conductores o cables. La tubería conduit y el tubing son raceways; un conjunto de cable no lo es.\n• Empalme: la conexión entre conductores. Un conector de empalme para cables — una tuerca para cables, un conector de palanca o un bloque de terminales — es el dispositivo listado para hacer esa conexión bajo presión.\n• Hoistway: el espacio tipo hueco por el que viaja un elevador, montaplatos o equipo similar. Tiene sus propias reglas de cableado en el Artículo 620.",
+      "on_the_job": "Un transformador en una pequeña oficina médica de Orlando reduce 480 V a 208Y/120 V para un tablero. Ese tablero es un sistema derivado separadamente, y por eso recibe su propia unión neutro-tierra a través de un puente de unión del sistema — la unión que describe la página de la familia de puesta a tierra. Y cada empalme que la cuadrilla hace en el mismo trabajo vive o muere por el listado del conector: el conector, no la cinta sobre él, es el empalme.",
       "sharma_note": "",
       "figure_idea": "Un contorno de edificio desde el punto de acometida hasta la última salida rotulado cableado del predio, un transformador alimentando su propio tablero rotulado derivado separadamente, y un raceway abierto mostrando los conductores adentro.",
       "related_ids": [
@@ -3788,7 +4648,110 @@
       "verified": true,
       "prev_id": "C1-100-DEVICE-DISCONNECT",
       "next_id": "C1-100-SPECIAL-PERMISSION",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1,
+      "why_it_exists": "Estas palabras deciden dónde termina un sistema y empieza otro — y eso decide dónde se une el neutro a tierra, qué reglas de llenado y soporte aplican, y si una conexión es legal o no. Si usted llama a un tablero alimentado por transformador «solo otro tablero», su puente de unión se pasa por alto. Si llama raceway a un cable, cada regla que busque después será la equivocada.",
+      "exam_trap": "La trampa: «El generador de reserva convierte esto en un sistema derivado separadamente». No por sí solo. La definición depende de la conexión: si el conductor puesto a tierra del generador queda conectado sólidamente al de la acometida, existe una conexión eléctrica directa y el sistema no es derivado separadamente. Solo se vuelve derivado separadamente cuando esa conexión se interrumpe, como con un neutro conmutado.",
+      "inspection_fails": [
+        "Tablero alimentado por transformador sin puente de unión del sistema: un sistema derivado separadamente tratado como un tablero común.",
+        "Empalmes hechos con cinta sobre conductores retorcidos, sin un conector de empalme listado.",
+        "Conjunto de cable contado como raceway al calcular el llenado: un cable no es un raceway.",
+        "Hoistway cableado con métodos que el Artículo 620 no permite en el hueco."
+      ],
+      "tables": [
+        {
+          "caption": "Las cinco palabras de un vistazo",
+          "headers": [
+            "Palabra",
+            "Significado simple",
+            "Dónde se aplica"
+          ],
+          "rows": [
+            [
+              "Cableado del predio",
+              "Del punto de acometida (u otra fuente) a las salidas",
+              "Dónde empiezan las reglas de cableado"
+            ],
+            [
+              "Derivado separadamente",
+              "Fuente propia, sin conexión directa con otro sistema",
+              "Recibe su propio puente de unión"
+            ],
+            [
+              "Raceway",
+              "Canal cerrado para conductores",
+              "Conduit y tubing: el cable no"
+            ],
+            [
+              "Empalme",
+              "Conexión entre conductores",
+              "Hecho por un conector listado"
+            ],
+            [
+              "Hoistway",
+              "Hueco de elevador y montaplatos",
+              "Aplican las reglas del Artículo 620"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-100-SYSTEMS-WIRING-map.svg",
+          "alt": "Diagrama de tres partes: un edificio cableado desde el punto de acometida hasta sus salidas, un transformador que alimenta su propio tablero como sistema derivado separadamente con su propio puente de unión, y el corte transversal de un raceway con conductores adentro.",
+          "caption": "Cableado del predio, un sistema derivado separadamente y un raceway.",
+          "w": 900,
+          "h": 1360
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un tablero se alimenta de un transformador cuyo secundario no tiene conexión directa con los conductores de alimentación de ningún otro sistema, salvo a través de la puesta a tierra y la unión. El sistema de ese tablero es:",
+          "choices": [
+            "Una acometida",
+            "Un sistema derivado separadamente",
+            "Un alimentador (feeder)",
+            "Un circuito ramal"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Un sistema de cableado del predio con fuente propia y sin conexión eléctrica directa con otro sistema es derivado separadamente, y por eso recibe su propio puente de unión del sistema.",
+          "nec_ref": "Article 100 — Separately Derived System"
+        },
+        {
+          "question": "¿Cuál de estos es un raceway?",
+          "choices": [
+            "Un conjunto de cable tipo NM",
+            "Tubería metálica eléctrica (EMT)",
+            "Un cordón flexible",
+            "El cableado interno de un equipo"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Un raceway es un canal cerrado construido para alojar conductores o cables. El tubing lo es; un conjunto de cable no.",
+          "nec_ref": "Article 100 — Raceway"
+        },
+        {
+          "question": "¿Qué hace que un empalme de campo sea un empalme según el Código?",
+          "choices": [
+            "Cinta sobre conductores retorcidos",
+            "Soldadura, si queda prolija",
+            "Un conector de empalme listado que hace la conexión bajo presión",
+            "Cualquier conexión dentro de una caja"
+          ],
+          "answer_index": 2,
+          "explain_plain": "El empalme es la conexión entre conductores, y el conector de empalme es el dispositivo listado que la hace bajo presión. La cinta no es el empalme.",
+          "nec_ref": "Article 100 — Splicing Wire Connector"
+        }
+      ],
+      "code_refs": [
+        "Article 100 — Premises Wiring (System)",
+        "Article 100 — Separately Derived System",
+        "Article 100 — Raceway",
+        "Article 100 — Splicing Wire Connector",
+        "Article 620"
+      ]
     },
     {
       "id": "C1-100-SPECIAL-PERMISSION",
@@ -3893,8 +4856,8 @@
       "article": "100",
       "section": "100",
       "title": "Garaje, cocina y área de lavandería — cómo usa el Código los nombres de áreas",
-      "plain_explanation": "De estos tres nombres de áreas, solo uno es una definición formal del Artículo 100: una cocina es «un área con un fregadero y provisiones permanentes para la preparación y cocción de alimentos»: ambas mitades deben estar presentes, y un electrodoméstico portátil enchufado en el mostrador no crea una. Garaje y área de lavandería no tienen una definición independiente en el Artículo 100 del Código 2020. El Código usa ambos términos en sus reglas — los tomacorrientes de garaje y su protección GFCI en 210.8(A)(2) y 210.52(G), el circuito derivado del área de lavandería en 210.11(C)(2) y el GFCI del área de lavandería en 210.8(A)(10) — y toman su significado ordinario: el garaje es el espacio para vehículos y sus áreas anexas sin terminar, y el área de lavandería es donde el equipo de lavandería está instalado o se pretende instalar. Así que trate la prueba de la cocina como una definición para aplicar exactamente, y los otros dos como términos de uso que se definen por el uso previsto del espacio en el plano.",
-      "on_the_job": "Cuando un plano sea vago sobre el uso de un cuarto, defínalo antes del rough-in: un área de lavandería movida después del cableado cambia la protección GFCI y los requisitos de circuitos. Las reglas detalladas de áreas viven en el Artículo 210 y se cubren en el Capítulo 2 de este libro.",
+      "plain_explanation": "De estos tres nombres de áreas, solo uno es una definición formal del Artículo 100:\n• Cocina: «un área con un fregadero y provisiones permanentes para la preparación y cocción de alimentos». Ambas mitades deben estar presentes — un electrodoméstico portátil enchufado en el mostrador no crea una cocina.\n• Garaje: sin definición independiente en el Artículo 100 del Código 2020. El Código usa la palabra en sus reglas — los tomacorrientes de garaje y su protección GFCI en 210.8(A)(2) y 210.52(G) — y toma su significado ordinario: el espacio para vehículos y sus áreas anexas sin terminar.\n• Área de lavandería: tampoco tiene definición independiente. El circuito derivado de lavandería es 210.11(C)(2) y el GFCI del área de lavandería es 210.8(A)(10); el término significa donde el equipo de lavandería está instalado o se pretende instalar.\nTrate la prueba de la cocina como una definición para aplicar exactamente, y los otros dos como términos de uso que se definen por el uso previsto del espacio en el plano.",
+      "on_the_job": "En un plano de Marion Oaks, el «cuarto bonus» sobre el garaje muestra un fregadero y una estufa en los dibujos. Ambas mitades de la prueba de cocina están presentes, así que cabléelo como cocina — sus reglas de circuitos y GFCI del Capítulo 2 siguen al nombre. El mismo trabajo, segundo cambio: el dueño mueve la lavandería del cuarto de servicio a un clóset del piso de arriba después del rough-in. El circuito de lavandería 210.11(C)(2) y la protección GFCI 210.8(A)(10) tienen que mudarse con ella. Defina el uso de cada cuarto antes del rough-in; un área movida después del cableado es retrabajo. Las reglas detalladas de áreas viven en el Artículo 210, cubierto en el Capítulo 2 de este libro.",
       "sharma_note": "S-08: el circuito de la secadora usa un breaker GFCI Siemens Q230GF de 30A de 2 polos, porque el NEC 2020 exige protección GFCI para los tomacorrientes en áreas de lavandería, incluidos los tomacorrientes de 250V.",
       "figure_idea": "Plano de casa con garaje, cocina y lavandería sombreados en tres colores, cada uno etiquetado con el capítulo que contiene sus reglas principales.",
       "related_ids": [
@@ -3908,7 +4871,99 @@
       "next_id": "C1-ART-110",
       "sharma_rule_ids": [
         "S-08"
-      ]
+      ],
+      "why_it_exists": "El nombre del cuarto es un interruptor que enciende y apaga conjuntos enteros de reglas. Si llama cocina a un bar con fregadero, debe circuitos de pequeños electrodomésticos y GFCI de mostrador que nunca necesitó. Si no reconoce una cocina real, o una lavandería que se movió, los circuitos y la protección GFCI exigidos quedan en el cuarto equivocado — y se descubre en la inspección, con las paredes ya cerradas.",
+      "inspection_fails": [
+        "Tomacorrientes de garaje instalados sin protección GFCI — 210.8(A)(2).",
+        "Área de lavandería reubicada después del rough-in; el circuito 210.11(C)(2) y la protección GFCI 210.8(A)(10) quedaron en el cuarto viejo.",
+        "Cuarto con fregadero y estufa permanente cableado como comedor — se cumplía la definición de cocina y se pasaron por alto sus reglas del Capítulo 2."
+      ],
+      "exam_trap": "La respuesta trampa: «Un cuarto con fregadero y un microondas en el mostrador es una cocina». No lo es. La definición exige provisiones permanentes para preparar y cocinar alimentos; un electrodoméstico portátil enchufado para la inspección no las crea. Ambas mitades de la prueba, o no es cocina.",
+      "tables": [
+        {
+          "caption": "Tres nombres, tres tratamientos",
+          "headers": [
+            "Área",
+            "¿Definición Art. 100?",
+            "Reglas que la usan"
+          ],
+          "rows": [
+            [
+              "Cocina",
+              "Sí — fregadero + provisiones permanentes de cocción",
+              "Reglas de circuitos y GFCI del Artículo 210 (Cap. 2)"
+            ],
+            [
+              "Garaje",
+              "No — significado ordinario",
+              "210.8(A)(2), 210.52(G)"
+            ],
+            [
+              "Área de lavandería",
+              "No — significado ordinario",
+              "210.11(C)(2), 210.8(A)(10)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-100-AREAS-IN-USE-plan.svg",
+          "alt": "Plano de casa que marca el garaje, la cocina y la lavandería: solo la cocina es una definición del Artículo 100, mientras que garaje y lavandería son términos de uso con reglas en el Artículo 210.",
+          "caption": "La misma casa, tres nombres — solo uno es una definición.",
+          "w": 900,
+          "h": 1260
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Qué cuarto cumple la definición de cocina del Artículo 100?",
+          "choices": [
+            "Un comedor con un microondas de mostrador",
+            "Un área con fregadero y provisiones permanentes para cocinar",
+            "Cualquier cuarto que tenga un fregadero",
+            "Una despensa con un refrigerador"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Ambas mitades deben estar presentes: un fregadero, y provisiones permanentes para la preparación y cocción de alimentos.",
+          "nec_ref": "Artículo 100 — Cocina"
+        },
+        {
+          "question": "La protección GFCI de los tomacorrientes de garaje la exige:",
+          "choices": [
+            "210.8(A)(2)",
+            "210.11(C)(2)",
+            "210.52(C)",
+            "110.26(A)"
+          ],
+          "answer_index": 0,
+          "explain_plain": "Los tomacorrientes de garaje toman su protección GFCI de 210.8(A)(2); 210.52(G) cubre las salidas de tomacorriente del garaje en sí.",
+          "nec_ref": "210.8(A)(2)"
+        },
+        {
+          "question": "El circuito derivado del área de lavandería lo exige:",
+          "choices": [
+            "210.52(G)",
+            "210.8(A)(10)",
+            "210.11(C)(2)",
+            "220.42"
+          ],
+          "answer_index": 2,
+          "explain_plain": "210.11(C)(2) es el circuito; 210.8(A)(10) es la regla de GFCI de lavandería. Los dos viajan juntos.",
+          "nec_ref": "210.11(C)(2)"
+        }
+      ],
+      "code_refs": [
+        "Artículo 100 — Cocina",
+        "210.8(A)(2)",
+        "210.52(G)",
+        "210.11(C)(2)",
+        "210.8(A)(10)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios del NEC 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich": 1
     },
     {
       "id": "C1-ART-110",
@@ -4556,8 +5611,8 @@
       "article": "110",
       "section": "110.4",
       "title": "Voltajes",
-      "plain_explanation": "El voltaje considerado es el voltaje al que opera el circuito, y la clasificación de voltaje del equipo no puede ser menor que el voltaje nominal del circuito al que está conectado. El equipo se usa al voltaje para el que está clasificado, y donde el Código indica un voltaje se refiere al voltaje nominal del sistema al que el circuito realmente opera, a menos que una regla diga otra cosa. Un dispositivo clasificado para un voltaje menor no se vuelve idóneo en un circuito de mayor voltaje porque sus terminales encajen, y el voltaje nominal es la base de las reglas de carga, protección y distancias libres.\n\nVoltajes nominales comunes del sistema (la lista en sí está en 220.5(A), no en 110.4):\n• 120 V — circuitos ramales monofásicos\n• 120/240 V — la acometida estándar de una casa unifamiliar\n• 208Y/120 V — estrella trifásica, común en edificios comerciales y acometidas multifamiliares\n• 240 V — delta monofásica o trifásica\n• 277 V — una pata de un sistema 480Y/277 V al neutro, el voltaje de alumbrado comercial\n• 480Y/277 V y 480 V — acometidas comerciales mayores\nEl equipo está clasificado para el voltaje nominal del sistema al que se conecta; un dispositivo marcado para un voltaje de sistema no es intercambiable con otro solo porque los enchufes se parezcan.",
-      "on_the_job": "Verifique el voltaje de la placa de datos contra el sistema que tiene enfrente: 120/240 monofásico, 208Y/120 y 480Y/277 trifásicos son mundos distintos para las clasificaciones de los dispositivos aunque el equipo se vea parecido.",
+      "plain_explanation": "El voltaje que el Código quiere decir es el voltaje nominal del sistema — el voltaje al que el circuito realmente opera — a menos que una regla diga otra cosa. La clasificación de voltaje del equipo no puede ser menor que el voltaje nominal del circuito al que está conectado, y un dispositivo clasificado para un voltaje menor no se vuelve idóneo en un circuito de mayor voltaje solo porque sus terminales encajen. Las reglas de carga, protección y distancias libres se basan todas en ese voltaje nominal.\nVoltajes nominales comunes del sistema (la lista en sí está en 220.5(A), no en 110.4):\n• 120 V — circuitos ramales monofásicos\n• 120/240 V — la acometida estándar de una casa unifamiliar\n• 208Y/120 V — estrella trifásica, común en edificios comerciales y acometidas multifamiliares\n• 240 V — delta monofásica o trifásica\n• 277 V — una pata de un sistema 480Y/277 V al neutro, el voltaje de alumbrado comercial\n• 480Y/277 V y 480 V — acometidas comerciales mayores\nUn dispositivo marcado para un voltaje de sistema no es intercambiable con otro solo porque los enchufes se parezcan.",
+      "on_the_job": "En una remodelación de una plaza comercial en Kissimmee, el alumbrado existente funciona a 277 V desde una acometida 480Y/277 V. Los drivers de reemplazo que envió el proveedor están marcados solo para 120 V. Encajan en las mismas cajas y se conectan a los mismos cables — y no se pueden instalar. La cuadrilla detiene esa parte del trabajo en el mostrador de la casa de suministro: drivers de 277 V, o otra luminaria. La placa de datos se verifica contra el sistema que usted tiene enfrente: 120/240 V monofásico, 208Y/120 V y 480Y/277 V trifásicos son mundos distintos para las clasificaciones de los dispositivos, aunque el equipo se vea parecido.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -4565,7 +5620,105 @@
       "verified": true,
       "prev_id": "C1-110.3(B)",
       "next_id": "C1-110.5",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1,
+      "why_it_exists": "Una clasificación de voltaje es una clasificación de seguridad, no una sugerencia. Si usted pone un dispositivo a un voltaje mayor que el de su marca, su aislamiento, sus distancias entre contactos y su capacidad de interrumpir un arco quedan todos por debajo de lo que la falla puede exigir. La regla del voltaje nominal también mantiene los cálculos de todos en la misma página: cargas, protección y distancias se calculan con el nombre del sistema, no con lo que el medidor lea esa tarde.",
+      "exam_trap": "La trampa: «Los terminales encajan y el breaker se sostiene, así que el dispositivo de 120 V está bien en el circuito de alumbrado de 277 V». Falso: el encaje no es una clasificación. La sección 110.4 basa la regla en el voltaje nominal del circuito, y el equipo no puede estar clasificado por debajo de él. La trampa inversa es buscar la lista de voltajes del sistema en 110.4: la lista vive en 220.5(A).",
+      "inspection_fails": [
+        "Dispositivo clasificado para 120 V instalado en un circuito de alumbrado comercial de 277 V porque los terminales encajaban.",
+        "Equipo cuya clasificación de voltaje es menor que el voltaje nominal del circuito al que está conectado.",
+        "Equipo reemplazado por uno igual en una remodelación multifamiliar sin verificar la placa de datos contra un sistema 208Y/120 V.",
+        "Voltaje de la placa de datos nunca verificado en un cambio de acometida antes de conectar el equipo nuevo."
+      ],
+      "tables": [
+        {
+          "caption": "Voltajes nominales del sistema (lista en 220.5(A))",
+          "headers": [
+            "Sistema",
+            "Dónde lo encuentra"
+          ],
+          "rows": [
+            [
+              "120 V",
+              "Circuitos ramales monofásicos"
+            ],
+            [
+              "120/240 V",
+              "La acometida estándar de una casa unifamiliar"
+            ],
+            [
+              "208Y/120 V",
+              "Estrella trifásica: comercial y multifamiliar"
+            ],
+            [
+              "240 V",
+              "Delta monofásica o trifásica"
+            ],
+            [
+              "277 V",
+              "Una pata de 480Y/277 V: alumbrado comercial"
+            ],
+            [
+              "480Y/277 V y 480 V",
+              "Acometidas comerciales mayores"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-110.4-nominal-voltages.svg",
+          "alt": "Gráfico de barras de los voltajes nominales del sistema dibujados a escala — 120, 208, 240, 277 y 480 volts — con el uso típico de cada sistema y una advertencia de que un dispositivo de menor clasificación nunca se vuelve idóneo.",
+          "caption": "Los voltajes nominales, dibujados a escala.",
+          "w": 900,
+          "h": 1380
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un circuito de alumbrado opera a 277 V nominales. Un dispositivo de reemplazo está clasificado para 120 V, y sus terminales encajan. ¿Se puede instalar?",
+          "choices": [
+            "Sí: el encaje es lo que importa",
+            "No: su clasificación está por debajo del voltaje nominal del circuito",
+            "Sí, si lleva fusible",
+            "Sí, en una caja metálica"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La clasificación de voltaje del equipo no puede ser menor que el voltaje nominal del circuito al que se conecta. El encaje no es una clasificación.",
+          "nec_ref": "110.4"
+        },
+        {
+          "question": "¿Dónde lista el Código los voltajes nominales comunes del sistema?",
+          "choices": [
+            "110.4",
+            "220.5(A)",
+            "90.2",
+            "Tabla 310.16"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La sección 110.4 enuncia la regla sobre el voltaje nominal; la lista de voltajes en sí está en 220.5(A).",
+          "nec_ref": "220.5(A)"
+        },
+        {
+          "question": "Cuando el Código indica un voltaje, se refiere a:",
+          "choices": [
+            "El voltaje medido ese día",
+            "El voltaje nominal del sistema",
+            "El voltaje pico",
+            "El voltaje de facturación de la compañía eléctrica"
+          ],
+          "answer_index": 1,
+          "explain_plain": "A menos que una regla diga otra cosa, un voltaje indicado es el voltaje nominal del sistema al que el circuito realmente opera.",
+          "nec_ref": "110.4"
+        }
+      ],
+      "code_refs": [
+        "110.4",
+        "220.5(A)"
+      ]
     },
     {
       "id": "C1-110.5",
@@ -4690,8 +5843,8 @@
       "article": "110",
       "section": "110.6",
       "title": "Tamaños de conductor — AWG y mils circulares",
-      "plain_explanation": "Los tamaños de conductor se expresan en American Wire Gauge para los tamaños menores y en área de mils circulares para los mayores. La designación de tamaño es un lenguaje estándar: el mismo número AWG significa el mismo tamaño de conductor lo haya fabricado quien lo haya fabricado. El tamaño por sí solo no es ampacidad: la capacidad nominal sigue viniendo de las tablas de ampacidad, los límites de las terminaciones y las condiciones de uso.\n\nÁreas en mils circulares para los tamaños que Sharma instala más (por encima de 4/0, el número kcmil es el área en miles de mils circulares):\n• 14 AWG — 4,110 mils circulares\n• 12 AWG — 6,530 mils circulares\n• 10 AWG — 10,380 mils circulares\n• 8 AWG — 16,510 mils circulares\n• 6 AWG — 26,240 mils circulares\n• 4 AWG — 41,740 mils circulares\n• 2 AWG — 66,360 mils circulares\n• 1/0 AWG — 105,600 mils circulares\n• 2/0 AWG — 133,100 mils circulares\n• 3/0 AWG — 167,800 mils circulares\n• 4/0 AWG — 211,600 mils circulares\nEstas áreas son la base de la que parten las reglas de aumento proporcional de tamaño: cuando se aumenta el tamaño de los conductores, los conductores de puesta a tierra se aumentan según la proporción de estos números (véase 250.122 en el Capítulo 2).",
-      "on_the_job": "Exprese los tamaños en AWG hasta 4/0 y en kcmil por encima de eso, y nunca deje que la capacidad nominal de la manija de un breaker sustituya la verificación de ampacidad que hay detrás.",
+      "plain_explanation": "Los tamaños de conductor se expresan en American Wire Gauge (AWG) para los tamaños menores y en área de mils circulares para los mayores. Por encima de 4/0 AWG, el número kcmil es el área en miles de mils circulares: 500 kcmil son 500,000 mils circulares.\nLa designación de tamaño es un lenguaje estándar — el mismo número AWG significa el mismo tamaño de conductor lo haya fabricado quien lo haya fabricado.\nEl tamaño por sí solo no es ampacidad. La capacidad nominal sigue viniendo de las tablas de ampacidad, los límites de las terminaciones y las condiciones de uso.\nLas áreas en mils circulares de la tabla son la base de las reglas de aumento proporcional: cuando se aumenta el tamaño de los conductores no puestos a tierra, el conductor de puesta a tierra del equipo se aumenta según la proporción de estos números (250.122).",
+      "on_the_job": "Tramo largo desde el tablero de una casa en Marion Oaks hasta un garaje separado: la caída de voltaje empuja los conductores no puestos a tierra de 12 AWG a 10 AWG. El conductor de puesta a tierra sube en la misma proporción — 10,380 ÷ 6,530 es cerca de 1.59, y 6,530 × 1.59 cae en 10,380, así que el conductor de puesta a tierra del equipo de 12 AWG pasa a 10 AWG (250.122). Exprese los tamaños en AWG hasta 4/0 y en kcmil por encima de eso, y nunca deje que la capacidad de la manija de un breaker sustituya la verificación de ampacidad que hay detrás.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -4701,7 +5854,126 @@
       "verified": true,
       "prev_id": "C1-110.5",
       "next_id": "C1-110.7",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "La cuadrilla que trata el tamaño como capacidad nominal se equivoca en las dos direcciones: un conductor grueso leído en la columna equivocada de la tabla igual se sobrecalienta, y un conductor de puesta a tierra dejado pequeño después de un aumento se vuelve el eslabón débil del camino de falla. Las áreas parecen trivia hasta que un aumento por caída de voltaje las convierte en una proporción que usted tiene que calcular.",
+      "inspection_fails": [
+        "Conductor de puesta a tierra del equipo dejado en 12 AWG después de aumentar los conductores no puestos a tierra a 10 AWG por caída de voltaje — se pasó por alto el aumento proporcional de 250.122.",
+        "Conductores de 12 AWG protegidos a 30 A — el tamaño se trató como la ampacidad en vez de revisar las tablas (240.4(D)).",
+        "Lista de tablero rechazada: tamaños de alimentador por encima de 4/0 escritos en AWG en vez de kcmil."
+      ],
+      "exam_trap": "La trampa: «2 AWG es más grande que 2/0 — el 2/0 es una fracción». Al revés. Los tamaños «ought» corren en la otra dirección: 2/0 son 133,100 mils circulares contra 66,360 de 2 AWG — el doble de metal. Cuando los números se acaban en 4/0, los tamaños cambian a kcmil.",
+      "tables": [
+        {
+          "caption": "Áreas en mils circulares para los tamaños que Sharma instala más",
+          "headers": [
+            "Tamaño",
+            "Área (cmil)"
+          ],
+          "rows": [
+            [
+              "14 AWG",
+              "4,110"
+            ],
+            [
+              "12 AWG",
+              "6,530"
+            ],
+            [
+              "10 AWG",
+              "10,380"
+            ],
+            [
+              "8 AWG",
+              "16,510"
+            ],
+            [
+              "6 AWG",
+              "26,240"
+            ],
+            [
+              "4 AWG",
+              "41,740"
+            ],
+            [
+              "2 AWG",
+              "66,360"
+            ],
+            [
+              "1/0 AWG",
+              "105,600"
+            ],
+            [
+              "2/0 AWG",
+              "133,100"
+            ],
+            [
+              "3/0 AWG",
+              "167,800"
+            ],
+            [
+              "4/0 AWG",
+              "211,600"
+            ]
+          ],
+          "note": "Áreas de la Tabla 8 del Capítulo 9 — la base del aumento proporcional en 250.122."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-110.6-areas.svg",
+          "alt": "Cuatro secciones transversales de conductor dibujadas a escala por área en mils circulares — 12 AWG, 8 AWG, 4 AWG y 4/0 AWG — que muestran que el área de metal se duplica cerca de cada tres tamaños AWG.",
+          "caption": "Dibujado a escala: 4/0 lleva cerca de 32 veces el metal de 12 AWG.",
+          "w": 900,
+          "h": 1200
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Qué conductor tiene más metal?",
+          "choices": [
+            "2 AWG",
+            "2/0 AWG",
+            "Son iguales",
+            "12 AWG"
+          ],
+          "answer_index": 1,
+          "explain_plain": "2/0 son 133,100 mils circulares; 2 AWG son 66,360. Los tamaños «ought» son los grandes.",
+          "nec_ref": "110.6"
+        },
+        {
+          "question": "500 kcmil significa un área de:",
+          "choices": [
+            "500 mils circulares",
+            "5,000 mils circulares",
+            "500,000 mils circulares",
+            "500 mils cuadrados"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Por encima de 4/0, el número kcmil es el área en miles de mils circulares.",
+          "nec_ref": "110.6"
+        },
+        {
+          "question": "Los conductores no puestos a tierra se aumentan de 12 AWG a 10 AWG por caída de voltaje. El conductor de puesta a tierra del equipo:",
+          "choices": [
+            "Se queda en 12 AWG",
+            "Sube en la misma proporción — a 10 AWG",
+            "Baja a 14 AWG",
+            "No se exige"
+          ],
+          "answer_index": 1,
+          "explain_plain": "250.122 trabaja desde la proporción en mils circulares: 10,380 ÷ 6,530 ≈ 1.59, y 6,530 × 1.59 ≈ 10,380 — una puesta a tierra de 10 AWG.",
+          "nec_ref": "250.122"
+        }
+      ],
+      "code_refs": [
+        "110.6",
+        "Capítulo 9, Tabla 8",
+        "250.122"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios del NEC 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich": 1
     },
     {
       "id": "C1-110.7",
@@ -5286,8 +6558,8 @@
       "article": "110",
       "section": "110.12",
       "title": "Ejecución mecánica del trabajo — calidad de mano de obra y aberturas sin usar",
-      "plain_explanation": "El trabajo eléctrico debe hacerse de manera limpia y profesional. Las aberturas sin usar en gabinetes, cajas y equipos deben cerrarse con cierres que den una protección muy parecida a la de la pared del propio equipo: un troquel faltante sin tapar es una puerta abierta para dedos, plagas y productos de arco. Los conductores también deben protegerse donde el aislamiento puede dañarse. (Mantener el agua fuera de los gabinetes en ubicaciones mojadas es una regla distinta — ver 312.2 y 314.15 — no parte de 110.12.) La parte (B) cubre la integridad de equipos y conexiones: las partes internas, barras colectoras, terminales de cableado y otros componentes no deben estar dañados ni contaminados con materiales extraños, y no debe haber partes dañadas, rotas, dobladas, cortadas ni deterioradas.\n\nCAMBIO NEC 2023:\n• 110.12: «Neat and workmanlike» quedó eliminado. El estándar para toda instalación eléctrica ahora es el trabajo profesional y hábil. El estándar de mano de obra cambió de neat and workmanlike a professional and skillful.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Cierre cada abertura sin usar con una tapa o tapón listado, no con cinta ni con un pedazo de lata doblado. El trabajo limpio aquí no es cosmético: es la sección que el inspector cita cuando un tablero parece un peligro incluso antes de probar nada.",
+      "plain_explanation": "El trabajo eléctrico debe hacerse de manera limpia y profesional — eso es una regla del Código, no un cumplido. Cubre cómo se arma todo el trabajo:\n• Las aberturas sin usar en gabinetes, cajas y equipos deben cerrarse con cierres que den una protección muy parecida a la de la pared del propio equipo. Un troquel faltante sin tapar es una puerta abierta para dedos, plagas y productos de arco.\n• Los conductores deben protegerse donde su aislamiento puede dañarse.\n• El 110.12(B) cubre la integridad de equipos y conexiones: las partes internas, barras colectoras, terminales de cableado y otros componentes no deben estar dañados ni contaminados con materiales extraños, y no debe haber partes dañadas, rotas, dobladas, cortadas ni deterioradas.\nMantener el agua fuera de los gabinetes en ubicaciones mojadas es una regla distinta — ver 312.2 y 314.15 — no parte de 110.12.",
+      "on_the_job": "En un tablero de garaje en una casa nueva de Marion Oaks, cierre cada abertura sin usar con una tapa o tapón listado el mismo día que se instala el equipo — no con cinta, y no con un pedazo de lata doblado. En equipos exteriores de Florida, el mismo hueco abierto es también una entrada de plagas y agua, así que no espera hasta el trim. El trabajo limpio aquí no es cosmético: el 110.12 es la sección que el inspector cita cuando un tablero parece un peligro antes de haber probado una sola cosa.",
       "sharma_note": "",
       "figure_idea": "Fotos de tablero antes/después en forma de dibujo: troqueles abiertos y conductores sueltos en un lado, tapas colocadas y conductores ordenados en el otro.",
       "related_ids": [
@@ -5308,7 +6580,96 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/110-12",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "El trabajo descuidado es un peligro, no solo un problema estético. Un troquel abierto deja que un dedo, una lagartija o un nido llegue a las partes vivas, y en una falla deja salir los productos de arco directo fuera de la caja. La pintura, el polvo de drywall y las partes dobladas o dañadas dentro del equipo elevan la resistencia, atrapan calor y esconden el defecto hasta que falla bajo carga — por lo general en la tarde más calurosa del año.",
+      "exam_trap": "La respuesta trampa es que «limpio y profesional» es el gusto personal del inspector — una preferencia de estilo que se puede discutir junto a la camioneta. Es un requisito del Código con dientes: una abertura sin usar cerrada con cinta no pasa, y la pintura o el polvo de drywall sobre las barras es una violación del 110.12(B), no una nota de limpieza.",
+      "tables": [
+        {
+          "caption": "El 110.12 en dos partes",
+          "headers": [
+            "Parte",
+            "Cubre",
+            "Prueba de campo"
+          ],
+          "rows": [
+            [
+              "110.12(A)",
+              "Aberturas sin usar, cerradas",
+              "El cierre protege ≈ la pared del gabinete"
+            ],
+            [
+              "110.12(B)",
+              "Integridad de equipos y conexiones",
+              "Sin partes dañadas ni contaminadas"
+            ]
+          ],
+          "note": "La frase de limpio y profesional cubre toda la instalación; (A) y (B) son las dos partes que un inspector puede señalar."
+        }
+      ],
+      "inspection_fails": [
+        "Abertura de troquel sin usar en un tablero o desconectador dejada abierta — o «cerrada» con cinta eléctrica.",
+        "Sobrepintura o polvo de drywall contaminando barras colectoras y contactos de breakers dentro de un tablero: 110.12(B).",
+        "Partes de breaker, terminal o gabinete dobladas, rotas o dañadas dejadas en servicio.",
+        "Conductores rozando un borde filoso del gabinete, con el aislamiento dañado y sin protección instalada."
+      ],
+      "page_quiz": [
+        {
+          "question": "Una abertura de troquel sin usar en un desconectador se cubre con cinta eléctrica. ¿Pasa?",
+          "choices": [
+            "Sí — la abertura está cubierta",
+            "Sí, si la cinta está listada",
+            "No — el cierre debe proteger muy parecido a la pared del gabinete",
+            "Solo en unidades de vivienda"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La cinta no es un cierre. Las aberturas sin usar llevan tapas o tapones que dan una protección muy parecida a la de la pared del propio equipo.",
+          "nec_ref": "110.12(A)"
+        },
+        {
+          "question": "¿Cuál de estas es una violación del 110.12(B)?",
+          "choices": [
+            "Una tapa listada instalada en una abertura sin usar",
+            "Polvo de drywall y pintura sobre las barras colectoras",
+            "Conductores protegidos donde pasan por un borde filoso",
+            "Una puerta de tablero que abre los 90 grados completos"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El 110.12(B) exige que las partes internas, barras y terminales estén libres de daño y de contaminación con materiales extraños.",
+          "nec_ref": "110.12(B)"
+        },
+        {
+          "question": "Mantener el agua fuera de un gabinete en una ubicación mojada lo cubre:",
+          "choices": [
+            "110.12",
+            "312.2 y 314.15",
+            "110.3(B)",
+            "Artículo 100"
+          ],
+          "answer_index": 1,
+          "explain_plain": "No es el 110.12. Las reglas de agua en ubicaciones mojadas están en el 312.2 para gabinetes y en el 314.15 para cajas.",
+          "nec_ref": "312.2, 314.15"
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-110.12-before-after.svg",
+          "alt": "Dos dibujos de tablero lado a lado: el primero con troqueles abiertos, un conductor dañado y polvo sobre la barra; el segundo con tapas listadas instaladas, conductores ordenados y partes limpias.",
+          "caption": "El 110.12 de un vistazo: aberturas cerradas, partes sanas, trabajo ordenado.",
+          "w": 900,
+          "h": 1380
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 110.12: «Neat and workmanlike» quedó eliminado. El estándar para toda instalación eléctrica ahora es el trabajo profesional y hábil. El estándar de mano de obra cambió de neat and workmanlike a professional and skillful.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "110.12",
+        "110.12(A)",
+        "110.12(B)",
+        "312.2",
+        "314.15"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C1-110.13",
@@ -5941,8 +7302,8 @@
       "article": "110",
       "section": "110.16",
       "title": "Marcado de advertencia de peligro de arco eléctrico (arc-flash)",
-      "plain_explanation": "Ciertos equipos que probablemente serán examinados, ajustados o intervenidos estando energizados — como tableros de distribución (switchboards), tableros y centros de control de motores en entornos que no son vivienda — deben llevar un marcado de advertencia durable aplicado en campo que avise a las personas del peligro de arco eléctrico (arc-flash). El marcado advierte; no sustituye las prácticas seguras de trabajo, y va donde una persona que se acerca al equipo lo verá. 110.16(B) (NEC 2020): en entornos que no son unidades de vivienda, el equipo de acometida clasificado 1200A o más también necesita una etiqueta permanente (que cumpla 110.21(B)) que muestre el voltaje nominal del sistema, la corriente de falla disponible en los dispositivos de sobrecorriente de la acometida, el tiempo de despeje de esos dispositivos basado en esa corriente de falla, y la fecha en que se aplicó la etiqueta; no se requiere donde se aplica una etiqueta de arco eléctrico según la práctica aceptable de la industria.\n\nCAMBIO NEC 2023:\n• 110.16(B): 110.16(B) ahora cubre el equipo de acometida Y el equipo alimentado por alimentadores clasificado 1000A o más (antes era equipo de acometida de 1200A o más), y la etiqueta permanente debe ser una etiqueta de arco eléctrico según la práctica aplicable de la industria, con la fecha de aplicación.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "En trabajo comercial, confirme que la etiqueta de advertencia de arco eléctrico esté presente y legible antes del final. Las casas no son el objetivo de esta sección, pero el peligro que nombra es real en cualquier tablero energizado.",
+      "plain_explanation": "Los equipos que probablemente serán examinados, ajustados, intervenidos o mantenidos estando energizados — como switchboards, tableros y centros de control de motores en entornos que no son vivienda — deben llevar un marcado de advertencia durable, aplicado en campo, sobre el peligro de arco eléctrico (arc-flash):\n• El 110.16(A) es el propio marcado de advertencia. Advierte a la persona que se acerca al equipo; no sustituye las prácticas seguras de trabajo, y va donde esa persona lo verá antes de abrir cualquier cosa.\n• El 110.16(B): en entornos que no son unidades de vivienda, el equipo de acometida clasificado 1200A o más también necesita una etiqueta permanente que cumpla el 110.21(B). La etiqueta muestra el voltaje nominal del sistema, la corriente de falla disponible en los dispositivos de sobrecorriente de la acometida, el tiempo de despeje de esos dispositivos basado en esa corriente de falla, y la fecha en que se aplicó la etiqueta. No se requiere donde se aplica una etiqueta de arco eléctrico según la práctica aceptable de la industria.",
+      "on_the_job": "En un trabajo comercial pequeño — una acometida de 1600A, 480Y/277 V para una plaza comercial de Ocala — la etiqueta de (B) se llena con las cifras de corriente de falla antes del final: voltaje nominal, la corriente de falla disponible en los dispositivos de la acometida, su tiempo de despeje a esa corriente, y la fecha en que se colocó. Confirme que la advertencia general de arco eléctrico esté presente y legible antes de llamar al final. Las casas no son el objetivo de esta sección, pero el peligro que nombra es real en cualquier tablero energizado.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -5961,7 +7322,99 @@
           "url": "https://www.ecmag.com/magazine/articles/article-detail/arc-flash-hazard-warning-and-labeling-what-the-2023-nec-has-to-say-on-these-requirements",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "El arco eléctrico es el peligro que no se ve venir: abrir una cubierta sobre una barra con falla o mal conectada puede liberar una explosión de arco antes de que una mano alcance a retirarse. La advertencia hace que la próxima persona se detenga, se equipe y planifique antes de quitar la cubierta — y la etiqueta de (B) pone los números que guían las decisiones de seguridad sobre el propio equipo, donde todavía se necesitan diez años después.",
+      "exam_trap": "Dos trampas. Primera: «Una vez puesta la etiqueta, el equipo está protegido». El marcado solo advierte — el EPP y las prácticas seguras de trabajo siguen haciendo la protección. Segunda, la respuesta de 2023 en un examen de 2020: 1000A y equipos alimentados por alimentadores. Bajo el NEC 2020, el (B) cubre el equipo de acometida clasificado 1200A o más; la red más amplia de 2023 está marcada en la caja de edición y todavía no aplica.",
+      "tables": [
+        {
+          "caption": "La etiqueta permanente del 110.16(B) — cuatro datos obligatorios",
+          "headers": [
+            "Dato en la etiqueta",
+            "Viene de"
+          ],
+          "rows": [
+            [
+              "Voltaje nominal del sistema",
+              "La acometida tal como se construyó"
+            ],
+            [
+              "Corriente de falla disponible",
+              "En los dispositivos de sobrecorriente de la acometida"
+            ],
+            [
+              "Tiempo de despeje",
+              "De esos dispositivos, a esa corriente de falla"
+            ],
+            [
+              "Fecha de aplicación",
+              "El día en que se coloca la etiqueta"
+            ]
+          ],
+          "note": "La etiqueta debe cumplir el 110.21(B). No se requiere donde se aplica una etiqueta de arco eléctrico según la práctica aceptable de la industria."
+        }
+      ],
+      "inspection_fails": [
+        "Sin marcado de advertencia de arco eléctrico en un tablero o switchboard comercial que probablemente se intervenga energizado.",
+        "Equipo de acometida clasificado 1200A o más sin la etiqueta permanente del 110.16(B) — y sin una etiqueta de arco eléctrico de práctica de la industria en su lugar.",
+        "Etiqueta a la que le falta uno de los cuatro datos: sin tiempo de despeje, o sin fecha de aplicación.",
+        "Etiqueta de papel escrita a mano, desteñida y despegándose — ni durable ni permanente."
+      ],
+      "page_quiz": [
+        {
+          "question": "Bajo el NEC 2020, la etiqueta permanente del 110.16(B) se requiere en:",
+          "choices": [
+            "Cada tablero de unidad de vivienda",
+            "Equipo de acometida clasificado 1200A o más, en entornos que no son unidades de vivienda",
+            "Todo equipo alimentado por alimentadores clasificado 1000A o más",
+            "Solo equipos de más de 1000V"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El umbral de 2020 es 1200A, equipo de acometida, fuera de unidades de vivienda. La versión de 1000A con alimentadores es la ampliación de 2023.",
+          "nec_ref": "110.16(B)"
+        },
+        {
+          "question": "¿Qué dato NO es uno de los cuatro que debe mostrar la etiqueta del 110.16(B)?",
+          "choices": [
+            "Voltaje nominal del sistema",
+            "Corriente de falla disponible",
+            "Tiempo de despeje de los dispositivos de la acometida",
+            "El número de licencia del contratista instalador"
+          ],
+          "answer_index": 3,
+          "explain_plain": "Los cuatro datos son voltaje nominal, corriente de falla disponible, tiempo de despeje a esa corriente y la fecha de aplicación.",
+          "nec_ref": "110.16(B)"
+        },
+        {
+          "question": "El marcado de advertencia de arco eléctrico en un switchboard:",
+          "choices": [
+            "Sustituye el EPP una vez aplicado",
+            "Advierte del peligro; las prácticas seguras de trabajo siguen aplicando",
+            "Se requiere solo sobre 1000V",
+            "Puede escribirse a mano sobre cinta"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El marcado advierte. No sustituye las prácticas seguras de trabajo, y debe ser durable y aplicado en campo donde la persona que se acerca lo vea.",
+          "nec_ref": "110.16(A)"
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-110.16-label.svg",
+          "alt": "Una puerta de switchboard con una etiqueta roja de advertencia de arco eléctrico y, debajo, la etiqueta permanente de la acometida con sus cuatro datos obligatorios numerados: voltaje, corriente de falla, tiempo de despeje y fecha de aplicación.",
+          "caption": "110.16: la advertencia para todos y la etiqueta para la acometida grande.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 110.16(B): 110.16(B) ahora cubre el equipo de acometida Y el equipo alimentado por alimentadores clasificado 1000A o más (antes era equipo de acometida de 1200A o más), y la etiqueta permanente debe ser una etiqueta de arco eléctrico según la práctica aplicable de la industria, con la fecha de aplicación.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "110.16(A)",
+        "110.16(B)",
+        "110.21(B)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C1-110.17",
@@ -5969,8 +7422,8 @@
       "article": "110",
       "section": "110.17",
       "title": "Mantenimiento y servicio de equipos",
-      "plain_explanation": "Esta sección es nueva en el NEC 2023 (no existe en el NEC 2020, la edición que Florida hace cumplir), trata el servicio y mantenimiento de equipos eléctricos: el servicio debe hacerlo personal calificado, y las piezas y componentes de reemplazo deben ser adecuados para el equipo — identificados para él o los reemplazos especificados por el fabricante. La experiencia por sí sola no es el estándar; la persona que hace el trabajo necesita la capacitación y el conocimiento que la tarea y sus peligros requieren. La regla de 2023 también dice que el trabajo se hace según las instrucciones del fabricante o la información de su listado, las normas de la industria, o según lo apruebe el AHJ, y que las piezas de reemplazo deben estar identificadas y provenir del fabricante original, ser diseñadas por un ingeniero con experiencia en piezas de reemplazo para ese equipo, o ser aprobadas por el AHJ.\n\nCAMBIO NEC 2023:\n• 110.17: Sección nueva: solo las personas calificadas y capacitadas pueden dar servicio y mantenimiento a los equipos eléctricos, y las piezas de reemplazo deben estar identificadas y verificadas según las normas de producto. Solo las personas calificadas, capacitadas en el servicio y mantenimiento de equipos, pueden hacer ese trabajo.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "En llamadas de servicio, reemplace los componentes fallados con piezas identificadas para ese equipo, y trate el equipo desconocido — especialmente el switchgear comercial — como un trabajo solo para personas calificadas hasta que la persona correcta esté en el sitio.",
+      "plain_explanation": "Empiece por la edición: esta sección no existe en el NEC 2020, la edición que Florida hace cumplir hoy. El 110.17 es nuevo en el NEC 2023 y fija las reglas para dar servicio y mantenimiento a los equipos eléctricos:\n• El servicio y el mantenimiento los hacen personas calificadas. La experiencia por sí sola no es el estándar — la persona que hace el trabajo necesita la capacitación y el conocimiento que la tarea y sus peligros requieren.\n• El trabajo se hace según las instrucciones del fabricante o la información de su listado, las normas de la industria, o según lo apruebe el AHJ.\n• Las piezas y componentes de reemplazo deben ser adecuados para el equipo: identificados para él, del fabricante original, diseñados por un ingeniero con experiencia en piezas de reemplazo para ese equipo, o aprobados por el AHJ.",
+      "on_the_job": "En las llamadas de servicio, Sharma ya trabaja así: reemplace un componente fallado con la pieza identificada para ese equipo — el tipo de breaker para el que el tablero Siemens está listado, no uno que simplemente encaje en el contacto. Trate el equipo desconocido, especialmente el switchgear comercial, como un trabajo solo para personas calificadas hasta que la persona correcta esté en el sitio. En los permisos de Florida solicitados hasta el 30 de diciembre de 2026, esta sección todavía no es el texto que se hace cumplir; pasa a ser la regla con el FBC 9.ª Ed. para los permisos solicitados a partir del 31 de diciembre de 2026.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -5987,7 +7440,97 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/110-17",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Los equipos reciben servicio durante décadas después de que la cuadrilla de instalación se va. Una pieza «casi igual» que apenas encaja, o un ayudante suelto sobre un equipo para el que nunca fue capacitado, convierte una reparación en la próxima falla — un terminal que se sobrecalienta, un breaker que no dispara, una falla que nadie puede despejar. La regla ata el trabajo a personas capacitadas y piezas identificadas, para que una reparación restaure el equipo en vez de cambiarlo en silencio.",
+      "exam_trap": "Dos respuestas trampa. Primera: «Tiene veinte años en el oficio, así que está calificado para dar servicio a cualquier cosa». La sección mide la capacitación y el conocimiento para la tarea y sus peligros, no los años. Segunda: «Una pieza de reemplazo que encaja físicamente es adecuada». No lo es — a menos que esté identificada para el equipo o venga del fabricante original, de un ingeniero con experiencia, o del AHJ.",
+      "tables": [
+        {
+          "caption": "De dónde puede venir una pieza de reemplazo (110.17)",
+          "headers": [
+            "Fuente",
+            "Qué significa"
+          ],
+          "rows": [
+            [
+              "Identificada para el equipo",
+              "La pieza está identificada como adecuada para ese equipo"
+            ],
+            [
+              "Fabricante original",
+              "El reemplazo especificado por el propio fabricante"
+            ],
+            [
+              "Ingeniero con experiencia",
+              "Diseñada por un ingeniero con experiencia en piezas para ese equipo"
+            ],
+            [
+              "Aprobación del AHJ",
+              "Aprobada por la autoridad competente (AHJ)"
+            ]
+          ]
+        }
+      ],
+      "inspection_fails": [
+        "Equipo al que dio servicio una persona sin capacitación en ese equipo ni en sus peligros.",
+        "Breaker o componente de reemplazo instalado que no está identificado para el equipo donde se instaló.",
+        "Pieza de reemplazo «casi igual» sin respaldo del fabricante, de un ingeniero ni del AHJ.",
+        "Servicio hecho en contra de las instrucciones del fabricante o de la información de su listado."
+      ],
+      "page_quiz": [
+        {
+          "question": "Bajo el 110.17, ¿quién puede dar servicio y mantenimiento a los equipos eléctricos?",
+          "choices": [
+            "Cualquier empleado con cinco años en el oficio",
+            "Personas calificadas, capacitadas para la tarea y sus peligros",
+            "Solo el instalador original",
+            "Cualquiera que el cliente apruebe"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El estándar es la capacitación y el conocimiento para la tarea y sus peligros. La experiencia por sí sola no hace calificada a una persona.",
+          "nec_ref": "110.17"
+        },
+        {
+          "question": "Un componente fallado debe reemplazarse. ¿Qué reemplazo es aceptable bajo el 110.17?",
+          "choices": [
+            "Cualquier pieza que encaje físicamente",
+            "El equivalente más barato del estante",
+            "Una pieza identificada para el equipo, o del fabricante original, diseñada por un ingeniero con experiencia, o aprobada por el AHJ",
+            "Una pieza usada de la misma marca"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Adecuada significa identificada para el equipo, el reemplazo especificado por el fabricante, diseñada por un ingeniero para ese equipo, o aprobada por el AHJ.",
+          "nec_ref": "110.17"
+        },
+        {
+          "question": "En un permiso de Florida solicitado en noviembre de 2026, ¿el 110.17 es la regla de servicio que se hace cumplir?",
+          "choices": [
+            "Sí — el NEC 2023 ya se hace cumplir",
+            "No — Florida hace cumplir el NEC 2020, donde el 110.17 no existe",
+            "Sí, pero solo en trabajo comercial",
+            "Solo si el AHJ lo pide"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Los permisos solicitados hasta el 30 de diciembre de 2026 se quedan con el NEC 2020. El 110.17 llega con el FBC 9.ª Ed. (NEC 2023) para los permisos solicitados a partir del 31 de diciembre de 2026.",
+          "nec_ref": "110.17; FBC 9.ª Ed."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-110.17-parts-flow.svg",
+          "alt": "Flujo de decisión para el trabajo de servicio: una puerta de persona calificada arriba, y luego la verificación de la pieza de reemplazo, que deja pasar las piezas identificadas y detiene las piezas «casi iguales» sin respaldo del fabricante, de un ingeniero ni del AHJ.",
+          "caption": "El 110.17 en un solo flujo: la persona correcta y luego la pieza correcta.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 110.17: Sección nueva: solo las personas calificadas y capacitadas pueden dar servicio y mantenimiento a los equipos eléctricos, y las piezas de reemplazo deben estar identificadas y verificadas según las normas de producto. Solo las personas calificadas, capacitadas en el servicio y mantenimiento de equipos, pueden hacer ese trabajo.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "110.17",
+        "110.3(B)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C1-110.18",
@@ -7190,8 +8733,8 @@
       "article": "110",
       "section": "110.26(A)(1)",
       "title": "Profundidad del espacio de trabajo y las tres condiciones",
-      "plain_explanation": "La profundidad se lee de la tabla de esta sección, que fija la distancia según el voltaje a tierra y según lo que queda frente al trabajador. La Condición 1 es partes vivas expuestas en un lado del espacio sin partes vivas ni puestas a tierra en el otro lado. La Condición 2 pone una superficie puesta a tierra, como una pared de concreto o mampostería, en el lado opuesto. La Condición 3 pone partes vivas expuestas en ambos lados. De 0 a 150 volts a tierra la tabla da 3 ft para las tres condiciones; las condiciones solo cambian la profundidad a voltajes mayores: de 151 a 600 volts a tierra las profundidades son 3 ft, 3 ft 6 in y 4 ft. Cuanto peor es la exposición al otro lado del pasillo, más profundo debe ser el espacio una vez que el voltaje hace divergir las condiciones.\n\nTabla 110.26(A)(1) — profundidad mínima del espacio de trabajo, por voltaje a tierra:\n• 0–150 V a tierra — Condición 1: 3 ft · Condición 2: 3 ft · Condición 3: 3 ft\n• 151–600 V a tierra — Condición 1: 3 ft · Condición 2: 3½ ft · Condición 3: 4 ft\n• 601–1000 V a tierra — Condición 1: 3 ft · Condición 2: 4 ft · Condición 3: 5 ft",
-      "on_the_job": "Para un tablero de casa en una pared con estructura de madera y nada vivo al otro lado del pasillo, la Condición 1 y su profundidad de 3 ft para hasta 150V a tierra es el caso de todos los días. Un segundo tablero frente al primero lo convierte en Condición 3: sigue siendo 3 ft al voltaje de casa, porque a 150V o menos a tierra las tres condiciones son 3 ft. Vuelva a revisar la tabla cuando el voltaje a tierra pase de 150V.",
+      "plain_explanation": "La profundidad se lee de la Tabla 110.26(A)(1). La tabla fija la distancia según dos cosas: el voltaje a tierra y lo que queda frente al trabajador al otro lado del espacio.\n• Condición 1: partes vivas expuestas en un lado del espacio, sin partes vivas ni puestas a tierra en el otro lado.\n• Condición 2: una superficie puesta a tierra en el lado opuesto: las paredes de concreto, ladrillo, loseta y mampostería cuentan como puestas a tierra.\n• Condición 3: partes vivas expuestas en ambos lados del espacio.\nDe 0 a 150 V a tierra, la tabla da 3 ft para las tres condiciones, así que al voltaje de una casa la condición nunca cambia la profundidad. Las condiciones solo empiezan a importar por encima de 150 V: de 151 a 600 V a tierra las profundidades son 3 ft, 3½ ft y 4 ft, y de 601 a 1000 V son 3 ft, 4 ft y 5 ft. Cuanto peor es la exposición al otro lado del pasillo, más profundo debe ser el espacio una vez que el voltaje hace divergir las condiciones.",
+      "on_the_job": "Para un tablero de casa en una pared con estructura de madera y nada vivo al otro lado del pasillo, la Condición 1 y su profundidad de 3 ft — hasta 150 V a tierra — es el caso de todos los días. Un segundo tablero frente al primero lo convierte en Condición 3, y sigue siendo 3 ft al voltaje de casa, porque a 150 V o menos a tierra las tres condiciones se leen 3 ft. Donde las cuadrillas se equivocan es en el tablero comercial pequeño: un tablero 480Y/277 V frente a una pared de bloques es 277 V a tierra en Condición 2, así que la profundidad es 3½ ft — y la cinta se marca en el rough-in, no en la inspección. Vuelva a revisar la tabla cada vez que el voltaje a tierra pase de 150 V.",
       "sharma_note": "",
       "figure_idea": "Tres cortes de pasillo rotulados Condición 1, 2 y 3, que muestran qué hay en la pared opuesta en cada uno y una flecha que apunta a la tabla para la profundidad.",
       "related_ids": [
@@ -7205,7 +8748,102 @@
       "verified": true,
       "prev_id": "C1-110.26(A)",
       "next_id": "C1-110.26(A)(2)",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1,
+      "why_it_exists": "La profundidad es el espacio de reacción del trabajador. Lo que está al otro lado del pasillo es aquello contra lo que el trabajador cae o hacia lo que se extiende cuando algo sale mal: nada (Condición 1), una pared puesta a tierra que completa el camino de la descarga (Condición 2), o más partes vivas (Condición 3). Cuanto mayor es el voltaje a tierra, más distancia recupera el Código — por eso las filas de la tabla solo se separan por encima de 150 V.",
+      "exam_trap": "La trampa: «Dos tableros se enfrentan, así que la profundidad debe ser 4 ft: eso es la Condición 3». No al voltaje de casa. De 0 a 150 V a tierra, las Condiciones 1, 2 y 3 son todas 3 ft; la profundidad de 4 ft de la Condición 3 empieza en la fila de 151 a 600 V. Lea primero la fila, después la condición.",
+      "inspection_fails": [
+        "Espacio de trabajo de 3 ft de profundidad frente a un tablero 480Y/277 V frente a una pared de bloques de concreto: la Condición 2 a 277 V a tierra requiere 3½ ft.",
+        "Profundidad medida desde la cara de la pared en vez de desde el frente de la envolvente o las partes vivas expuestas.",
+        "Pasillo en Condición 3, partes vivas en ambos lados, marcado con la profundidad de la Condición 1 en un trabajo de 480 V.",
+        "Material acumulado dentro de la profundidad del espacio de trabajo marcada antes de la inspección."
+      ],
+      "tables": [
+        {
+          "caption": "Tabla 110.26(A)(1): profundidad mínima del espacio de trabajo (NEC 2020)",
+          "headers": [
+            "V a tierra",
+            "Cond 1",
+            "Cond 2",
+            "Cond 3"
+          ],
+          "rows": [
+            [
+              "0–150 V",
+              "3 ft",
+              "3 ft",
+              "3 ft"
+            ],
+            [
+              "151–600 V",
+              "3 ft",
+              "3½ ft",
+              "4 ft"
+            ],
+            [
+              "601–1000 V",
+              "3 ft",
+              "4 ft",
+              "5 ft"
+            ]
+          ],
+          "note": "Condición 1: nada vivo ni puesto a tierra al otro lado del pasillo. Condición 2: partes puestas a tierra al otro lado (concreto, ladrillo y loseta cuentan como puestos a tierra). Condición 3: partes vivas expuestas en ambos lados."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-110.26A1-depth-conditions.svg",
+          "alt": "Tres cortes de pasillo dibujados a escala de 151 a 600 volts a tierra: la Condición 1 sin nada al otro lado del pasillo a 3 pies, la Condición 2 con una pared de concreto puesta a tierra al otro lado a 3 pies y medio, y la Condición 3 con partes vivas en ambos lados a 4 pies.",
+          "caption": "Lo que está al otro lado del pasillo fija la condición; la fila de voltaje fija la profundidad.",
+          "w": 900,
+          "h": 1600
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un tablero 480Y/277 V queda frente a una pared de bloques de concreto puesta a tierra. ¿Profundidad mínima del espacio de trabajo?",
+          "choices": [
+            "3 ft",
+            "3½ ft",
+            "4 ft",
+            "5 ft"
+          ],
+          "answer_index": 1,
+          "explain_plain": "277 V a tierra es la fila de 151 a 600 V, y una pared puesta a tierra al otro lado del pasillo es la Condición 2: 3½ ft.",
+          "nec_ref": "Table 110.26(A)(1)"
+        },
+        {
+          "question": "Dos tableros de casa de 120/240 V se enfrentan a través de un pasillo. ¿Condición y profundidad?",
+          "choices": [
+            "Condición 3, 4 ft",
+            "Condición 3, 3 ft",
+            "Condición 2, 3 ft",
+            "Condición 1, 3 ft"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Partes vivas en ambos lados es la Condición 3, pero de 0 a 150 V a tierra toda condición es 3 ft.",
+          "nec_ref": "Table 110.26(A)(1)"
+        },
+        {
+          "question": "De 601 a 1000 V a tierra, la profundidad de la Condición 2 es:",
+          "choices": [
+            "3 ft",
+            "3½ ft",
+            "4 ft",
+            "5 ft"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La fila de 601 a 1000 V se lee 3 ft, 4 ft y 5 ft para las Condiciones 1, 2 y 3.",
+          "nec_ref": "Table 110.26(A)(1)"
+        }
+      ],
+      "code_refs": [
+        "110.26(A)(1)",
+        "Table 110.26(A)(1)"
+      ]
     },
     {
       "id": "C1-110.26(A)(2)",
@@ -7331,8 +8969,8 @@
       "article": "110",
       "section": "110.26(A)(3)",
       "title": "Altura del espacio de trabajo",
-      "plain_explanation": "El espacio de trabajo debe extenderse desde el piso o plataforma hasta una altura de 6½ ft, o la altura del propio equipo, lo que sea mayor. Dos excepciones cotidianas moderan el número: en edificios existentes, el equipo de acometida o los tableros más pequeños (200A o menos, en instalaciones relacionadas con viviendas) que no cumplan la altura pueden permitirse donde lo permita el AHJ, y los medidores y sus bases pueden proyectarse dentro del espacio dentro de límites. El equipo por encima del espacio — una tubería de rociadores o un ducto que no es eléctrico — es una cuestión de espacio dedicado bajo 110.26(E), no una razón para reducir la altura.\n• Altura: 6½ ft mínimo, o la altura del equipo si el equipo es más alto",
-      "on_the_job": "Seis pies y medio es más alto de lo que la mayoría de los ayudantes estima a ojo — el dintel de una puerta estándar queda justo en la línea. Revise la altura antes de que un plafón o un ducto se enmarque sobre la ubicación de un tablero, y la excepción de vivienda existente aplica solo a unidades de vivienda existentes, nunca a construcción nueva., no como supuestos.",
+      "plain_explanation": "El espacio de trabajo frente al equipo debe extenderse desde el piso o plataforma hasta una altura de 6½ ft, o hasta la altura del propio equipo, lo que sea mayor:\n• Altura: 6½ ft mínimo, o la altura del equipo si el equipo es más alto.\n• Una excepción cotidiana modera el número: en edificios existentes, el equipo de acometida o los tableros más pequeños — 200A o menos, en instalaciones relacionadas con viviendas — que no cumplan la altura pueden permitirse donde lo permita el AHJ.\n• Los medidores y sus bases pueden proyectarse dentro del espacio dentro de límites.\nEl equipo por encima del espacio — una tubería de rociadores o un ducto que no es eléctrico — es una cuestión de espacio dedicado bajo el 110.26(E), no una razón para reducir la altura.",
+      "on_the_job": "Seis pies y medio es más alto de lo que la mayoría de los ayudantes estima a ojo — el dintel de una puerta estándar queda justo en la línea. En una casa nueva de Marion Oaks, marque con cinta la altura en la ubicación del tablero del garaje antes de que se enmarque cualquier cosa: si hay un plafón o un ducto planeado sobre esa pared, se detecta en papel, no en el final. Y la excepción de altura reducida es estrecha — aplica solo a unidades de vivienda existentes, nunca a construcción nueva.",
       "sharma_note": "",
       "figure_idea": "Una elevación de tablero con una línea de cota de 6½ ft desde el piso hasta la parte superior del espacio de trabajo y un ducto dibujado por encima de la línea.",
       "related_ids": [
@@ -7344,7 +8982,95 @@
       "verified": true,
       "prev_id": "C1-110.26(A)(2)",
       "next_id": "C1-110.26(A)(4)",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "La altura es espacio de trabajo y espacio de escape a nivel de la cabeza. Un trabajador parado en un escalón frente a partes vivas, agachándose bajo un plafón, está a un susto de caer sobre la barra. La estructura y los ductos se construyen una sola vez; si cierran sobre la ubicación del tablero, cada llamada de servicio durante la vida del edificio se hará agachada.",
+      "exam_trap": "La respuesta trampa es que la altura es siempre exactamente 6½ ft. Es 6½ ft o la altura del equipo, lo que sea mayor — el switchgear alto necesita despejada toda su altura. La segunda trampa es usar el permiso de edificios existentes en una obra nueva: ese permiso es para equipos existentes relacionados con viviendas de 200A o menos, y solo donde lo permita el AHJ.",
+      "tables": [
+        {
+          "caption": "Hasta dónde debe llegar el espacio de trabajo",
+          "headers": [
+            "Caso",
+            "Altura requerida"
+          ],
+          "rows": [
+            [
+              "Equipo estándar",
+              "6½ ft desde el piso o plataforma"
+            ],
+            [
+              "Equipo más alto que 6½ ft",
+              "La altura del equipo"
+            ],
+            [
+              "Edificio existente, relacionado con vivienda, 200A o menos",
+              "Puede permitirse menos — solo donde lo permita el AHJ"
+            ]
+          ],
+          "note": "Los medidores y sus bases pueden proyectarse dentro del espacio dentro de límites. Las tuberías y ductos ajenos por encima del espacio son una cuestión de espacio dedicado del 110.26(E)."
+        }
+      ],
+      "inspection_fails": [
+        "Plafón enmarcado a 6 ft sobre la ubicación de un tablero nuevo, cerrando la altura del espacio de trabajo.",
+        "Ducto bajado a través del espacio sobre un tablero en construcción nueva.",
+        "Permiso de altura reducida de vivienda existente reclamado en una obra nueva.",
+        "Switchboard alto instalado con el espacio de trabajo detenido a 6½ ft, por debajo de la altura del propio equipo."
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Altura mínima del espacio de trabajo frente a un tablero estándar?",
+          "choices": [
+            "6 ft",
+            "6½ ft",
+            "7 ft",
+            "Lo que permita el cielo raso"
+          ],
+          "answer_index": 1,
+          "explain_plain": "6½ ft, o la altura del equipo, lo que sea mayor.",
+          "nec_ref": "110.26(A)(3)"
+        },
+        {
+          "question": "Un switchboard mide 7 ft de alto. El espacio de trabajo debe extenderse hasta:",
+          "choices": [
+            "6½ ft",
+            "6 ft por encima del equipo",
+            "7 ft — la altura del equipo",
+            "El cielo raso estructural"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Lo que sea mayor: 6½ ft o la altura del propio equipo. Un tablero de 7 ft necesita los 7 ft completos.",
+          "nec_ref": "110.26(A)(3)"
+        },
+        {
+          "question": "El permiso de altura reducida para equipos más pequeños aplica a:",
+          "choices": [
+            "Cualquier unidad de vivienda",
+            "Construcción nueva donde el espacio es justo",
+            "Edificios existentes, 200A o menos, donde lo permita el AHJ",
+            "Espacios comerciales arrendados"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Es un permiso para edificios existentes, para equipos de acometida y tableros relacionados con viviendas de 200A o menos — nunca un atajo para construcción nueva.",
+          "nec_ref": "110.26(A)(3)"
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-110.26A3-height.svg",
+          "alt": "Elevación de un tablero en una pared con el espacio de trabajo en dorado desde el piso hasta una línea dimensionada de 6½ ft, y un ducto dibujado por encima de esa línea en el espacio dedicado.",
+          "caption": "La altura va del piso a 6½ ft — o hasta la parte superior del equipo, si el equipo es más alto.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "110.26(A)(3)",
+        "110.26(E)",
+        "Table 110.26(A)(1)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C1-110.26(A)(4)",
@@ -7352,8 +9078,8 @@
       "article": "110",
       "section": "110.26(A)(4)",
       "title": "Acceso limitado — espacio de trabajo sobre cielos rasos y en espacios de arrastre (crawl spaces)",
-      "plain_explanation": "Donde un equipo de 1000V o menos que probablemente necesite examen, ajuste, servicio o mantenimiento estando energizado debe ubicarse en un espacio de acceso limitado (sobre un cielo raso desmontable, en un espacio de arrastre), aplica todo lo siguiente. (a) Sobre un cielo raso desmontable, la abertura debe ser de al menos 22 in. x 22 in. En un espacio de arrastre, la abertura accesible debe ser de al menos 22 in. x 30 in. (b) El ancho del espacio de trabajo es el ancho del equipo o 30 in., lo que sea mayor. (c) Las puertas de los gabinetes y los paneles con bisagras deben abrir al menos 90 grados. (d) La profundidad al frente debe cumplir la Tabla 110.26(A)(1). La altura máxima es la que se necesite para instalar el equipo, y se permite un elemento estructural horizontal del cielo raso o un panel de acceso dentro del espacio. El NEC 2023 mantiene esta regla; su número de párrafo allí debe confirmarse contra el libro impreso de 2023.",
-      "on_the_job": "Desconectadores de manejadoras de aire y equipos RTU o de ático sobre cielorraso de perfiles en T (T-bar): planifique la placa de 22x22 y el giro de puerta de 90 grados antes del rough-in.",
+      "plain_explanation": "Donde un equipo de 1000V o menos que probablemente necesite examen, ajuste, servicio o mantenimiento estando energizado debe ubicarse en un espacio de acceso limitado — sobre un cielo raso desmontable, o en un espacio de arrastre (crawl space) — el 110.26(A)(4) ajusta las reglas usuales de espacio de trabajo al espacio que existe:\n• La abertura de acceso tiene un tamaño mínimo, con un mínimo sobre un cielo raso desmontable y uno mayor para un espacio de arrastre.\n• El ancho del espacio de trabajo es el ancho del equipo o un mínimo establecido, lo que sea mayor.\n• Las puertas de los gabinetes y los paneles con bisagras deben abrir hasta un ángulo mínimo establecido.\n• La profundidad frente al equipo debe cumplir la Tabla 110.26(A)(1).\n• La altura se limita a la que se necesite para instalar el equipo, y se permite un elemento estructural horizontal del cielo raso o un panel de acceso dentro del espacio.\nLos tamaños específicos detrás de esos mínimos se mantienen fuera de esta página hasta que se verifiquen contra el libro impreso — vea la caja «Verificar en el impreso».",
+      "on_the_job": "Los desconectadores de manejadoras de aire y los equipos de azotea (RTU) sobre cielos rasos de perfiles en T son el caso cotidiano de Florida: planifique el acceso por el cielo raso y el giro de la puerta antes del rough-in, mientras la retícula y la distribución del equipo todavía pueden moverse. Un desconectador que queda donde su puerta no puede abrir, o donde nadie puede ponerse de frente, se convierte en una llamada de servicio que nadie puede trabajar con seguridad — y en una corrección que nadie puede arreglar barato una vez puesto el cielo raso.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -7365,7 +9091,106 @@
       "unverified_reason": "Página nueva escrita el 2026-11-25 a partir del borrador de revisión de Mike Holt (decisión 3). Verified=false hasta que se verifique contra el NEC 2020 impreso.",
       "prev_id": "C1-110.26(A)(3)",
       "next_id": "C1-110.26(B-D)",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Los equipos sobre cielos rasos y en espacios de arrastre igual reciben servicio, a menudo energizados — un desconectador de manejadora de aire no deja de fallar porque sea difícil de alcanzar. Sin reglas de acceso, la abertura es la que el entramado del cielo raso haya dejado, la puerta no puede girar, y el técnico trabaja el equipo acostado sobre un alambre de la retícula, sin espacio para apartarse de una falla.",
+      "exam_trap": "La respuesta trampa es que la altura completa estándar del espacio de trabajo aplica sin cambios sobre un cielo raso. No es así: el (A)(4) limita la altura a la que se necesite para instalar el equipo y permite que un elemento estructural horizontal del cielo raso quede dentro del espacio. La segunda trampa es citar de memoria los números de la abertura y del ancho — en esta página, esos números esperan al libro impreso.",
+      "tables": [
+        {
+          "caption": "110.26(A)(4) — lo que controla la regla (los tamaños viven en el libro impreso)",
+          "headers": [
+            "Elemento",
+            "Lo que hace la regla"
+          ],
+          "rows": [
+            [
+              "Abertura de acceso",
+              "Fija un tamaño mínimo — uno sobre un cielo raso desmontable y uno mayor en un espacio de arrastre"
+            ],
+            [
+              "Ancho del espacio de trabajo",
+              "El ancho del equipo o un mínimo establecido, lo que sea mayor"
+            ],
+            [
+              "Puertas y paneles con bisagras",
+              "Deben abrir hasta un ángulo mínimo establecido"
+            ],
+            [
+              "Profundidad al frente",
+              "Debe cumplir la Tabla 110.26(A)(1)"
+            ],
+            [
+              "Altura",
+              "Solo la que se necesite para instalar el equipo"
+            ]
+          ],
+          "note": "Esta página no está verificada. Los tamaños mínimos y el ángulo de la puerta deliberadamente no se imprimen aquí — verifíquelos en el NEC 2020 impreso."
+        }
+      ],
+      "inspection_fails": [
+        "Desconectador sobre un cielo raso desmontable detrás de una abertura de acceso demasiado pequeña para alcanzarlo y darle servicio — por debajo del mínimo del 110.26(A)(4).",
+        "Puerta de gabinete que no puede abrir hasta el ángulo requerido porque la retícula del cielo raso o un elemento estructural bloquea el giro.",
+        "Equipo colocado en un espacio de arrastre sin un ancho de trabajo real frente a él.",
+        "Equipo de acceso limitado colocado donde la profundidad al frente no alcanza la Tabla 110.26(A)(1)."
+      ],
+      "page_quiz": [
+        {
+          "question": "Bajo el 110.26(A)(4), la profundidad del espacio de trabajo frente a un equipo en un espacio de acceso limitado debe cumplir:",
+          "choices": [
+            "La Tabla 110.26(A)(1)",
+            "Lo que permita la retícula del cielo raso",
+            "La mitad de la profundidad estándar",
+            "Ningún requisito — el espacio es limitado"
+          ],
+          "answer_index": 0,
+          "explain_plain": "El acceso limitado cambia la abertura, el ancho, el giro de la puerta y la altura — la profundidad al frente sigue viniendo de la Tabla 110.26(A)(1).",
+          "nec_ref": "110.26(A)(4)"
+        },
+        {
+          "question": "La altura del espacio de trabajo sobre un cielo raso desmontable es:",
+          "choices": [
+            "Siempre la altura estándar completa",
+            "Limitada a la que se necesite para instalar el equipo",
+            "La fija el tamaño de la placa del cielo raso",
+            "El Código no la trata"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La altura máxima es la que se necesite para instalar el equipo, y un elemento estructural horizontal del cielo raso o un panel de acceso puede quedar dentro del espacio.",
+          "nec_ref": "110.26(A)(4)"
+        },
+        {
+          "question": "¿Qué espacios trata el 110.26(A)(4)?",
+          "choices": [
+            "Solo cuartos eléctricos",
+            "Sobre cielos rasos desmontables y en espacios de arrastre",
+            "Plataformas exteriores para equipos",
+            "Baños y clósets de ropa"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Es la regla de acceso limitado: equipos sobre un cielo raso desmontable o en un espacio de arrastre que igual necesitan servicio estando energizados.",
+          "nec_ref": "110.26(A)(4)"
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-110.26A4-limited-access.svg",
+          "alt": "Vista en corte de un desconectador sobre un cielo raso desmontable, con un espacio de trabajo en dorado, una abertura de acceso en el cielo raso y una puerta en giro, cada cota rotulada solo por su referencia gobernante, bajo una banda roja de no verificado.",
+          "caption": "El acceso limitado cambia la abertura, el ancho, el giro y la altura — los tamaños esperan al libro impreso.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "110.26(A)(4)",
+        "Table 110.26(A)(1)"
+      ],
+      "uncertain": [
+        "Valores retirados del borrador del que se escribió esta página: establecía una abertura de acceso de 22 in. × 22 in. sobre un cielo raso desmontable, 22 in. × 30 in. en un espacio de arrastre, un ancho mínimo de espacio de trabajo de 30 in. y puertas de gabinetes que abren al menos 90 grados. Esos valores no se han verificado contra el NEC 2020 impreso, así que no se establecen como reglas en ninguna parte de esta página — verifíquelos en el impreso antes de apoyarse en cualquiera de ellos.",
+        "Esta página no está verificada: se escribió desde un borrador de revisión y no se ha verificado contra el NEC 2020 impreso. Confirme la redacción exacta impresa del 110.26(A)(4) en el impreso.",
+        "El borrador también establecía que el NEC 2023 mantiene esta regla, con su número de párrafo allí por confirmar contra el libro impreso de 2023. Eso no está confirmado, así que la nota de edición de esta página usa la forma de sin cambios — verifíquelo en el impreso."
+      ],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C1-110.26(B-D)",
@@ -7490,8 +9315,8 @@
       "article": "110",
       "section": "110.26(C)",
       "title": "Entrada y salida del espacio de trabajo",
-      "plain_explanation": "Debe haber al menos una entrada y salida del espacio de trabajo, dimensionada y dispuesta para que un trabajador pueda entrar, trabajar y salir sin apretarse junto al equipo. Para equipos grandes — clasificados 1200A o más y de más de 6 ft de ancho, que contengan dispositivos de sobrecorriente, interruptores o control — debe haber una entrada y una salida del espacio de trabajo en cada extremo, de al menos 24 in. de ancho y 6½ ft de alto; una sola entrada se permite donde la salida está despejada, o donde la profundidad del espacio de trabajo se duplica según la Tabla 110.26(A)(1). Las puertas que sirven a estos espacios y se abren hacia el área del espacio de trabajo son parte de la preocupación de la regla: las puertas de personal donde se instala equipo clasificado 800A o más que contiene dispositivos de sobrecorriente, interruptores o control, las puertas de personal destinadas a la entrada y salida del espacio de trabajo que estén a menos de 25 ft del borde más cercano del espacio de trabajo, deben abrir en la dirección de salida y tener herraje antipánico listado. del equipo deben abrir en la dirección de salida y llevar herraje antipánico listado, para que un trabajador que reacciona a un arco empuje hacia fuera en vez de tirar de una puerta contra la explosión.",
-      "on_the_job": "Las casas rara vez activan la regla de los 1200A, pero el principio de una entrada aplica en todas partes: nunca deje que el cuarto de un tablero se enmarque de modo que la única salida sea junto al equipo. En trabajos comerciales con switchboards grandes, cuente las entradas en la distribución y revise el giro de las puertas y el herraje antipánico antes de colgar las puertas.",
+      "plain_explanation": "Debe haber al menos una entrada y salida del espacio de trabajo, dimensionada y dispuesta para que un trabajador pueda entrar, trabajar y salir sin apretarse junto al equipo.\n• Equipos grandes — clasificados 1200A o más y de más de 6 ft de ancho, que contengan dispositivos de sobrecorriente, interruptores o control — necesitan una entrada y una salida del espacio de trabajo en cada extremo del espacio.\n• Cada una de esas entradas tiene al menos 24 in. de ancho y 6½ ft de alto.\n• Una sola entrada se permite donde la salida está despejada, o donde la profundidad del espacio de trabajo se duplica según la Tabla 110.26(A)(1).\n• Puertas de personal: donde se instala equipo clasificado 800A o más que contiene dispositivos de sobrecorriente, interruptores o control, una puerta de personal destinada a la entrada y salida del espacio de trabajo que esté a menos de 25 ft del borde más cercano del espacio de trabajo debe abrir en la dirección de salida y tener herraje antipánico listado — para que un trabajador que reacciona a un arco empuje hacia fuera en vez de tirar de una puerta contra la explosión.",
+      "on_the_job": "Las casas rara vez activan la regla de los 1200A, pero el principio de una entrada aplica en todas partes: nunca deje que el cuarto de un tablero se enmarque de modo que la única salida sea junto al equipo. En un trabajo comercial en Winter Park, la línea de switchboard de 1600A tiene más de 6 ft de ancho, así que recibe una puerta de personal en cada extremo del espacio de trabajo — cada una de al menos 24 in. de ancho y 6½ ft de alto — y las puertas abren hacia fuera con herraje antipánico listado. Cuente las entradas en la distribución y revise el giro de las puertas y el herraje antipánico antes de colgar las puertas.",
       "sharma_note": "",
       "figure_idea": "Una planta de cuarto de switchboard: una línea ancha de equipos con una puerta en cada extremo del espacio de trabajo, flechas mostrando la salida alejándose del equipo.",
       "related_ids": [
@@ -7503,7 +9328,104 @@
       "verified": true,
       "prev_id": "C1-110.26(B-D)",
       "next_id": "C1-110.26(D)",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1,
+      "why_it_exists": "Las reglas de espacio de trabajo son reglas de escape. Cuando un equipo falla, el trabajador frente a él tiene una fracción de segundo y una sola dirección para moverse: alejarse. Una entrada única y apretada, o una puerta que debe tirarse hacia la explosión, convierte un evento de arco en una trampa. La regla de cada extremo existe porque una línea de equipos de más de 6 ft de ancho puede bloquear la salida cercana con la propia falla.",
+      "exam_trap": "La trampa: «El cuarto del switchboard tiene una puerta, así que la entrada y la salida están cubiertas». Para equipos clasificados 1200A o más y de más de 6 ft de ancho, una puerta no basta: debe haber una entrada en cada extremo del espacio de trabajo, a menos que la salida esté despejada o la profundidad se duplique. La trampa compañera es la puerta de personal cerca de equipos grandes que abre hacia adentro y lleva una perilla: a menos de 25 ft del espacio de trabajo de equipos clasificados 800A o más, la puerta debe abrir en la dirección de salida y tener herraje antipánico listado.",
+      "inspection_fails": [
+        "Switchboard clasificado 1200A o más y de más de 6 ft de ancho con una entrada en un solo extremo del espacio de trabajo.",
+        "Puerta de personal a menos de 25 ft de equipos clasificados 800A o más que abre hacia adentro del cuarto y no tiene herraje antipánico listado.",
+        "Entrada al espacio de trabajo en equipos grandes de menos de 24 in. de ancho o menos de 6½ ft de alto.",
+        "Entrada al espacio de trabajo bloqueada por material almacenado: sin un camino despejado para entrar y salir."
+      ],
+      "tables": [
+        {
+          "caption": "Entradas de un vistazo",
+          "headers": [
+            "Caso",
+            "Requisito",
+            "Sección"
+          ],
+          "rows": [
+            [
+              "Cualquier espacio de trabajo",
+              "Al menos una entrada y salida",
+              "110.26(C)(1)"
+            ],
+            [
+              "1200A o más, más de 6 ft de ancho",
+              "Entrada en cada extremo, 24 in. x 6½ ft mín",
+              "110.26(C)(2)"
+            ],
+            [
+              "Una sola entrada, equipos grandes",
+              "Solo si la salida está despejada o la profundidad se duplica",
+              "110.26(C)(2)"
+            ],
+            [
+              "Puerta de personal, 800A o más, a menos de 25 ft",
+              "Abre hacia fuera, herraje antipánico listado",
+              "110.26(C)(3)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-110.26C-entrances.svg",
+          "alt": "Vista en planta de un cuarto de switchboard con un switchboard ancho, un espacio de trabajo dorado frente a él, y una puerta de personal en cada extremo del espacio que abre hacia fuera, con flechas de salida y líneas de dimensión de 24 pulgadas mínimas.",
+          "caption": "Equipos grandes: una entrada en cada extremo del espacio de trabajo.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un switchboard está clasificado 1600A y tiene 8 ft de ancho. Sin aplicar excepciones, su espacio de trabajo necesita:",
+          "choices": [
+            "Una entrada, en cualquier extremo",
+            "Una entrada en cada extremo",
+            "Dos entradas, ambas en el mismo extremo",
+            "Ninguna entrada: está en interiores"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Los equipos clasificados 1200A o más y de más de 6 ft de ancho necesitan una entrada y una salida del espacio de trabajo en cada extremo.",
+          "nec_ref": "110.26(C)(2)"
+        },
+        {
+          "question": "¿Cuál es el tamaño mínimo de cada una de esas entradas?",
+          "choices": [
+            "18 in. de ancho por 6 ft de alto",
+            "24 in. de ancho por 6½ ft de alto",
+            "30 in. de ancho por 6½ ft de alto",
+            "24 in. de ancho por 7 ft de alto"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Cada entrada en equipos grandes tiene al menos 24 in. de ancho y 6½ ft de alto.",
+          "nec_ref": "110.26(C)(2)"
+        },
+        {
+          "question": "Una puerta de personal está a 10 ft del espacio de trabajo de un switchboard de 1000A. La puerta debe:",
+          "choices": [
+            "Abrir hacia adentro, por seguridad",
+            "Abrir en la dirección de salida y tener herraje antipánico listado",
+            "Permanecer con llave en todo momento",
+            "Tener solo un cierrapuertas y una perilla"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Una puerta de personal a menos de 25 ft del espacio de trabajo de equipos clasificados 800A o más abre en la dirección de salida y lleva herraje antipánico listado.",
+          "nec_ref": "110.26(C)(3)"
+        }
+      ],
+      "code_refs": [
+        "110.26(C)(1)",
+        "110.26(C)(2)",
+        "110.26(C)(3)",
+        "Table 110.26(A)(1)"
+      ]
     },
     {
       "id": "C1-110.26(D)",
@@ -7989,8 +9911,8 @@
       "article": "110",
       "section": "110.28",
       "title": "Tipos de gabinetes",
-      "plain_explanation": "Los gabinetes se seleccionan por tipo según el ambiente donde vivirán, y la tabla de esta sección empareja los tipos de gabinete con las exposiciones para las que están construidos: polvo interior y goteo de líquido, lluvia y aguanieve exteriores, agua dirigida con manguera, corrosión y cosas parecidas. Los tipos comunes de campo van desde un gabinete general de interior, pasando por el tipo hermético a la lluvia exterior que las cuadrillas ven en desconectadores de casas, hasta los tipos resistentes a la corrosión usados en trabajo de lavado y costero. El tipo marcado en el gabinete, no su apariencia, es para lo que está clasificado.\n\nLos tipos que Sharma se encuentra más, de la tabla de la sección:\n• Tipo 1 — interior, uso general; protección contra contacto y suciedad que cae\n• Tipo 3R — exterior; a prueba de lluvia y resistente al aguanieve — el tipo estándar de desconectador de casa y gabinete de medidor\n• Tipo 4 — hermético al agua, incluso contra agua dirigida con manguera\n• Tipo 4X — rendimiento Tipo 4 más resistencia a la corrosión — trabajo de lavado y costero\n• Tipo 12 — industrial interior; polvo, pelusa y goteo de líquidos no corrosivos\nUn tipo de mayor servicio puede sustituir a uno menor en muchos casos, pero el tipo marcado es la clasificación — nunca la pintura ni la forma.",
-      "on_the_job": "Empareje el tipo con la exposición real: el equipo tipo interior no va en una pared exterior de Florida, y un gabinete corroído o de tipo equivocado encontrado en una llamada de servicio es un artículo de reemplazo, no un trabajo de pintura.",
+      "plain_explanation": "Los gabinetes se seleccionan por tipo según el ambiente donde vivirán. La Tabla 110.28 empareja cada tipo con las exposiciones para las que está construido — polvo interior y goteo de líquido, lluvia y aguanieve exteriores, agua dirigida con manguera, corrosión y cosas parecidas.\nLos tipos comunes de campo van desde un gabinete general de interior, pasando por el tipo hermético a la lluvia que las cuadrillas ven en desconectadores de casas, hasta los tipos resistentes a la corrosión usados en trabajo de lavado y costero.\nEl tipo marcado en el gabinete — no su apariencia — es para lo que está clasificado. Un tipo de mayor servicio puede sustituir a uno menor en muchos casos, pero el tipo marcado es la clasificación: nunca la pintura, nunca la forma.",
+      "on_the_job": "Empareje el tipo con la exposición real. En una acometida costera del condado de Brevard, el gabinete del medidor y el desconectador en la pared exterior son Tipo 3R como mínimo — a prueba de lluvia y resistentes al aguanieve — y el Tipo 4X resistente a la corrosión justifica su costo donde la brisa salada alcanza el equipo. En una llamada de servicio, un gabinete corroído o de tipo equivocado es un artículo de reemplazo, no un trabajo de pintura: la clasificación era el tipo marcado, y la marca se fue con el metal.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -8000,7 +9922,107 @@
       "verified": true,
       "prev_id": "C1-110.27",
       "next_id": "C1-110.31",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Un gabinete es lo único entre las partes energizadas y el clima que el edificio realmente recibe. Ponga un tipo de interior en una pared exterior de Florida y la lluvia y el aire salado hacen el resto: latas oxidadas, agua en el desconectador, equipo fallado. El sistema de tipos existe para que la correspondencia entre caja y exposición sea una marca que usted puede verificar, no una adivinanza.",
+      "inspection_fails": [
+        "Gabinete Tipo 1 de interior instalado en una pared exterior — no está clasificado para lluvia.",
+        "Gabinete de desconectador corroído por completo en servicio costero — el tipo nunca se emparejó con la exposición; se exige reemplazo.",
+        "Gabinete sin marca aceptado como a prueba de lluvia por su apariencia — sin marca de tipo, no hay clasificación."
+      ],
+      "exam_trap": "La trampa: «El Tipo 4 es hermético al agua, así que debe servir para el trabajo costero». Hermético al agua no es resistente a la corrosión. El Tipo 4 detiene el agua dirigida con manguera; la resistencia a la corrosión que el aire salado exige es el Tipo 4X. Leer la fortaleza de un tipo como si fuera de otro es como se instala la lata equivocada.",
+      "tables": [
+        {
+          "caption": "Los tipos que Sharma se encuentra más (Tabla 110.28)",
+          "headers": [
+            "Tipo",
+            "Dónde",
+            "Construido para soportar"
+          ],
+          "rows": [
+            [
+              "Tipo 1",
+              "Interior, uso general",
+              "Contacto y suciedad que cae"
+            ],
+            [
+              "Tipo 3R",
+              "Exterior — desconectadores y medidores de casa",
+              "Lluvia y aguanieve"
+            ],
+            [
+              "Tipo 4",
+              "Servicio hermético al agua",
+              "Agua dirigida con manguera"
+            ],
+            [
+              "Tipo 4X",
+              "Trabajo de lavado y costero",
+              "Rendimiento Tipo 4 más corrosión"
+            ],
+            [
+              "Tipo 12",
+              "Industrial interior",
+              "Polvo, pelusa y goteo de líquidos no corrosivos"
+            ]
+          ],
+          "note": "Un tipo de mayor servicio puede sustituir a uno menor en muchos casos — el tipo marcado sigue siendo la clasificación."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c1/C1-110.28-types.svg",
+          "alt": "Tres gabinetes comparados lado a lado: un gabinete Tipo 1 de interior, un desconectador Tipo 3R exterior a prueba de lluvia y un gabinete Tipo 4X resistente a la corrosión para trabajo costero.",
+          "caption": "Empareje el tipo marcado con la exposición donde vivirá.",
+          "w": 900,
+          "h": 1360
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "El tipo de gabinete estándar para un desconectador y medidor de casa es:",
+          "choices": [
+            "Tipo 1",
+            "Tipo 3R",
+            "Tipo 12",
+            "Tipo 4X"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El Tipo 3R es el tipo exterior a prueba de lluvia y resistente al aguanieve que las cuadrillas ven en desconectadores de casa y gabinetes de medidor.",
+          "nec_ref": "110.28"
+        },
+        {
+          "question": "¿Qué agrega el Tipo 4X al Tipo 4?",
+          "choices": [
+            "Una clasificación de voltaje mayor",
+            "Resistencia a la corrosión",
+            "Un gabinete más grande",
+            "Una puerta con cerradura"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El Tipo 4X es el rendimiento hermético del Tipo 4 más resistencia a la corrosión — el tipo de lavado y costero.",
+          "nec_ref": "Tabla 110.28"
+        },
+        {
+          "question": "La clasificación de un gabinete la decide:",
+          "choices": [
+            "Su pintura y su forma",
+            "Lo que el proveedor lo llama",
+            "El tipo marcado en el gabinete",
+            "La preferencia del inspector"
+          ],
+          "answer_index": 2,
+          "explain_plain": "El tipo marcado es la clasificación — nunca la pintura ni la forma.",
+          "nec_ref": "110.28"
+        }
+      ],
+      "code_refs": [
+        "110.28",
+        "Tabla 110.28"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios del NEC 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich": 1
     },
     {
       "id": "C1-110.31",
