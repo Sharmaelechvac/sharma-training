@@ -12,8 +12,8 @@
       "article": "700",
       "section": "700",
       "title": "Emergency systems — the life-safety tier",
-      "plain_explanation": "Article 700 covers backup power that the law classes as emergency: power for getting people out and keeping them alive, such as egress lighting, exit signs, fire alarm and similar life-safety loads. A governmental agency having jurisdiction decides that a system is emergency; the owner does not get to choose the label. Emergency power has to be there fast, the wiring is kept apart from normal wiring, and the system is tested and documented. If life safety does not depend on it, you are probably in Article 701 or 702 instead.\n\nNEC 2023 CHANGE:\n• 700.11: New 700.11 sets wiring rules for emergency lighting run on Class 2 power: mark it, keep it apart from other Class 2 cabling, and protect it from damage. Emergency Class 2 wiring now needs physical protection: raceway, cable tray, Type MC or Type AC cable (700.11(D)).\n• 700.24: Only luminaires that go into emergency mode because an outside control signal tells them to must be emergency listed. A standard fixture fed through a listed emergency control device doesn't. A luminaire that responds to an outside control input and goes to emergency mode when normal power fails must be listed for emergency use.\n• 700.27: New 700.27: a device that feeds Class 2 emergency lighting with both power and control, like a PoE switch, has to carry an emergency lighting control device listing. A device sending Class 2 power and control signals together to emergency lighting must be listed for that job, as an emergency lighting control device.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "First question on any standby job: who required this system, and for what loads? The answer picks the article before you pick any gear.",
+      "plain_explanation": "Article 700 covers backup power that the law classes as emergency: power for getting people out and keeping them alive, such as egress lighting, exit signs, fire alarm and similar life-safety loads. A governmental agency having jurisdiction decides that a system is emergency; the owner does not get to choose the label. Emergency power has to be there fast — available within 10 seconds of the normal supply failing (700.12) — the wiring is kept completely apart from normal wiring, and the system is tested and documented. If life safety does not depend on it, you are probably in Article 701 or 702 instead.",
+      "on_the_job": "A single-story daycare in Ocala: the fire marshal requires the egress lighting, exit signs and fire alarm to stay up on generator power, so those loads are Article 700 work before anyone picks gear. Sharma's scope: a Siemens emergency panel fed through listed transfer equipment, the generator carrying the emergency load within 10 seconds, emergency raceways marked as emergency at intervals of 25 ft or less, and no normal-power conductors in the same raceways. The same generator also backs the kitchen refrigerator — that part is Article 702, wired separately, and it never lands on the emergency panel.",
       "sharma_note": "",
       "figure_idea": "Original diagram: three stacked tiers labelled Emergency (700), Legally Required (701) and Optional (702), fastest/most protected at the top, with example loads under each tier.",
       "related_ids": [
@@ -50,7 +50,101 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/700-27",
           "confirmed": true
         }
-      ]
+      ],
+      "rich": 1,
+      "edition_note": "NEC 2023 CHANGE:\n• 700.11: New 700.11 sets wiring rules for emergency lighting run on Class 2 power: mark it, keep it apart from other Class 2 cabling, and protect it from damage. Emergency Class 2 wiring now needs physical protection: raceway, cable tray, Type MC or Type AC cable (700.11(D)).\n• 700.24: Only luminaires that go into emergency mode because an outside control signal tells them to must be emergency listed. A standard fixture fed through a listed emergency control device doesn't. A luminaire that responds to an outside control input and goes to emergency mode when normal power fails must be listed for emergency use.\n• 700.27: New 700.27: a device that feeds Class 2 emergency lighting with both power and control, like a PoE switch, has to carry an emergency lighting control device listing. A device sending Class 2 power and control signals together to emergency lighting must be listed for that job, as an emergency lighting control device.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "When a building is full of people and the normal power dies, the emergency system is what lights the way out and keeps the alarm talking. If it starts late, shares a raceway that a fault takes out, or was never tested, the failure shows up at the worst possible moment. Article 700 is strict because the loads are not conveniences — they are the evacuation itself.",
+      "inspection_fails": [
+        "Emergency and normal conductors sharing a raceway outside the transfer equipment — emergency wiring stays independent (700.10).",
+        "Emergency raceways, boxes and enclosures not marked as emergency, or the marking intervals skipped.",
+        "Optional loads — receptacles, comfort HVAC — landed on the emergency panel because there was space.",
+        "No written test record: the emergency system was never proven under load, and nothing is documented."
+      ],
+      "exam_trap": "The trap answer is that the owner, the GC, or the size of the generator decides a system is 'emergency.' It does not. A governmental agency having jurisdiction applies the Article 700 label; a big generator feeding a homeowner's refrigerator is still Article 702. Second trap: landing an optional load on the emergency panel 'because there was space' — emergency branch circuits carry emergency loads only.",
+      "tables": [
+        {
+          "caption": "The three standby tiers (NEC 2020)",
+          "headers": [
+            "Tier",
+            "Who requires it",
+            "Example loads"
+          ],
+          "rows": [
+            [
+              "Emergency — 700",
+              "Law or governmental agency",
+              "Egress lighting, exit signs, fire alarm"
+            ],
+            [
+              "Legally required — 701",
+              "Law, code or AHJ",
+              "Smoke removal, ventilation, sewage, rescue support"
+            ],
+            [
+              "Optional — 702",
+              "Nobody — owner's choice",
+              "Refrigerator, well pump, lights"
+            ]
+          ],
+          "note": "On a shared source a 700 load outranks a 701 load. If nobody with authority required the system, it is not 701 — it is 702."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-ART-700-three-tiers.svg",
+          "alt": "Three stacked tiers: Emergency Article 700 on top, Legally required Article 701 in the middle, Optional Article 702 at the bottom, each with who requires it and example loads.",
+          "caption": "The three standby tiers: who requires the system picks the article.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Who decides that a standby system is an Article 700 emergency system?",
+          "choices": [
+            "The building owner",
+            "The general contractor",
+            "A governmental agency having jurisdiction",
+            "The generator manufacturer"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The emergency label is applied by a governmental agency having jurisdiction. The owner does not get to choose it.",
+          "nec_ref": "Article 700"
+        },
+        {
+          "question": "How fast must emergency power be available after the normal supply fails?",
+          "choices": [
+            "10 seconds",
+            "30 seconds",
+            "60 seconds",
+            "10 minutes"
+          ],
+          "answer_index": 0,
+          "explain_plain": "Emergency power has to be available within 10 seconds of the normal supply failing.",
+          "nec_ref": "700.12"
+        },
+        {
+          "question": "Which load belongs on an emergency branch circuit?",
+          "choices": [
+            "Office refrigerator",
+            "Egress lighting",
+            "Landscape lighting",
+            "Comfort cooling"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Emergency circuits carry life-safety loads: egress lighting, exit signs, fire alarm. Comfort and convenience loads do not belong there.",
+          "nec_ref": "Article 700"
+        }
+      ],
+      "code_refs": [
+        "Article 700",
+        "700.10",
+        "700.12",
+        "Article 701",
+        "Article 702"
+      ],
+      "uncertain": [],
+      "rich_sources": []
     },
     {
       "id": "C7-700.3",
@@ -701,8 +795,8 @@
       "article": "701",
       "section": "701",
       "title": "Legally required standby systems — the middle tier",
-      "plain_explanation": "Article 701 covers standby power that a law, code or AHJ requires, but that is not classed as emergency. These systems back up loads that aid firefighting and rescue, control health hazards, or keep ventilation, smoke removal, sewage, communications and similar loads running so an emergency does not get worse. They sit below Article 700 in priority: a 700 load always outranks a 701 load on a shared source. If nobody with authority required the system, it is not 701 — it is optional standby under 702.\n\nNEC 2023 CHANGE:\n• 701.4(C): Made modifications to the tide of Section 701.4(C), which now simply addresses load management requirements\n• 701.4(D): Added language that now identifies the two different types of parallel operation, normal and alternate sources, of legally required systems in new Section 701.4(D).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "The tell is paperwork: a code citation, a permit condition or an AHJ direction requiring standby power for named loads. No requirement, no 701.",
+      "plain_explanation": "Article 701 covers standby power that a law, code or AHJ requires, but that is not classed as emergency. These systems back up loads that aid firefighting and rescue, control health hazards, or keep ventilation, smoke removal, sewage, communications and similar loads running so an emergency does not get worse. They sit below Article 700 in priority: a 700 load always outranks a 701 load on a shared source. If nobody with authority required the system, it is not 701 — it is optional standby under 702.\n• Speed: the power has to be available within 60 seconds of losing normal power — slower than 700's 10 seconds, but automatic, not “someone will start it eventually” (701.12).\n• Capacity: the system carries its legally required loads; it may also carry 700 or 702 loads only with the capacity for them, or with automatic selective load pickup and shedding doing the sorting (701.4).\n• Transfer equipment follows the 700 discipline: automatic, listed, approved, and marked for its short-circuit duty; reconditioned and meter-mounted transfer gear stay out (701.5).\n• Wiring is the relaxed part: 701 wiring may share raceways and boxes with general wiring — the strict separation rule belongs to 700 (701.10).",
+      "on_the_job": "Picture a Marion County clubhouse where the county requires the sewage lift station and the smoke-control fans to stay up on an outage. That paperwork makes it 701, not 702: the generator and automatic transfer gear get sized for those loads, the power has to be on within 60 seconds, and — unlike a 700 job — the 701 feeders may share raceways with the general wiring on the way to the pumps. The egress lighting in the same building stays Article 700 and keeps its own separated wiring; one building can hold both tiers, and mixing their rules is the classic fail.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -718,7 +812,7 @@
       "nec2023_change": [
         {
           "section": "701.4(C)",
-          "change": "Made modifications to the tide of Section 701.4(C), which now simply addresses load management requirements",
+          "change": "Made modifications to the title of Section 701.4(C), which now simply addresses load management requirements",
           "source": "Carosella/NFPA-based 2023 NEC change workbook: 701.4{C) Load Management",
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
@@ -730,7 +824,117 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 701.4(C): Made modifications to the title of Section 701.4(C), which now simply addresses load management requirements\n• 701.4(D): Added language that now identifies the two different types of parallel operation, normal and alternate sources, of legally required systems in new Section 701.4(D).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "The middle tier exists because some loads are too important to leave to chance but are not egress life-safety loads: a sewage lift station that overflows into a Florida waterway, smoke-removal fans, a health-hazard process. If those loads wait for a portable generator and a long cord, the emergency they were meant to contain gets worse while everyone watches. The law required the backup, so the code makes it automatic, sized and tested — not a promise in a drawer.",
+      "inspection_fails": [
+        "701 loads wired and labeled as emergency (700) — or the reverse — because nobody read the requiring paperwork.",
+        "Generator sized for the 701 loads, then 702 convenience loads added with no capacity check and no load shedding.",
+        "Source that needs five minutes of cranking and warm-up to accept load, installed on a 60-second tier.",
+        "700 and 701 wiring methods swapped: 700 circuits sharing raceways with general wiring, so the 700.10 separation is lost."
+      ],
+      "exam_trap": "The trap answer treats “legally required” as the formal name for emergency power and wires it all like 700 — or the reverse, treating it as a 702 convenience job. Both are wrong. 701 is its own tier: 60 seconds, not 10; wiring may share raceways, where 700.10 demands separation; and the classification comes from the requiring paperwork, not from how important the load feels.",
+      "tables": [
+        {
+          "caption": "The three standby tiers (NEC 2020)",
+          "headers": [
+            "Tier",
+            "Who requires it",
+            "Power on within",
+            "Wiring separation"
+          ],
+          "rows": [
+            [
+              "700 Emergency",
+              "Law classes it as emergency",
+              "10 seconds",
+              "Kept separate (700.10)"
+            ],
+            [
+              "701 Legally required",
+              "Code, law or AHJ requires it",
+              "60 seconds",
+              "May share raceways (701.10)"
+            ],
+            [
+              "702 Optional",
+              "Nobody — owner's choice",
+              "No set time",
+              "General wiring rules"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-ART-701-three-tiers.svg",
+          "alt": "Three stacked bands comparing the standby tiers: Article 700 emergency at 10 seconds, Article 701 legally required standby at 60 seconds, and Article 702 optional standby with no set time, with example loads for each.",
+          "caption": "700 at 10 seconds, 701 at 60, 702 with no set time.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Who decides that a standby system is legally required under Article 701?",
+          "choices": [
+            "The owner",
+            "The electrical contractor",
+            "A law, code or the AHJ",
+            "The generator salesman"
+          ],
+          "answer_index": 2,
+          "explain_plain": "701 starts with a requirement from law, code or the authority having jurisdiction — no requirement, and the system is 702 optional.",
+          "nec_ref": "701.1"
+        },
+        {
+          "question": "Within what time must a 701 source be available after normal power fails?",
+          "choices": [
+            "10 seconds",
+            "60 seconds",
+            "10 minutes",
+            "No set time"
+          ],
+          "answer_index": 1,
+          "explain_plain": "701 allows 60 seconds — slower than 700's 10 seconds, far faster than a portable unit and a cord.",
+          "nec_ref": "701.12"
+        },
+        {
+          "question": "May 701 wiring share a raceway with general building wiring?",
+          "choices": [
+            "Never",
+            "Yes — the strict separation rule is 700's, not 701's",
+            "Only in conduit bodies",
+            "Only outdoors"
+          ],
+          "answer_index": 1,
+          "explain_plain": "701.10 permits 701 wiring in the same raceways and enclosures as general wiring; Article 700 is the tier that demands separation.",
+          "nec_ref": "701.10"
+        }
+      ],
+      "code_refs": [
+        "701.1",
+        "701.4",
+        "701.5",
+        "701.10",
+        "701.12",
+        "700.10",
+        "Article 702"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "Legally required standby power must be available within 60 seconds (701.12); Article 700 allows 10 seconds",
+          "source": "Mike Holt, standby systems newsletter",
+          "url": "https://www.mikeholt.com:443/newsletters.php?action=display&letterID=2768&email"
+        },
+        {
+          "claim": "701.4 capacity: a source carrying other tiers' loads needs the capacity for them or automatic selective load pickup and shedding",
+          "source": "Mike Holt, Generators and Standby Systems (Articles 445, 700–702)",
+          "url": "https://www.mikeholt.com/files/PDF/17_Article_445700-702_Generators_and_Standby_PDF_c.pdf?srsltid=AfmBOoquj-vawp4Je8OF7btNGlOzRbzLR9XIKuiPnyYzqFh-_Za-gteJ"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C7-701.5",
@@ -738,8 +942,8 @@
       "article": "701",
       "section": "701.5",
       "title": "Transfer equipment — legally required standby",
-      "plain_explanation": "Transfer equipment for a legally required standby system has to be automatic, listed and marked for that use, and approved by the AHJ, and it has to keep the standby source from being interconnected with the other sources by accident. Automatic transfer switches are electrically operated and mechanically held, reconditioned switches are not allowed, and meter-mounted transfer switches are not permitted here either. The transfer equipment short-circuit rating is field marked on the outside of the gear.",
-      "on_the_job": "Same discipline as 700: check the marking for legally required standby use before the gear is ordered, not after it is hung.",
+      "plain_explanation": "Transfer equipment for a legally required standby system is held to a tighter standard than the same hardware on an optional standby job:\n• It has to be automatic, listed and marked for legally required standby use, and approved by the AHJ.\n• It has to keep the standby source from ever being interconnected with the normal source by accident — in any operation of the equipment, not just the normal switching sequence.\n• Automatic transfer switches are electrically operated and mechanically held, so the contacts stay put if control power drops.\n• Reconditioned transfer switches are not permitted.\n• Meter-mounted transfer switches are not permitted on a 701 system either — that device belongs to 702 only.\n• The transfer equipment short-circuit rating is field marked on the outside of the gear, where it can be read without opening the enclosure.",
+      "on_the_job": "Same discipline as Article 700: check the marking before the gear is ordered, not after it is hung. A charter school in Kissimmee adds a 60 kW standby generator for its legally required loads — egress lighting, fire alarm and the lift station. The switch is a new Siemens automatic transfer switch (S-02), ordered listed and marked for legally required standby use, with its short-circuit rating field marked on the enclosure. A cheaper reconditioned switch, and a meter-mounted switch quoted from a 702 house job, are both rejected at the desk. The 701 system also works to a 60-second availability clock (701.12), so the transfer has to be automatic — nobody is walking to the gear room to throw a handle.",
       "sharma_note": "S-02 applies to gear Sharma furnishes: new transfer equipment is Siemens, subject to its listing and marking for this use.",
       "figure_idea": "Original diagram: the 700 transfer-switch diagram redrawn with a 60-second clock and a note that meter-mounted switches are off the table here.",
       "related_ids": [
@@ -752,7 +956,106 @@
       "next_id": "C7-701.10",
       "sharma_rule_ids": [
         "S-02"
-      ]
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "A legally required standby system carries loads the law says must not stay dark — egress lighting, a fire alarm, a sewage lift station. If the transfer switch can parallel the generator with the utility, or a worn reconditioned switch fails halfway through a transfer, the protected load is the one that dies. Listing, marking and AHJ approval make the switch prove, before the outage, that it was built for this duty.",
+      "exam_trap": "The trap is treating 701 like 702: reaching for a meter-mounted transfer switch, or a reconditioned automatic switch at a better price. Both are permitted thinking on an optional standby job and both are prohibited here. The second trap is the holding method — the switch must be electrically operated and mechanically held, not electrically held, so a loss of control power cannot drop the contacts mid-event.",
+      "inspection_fails": [
+        "Transfer switch not listed or marked for legally required standby use.",
+        "Meter-mounted transfer switch installed on a 701 system — not permitted in Article 701.",
+        "Reconditioned automatic transfer switch installed on a legally required standby system.",
+        "Transfer equipment short-circuit rating not field marked on the outside of the gear.",
+        "Transfer equipment installed without AHJ approval."
+      ],
+      "tables": [
+        {
+          "caption": "701 transfer equipment, checked against 702 habits",
+          "headers": [
+            "Question",
+            "701 answer",
+            "702 difference"
+          ],
+          "rows": [
+            [
+              "Must transfer be automatic?",
+              "Yes — electrically operated, mechanically held",
+              "Manual transfer is allowed"
+            ],
+            [
+              "Meter-mounted switch?",
+              "Not permitted",
+              "Permitted — 702.5(B)"
+            ],
+            [
+              "Reconditioned switch?",
+              "Not permitted",
+              "—"
+            ],
+            [
+              "Short-circuit rating shown?",
+              "Field marked outside the gear",
+              "Field marked — 702.5(C)"
+            ]
+          ],
+          "note": "The 702 column is the trap: hardware that passes on a house generator job does not cross over to a 701 system."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-701.5-transfer-switch.svg",
+          "alt": "One-line diagram of a legally required standby system: utility and generator feeding one automatic transfer switch and the 701 loads, a 60-second clock, and a red panel listing what is not permitted on a 701 job.",
+          "caption": "One listed automatic switch between the sources — and the hardware that stays off a 701 job.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Which transfer switch is permitted on a legally required standby (701) system?",
+          "choices": [
+            "A reconditioned ATS with a listing label",
+            "A listed, marked, automatic switch approved by the AHJ",
+            "A meter-mounted transfer switch",
+            "Any listed manual transfer switch"
+          ],
+          "answer_index": 1,
+          "explain_plain": "701.5 requires transfer equipment that is automatic, listed and marked for the use, and approved by the AHJ. Reconditioned and meter-mounted switches are both out.",
+          "nec_ref": "701.5"
+        },
+        {
+          "question": "Automatic transfer switches for 701 systems are:",
+          "choices": [
+            "Electrically operated and electrically held",
+            "Electrically operated and mechanically held",
+            "Manually operated and mechanically held",
+            "Pneumatically operated and electrically held"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The switch is electrically operated and mechanically held, so the contacts stay in position if control power is lost.",
+          "nec_ref": "701.5"
+        },
+        {
+          "question": "Where is the transfer equipment short-circuit rating shown on a 701 system?",
+          "choices": [
+            "On the generator nameplate",
+            "Inside the transfer switch door",
+            "Field marked on the outside of the gear",
+            "On the service directory only"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The rating is field marked on the outside of the transfer equipment, readable without opening it.",
+          "nec_ref": "701.5"
+        }
+      ],
+      "code_refs": [
+        "701.5",
+        "701.12",
+        "702.5(B)",
+        "702.5(C)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C7-701.10",
@@ -1112,8 +1415,8 @@
       "article": "702",
       "section": "702.4(B)(1)",
       "title": "Manual transfer — the user selects the load",
-      "plain_explanation": "Where manual transfer equipment is used, the optional standby system has to be able to supply all the equipment intended to be operated at one time, and the user is permitted to select which loads are connected. That selection is what sets the practical size of the source: a homeowner who will run the fridge, a few lights and the well pump — and leave the range and dryer off — does not need a generator sized for the whole house.",
-      "on_the_job": "Build the intended-load list with the owner and put it in the job record. If a load is not on the list, it does not get counted, and it does not get promised.",
+      "plain_explanation": "Where manual transfer equipment is used, the optional standby system has to be able to supply all the equipment intended to be operated at one time, and the user is permitted to select which loads are connected. That selection is what sets the practical size of the source: a homeowner who will run the fridge, a few lights and the well pump — and leave the range and dryer off — does not need a generator sized for the whole house.\n• This is the manual-transfer fork of 702.4(B). Its twin, 702.4(B)(2), covers automatic transfer, where nobody stands there choosing: the source either carries the full calculated load or a load-management system does the choosing.",
+      "on_the_job": "Lake County house, manual transfer switch, owner's list agreed at the kitchen table: refrigerator 200 VA, well pump 1,800 VA, lights 900 VA, microwave 1,500 VA, TV and network gear 300 VA — 4,700 VA of intended load, all of it allowed to run at once. A 6,500 W portable covers the list with room to spare. The range at 12,000 VA and the dryer at 5,600 VA are not on the list, so they are not counted and not promised. The list goes in the job record, where the owner and the next tech both read the same deal.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1125,7 +1428,92 @@
       "verified": true,
       "prev_id": "C7-702.4(B)",
       "next_id": "C7-702.4(B)(2)",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "A portable source is small, and a house is big. Without a written selection, every outage becomes an argument at the panel — someone adds the range, then the dryer, and the little unit drowns or the breaker does. The intended-load list turns the owner's choice into the design: the source is sized to a promise, and the promise is written down before the storm, not negotiated during it.",
+      "inspection_fails": [
+        "Source sized below the intended-load list — the listed loads cannot all run at once.",
+        "No written load list in the job record; the owner's selections live in a phone call nobody can check.",
+        "Range or dryer promised to the owner “if there's room” — loads off the list got sold as standby loads.",
+        "Manual-transfer job priced and sized from the whole-house calculation — the (B)(2) method on a (B)(1) job."
+      ],
+      "exam_trap": "The trap answer sizes the source from the service calculation or the whole-house load — that is the automatic-transfer thinking of 702.4(B)(2). Under (B)(1) the user selects the loads, so the source must carry the intended list all at once — no more, but also no less: a unit that cannot run the whole list together fails this section.",
+      "tables": [
+        {
+          "caption": "The 702.4(B) fork",
+          "headers": [
+            "Transfer",
+            "Who picks the loads",
+            "Source must carry"
+          ],
+          "rows": [
+            [
+              "Manual — 702.4(B)(1)",
+              "The user selects",
+              "All intended loads, at one time"
+            ],
+            [
+              "Automatic — 702.4(B)(2)",
+              "Nobody at the switch",
+              "Full calculated load, or load management sheds"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-702.4B1-load-list.svg",
+          "alt": "A standby panel load list: refrigerator 200 VA, well pump 1,800 VA, lights 900 VA, microwave 1,500 VA and TV plus network 300 VA are checked on the list for a 4,700 VA selected total; the range and dryer are crossed off the list; a 6,500 W portable source covers the list.",
+          "caption": "The list totals 4,700 VA; the 6,500 W source covers it.",
+          "w": 900,
+          "h": 1240
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Under 702.4(B)(1), what must the standby source be able to supply?",
+          "choices": [
+            "The entire house load",
+            "All equipment intended to be operated at one time",
+            "Only lighting loads",
+            "125% of the service load"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Manual transfer: the user selects the loads, and the source must carry the whole intended list at once.",
+          "nec_ref": "702.4(B)(1)"
+        },
+        {
+          "question": "The owner's list totals 4,700 VA. Which source fits the rule?",
+          "choices": [
+            "A 3,500 W unit — close enough",
+            "A 6,500 W unit that carries the list together",
+            "Any unit, if the owner promises to stagger",
+            "The service size, always"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The source must supply all the intended equipment at one time; 3,500 W cannot carry a 4,700 VA list.",
+          "nec_ref": "702.4(B)(1)"
+        },
+        {
+          "question": "A load is not on the owner's intended list. What does the rule say about it?",
+          "choices": [
+            "It must still be counted",
+            "It is not counted — and should not be promised",
+            "It counts at 50%",
+            "It counts only in summer"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Selection is the point of (B)(1): off-list loads are outside the sizing and outside the promise.",
+          "nec_ref": "702.4(B)(1)"
+        }
+      ],
+      "code_refs": [
+        "702.4(B)(1)",
+        "702.4(B)(2)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C7-702.4(B)(2)",
@@ -1409,8 +1797,8 @@
       "article": "702",
       "section": "702.5(D)",
       "title": "Inadvertent interconnection — the heart of 702.5",
-      "plain_explanation": "Transfer equipment has to be suitable for the job, listed, and designed and installed so that all sources of supply can never be inadvertently interconnected in any operation of the equipment. This is the rule that kills backfeeding: a generator pushing power out through the service can energize a line a utility crew believes is dead. The listing requirement in this paragraph is the 2020 change that unlisted interlock hardware runs into.",
-      "on_the_job": "Test the finished install through every switch position, not just the normal one. The duty covers any operation of the equipment, including the sloppy one nobody planned.",
+      "plain_explanation": "702.5(D) is the paragraph the whole transfer-equipment section hangs on:\n• Transfer equipment has to be suitable for the use, listed, and designed and installed so that all sources of supply can never be inadvertently interconnected — in any operation of the equipment.\n• \"Any operation\" includes the sloppy one nobody planned: a switch left mid-travel, a homeowner flipping breakers in the dark, an interlock installed wrong.\n• This is the rule that kills backfeeding: a generator pushing power out through the service can energize a utility line that a line crew believes is dead.\n• The listing requirement in this paragraph is the 2020 change — the unlisted interlock hardware that got by under older editions runs into it now.",
+      "on_the_job": "A homeowner in Ocala wants a portable-generator inlet for hurricane season on a 200 A Siemens service. Sharma's answer is listed transfer equipment — a listed transfer switch, or listed interlock hardware made for that panel — never a double-ended cord, and never a breaker held off by a zip tie and a label. After the install, the crew tests the finished job through every switch position, not just the normal one: normal, generator, and everything in between, confirming the utility and generator breakers can never be closed together. If the panel cannot take listed hardware, it gets a transfer switch beside it; the inlet alone is not a system.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1422,7 +1810,94 @@
       "verified": true,
       "prev_id": "C7-702.5(C)",
       "next_id": "C7-702.5(E)",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Backfeed kills line workers. When a generator feeds a house panel without real transfer equipment, its power runs backward through the service and the utility transformer and comes out on the primary side at thousands of volts — on a line the crew has opened and believes is dead. The listed-equipment and never-interconnect rules exist so that no switch position, mistake or half-finished install can ever put the two sources together.",
+      "exam_trap": "The trap answer is \"the two breakers are never on together because we labeled them.\" Labels and instructions are not transfer equipment. 702.5(D) demands equipment designed and installed so interconnection cannot happen in any operation — a mechanical impossibility built into listed hardware, not a promise written on the panel directory. The second trap is reading the rule as covering only the normal switching sequence; it covers every operation, including the wrong one.",
+      "inspection_fails": [
+        "Generator inlet wired to a panel with no listed transfer equipment — a backfeed path to the utility.",
+        "Unlisted breaker interlock hardware installed; 702.5(D) requires listed transfer equipment.",
+        "Transfer equipment able to parallel the generator with the service in an intermediate switch position.",
+        "Double-ended (suicide) cord provided as the generator connection method."
+      ],
+      "tables": [
+        {
+          "caption": "What \"never interconnected\" has to survive",
+          "headers": [
+            "Operation",
+            "What must hold"
+          ],
+          "rows": [
+            [
+              "Normal switching",
+              "One source connected at a time"
+            ],
+            [
+              "Switch left mid-travel",
+              "The sources still cannot meet"
+            ],
+            [
+              "Breakers closed in the wrong order",
+              "The interlock blocks the second source"
+            ]
+          ],
+          "note": "The test is every operation of the equipment — including the one nobody planned."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-702.5D-no-backfeed.svg",
+          "alt": "One-line diagram: utility service and a generator both feeding a listed transfer switch ahead of the panelboard, switch-position checks, and a red panel showing the backfeed failure the rule prevents.",
+          "caption": "The switch, not a label, is what keeps generator power off the utility line.",
+          "w": 900,
+          "h": 1480
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "702.5(D) requires transfer equipment to prevent interconnection of all sources:",
+          "choices": [
+            "During normal switching only",
+            "In any operation of the equipment",
+            "Only while the utility source is energized",
+            "Only on systems over 200 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The equipment must be designed and installed so the sources can never be inadvertently interconnected in any operation — including mistakes and mid-travel positions.",
+          "nec_ref": "702.5(D)"
+        },
+        {
+          "question": "A generator connected without transfer equipment is deadly because it can:",
+          "choices": [
+            "Overload the service conductors",
+            "Backfeed a utility line that a crew believes is dead",
+            "Trip the utility recloser",
+            "Raise the house voltage above 240 V"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Generator power runs backward through the service and transformer and energizes the primary line the crew is working on.",
+          "nec_ref": "702.5(D)"
+        },
+        {
+          "question": "Under NEC 2020, generator interlock hardware on a 702 system must be:",
+          "choices": [
+            "Listed transfer equipment",
+            "Labeled with operating instructions",
+            "Approved by the serving utility only",
+            "Rated 200 A or more"
+          ],
+          "answer_index": 0,
+          "explain_plain": "The listing requirement in 702.5(D) is the 2020 change; unlisted interlock hardware no longer gets by.",
+          "nec_ref": "702.5(D)"
+        }
+      ],
+      "code_refs": [
+        "702.5(D)",
+        "702.5"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C7-702.5(E)",
@@ -1745,8 +2220,8 @@
       "article": "705",
       "section": "705",
       "title": "Interconnected electric power production sources",
-      "plain_explanation": "Article 705 governs sources that operate in parallel with another source — most often a solar inverter, storage system or generator tied to a live utility service. It answers three practical questions: where may the source connect, how much current may the connection and the busbar carry, and how does everyone after you know the extra source exists. Connections land on the supply side under 705.11 or the load side under 705.12, and a power control system under 705.13 can change the math. Article 690 in Chapter 6 governs the solar array itself; this article governs its handshake with the premises wiring.\n\nNEC 2023 CHANGE:\n• 705.50: The language describing the operational modes of a Microgrid in Section 705.50 was rewritten to clearly state that a microgrid can operate in parallel with other systems or in island mode.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Decide supply side or load side on paper first. The choice drives the overcurrent protection, the busbar math and the labels, in that order.",
+      "plain_explanation": "Article 705 governs sources that operate in parallel with another source — most often a solar inverter, storage system or generator tied to a live utility service. It answers three practical questions: where may the source connect, how much current may the connection and the busbar carry, and how does everyone after you know the extra source exists.\n• Connections land on the supply side under 705.11 or the load side under 705.12, and a power control system under 705.13 can change the math.\n• On the load side, the busbar rules in 705.12(B)(3) cap the backfeed: with the sources at opposite ends of the bus, 125 percent of the source output plus the rating of the device protecting the busbar must not exceed 120 percent of the busbar rating.\nArticle 690 in Chapter 6 governs the solar array itself; this article governs its handshake with the premises wiring.",
+      "on_the_job": "An Orlando homeowner adds a 7.6 kW solar inverter to a 200 A Siemens panel with a 200 A main. The load-side math: 120 percent of the 200 A busbar is 240 A; minus the 200 A main leaves 40 A of room, and the inverter's 32 A output at 125 percent is exactly 40 A — it fits, with the backfed breaker at the opposite end of the bus and its do-not-relocate label. The same house with a 10 kW inverter needs 52.5 A of room at 125 percent (42 A output), which this panel does not have: the choice becomes a supply-side connection under 705.11 or a power control system under 705.13, decided on paper before anyone drills.",
       "sharma_note": "",
       "figure_idea": "Original diagram: a service panel in the middle, utility entering from the top, a solar inverter entering through a breaker at the far end of the bus, and a second sketch showing a supply-side tap ahead of the main.",
       "related_ids": [
@@ -1769,7 +2244,123 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 705.50: The language describing the operational modes of a Microgrid in Section 705.50 was rewritten to clearly state that a microgrid can operate in parallel with other systems or in island mode.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "A panel busbar was built and tested for current entering at one point. A second source feeding the same bus can push a section of that bus past its rating without any single breaker seeing an overload — the bar overheats quietly inside a closed panel. Article 705 exists to keep the combined math honest, and to make sure the next person who opens the panel knows a second source is there.",
+      "inspection_fails": [
+        "Backfed breaker landed next to the main while the paperwork claims the 120 percent opposite-end method.",
+        "No do-not-relocate warning label on a backfed breaker installed under the 120 percent rule.",
+        "Second source in the panel with no marking that the equipment contains more than one source.",
+        "Busbar math done with the inverter's breaker size instead of 125 percent of its output current."
+      ],
+      "exam_trap": "The trap answer is that the 120 percent rule lets you add 120 percent of the busbar rating in solar. It does not. The rule caps a sum: 125 percent of the source output current plus the rating of the device protecting the busbar, at 120 percent of the busbar — and only with the two sources at opposite ends of the bus. Put the backfed breaker next to the main and the plain 100 percent method in 705.12(B)(3)(1) governs instead.",
+      "tables": [
+        {
+          "caption": "The three connection questions",
+          "headers": [
+            "Question",
+            "Section",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "Supply side?",
+              "705.11",
+              "Connect ahead of the service disconnect; service rules apply"
+            ],
+            [
+              "Load side?",
+              "705.12",
+              "Dedicated device per source; busbar math in (B)(3)"
+            ],
+            [
+              "Opposite ends",
+              "705.12(B)(3)(2)",
+              "125% of source + busbar device ≤ 120% of busbar"
+            ],
+            [
+              "Anywhere on bus",
+              "705.12(B)(3)(1)",
+              "125% of source + busbar device ≤ busbar rating"
+            ],
+            [
+              "Limited by controls",
+              "705.13",
+              "Power control system setting stands in for output current"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-ART-705-busbar-math.svg",
+          "alt": "Panelboard sketch with the utility main at the top of a 200 amp busbar and a 40 amp solar breaker at the opposite end, beside the 120 percent rule arithmetic for the same panel and a supply-side tap note.",
+          "caption": "Opposite ends of the bus: 240 A of room, 200 A spoken for, 40 A left.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A source operating in parallel with the utility connects on the load side under:",
+          "choices": [
+            "705.11",
+            "705.12",
+            "705.13 only",
+            "Article 690"
+          ],
+          "answer_index": 1,
+          "explain_plain": "705.12 governs load-side connections; 705.11 is the supply side.",
+          "nec_ref": "705.12"
+        },
+        {
+          "question": "200 A busbar, 200 A main, sources at opposite ends: the most source current (at 125%) the 120% rule allows is:",
+          "choices": [
+            "20 A",
+            "40 A",
+            "60 A",
+            "240 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "120% of 200 A is 240 A; 240 − 200 = 40 A of room for 125% of the source output.",
+          "nec_ref": "705.12(B)(3)(2)"
+        },
+        {
+          "question": "A power control system under 705.13 changes the load-side math because:",
+          "choices": [
+            "It removes the busbar rating",
+            "Its controller setting stands in for the source output current",
+            "It converts the job to supply side",
+            "It eliminates labeling"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The controller setting is treated as the source output current in the 705.11 and 705.12 calculations.",
+          "nec_ref": "705.13"
+        }
+      ],
+      "code_refs": [
+        "705.11",
+        "705.12",
+        "705.12(B)(3)(1)",
+        "705.12(B)(3)(2)",
+        "705.12(B)(3)(3)",
+        "705.13",
+        "705.50"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "705.12(B)(3) busbar methods, incl. the opposite-end 120% rule and the worked 200 A example (240 A limit, 40 A allowance, 32 A max continuous output)",
+          "source": "GreenLancer, NEC 705.12 120% Rule Busbar Calculator",
+          "url": "https://www.greenlancer.com/nec-705-12-busbar-calculator"
+        },
+        {
+          "claim": "705.12(B) load-side methods summary: 100% rule, 120% opposite-end rule, sum rule",
+          "source": "HSM University, MELU-106 Lesson 7: Energy storage and interconnected sources",
+          "url": "https://www.hsmuniversity.org/us/course/melu-106-special-occupancies-equipment-and-conditions/lesson-7-energy-storage-and-interconnected-sources"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C7-705.10",
@@ -1777,8 +2368,8 @@
       "article": "705",
       "section": "705.10",
       "title": "Identification of power sources — the directory",
-      "plain_explanation": "Where sources are interconnected, a permanent plaque or directory at the service equipment — or another approved, readily visible location — shows where every parallel power source disconnect is. The plaque carries the caution that multiple sources of power are present, and any diagram on it has to be oriented the way the building actually sits. This is the page a firefighter or a utility worker reads; it has to be right, not approximate.",
-      "on_the_job": "Walk the building and verify every disconnect location before the plaque is made. A directory that points to where the disconnect was planned, instead of where it is, fails its only job.",
+      "plain_explanation": "Where sources are interconnected, 705.10 makes somebody write down where the power can come from:\n• A permanent plaque or directory is installed at the service equipment, or at another approved, readily visible location.\n• It shows the location of the disconnect for every parallel power source — every source that can feed the building alongside the service.\n• It carries the caution that multiple sources of power are present.\n• Any diagram on the plaque has to be oriented the way the building actually sits — the garage on the plaque is the garage on the ground.\nThis is the page a firefighter or a utility worker reads at 2 a.m. It has to be right, not approximate.",
+      "on_the_job": "A Winter Park house gets a roof array and a battery in the garage on a 200 A Siemens service. Before the plaque is engraved, the Sharma lead walks the property with the plan in hand: service disconnect at the meter, PV disconnect beside the inverter in the garage, battery disconnect on the garage wall by the door. The plaque at the service lists all three, with a site diagram drawn the way the lot actually sits — house front to the street, garage on the left. The inverter moved two studs during the install, so the plaque shows where it is, not where the plan put it.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1789,7 +2380,96 @@
       "verified": true,
       "prev_id": "C7-ART-705",
       "next_id": "C7-705.11",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "A building with solar, a battery or a generator can stay energized after the service disconnect opens. A firefighter pulling a meter, or a lineman who has opened the cutout, can meet a live bus fed from the roof. The directory exists so the first person at the service can find and open every source disconnect before touching anything.",
+      "exam_trap": "The trap is the paper directory card inside the panel door, or a plaque that shows the disconnects where the plan drew them. 705.10 wants a permanent plaque or directory at the service equipment — or another approved, readily visible location — and any diagram oriented to the real building. A pencil sketch taped inside the door is neither permanent nor verified against the building as built.",
+      "inspection_fails": [
+        "No plaque or directory at the service equipment on a building with PV and a battery.",
+        "Directory lists the PV disconnect at its planned location; the inverter was moved during installation.",
+        "Plaque diagram rotated — it shows the garage on the wrong side of the house.",
+        "Directory missing the caution that multiple sources of power are present."
+      ],
+      "tables": [
+        {
+          "caption": "What the plaque has to do",
+          "headers": [
+            "Requirement",
+            "705.10 answer"
+          ],
+          "rows": [
+            [
+              "Where it goes",
+              "At the service equipment, or another approved, readily visible location"
+            ],
+            [
+              "What it lists",
+              "The disconnect location for every parallel power source"
+            ],
+            [
+              "Warning it carries",
+              "Caution — multiple sources of power are present"
+            ],
+            [
+              "Diagram on it",
+              "Oriented the way the building actually sits"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-705.10-directory.svg",
+          "alt": "Plan view of a house lot with a roof PV array, garage inverter and battery, numbered markers for the service plaque and each source disconnect, a legend, and the multiple-sources caution.",
+          "caption": "The plaque at the service maps every disconnect — where it really is.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Where does the 705.10 plaque or directory go?",
+          "choices": [
+            "Inside the panel door",
+            "At the service equipment, or another approved, readily visible location",
+            "On the utility meter",
+            "Next to the inverter only"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The permanent plaque or directory sits at the service equipment, or at another approved location that is readily visible.",
+          "nec_ref": "705.10"
+        },
+        {
+          "question": "A diagram on the 705.10 plaque must be:",
+          "choices": [
+            "Drawn to scale",
+            "Oriented the way the building actually sits",
+            "Stamped by the design engineer",
+            "Printed in red"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The diagram is oriented to the real building, so a reader standing at the service can trust its directions.",
+          "nec_ref": "705.10"
+        },
+        {
+          "question": "The plaque must warn that:",
+          "choices": [
+            "The system is remotely monitored",
+            "Multiple sources of power are present",
+            "Arc-flash PPE is required",
+            "The utility must be called before work"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The caution tells the reader the building can be fed from more than one source even with the service open.",
+          "nec_ref": "705.10"
+        }
+      ],
+      "code_refs": [
+        "705.10"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C7-705.11",
@@ -1797,8 +2477,8 @@
       "article": "705",
       "section": "705.11",
       "title": "Supply-side source connections",
-      "plain_explanation": "A source may connect on the supply side of the service disconnect, at the points the service rules allow, under its own set of conditions for conductor sizing, overcurrent protection and grounding. A supply-side connection steps around the panelboard busbar limits entirely, which is why it is the escape route when the 120 percent math in 705.12 will not close. It trades that freedom for service-level work: the connection is ahead of the main, so its protection and its disconnecting means have to be planned like service equipment.\n\nNEC 2023 CHANGE:\n• 705.11: Conductors from a supply-side tie-in to a power source's disconnect are now service conductors, so the Article 230 and 250 service rules govern them. The 2020 inside-building length limits dropped out. Conductors from the tie-in to the power source's disconnect are service conductors now, and that disconnect is a service disconnect located like one (230.70(A)).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Price a supply-side tap as service work, with utility coordination, not as 'one more breaker.' If the busbar math fails, compare this route honestly against derating the main.",
+      "plain_explanation": "A source may connect on the supply side of the service disconnect, at the points the service rules allow, under its own set of conditions for conductor sizing, overcurrent protection and grounding. A supply-side connection steps around the panelboard busbar limits entirely, which is why it is the escape route when the 120 percent math in 705.12 will not close. It trades that freedom for service-level work: the connection is ahead of the main, so its protection and its disconnecting means have to be planned like service equipment. Two consequences follow in the field:\n• There is no busbar sum to pass — but the conductors from the tap to the source disconnect are sized and protected as the section requires, and the disconnect is located, grouped and marked the way service disconnects are.\n• The utility is part of the job: the tap is made on their side of the main, so coordination and a meter pull are scheduled, not improvised.",
+      "on_the_job": "An Ocala house with a 200 A panel gets a 9.6 kW PV array — 40 A of inverter output. The load-side math will not close: the panel is full, and there is no legal landing spot for the backfed breaker. Sharma prices the supply-side route instead: a tap between the meter and the main, a 50 A fused disconnect — 125 percent of the 40 A continuous output — mounted with the service equipment and marked as a PV service disconnect, conductors sized for the source, and a scheduled meter pull with the utility. Priced as service work with utility coordination, not as 'one more breaker.'",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1817,7 +2497,104 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/705-11",
           "confirmed": true
         }
-      ]
+      ],
+      "rich": 1,
+      "edition_note": "NEC 2023 CHANGE:\n• 705.11: Conductors from a supply-side tie-in to a power source's disconnect are now service conductors, so the Article 230 and 250 service rules govern them. The 2020 inside-building length limits dropped out. Conductors from the tie-in to the power source's disconnect are service conductors now, and that disconnect is a service disconnect located like one (230.70(A)).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Everything ahead of the main breaker is unforgiving: no panelboard breaker stands between a fault at the tap and the utility transformer. A casual tap — undersized conductors, a disconnect nobody can find, no marking — leaves a permanently energized hazard that the next electrician meets by surprise. That is why the section trades the busbar limits for service-level discipline.",
+      "inspection_fails": [
+        "Tap conductors not sized or protected for the source — ahead of the main, nothing downstream protects them.",
+        "PV disconnect not grouped or marked with the service disconnects — nobody can find the second source.",
+        "Meter pulled and the tap made without utility coordination.",
+        "Tap landed on equipment not listed for a supply-side connection — load-side habits on a service job."
+      ],
+      "exam_trap": "The trap is calling the supply-side tap 'the easy way around the code.' It steps around the 705.12 busbar sums only — the conductor sizing, overcurrent protection and grounding conditions in 705.11 still apply in full, and the work is service work. Second trap: on a 2023 permit the tap conductors are service conductors under Articles 230 and 250. Do not back-read that into a 2020 job, and do not use 2020 habits on a 2023 one.",
+      "tables": [
+        {
+          "caption": "Load side vs supply side",
+          "headers": [
+            "Question",
+            "Load side (705.12)",
+            "Supply side (705.11)"
+          ],
+          "rows": [
+            [
+              "Where does it land?",
+              "At distribution equipment, on a busbar",
+              "Ahead of the service disconnect"
+            ],
+            [
+              "Busbar sums?",
+              "100% and 120% methods must pass",
+              "No busbar sum — different conditions"
+            ],
+            [
+              "Protection planned as",
+              "Branch and feeder work",
+              "Service equipment"
+            ],
+            [
+              "Utility involved?",
+              "Usually not",
+              "Yes — meter side of the main"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-705.11-supply-side-tap.svg",
+          "alt": "One-line diagram: utility and meter feed a supply-side tap ahead of the main; the main path runs to the service disconnect and a 200 A panelboard, while the tap feeds a 50 A PV disconnect, a 40 A inverter and a 9.6 kW array.",
+          "caption": "The supply-side tap: ahead of the main, planned like service equipment.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Why does a supply-side connection escape the 705.12 busbar sums?",
+          "choices": [
+            "It does not — the sums still apply",
+            "It lands ahead of the service disconnect, so no panelboard busbar is involved",
+            "Busbars are not used in Florida",
+            "The inverter is under 5 kW"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The connection is on the supply side of the service disconnect, so the panelboard busbar limits in 705.12 never come into play.",
+          "nec_ref": "705.11"
+        },
+        {
+          "question": "How must the tap's disconnect and protection be planned?",
+          "choices": [
+            "Like a branch circuit",
+            "Like service equipment",
+            "Like a receptacle outlet",
+            "They are not required"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The connection is ahead of the main, so its protection and disconnecting means are planned like service equipment.",
+          "nec_ref": "705.11"
+        },
+        {
+          "question": "Under NEC 2023, the conductors from the tap to the source disconnect are…",
+          "choices": [
+            "Branch-circuit conductors",
+            "Service conductors, under Articles 230 and 250",
+            "Feeders under Article 215 only",
+            "Not regulated"
+          ],
+          "answer_index": 1,
+          "explain_plain": "That is the 2023 change in the edition box: the tap conductors became service conductors, and the disconnect is located like a service disconnect.",
+          "nec_ref": "705.11 (2023)"
+        }
+      ],
+      "code_refs": [
+        "705.11",
+        "705.12",
+        "Article 230",
+        "Article 250"
+      ],
+      "uncertain": [],
+      "rich_sources": []
     },
     {
       "id": "C7-705.12",
@@ -1962,8 +2739,8 @@
       "article": "705",
       "section": "705.12(B)(3)(1)",
       "title": "The 100 percent busbar method — breaker anywhere",
-      "plain_explanation": "The plainest load-side method: 125 percent of the source output current, plus the rating of the overcurrent device protecting the busbar, must not exceed the busbar ampacity itself. Meet that sum and the source breaker may sit anywhere on the bus. Fail it and you do not argue with the arithmetic — you move to one of the other methods in 705.12(B)(3), derate something, or go to the supply side.",
-      "on_the_job": "Run this method first because it is the one with no position condition. Example in the lookup entries: on a 225A bus with a 200A main, this method leaves room for only a 20A inverter output, while the 120 percent method on the next page leaves much more.",
+      "plain_explanation": "The plainest load-side method: 125 percent of the source output current, plus the rating of the overcurrent device protecting the busbar, must not exceed the busbar ampacity itself. Meet that sum and the source breaker may sit anywhere on the bus. Fail it and you do not argue with the arithmetic — you move to one of the other methods in 705.12(B)(3), derate something, or go to the supply side.\nWorked on the example from the lookup entries: a 225 A bus protected by a 200 A main leaves 25 A of room in the sum. At 125 percent, that room is a 20 A source output. One amp more of output and this method is done, even though the panel still has empty spaces.",
+      "on_the_job": "Run this method first because it is the one with no position condition. On a Winter Garden house: 225 A bus, 200 A main. The sum leaves 225 − 200 = 25 A, so the largest source this method takes is a 20 A inverter output — 125 percent of 20 A is 25 A, and 200 + 25 = 225, exactly the bus. The customer wants a 32 A inverter instead: 125 percent is 40 A and the sum is 240 A, which fails here. That is not a dead end. The 120 percent method on the next page allows 120 percent of 225 A, or 270 A, so the same 240 A sum passes there — with the source breaker at the opposite end of the bus and its warning label in place.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1974,7 +2751,99 @@
       "verified": true,
       "prev_id": "C7-705.12(A)",
       "next_id": "C7-705.12(B)(3)(2)",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "rich": 1,
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "A busbar fed by two sources can carry the utility current and the source current at the same time, and the bus sees the sum. Breakers trip on their own current, not on the total flowing through the bus under them, so an unchecked sum overheats the bus in silence. The 100 percent method is the conservative answer: if the worst-case sum can never beat the bus rating, breaker position stops mattering.",
+      "inspection_fails": [
+        "Source breaker landed in an empty space with no busbar sum ever run — 'it fit' is not a method.",
+        "Sum figured with the inverter output at 100 percent instead of 125 percent.",
+        "The 120 percent allowance used on the 100 percent method — position rules skipped and the sum still over the bus rating.",
+        "Main breaker swapped for a larger one after the solar was approved, breaking a sum nobody rechecked."
+      ],
+      "exam_trap": "The trap is feeding the sum the wrong current: candidates plug in the inverter's breaker size, or its nameplate output without the 125 percent. The method takes 125 percent of the source output current, every time. Second trap: comparing the sum to 120 percent of the bus on this method. The 100 percent method compares the sum to the busbar ampacity itself — 120 percent belongs to the methods that control breaker position.",
+      "tables": [
+        {
+          "caption": "When the 100 percent sum fails",
+          "headers": [
+            "Exit",
+            "What changes",
+            "Condition"
+          ],
+          "rows": [
+            [
+              "120 percent method (B)(3)(2)",
+              "Sum may reach 120% of the bus",
+              "Breaker at the opposite end + warning label"
+            ],
+            [
+              "Derate",
+              "Smaller main or smaller source output",
+              "The sum must fit the bus itself"
+            ],
+            [
+              "Supply side (705.11)",
+              "Leaves the busbar out entirely",
+              "Service-level conditions apply"
+            ]
+          ],
+          "note": "All three exits live in 705.11 and 705.12(B)(3)."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-705.12B31-sum-bar.svg",
+          "alt": "Stacked bar chart on a 225 A bus with a 200 A main: a 20 A source adds 25 A and the sum equals the 225 A busbar rating and passes; a 32 A source adds 40 A and the 240 A sum passes the busbar rating line and fails.",
+          "caption": "The 100 percent sum: 125% of the source output plus the main, against the bus itself.",
+          "w": 900,
+          "h": 1400
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "225 A bus, 200 A main. What is the largest source output current that passes the 100 percent method?",
+          "choices": [
+            "25 A",
+            "20 A",
+            "32 A",
+            "40 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The sum leaves 25 A of room, and the source counts at 125 percent: 25 ÷ 1.25 = 20 A of output.",
+          "nec_ref": "705.12(B)(3)(1)"
+        },
+        {
+          "question": "On the 100 percent method, the sum is compared to…",
+          "choices": [
+            "120 percent of the busbar ampacity",
+            "The busbar ampacity itself",
+            "The service rating",
+            "The inverter rating"
+          ],
+          "answer_index": 1,
+          "explain_plain": "125 percent of the source output plus the busbar's overcurrent device may not exceed the busbar ampacity itself. The 120 percent figure belongs to other methods.",
+          "nec_ref": "705.12(B)(3)(1)"
+        },
+        {
+          "question": "The 100 percent sum passes. Where may the source breaker sit?",
+          "choices": [
+            "Only at the opposite end from the main",
+            "Only next to the main",
+            "Anywhere on the bus",
+            "Only in a separate panel"
+          ],
+          "answer_index": 2,
+          "explain_plain": "That is the trade this method offers: a tighter sum in exchange for no position condition.",
+          "nec_ref": "705.12(B)(3)(1)"
+        }
+      ],
+      "code_refs": [
+        "705.12(B)(3)(1)",
+        "705.12(B)(3)(2)",
+        "705.11"
+      ],
+      "uncertain": [],
+      "rich_sources": []
     },
     {
       "id": "C7-705.12(B)(3)(2)",
@@ -2010,8 +2879,8 @@
       "article": "705",
       "section": "705.12(B)(3)(3)",
       "title": "The sum-of-breakers method",
-      "plain_explanation": "A third load-side method ignores the main breaker rating and adds up the ampere ratings of all the overcurrent devices on the panelboard — load and supply devices together, excluding the device protecting the busbar — and that total must not exceed the busbar ampacity. Equipment using this method carries permanent warning labels at the distribution equipment identifying that all sources are present. It fits panels where the breaker population, not the main, is the honest limit.",
-      "on_the_job": "Count every breaker that is actually in the panel, including the source breaker, and write the sum in the job record. A panel that passes today can fail this method after one added circuit.",
+      "plain_explanation": "705.12(B)(3)(3) is a third load-side method for connecting a power source to a panelboard, and it works by counting breakers instead of trusting the main:\n• Add up the ampere ratings of all the overcurrent devices on the panelboard — load devices and supply devices together.\n• Leave out only the overcurrent device that protects the busbar itself.\n• The total must not exceed the ampacity of the busbar.\n• Equipment using this method carries permanent warning labels at the distribution equipment identifying that all sources are present.\nIt fits panels where the breaker population, not the main breaker rating, is the honest limit on the bus.",
+      "on_the_job": "A 200 A Siemens panel in a Clermont home gets a solar supply breaker, and the crew counts what is actually in the panel, including the source breaker: load breakers totaling 170 A plus the new 40 A supply breaker is 210 A — over the 200 A busbar, so this method fails as built. The honest fixes are removing breakers that are genuinely spare, downsizing the supply breaker, or using a different 705.12(B)(3) method — worked out before the inspection, with the sum written in the job record. A panel that passes today can fail this method after one added circuit, so the count gets done again at every addition.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -2021,7 +2890,98 @@
       "verified": true,
       "prev_id": "C7-705.12(B)(3)(2)",
       "next_id": "C7-705.12(B)(3)(4)",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "A busbar does not care which breaker fed it — it carries the sum of everything connected to it. A panel can respect its main breaker rating and still be overfed once a supply breaker is added on top of a full row of load breakers. The sum-of-breakers method caps the total iron on the bus, and the warning labels tell the next electrician that more than one source can feed the panel.",
+      "exam_trap": "The trap is adding the main breaker into the sum — or leaving the supply breaker out of it. The method excludes only the device protecting the busbar, and it counts every other overcurrent device, load and supply together, against the busbar ampacity. The second trap is treating the count as a one-time event: the method is re-tested every time a breaker is added to the panel.",
+      "inspection_fails": [
+        "Sum of breaker ratings exceeds the busbar ampacity on a panel connected under 705.12(B)(3)(3).",
+        "No permanent warning label at the distribution equipment identifying that all sources are present.",
+        "Supply breaker left out of the installer's breaker sum.",
+        "Breaker added after the solar inspection with no recount — the panel is now over the bus rating."
+      ],
+      "tables": [
+        {
+          "caption": "The sum, worked on a 200 A bus panel",
+          "headers": [
+            "Counted",
+            "Rating"
+          ],
+          "rows": [
+            [
+              "Load breakers in the panel",
+              "170 A"
+            ],
+            [
+              "Supply (solar) breaker",
+              "40 A"
+            ],
+            [
+              "Main breaker",
+              "Not counted"
+            ],
+            [
+              "Sum against the 200 A bus",
+              "210 A — fails"
+            ]
+          ],
+          "note": "Only the device protecting the busbar is left out. Every other overcurrent device counts."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-705.12B33-sum-of-breakers.svg",
+          "alt": "Panelboard elevation with a 200 A busbar, a main breaker marked not counted, eight load breakers and a gold 40 A supply breaker, the worked sum of 210 A marked as failing, and the warning-label requirement.",
+          "caption": "Count every breaker but the main — the sum stops at the bus rating.",
+          "w": 900,
+          "h": 1640
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Under the sum-of-breakers method, which device is left out of the sum?",
+          "choices": [
+            "The supply breaker",
+            "The largest load breaker",
+            "The overcurrent device protecting the busbar",
+            "Every breaker over 60 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Only the device that protects the busbar itself is excluded; load and supply devices are all counted.",
+          "nec_ref": "705.12(B)(3)(3)"
+        },
+        {
+          "question": "The sum of the counted overcurrent device ratings must not exceed:",
+          "choices": [
+            "The main breaker rating",
+            "The ampacity of the busbar",
+            "125% of the busbar ampacity",
+            "The service rating"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The total of all load and supply device ratings is capped at the busbar ampacity.",
+          "nec_ref": "705.12(B)(3)(3)"
+        },
+        {
+          "question": "Equipment connected by this method must carry:",
+          "choices": [
+            "A typed circuit directory",
+            "Permanent warning labels identifying that all sources are present",
+            "A red handle on the supply breaker",
+            "An arc-flash study on file"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Permanent warning labels at the distribution equipment identify that all sources are present on a panel connected by this method.",
+          "nec_ref": "705.12(B)(3)(3)"
+        }
+      ],
+      "code_refs": [
+        "705.12(B)(3)(3)",
+        "705.12(B)(3)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C7-705.12(B)(3)(4)",
@@ -2049,8 +3009,8 @@
       "article": "705",
       "section": "705.13",
       "title": "Power control systems — a listed controller can limit the current",
-      "plain_explanation": "New in the 2020 code, this section recognizes a power control system: listed equipment that monitors and limits how much current a source puts onto conductors and busbars. Where one is installed, its controller setting is treated as the source output current for the 705.11 and 705.12 calculations, so a system set to a lower limit can fit a panel the raw inverter rating could not. The section also guards the settings themselves, because the whole method stands on the setting staying where it was set.\n\nNEC 2023 CHANGE:\n• 705.13: Most of the requirements that were located in Section 705.13 have been deleted byCMP-4.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Record the controller setting in the job file and on the labels the design calls for. If nobody wrote the setting down, nobody can prove the method later.",
+      "plain_explanation": "New in the 2020 code, this section recognizes a power control system: listed equipment that monitors and limits how much current a source puts onto conductors and busbars. Where one is installed, its controller setting is treated as the source output current for the 705.11 and 705.12 calculations, so a system set to a lower limit can fit a panel the raw inverter rating could not. The 2020 rules around the controller:\n• Monitoring, 705.13(A): the controller must monitor all current within the system. A busbar or conductor it does not monitor is sized under 705.12 the ordinary way.\n• Settings, 705.13(B): the PCS currents plus the other monitored source currents may not exceed the ampacity of any busbar or conductor they supply.\n• Overcurrent protection, 705.13(C): the system must provide it, by devices or by its own listing.\n• Access, 705.13(E): settings are restricted to qualified personnel — sealed covers, bolted or locked doors, or a password (240.6(C)).",
+      "on_the_job": "A Kissimmee house has a 200 A Siemens panel with a 200 A main and a 200 A bus. The PV inverter's nameplate output is 40 A, so the ordinary 705.12 sums fail: 125 percent of 40 A is 50 A, and 200 + 50 = 250 A beats even the 120 percent method's 240 A cap. The design instead uses a listed power control system set to 32 A. The setting stands in for the source output current: 125 percent of 32 A is 40 A, and 200 + 40 = 240 A — exactly the 120 percent cap, with the source breaker at the opposite end of the bus. The 32 A setting is recorded on the plans, marked at the panel, and locked behind the controller password.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -2065,10 +3025,115 @@
       "nec2023_change": [
         {
           "section": "705.13",
-          "change": "Most of the requirements that were located in Section 705.13 have been deleted byCMP-4.",
+          "change": "Most of the requirements that were located in Section 705.13 have been deleted by CMP-4.",
           "source": "Carosella/NFPA-based 2023 NEC change workbook: 705.13 Energy Management Systems (EMS}",
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
+        }
+      ],
+      "rich": 1,
+      "edition_note": "NEC 2023 CHANGE:\n• 705.13: Most of the requirements that were located in Section 705.13 have been deleted by CMP-4.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "A busbar cannot tell the difference between current that was calculated and current that actually shows up. If a controller setting is raised after inspection, or a conductor the controller cannot see gets loaded anyway, the panel quietly runs past its rating on every sunny afternoon. The monitoring and access rules exist so the limit on paper is the limit in fact.",
+      "inspection_fails": [
+        "Controller setting raised in the app after inspection — the 705.12 calculations on file no longer match the installation.",
+        "Unlisted controller relied on to limit busbar current — a power control system has to be listed equipment.",
+        "Conductors landed on a busbar section the controller does not monitor, sized as if it did.",
+        "No record of the controller setting on the plans or at the panel — the method cannot be proven later."
+      ],
+      "exam_trap": "The trap is treating the controller like a homeowner thermostat — a setting anyone can turn up later. Raise the setting and every calculation that relied on it is void; the busbar math fails silently. Access to PCS settings is restricted to qualified personnel (705.13(E)). Second trap: assuming the controller protects conductors it does not monitor. Unmonitored conductors are sized under 705.12, full stop.",
+      "tables": [
+        {
+          "caption": "The 2020 PCS rules at a glance",
+          "headers": [
+            "Part",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "(A) Monitoring",
+              "Controller monitors all current in the system"
+            ],
+            [
+              "(B) Settings",
+              "PCS + other monitored currents stay within busbar/conductor ampacity"
+            ],
+            [
+              "(C) Protection",
+              "Overcurrent protection by devices, or by the listing itself"
+            ],
+            [
+              "(D) Single source",
+              "One source's breaker may not exceed the busbar or conductor rating"
+            ],
+            [
+              "(E) Access",
+              "Settings restricted to qualified personnel (240.6(C))"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-705.13-controller-limit.svg",
+          "alt": "One-line diagram: a PV inverter with 40 A nameplate output feeds a listed power control system set to 32 A above a 200 A panelboard; the setting stands in for the output current, so 125 percent of 32 A plus the 200 A main equals 240 A, exactly 120 percent of the bus.",
+          "caption": "The controller setting stands in for the source output current in the 705.12 math.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "With a PCS installed, what value stands in for the source output current in the 705.12 busbar calculations?",
+          "choices": [
+            "The inverter nameplate output",
+            "The controller setting",
+            "The breaker size on the panel schedule",
+            "The utility's service size"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The controller setting is treated as the source output current for the 705.11 and 705.12 calculations.",
+          "nec_ref": "705.13"
+        },
+        {
+          "question": "Who may change a power control system setting?",
+          "choices": [
+            "The homeowner, from the app",
+            "Anyone with a panel key",
+            "Qualified personnel only — access is restricted",
+            "The utility meter reader"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Access to PCS settings is restricted to qualified personnel: sealed covers, bolted or locked doors, or a password.",
+          "nec_ref": "705.13(E)"
+        },
+        {
+          "question": "A conductor in the system is not monitored by the PCS controller. How is it sized?",
+          "choices": [
+            "By the controller setting anyway",
+            "Under 705.12, the ordinary way",
+            "It needs no calculation",
+            "At 80 percent of the setting"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The controller only speaks for what it monitors. Anything it does not monitor is sized under 705.12.",
+          "nec_ref": "705.13(A)"
+        }
+      ],
+      "code_refs": [
+        "705.13",
+        "705.13(A)",
+        "705.13(B)",
+        "705.13(C)",
+        "705.13(E)",
+        "705.12",
+        "240.6(C)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "2020 705.13(A)–(E): monitoring of all current in the system, settings capped at busbar/conductor ampacity, overcurrent protection by devices or listing, single-source breaker limit, and access to settings restricted to qualified personnel per 240.6(C)",
+          "source": "Mike Holt Enterprises, Understanding 2020 NEC Requirements for Solar PV and Energy Storage Systems (705.13 summary)",
+          "url": "https://www.mikeholt.com/files/PDF/20_SOLAR_705.13.pdf?srsltid=AfmBOopArGyU5oZ3m-C-YDRiV7sFx64i_t_xT6PB5-RhsGvs21eQgyz2"
         }
       ]
     },
@@ -2078,8 +3143,8 @@
       "article": "705",
       "section": "705.20",
       "title": "Disconnecting means for sources",
-      "plain_explanation": "Every interconnected source needs a disconnecting means that meets this section, which in 2020 gathered the source disconnect rules into one place. The disconnect has to separate the source from the conductors of the other systems, and where a disconnect that unqualified people can reach would expose live parts when open, it has to be locked or need a tool to open. A source that can energize a panel from the far end is exactly the surprise this section exists to remove.\n\nNEC 2023 CHANGE:\n• 705.20: The requirement for enclosure covers in Section 705.20 requiring a tool to open or be locked has been deleted.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Land the disconnect where the 705.10 directory says it is, and check the open-position condition: terminals that stay live get the warning the equipment rules call for.",
+      "plain_explanation": "Every interconnected power source — PV inverter, battery system, generator tying in under this article — needs its own disconnecting means that meets this section. In 2020 the source disconnect rules were gathered into this one place.\n• The disconnect has to separate the source from the conductors of the other systems, opening all the ungrounded conductors at the same time.\n• It has to be readily accessible and operable from outside without exposing the operator to live parts.\n• It has to plainly show whether it is open or closed — no guessing from the handle position alone.\n• Its ratings have to suit the load it carries and the fault current available where it lands.\n• Where both sides of the disconnect can stay energized, the equipment carries a warning — a source can feed a panel from the far end.\n• Under the 2020 rule, an enclosure cover on a disconnect that unqualified people can reach has to be locked or need a tool to open where opening it would expose live parts.",
+      "on_the_job": "On a Palm Coast house with rooftop PV and a battery inverter landing in the same Siemens panel, land each source on its own disconnect where the 705.10 directory at the service says it is, so the next person can find both without opening the house. Check the open-position condition before you call it done: open the disconnect and meter both sides. The line side from the panel can still be live, and the source side can wake up when the sun hits the array — terminals that stay live get the warning label the equipment rules call for.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -2098,7 +3163,111 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 705.20: The requirement for enclosure covers in Section 705.20 requiring a tool to open or be locked has been deleted.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "A second source turns “I opened the breaker” into a lie. A panel fed by the utility and a battery or PV inverter can stay live from the far end after the normal disconnect is open, and the person who finds out is usually holding a meter lead or a pair of cutters. This section exists so every source has one known, visible, rated way to separate it — and so nobody has to trust that a silent panel is a dead panel.",
+      "inspection_fails": [
+        "Two sources landed in one panel behind a single shared disconnect — each source needs its own separating means.",
+        "Disconnect handle shows nothing: no plain OPEN or CLOSED indication an inspector can read at arm's length.",
+        "PV or battery disconnect where the line side stays live, with no both-sides-energized warning.",
+        "Enclosure cover on a publicly reachable disconnect that flips open by hand and exposes live parts (2020 rule)."
+      ],
+      "exam_trap": "The trap answer: one main disconnect ahead of the panel separates everything, so the sources behind it need nothing of their own. Wrong — 705.20 wants a disconnecting means for the source itself, separating that source from the other systems' conductors. A shared switch that leaves the inverter tied to a live bus has not separated anything.",
+      "tables": [
+        {
+          "caption": "705.20 disconnect checklist (NEC 2020)",
+          "headers": [
+            "Check",
+            "What the section wants"
+          ],
+          "rows": [
+            [
+              "Separates",
+              "Opens all ungrounded conductors of the source at once"
+            ],
+            [
+              "Access",
+              "Readily accessible, operable without exposed live parts"
+            ],
+            [
+              "Indication",
+              "Plainly shows open or closed"
+            ],
+            [
+              "Ratings",
+              "Suits the load and the available fault current"
+            ],
+            [
+              "Warning",
+              "Both-sides-energized warning where it applies"
+            ],
+            [
+              "Cover (2020)",
+              "Locked or tool-open where live parts could be exposed"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-705.20-source-disconnect.svg",
+          "alt": "One-line diagram: a PV inverter and a battery inverter, each with its own disconnect switch shown open, feeding one panelboard. Markers flag the disconnects, the both-sides-energized warning, and the locked or tool-open cover.",
+          "caption": "Each source with its own disconnect, shown open.",
+          "w": 900,
+          "h": 1440
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A battery inverter and the utility both feed one panel. What does 705.20 require for the battery source?",
+          "choices": [
+            "Nothing — the main breaker covers it",
+            "Its own disconnecting means separating it from the other systems' conductors",
+            "A warning label only",
+            "A lockable cover only"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Each interconnected source gets a disconnecting means that separates that source from the conductors of the other systems.",
+          "nec_ref": "705.20"
+        },
+        {
+          "question": "The disconnect for a source is open. What must the equipment still tell the next worker?",
+          "choices": [
+            "Nothing — open means dead",
+            "That both sides may be energized, where the far end can stay live",
+            "The date of the last inspection",
+            "The size of the next fuse"
+          ],
+          "answer_index": 1,
+          "explain_plain": "A source can backfeed; where both sides can be energized, the warning is part of the installation.",
+          "nec_ref": "705.20"
+        },
+        {
+          "question": "Under the NEC 2020 rule, a source disconnect cover reachable by unqualified people that would expose live parts when open must be…",
+          "choices": [
+            "Painted red",
+            "Locked or require a tool to open",
+            "Removed",
+            "Left ajar for ventilation"
+          ],
+          "answer_index": 1,
+          "explain_plain": "That cover rule is the 2020 text of 705.20; the 2023 NEC deleted it — check the edition box.",
+          "nec_ref": "705.20"
+        }
+      ],
+      "code_refs": [
+        "705.20",
+        "705.10"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "705.20 disconnect qualities: simultaneous opening of all ungrounded conductors, readily accessible, externally operable without exposed live parts, plain open/closed indication, ratings for load and fault current",
+          "source": "KBC Electric, NEC 705.20 summary",
+          "url": "https://kbcelectric.com/code/705-20"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C7-705.30",
@@ -2571,8 +3740,8 @@
       "article": "708",
       "section": "708",
       "title": "Critical operations power systems (COPS)",
-      "plain_explanation": "Article 708 covers power systems for facilities an AHJ or governmental authority has designated as critical operations areas — places like certain 911 and emergency operations centers, critical infrastructure and national-security functions, where losing power is a public-safety event, not an inconvenience. The article layers extra reliability, testing, documentation and risk-assessment duties on top of the standby ideas in Articles 700 to 702. Sharma's residential and light-commercial work will rarely be designated COPS, and the practical skill is recognizing the designation on the rare job that carries it.\n\nNEC 2023 CHANGE:\n• 708.24: Added new requirements for the separation of Class 2 circuits designated as emergency or nonemergency circuits in Section 700.1l(C).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "If the drawings or the owner say 'critical operations,' stop and confirm the designation and who designated it. A big generator alone does not make a job a 708 job.",
+      "plain_explanation": "Article 708 covers power systems for facilities an AHJ or governmental authority has designated as critical operations areas — places like certain 911 and emergency operations centers, critical infrastructure and national-security functions, where losing power is a public-safety event, not an inconvenience. The article layers extra reliability, testing, documentation and risk-assessment duties on top of the standby ideas in Articles 700 to 702.\n• The designation comes from the authority — never from the owner, the engineer, or the size of the generator.\n• A documented risk assessment (708.4) comes first, and it drives the design, the physical security, and the source choices.\n• The alternate source has to carry the designated area at full load for at least 72 hours (708.22(C)).\nSharma's residential and light-commercial work will rarely be designated COPS, and the practical skill is recognizing the designation on the rare job that carries it.",
+      "on_the_job": "A county emergency operations center in Central Florida asks Sharma to bid a generator replacement, and the front-end documents call the building a designated critical operations area. That one phrase changes the job. Before pricing, confirm the designation in writing and ask for the facility's risk assessment — it sets the physical security, the protection, and the 72-hour full-load run the alternate source has to prove. Price the documented testing and maintenance program as part of the work, not as a favor afterward. And if the designation is not in the documents, say so in the bid: a big generator alone does not make a job a 708 job.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -2586,12 +3755,128 @@
       "nec2023_change": [
         {
           "section": "708.24",
-          "change": "Added new requirements for the separation of Class 2 circuits designated as emergency or nonemergency circuits in Section 700.1l(C).",
+          "change": "Added new requirements for the separation of Class 2 circuits designated as emergency or nonemergency circuits in Section 700.11(C).",
           "source": "Carosella/NFPA-based 2023 NEC change workbook: 708.24. New subdivision (D) describes the functionality needed when a single feeder supplies",
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 708.24: Added new requirements for the separation of Class 2 circuits designated as emergency or nonemergency circuits in Section 700.11(C).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "A 911 center or emergency operations center that goes dark in a hurricane cannot simply close for the day — calls stop routing and responders stop moving. Article 708 exists so the facilities a community leans on hardest are designed against a written list of hazards instead of hope. The risk assessment comes first because the right generator, fuel supply, and protection all depend on what can actually go wrong at that site.",
+      "inspection_fails": [
+        "COPS job built and turned over with no documented risk assessment in the closeout package (708.4).",
+        "Alternate source that cannot show 72 hours of full-load capacity for the designated area (708.22(C)).",
+        "COPS equipment in a room any building occupant can wander into — no restricted access or physical security per the assessment (708.5).",
+        "No documented testing and maintenance records for the AHJ to review.",
+        "Standby system labeled COPS on the drawings with no designation from the authority anywhere in the documents."
+      ],
+      "exam_trap": "The trap answer is that any building with a large generator and a transfer switch is a COPS installation. It is not. Article 708 applies only where an AHJ or governmental authority has designated the facility or an area in it as critical operations. A warehouse with a big standby set is still an Article 702 job unless somebody with that authority designated it.",
+      "tables": [
+        {
+          "caption": "What the COPS designation adds",
+          "headers": [
+            "Layer",
+            "Section",
+            "What it takes"
+          ],
+          "rows": [
+            [
+              "Designation",
+              "708.1",
+              "AHJ or governmental authority designates the area (DCOA)"
+            ],
+            [
+              "Risk assessment",
+              "708.4",
+              "Documented: hazards, likelihood, vulnerability, mitigation"
+            ],
+            [
+              "Physical security",
+              "708.5",
+              "Strategy from the assessment; qualified personnel only"
+            ],
+            [
+              "Alternate source",
+              "708.22(C)",
+              "Full load for at least 72 hours"
+            ],
+            [
+              "Testing + records",
+              "Art. 708",
+              "Documented testing and maintenance program"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-ART-708-decision.svg",
+          "alt": "Decision diagram: a COPS job starts with a written designation by the AHJ or a governmental authority; the yes branch lists the duties Article 708 adds, the no branch sends the design back to Articles 700, 701 or 702.",
+          "caption": "No designation, no Article 708 — the designation comes first.",
+          "w": 900,
+          "h": 1400
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "What makes a facility a critical operations power system (COPS) installation?",
+          "choices": [
+            "A generator over 100 kW",
+            "Designation by the AHJ or a governmental authority",
+            "The owner asking for extra reliability",
+            "A transfer switch with a load-shed controller"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Article 708 applies to designated critical operations areas. Equipment size alone never triggers it.",
+          "nec_ref": "708.1"
+        },
+        {
+          "question": "Under 708.4, what must be performed and documented before the design settles?",
+          "choices": [
+            "A load calculation",
+            "A risk assessment of hazards and vulnerability",
+            "A short-circuit study only",
+            "A utility interconnection agreement"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The documented risk assessment identifies hazards, their likelihood and the system's vulnerability, and drives the mitigation strategy.",
+          "nec_ref": "708.4"
+        },
+        {
+          "question": "How long must the COPS alternate source carry the designated area at full load?",
+          "choices": [
+            "2 hours",
+            "24 hours",
+            "72 hours",
+            "Until the utility returns, no minimum"
+          ],
+          "answer_index": 2,
+          "explain_plain": "708.22(C) sets a 72-hour minimum at full load for the designated critical operations area.",
+          "nec_ref": "708.22(C)"
+        }
+      ],
+      "code_refs": [
+        "708.1",
+        "708.4",
+        "708.5",
+        "708.22(C)",
+        "708.24",
+        "700.11(C) (2023)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "708.4 documented risk assessment: hazards, likelihood, vulnerability, mitigation strategy; 708.5 physical security from the assessment",
+          "source": "McGraw-Hill, National Electrical Code Handbook, Article 708 (Access Engineering)",
+          "url": "https://www.accessengineeringlibrary.com/binary/mheaeworks/9bb7c86318c5825c/e1d614254bfda6f376f0d428c22a032275d0d354b2242a87b8294747635341a3/article-708-critical-operations-power-systems-cops.pdf"
+        },
+        {
+          "claim": "708.22(C): alternate source capacity and rating for full load continuously for a minimum of 72 hours",
+          "source": "Consulting-Specifying Engineer, Top five NEC 708 guidelines",
+          "url": "https://www.csemag.com/top-five-nec-708-guidelines/"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C7-ART-710",
@@ -2752,8 +4037,8 @@
       "article": "712",
       "section": "712",
       "title": "Direct-current microgrids",
-      "plain_explanation": "Article 712, confirmed in the printed 2020 table of contents, covers dc microgrids: systems that distribute dc power from dc sources to dc loads, with converters tying them to ac systems where needed. It is a young article for a young technology, and Sharma's Florida work has not hit one yet. It earns its place in this book so the reader recognizes the article number and does not mistake a dc microgrid for an Article 710 stand-alone system or a 705 interconnection, which it can sit alongside.",
-      "on_the_job": "If a plan set shows a dc bus feeding loads, find this article before you assume the familiar ac rules answer everything.",
+      "plain_explanation": "Article 712, confirmed in the printed 2020 table of contents, covers dc microgrids: systems that distribute dc power from dc sources to dc loads, with converters tying them to ac systems where needed. It is a young article for a young technology, and Sharma's Florida work has not hit one yet. It earns its place in this book so the reader recognizes the article number and does not mistake a dc microgrid for an Article 710 stand-alone system or a 705 interconnection, which it can sit alongside.\n• A dc microgrid is one or more interconnected dc sources, dc-dc converters and dc loads on a common dc bus; ac loads are fed through dc-ac inverters, and the grid ties to the ac system through an ac-dc converter or a bidirectional inverter.\n• Dc loads are the point: LED lighting, communications gear, computers and servers, variable-speed drives and HVAC equipment can all run straight off the bus.\n• 712.10 wants a directory: a plaque or directory at each service equipment location naming every dc source, and directories at the interconnectable source locations as well.",
+      "on_the_job": "If a plan set shows a dc bus feeding loads, find this article before you assume the familiar ac rules answer everything. On the first one Sharma lands — most likely a commercial job with LED lighting and a battery-backed server room — the field habit to build early is the directory: at the service equipment, a plaque naming the service and every dc source on the bus, the same discipline 705.10 and 690.56(B) already drill into us on the ac side. No directory, no way for the next crew to know the bus has three parents.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -2763,7 +4048,120 @@
       "verified": true,
       "prev_id": "C7-710.15",
       "next_id": "C7-712.10",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Dc sources do not behave like a utility feed. A battery or PV array on a dc bus can keep that bus energized from several directions at once, and dc arcs do not self-extinguish the way ac arcs do at the zero crossing. An electrician who walks up expecting Article 705 or 710 rules — or plain ac habits — can open the wrong thing in the wrong order. The article exists so the system is recognized, directed and labeled as its own animal.",
+      "inspection_fails": [
+        "Dc bus treated like an ac panel: no directory at the service equipment naming the dc sources (712.10).",
+        "System permitted and wired as a 710 stand-alone job when the drawings show a common dc bus — wrong article, wrong rules.",
+        "Ac loads tapped straight off the dc bus instead of through a dc-ac inverter.",
+        "Second dc source added to the bus with the directory never updated."
+      ],
+      "exam_trap": "The trap: calling it a stand-alone system under Article 710 because it can run without the utility, or wiring it under 705 because sources interconnect. A system built around a common dc bus with dc sources and dc loads is a dc microgrid — Article 712 owns it, whichever articles it sits alongside.",
+      "tables": [
+        {
+          "caption": "Which article owns the system?",
+          "headers": [
+            "System",
+            "Article",
+            "Telltale"
+          ],
+          "rows": [
+            [
+              "Emergency / legally required / optional standby (ac)",
+              "700 / 701 / 702",
+              "Who required it, and how fast it must pick up"
+            ],
+            [
+              "Interconnected sources on the ac system",
+              "705",
+              "Sources paralleling the utility on ac"
+            ],
+            [
+              "Stand-alone ac system",
+              "710",
+              "Runs apart from the utility, ac distribution"
+            ],
+            [
+              "Dc microgrid",
+              "712",
+              "Common dc bus, dc sources, dc loads"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-ART-712-dc-bus.svg",
+          "alt": "Block diagram of a dc microgrid: a PV array and a battery, each through a converter, feeding one common dc bus; the bus feeds LED lighting, servers and other dc loads, and ties to the ac system through a dc-ac inverter. A directory plaque is shown at the service.",
+          "caption": "One dc bus: sources in through converters, loads off the bus.",
+          "w": 900,
+          "h": 1400
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A building system ties a PV array and a battery to a common dc bus feeding LED lighting and servers. Which article covers it?",
+          "choices": [
+            "Article 705",
+            "Article 710",
+            "Article 712",
+            "Article 690"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Interconnected dc sources and dc loads on a common dc bus are a dc microgrid — Article 712.",
+          "nec_ref": "Article 712"
+        },
+        {
+          "question": "What does 712.10 require at each service equipment location?",
+          "choices": [
+            "A red warning placard only",
+            "A plaque or directory naming the dc sources",
+            "A fused disconnect for each load",
+            "A copy of the one-line in a sleeve"
+          ],
+          "answer_index": 1,
+          "explain_plain": "712.10 puts a plaque or directory at each service equipment location and at interconnectable source locations, naming the sources — the same habit as 705.10.",
+          "nec_ref": "712.10"
+        },
+        {
+          "question": "How are ac loads fed from a dc microgrid?",
+          "choices": [
+            "Straight off the dc bus",
+            "Through dc-ac inverters",
+            "They cannot be fed",
+            "Through a transformer only"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Ac loads come off the bus through dc-ac inverters; the ac tie itself is through an ac-dc converter or a bidirectional inverter.",
+          "nec_ref": "Article 712"
+        }
+      ],
+      "code_refs": [
+        "712.1",
+        "712.10",
+        "705.10",
+        "690.56(B)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "Dc microgrid makeup: interconnected dc sources, dc-dc converters, dc loads, ac loads via dc-ac inverters, ac tie via ac-dc converter or bidirectional inverter",
+          "source": "EC&M, Moving Forward (Article 712)",
+          "url": "https://www.ecmag.com/magazine/articles/article-detail/codes-standards-moving-forward"
+        },
+        {
+          "claim": "Dc load examples: LED lighting, communications, computers/servers, variable-speed drives, HVAC",
+          "source": "Utah CE 2017 NEC changes course outline",
+          "url": "https://secure.utah.gov/ce-public/details.html?courseId=21853"
+        },
+        {
+          "claim": "712.10(B) building directory requirement (2020 NEC)",
+          "source": "Nebraska/Utah CE course objectives outline",
+          "url": "https://secure.utah.gov/ce-public/files/objectives/10665.pdf"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C7-712.10",
@@ -2997,8 +4395,8 @@
       "article": "725",
       "section": "725.2",
       "title": "Definitions — what makes a circuit Class 2 or Class 3",
-      "plain_explanation": "The definitions draw the line this whole article stands on. A Class 2 circuit is the wiring between a Class 2 power source and its equipment, with power limited tightly enough that the circuit is considered safe against both electric shock and starting a fire. A Class 3 circuit is limited against fire initiation, but its voltage and power can still present a shock hazard, so added protection is part of the deal. A Class 1 circuit is everything in this family that is not power-limited that way, including remote-control and signaling circuits that can run up to 600 volts.",
-      "on_the_job": "When a helper asks why two identical-looking cables get treated differently, the answer is on the source label, and this definition is why.",
+      "plain_explanation": "The definitions draw the line this whole article stands on.\n• A Class 2 circuit is the wiring between a Class 2 power source and its equipment, with power limited tightly enough that the circuit is considered safe against both electric shock and starting a fire.\n• A Class 3 circuit is limited against fire initiation, but its voltage and power can still present a shock hazard, so added protection is part of the deal.\n• A Class 1 circuit is everything in this family that is not power-limited that way, including remote-control and signaling circuits that can run up to 600 volts.\nThe class is a property of the source and the circuit together — never of the cable alone.",
+      "on_the_job": "When a helper asks why two identical-looking cables get treated differently, the answer is on the source label, and this definition is why. On a Sharma service call, the thermostat run back to a listed Class 2 transformer is Class 2 work; the line-voltage control run beside it is not, even where both are the same gauge and the same color. The lead's rule for the crew: name the class out loud from the source before anyone picks a cable or a box.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -3009,7 +4407,98 @@
       "verified": true,
       "prev_id": "C7-ART-725",
       "next_id": "C7-725.121",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "These definitions are the safety bargain of Article 725. Class 2 power is limited so tightly that the wiring can be treated as harmless in places where power wiring could never go. Class 3 trades a little of that safety for more working power, so the code asks for added protection against the shock hazard that remains. Get the definition wrong and every wiring-method decision that follows is built on sand.",
+      "inspection_fails": [
+        "Class 3 run installed with Class 2 methods because 'it is low voltage' — the shock hazard was never addressed.",
+        "Circuit classed by the cable jacket instead of by the power source feeding it.",
+        "Class 1 remote-control circuit run with power-limited cable and methods.",
+        "Source swapped for a different class with no change to the wiring method downstream."
+      ],
+      "exam_trap": "The trap is 'Class 3 is just a bigger Class 2.' It is not. Class 3 is limited against fire initiation only — its voltage and power can still present a shock hazard, which is why Class 3 carries added protection requirements that Class 2 does not. Second trap: a Class 1 circuit is not 'unlimited' — remote-control and signaling circuits in this family can run up to 600 volts and are wired under the power-circuit rules.",
+      "tables": [
+        {
+          "caption": "The three classes at a glance",
+          "headers": [
+            "Class",
+            "Limited against",
+            "Watch out for"
+          ],
+          "rows": [
+            [
+              "Class 1",
+              "Not power-limited",
+              "Up to 600 V; wired like power circuits"
+            ],
+            [
+              "Class 2",
+              "Shock and fire initiation",
+              "Class comes from the listed source"
+            ],
+            [
+              "Class 3",
+              "Fire initiation",
+              "Shock hazard remains; added protection"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-725.2-three-classes.svg",
+          "alt": "Three stacked panels comparing Class 1, Class 2 and Class 3 circuits: what each is limited against, the hazard that remains, and the 600 volt ceiling on Class 1 remote-control and signaling circuits.",
+          "caption": "Same family, three different safety bargains.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A Class 2 circuit is considered safe against:",
+          "choices": [
+            "Shock only",
+            "Fire initiation only",
+            "Both shock and fire initiation",
+            "Neither — it is unlisted"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Class 2 power is limited tightly enough to be considered safe against both hazards.",
+          "nec_ref": "725.2"
+        },
+        {
+          "question": "What remains a hazard on a Class 3 circuit?",
+          "choices": [
+            "Fire initiation",
+            "Electric shock",
+            "Overcurrent",
+            "Harmonics"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Class 3 is limited against fire initiation; shock remains a hazard.",
+          "nec_ref": "725.2"
+        },
+        {
+          "question": "Remote-control and signaling circuits that are not power-limited are Class 1 and can run up to:",
+          "choices": [
+            "50 V",
+            "150 V",
+            "300 V",
+            "600 V"
+          ],
+          "answer_index": 3,
+          "explain_plain": "The Class 1 definition covers those circuits at up to 600 volts.",
+          "nec_ref": "725.2"
+        }
+      ],
+      "code_refs": [
+        "725.2",
+        "725.121",
+        "Article 725"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C7-725.121",
@@ -3017,8 +4506,8 @@
       "article": "725",
       "section": "725.121",
       "title": "Power sources for Class 2 and Class 3 circuits",
-      "plain_explanation": "A Class 2 or Class 3 circuit has to be fed from a source this section recognizes: a listed Class 2 or Class 3 transformer, a listed Class 2 or Class 3 power supply, other listed equipment marked to identify it as the Class 2 or Class 3 source, or one of the other sources the section names, such as certain dry-cell battery supplies. A random wall-wart or an unmarked transformer does not create a Class 2 circuit, however small its output looks. The listing and the marking are the circuit's papers.",
-      "on_the_job": "Photograph the source label for the job record on controls work. At final inspection, that label is the fastest proof of what class the circuit is.",
+      "plain_explanation": "A Class 2 or Class 3 circuit has to be fed from a source this section recognizes:\n• A listed Class 2 or Class 3 transformer\n• A listed Class 2 or Class 3 power supply\n• Other listed equipment marked to identify it as the Class 2 or Class 3 source\n• One of the other sources the section names, such as certain dry-cell battery supplies\nA random wall-wart or an unmarked transformer does not create a Class 2 circuit, however small its output looks. The listing and the marking are the circuit's papers — they are what makes the limited-power wiring methods of Article 725 legal on that run.",
+      "on_the_job": "On a Winter Park office controls job, Sharma's crew lands a thermostat and zone-control retrofit fed from a listed Class 2 transformer at the air handler. The lead photographs the source label — listing mark, Class 2 marking, output rating — for the job record before the ceiling closes. At final inspection, that photo is the fastest proof of what class the circuit is. When the controls sub ships a panel with an unmarked generic supply instead, it gets swapped for the listed one on the submittal, not in the ceiling.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -3029,7 +4518,102 @@
       "verified": true,
       "prev_id": "C7-725.2",
       "next_id": "C7-725.130",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "The relaxed wiring methods in Article 725 — thin cables, no conduit in most places, spaces shared with other systems — are only safe because the source cannot deliver enough energy to start a fire or give a dangerous shock. That promise lives in the listed source, not in the wire. Swap in an unlisted supply with a fault inside it, and the same thin cable can carry far more energy than the method was ever judged for.",
+      "inspection_fails": [
+        "Unmarked wall-wart feeding a 'Class 2' run — no listing, no Class 2 marking on the source.",
+        "Listed source swapped in the field for a generic supply with no Class 2 identification.",
+        "Source label buried or painted over so the class cannot be verified at inspection.",
+        "Class 3 circuit fed from a source listed only as Class 2, or the reverse — the marking does not match the circuit."
+      ],
+      "exam_trap": "The trap is judging the circuit by its voltage: 'it is only 24 volts, so it must be Class 2.' Voltage alone does not make the class. A 24 V output from an unlisted, unmarked supply is not a Class 2 source under 725.121, so the run does not get Class 2 wiring methods.",
+      "tables": [
+        {
+          "caption": "Sources 725.121 recognizes",
+          "headers": [
+            "Source",
+            "How you know"
+          ],
+          "rows": [
+            [
+              "Listed Class 2 transformer",
+              "Listing mark and Class 2 marking on the unit"
+            ],
+            [
+              "Listed Class 3 transformer",
+              "Listing mark and Class 3 marking on the unit"
+            ],
+            [
+              "Listed Class 2 or Class 3 power supply",
+              "Listed and marked as the source"
+            ],
+            [
+              "Other listed equipment",
+              "Marked to identify it as the Class 2 or Class 3 source"
+            ],
+            [
+              "Certain battery supplies",
+              "Dry-cell supplies the section names"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-725.121-source-label.svg",
+          "alt": "Close-up of a listed Class 2 power supply label with its listing and class marking, the sources 725.121 recognizes with green checks, and an unmarked wall adapter marked as not a Class 2 source.",
+          "caption": "The listing and the marking on the source are the circuit's papers.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "What makes a power source count for a Class 2 circuit under 725.121?",
+          "choices": [
+            "Low output voltage by itself",
+            "It is listed and marked as a Class 2 source",
+            "It plugs into a receptacle",
+            "It is fused at 1 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The class is created by the listed, marked source — not by the voltage level.",
+          "nec_ref": "725.121"
+        },
+        {
+          "question": "A listed Class 2 transformer is replaced with an unmarked generic supply of the same voltage. The circuit:",
+          "choices": [
+            "Stays Class 2 — same voltage",
+            "Stays Class 2 if the cable is unchanged",
+            "No longer has a recognized Class 2 source",
+            "Becomes a Class 1 circuit automatically"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Without a source 725.121 recognizes, the run loses its Class 2 basis.",
+          "nec_ref": "725.121"
+        },
+        {
+          "question": "Which of these is a source 725.121 names?",
+          "choices": [
+            "Any USB charger",
+            "A listed Class 3 power supply",
+            "An unmarked doorbell transformer",
+            "A laptop power brick"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Listed Class 2 and Class 3 power supplies are named in the section.",
+          "nec_ref": "725.121"
+        }
+      ],
+      "code_refs": [
+        "725.121",
+        "725.2",
+        "Article 725"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C7-725.130",
@@ -3131,8 +4715,8 @@
       "article": "727",
       "section": "727",
       "title": "Instrumentation tray cable — Type ITC",
-      "plain_explanation": "Article 727 covers instrumentation tray cable, the factory assembly of insulated conductors in a flame-retardant jacket used for instrumentation and control circuits in tray, largely in industrial work. Sharma's residential and light-commercial crews will meet it rarely, if ever, but the article sits between 725 and 728 in the printed book and the reader should know what the cable is when a commercial plan calls it out. It is not a substitute for a Class 2 cable job, and its permitted uses follow its own article.\n\nNEC 2023 CHANGE:\n• 335: Instrumentation tray cable (Type ITC) moved from Article 727 to new Article 335.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "If a plan specifies ITC, price and order it as its own wiring method. Do not value-engineer it into thermostat wire.",
+      "plain_explanation": "Article 727 covers instrumentation tray cable — Type ITC — a factory assembly of insulated conductors in a flame-retardant jacket, used for instrumentation and control circuits run in tray, largely in industrial work.\n• Sharma's residential and light-commercial crews will meet it rarely, if ever.\n• The article sits between 725 and 728 in the printed book, and the reader should know what the cable is when a commercial plan calls it out.\n• ITC is not a substitute for a Class 2 cable job, and its permitted uses follow its own article — a plan that specifies ITC gets ITC.",
+      "on_the_job": "A small water-treatment control building outside Ocala is light-commercial work, but the spec calls out Type ITC in tray for the instrument loops between the control panel and the field sensors. Sharma prices and orders ITC as its own wiring method, run in tray under Article 727. The value-engineering suggestion to run thermostat wire instead is rejected at the estimate: different cable, different article, different permitted uses. If a plan specifies ITC, it is priced and ordered as its own wiring method — not value-engineered into thermostat wire.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -3149,7 +4733,95 @@
           "url": "https://dailyreporter.com/2023/01/13/changes-to-the-2023-national-electric-code-2/",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 335: Instrumentation tray cable (Type ITC) moved from Article 727 to new Article 335.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Instrumentation and control circuits carry the signals that run a plant — a damaged or misapplied cable can shut a process down or, worse, fail to shut it down. Giving the tray cable for these circuits its own article keeps the cable construction, the tray installation and the permitted uses in one place, instead of letting crews treat it as generic low-voltage wire.",
+      "exam_trap": "The trap is filing ITC under Article 725 with the other control wiring, or treating it as a Class 2 cable because the circuits are low energy. Type ITC has its own article — 727 in the 2020 book — and its permitted uses follow that article. The second trap waits on 2023 permits: the article moved, and ITC now lives at Article 335.",
+      "inspection_fails": [
+        "Thermostat wire substituted where the plans specify Type ITC.",
+        "Type ITC used as a substitute for a Class 2 cable installation.",
+        "Control circuits in tray wired with a cable the article does not permit for the use."
+      ],
+      "tables": [
+        {
+          "caption": "Type ITC at a glance",
+          "headers": [
+            "Point",
+            "Article 727 answer"
+          ],
+          "rows": [
+            [
+              "What it is",
+              "Factory assembly of insulated conductors in a flame-retardant jacket"
+            ],
+            [
+              "Where it runs",
+              "In tray, for instrumentation and control circuits"
+            ],
+            [
+              "Where you meet it",
+              "Mostly industrial work; rarely in residential or light commercial"
+            ],
+            [
+              "What it is not",
+              "Not a substitute for a Class 2 cable job"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-ART-727-itc-cable.svg",
+          "alt": "Elevation of a cable tray carrying Type ITC, with a magnified cross-section of the cable showing insulated conductors inside a flame-retardant jacket, and a note that the article moves to 335 in 2023.",
+          "caption": "Type ITC: a factory assembly in a flame-retardant jacket, run in tray.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Type ITC is used for:",
+          "choices": [
+            "Service-entrance feeders",
+            "Instrumentation and control circuits in tray",
+            "Class 2 thermostat runs in houses",
+            "Swimming pool bonding"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Article 727 covers instrumentation tray cable for instrumentation and control circuits, installed in tray.",
+          "nec_ref": "727"
+        },
+        {
+          "question": "A plan specifies Type ITC. The correct move is to:",
+          "choices": [
+            "Substitute thermostat wire",
+            "Substitute Class 2 cable",
+            "Price and install ITC as its own wiring method",
+            "Delete the instrument circuits"
+          ],
+          "answer_index": 2,
+          "explain_plain": "ITC is its own wiring method under its own article; it is not a substitute for a Class 2 job, and a Class 2 cable is not a substitute for it.",
+          "nec_ref": "727"
+        },
+        {
+          "question": "In the 2023 NEC, Type ITC moved to:",
+          "choices": [
+            "Article 725",
+            "Article 335",
+            "Article 728",
+            "Chapter 8"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The 2023 book moved instrumentation tray cable out of Article 727 into new Article 335.",
+          "nec_ref": "335 (2023)"
+        }
+      ],
+      "code_refs": [
+        "727"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C7-ART-728",
@@ -3288,8 +4960,8 @@
       "article": "750",
       "section": "750",
       "title": "Energy management systems",
-      "plain_explanation": "Article 750 covers energy management systems: equipment that monitors and controls how a building uses energy, including the load-management systems that Articles 702 and 705 lean on when a generator or a panel is deliberately run below its unmanaged peak. The article's guardrail is that managing energy never means defeating safety: controls may shed, schedule and limit loads within their listings, and the overcurrent and disconnect rules of the rest of the book still stand behind them.\n\nNEC 2023 CHANGE:\n• 750.30: An energy management system (EMS) used to cap current now has rules for its setpoint, what happens on a malfunction, who can touch the settings, and how it's marked. The EMS gets one current setpoint: the load used in the 220.70 calculation and the most current it allows on the supply it controls (750.30(C)(1)).\n• 750.6: New in 2023: an energy management system (EMS) has to be listed, either as one complete system, as a kit installed in the field, or as listed components assembled into a system. Path 1: the EMS is listed as one complete system.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "When you install load management for a generator job, you are installing a 750 system doing a 702 job. Set it, record the settings, and leave them where only the right people can change them.",
+      "plain_explanation": "Article 750 covers energy management systems: equipment that monitors and controls how a building uses energy, including the load-management systems that Articles 702 and 705 lean on when a generator or a panel is deliberately run below its unmanaged peak. The article's guardrail is that managing energy never means defeating safety: controls may shed, schedule and limit loads within their listings, and the overcurrent and disconnect rules of the rest of the book still stand behind them.\nIn the 2020 book the article itself is short, and the places an EMS earns its keep are specific. Automatic load management lets an optional standby source be sized to the maximum load the management system will actually connect (702.4(B)(2)), and a power control system under 705.13 can limit how much current an interconnected source puts on a busbar. Both methods stand or fall on the settings staying where they were set.",
+      "on_the_job": "A Marion Oaks house with a 200 A service adds a whole-house standby generator on an automatic transfer switch. The load the switch would transfer is more than the 22 kW generator — about 92 A at 240 V — can carry, so Sharma installs listed load management: the range, the electric water heater and the 5-ton air conditioner are shed in a set priority order, and the generator is sized to the maximum load the management system will actually connect, the load-management duty in 702.4(B)(2). The settings are recorded in the job file, the managed circuits are marked at the panel, and the system is proven by running the house on generator power before the job closes.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -3316,6 +4988,105 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/750-6",
           "confirmed": true
         }
+      ],
+      "rich": 1,
+      "edition_note": "NEC 2023 CHANGE:\n• 750.30: An energy management system (EMS) used to cap current now has rules for its setpoint, what happens on a malfunction, who can touch the settings, and how it's marked. The EMS gets one current setpoint: the load used in the 220.70 calculation and the most current it allows on the supply it controls (750.30(C)(1)).\n• 750.6: New in 2023: an energy management system (EMS) has to be listed, either as one complete system, as a kit installed in the field, or as listed components assembled into a system. Path 1: the EMS is listed as one complete system.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "A load that is managed on paper but not in fact is an overload waiting for a hot afternoon: the generator trips, the feeder cooks, or the bus runs past its rating with nobody watching. The guardrail exists because an EMS is a control, not a protective device — when it fails, or someone changes it, the overcurrent protection behind it is the last line of defense.",
+      "inspection_fails": [
+        "Load management relied on to size the generator, but the shed relays were never wired — the generator overloads and drops the house on the first outage.",
+        "EMS settings changed after final inspection with no record — nobody can prove what the managed load is.",
+        "The EMS treated as overcurrent protection, with breakers omitted behind it. It is a control, not a protective device.",
+        "Managed circuits not identified at the panel — the next electrician cannot tell which loads the system controls."
+      ],
+      "exam_trap": "The trap is doing the service calculation at the EMS setpoint under '220.70.' There is no 220.70 in the 2020 book — that section, and the detailed EMS rules at 750.30, arrive with NEC 2023; see the 2020 vs 2023 box. On a 2020 permit, energy management does its code work at 702.4(B)(2) and 705.13. Second trap: treating the EMS as overcurrent protection. It is not — the breakers still have to be there behind it.",
+      "tables": [
+        {
+          "caption": "Where an EMS does code work (NEC 2020)",
+          "headers": [
+            "Job",
+            "Section",
+            "What the setting buys"
+          ],
+          "rows": [
+            [
+              "Generator load management",
+              "702.4(B)(2)",
+              "Source sized to the max load the system will connect"
+            ],
+            [
+              "Limiting an interconnected source",
+              "705.13",
+              "Controller setting stands in for source output current"
+            ],
+            [
+              "Scope and guardrail",
+              "Article 750",
+              "Manage energy — never defeat protection"
+            ]
+          ],
+          "note": "The 220.70 setpoint calculation and the 750.30 EMS rules are NEC 2023 — see the 2020 vs 2023 box."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-ART-750-load-cap.svg",
+          "alt": "Bar chart comparing an unmanaged peak of 118 A with a managed maximum of 92 A held at the generator limit by load management, with the shed order: range, water heater, 5-ton air conditioner.",
+          "caption": "Load management caps the load at the generator limit; the shed order does the work.",
+          "w": 900,
+          "h": 1400
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Under NEC 2020, automatic load management on a standby generator lets the source be sized to…",
+          "choices": [
+            "The full calculated load, always",
+            "The maximum load the management system will actually connect",
+            "The smallest load on the transfer switch",
+            "Whatever the homeowner sets in the app"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Under the load-management duty, the source carries the maximum load the management system will actually connect — not the unmanaged total.",
+          "nec_ref": "702.4(B)(2)"
+        },
+        {
+          "question": "A candidate runs a 2020 service calculation using the EMS setpoint under 220.70. What is wrong?",
+          "choices": [
+            "Nothing — 220.70 is in the 2020 book",
+            "220.70 does not exist until NEC 2023",
+            "Setpoints are never allowed in calculations",
+            "The setpoint must be doubled first"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Section 220.70 and the 750.30 EMS rules are new in NEC 2023. The 2020 book does EMS work at 702.4(B)(2) and 705.13.",
+          "nec_ref": "220.70 (2023)"
+        },
+        {
+          "question": "An EMS fails, or its settings are changed. What still protects the feeder?",
+          "choices": [
+            "Nothing — the EMS was the protection",
+            "The overcurrent devices behind it",
+            "The utility fuse only",
+            "The generator governor"
+          ],
+          "answer_index": 1,
+          "explain_plain": "An EMS is a control, not a protective device. The overcurrent and disconnect rules stand behind it.",
+          "nec_ref": "Article 750"
+        }
+      ],
+      "code_refs": [
+        "Article 750",
+        "702.4(B)(2)",
+        "705.13",
+        "220.70 (NEC 2023 — see edition note)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "NEC 2020 has no 220.70; the EMS setpoint load-calculation rule (220.70) and the 750.30 EMS rules arrive in NEC 2023",
+          "source": "ExpertCE, Electrician's Guide for NEC 2023 — load calculations with energy management systems",
+          "url": "https://expertce.com/courses/electricians-guide-for-nec-2023/lessons/how-does-the-2023-nec-handle-load-calculations-with-energy-management-systems/"
+        }
       ]
     },
     {
@@ -3324,8 +5095,8 @@
       "article": "760",
       "section": "760",
       "title": "Fire alarm systems — wiring and power",
-      "plain_explanation": "Article 760 covers the installation of wiring and equipment for fire alarm systems, including the circuits the fire alarm system controls and powers: detection, notification, sprinkler waterflow and supervisory signals, and functions like door release and elevator control that the alarm commands. System design, device placement and testing live in NFPA 72; this article governs how the wiring and power are installed. Every fire alarm circuit is one of two kinds — non-power-limited or power-limited — and the kind comes from its power source, exactly the way Article 725 classes come from theirs.\n\nNEC 2023 CHANGE:\n• Article 760: Several sections throughout Article 760 were reworded, revised, relocated, or deleted. Hazardous (Classified) Location requirements were reworded and relocated to 760.12 to be consistent with Article 722. Some requirements applying to cables have been relocated to Article 722.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "First question on alarm work: which circuits are NPLFA and which are PLFA? The answer picks the cable, the wiring method and the separation rules for every run.",
+      "plain_explanation": "Article 760 covers the installation of wiring and equipment for fire alarm systems, including the circuits the fire alarm system controls and powers: detection, notification, sprinkler waterflow and supervisory signals, and functions like door release and elevator control that the alarm commands. System design, device placement and testing live in NFPA 72; this article governs how the wiring and power are installed.\nEvery fire alarm circuit is one of two kinds, and the kind comes from its power source, exactly the way Article 725 classes come from theirs:\n• Non-power-limited (NPLFA) — fed under 760.41, wired like power circuits\n• Power-limited (PLFA) — fed from a listed PLFA source under 760.121",
+      "on_the_job": "First question on alarm work: which circuits are NPLFA and which are PLFA? The answer picks the cable, the wiring method and the separation rules for every run. On a small Orlando medical-office build-out, Sharma's crew starts at the panel: the branch circuit feeding the FACP is dedicated to the fire alarm, its disconnect is identified in red and marked FIRE ALARM CIRCUIT, and its location is identified at the control unit (760.41(B) / 760.121(B)). The initiating loop and the notification circuits take their kind from the panel's listed source, and the crew labels each run before the ceiling closes — the next electrician should never have to guess which kind he is opening.",
       "sharma_note": "",
       "figure_idea": "Original diagram: a fire alarm control panel in the center, a riser going up with initiating circuits on one side and notification circuits on the other, each labelled with its circuit class. Describe only; do not copy a manufacturer's riser.",
       "related_ids": [
@@ -3348,7 +5119,96 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• Article 760: Several sections throughout Article 760 were reworded, revised, relocated, or deleted. Hazardous (Classified) Location requirements were reworded and relocated to 760.12 to be consistent with Article 722. Some requirements applying to cables have been relocated to Article 722.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "A fire alarm has to work on the worst day of the building's life, while other systems are failing around it. Mixing up the two circuit kinds — or feeding the panel from a borrowed branch circuit — can leave the system dead, unsupervised, or damaged by a fault it was never built to ride through. The article's split at the power source is what keeps alarm wiring from being treated like bell wire.",
+      "inspection_fails": [
+        "FACP fed from a shared branch circuit that also carries receptacles or lights — the fire alarm branch circuit feeds nothing else.",
+        "Fire alarm disconnect with no red identification and no FIRE ALARM CIRCUIT marking.",
+        "PLFA cable and methods used on a circuit whose source is not a listed PLFA source.",
+        "Alarm branch circuit run through GFCI or AFCI protection, which 760.41(B) and 760.121(B) do not allow."
+      ],
+      "exam_trap": "The trap answer is that Article 760 designs the fire alarm system — device spacing, coverage, and testing. It does not. Design, placement and testing live in NFPA 72; Article 760 governs how the wiring and power are installed. Second trap: calling a circuit power-limited because the cable jacket says PLFA. The kind comes from the power source, not the cable.",
+      "tables": [
+        {
+          "caption": "The two kinds of fire alarm circuit",
+          "headers": [
+            "Kind",
+            "Source",
+            "Wiring follows"
+          ],
+          "rows": [
+            [
+              "NPLFA",
+              "760.41 — normal chapters, up to 600 V",
+              "Power-wiring rules, Part II"
+            ],
+            [
+              "PLFA",
+              "760.121 — listed PLFA source",
+              "Power-limited rules, Part III"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-ART-760-two-kinds.svg",
+          "alt": "Fire alarm control panel with initiating circuits on one side and notification circuits on the other, over comparison panels for non-power-limited and power-limited circuits and the sources that decide each kind.",
+          "caption": "Initiating on one side, notification on the other — the source decides the kind.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Where do fire alarm system design, device placement and testing live?",
+          "choices": [
+            "Article 760",
+            "NFPA 72",
+            "Article 725",
+            "The panel installation manual only"
+          ],
+          "answer_index": 1,
+          "explain_plain": "NFPA 72 covers design, placement and testing; Article 760 covers installing the wiring and power.",
+          "nec_ref": "760.1"
+        },
+        {
+          "question": "What decides whether a fire alarm circuit is NPLFA or PLFA?",
+          "choices": [
+            "The cable jacket marking",
+            "The wire size",
+            "Its power source",
+            "The color of the cable"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The kind comes from the source, the same way Article 725 classes come from theirs.",
+          "nec_ref": "760.121"
+        },
+        {
+          "question": "The branch circuit feeding the FACP:",
+          "choices": [
+            "May also feed the exit signs",
+            "Feeds nothing else, with a red FIRE ALARM CIRCUIT disconnect",
+            "Must be GFCI protected",
+            "Is sized like a lighting circuit"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The fire alarm branch circuit is dedicated, and its disconnect is identified in red as the FIRE ALARM CIRCUIT.",
+          "nec_ref": "760.41(B)"
+        }
+      ],
+      "code_refs": [
+        "760.1",
+        "760.41",
+        "760.41(B)",
+        "760.121",
+        "760.121(B)",
+        "NFPA 72"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C7-760.30",
@@ -3723,8 +5583,8 @@
       "article": "760",
       "section": "760.135",
       "title": "Installation of PLFA cables in buildings",
-      "plain_explanation": "Power-limited fire alarm cables are installed by application: this section, working with the cable application and substitution tables later in the article, matches each listed cable type to where it may run — plenums, risers, trays, raceways and general building spaces. The method is table-driven on purpose: the cable's fire listing, not its color or its price, decides where it belongs. Circuit-integrity cable appears in this family where a design calls for circuits that must survive fire exposure, and it is installed as its listing directs.",
-      "on_the_job": "Read the cable jacket legend, find its row in the application table, then run it. Never decide a plenum or riser question from the cable's color.",
+      "plain_explanation": "Power-limited fire alarm cables are installed by application: this section, working with the cable application and substitution tables later in the article, matches each listed cable type to where it may run — plenums, risers, trays, raceways and general building spaces. The method is table-driven on purpose: the cable's fire listing, not its color or its price, decides where it belongs. Circuit-integrity cable appears in this family where a design calls for circuits that must survive fire exposure, and it is installed as its listing directs.\n• Fabricated ducts for environmental air follow 300.22(B) — the cable runs in a raceway (760.135(B)).\n• Plenums and other environmental-air spaces: FPLP only (760.135(C), with 300.22(C)).\n• Riser runs: FPLP or FPLR (760.135(D)); in a metal raceway with firestops at each floor, FPL may also run (760.135(E)).\n• Fireproof shafts: all three types (760.135(F)); one- and two-family dwellings: all three (760.135(G)); other locations: all three (760.135(H)).\n• Substitution only runs downhill: FPLP may replace FPLR or FPL, and FPLR may replace FPL — never the reverse (Table 760.154).\n• A CI suffix (FPLR-CI, for example) marks circuit-integrity cable, installed as its listing directs.",
+      "on_the_job": "On an Ocala medical-office fit-out, the ceiling is a return-air plenum, so every fire alarm run above it is FPLP — the red FPL left over from the last job stays on the truck, whatever its color promises. The vertical run to the second floor goes in the shaft as FPLR. The tech reads the jacket legend out loud at the rough-in walk: type first, then the space it is entering, then the table row. That ten-second habit is the whole section in practice.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -3734,7 +5594,130 @@
       "verified": true,
       "prev_id": "C7-760.121",
       "next_id": "C7-ART-770",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Fire alarm cable has to work during the fire, not just before it. A cable whose jacket burns and smokes in a ceiling plenum feeds the very air stream the building breathes, and a riser shaft is a chimney that carries flame floor to floor. Matching the cable's fire listing to the space is how the alarm circuits survive long enough to do their one job — get people out.",
+      "inspection_fails": [
+        "Plain FPL run through a ceiling plenum — the space required FPLP (760.135(C)).",
+        "FPL substituted upward for FPLR in a riser shaft; substitution only runs downhill (Table 760.154).",
+        "Riser run in a metal raceway with no firestops at the floor penetrations, so the (E) conditions are unmet.",
+        "Cable type chosen from the jacket color at the truck instead of the printed legend."
+      ],
+      "exam_trap": "The trap: “the cable is red, so it is fire alarm cable and it can go anywhere.” Color is not a listing. Plain FPL in a ceiling plenum fails 760.135(C) even though it is the right color and the right system — the space demanded FPLP, and only the jacket legend tells you what you are holding.",
+      "tables": [
+        {
+          "caption": "PLFA cable by space (NEC 2020 760.135)",
+          "headers": [
+            "Space",
+            "Cable types",
+            "Paragraph"
+          ],
+          "rows": [
+            [
+              "Ceiling plenum / environmental air",
+              "FPLP only",
+              "(C)"
+            ],
+            [
+              "Riser shaft",
+              "FPLP or FPLR",
+              "(D)"
+            ],
+            [
+              "Riser in metal raceway, firestops each floor",
+              "FPLP, FPLR or FPL",
+              "(E)"
+            ],
+            [
+              "Fireproof shaft",
+              "FPLP, FPLR or FPL",
+              "(F)"
+            ],
+            [
+              "One- and two-family dwellings",
+              "FPLP, FPLR or FPL",
+              "(G)"
+            ],
+            [
+              "Other building locations",
+              "FPLP, FPLR or FPL",
+              "(H)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-760.135-cable-ladder.svg",
+          "alt": "Three building spaces with the PLFA cable types each allows — plenum: FPLP only; riser shaft: FPLP or FPLR; general space: FPLP, FPLR or FPL — beside a substitution ladder showing FPLP may replace FPLR or FPL, FPLR may replace FPL, and substitution never runs upward.",
+          "caption": "The space picks the cable; substitution runs downhill only.",
+          "w": 900,
+          "h": 1240
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A fire alarm run crosses a ceiling used as a return-air plenum. Which PLFA cable type does 760.135(C) call for?",
+          "choices": [
+            "FPL",
+            "FPLR",
+            "FPLP",
+            "Any red cable"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Plenums and other environmental-air spaces take FPLP; the listing, not the color, decides.",
+          "nec_ref": "760.135(C)"
+        },
+        {
+          "question": "Which substitution is permitted?",
+          "choices": [
+            "FPL for FPLR in a riser",
+            "FPLR for FPLP in a plenum",
+            "FPLP for FPLR in a riser",
+            "FPL for FPLP anywhere"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Substitution runs downhill only: FPLP may replace FPLR or FPL, FPLR may replace FPL — never upward (Table 760.154).",
+          "nec_ref": "Table 760.154"
+        },
+        {
+          "question": "What does the CI suffix on a PLFA cable (FPLR-CI) tell the installer?",
+          "choices": [
+            "It is plenum rated",
+            "It is circuit-integrity cable, installed as its listing directs",
+            "It is a cheaper import",
+            "It may replace any type"
+          ],
+          "answer_index": 1,
+          "explain_plain": "CI marks circuit-integrity cable for circuits that must survive fire exposure; it is installed as its listing directs.",
+          "nec_ref": "760.135"
+        }
+      ],
+      "code_refs": [
+        "760.135",
+        "Table 760.154",
+        "300.22(B)",
+        "300.22(C)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "760.135(A)–(J) structure: cable types matched to ducts, plenums, risers, shafts and general spaces",
+          "source": "Mike Holt, fire alarm (Article 760) article",
+          "url": "https://www.mikeholt.com/newsletters.php?action=display&letterID=1922&email"
+        },
+        {
+          "claim": "760.135 text as adopted (Chicago code library)",
+          "source": "Chicago building code library, 760.135",
+          "url": "https://codelibrary.amlegal.com/codes/chicago/c7209359-81de-4059-a679-f6a211f04dea/chicagobuilding_il/0-0-0-349919"
+        },
+        {
+          "claim": "Substitution ladder and Table 760.154; CI suffix (FPLR-CI)",
+          "source": "HSM University FAT-130, Lesson 11 (Article 760 wiring methods and cable types)",
+          "url": "https://www.hsmuniversity.org/us/course/fat-130-electrical-theory-for-fire-alarm/lesson-11-wiring-methods-and-cable-types-nec-article-760"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C7-ART-770",
