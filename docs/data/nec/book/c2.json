@@ -13,8 +13,8 @@
       "article": "200",
       "section": "200",
       "title": "Grounded conductors — how they are identified",
-      "plain_explanation": "Article 200 is about the grounded conductor, which in a house is usually the neutral. Its job in this article is identification: how a worker can tell, by color, marking, or terminal, which conductor is grounded so nobody lands it in the wrong place. It does not size the neutral — that work lives in Articles 210, 215, 220, and 250.",
-      "on_the_job": "Treat white and gray as a warning label, not a suggestion. Before you splice, land, or re-mark a conductor, check what it is actually connected to at both ends.",
+      "plain_explanation": "Article 200 is about the grounded conductor, which in a house is usually the neutral. Its job in this article is identification: how a worker can tell, by color, marking, or terminal, which conductor is grounded so nobody lands it in the wrong place. It does not size the neutral — that work lives in Articles 210, 215, 220, and 250.\nThe working rules:\n• Smaller insulated grounded conductors carry a continuous white or gray outer finish, or white or gray with colored stripes other than green (200.6)\n• Larger grounded conductors may use that same finish, or be identified at their terminations and at accessible points in the ways the section allows (200.6)\n• White or gray is reserved for the grounded conductor. The narrow exceptions — a re-identified conductor in a cable assembly used as a hot for a switch loop or a 240V circuit, and flexible cord uses — require the re-identification to be permanent and visible where required (200.7)\n• A white conductor is never an equipment ground. Equipment grounds are green, green with yellow stripes, or bare (200.7)",
+      "on_the_job": "Treat white and gray as a warning label, not a suggestion. Before you splice, land, or re-mark a conductor, check what it is actually connected to at both ends. In a feeder panel fed from a Sharma meter-main, the picture in the drawing is the standard: white neutrals on the isolated neutral bar, green and bare grounds on their own bar, black hots on breakers. Where the white of a cable assembly is re-identified as the hot of a switch loop, tape it a hot color at every box it appears in, so the next worker is not guessing.",
       "sharma_note": "",
       "figure_idea": "A panel detail showing a white insulated neutral landed on the isolated neutral bar, a green ground on the ground bar, and a black hot on a breaker, each labeled.",
       "related_ids": [
@@ -26,7 +26,94 @@
       "verified": true,
       "prev_id": null,
       "next_id": "C2-200.4",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "rich": 1,
+      "why_it_exists": "A neutral landed in the wrong place is not a paperwork error. Land a hot where a neutral belongs and metal parts sit energized; swap neutral and ground and current rides the grounding system full-time. Color and terminal identification is the one check every worker can make at a glance, in every box, without a meter — which is why the Code guards the white and gray so strictly.",
+      "inspection_fails": [
+        "White conductor used as a switch-loop hot with no re-identification marking in the switch box or the fixture box.",
+        "Large feeder neutral landed with no identification at its terminations.",
+        "White or gray conductor used as an equipment grounding conductor.",
+        "Re-identified white marked at one end only; the far end still reads as a neutral."
+      ],
+      "exam_trap": "The trap answer gives Article 200 a job it does not have: 'size the neutral under 200.6.' Identification lives here; sizing lives in Articles 210, 215, 220 and 250. Second trap: 'a white wire can be taped green and used as the equipment ground.' Never — white or gray is reserved for the grounded conductor, and grounds are green, green with yellow stripes, or bare.",
+      "tables": [
+        {
+          "caption": "Conductor colors at a glance",
+          "headers": [
+            "Conductor",
+            "Identification"
+          ],
+          "rows": [
+            [
+              "Grounded (neutral)",
+              "White or gray finish; larger sizes may be marked at terminations (200.6)"
+            ],
+            [
+              "Equipment ground",
+              "Green, green with yellow stripes, or bare"
+            ],
+            [
+              "Ungrounded (hot)",
+              "Black, red, or another color that is not white, gray or green"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-ART-200-neutral-id.svg",
+          "alt": "Panel detail with white grounded conductors landed on an isolated neutral bar, green and bare equipment grounds on a ground bar, a black hot on a breaker, and a white conductor re-identified with black tape.",
+          "caption": "Who is who in the panel: white to the neutral bar, green to the ground bar, black to the breaker.",
+          "w": 900,
+          "h": 1600
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Article 200 covers which job?",
+          "choices": [
+            "Sizing the neutral",
+            "Identifying the grounded conductor",
+            "GFCI locations",
+            "Service sizing"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Article 200 is identification only — color, marking and terminals. Sizing lives in Articles 210, 215, 220 and 250.",
+          "nec_ref": "Article 200"
+        },
+        {
+          "question": "A white conductor in a cable assembly may be used as a switch-loop hot when:",
+          "choices": [
+            "Never, under any condition",
+            "It is permanently re-identified where required",
+            "The breaker is turned off",
+            "It is taped green"
+          ],
+          "answer_index": 1,
+          "explain_plain": "200.7 allows the re-identified conductor in a cable assembly, permanently marked and visible where required.",
+          "nec_ref": "200.7"
+        },
+        {
+          "question": "Equipment grounding conductors are identified by:",
+          "choices": [
+            "White or gray",
+            "Green, green with yellow stripes, or bare",
+            "Black only",
+            "Blue tape"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Grounds are green, green with yellow stripes, or bare — never white or gray.",
+          "nec_ref": "200.7"
+        }
+      ],
+      "code_refs": [
+        "200.4",
+        "200.6",
+        "200.7"
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "uncertain": [],
+      "rich_sources": []
     },
     {
       "id": "C2-200.4",
@@ -64,8 +151,8 @@
       "article": "200",
       "section": "200.6",
       "title": "How a grounded conductor is marked",
-      "plain_explanation": "This section gives the ways a grounded conductor may be identified, and the method changes with conductor size. Smaller insulated conductors use a continuous white or gray outer finish, or white or gray with colored stripes other than green. Larger conductors may use that same finish, or be identified at terminations and accessible points in the ways the section allows.",
-      "on_the_job": "On rough-in, pick the right roll — do not plan to tape your way out of the wrong insulation color on small branch wiring. On larger feeders, mark every accessible point, not just the end you happen to be landing today.",
+      "plain_explanation": "This section gives the ways a grounded conductor — usually the neutral — may be identified, and the method changes with conductor size.\n• 6 AWG or smaller: a continuous white or gray outer finish, or three continuous white or gray stripes on insulation other than green, along the entire length. The identification is the insulation itself, from the factory — white tape wrapped at the ends of a small black conductor does not meet the rule.\n• Larger than 6 AWG: the same finishes, or — at the time of installation — a distinctive white or gray marking that encircles the conductor at its terminations.\nOnly the grounded conductor is identified this way; white and gray are reserved for it. See 200.7 for the narrow cases where a white conductor in a cable assembly may be re-identified as a hot.",
+      "on_the_job": "On rough-in, pick the right roll — do not plan to tape your way out of the wrong insulation color on small branch wiring. The 12 AWG neutrals in a house come off a white roll, period. On larger feeders, mark every accessible point, not just the end you happen to be landing today: the black feeder neutral in a Siemens subpanel may be identified with white tape that fully encircles it at the panel, at the disconnect, and at every point where the conductor is accessible.",
       "sharma_note": "",
       "figure_idea": "Three feeder conductors at a panel: black, red, and one wrapped with white tape at the end, with a note that small branch conductors use factory white or gray insulation.",
       "related_ids": [
@@ -76,7 +163,104 @@
       "verified": true,
       "prev_id": "C2-200.4",
       "next_id": "C2-200.7",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Everyone who opens a box trusts the colors. A neutral that looks like a hot gets landed on a breaker or spliced into the wrong circuit, and the next person who trusts the marking grabs a conductor that is live when it should not be. Identification that runs the full length on small conductors — and that completely encircles the conductor where termination marking is allowed — is what makes that trust safe.",
+      "inspection_fails": [
+        "Black 12 AWG landed as a neutral with white tape on the ends. At 6 AWG or smaller the finish itself must be white or gray.",
+        "Feeder neutral taped at the panel but left unmarked at the disconnect — the termination marking is missing at one end.",
+        "Tape applied as a flag that does not encircle the conductor. 200.6(B) marking must encircle it.",
+        "White stripes relied on over green insulation. The stripe option is for insulation other than green.",
+        "A white conductor landed on a breaker with no re-identification marking (see 200.7)."
+      ],
+      "exam_trap": "The trap: a black 8 AWG conductor with white tape at both ends, offered as the neutral. It fails — 8 AWG is in the 6 AWG-or-smaller class, where the finish itself must be white or gray. The same tape job on a 1/0 feeder conductor is exactly what 200.6(B) permits. The size, not the tape, decides.",
+      "tables": [
+        {
+          "caption": "How the grounded conductor is identified, by size (NEC 2020)",
+          "headers": [
+            "Conductor size",
+            "Identification"
+          ],
+          "rows": [
+            [
+              "6 AWG or smaller",
+              "Continuous white or gray finish, or three continuous white/gray stripes on other-than-green insulation — full length, from the factory"
+            ],
+            [
+              "Larger than 6 AWG",
+              "The same finishes, or a white or gray marking encircling the conductor at its terminations, applied at installation"
+            ]
+          ],
+          "note": "Termination marking is not an option at 6 AWG or smaller."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-200.6-neutral-marking.svg",
+          "alt": "Two conductor examples: at 6 AWG or smaller a white-insulated conductor passes and a black conductor with tape at the ends fails; larger than 6 AWG a black feeder conductor with white tape encircling it at its terminations passes; a size scale marks the break point at 6 AWG.",
+          "caption": "Factory finish at 6 AWG or smaller; termination marking only above 6 AWG.",
+          "w": 900,
+          "h": 1440
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A black 10 AWG conductor is all that is on the truck for a neutral. Tape both ends white?",
+          "choices": [
+            "Permitted",
+            "Permitted if the tape fully encircles the conductor",
+            "Not permitted — at 6 AWG or smaller the finish itself must be white or gray, or striped",
+            "Permitted on feeders only"
+          ],
+          "answer_index": 2,
+          "explain_plain": "10 AWG is in the 6 AWG-or-smaller class, where identification is the factory finish along the entire length.",
+          "nec_ref": "200.6(A)"
+        },
+        {
+          "question": "A black 1/0 feeder conductor may serve as the grounded conductor when…",
+          "choices": [
+            "It is taped white at the panel end only",
+            "A distinctive white or gray marking encircles it at its terminations, applied at installation",
+            "The panel directory says 'neutral'",
+            "Never — large neutrals must be factory white"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Larger than 6 AWG, 200.6(B) allows identification by a white or gray marking encircling the conductor at its terminations.",
+          "nec_ref": "200.6(B)"
+        },
+        {
+          "question": "Three continuous white stripes are a permitted identification on insulation of any color except…",
+          "choices": [
+            "Black",
+            "Red",
+            "Blue",
+            "Green"
+          ],
+          "answer_index": 3,
+          "explain_plain": "The stripes must be on insulation other than green — green is reserved for equipment grounding.",
+          "nec_ref": "200.6(A)"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "200.6",
+        "200.6(A)",
+        "200.6(B)",
+        "200.7"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "6 AWG or smaller grounded conductors must have a continuous white or gray finish or three white stripes; larger conductors may instead be identified by white or gray marking at terminations",
+          "source": "Consulting-Specifying Engineer, NEC Chapter 2: Wiring and protection",
+          "url": "https://www.csemag.com/nec-chapter-2-wiring-and-protection/"
+        },
+        {
+          "claim": "200.6(B): a grounded conductor 4 AWG or larger may be identified at installation by a distinctive white or gray marking encircling it at each termination",
+          "source": "Tsai Electro, NEC 200.6 Grounded Conductor Identification",
+          "url": "https://www.tsaielectro.com/nec-200-grounded-conductor-identification/"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C2-200.7",
@@ -127,8 +311,8 @@
       "article": "210",
       "section": "210",
       "title": "Branch circuits — the circuits that feed the load",
-      "plain_explanation": "Article 210 governs the final run of wiring that delivers power to lights, receptacles, and appliances. It sets circuit ratings, the protection people need from shock and arc faults, which dedicated circuits a dwelling must have, where receptacles and lights must go, and how much load a circuit may carry. Most of Sharma's rough-in and trim work is judged against this article.\n\nNEC 2023 CHANGE:\n• 210.1: Article 210 now has a voltage ceiling: 1,000 volts for AC branch circuits and 1,500 volts for DC. Anything higher moved to the new Article 235. The scope and the article title now top out at 1,000 volts for AC and 1,500 volts for DC.\n• 210.17: Assisted living facilities now join hotels and motels: guest rooms or suites that have a permanent cooking setup get the same branch circuits as a dwelling unit. Assisted living facilities are now named with hotels and motels; a unit there with a permanent cooking setup gets dwelling-unit branch circuits.\n• 210.18: 10 amps is now a legal rating for multioutlet branch circuits, joining the 15-, 20-, 30-, 40- and 50-amp ratings. Multioutlet circuits get a new rating option, 10 amps, on top of the 15-, 20-, 30-, 40- and 50-amp ratings.\n• 210.62: The 12-feet-per-receptacle count for show windows is gone. Receptacles now go along the window top so no point there is more than 6 ft from one. Space show window receptacles so every point along the window's top edge is within 6 ft of one.\n• 210.2: The information concerning reconditioned equipment has been relocated by CMP- 2 from 210.15 to 210.2 as it applies to branch circuits.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Read a house plan through Article 210 first: protection, dedicated circuits, receptacle layout, then lighting outlets. That order catches the expensive misses before wire is pulled.",
+      "plain_explanation": "Article 210 governs the final run of wiring that delivers power to lights, receptacles, and appliances — the branch circuits. It sets circuit ratings, the protection people need from shock and arc faults, which dedicated circuits a dwelling must have, where receptacles and lights must go, and how much load a circuit may carry. Most of Sharma's rough-in and trim work is judged against this article.\nThe article in working order:\n• Ratings and loads: what a branch circuit may feed and how it is protected\n• Protection: GFCI in 210.8 and AFCI in 210.12, where each applies\n• Required dwelling circuits: the named small-appliance, laundry, bathroom and garage circuits of 210.11(C)\n• Receptacle placement: the spacing and location rules of 210.52\n• Lighting outlets: the switched outlets of 210.70\nWhat Article 210 does not do: it does not identify the grounded conductor (Article 200), size feeders (Article 215), calculate loads (Article 220) or size the service (Article 230).",
+      "on_the_job": "Read a house plan through Article 210 first: protection, dedicated circuits, receptacle layout, then lighting outlets. That order catches the expensive misses before wire is pulled. On the Marion Oaks spec houses that means walking the plan once for 210.8 and 210.12 protection, once for the 210.11(C) named circuits — two small-appliance, laundry, bathroom, garage — once for 210.52 spacing, and once for 210.70 lighting outlets. On commercial work, remember S-01: Sharma runs 20A minimum branch circuits, stricter than this article requires for dwellings.",
       "sharma_note": "S-01: on commercial work Sharma runs 20A minimum branch circuits — stricter than this article requires for dwellings.",
       "figure_idea": "A house floor plan with circuits color-coded: kitchen small-appliance, laundry, bathroom, garage, and general area circuits each in a different color.",
       "related_ids": [
@@ -176,12 +360,142 @@
         },
         {
           "section": "210.2",
-          "change": "The information concerning reconditioned equipment has been relocated by CMP- 2 from 210.15 to 210.2 as it applies to branch circuits.",
+          "change": "The information concerning reconditioned equipment has been relocated by CMP-2 from 210.15 to 210.2 as it applies to branch circuits.",
           "source": "Carosella/NFPA-based 2023 NEC change workbook: 210.2 Reconditioned Equipment",
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "rich": 1,
+      "edition_note": "NEC 2023 CHANGE:\n• 210.1: Article 210 now has a voltage ceiling: 1,000 volts for AC branch circuits and 1,500 volts for DC. Anything higher moved to the new Article 235. The scope and the article title now top out at 1,000 volts for AC and 1,500 volts for DC.\n• 210.17: Assisted living facilities now join hotels and motels: guest rooms or suites that have a permanent cooking setup get the same branch circuits as a dwelling unit. Assisted living facilities are now named with hotels and motels; a unit there with a permanent cooking setup gets dwelling-unit branch circuits.\n• 210.18: 10 amps is now a legal rating for multioutlet branch circuits, joining the 15-, 20-, 30-, 40- and 50-amp ratings. Multioutlet circuits get a new rating option, 10 amps, on top of the 15-, 20-, 30-, 40- and 50-amp ratings.\n• 210.62: The 12-feet-per-receptacle count for show windows is gone. Receptacles now go along the window top so no point there is more than 6 ft from one. Space show window receptacles so every point along the window's top edge is within 6 ft of one.\n• 210.2: The information concerning reconditioned equipment has been relocated by CMP-2 from 210.15 to 210.2 as it applies to branch circuits.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Branch circuits are the part of the system people touch every day — every receptacle, switch and light in the building hangs off one. Undersized, overloaded or unprotected branch circuits are where shocks, nuisance trips and electrical fires start, so this article carries the protection and layout rules the inspector checks room by room.",
+      "inspection_fails": [
+        "Kitchen countertop receptacles fed from a general lighting circuit instead of the small-appliance branch circuits (210.11(C)(1)).",
+        "Bathroom receptacle circuit also feeding a bedroom or hallway outlet.",
+        "Living room wall with receptacles more than 12 ft apart (210.52(A)).",
+        "Hallway 10 ft or longer with no receptacle (210.52(H)).",
+        "10-amp multioutlet branch circuit installed on a NEC 2020 permit — that rating arrives with 2023 (210.18)."
+      ],
+      "exam_trap": "The trap is treating a 2023 headline as a 2020 rule: putting in a 10-amp multioutlet branch circuit on a 2020 permit because '210.18 allows 10 amps now.' It does — in the 2023 book. Under NEC 2020 the multioutlet ratings are 15, 20, 30, 40 and 50 amps. Check the permit's edition before you reach for a new rule.",
+      "tables": [
+        {
+          "caption": "Branch circuits vs the neighbors",
+          "headers": [
+            "Job",
+            "Where"
+          ],
+          "rows": [
+            [
+              "Branch circuits: ratings, protection, layout",
+              "Article 210"
+            ],
+            [
+              "Grounded conductor identification",
+              "Article 200"
+            ],
+            [
+              "Feeders",
+              "Article 215"
+            ],
+            [
+              "Load calculations",
+              "Article 220"
+            ],
+            [
+              "Services",
+              "Article 230"
+            ]
+          ]
+        },
+        {
+          "caption": "Inside Article 210",
+          "headers": [
+            "Topic",
+            "Section"
+          ],
+          "rows": [
+            [
+              "GFCI protection",
+              "210.8"
+            ],
+            [
+              "AFCI protection",
+              "210.12"
+            ],
+            [
+              "Required dwelling circuits",
+              "210.11(C)"
+            ],
+            [
+              "Receptacle placement",
+              "210.52"
+            ],
+            [
+              "Lighting outlets",
+              "210.70"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-ART-210-house-circuits.svg",
+          "alt": "House plan divided into kitchen, bathroom, laundry, living room and garage with numbered markers for the small-appliance, bathroom, laundry, garage and general branch circuits of Article 210.",
+          "caption": "One house read through Article 210: protection, named circuits, spacing, lighting.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Which article covers branch-circuit ratings, protection and receptacle placement?",
+          "choices": [
+            "Article 200",
+            "Article 210",
+            "Article 215",
+            "Article 230"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Article 210 is the branch-circuit article; 215 is feeders and 230 is services.",
+          "nec_ref": "Article 210"
+        },
+        {
+          "question": "On a NEC 2020 permit, which is a legal multioutlet branch-circuit rating?",
+          "choices": [
+            "10 amps",
+            "15 amps",
+            "25 amps",
+            "35 amps"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The 2020 multioutlet ratings are 15, 20, 30, 40 and 50 amps; 10 amps is added by 2023 (210.18).",
+          "nec_ref": "210.3"
+        },
+        {
+          "question": "Under NEC 2023, show window receptacles are spaced so no point along the top of the window is more than ___ from one.",
+          "choices": [
+            "6 ft",
+            "12 ft",
+            "24 in",
+            "2 ft"
+          ],
+          "answer_index": 0,
+          "explain_plain": "2023 replaced the 12-feet-per-receptacle count with a 6 ft reach rule along the window top (210.62).",
+          "nec_ref": "210.62 (2023)"
+        }
+      ],
+      "code_refs": [
+        "210.1",
+        "210.3",
+        "210.8",
+        "210.11(C)",
+        "210.12",
+        "210.52",
+        "210.70",
+        "210.62"
+      ],
+      "uncertain": [],
+      "rich_sources": []
     },
     {
       "id": "C2-210.4",
@@ -239,8 +553,8 @@
       "article": "210",
       "section": "210.8",
       "title": "Ground-fault protection for people",
-      "plain_explanation": "This section requires ground-fault protection in the places where a person, water, concrete, or the outdoors make a fault to ground most dangerous. Protection can be provided at the receptacle, at the breaker, or by a device feeding through to downstream outlets, as long as the outlet that needs protection actually gets it. The 2020 dwelling rule reaches further than older editions — see the next pages.",
-      "on_the_job": "Walk the job location by location, not room name by room name. A receptacle in an unfinished part of a basement, within reach of a sink, or in a laundry area is judged by where it sits, not by what the plan calls the room.",
+      "plain_explanation": "This section requires ground-fault protection for people in the places where a person, water, concrete or the outdoors make a fault to ground most dangerous. A GFCI watches the current leaving on the hot and returning on the neutral; when they differ, current is leaking through a person or a wet path, and the device opens the circuit. Protection can be provided at the receptacle, at the breaker, or by a device feeding through to downstream outlets, as long as the outlet that needs protection actually gets it — and the device must be readily accessible, not buried behind a refrigerator or dishwasher. The section is organized by where the outlet sits:\n• (A) Dwelling units — the location list on the next page\n• (B) Other than dwelling units — the commercial and similar locations\n• (D) and (F) — specific equipment pages, including dishwashers and outdoor HVAC outlets\nThe 2020 rule reaches further than older editions: it runs to 250-volt receptacles, so a 240-volt dryer outlet counts, not just the 120-volt points.",
+      "on_the_job": "Walk a Marion Oaks slab home the way the inspector will: location by location, not room name by room name. The bathroom receptacle, the kitchen countertop receptacles, the receptacle within 6 ft of the laundry sink, the washer outlet and the 240 V dryer outlet, every garage receptacle, and the lanai and soffit outlets all need protection. A receptacle in an unfinished part of a basement, within reach of a sink, or in a laundry area is judged by where it sits, not by what the plan calls the room. Sharma protects at the breaker (S-07): the dual-function breaker carries the protection and the wall device is a standard tamper-resistant receptacle, so test at the breaker and mark the schedule.",
       "sharma_note": "S-07: Sharma protects 120V circuits at the breaker with dual-function breakers and installs standard tamper-resistant receptacles at points marked GFI. No GFCI receptacles.",
       "figure_idea": "A house diagram with the GFCI locations shaded: bathroom, garage, outdoors, basement, kitchen, sink areas, laundry, and tub/shower areas.",
       "related_ids": [
@@ -259,7 +573,156 @@
       "next_id": "C2-210.8(A)",
       "sharma_rule_ids": [
         "S-07"
-      ]
+      ],
+      "why_it_exists": "An overload breaker protects wire, not people: it needs many amperes to trip, while a current far below one ampere through a chest can stop a heart. Wet skin, a concrete slab and a grounded faucet lower the body's resistance, so a fault that would be a tingle in a dry bedroom turns lethal at a sink, a tub or a garage floor. The GFCI fills that gap: a Class A device trips at 6 mA or more, long before the current through a person becomes fatal.",
+      "exam_trap": "The trap is answering by room name: 'that receptacle is in a storage room, so no GFCI.' Wrong — a receptacle within 6 ft of a laundry sink needs protection whatever the plan calls the room: the list follows the location and the sink, not the label. Second trap: protecting the first receptacle on a run and assuming the rest are covered, when the feed-through device was landed line-to-line and downstream outlets get nothing.",
+      "inspection_fails": [
+        "Receptacle within 6 ft of a sink or tub with no GFCI protection, because the plan labeled the room 'storage'.",
+        "Feed-through GFCI landed line-to-line, so the downstream receptacles it was meant to protect test dead to a GFCI tester.",
+        "GFCI device hidden behind the refrigerator or the dishwasher, where it is not readily accessible.",
+        "240 V dryer receptacle in the laundry area on a standard 2-pole breaker — the 2020 rule covers 125-volt through 250-volt receptacles.",
+        "Outdoor receptacle on the lanai or under the soffit left unprotected."
+      ],
+      "tables": [
+        {
+          "caption": "Three ways to give the protection (210.8)",
+          "headers": [
+            "Method",
+            "Where it sits",
+            "Watch out"
+          ],
+          "rows": [
+            [
+              "GFCI receptacle",
+              "At the outlet itself",
+              "Must stay readily accessible"
+            ],
+            [
+              "Dual-function breaker",
+              "In the panel",
+              "Protects the whole circuit — Sharma's S-07 method"
+            ],
+            [
+              "Feed-through device",
+              "First outlet on the run",
+              "Downstream outlets count only if landed load-side"
+            ]
+          ]
+        },
+        {
+          "caption": "The dwelling list at a glance (210.8(A), NEC 2020)",
+          "headers": [
+            "Location",
+            "Note"
+          ],
+          "rows": [
+            [
+              "Bathrooms",
+              "(A)(1)"
+            ],
+            [
+              "Garages and accessory buildings",
+              "Floor at or below grade, not habitable (A)(2)"
+            ],
+            [
+              "Outdoors",
+              "(A)(3)"
+            ],
+            [
+              "Crawl spaces",
+              "At or below grade (A)(4)"
+            ],
+            [
+              "Basements",
+              "(A)(5)"
+            ],
+            [
+              "Kitchens",
+              "Receptacles serving countertop surfaces (A)(6)"
+            ],
+            [
+              "Sinks",
+              "Within 6 ft of the top inside edge of the bowl (A)(7)"
+            ],
+            [
+              "Boathouses",
+              "(A)(8)"
+            ],
+            [
+              "Bathtubs and shower stalls",
+              "Within 6 ft of the outside edge (A)(9)"
+            ],
+            [
+              "Laundry areas",
+              "(A)(10)"
+            ],
+            [
+              "Indoor damp or wet locations",
+              "(A)(11)"
+            ]
+          ],
+          "note": "Full treatment on the 210.8(A) page. Distances follow the path a cord would take, never through a wall, floor, door or window."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-210.8-gfci-zones.svg",
+          "alt": "Floor plan of a Florida slab home with GFCI locations marked in gold: kitchen counter, bathroom, laundry, garage and an outdoor patio receptacle; dashed 6 ft zones are drawn from the kitchen sink and from the tub, and the living room receptacle is marked as not required by location.",
+          "caption": "GFCI is judged by where the receptacle sits, not by the room's name.",
+          "w": 900,
+          "h": 1520
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A receptacle sits 5 ft from a laundry sink in a room the plan labels 'storage.' GFCI protection required under NEC 2020?",
+          "choices": [
+            "No — storage rooms are not on the list",
+            "Yes — the location and the sink decide, not the room name",
+            "Only if the floor is concrete",
+            "Only when the circuit is 20 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "210.8 follows where the receptacle sits. Within 6 ft of a sink bowl — and in a laundry area — protection is required whatever the room is called.",
+          "nec_ref": "210.8(A)(7), (A)(10)"
+        },
+        {
+          "question": "Sharma's standard way to protect a whole 120 V circuit under S-07 is:",
+          "choices": [
+            "A GFCI receptacle at the last outlet",
+            "A dual-function breaker in the panel",
+            "A GFCI receptacle at every outlet",
+            "A feed-through device in the attic"
+          ],
+          "answer_index": 1,
+          "explain_plain": "S-07 puts the protection at the breaker with dual-function breakers; the wall devices are standard tamper-resistant receptacles.",
+          "nec_ref": "210.8; Sharma S-07"
+        },
+        {
+          "question": "A Class A GFCI opens the circuit when the difference between outgoing and returning current reaches about:",
+          "choices": [
+            "15 A",
+            "5 A",
+            "6 mA or more",
+            "0.5 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Class A ground-fault protection trips at 6 mA or more — far below what an overload breaker sees, and below a lethal current through a person.",
+          "nec_ref": "Article 100: Ground-Fault Circuit Interrupter"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "210.8",
+        "210.8(A)",
+        "210.8(B)",
+        "210.8(D)",
+        "210.8(F)",
+        "Article 100: Ground-Fault Circuit Interrupter"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-210.8(A)",
@@ -451,8 +914,8 @@
       "article": "210",
       "section": "210.8(A)(10)",
       "title": "Laundry areas — including the dryer receptacle",
-      "plain_explanation": "Item (10) on the dwelling list is laundry areas. Read together with the 2020 voltage range in 210.8(A), it covers the 250V dryer receptacle as well as the 120V washer receptacle. That is the code reason a modern Sharma dryer circuit needs ground-fault protection even though older Florida houses were built without it.",
-      "on_the_job": "Do not treat the dryer as exempt because it is 240V, and do not protect only the washer outlet. Check the whole laundry area, including a laundry closet in a hallway or garage layout.",
+      "plain_explanation": "Item (10) on the dwelling list is laundry areas. Read together with the 2020 voltage range in 210.8(A) — 125 volts through 250 volts, single-phase, 150 volts or less to ground — it covers both receptacles in the laundry:\n• The 120V washer receptacle\n• The 250V dryer receptacle\nThat is the code reason a modern Sharma dryer circuit needs ground-fault protection even though older Florida houses were built without it. 'Laundry area' means the room or closet where the washer and dryer sit: a laundry room, a laundry closet in a hallway, or the laundry corner of a garage. If the receptacle is in that area, it is on the list, whatever the appliance voltage.",
+      "on_the_job": "Do not treat the dryer as exempt because it is 240V, and do not protect only the washer outlet. Check the whole laundry area, including a laundry closet in a hallway or garage layout. On a Sharma job the dryer circuit is the Siemens Q230GF, 30A 2-pole GFCI breaker (S-08), so the protection sits in the panel and the dryer receptacle itself is a standard 4-wire device. The washer receptacle gets its GFCI protection at its breaker the same way. Test both at the breaker before the trim-out is signed off.",
       "sharma_note": "S-08: dryer circuit is a Siemens Q230GF, 30A 2-pole GFCI breaker. That is the locked Sharma catalog number — do not substitute an older dryer breaker note.",
       "figure_idea": "A laundry closet showing a washer receptacle and a 4-wire dryer receptacle, both with a line back to the panel and the 2-pole GFCI breaker highlighted.",
       "related_ids": [
@@ -468,7 +931,95 @@
       "next_id": "C2-210.8(B)",
       "sharma_rule_ids": [
         "S-08"
-      ]
+      ],
+      "rich": 1,
+      "why_it_exists": "A laundry pairs water, grounded metal appliances and a concrete slab floor — the exact setup that makes a ground fault dangerous. A washer or dryer with an internal fault can put voltage on its metal case while a person touches it with wet hands. GFCI protection watches for current leaking outside the circuit and opens it in a fraction of a second, at 120V or at 250V.",
+      "inspection_fails": [
+        "250V dryer receptacle on a standard 2-pole breaker with no GFCI protection.",
+        "Washer receptacle protected, dryer receptacle in the same laundry closet missed.",
+        "Laundry closet in the garage treated as 'not a laundry area' and left unprotected.",
+        "GFCI receptacle installed behind the dryer where it is not readily accessible, instead of protection at the breaker."
+      ],
+      "exam_trap": "The trap answer is 'the dryer is 240V, so GFCI does not apply — only 120V outlets are on the list.' Wrong for 2020 permits: 210.8(A) runs from 125V through 250V, and laundry areas are item (10). The 240V dryer receptacle needs GFCI protection exactly like the washer.",
+      "tables": [
+        {
+          "caption": "The two laundry receptacles",
+          "headers": [
+            "Outlet",
+            "Voltage",
+            "GFCI in 2020?",
+            "Sharma protection"
+          ],
+          "rows": [
+            [
+              "Washer receptacle",
+              "120V",
+              "Yes — (A)(10)",
+              "GFCI protection at the breaker"
+            ],
+            [
+              "Dryer receptacle",
+              "250V",
+              "Yes — (A)(10)",
+              "Siemens Q230GF, 30A 2-pole GFCI (S-08)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-210.8A10-laundry-gfci.svg",
+          "alt": "Laundry closet elevation with a washer and a dryer, a 120 volt washer receptacle and a 250 volt dryer receptacle, both marked GFCI and wired back to a panel where the dryer breaker is a 30 amp 2-pole GFCI.",
+          "caption": "Both laundry receptacles are on the list — washer at 120V, dryer at 250V.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Under NEC 2020, does the 250V dryer receptacle in a laundry room need GFCI protection?",
+          "choices": [
+            "Yes",
+            "No — only 120V receptacles are covered",
+            "No — a 4-wire receptacle is exempt",
+            "No — a dedicated appliance is exempt"
+          ],
+          "answer_index": 0,
+          "explain_plain": "210.8(A) covers 125V through 250V receptacles, and laundry areas are item (10).",
+          "nec_ref": "210.8(A)(10)"
+        },
+        {
+          "question": "Per Sharma S-08, the dryer circuit is protected by:",
+          "choices": [
+            "A GFCI receptacle behind the dryer",
+            "A Siemens Q230GF, 30A 2-pole GFCI breaker",
+            "A standard 2-pole breaker",
+            "An AFCI breaker"
+          ],
+          "answer_index": 1,
+          "explain_plain": "S-08 locks the dryer circuit to the 30A 2-pole GFCI breaker in the panel.",
+          "nec_ref": "210.8(A)(10)"
+        },
+        {
+          "question": "A washer receptacle sits in a laundry closet inside the garage. Under 210.8(A)(10):",
+          "choices": [
+            "It is not in a laundry area",
+            "It needs GFCI protection as a laundry area receptacle",
+            "It needs GFCI only if a sink is present",
+            "It is exempt as a single appliance outlet"
+          ],
+          "answer_index": 1,
+          "explain_plain": "A laundry closet is a laundry area wherever it sits in the dwelling, garage layouts included.",
+          "nec_ref": "210.8(A)(10)"
+        }
+      ],
+      "code_refs": [
+        "210.8(A)",
+        "210.8(A)(10)"
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "uncertain": [],
+      "rich_sources": []
     },
     {
       "id": "C2-210.8(B)",
@@ -586,8 +1137,8 @@
       "article": "210",
       "section": "210.11",
       "title": "Branch circuits a dwelling must have",
-      "plain_explanation": "This section is the circuit-count backbone of a house: enough branch circuits for the load, plus the named dwelling circuits the next pages cover. General circuits are spread so the load is divided, and the required small-appliance, laundry, bathroom, and garage circuits have their own limits on what else they may feed. A panel schedule that only counts spare spaces has not answered this section — the named circuits have to exist and serve the right outlets.\n\nNEC 2023 CHANGE:\n• 210.11: The required 20-amp garage receptacle circuit is no longer limited to the required receptacles, added receptacles can use their own 15-amp-or-larger circuits, and one-bay garages can share it with equipment. The required 20-amp circuit can now serve every garage receptacle, not just the required ones, but still no other kinds of outlets.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Build the panel schedule from this section outward: named circuits first, then general area circuits, then spares. If a named circuit is feeding lights or another room, that is a rough-in error, not a labeling fix.",
+      "plain_explanation": "210.11 is the circuit-count backbone of a dwelling, and it works in layers:\n• Enough circuits for the load. The number of branch circuits is set by the total calculated load and the size of the circuits used, and the load must be spread evenly among them — not stacked on the first few breakers in the panel (210.11(A) and (B)).\n• The named dwelling circuits of 210.11(C). At least two 20 A small-appliance circuits serve kitchen, pantry, breakfast and dining receptacles. At least one 20 A circuit serves the laundry area. At least one 20 A circuit serves bathroom receptacles. And 2020 adds a dedicated 20 A garage circuit for the required garage receptacles. Each named circuit carries tight limits on what else it may feed; the next page works through them.\n• Everything else: general lighting and receptacle circuits, plus the individual circuits other articles require for specific equipment.\nA panel schedule that only counts spare spaces has not answered this section — the named circuits have to exist, be the right size, and serve the right outlets.",
+      "on_the_job": "Build the panel schedule for a Marion Oaks spec house from this section outward. The first lines are the named circuits: two 20 A small-appliance circuits to the kitchen and dining receptacles, one 20 A laundry circuit, one 20 A bathroom circuit and one 20 A garage circuit — five circuits before a single general circuit is counted. Then come the general lighting and receptacle circuits with the load spread evenly, then the individual appliance circuits, then spares. Sharma practice on houses is modest 15 A area circuits for lights, fans and general receptacles, reserving 20 A circuits for the required dedicated loads; on commercial work S-01 reverses that, making 20 A the minimum. If a named circuit is feeding lights or another room, that is a rough-in error, not a labeling fix.",
       "sharma_note": "Sharma often uses modest 15A area circuits for lights, fans, and general receptacles and reserves 20A circuits for the required dedicated loads. That is company practice, not a code minimum — and S-01 reverses it on commercial work.",
       "figure_idea": "A draft panel schedule with the four named dwelling circuits highlighted at the top and general circuits below.",
       "related_ids": [
@@ -612,7 +1163,108 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/210-11",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Houses fail here in a familiar way: one circuit ends up carrying the microwave, the toaster oven and the hair dryer because nobody planned the count. Overloaded circuits run hot inside walls and trip in daily use, and occupants answer with extension cords and space heaters plugged in wherever they fit. Naming the circuits up front — 20 A, and fenced off from other outlets — puts the hardest-used receptacles in the house on circuits built for them.",
+      "exam_trap": "The trap is stretching the single-bathroom allowance: one 20 A circuit may carry one bathroom's receptacles and that same bathroom's other outlets — it may not carry two bathrooms. Second trap: counting spaces. A panel with spare spaces available does not satisfy 210.11 when the laundry receptacle is riding a general circuit; the named circuit has to exist.",
+      "inspection_fails": [
+        "Laundry receptacle on a general lighting circuit — no 20 A laundry branch circuit exists.",
+        "One 20 A circuit serving receptacle outlets in two bathrooms.",
+        "Small-appliance circuit feeding a bedroom or living-room receptacle.",
+        "Garage receptacles tapped off a general circuit; no dedicated 20 A garage circuit (2020).",
+        "Load stacked on a few circuits at the top of the panel with the rest empty — not spread evenly among the branch circuits."
+      ],
+      "tables": [
+        {
+          "caption": "The named circuits (210.11(C), NEC 2020)",
+          "headers": [
+            "Circuit",
+            "Minimum",
+            "Serves"
+          ],
+          "rows": [
+            [
+              "Small-appliance",
+              "2 circuits, 20 A",
+              "Kitchen, pantry, breakfast and dining receptacles"
+            ],
+            [
+              "Laundry",
+              "1 circuit, 20 A",
+              "Laundry area receptacle outlets"
+            ],
+            [
+              "Bathroom",
+              "1 circuit, 20 A",
+              "Bathroom receptacle outlets"
+            ],
+            [
+              "Garage",
+              "1 circuit, 20 A",
+              "Required garage receptacles (added in 2020)"
+            ]
+          ],
+          "note": "Each named circuit has its own limits on other outlets — see the 210.11(C) page. NEC 2023 widens what the garage circuit may serve; see the 2020 vs 2023 box."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-210.11-panel-schedule.svg",
+          "alt": "Panel schedule graphic with the named dwelling circuits of 210.11(C) highlighted in gold at the top: two 20 A small-appliance circuits, a 20 A laundry circuit, a 20 A bathroom circuit and a 20 A garage circuit, above general lighting and receptacle circuits, appliance circuits and spares.",
+          "caption": "Build the schedule named-first: the gold rows are 210.11(C).",
+          "w": 900,
+          "h": 1700
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Minimum number of 20 A small-appliance branch circuits in a dwelling?",
+          "choices": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "answer_index": 1,
+          "explain_plain": "At least two 20 A small-appliance circuits serve the kitchen, pantry, breakfast and dining receptacles.",
+          "nec_ref": "210.11(C)(1)"
+        },
+        {
+          "question": "Under NEC 2020, the required garage receptacle circuit is:",
+          "choices": [
+            "15 A and shared with the garage lights",
+            "20 A, dedicated to the garage receptacles",
+            "20 A, feeding any outlets in the house",
+            "Not required until the house has three bays"
+          ],
+          "answer_index": 1,
+          "explain_plain": "2020 added a dedicated 20 A branch circuit for the required garage receptacles, with only a limited allowance for readily accessible outdoor receptacles.",
+          "nec_ref": "210.11(C)(4)"
+        },
+        {
+          "question": "A panel has six spare spaces, but the laundry receptacle is on a general circuit. Does the installation satisfy 210.11?",
+          "choices": [
+            "Yes — spare capacity is what counts",
+            "Yes, if the general circuit is 20 A",
+            "No — the named laundry circuit must exist and serve the laundry area",
+            "No — dwellings may not have spare spaces"
+          ],
+          "answer_index": 2,
+          "explain_plain": "210.11 is answered by which circuits exist and what they serve, not by counting empty spaces.",
+          "nec_ref": "210.11(C)(2)"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 210.11: The required 20-amp garage receptacle circuit is no longer limited to the required receptacles, added receptacles can use their own 15-amp-or-larger circuits, and one-bay garages can share it with equipment. The required 20-amp circuit can now serve every garage receptacle, not just the required ones, but still no other kinds of outlets.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "210.11",
+        "210.11(A)",
+        "210.11(B)",
+        "210.11(C)",
+        "210.11(C)(1)–(4)",
+        "210.52(G)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-210.11(C)",
@@ -668,8 +1320,8 @@
       "article": "210",
       "section": "210.12",
       "title": "Arc-fault protection",
-      "plain_explanation": "Arc-fault protection guards against damaged, pinched, or deteriorating wiring and loose connections that can arc long before a breaker sees an overload. The protection may be provided by a listed combination-type breaker or by one of the other arrangements the article permits, but the outlets in the listed rooms have to end up protected. Arc-fault and ground-fault protection do different jobs; one does not replace the other.",
-      "on_the_job": "Think of this as a room list applied at the panel. When a plan adds a room or changes a room's use, re-check the list instead of copying the last house's schedule.",
+      "plain_explanation": "Arc-fault protection guards against damaged, pinched or deteriorating wiring and loose connections that can arc — sparking across a gap or through damaged insulation — long before a breaker sees an overload. For dwelling units, 210.12(A) applies to 120 V, single-phase, 15 A and 20 A branch circuits that supply outlets or devices in the listed rooms:\n• Kitchens, family rooms, dining rooms, living rooms, parlors, libraries, dens and bedrooms\n• Sunrooms, recreation rooms, closets, hallways, laundry areas, and similar rooms or areas\nBathrooms, garages and unfinished basements are not on the list, and a 240 V appliance circuit is outside the subsection's stated range. The protection may be provided by a listed combination-type AFCI breaker, or by one of the other arrangements the section permits — what matters is that the outlets in the listed rooms end up protected. Arc-fault and ground-fault protection do different jobs; one does not replace the other.",
+      "on_the_job": "Think of this as a room list applied at the panel. On a Sharma house the question is answered before it is asked: S-07 puts a dual-function breaker on every 120 V circuit, so the kitchen, bedroom, hallway, closet and laundry circuits in a Marion Oaks spec house are AFCI protected without sorting rooms at trim. Where that standard is not in play — a panel change on an older home that keeps the existing panel, for example — mark every 15 A and 20 A 120 V circuit on the schedule with the rooms it serves and test the list against 210.12(A). When a plan adds a room or changes a room's use, re-check the list instead of copying the last house's schedule.",
       "sharma_note": "S-07: Sharma's dual-function breaker provides both arc-fault and ground-fault protection on every 120V circuit, so the room-by-room question is answered at the breaker for standard house work.",
       "figure_idea": "A cutaway wall showing a nail through a cable with a small arc, and the breaker in the panel sensing the arcing signature.",
       "related_ids": [
@@ -686,7 +1338,103 @@
       "next_id": "C2-210.12(A)",
       "sharma_rule_ids": [
         "S-07"
-      ]
+      ],
+      "why_it_exists": "An arc at a loose terminal, or where a nail has nicked a cable, can glow hot enough to ignite wood, bedding or insulation while drawing less current than the load itself — far below the level that trips a standard breaker. The AFCI watches for the electrical signature of arcing and opens the circuit before the arc becomes a fire. That is why the room list covers the rooms where people sleep, sit and store things.",
+      "inspection_fails": [
+        "Kitchen small-appliance circuit on a standard breaker. Kitchens are on the 210.12(A) list.",
+        "Hallway or closet circuit missed because the plan called the space 'storage.' Closets and similar areas are listed.",
+        "AFCI breaker swapped for a standard breaker after nuisance-trip complaints, with no correction of the arcing fault it was reporting.",
+        "GFCI-only breaker installed where AFCI was required, 'because it also protects.' Ground-fault protection is not arc-fault protection.",
+        "Bedroom circuit protected only at a receptacle device that is not part of an arrangement 210.12 permits for the wiring method used."
+      ],
+      "exam_trap": "The trap is the bathroom: it is on the GFCI list, so it feels like it belongs on every protection list — but 210.12(A) does not list bathrooms, garages or unfinished basements. The reverse trap fails answers too: a GFCI breaker by itself does not satisfy an AFCI requirement. The two protections watch for different failures.",
+      "tables": [
+        {
+          "caption": "210.12(A) — which rooms (NEC 2020, dwellings)",
+          "headers": [
+            "On the list",
+            "Not on the list"
+          ],
+          "rows": [
+            [
+              "Bedrooms",
+              "Bathrooms"
+            ],
+            [
+              "Kitchens",
+              "Garages"
+            ],
+            [
+              "Living, family and dining rooms",
+              "Unfinished basements"
+            ],
+            [
+              "Hallways and closets",
+              "240 V appliance circuits"
+            ],
+            [
+              "Laundry areas",
+              "—"
+            ]
+          ],
+          "note": "The rule applies to 120 V, single-phase, 15 A and 20 A branch circuits supplying outlets or devices in the listed rooms."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-210.12-afci-wall.svg",
+          "alt": "Cutaway wall with a nail through a cable and an arc at the damage point, the cable running to a panel where an AFCI breaker senses the arcing signature, above a two-column list of rooms that are on and off the 210.12(A) list.",
+          "caption": "The arc a breaker cannot see — and the rooms where AFCI is required.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Which room is NOT on the 210.12(A) AFCI list for dwellings?",
+          "choices": [
+            "Bedroom",
+            "Kitchen",
+            "Bathroom",
+            "Hallway"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Bathrooms are on the GFCI list, not the AFCI list. Bedrooms, kitchens and hallways are all listed in 210.12(A).",
+          "nec_ref": "210.12(A)"
+        },
+        {
+          "question": "Which circuits does 210.12(A) cover?",
+          "choices": [
+            "All branch circuits in the dwelling",
+            "120 V, single-phase, 15 A and 20 A circuits in the listed rooms",
+            "240 V appliance circuits",
+            "Service conductors"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The subsection is limited by voltage, phase, rating and room list — all four have to fit.",
+          "nec_ref": "210.12(A)"
+        },
+        {
+          "question": "A bedroom circuit is protected by a GFCI breaker only. Does it meet 210.12?",
+          "choices": [
+            "Yes — GFCI covers every fault type",
+            "Yes, if the receptacles are tamper-resistant",
+            "No — GFCI and AFCI do different jobs; the circuit needs AFCI protection",
+            "No — bedrooms do not need protection"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Ground-fault protection does not detect arcing. A dual-function breaker provides both, which is Sharma's S-07 standard.",
+          "nec_ref": "210.12"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "210.12",
+        "210.12(A)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-210.12(A)",
@@ -694,8 +1442,8 @@
       "article": "210",
       "section": "210.12(A)",
       "title": "Rooms where dwelling circuits need AFCI protection",
-      "plain_explanation": "For dwellings, this subsection applies to 120V, single-phase, 15A and 20A branch circuits supplying outlets or devices in the listed rooms and areas — kitchens, family rooms, dining rooms, living rooms, parlors, libraries, dens, bedrooms, sunrooms, recreation rooms, closets, hallways, laundry areas, and similar rooms or areas. A bathroom, garage, or unfinished basement is not on this list. The rating limits matter too: a 240V appliance circuit is outside this subsection's stated range.",
-      "on_the_job": "On the panel schedule, mark every 15A and 20A 120V circuit with the rooms it serves, then test that list against this subsection. Mixed circuits that touch a listed room need the protection for the circuit.",
+      "plain_explanation": "For dwellings, this subsection applies to 120V, single-phase, 15A and 20A branch circuits supplying outlets or devices in the listed rooms and areas:\n• Kitchens\n• Family rooms\n• Dining rooms\n• Living rooms\n• Parlors\n• Libraries\n• Dens\n• Bedrooms\n• Sunrooms\n• Recreation rooms\n• Closets\n• Hallways\n• Laundry areas\n• Similar rooms or areas\nRead the list by what is missing: a bathroom, a garage, and an unfinished basement are not on it, so a circuit that serves only those areas is outside this subsection. The rating limits matter too: a 240V appliance circuit is outside this subsection's stated range. The protection may be a listed combination-type AFCI breaker or one of the other arrangements 210.12 permits, but every outlet and device a covered circuit supplies in a listed room must end up protected.",
+      "on_the_job": "On the panel schedule, mark every 15A and 20A 120V circuit with the rooms it serves, then test that list against this subsection. Mixed circuits that touch a listed room need the protection for the whole circuit. On a Marion Oaks rough-in that means the bedroom, living and family room circuits, the hall and closet lighting, and the laundry circuit all land on AFCI protection — while the bathroom circuit, the garage circuit, and the 240V range and dryer circuits are not covered by this subsection. Sharma's S-07 dual-function breakers cover the 120V list by default, so the schedule check is a confirmation, not a redesign.",
       "sharma_note": "S-07 already puts a dual-function breaker on every 120V circuit, which is stricter and simpler than sorting rooms at trim. Keep it that way unless Sanjay directs otherwise on a specific job.",
       "figure_idea": "",
       "related_ids": [
@@ -710,7 +1458,114 @@
       "next_id": "C2-210.12(D)",
       "sharma_rule_ids": [
         "S-07"
-      ]
+      ],
+      "why_it_exists": "Most house fires of electrical origin start with arcing: a cord pinched behind furniture, a staple driven too tight, a loose connection heating and spitting sparks into dust and framing. A standard breaker sees none of it, because a series arc can draw less current than the circuit rating. AFCI protection watches the waveform for the signature of arcing and opens the circuit before the arc becomes a fire.",
+      "exam_trap": "The trap answer adds the bathroom and the garage to the AFCI list by mixing it up with the GFCI list in 210.8. The two lists are different: bathrooms and garages need GFCI protection, but they are not on the 210.12(A) AFCI list. Second trap: protecting only the bedroom receptacles on a circuit that also feeds the hall light. If any part of the circuit serves a listed room, the circuit needs the protection.",
+      "inspection_fails": [
+        "Bedroom circuit landed on a standard breaker — no AFCI protection at final.",
+        "Laundry-area circuit missed because the room was treated as a utility space, not a listed area.",
+        "Remodel circuit extended well past 6 ft with no AFCI protection added (210.12(D)).",
+        "AFCI breaker protecting only part of a circuit that also serves a listed room from an unprotected tap."
+      ],
+      "tables": [
+        {
+          "caption": "On the list, off the list (NEC 2020)",
+          "headers": [
+            "Room or area",
+            "AFCI under 210.12(A)?"
+          ],
+          "rows": [
+            [
+              "Kitchens, family, dining, living rooms",
+              "Yes"
+            ],
+            [
+              "Bedrooms, dens, parlors, libraries, sunrooms",
+              "Yes"
+            ],
+            [
+              "Closets and hallways",
+              "Yes"
+            ],
+            [
+              "Laundry areas",
+              "Yes"
+            ],
+            [
+              "Bathrooms",
+              "No - not on this list"
+            ],
+            [
+              "Garages",
+              "No - not on this list"
+            ],
+            [
+              "Unfinished basements",
+              "No - not on this list"
+            ],
+            [
+              "240V appliance circuits",
+              "No - outside the rating range"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-210.12A-room-map.svg",
+          "alt": "House plan with the rooms on the 210.12(A) AFCI list shaded gold - kitchen, dining, family, living, bedroom, laundry, hallways and closets - and the bathroom and garage left white as not listed.",
+          "caption": "The AFCI room list as a floor plan: gold is on it, white is not.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Which room is NOT on the 210.12(A) AFCI list?",
+          "choices": [
+            "Bedroom",
+            "Laundry area",
+            "Bathroom",
+            "Hallway"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Bathrooms are on the GFCI list in 210.8, not on the AFCI list in 210.12(A).",
+          "nec_ref": "210.12(A)"
+        },
+        {
+          "question": "A 120V, 20A circuit feeds a family room and one bathroom outlet. The circuit needs:",
+          "choices": [
+            "AFCI protection, because it serves a listed room",
+            "AFCI only on the bathroom outlet",
+            "GFCI instead of AFCI",
+            "No protection - mixed circuits are exempt"
+          ],
+          "answer_index": 0,
+          "explain_plain": "Protection follows the circuit. If any part of it serves a listed room, the circuit needs AFCI protection.",
+          "nec_ref": "210.12(A)"
+        },
+        {
+          "question": "Which circuit is outside the stated range of 210.12(A)?",
+          "choices": [
+            "120V, 15A bedroom circuit",
+            "120V, 20A laundry circuit",
+            "240V dryer circuit",
+            "120V, 20A kitchen circuit"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The subsection covers 120V, single-phase, 15A and 20A branch circuits only.",
+          "nec_ref": "210.12(A)"
+        }
+      ],
+      "code_refs": [
+        "210.12(A)",
+        "210.12(D)",
+        "210.8"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C2-210.12(D)",
@@ -1150,8 +2005,8 @@
       "article": "210",
       "section": "210.52(F)",
       "title": "Laundry receptacles",
-      "plain_explanation": "At least one receptacle is required in the laundry area of a dwelling, and it is served by the laundry branch circuit covered in 210.11(C)(2). A laundry closet counts the same as a laundry room for this placement rule. The dryer receptacle is a separate, larger outlet — this subsection is about the general laundry receptacle, usually the washer.",
-      "on_the_job": "If the washer location moves on a plan revision, move this receptacle with it and keep it on the laundry circuit. A receptacle borrowed from an adjacent hallway circuit fails both placement and circuit rules.",
+      "plain_explanation": "In a dwelling unit, at least one receptacle outlet must be installed in the area designated for laundry equipment — a laundry room, a laundry closet, or the utility corner where the machines sit. A laundry closet counts the same as a laundry room for this placement rule.\n• The circuit: the receptacle is served by the laundry branch circuit of 210.11(C)(2) — a 20 A circuit that supplies the laundry receptacle outlet(s) and no other outlets.\n• The placement: an appliance receptacle outlet installed for a specific appliance, such as the washer, must be within 6 ft of the intended location of the appliance (210.50(C)).\n• The exception: in a multifamily building where laundry facilities are provided on the premises for use by all occupants, the receptacle is not required inside each dwelling unit.\nThe 240 V dryer receptacle is a separate, larger outlet on its own circuit. It is not the receptacle this subsection requires — this one is the general laundry receptacle, usually the washer's.",
+      "on_the_job": "Marion Oaks spec house, laundry room between the garage and the kitchen. One duplex receptacle goes on the wall behind the washer, about 2 ft from the machine's intended spot — well inside the 6 ft limit — on the dedicated 20 A laundry circuit, protected by a dual-function breaker under S-07, which answers both the GFCI and the AFCI listing for the area. The dryer sits beside it on its own 240 V circuit. On the plan revision that swaps the machines to the opposite wall, the receptacle moves with the washer and stays on the laundry circuit. A receptacle borrowed from the adjacent hallway circuit fails both the placement rule and the circuit rule, so it never counts.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1163,7 +2018,122 @@
       "verified": true,
       "prev_id": "C2-210.52(E)",
       "next_id": "C2-210.52(G)",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "The washer is a motor load that runs an hour at a time in a room with water lines, a floor drain and a slab floor. A dedicated 20 A circuit keeps that steady load from sharing a circuit with whatever else gets plugged in, and the 6 ft placement rule means the machine's own cord reaches the receptacle — not an extension cord run across a wet floor. Laundry areas sit on both protection lists for the same reason: GFCI in 210.8(A) and AFCI in 210.12(A).",
+      "inspection_fails": [
+        "No receptacle in the laundry area at all — the hallway receptacle outside the door offered as 'close enough.' It is in the wrong area and on the wrong circuit.",
+        "Laundry receptacle tapped off the bathroom or hallway circuit instead of the 20 A laundry circuit.",
+        "Laundry circuit also feeding a garage or outdoor receptacle. 210.11(C)(2) allows no other outlets.",
+        "Washer receptacle left more than 6 ft from the machine after a plan revision moved the washer and dryer to the opposite wall.",
+        "The 240 V dryer receptacle counted as the required 210.52(F) laundry receptacle."
+      ],
+      "exam_trap": "The trap answer is that the 240 V dryer receptacle satisfies 210.52(F). It does not: the subsection requires the general laundry receptacle, and 210.11(C)(2) requires that receptacle on the 20 A laundry circuit. The dryer outlet is a different outlet on a different circuit.",
+      "tables": [
+        {
+          "caption": "The laundry package at a glance (NEC 2020)",
+          "headers": [
+            "Item",
+            "Rule",
+            "Section"
+          ],
+          "rows": [
+            [
+              "Required receptacle",
+              "At least one, in the laundry area",
+              "210.52(F)"
+            ],
+            [
+              "Circuit",
+              "20 A, laundry receptacles only — no other outlets",
+              "210.11(C)(2)"
+            ],
+            [
+              "Placement",
+              "Within 6 ft of the appliance's intended location",
+              "210.50(C)"
+            ],
+            [
+              "GFCI",
+              "Laundry areas are a listed location",
+              "210.8(A)"
+            ],
+            [
+              "AFCI",
+              "Laundry areas are a listed room",
+              "210.12(A)"
+            ],
+            [
+              "Dryer receptacle",
+              "Separate 240 V outlet — not the (F) receptacle",
+              "210.52(F)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-210.52F-laundry.svg",
+          "alt": "Plan of a laundry room with the washer and dryer, the required receptacle behind the washer inside the 6 ft limit, a one-line showing the dedicated 20 A laundry circuit, and a hallway receptacle marked as not counting.",
+          "caption": "One receptacle in the laundry area, on the laundry circuit, within 6 ft of the washer.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Which circuit must serve the required dwelling laundry receptacle?",
+          "choices": [
+            "Any 15 A general lighting circuit",
+            "The 20 A laundry branch circuit",
+            "The bathroom receptacle circuit",
+            "The 240 V dryer circuit"
+          ],
+          "answer_index": 1,
+          "explain_plain": "210.11(C)(2) requires a 20 A laundry circuit that supplies the laundry receptacle outlet(s) and no other outlets.",
+          "nec_ref": "210.11(C)(2)"
+        },
+        {
+          "question": "Maximum distance from the washer's intended location to its receptacle outlet?",
+          "choices": [
+            "4 ft",
+            "6 ft",
+            "10 ft",
+            "No limit"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Appliance receptacle outlets are installed within 6 ft of the intended location of the appliance.",
+          "nec_ref": "210.50(C)"
+        },
+        {
+          "question": "Which outlet satisfies 210.52(F)?",
+          "choices": [
+            "The 240 V dryer receptacle",
+            "A hallway receptacle just outside the laundry door",
+            "A receptacle in the laundry closet, on the laundry circuit",
+            "A garage receptacle on the same wall"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The receptacle must be in the laundry area — a laundry closet counts — and on the laundry branch circuit.",
+          "nec_ref": "210.52(F)"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "210.52(F)",
+        "210.11(C)(2)",
+        "210.50(C)",
+        "210.8(A)",
+        "210.12(A)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "Appliance receptacle outlets within 6 ft of the intended appliance location (210.50(C)); laundry receptacle on a dedicated 20 A circuit with no other outlets",
+          "source": "Miami-Dade County, Electrical Inspection Checklist",
+          "url": "http://www.miamidade.gov/permits/library/checklists/electrical-inspection.pdf"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C2-210.52(G)",
@@ -1171,8 +2141,8 @@
       "article": "210",
       "section": "210.52(G)",
       "title": "Garage receptacles — one per vehicle bay",
-      "plain_explanation": "In the 2020 edition, a dwelling garage with power needs at least one receptacle in each vehicle bay, placed no more than 5.5 ft above the floor. Attached and detached garages are both addressed, and garages without electric power are outside the requirement. The bay rule replaced the older single-garage-receptacle habit — a three-bay garage is not finished with one receptacle by the door.\n\nNEC 2023 CHANGE:\n• 210.52(G): Clarified that the receptacle provided for premises security systems did not meet the receptacle requirements of210.52(G).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Count bays from the door layout on the plan, not from how the owner says they will park. Put one receptacle in each bay at rough-in; adding the third bay's receptacle at trim is a drywall patch.",
+      "plain_explanation": "In the 2020 edition, a dwelling garage with electric power needs at least one receptacle in each vehicle bay, placed no more than 5.5 ft above the floor. Count bays, not garages: the bay rule replaced the older single-garage-receptacle habit, so a three-bay garage is not finished with one receptacle by the door. Attached and detached garages are both covered, and a garage with no electric power is outside the requirement. Subsection (G) — Basements, Garages, and Accessory Buildings — carries the matching receptacle minimums for unfinished basements and accessory buildings in the same place. Two companion rules ride along: the required garage receptacles are served by the dedicated 20 A garage circuit of 210.11(C)(4), and garage receptacles need GFCI protection under 210.8(A)(2).",
+      "on_the_job": "Count bays from the door layout on the plan, not from how the owner says they will park. Three overhead doors in a Marion Oaks garage means three bays and three receptacles at rough-in — Sharma sets them at 4 ft above the slab, inside the 5.5 ft limit — all on the dedicated 20 A garage circuit, with GFCI protection at the breaker. Put one receptacle in each bay at rough-in; adding the third bay's receptacle at trim is a drywall patch.",
       "sharma_note": "",
       "figure_idea": "A three-bay garage in plan view with one receptacle symbol inside each bay outline and a 5.5 ft height note.",
       "related_ids": [
@@ -1189,12 +2159,105 @@
       "nec2023_change": [
         {
           "section": "210.52(G)",
-          "change": "Clarified that the receptacle provided for premises security systems did not meet the receptacle requirements of210.52(G).",
+          "change": "Clarified that the receptacle provided for premises security systems did not meet the receptacle requirements of 210.52(G).",
           "source": "Carosella/NFPA-based 2023 NEC change workbook: 210.52(G) Basements, Garages, and Accessory Buildings",
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Every bay is a parking space and a workplace at once: battery chargers, air compressors, freezers and the tools that come out on weekends. One receptacle by the door meant extension cords run across bays, under tires and through door tracks — cords get pinched, driven over and overloaded. A receptacle in each bay puts the outlet where the vehicle and the work are, and the 5.5 ft cap keeps it a working receptacle within reach, not the ceiling outlet installed for the door opener.",
+      "inspection_fails": [
+        "One receptacle by the pedestrian door for a three-bay garage. The rule is one per vehicle bay.",
+        "Ceiling receptacle for the door opener counted as a bay receptacle. Above 5.5 ft, it does not count.",
+        "Security-system receptacle counted as the bay receptacle — the very practice the NEC 2023 clarification calls out.",
+        "Garage receptacles tapped off a general lighting circuit instead of the dedicated 20 A garage circuit.",
+        "Garage receptacles with no GFCI protection."
+      ],
+      "exam_trap": "The trap answer is one receptacle for the whole garage — the pre-2020 habit this rule replaced. The count follows the bays: three bays, three receptacles. Close behind it is counting the door-opener receptacle on the ceiling, which sits above the 5.5 ft limit and never counts.",
+      "tables": [
+        {
+          "caption": "Receptacles required by 210.52(G) (NEC 2020)",
+          "headers": [
+            "Garage",
+            "Receptacles required"
+          ],
+          "rows": [
+            [
+              "1 vehicle bay",
+              "1"
+            ],
+            [
+              "2 vehicle bays",
+              "2"
+            ],
+            [
+              "3 vehicle bays",
+              "3"
+            ],
+            [
+              "No electric power",
+              "Rule does not apply"
+            ]
+          ],
+          "note": "Each required receptacle sits no more than 5.5 ft above the floor, on the dedicated 20 A garage circuit (210.11(C)(4)), with GFCI protection (210.8(A)(2))."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-210.52G-garage-bays.svg",
+          "alt": "Plan of a three-bay garage with one receptacle in each bay, and an elevation showing a bay receptacle dimensioned at no more than 5.5 ft above the floor while the ceiling door-opener outlet is marked as not counting.",
+          "caption": "One receptacle per bay, no more than 5.5 ft above the floor.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A dwelling garage has three vehicle bays. Minimum receptacles under 210.52(G)?",
+          "choices": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "answer_index": 2,
+          "explain_plain": "At least one receptacle in each vehicle bay — three bays need three.",
+          "nec_ref": "210.52(G)"
+        },
+        {
+          "question": "Maximum height above the floor for a required garage bay receptacle?",
+          "choices": [
+            "4 ft",
+            "5.5 ft",
+            "6.5 ft",
+            "No limit"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The bay receptacle must be placed no more than 5.5 ft above the floor, which is why the ceiling opener outlet never counts.",
+          "nec_ref": "210.52(G)"
+        },
+        {
+          "question": "Which receptacle does NOT satisfy a vehicle bay?",
+          "choices": [
+            "Wall receptacle at 4 ft inside the bay",
+            "Receptacle in a detached garage bay",
+            "Receptacle in an attached garage bay",
+            "Ceiling receptacle installed for the door opener"
+          ],
+          "answer_index": 3,
+          "explain_plain": "The opener receptacle sits above the 5.5 ft limit; each bay needs its own receptacle within the limit.",
+          "nec_ref": "210.52(G)"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 210.52(G): Clarified that the receptacle provided for premises security systems did not meet the receptacle requirements of 210.52(G).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "210.52(G)",
+        "210.11(C)(4)",
+        "210.8(A)(2)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-210.52(H)",
@@ -1202,8 +2265,8 @@
       "article": "210",
       "section": "210.52(H)",
       "title": "Hallway receptacles",
-      "plain_explanation": "A dwelling hallway that is 10 ft or longer needs at least one receptacle. Length is measured along the centerline of the hallway, following its turns, without going through a doorway into another room. Short halls need none under this subsection, which is why the measurement — not a guess at 'about ten feet' — decides it.",
-      "on_the_job": "Run the tape down the centerline and around the bend of an L-shaped hall before deciding. Vacuum and night-light use is exactly what this receptacle is for.",
+      "plain_explanation": "A dwelling hallway that is 10 ft or longer needs at least one receptacle outlet. The rule is 210.52(H), and the measurement decides it: length is measured along the centerline of the hallway, following its turns, without passing through a doorway into another room.\n• Measure along the centerline, around bends — an L-shaped or U-shaped hall adds its legs together\n• Do not measure through a doorway: length inside the rooms at each end does not count\n• 10 ft or more: at least one receptacle. Under 10 ft: none required by this subsection\n• The receptacle goes in the hallway itself, not in a room off it\nShort halls need none under this subsection, which is why the measurement — not a guess at 'about ten feet' — decides it. One receptacle is the minimum; a long hall can take more, and a floor receptacle counts toward a required outlet only when it is within 18 in of the wall (210.52(A)(3)).",
+      "on_the_job": "L-shaped hall in a Marion Oaks ranch: 7 ft from the entry to the bend, 5 ft from the bend to the last bedroom door — 12 ft along the centerline, so it needs one receptacle even though the straight-line distance is shorter. Run the tape down the centerline and around the bend of an L-shaped hall before deciding. Set the receptacle near the middle of the run so a vacuum cord reaches both ends. Vacuum and night-light use is exactly what this receptacle is for. The straight 9 ft hall in the same plan needs none.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1215,7 +2278,102 @@
       "verified": true,
       "prev_id": "C2-210.52(G)",
       "next_id": "C2-210.52(I)",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "rich": 1,
+      "why_it_exists": "Hallways are where the vacuum, the night-light and the phone charger land, and they are also the walking path. Without a receptacle, the cord comes from a bedroom or living room outlet, crosses a doorway, and becomes a trip hazard and a damaged-cord hazard in the dark. The 10 ft line keeps short halls simple while making sure a long hall is never a cord run.",
+      "inspection_fails": [
+        "No receptacle in an L-shaped hallway that measures 12 ft along the centerline; the crew measured corner to corner and called it 9 ft.",
+        "Hallway length figured through the doorway into the bedroom to reach 10 ft, with the only receptacle inside the bedroom.",
+        "The one hallway receptacle is a floor receptacle more than 18 in from the wall, counted as the required outlet.",
+        "Receptacle for a 14 ft hall placed in the laundry room off the hall instead of in the hallway itself."
+      ],
+      "exam_trap": "The wrong answer measures the hall straight through the bedroom doorway, or corner to corner as the crow flies, and calls a 12 ft L-shaped hall 'about 9 ft, no receptacle needed.' The tape follows the centerline and stops at doorways: legs add up, room length does not.",
+      "tables": [
+        {
+          "caption": "Measuring the hallway",
+          "headers": [
+            "Hall",
+            "Centerline length",
+            "Receptacle?"
+          ],
+          "rows": [
+            [
+              "Straight hall",
+              "9 ft",
+              "No — under 10 ft"
+            ],
+            [
+              "Straight hall",
+              "10 ft",
+              "Yes — at least 1"
+            ],
+            [
+              "L-shaped hall",
+              "7 ft + 5 ft = 12 ft",
+              "Yes — at least 1"
+            ],
+            [
+              "Hall plus a room through a doorway",
+              "Room length does not count",
+              "Measure the hall only"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-210.52H-hallway.svg",
+          "alt": "Plan of an L-shaped hallway with a dashed centerline tape path dimensioned 7 ft plus 5 ft equals 12 ft, one required receptacle marked, and a straight 9 ft hall below that needs none.",
+          "caption": "Measure the hall along its centerline: legs add, doorways stop the tape.",
+          "w": 900,
+          "h": 1250
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "An L-shaped hallway measures 7 ft to the bend and 5 ft past it along the centerline. Is a receptacle required?",
+          "choices": [
+            "No — each leg is under 10 ft",
+            "Yes — 12 ft total along the centerline",
+            "Only if the hall is over 15 ft",
+            "Only in a commercial building"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The legs add along the centerline: 7 ft + 5 ft = 12 ft, which is 10 ft or more.",
+          "nec_ref": "210.52(H)"
+        },
+        {
+          "question": "How is hallway length measured for 210.52(H)?",
+          "choices": [
+            "Along the baseboard",
+            "Straight line, corner to corner",
+            "Along the centerline, without passing through a doorway",
+            "Through the doorway into the next room"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The tape follows the centerline around turns and stops at doorways.",
+          "nec_ref": "210.52(H)"
+        },
+        {
+          "question": "A straight hallway is exactly 10 ft long. Fewest receptacles required?",
+          "choices": [
+            "0",
+            "1",
+            "2",
+            "One per 6 ft of hall"
+          ],
+          "answer_index": 1,
+          "explain_plain": "At 10 ft or longer, at least one receptacle outlet is required.",
+          "nec_ref": "210.52(H)"
+        }
+      ],
+      "code_refs": [
+        "210.52(H)",
+        "210.52(A)(3)"
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "uncertain": [],
+      "rich_sources": []
     },
     {
       "id": "C2-210.52(I)",
@@ -1223,8 +2381,8 @@
       "article": "210",
       "section": "210.52(I)",
       "title": "Foyer receptacles",
-      "plain_explanation": "A foyer that is not part of a hallway and is greater than 60 sq ft has its own receptacle rule: a receptacle outlet is required in each wall space 3 ft or more in width, on walls not interrupted by door openings, other openings, or similar architectural features. A smaller foyer, or a foyer that forms part of a hallway, is judged under the hallway rule in 210.52(H) or the spacing rule for the room it opens into instead.",
-      "on_the_job": "Measure the foyer as its own space when it is separated by doors or cased openings. Do not count a wall segment that is mostly doorway as usable wall space.",
+      "plain_explanation": "Most entries are judged by the hallway rule or by the spacing rule of the room they open into, but a large foyer has its own rule. This subsection applies when both are true:\n• The foyer is not part of a hallway\n• The foyer is greater than 60 sq ft\nThen a receptacle outlet is required in each wall space 3 ft or more in width, on walls not interrupted by door openings, other openings, or similar architectural features. A wall that is mostly front door creates no wall space, and a stub of wall under 3 ft wide needs no receptacle under this subsection. A smaller foyer, or a foyer that forms part of a hallway, is judged under the hallway rule in 210.52(H) — a hallway 10 ft or longer needs at least one receptacle — or under the spacing rule for the room it opens into instead.",
+      "on_the_job": "Marion Oaks two-story plan: the foyer is 8 ft by 9 ft — 72 sq ft — and a cased opening separates it from the hall, so 210.52(I) applies, not the hallway rule. Walk the walls at rough-in. The long wall beside the stairs is unbroken, so it takes a receptacle. The wall piece between the closet door and the corner is 3 ft wide, exactly at the minimum, so it takes one too. The wall taken up by the front door and its sidelight is interrupted and needs none, and the 2 ft stub beside the cased opening needs none. Measure the foyer as its own space while the framing is open, when the wall spaces can still be proved with a tape.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1235,7 +2393,93 @@
       "verified": true,
       "prev_id": "C2-210.52(H)",
       "next_id": "C2-210.63",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "A large foyer works like a room: console tables, lamps, a phone charger and the vacuum all land there. With no receptacle on a usable wall, the answer is a cord across the entry — the highest-traffic walking path in the house. The 60 sq ft threshold keeps this rule off the small entries that the hallway rule already handles.",
+      "exam_trap": "The trap answer spaces the foyer like a living room under 210.52(A), measuring 6 ft from every point along the wall. A qualifying foyer is not spaced that way: each wall space 3 ft or wider gets a receptacle, full stop. The second trap runs the other way — applying this subsection to a 50 sq ft entry. At 60 sq ft or less, or where the foyer is part of a hallway, 210.52(I) never applies.",
+      "inspection_fails": [
+        "Foyer over 60 sq ft with no receptacle on a wall space 3 ft or wider.",
+        "Receptacle placed on a wall segment that is mostly door opening, while the qualifying wall space got none.",
+        "Foyer receptacles skipped because the entry was treated as part of the hallway, without measuring either space."
+      ],
+      "tables": [
+        {
+          "caption": "Which rule judges the entry?",
+          "headers": [
+            "Situation",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "Foyer over 60 sq ft, not part of a hallway",
+              "210.52(I): a receptacle in each wall space 3 ft or wider"
+            ],
+            [
+              "Hallway 10 ft or longer",
+              "210.52(H): at least one receptacle"
+            ],
+            [
+              "Foyer 60 sq ft or less, or part of a hallway",
+              "Hallway rule or the spacing rule of the room it opens into"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-210.52I-foyer.svg",
+          "alt": "Plan of an 8 ft by 9 ft foyer, 72 sq ft, drawn to scale, with receptacles on the unbroken wall, on a 3 ft wall space and on the wall beside the front door, and a 2 ft stub marked as needing none.",
+          "caption": "A 72 sq ft foyer: every wall space 3 ft or wider gets a receptacle.",
+          "w": 900,
+          "h": 1240
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A foyer is 72 sq ft, is not part of a hallway, and has an unbroken wall space 4 ft wide. A receptacle on that wall space is:",
+          "choices": [
+            "Required by 210.52(I)",
+            "Not required - foyers use the 6 ft rule",
+            "Required only if the wall is 6 ft or wider",
+            "Required only on one wall of the foyer"
+          ],
+          "answer_index": 0,
+          "explain_plain": "Over 60 sq ft and not part of a hallway, each wall space 3 ft or wider needs a receptacle outlet.",
+          "nec_ref": "210.52(I)"
+        },
+        {
+          "question": "A foyer measures 55 sq ft. Which rule judges its receptacles?",
+          "choices": [
+            "210.52(I)",
+            "The hallway rule, or the spacing rule for the room it opens into",
+            "No receptacle rule covers a foyer",
+            "210.52(I), because every foyer counts"
+          ],
+          "answer_index": 1,
+          "explain_plain": "210.52(I) starts above 60 sq ft. A smaller foyer falls back to the hallway rule or the adjoining room's rule.",
+          "nec_ref": "210.52(I), 210.52(H)"
+        },
+        {
+          "question": "In a qualifying foyer, the smallest wall space that needs a receptacle is:",
+          "choices": [
+            "2 ft wide",
+            "3 ft wide",
+            "4 ft wide",
+            "6 ft wide"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Each wall space 3 ft or more in width gets a receptacle outlet.",
+          "nec_ref": "210.52(I)"
+        }
+      ],
+      "code_refs": [
+        "210.52(I)",
+        "210.52(H)",
+        "210.52(A)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C2-210.63",
@@ -1243,8 +2487,8 @@
       "article": "210",
       "section": "210.63",
       "title": "A service receptacle near heating and air-conditioning equipment",
-      "plain_explanation": "Equipment that needs servicing needs a receptacle close to it: a 125V, 15A or 20A receptacle on the same level and within 25 ft of heating, air-conditioning, and refrigeration equipment. It may not be wired to the load side of the equipment disconnect, so it stays live for a work light and tools while the unit is shut off. Rooftop and attic equipment are the cases Sharma meets most.",
-      "on_the_job": "At rough-in, locate the air handler and condenser, then place the receptacle and prove the 25 ft with a tape — following the access path, not through a wall. Keep it off the equipment circuit's load side.",
+      "plain_explanation": "For equipment that needs servicing, this section puts a receptacle within reach of it. The receptacle must be:\n• Rated 125V, single-phase, 15A or 20A\n• In an accessible location\n• On the same level as the equipment\n• Within 25 ft of the equipment\n• Not connected to the load side of the equipment disconnecting means\nThe last point is the one that gets missed. If the receptacle dies with the disconnect, the tech is working dark with a dead drop light exactly when the unit is open. Wired ahead of the disconnect, the receptacle stays live for a work light and tools while the equipment itself is shut off. Rooftop units and attic air handlers are the cases Sharma meets most: both are places where the nearest house receptacle is far away, on another level, or both.",
+      "on_the_job": "Marion Oaks spec house, air handler in the attic over the garage. At rough-in, set the service receptacle on a joist beside the attic access, on the same attic level as the handler and 12 ft from it along the walkway boards — inside the 25 ft limit with room to spare. Feed it from a house circuit, never from the load side of the handler disconnect. The condenser outside gets the same check: a receptacle on the house wall 8 ft from the pad, at the same grade level, tape-measured along the wall and the access path, not through the wall. Prove both distances with a tape before the inspector does.",
       "sharma_note": "",
       "figure_idea": "An attic air handler with a receptacle on a joist nearby, a 25 ft arc drawn around the unit, and the disconnect shown with the receptacle wired ahead of it.",
       "related_ids": [
@@ -1258,7 +2502,97 @@
       "verified": true,
       "prev_id": "C2-210.52(I)",
       "next_id": "C2-210.70",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "A technician troubleshooting an air handler needs light and power for meters, a vacuum pump and a drill. Without a receptacle nearby, the answer is an extension cord through a scuttle hole or across a roof — a trip hazard and a damaged-cord hazard — or working in the dark. The same-level, 25 ft limit keeps the cord short and on the same working surface as the unit being serviced.",
+      "exam_trap": "The trap answer puts the receptacle on the load side of the equipment disconnect, 'so it shuts off with the unit for safety.' That is exactly backwards: 210.63 forbids the load-side connection so the receptacle stays live while the equipment is off. Second trap: measuring 25 ft straight through a wall, or down from a roof edge to a ground outlet. The receptacle must be on the same level, so a ground-level outlet below a rooftop unit never counts.",
+      "inspection_fails": [
+        "No receptacle within 25 ft of the rooftop unit or the attic air handler at final inspection.",
+        "Receptacle wired to the load side of the equipment disconnect, so it dies when the unit is shut off.",
+        "Receptacle on a different level: a garage outlet claimed for attic equipment.",
+        "Receptacle installed but blocked behind the air handler or duct, where it is not accessible."
+      ],
+      "tables": [
+        {
+          "caption": "The 210.63 rule at a glance",
+          "headers": [
+            "Point",
+            "Requirement"
+          ],
+          "rows": [
+            [
+              "Rating",
+              "125V, single-phase, 15A or 20A"
+            ],
+            [
+              "Location",
+              "Accessible, same level as the equipment"
+            ],
+            [
+              "Distance",
+              "Within 25 ft of the equipment"
+            ],
+            [
+              "Connection",
+              "Never the load side of the equipment disconnect"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-210.63-servicing.svg",
+          "alt": "Attic section with an air handler, its disconnect and a service receptacle on the same level within 25 ft, plus one-lines showing the receptacle wired ahead of the disconnect (right) and on its load side (wrong).",
+          "caption": "Same level, within 25 ft, and never on the load side of the disconnect.",
+          "w": 900,
+          "h": 1380
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A receptacle for servicing an attic air handler must be:",
+          "choices": [
+            "Within 25 ft and on the same level as the equipment",
+            "On the load side of the equipment disconnect",
+            "Within 50 ft, on any level",
+            "On the same circuit as the air handler"
+          ],
+          "answer_index": 0,
+          "explain_plain": "210.63 wants the receptacle on the same level and within 25 ft of the equipment it serves.",
+          "nec_ref": "210.63"
+        },
+        {
+          "question": "Why may the service receptacle not be connected to the load side of the equipment disconnect?",
+          "choices": [
+            "It would overload the equipment circuit",
+            "It must stay live for a work light and tools while the equipment is off",
+            "Disconnects are not rated for receptacles",
+            "It would void the equipment warranty"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The receptacle exists so the tech has power while the equipment is shut down. A load-side connection kills it exactly when it is needed.",
+          "nec_ref": "210.63"
+        },
+        {
+          "question": "Which receptacle rating satisfies 210.63?",
+          "choices": [
+            "125V, 15A or 20A",
+            "250V, 20A",
+            "125V, 30A",
+            "Any receptacle on a 20A circuit"
+          ],
+          "answer_index": 0,
+          "explain_plain": "The section calls for a 125V, single-phase receptacle rated 15A or 20A.",
+          "nec_ref": "210.63"
+        }
+      ],
+      "code_refs": [
+        "210.63",
+        "210.8(A)(3)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C2-210.70",
@@ -1266,8 +2600,8 @@
       "article": "210",
       "section": "210.70",
       "title": "Lighting outlets and wall switches",
-      "plain_explanation": "Habitable rooms, kitchens, and bathrooms need a wall-switched lighting outlet; in some living areas a switched receptacle may stand in for it, and the subsection separates those cases. Hallways, stairways, attached garages, and entries have their own switch-location rules, and rooms and spaces used for storage or equipment, plus attics and similar spaces, have lighting requirements of their own. The point throughout is that a person should never have to cross a dark room or a dark stair to reach a switch.\n\nNEC 2023 CHANGE:\n• 210.70: Dwelling laundry areas now need a wall-controlled lighting outlet, battery-only controls must fail with the lights on, outdoor doors need a real exterior light, and bulkhead doors got their own allowance. Dwelling laundry areas join habitable rooms, kitchens and bathrooms: each needs a lighting outlet on a listed wall-mounted control near an entrance (210.70(A)(1)).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Walk the plan as a person arriving at night: front door, hall, stairs, each room. If any leg of that walk is in the dark, a switching rule has probably been missed.",
+      "plain_explanation": "210.70 decides where a dwelling must have lighting outlets and the wall switches that control them. The point throughout is simple: a person should never have to cross a dark room or a dark stair to reach a switch.\n• Habitable rooms, kitchens and bathrooms (210.70(A)(1)): at least one wall switch-controlled lighting outlet in each room. In habitable rooms other than kitchens and bathrooms, a switch-controlled receptacle may stand in for the lighting outlet.\n• Additional locations (210.70(A)(2)): hallways, stairways, attached garages and detached garages with electric power each carry their own switch rules. On a stairway, the light is controlled from each floor level and landing with an entry — a switch at the bottom and one at the top, as drawn.\n• Storage and equipment spaces (210.70(A)(3)): attics, underfloor spaces, utility rooms and basements used for storage, or holding equipment that needs servicing, get at least one lighting outlet, with control at the usual point of entry.\nRead each room by its use, not by the name written on the plan.",
+      "on_the_job": "Walk the plan of a Marion Oaks house as a person arriving at night. Front door: a switch inside the entry for the foyer light. Hall: a switch where you enter it. Stairs to the bonus room: a switch at the bottom landing and one at the top, three-way, so the stair is lit from either end before the first step. Kitchen, each bathroom and each bedroom: a wall switch by the door, with switch boxes set at 48 in to center where the plan is silent (S-05). Attached garage: a switch by the house door for the garage light. If any leg of that walk is in the dark, a switching rule has probably been missed — find it at rough-in, not at final walk.",
       "sharma_note": "S-05: switch boxes at 48 in to center when the plan is silent.",
       "figure_idea": "A stair section with a switch at the bottom landing, a switch at the top landing, and the light over the stair lit from either one.",
       "related_ids": [
@@ -1295,7 +2629,115 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/210-70",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Falls on stairs and in dark garages happen in the seconds before a light comes on. A switch at the point of entry — and at both ends of a stair — means the light is on before the first step, not after a walk across a dark room hunting for a lamp with a pull chain. The same rule puts light where the air handler and water heater get serviced, so nobody works by flashlight.",
+      "exam_trap": "The trap is the switched receptacle: it may stand in for the lighting outlet in a living room or a bedroom, but not in a kitchen or a bathroom — those rooms need a real lighting outlet on a wall switch. Second trap: one switch at the bottom of the stairs only. A stairway light must be controllable from each floor level and landing it serves — the top needs a switch too.",
+      "inspection_fails": [
+        "Stairway light with a switch at the bottom landing only — nothing at the top.",
+        "Kitchen or bathroom roughed with a switched receptacle instead of a wall switch-controlled lighting outlet.",
+        "Hallway or attached garage with a light but no wall switch where you enter.",
+        "Attic, basement or utility space holding equipment with no lighting outlet, or no switch at its entry.",
+        "Habitable room whose only light control is a battery remote, with no wall-mounted control at the entrance."
+      ],
+      "tables": [
+        {
+          "caption": "Where the switches go (210.70, NEC 2020)",
+          "headers": [
+            "Space",
+            "Lighting outlet",
+            "Control"
+          ],
+          "rows": [
+            [
+              "Kitchen / bathroom",
+              "Required",
+              "Wall switch — no receptacle substitute"
+            ],
+            [
+              "Other habitable rooms",
+              "Required",
+              "Wall switch, or a switched receptacle in its place"
+            ],
+            [
+              "Hallway",
+              "Required",
+              "Wall switch"
+            ],
+            [
+              "Stairway",
+              "Required",
+              "Switch at each floor level and landing"
+            ],
+            [
+              "Attached garage",
+              "Required",
+              "Wall switch"
+            ],
+            [
+              "Attic / basement / utility",
+              "Required",
+              "Control at the usual point of entry"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-210.70-stair-switches.svg",
+          "alt": "Section view of a stairway with a wall switch at the bottom landing and a wall switch at the top landing controlling one light over the stair, with both switch boxes dimensioned 48 inches to center above the landing floor per Sharma rule S-05.",
+          "caption": "The stair case: a switch at each landing, the light on before the first step.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A stairway lighting outlet must be controllable from:",
+          "choices": [
+            "The bottom landing only",
+            "The top landing only",
+            "Each floor level and landing with an entry",
+            "The panel, by the breaker"
+          ],
+          "answer_index": 2,
+          "explain_plain": "210.70(A)(2) puts a switch at each floor level and at each landing with an entry, so the stair is lit from either end.",
+          "nec_ref": "210.70(A)(2)"
+        },
+        {
+          "question": "In which room may a wall switch-controlled receptacle take the place of a lighting outlet?",
+          "choices": [
+            "Kitchen",
+            "Bathroom",
+            "Living room",
+            "Laundry area"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The substitution is allowed in habitable rooms other than kitchens and bathrooms.",
+          "nec_ref": "210.70(A)(1), Exception No. 1"
+        },
+        {
+          "question": "Under NEC 2023, which space joins the list that needs a wall-controlled lighting outlet?",
+          "choices": [
+            "Laundry area",
+            "Detached garage",
+            "Pantry",
+            "Closet"
+          ],
+          "answer_index": 0,
+          "explain_plain": "2023 adds dwelling laundry areas to 210.70(A)(1), with the control on a listed wall-mounted device near an entrance.",
+          "nec_ref": "210.70(A)(1) (2023)"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 210.70: Dwelling laundry areas now need a wall-controlled lighting outlet, battery-only controls must fail with the lights on, outdoor doors need a real exterior light, and bulkhead doors got their own allowance. Dwelling laundry areas join habitable rooms, kitchens and bathrooms: each needs a lighting outlet on a listed wall-mounted control near an entrance (210.70(A)(1)).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "210.70",
+        "210.70(A)(1)",
+        "210.70(A)(2)",
+        "210.70(A)(3)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-ART-215",
@@ -1303,8 +2745,8 @@
       "article": "215",
       "section": "215",
       "title": "Feeders — power between the service and the final panels",
-      "plain_explanation": "A feeder carries power from service equipment, a transformer, or another source to the panelboards where branch circuits begin. Article 215 is short: it covers feeder conductor sizing, overcurrent protection, and ground-fault protection for certain large feeders. Most feeder questions on a Sharma job are really answered together with Article 220 for the load, Article 240 for the protection, and Article 250 for the grounding conductor that runs with it.\n\nNEC 2023 CHANGE:\n• 215.15: Panelboards, switchboards, switchgear and motor control centers supplied through feeder taps or transformer secondaries now need barriers over line-side bus and terminals that stay live with the disconnect open.\n• 215.18: New in 2023: a feeder that supplies a dwelling unit, dorm unit, hotel or motel guest room, or nursing home sleeping room needs a surge-protective device (SPD) at the panel it feeds. Feeders to dwelling units, dorm units, hotel or motel guest rooms and suites, and nursing home or limited-care patient sleeping rooms now need an SPD.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Name the run correctly on the schedule — service conductors, feeder, or branch circuit — because the sizing and grounding rules change with the name. A subpanel feed is a feeder, and it is wired like one.",
+      "plain_explanation": "A feeder carries power from service equipment, a transformer, or another source to the panelboards where branch circuits begin. The name matters, because each run in a building is judged by the article that matches its name:\n• Service conductors — Article 230\n• Feeders — Article 215, sized on the Article 220 load, protected under Article 240, with the equipment grounding conductor from Article 250\n• Branch circuits — Article 210\nArticle 215 itself is short: feeder conductor sizing (215.2), feeder overcurrent protection (215.3), and ground-fault protection for certain large feeders (215.10). Most feeder questions on a Sharma job are really answered together with Article 220 for the load, Article 240 for the protection, and Article 250 for the grounding conductor that runs with it. Name the run correctly on the schedule, because the sizing and grounding rules change with the name.",
+      "on_the_job": "Service change on a Marion Oaks house: new Siemens meter-main outside (S-02), house panel back to back with it where the house allows (S-09). The short run from the meter-main to the indoor panel is a feeder, not service conductors — the service disconnect is in the meter-main. So it is wired like a feeder: four wires, the neutral isolated in the indoor panel, and an equipment grounding conductor run with it, sized from Table 250.122 by the feeder breaker. The sizing habit is the same on a bigger job: a feeder carrying 80 A of noncontinuous load plus 40 A of continuous load needs at least 130 A of conductor ampacity under 215.2 — 80 plus 125 percent of 40 — before derating is even discussed.",
       "sharma_note": "S-02 and S-09 frame Sharma feeder work: new gear is Siemens, and the house panel normally sits back to back with the meter where the house allows.",
       "figure_idea": "A one-line diagram: meter and service disconnect, a feeder run, a subpanel, and branch circuits leaving the subpanel.",
       "related_ids": [
@@ -1336,7 +2778,101 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/215-18",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "A feeder is the single path feeding a whole panel. Undersize it or under-protect it and every branch circuit behind it is at risk, with the full service behind a feeder fault. The feeder rules make the conductor, its overcurrent device and its grounding conductor one matched set, sized from the calculated load instead of from whatever panel happened to be on the truck.",
+      "exam_trap": "The trap is calling the run from an outdoor meter-main to the indoor panel 'service conductors' and bonding the neutral again in the indoor panel. Past the service disconnect, the run is a feeder: neutral and ground stay separate, and the main bonding jumper lives at the service disconnect only. Second trap: sizing the feeder from the panel's bus rating. A feeder is sized from the Article 220 calculated load, with 125 percent of the continuous part added (215.2).",
+      "inspection_fails": [
+        "Neutral bonded to ground again in a subpanel fed by a feeder — bonding screw or strap left in.",
+        "Feeder conductors sized from the panel bus rating instead of the Article 220 calculated load.",
+        "No equipment grounding conductor run with the feeder, or one sized by guess instead of Table 250.122.",
+        "Feeder breaker rated above the conductor ampacity with no Article 240 allowance that fits the job."
+      ],
+      "tables": [
+        {
+          "caption": "Name the run, pick the rules",
+          "headers": [
+            "Run",
+            "Governed by",
+            "Sized from"
+          ],
+          "rows": [
+            [
+              "Service conductors",
+              "Article 230",
+              "Article 220 load"
+            ],
+            [
+              "Feeder",
+              "215, with 220, 240, 250",
+              "Noncontinuous + 125% of continuous (215.2)"
+            ],
+            [
+              "Branch circuit",
+              "Article 210",
+              "The load it serves"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-ART-215-one-line.svg",
+          "alt": "One-line diagram from the utility through the meter and service disconnect, a feeder under Article 215, a panelboard with an isolated neutral, and branch circuits, with the 215.2 sizing rule and a worked example.",
+          "caption": "Where the feeder sits, and the articles that size, protect and ground it.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "The conductors between an outdoor meter-main's service disconnect and the indoor panel are:",
+          "choices": [
+            "Service conductors",
+            "A feeder",
+            "Branch circuits",
+            "Service-entrance conductors"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The service disconnect ends the service conductors. Everything between it and the final branch-circuit overcurrent device is a feeder.",
+          "nec_ref": "Article 100, Feeder; 215"
+        },
+        {
+          "question": "A feeder carries 80 A noncontinuous and 40 A continuous. Minimum conductor ampacity before derating?",
+          "choices": [
+            "120 A",
+            "130 A",
+            "140 A",
+            "160 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "80 + (125% x 40) = 80 + 50 = 130 A.",
+          "nec_ref": "215.2(A)(1)"
+        },
+        {
+          "question": "In a panelboard supplied by a feeder, the neutral bar is:",
+          "choices": [
+            "Bonded to the enclosure",
+            "Isolated from the enclosure and the grounds",
+            "Landed on a ground rod",
+            "Bonded at every panel on the feeder"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Neutral and ground meet only at the service disconnect. On the load side of it, the grounded conductor is not reconnected to ground.",
+          "nec_ref": "250.24(A)(5)"
+        }
+      ],
+      "code_refs": [
+        "215",
+        "215.2",
+        "215.3",
+        "220",
+        "240",
+        "Table 250.122"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "NEC 2023 CHANGE:\n• 215.15: Panelboards, switchboards, switchgear and motor control centers supplied through feeder taps or transformer secondaries now need barriers over line-side bus and terminals that stay live with the disconnect open.\n• 215.18: New in 2023: a feeder that supplies a dwelling unit, dorm unit, hotel or motel guest room, or nursing home sleeping room needs a surge-protective device (SPD) at the panel it feeds. Feeders to dwelling units, dorm units, hotel or motel guest rooms and suites, and nursing home or limited-care patient sleeping rooms now need an SPD.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C2-215.2",
@@ -1384,8 +2920,8 @@
       "article": "220",
       "section": "220",
       "title": "Load calculations — proving the service is big enough",
-      "plain_explanation": "Article 220 is the arithmetic of the trade: it turns floor area, appliance nameplates, and heating and cooling equipment into a number that sizes branch circuits, feeders, and services. It offers a standard method that counts loads item by item and, for dwellings, an optional method that uses demand factors on the whole house. Sharma's house services are normally proved with the optional dwelling method, and the app's load calculator is built on it.\n\nNEC 2023 CHANGE:\n• 220.1: Article 220 got a new layout built for easier use: seven parts now, with new ones for health care facilities and for marinas and docks. Two new parts: Part VI covers health care facilities, and Part VII covers marinas, boatyards, docks and floating buildings.\n• 220.110: New in 2023: patient care spaces get their own demand factor tables for general-purpose receptacle circuits, one for Category 1 and 2 spaces and one for Category 3 and 4. Category 1 and 2 spaces, Table 220.110(1): first 5,000 VA in full, half of the next 5,000 VA, a quarter of the rest.\n• 220.5: Garages came off the floor-area exclusion list. In 2023, garage square footage goes into the dwelling's general lighting load, and the rule moved from 220.11 to 220.5(C). An attached garage now counts toward dwelling floor area, so it picks up 3 VA per square foot like the rest of the house (220.41).\n• 220.57: New section: each EV charger goes into a feeder or service calc at its nameplate rating, but never less than 7,200 VA. Each piece of electric vehicle supply equipment (EVSE) counts at its nameplate rating or 7,200 VA, whichever is higher.\n• 220.60: Air-conditioning loads now get the same 125 percent treatment as motors when you compare noncoincident loads. You still count only the largest of loads that never run together. New: an air-conditioning load in the noncoincident group gets figured at 125 percent, the same as a motor load, when it isn't the largest load.\n• 220.70: New section: when an energy management system (EMS) caps the current on a feeder or service, its maximum current setpoint can stand in for the calculated load. If an EMS that meets 750.30 limits a feeder or service, you can use its maximum ampere setpoint as that feeder or service load.\n• 220.120: The requirements of Section 555.6 have been moved to 220.120. This will not change the requirements for load calculations or demand factors and is a simple relocation.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.\n\nNEC 2026 NOTE (not a 2023 change):\n• NEC 2026 relocates load calculations from Article 220 to new Article 120. The 2023 NEC is still Article 220 (with the renumbering noted on the 220.12, 220.14 and 220.42 pages: 220.5(C), 220.41, 220.42(A), 220.45, new 220.57 EVSE and 220.70 EMS).",
-      "on_the_job": "Never size a service from the breaker that was there before or from a neighbor's house. Run the calculation, keep it in the job file, and let it pick the service size.",
+      "plain_explanation": "Article 220 is the arithmetic of the trade: it turns floor area, appliance nameplates, and heating and cooling equipment into one number in volt-amperes that sizes branch circuits, feeders, and services. It offers two ways to add a dwelling up:\n• The standard method counts loads item by item: floor area at the Table 220.12 unit load, 1,500 VA for each small-appliance branch circuit and for the laundry circuit, appliances at nameplate, with demand factors such as Table 220.42.\n• The optional method (220.82) totals the whole dwelling and applies demand factors to the total: the first 10,000 VA at 100 percent, the rest at 40 percent, with the larger of heating or cooling added.\nSharma's house services are normally proved with the optional dwelling method, and the app's load calculator is built on it. Either way, the output is a calculated load the service and its feeders must carry.\n\nNEC 2026 NOTE (not a 2023 change):\n• NEC 2026 relocates load calculations from Article 220 to new Article 120. The 2023 NEC is still Article 220 (with the renumbering noted on the 220.12, 220.14 and 220.42 pages: 220.5(C), 220.41, 220.42(A), 220.45, new 220.57 EVSE and 220.70 EMS).",
+      "on_the_job": "Optional-method check on a 1,800 sq ft Marion Oaks house, the worked example on the 220.82 page. General loads: floor area 1,800 x 3 VA = 5,400 VA; two small-appliance circuits 3,000 VA; laundry circuit 1,500 VA; dishwasher 1,200 VA; disposal 900 VA; water heater 4,500 VA; dryer 5,000 VA; range at nameplate 12,000 VA — a connected general load of 33,500 VA. Demand brings it down: the first 10,000 VA at 100 percent and the remaining 23,500 VA at 40 percent gives 19,400 VA. Add the larger of heating or cooling, the air conditioner at 5,760 VA: total 25,160 VA / 240 V is about 105 A. The service must be at least that figure; Sharma's standard new gear is a 200 A Siemens meter-main (S-02), which covers it with room to spare. Either way, the worksheet goes in the job file.",
       "sharma_note": "",
       "figure_idea": "A worksheet graphic: floor area, small-appliance circuits, laundry, appliances, and the larger of heat or AC feeding into one total, then a service size.",
       "related_ids": [
@@ -1457,7 +2993,116 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Every conductor and breaker in the building traces back to this arithmetic. Size from a guess and the service either overheats and trips through a Florida August, or the customer pays for capacity nobody needed. The calculation is also the paper trail: when the inspector or the utility asks why, the worksheet is the answer.",
+      "exam_trap": "The trap answer adds every nameplate at full value and calls the total the service load — that skips the demand factors and oversizes everything. The opposite trap is reaching for the optional method where it does not belong: it is only for a feeder or service that supplies the entire dwelling load, and only at or above its 100 A floor (220.82). And on a 2020 permit, do not count the garage in the floor area — garages join the floor area only in 2023.",
+      "inspection_fails": [
+        "Service changed with no load calculation in the job file — the new service just copies the old one's size.",
+        "Garage square footage counted in the floor area on a NEC 2020 dwelling calculation.",
+        "Optional method used on a feeder that does not supply the entire dwelling load.",
+        "Range or dryer entered at a guessed value instead of the nameplate rating."
+      ],
+      "tables": [
+        {
+          "caption": "The 1,800 sq ft example (optional method, 220.82)",
+          "headers": [
+            "Line",
+            "VA"
+          ],
+          "rows": [
+            [
+              "Floor area: 1,800 sq ft x 3 VA",
+              "5,400"
+            ],
+            [
+              "Small-appliance circuits: 2 x 1,500 VA",
+              "3,000"
+            ],
+            [
+              "Laundry circuit",
+              "1,500"
+            ],
+            [
+              "Appliances at nameplate",
+              "23,600"
+            ],
+            [
+              "Connected general load",
+              "33,500"
+            ],
+            [
+              "After demand factors",
+              "19,400"
+            ],
+            [
+              "Add the larger of heat or AC",
+              "5,760"
+            ],
+            [
+              "Service load",
+              "25,160 VA = about 105 A at 240 V"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-ART-220-worksheet.svg",
+          "alt": "Worksheet flow for the optional dwelling calculation: floor area, small-appliance and laundry allowances and appliances total 33,500 VA, demand factors bring it to 19,400 VA, the air conditioner adds 5,760 VA, for a 25,160 VA service load of about 105 A.",
+          "caption": "The optional method, worked end to end on a 1,800 sq ft house.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "In the optional dwelling method, the general load above the first 10,000 VA is counted at:",
+          "choices": [
+            "100 percent",
+            "75 percent",
+            "40 percent",
+            "25 percent"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The first 10,000 VA counts in full; everything above it counts at 40 percent.",
+          "nec_ref": "220.82(B)"
+        },
+        {
+          "question": "A dwelling's general lighting load is figured from floor area at:",
+          "choices": [
+            "1 VA per sq ft",
+            "3 VA per sq ft",
+            "5 VA per sq ft",
+            "10 VA per sq ft"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Table 220.12 sets the dwelling unit load at 3 VA per square foot.",
+          "nec_ref": "Table 220.12"
+        },
+        {
+          "question": "The optional method may be used only when the feeder or service:",
+          "choices": [
+            "Serves a house with no electric heat",
+            "Supplies the entire dwelling load and meets the 100 A floor",
+            "Is 200 A or larger",
+            "Gives a smaller answer than the standard method"
+          ],
+          "answer_index": 1,
+          "explain_plain": "220.82 is for a service or feeder carrying the entire dwelling load, with service-entrance conductors of 100 A ampacity or more.",
+          "nec_ref": "220.82"
+        }
+      ],
+      "code_refs": [
+        "220",
+        "Table 220.12",
+        "220.42",
+        "220.52",
+        "220.82"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "NEC 2023 CHANGE:\n• 220.1: Article 220 got a new layout built for easier use: seven parts now, with new ones for health care facilities and for marinas and docks. Two new parts: Part VI covers health care facilities, and Part VII covers marinas, boatyards, docks and floating buildings.\n• 220.110: New in 2023: patient care spaces get their own demand factor tables for general-purpose receptacle circuits, one for Category 1 and 2 spaces and one for Category 3 and 4. Category 1 and 2 spaces, Table 220.110(1): first 5,000 VA in full, half of the next 5,000 VA, a quarter of the rest.\n• 220.5: Garages came off the floor-area exclusion list. In 2023, garage square footage goes into the dwelling's general lighting load, and the rule moved from 220.11 to 220.5(C). An attached garage now counts toward dwelling floor area, so it picks up 3 VA per square foot like the rest of the house (220.41).\n• 220.57: New section: each EV charger goes into a feeder or service calc at its nameplate rating, but never less than 7,200 VA. Each piece of electric vehicle supply equipment (EVSE) counts at its nameplate rating or 7,200 VA, whichever is higher.\n• 220.60: Air-conditioning loads now get the same 125 percent treatment as motors when you compare noncoincident loads. You still count only the largest of loads that never run together. New: an air-conditioning load in the noncoincident group gets figured at 125 percent, the same as a motor load, when it isn't the largest load.\n• 220.70: New section: when an energy management system (EMS) caps the current on a feeder or service, its maximum current setpoint can stand in for the calculated load. If an EMS that meets 750.30 limits a feeder or service, you can use its maximum ampere setpoint as that feeder or service load.\n• 220.120: The requirements of Section 555.6 have been moved to 220.120. This will not change the requirements for load calculations or demand factors and is a simple relocation.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.\n\nNEC 2026 NOTE (not a 2023 change):\n• NEC 2026 relocates load calculations from Article 220 to new Article 120. The 2023 NEC is still Article 220 (with the renumbering noted on the 220.12, 220.14 and 220.42 pages: 220.5(C), 220.41, 220.42(A), 220.45, new 220.57 EVSE and 220.70 EMS).",
+      "rich": 1
     },
     {
       "id": "C2-220.12",
@@ -1765,8 +3410,8 @@
       "article": "225",
       "section": "225",
       "title": "Outside branch circuits and feeders",
-      "plain_explanation": "Article 225 covers wiring that runs outside — between buildings, across a yard, or overhead or underground to a detached structure. Its recurring themes are clearances, support, a disconnect at the building being supplied, and limits on how many supplies a building may have. Sharma meets it on detached garages, barns, pool houses, and site lighting fed from a house or a main building.\n\nNEC 2023 CHANGE:\n• 225.41 / 225.42 / 225.5 / 225.7: New 225.41: an outdoor emergency disconnect is required for one- and two-family dwellings supplied by a feeder (mirrors 230.85). New 225.42: SPD on feeders supplying dwelling-type occupancies. 225.5 (size of conductors) and 225.7 (lighting equipment on poles) were deleted.\n• 225.27: Raceways coming into a building from outside still get sealed. New in 2023, the rule says how: the seal has to meet both 300.5(G) and 300.7(A). The seal now has to satisfy 300.5(G), the underground raceway seal rule, and 300.7(A), the rule for raceways passing from warm to cold.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "When a run leaves a building, switch articles. A feeder inside one building and the same feeder continued to a second building are judged by different pages, and the second building needs its own disconnect and grounding treatment.",
+      "plain_explanation": "Article 225 covers wiring that runs outside — between buildings, across a yard, or overhead or underground to a detached structure. Sharma meets it on detached garages, barns, pool houses and site lighting fed from a house or a main building. Its recurring themes:\n• One supply: a building or structure gets a single feeder or branch circuit, or a single set of feeders, subject to the exceptions the section lists — and where an exception adds a supply, the building carries a permanent plaque or directory showing where the other disconnects are (225.30).\n• A disconnect at the building being supplied, in a readily accessible location outside the building or inside nearest the point where the conductors enter (225.31, 225.32). The supply may be disconnected by up to six grouped, marked switches or breakers (225.33, 225.34), and a feeder disconnect serving a one-family dwelling is rated at least 100 A (225.39(C)).\n• Clearances: overhead conductors keep the clearances of 225.18 — 10 ft over areas subject only to pedestrian traffic, 12 ft over residential driveways, 18 ft over roads, streets and areas subject to truck traffic — judged at final sag.\n• Sealed entries: raceways entering a building from outside still get sealed (225.27).",
+      "on_the_job": "Detached two-car garage behind a Belleview house, fed from the house panel. One feeder — not two — crosses the yard underground to the garage, where the building disconnect sits at the wall nearest the point where the feeder enters, rated 100 A as 225.39(C) requires for a one-family dwelling, and the garage gets its own grounding treatment under 250.32. Flown overhead across the driveway instead, the same feeder would need 12 ft of clearance at final sag. When a run leaves a building, switch articles: a feeder inside one building and the same feeder continued to a second building are judged by different pages, and the second building needs its own disconnect and grounding treatment.",
       "sharma_note": "",
       "figure_idea": "A site plan: house panel, a buried feeder crossing a yard, and a detached garage with its own disconnect and ground rods.",
       "related_ids": [
@@ -1793,7 +3438,120 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/225-27",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Outside wiring lives a harder life: sun, storm wind, ladders, vehicles and shovels all find it. The one-supply rule and the disconnect at the far building exist for the emergency case — a person at the detached building must be able to kill its power there, and must be able to trust that the disconnect really kills all of it. A second, forgotten supply leaves a 'dead' building live.",
+      "inspection_fails": [
+        "Two ordinary feeders run to the same detached garage because two panels were convenient — no 225.30 exception, and no plaque.",
+        "No disconnect at the detached building; the only way to kill its power is the breaker back at the house.",
+        "Building disconnect mounted across the building from where the feeder enters, instead of nearest the point of entrance.",
+        "Overhead span sagging below 12 ft over the residential driveway at final sag.",
+        "Underground raceway entering the building unsealed (225.27)."
+      ],
+      "exam_trap": "The trap is treating the breaker back at the house as the detached building's disconnect. It is not: 225.31 requires a disconnecting means at the building being supplied. The second trap is rating that disconnect 60 A on a one-family dwelling — 60 A is 225.39(D), 'all others'; a one-family dwelling feeder disconnect is 100 A minimum under 225.39(C).",
+      "tables": [
+        {
+          "caption": "Article 225 on one job (NEC 2020)",
+          "headers": [
+            "Item",
+            "Rule",
+            "Section"
+          ],
+          "rows": [
+            [
+              "Supplies to one building",
+              "One feeder or branch circuit, or one set of feeders (exceptions listed)",
+              "225.30"
+            ],
+            [
+              "Building disconnect",
+              "At the building supplied — outside, or inside nearest the point of entrance",
+              "225.31, 225.32"
+            ],
+            [
+              "Disconnect rating, one-family dwelling",
+              "100 A minimum",
+              "225.39(C)"
+            ],
+            [
+              "Overhead clearance — pedestrian only",
+              "10 ft",
+              "225.18"
+            ],
+            [
+              "Overhead clearance — residential driveway",
+              "12 ft",
+              "225.18"
+            ],
+            [
+              "Overhead clearance — roads, truck traffic",
+              "18 ft",
+              "225.18"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-ART-225-site-feeder.svg",
+          "alt": "Site plan of a house feeding a detached garage with one underground feeder, the building disconnect and ground electrodes at the garage, and an elevation of an overhead span over a driveway dimensioned at 12 ft minimum clearance.",
+          "caption": "One feeder, a disconnect at the far building, and clearance where it flies.",
+          "w": 900,
+          "h": 1700
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Under the general rule of 225.30, how many feeders may supply one detached building?",
+          "choices": [
+            "As many as the owner wants",
+            "One feeder or branch circuit, or one set of feeders",
+            "Two, if both are labeled",
+            "Unlimited, with a plaque"
+          ],
+          "answer_index": 1,
+          "explain_plain": "One supply is the rule; the listed exceptions are specific cases, and an exception that adds a supply requires a plaque or directory.",
+          "nec_ref": "225.30"
+        },
+        {
+          "question": "Minimum rating of a feeder disconnect serving a one-family dwelling's detached garage?",
+          "choices": [
+            "30 A",
+            "60 A",
+            "100 A",
+            "200 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "225.39(C) sets 100 A minimum for a one-family dwelling. The 60 A figure is 225.39(D), for all others.",
+          "nec_ref": "225.39(C)"
+        },
+        {
+          "question": "Minimum clearance of an overhead feeder over a residential driveway, at final sag?",
+          "choices": [
+            "10 ft",
+            "12 ft",
+            "15 ft",
+            "18 ft"
+          ],
+          "answer_index": 1,
+          "explain_plain": "225.18 requires 12 ft over residential driveways; 18 ft is for roads and truck traffic, 10 ft for pedestrian-only areas.",
+          "nec_ref": "225.18"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 225.41 / 225.42 / 225.5 / 225.7: New 225.41: an outdoor emergency disconnect is required for one- and two-family dwellings supplied by a feeder (mirrors 230.85). New 225.42: SPD on feeders supplying dwelling-type occupancies. 225.5 (size of conductors) and 225.7 (lighting equipment on poles) were deleted.\n• 225.27: Raceways coming into a building from outside still get sealed. New in 2023, the rule says how: the seal has to meet both 300.5(G) and 300.7(A). The seal now has to satisfy 300.5(G), the underground raceway seal rule, and 300.7(A), the rule for raceways passing from warm to cold.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "225.30",
+        "225.31",
+        "225.32",
+        "225.33",
+        "225.34",
+        "225.39(C)",
+        "225.18",
+        "225.27",
+        "250.32"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-225.18",
@@ -1882,8 +3640,8 @@
       "article": "230",
       "section": "230",
       "title": "Services — where utility power enters",
-      "plain_explanation": "Article 230 governs the service: the conductors and equipment that bring utility power to the building and end at the service disconnect. It covers how many services a building may have, conductor clearances, where the disconnect goes and how many there may be, how big a dwelling service must be, and two 2020 additions Sharma sees on every house — surge protection and an outdoor emergency disconnect. The meter and panel layout a builder notices most is decided here and in Article 250.\n\nNEC 2023 CHANGE:\n• 230.30: Type TC-ER cable can now carry underground service conductors, but only when the cable is identified for both direct burial and service-entrance use. Underground service conductors can now run in Type TC-ER cable (230.30(B)).\n• 230.43: Type TC-ER cable still works for service-entrance conductors, but only cable identified for service-entrance use counts now. Ordinary TC-ER, allowed in 2020, no longer qualifies. Only TC-ER that carries a service-entrance identification can be used for service-entrance conductors (230.43(20)).\n• 230.62: The barrier rule in service equipment now plainly covers the parts that stay energized with the service disconnect open, so a worker on the load side can't brush live line terminals. Barriers have to guard energized, uninsulated, ungrounded busbars and terminals while the service disconnect is open (230.62(C)).\n• 230.7: Underground boxes and handhole enclosures joined the list. Other conductors can't share a service raceway, service cable, underground box or handhole with the service conductors. Feeders and branch circuits can't ride in the same underground box or handhole enclosure as the service conductors.\n• 230.75: The section of a multi-section switchboard or switchgear lineup that holds the neutral disconnect has to be marked again. The 2020 edition had left that marking rule out. Multi-section switchboards and switchgear can put the neutral disconnect in any one section, and that section now has to be marked.\n• 230.8: Underground service raceways entering a building still get sealed, and in 2023 the seal also has to meet 300.7(A) for temperature differences, not just 300.5(G). The seal now has to satisfy 300.7(A) too, which targets warm air moving into a cold section of raceway and condensing.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Plan the service as one assembly at rough-in: drop or lateral clearances, meter position, disconnect, SPD, emergency disconnect, grounding electrode system. Finding one piece missing at final is a re-inspection.",
+      "plain_explanation": "Article 230 governs the service: the conductors and equipment that bring utility power to the building and end at the service disconnect. It answers the questions every job starts with:\n• How many services may a building have, and how do the conductors arrive — by overhead drop or by underground lateral?\n• How are service-entrance conductors wired and sized, including the minimum size for a dwelling service?\n• Where does the service disconnect go, how many disconnects may there be, and how are they grouped?\n• What else must the service include: barriers in service equipment, surge protection (230.67), and for one- and two-family dwellings an outdoor emergency disconnect (230.85)?\nThe meter and panel layout a builder notices most is decided here and in Article 250, which covers the grounding and bonding that land at the same point. Article 230 ends at the service disconnect; everything beyond it is a feeder or a branch circuit.",
+      "on_the_job": "Plan the service on a new Marion Oaks house as one assembly at rough-in, not five separate decisions: the utility drop or lateral and its clearances; the Siemens meter-main outside (S-02), which is both the service disconnect and the 230.85 emergency disconnect; the surge protective device the 2020 code requires on dwelling services (230.67); the grounding electrode system of Article 250 landed at the same point; and the indoor panel directly behind the meter where the house allows (S-09), fed as a feeder panel with neutrals and grounds separated. Finding one piece missing at final — an unlabeled emergency disconnect, no SPD — is a failed inspection and a second trip.",
       "sharma_note": "S-09: meter outside, panel inside directly behind it, where the house allows. S-02: new service gear is Siemens.",
       "figure_idea": "A house gable end showing a service drop with clearances, a meter, an outdoor emergency disconnect, and the panel inside on the same wall.",
       "related_ids": [
@@ -1947,7 +3705,113 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/230-8",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "The service is the one part of the system with no building-side breaker ahead of it: a fault in service conductors burns until something on the utility side gives way. That is why this article is strict about where the conductors run, how quickly a person can reach the disconnect, how many throws it takes to kill the service, and what stands between a worker and the parts that stay energized with the disconnect open.",
+      "exam_trap": "The trap is calling everything from the utility pole 'the service.' Service conductors end at the service disconnect: the conductors between an outdoor meter-main and the indoor panel are feeders, and feeder rules for separating neutrals and grounds apply to them. Second trap: the disconnect count. The rule is a maximum of six grouped disconnects at one location (230.71) — not one disconnect per space, scattered around the building.",
+      "inspection_fails": [
+        "No surge protective device on a new dwelling service (230.67).",
+        "Emergency disconnect missing, unlabeled, or not in a readily accessible outdoor location (230.85).",
+        "Service disconnects scattered around the building instead of grouped, or more than six throws to disconnect the service (230.71).",
+        "Feeder or branch-circuit conductors sharing a raceway, underground box or handhole with service conductors (230.7).",
+        "Underground service raceway entering the building left unsealed (230.8)."
+      ],
+      "tables": [
+        {
+          "caption": "The service assembly, piece by piece",
+          "headers": [
+            "Piece",
+            "Where in the book",
+            "Note"
+          ],
+          "rows": [
+            [
+              "Service disconnect",
+              "230.70, 230.71",
+              "Grouped; six disconnects maximum"
+            ],
+            [
+              "Emergency disconnect (dwellings)",
+              "230.85",
+              "Outdoors, readily accessible, labeled"
+            ],
+            [
+              "Surge protection",
+              "230.67",
+              "Required on dwelling services in 2020"
+            ],
+            [
+              "Grounding and bonding",
+              "Article 250",
+              "Lands at the service disconnect"
+            ],
+            [
+              "Indoor panel (S-09)",
+              "Article 215 feeders",
+              "Neutrals and grounds separated"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-ART-230-service-assembly.svg",
+          "alt": "Flow diagram of a dwelling service: utility service point, service conductors by drop or lateral, meter, Siemens meter-main holding the service disconnect, and the indoor panel behind the meter; a panel lists what lands at the meter-main — emergency disconnect, surge protection, main bonding jumper and the grounding electrode system.",
+          "caption": "One assembly: drop, meter, meter-main, panel — and what lands at the main.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Article 230's rules for service conductors end at:",
+          "choices": [
+            "The meter socket",
+            "The service disconnect",
+            "The first branch-circuit breaker",
+            "The utility pole"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The service is the conductors and equipment up to the service disconnecting means; beyond it, conductors are feeders or branch circuits.",
+          "nec_ref": "230.1; Article 100: Service"
+        },
+        {
+          "question": "Maximum number of service disconnects grouped at one location?",
+          "choices": [
+            "2",
+            "4",
+            "6",
+            "No limit"
+          ],
+          "answer_index": 2,
+          "explain_plain": "230.71 allows not more than six switches or circuit breakers, grouped, as the service disconnecting means.",
+          "nec_ref": "230.71"
+        },
+        {
+          "question": "On a new dwelling service under NEC 2020, which device does Article 230 require that older editions did not?",
+          "choices": [
+            "A surge protective device",
+            "A second meter",
+            "A transfer switch",
+            "A shunt-trip main"
+          ],
+          "answer_index": 0,
+          "explain_plain": "230.67, new in 2020, requires surge protection on dwelling unit services.",
+          "nec_ref": "230.67"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 230.30: Type TC-ER cable can now carry underground service conductors, but only when the cable is identified for both direct burial and service-entrance use. Underground service conductors can now run in Type TC-ER cable (230.30(B)).\n• 230.43: Type TC-ER cable still works for service-entrance conductors, but only cable identified for service-entrance use counts now. Ordinary TC-ER, allowed in 2020, no longer qualifies. Only TC-ER that carries a service-entrance identification can be used for service-entrance conductors (230.43(20)).\n• 230.62: The barrier rule in service equipment now plainly covers the parts that stay energized with the service disconnect open, so a worker on the load side can't brush live line terminals. Barriers have to guard energized, uninsulated, ungrounded busbars and terminals while the service disconnect is open (230.62(C)).\n• 230.7: Underground boxes and handhole enclosures joined the list. Other conductors can't share a service raceway, service cable, underground box or handhole with the service conductors. Feeders and branch circuits can't ride in the same underground box or handhole enclosure as the service conductors.\n• 230.75: The section of a multi-section switchboard or switchgear lineup that holds the neutral disconnect has to be marked again. The 2020 edition had left that marking rule out. Multi-section switchboards and switchgear can put the neutral disconnect in any one section, and that section now has to be marked.\n• 230.8: Underground service raceways entering a building still get sealed, and in 2023 the seal also has to meet 300.7(A) for temperature differences, not just 300.5(G). The seal now has to satisfy 300.7(A) too, which targets warm air moving into a cold section of raceway and condensing.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "230.1",
+        "230.2",
+        "230.67",
+        "230.70",
+        "230.71",
+        "230.85",
+        "Article 250"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-230.9",
@@ -2169,8 +4033,8 @@
       "article": "230",
       "section": "230.79(C)",
       "title": "Minimum size for a one-family dwelling service",
-      "plain_explanation": "A one-family dwelling service disconnect is rated at least 100 amperes, 3-wire. That is a floor, not a recommendation: the Article 220 calculation governs whenever it comes out higher, which on a modern Florida house with electric range, dryer, water heating, and air conditioning it usually does. Other occupancies and uses have their own minimums in the surrounding subsections of 230.79.",
-      "on_the_job": "Never quote a 100A service because it is the minimum. Run the calculation, and if the result is close to a standard size, say so with the worksheet in hand.",
+      "plain_explanation": "A one-family dwelling service disconnect is rated at least 100 amperes, 3-wire. That is a floor, not a recommendation: the disconnect rating must also be at least the calculated load from Article 220, and the Article 220 calculation governs whenever it comes out higher, which on a modern Florida house with electric range, dryer, water heating, and air conditioning it usually does. The other floors in 230.79 sit around it:\n• (A) An installation of a single branch circuit: 15 amperes\n• (B) An installation of two 2-wire branch circuits: 30 amperes\n• (C) A one-family dwelling: 100 amperes, 3-wire\n• (D) All other installations: 60 amperes\nGrabbing the (D) 60-ampere floor for a house, or treating the (C) floor as the design size, are the two mistakes this section produces.",
+      "on_the_job": "Never quote a 100A service because it is the minimum. Run the calculation, and if the result is close to a standard size, say so with the worksheet in hand. On Sharma's new one-family work the standard gear is a 200A Siemens meter-main — not because 230.79(C) asks for 200, but because the Article 220 result on a modern Florida house lands well past the 100A floor. The 100A number is what you check the calculation against, never the answer you start from.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -2182,7 +4046,105 @@
       "verified": true,
       "prev_id": "C2-230.71",
       "next_id": "C2-230.82",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "rich": 1,
+      "why_it_exists": "The service disconnect is the one device that has to carry and interrupt everything the building can draw. A floor under its rating keeps a builder from hanging a whole house on a disconnect sized for a shed, and tying the rating to the Article 220 calculation keeps the disconnect ahead of the real load as houses add air conditioning, cooking and water heating.",
+      "inspection_fails": [
+        "100A service disconnect installed where the Article 220 calculated load is higher than 100A.",
+        "60A disconnect used for a one-family dwelling — the (D) floor applied to a (C) job.",
+        "Service quoted and roughed at the 100A minimum with no load calculation on file.",
+        "Disconnect rating matched to the old service on a change-out while the panel schedule shows added air conditioning and cooking loads."
+      ],
+      "exam_trap": "The exam trap states the rule backwards: 'a one-family dwelling requires a 100-ampere service.' No — 100 amperes, 3-wire is the minimum rating for the service disconnect. When the Article 220 calculation comes out higher, the higher number governs, and a 100A disconnect on a house that calculates past it fails.",
+      "tables": [
+        {
+          "caption": "The floors in 230.79",
+          "headers": [
+            "Installation",
+            "Minimum disconnect rating"
+          ],
+          "rows": [
+            [
+              "Single branch circuit — (A)",
+              "15 A"
+            ],
+            [
+              "Two 2-wire branch circuits — (B)",
+              "30 A"
+            ],
+            [
+              "One-family dwelling — (C)",
+              "100 A, 3-wire"
+            ],
+            [
+              "All other installations — (D)",
+              "60 A"
+            ]
+          ],
+          "note": "The rating must also be at least the Article 220 calculated load; the floor never lowers the calculation."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-230.79C-service-minimum.svg",
+          "alt": "Amp scale from 0 to 200 A with the one-family floor marked at 100 A, and the four minimum disconnect ratings of 230.79 listed below: 15 A, 30 A, 100 A and 60 A.",
+          "caption": "100 A is the floor for a one-family dwelling; the Article 220 calculation governs above it.",
+          "w": 900,
+          "h": 1250
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Minimum rating of a one-family dwelling service disconnect?",
+          "choices": [
+            "60 A",
+            "100 A, 3-wire",
+            "125 A",
+            "200 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "230.79(C) sets the one-family floor at 100 amperes, 3-wire.",
+          "nec_ref": "230.79(C)"
+        },
+        {
+          "question": "The Article 220 calculation for a house comes out above 100A. The disconnect rating is set by:",
+          "choices": [
+            "The 100A floor",
+            "The calculation",
+            "The utility",
+            "The panel bus rating"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The rating must be at least the calculated load; the floor only applies when the calculation is lower.",
+          "nec_ref": "230.79"
+        },
+        {
+          "question": "Minimum disconnect rating for an installation that is not a one-family dwelling and has more than two circuits?",
+          "choices": [
+            "15 A",
+            "30 A",
+            "60 A",
+            "100 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "All other installations fall under 230.79(D): 60 amperes minimum.",
+          "nec_ref": "230.79(D)"
+        }
+      ],
+      "code_refs": [
+        "230.79",
+        "230.79(A)–(D)",
+        "Article 220"
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "230.79 minimum ratings: 15 A one-circuit (A), 30 A two-circuit (B), 60 A all other installations (D)",
+          "source": "Mike Holt, Services Part 2, Article 230 (230.79)",
+          "url": "https://www.mikeholt.com/newsletters.php?action=display&letterID=3053"
+        }
+      ]
     },
     {
       "id": "C2-230.82",
@@ -2530,8 +4492,8 @@
       "article": "240",
       "section": "240.4(D)",
       "title": "The small-conductor caps",
-      "plain_explanation": "Whatever the ampacity table allows at a higher temperature rating, this subsection caps overcurrent protection for small conductors: 14 AWG copper at 15A, 12 AWG copper at 20A, and 10 AWG copper at 30A, with tighter caps for aluminum and copper-clad aluminum — 12 AWG at 15A and 10 AWG at 25A. Specific equipment articles can direct otherwise for their own equipment, but for general branch wiring these caps are the numbers that decide the breaker. They are also why a 12 AWG conductor on a 25A breaker fails inspection even when a table column seems to allow the ampacity.\n\nNEC 2023 CHANGE:\n• 240.4(D)(3) / Table 240.6(A): 14 AWG copper-clad aluminum was added to the 240.4(D) small-conductor list as new 240.4(D)(3) (the overcurrent limit it sets is not stated in the public summary reviewed: read it in the printed 2023 book), 10A was added to the Table 240.6(A) standard ratings, and 210.23 now permits 10A branch circuits for limited loads (not receptacles).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Memorize the copper row and the aluminum/CCA row separately. On a CCA job, a 20A circuit means 10 AWG wire — check the roll before it is pulled, not at the panel.",
+      "plain_explanation": "Whatever the ampacity table allows at a higher temperature rating, this subsection caps overcurrent protection for small conductors:\n• 14 AWG copper — 15 A\n• 12 AWG copper — 20 A\n• 10 AWG copper — 30 A\n• 12 AWG aluminum or copper-clad aluminum — 15 A\n• 10 AWG aluminum or copper-clad aluminum — 25 A\nIn the 2020 list, 14 AWG aluminum and CCA have no entry at all: 14 AWG CCA is not a 15 A conductor by analogy with copper, and it does not go in on a 2020 permit. (NEC 2023 gives it a limit of its own — see the 2020 vs 2023 box.) Specific equipment articles can direct otherwise for their own equipment, but for general branch wiring these caps are the numbers that decide the breaker. They are also why a 12 AWG conductor on a 25 A breaker fails inspection even when a table column seems to allow the ampacity: Table 310.16 rates 12 AWG THHN at 30 A in the 90 °C column, and the cap still says 20 A.",
+      "on_the_job": "Memorize the copper row and the aluminum/CCA row separately. On a Marion Oaks house wired in CCA, the rolls follow the breaker, not the copper habit: a 15 A circuit is pulled in 12 AWG CCA and a 20 A circuit in 10 AWG CCA (S-10). Check the roll before it is pulled, not at the panel — finding 12 AWG CCA landed on a 20 A breaker at trim means the run comes out and gets pulled again. On copper the check is one glance at the schedule: 14 AWG never sits above a 15 A breaker and 12 AWG never above a 20 A breaker, whatever the insulation is rated.",
       "sharma_note": "S-10 is this rule as Sharma practice: copper 14 on 15A and 12 on 20A; CCA one size up, 12 on 15A and 10 on 20A, with terminations marked for the conductor and no backstabbing.",
       "figure_idea": "A three-row chart graphic: wire size, copper cap, aluminum/CCA cap, with the CCA row highlighted.",
       "related_ids": [
@@ -2557,12 +4519,142 @@
       "nec2023_change": [
         {
           "section": "240.4(D)(3) / Table 240.6(A)",
-          "change": "14 AWG copper-clad aluminum was added to the 240.4(D) small-conductor list as new 240.4(D)(3) (the overcurrent limit it sets is not stated in the public summary reviewed: read it in the printed 2023 book), 10A was added to the Table 240.6(A) standard ratings, and 210.23 now permits 10A branch circuits for limited loads (not receptacles).",
+          "change": "14 AWG copper-clad aluminum was added to the 240.4(D) small-conductor list as new 240.4(D)(3): it is protected at not more than 10 A, with continuous load not over 8 A, by an overcurrent device listed and marked for 14 AWG CCA. 10 A was added to the Table 240.6(A) standard ratings, and 210.23 now permits 10 A branch circuits for limited loads (not receptacles).",
           "source": "Carosella 2023 NEC workbook (240.4(D)(3), Table 240.6(A)); NYEIA (210.23 10A circuits)",
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
+        },
+        {
+          "section": "240.4(D)(3) / Table 240.6(A)",
+          "change": "14 AWG CCA: OCPD 10 A max, continuous load 8 A max, OCPD listed and marked for 14 AWG CCA; 10 A added to standard ratings.",
+          "source": "ExpertCE Electrician's Guide for NEC 2023; EC&M Code Quiz Aug 3 2023",
+          "url": "https://expertce.com/courses/electricians-guide-for-nec-2023/lessons/can-i-use-14-awg-copper-clad-aluminum-conductors-in-my-led-lighting-circuits/",
+          "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Small conductors are the ones that get bundled together, buried in insulation and run the longest distances in a house. The higher table columns assume conditions a finished wall does not give them. The caps build the margin back in at the one place it can be enforced — the breaker — so an overloaded or miswired circuit opens the breaker before the conductor cooks its insulation inside the wall.",
+      "exam_trap": "The trap answer reads the 90 °C column: '12 AWG THHN is good for 30 A, so a 30 A breaker.' 240.4(D) caps it at 20 A, and that cap is the answer. The mirror trap runs by metal: 12 AWG CCA is not a 20 A conductor — aluminum and CCA read one line lower, at 15 A. And on a 2020 question, 14 AWG CCA has no cap in the list at all; the 10 A limit is a 2023 answer, not a 2020 one.",
+      "inspection_fails": [
+        "12 AWG copper on a 25 A or 30 A breaker, justified from the 90 °C column of Table 310.16.",
+        "12 AWG CCA landed on a 20 A breaker — sized as if it were copper.",
+        "14 AWG CCA installed under a 2020 permit, where 240.4(D) gives it no entry.",
+        "CCA landed on connectors or lugs marked CU only (110.14; S-10).",
+        "Backstabbed device connections on a CCA run (S-10: never backstab)."
+      ],
+      "tables": [
+        {
+          "caption": "240.4(D) small-conductor breaker caps",
+          "headers": [
+            "Conductor",
+            "NEC 2020",
+            "NEC 2023"
+          ],
+          "rows": [
+            [
+              "14 AWG CCA",
+              "Not listed",
+              "10 A, continuous load 8 A max, OCPD listed and marked for 14 CCA"
+            ],
+            [
+              "14 AWG Cu",
+              "15 A",
+              "15 A"
+            ],
+            [
+              "12 AWG Al/CCA",
+              "15 A",
+              "15 A"
+            ],
+            [
+              "12 AWG Cu",
+              "20 A",
+              "20 A"
+            ],
+            [
+              "10 AWG Al/CCA",
+              "25 A",
+              "25 A"
+            ],
+            [
+              "10 AWG Cu",
+              "30 A",
+              "30 A"
+            ]
+          ],
+          "note": "18 and 16 AWG copper have their own limited conditions in 240.4(D)(1) and (2)."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-240.4D-caps-chart.svg",
+          "alt": "Chart of the 240.4(D) small-conductor breaker caps: 14 AWG copper 15 A with no 2020 aluminum or CCA entry, 12 AWG copper 20 A and aluminum/CCA 15 A, 10 AWG copper 30 A and aluminum/CCA 25 A, plus a red 2023-only row for 14 AWG CCA at 10 A maximum and 8 A continuous with a listed and marked overcurrent device.",
+          "caption": "The caps by size and metal — and the 2023-only 14 AWG CCA row.",
+          "w": 900,
+          "h": 1460
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Largest breaker allowed on 12 AWG THHN copper in general branch wiring?",
+          "choices": [
+            "20 A",
+            "25 A",
+            "30 A",
+            "15 A"
+          ],
+          "answer_index": 0,
+          "explain_plain": "The 90 °C ampacity is 30 A, but 240.4(D) caps 12 AWG copper at 20 A.",
+          "nec_ref": "240.4(D)"
+        },
+        {
+          "question": "Largest breaker allowed on 12 AWG CCA under NEC 2020?",
+          "choices": [
+            "20 A",
+            "15 A",
+            "25 A",
+            "30 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Aluminum and CCA read one line lower than copper: 12 AWG is capped at 15 A.",
+          "nec_ref": "240.4(D)"
+        },
+        {
+          "question": "Under NEC 2023, 14 AWG CCA may be protected at not more than:",
+          "choices": [
+            "15 A",
+            "10 A, with continuous load not over 8 A",
+            "20 A",
+            "It is prohibited in all cases"
+          ],
+          "answer_index": 1,
+          "explain_plain": "New 240.4(D)(3) protects 14 AWG CCA at 10 A maximum, 8 A continuous, with an overcurrent device listed and marked for it.",
+          "nec_ref": "240.4(D)(3) (2023)"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 240.4(D)(3) / Table 240.6(A): 14 AWG copper-clad aluminum is protected at not more than 10 A, with continuous load not over 8 A, by a breaker or fuse listed and marked for 14 AWG CCA. 10 A was added to the Table 240.6(A) standard ratings, and 210.23 now permits 10 A branch circuits for limited loads (not receptacles). The 240.4(D) items renumber as (D)(1)–(D)(8).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "240.4(D)",
+        "Table 310.16",
+        "Table 240.6(A)",
+        "110.14",
+        "210.23"
+      ],
+      "uncertain": [
+        "The exact 2023 wording of 240.4(D)(3), beyond the 10 A limit, the 8 A continuous limit and the listed-and-marked overcurrent device condition, is summarized here from public sources; confirm it in a printed 2023 book."
+      ],
+      "rich_sources": [
+        {
+          "claim": "2023 240.4(D)(3) 14 AWG CCA: 10 A, 8 A continuous, OCPD listed and marked",
+          "source": "ExpertCE, Electrician's Guide for NEC 2023: 14 AWG CCA in LED lighting circuits (quotes 2023 text)",
+          "url": "https://expertce.com/courses/electricians-guide-for-nec-2023/lessons/can-i-use-14-awg-copper-clad-aluminum-conductors-in-my-led-lighting-circuits/"
+        },
+        {
+          "claim": "Same, independent",
+          "source": "EC&M Code Quiz: Copper-Clad Aluminum Wire Requirements (Aug 3, 2023)",
+          "url": "https://www.ecmweb.com/national-electrical-code/quizzes/article/21270791/code-quiz"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C2-240.6",
