@@ -150,8 +150,8 @@
       "article": "400",
       "section": "400.10",
       "title": "What flexible cords may be used for",
-      "plain_explanation": "Section 400.10 lists the jobs a flexible cord is allowed to do: hanging fixtures, connecting portable equipment, appliances that need to be moved for cleaning or service, and similar uses where flexibility is the point. The common thread is that the equipment, not the building, is what moves. A cord feeding a fixed outlet box or a permanent load is outside this list.\n\nCord ampacity comes from Table 400.5(A)(1) for the cord type and the number of current-carrying conductors — the sizes a crew actually holds, figured for two current-carrying conductors:\n• 18 AWG cord — 10 A\n• 16 AWG cord — 13 A\n• 14 AWG cord — 18 A\n• 12 AWG cord — 25 A\n• 10 AWG cord — 30 A\nA third current-carrying conductor in the same cord drops the value (the table's next column), which is why a cord's rating is read off its own table and not off the building-wire ampacity table.",
-      "on_the_job": "Before you plug or hard-wire a cord to anything, name the 400.10 use out loud. If you cannot name one, stop and run conduit or cable. Watch especially for cords run through walls, ceilings, or doorways, which this article does not allow.",
+      "plain_explanation": "Section 400.10 lists the jobs a flexible cord is allowed to do: hanging fixtures, connecting portable equipment, appliances that need to be moved for cleaning or service, and similar uses where flexibility is the point. The common thread is that the equipment, not the building, is what moves. A cord feeding a fixed outlet box or a permanent load is outside this list.\nCord ampacity comes from Table 400.5(A)(1) for the cord type and the number of current-carrying conductors — the table below gives the sizes a crew actually holds, figured for two current-carrying conductors. A third current-carrying conductor in the same cord drops the value (the table's next column), which is why a cord's rating is read off its own table and not off the building-wire ampacity table.",
+      "on_the_job": "Before you plug or hard-wire a cord to anything, name the 400.10 use out loud. If you cannot name one, stop and run conduit or cable. Watch especially for cords run through walls, ceilings, or doorways, which this article does not allow.\n\nWorkshop rough-in: pendant drops over the benches are a listed use, and the portable saw connects the same way. When the owner later asks for a cord through the wall to feed a new fixed outlet, that is the stop point — the use is gone, so the cord goes.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -159,7 +159,110 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-400.7",
-      "next_id": "C4-400.12"
+      "next_id": "C4-400.12",
+      "why_it_exists": "A cord is built to flex, not to live inside a wall for thirty years. Its insulation and strands are lighter than building wire, and nothing protects it where it passes through framing or gets pinched in a door. Kept to the listed uses, a cord stays out in the open where damage shows. Buried as permanent wiring, it becomes the hidden weak link that overheats or shorts.",
+      "exam_trap": "The trap is treating a heavy cord like building wire: '12 AWG is 12 AWG.' A cord's ampacity comes from Table 400.5(A)(1), not Table 310.16, and no cord size buys a use that is not on the 400.10 list. A cord feeding a fixed outlet box fails on the use before size is even discussed.",
+      "inspection_fails": [
+        "Flexible cord run through a wall, ceiling or doorway to reach a fixed load.",
+        "Cord used as a substitute for fixed wiring — feeding an outlet box or a permanent appliance.",
+        "Cord ampacity taken from Table 310.16 instead of Table 400.5(A)(1).",
+        "Three current-carrying conductors in the cord, but the two-conductor ampacity used."
+      ],
+      "tables": [
+        {
+          "caption": "Table 400.5(A)(1): cord ampacity, two current-carrying conductors",
+          "headers": [
+            "Cord size",
+            "Ampacity"
+          ],
+          "rows": [
+            [
+              "18 AWG",
+              "10 A"
+            ],
+            [
+              "16 AWG",
+              "13 A"
+            ],
+            [
+              "14 AWG",
+              "18 A"
+            ],
+            [
+              "12 AWG",
+              "25 A"
+            ],
+            [
+              "10 AWG",
+              "30 A"
+            ]
+          ],
+          "note": "A third current-carrying conductor in the same cord drops the value to the table's next column."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-400.10-uses.svg",
+          "alt": "Comparison panel of flexible cord uses: on the 400.10 list are pendant fixtures, portable equipment, appliances moved for cleaning or service, and uses needing flexibility; not on the list are feeding a fixed outlet box, a permanent load, and cords through walls, ceilings or doorways.",
+          "caption": "The use decides: the equipment moves, the building does not.",
+          "w": 900,
+          "h": 1280
+        },
+        {
+          "src": "fig/c4/C4-400.10-ampacity.svg",
+          "alt": "Bar chart of flexible cord ampacity from Table 400.5(A)(1) for two current-carrying conductors: 18 AWG 10 A, 16 AWG 13 A, 14 AWG 18 A, 12 AWG 25 A, 10 AWG 30 A.",
+          "caption": "Cord ampacity comes from the cord table, not Table 310.16.",
+          "w": 900,
+          "h": 1150
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Which of these is a 400.10 use for a flexible cord?",
+          "choices": [
+            "Feeding a fixed outlet box",
+            "Running a permanent load through a wall",
+            "Connecting portable equipment",
+            "Replacing a receptacle run"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Portable equipment is on the 400.10 list; the others put the cord to work as building wiring.",
+          "nec_ref": "400.10"
+        },
+        {
+          "question": "Ampacity of a 14 AWG cord with two current-carrying conductors, from Table 400.5(A)(1)?",
+          "choices": [
+            "15 A",
+            "18 A",
+            "20 A",
+            "25 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Table 400.5(A)(1) gives 18 A for a 14 AWG cord with two current-carrying conductors.",
+          "nec_ref": "Table 400.5(A)(1)"
+        },
+        {
+          "question": "A cord has three current-carrying conductors. Its ampacity:",
+          "choices": [
+            "Stays at the two-conductor value",
+            "Comes from Table 310.16",
+            "Drops to the next column of Table 400.5(A)(1)",
+            "Doubles"
+          ],
+          "answer_index": 2,
+          "explain_plain": "More current-carrying conductors in one cord means more heat in one jacket, so the table's next column applies.",
+          "nec_ref": "Table 400.5(A)(1)"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "400.10",
+        "Table 400.5(A)(1)",
+        "400.12"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C4-400.12",
@@ -167,16 +270,131 @@
       "article": "400",
       "section": "400.12",
       "title": "Uses not permitted — flexible cords and cables",
-      "plain_explanation": "Section 400.12 is the stop list for flexible cords and cables — in the 2017 edition this list was numbered 400.8, and the 2020 reorganization of Article 400 moved it here. Unless 400.10 permits the use, a flexible cord, flexible cable, cord set, or power-supply cord may not be used: (1) as a substitute for the fixed wiring of the structure; (2) run through holes in walls, structural ceilings, suspended or dropped ceilings, or floors; (3) run through doorways, windows, or similar openings; (4) attached to building surfaces, except that cords used for temporary wiring under 590.4 may be attached; (5) concealed by walls, floors, or ceilings, or located above suspended or dropped ceilings, except within an enclosure for use in other spaces used for environmental air as permitted by 300.22(C)(3); (6) installed in raceways, except as 400.17 permits in industrial establishments where only qualified persons service the installation; or (7) where it is subject to physical damage. Most failed 'cord' installations fail here, not on ampacity.",
-      "on_the_job": "On a service call, trace the whole cord, not just the ends. If any part of it is stapled, hidden, or passing through a partition, the fix is a permanent wiring method, not a heavier cord.",
+      "plain_explanation": "Section 400.12 is the stop list for flexible cords and cables. In the 2017 edition this list was numbered 400.8; the 2020 reorganization of Article 400 moved it here. Unless 400.10 permits the use, a flexible cord, flexible cable, cord set, or power-supply cord may not be used:\n• (1) As a substitute for the fixed wiring of the structure.\n• (2) Run through holes in walls, structural ceilings, suspended or dropped ceilings, or floors.\n• (3) Run through doorways, windows, or similar openings.\n• (4) Attached to building surfaces — except that cords used for temporary wiring under 590.4 may be attached.\n• (5) Concealed by walls, floors, or ceilings, or located above suspended or dropped ceilings — except within an enclosure for use in other spaces used for environmental air, as permitted by 300.22(C)(3).\n• (6) Installed in raceways — except as 400.17 permits in industrial establishments where only qualified persons service the installation.\n• (7) Where it is subject to physical damage.\nMost failed cord installations fail here, not on ampacity: the cord is usually heavy enough — it is just doing a job the Code reserves for fixed wiring.",
+      "on_the_job": "On a service call, trace the whole cord, not just the ends. If any part of it is stapled, hidden, or passing through a partition, the fix is a permanent wiring method, not a heavier cord. A Marion Oaks garage call: a freezer in the corner runs on a 14 AWG cord stapled along the wall and passed through a hole into the house — three items on the stop list at once. The fix was a new 20 A circuit in 12 AWG to a receptacle at the freezer, not a 12 AWG cord. And when a plan shows a cord doing a building's job, price the Chapter 3 wiring method instead.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
       "florida_note": "",
       "verified": true,
-      "sharma_rule_ids": [],
       "prev_id": "C4-400.10",
-      "next_id": "C4-ART-402"
+      "next_id": "C4-ART-402",
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "A cord is built to flex, not to live inside a wall for thirty years. Hidden or pinched, its jacket dries, cracks, and chafes where nobody can see it, and it has no raceway or cable armor to protect it. The stop list keeps cords out in the open, where damage shows, and reserves hidden runs for wiring methods built to be buried.",
+      "inspection_fails": [
+        "Extension cord stapled along a garage wall feeding a freezer — a substitute for fixed wiring, 400.12(1) and (4).",
+        "Cord run through a hole in the wall between the house and the garage, 400.12(2).",
+        "Appliance cord pinched through a doorway that closes on it, 400.12(3) and (7).",
+        "Cord draped above a dropped ceiling to feed a projector, 400.12(5).",
+        "Cord pulled into a raceway on a commercial job outside the 400.17 industrial exception, 400.12(6)."
+      ],
+      "exam_trap": "The trap answer treats the stop list as an ampacity problem: 'use a heavier cord and it passes.' It does not. A 10 AWG cord run through a wall still violates (2), and a cord stapled to the wall still violates (4), whatever its size. The only cure for a 400.12 violation is a fixed wiring method — or a use that 400.10 actually permits.",
+      "tables": [
+        {
+          "caption": "The stop list at a glance (NEC 2020)",
+          "headers": [
+            "Use",
+            "Why it fails",
+            "Section"
+          ],
+          "rows": [
+            [
+              "Substitute for fixed wiring",
+              "The cord becomes the building's wiring",
+              "400.12(1)"
+            ],
+            [
+              "Through walls, ceilings, floors",
+              "Hidden damage, no protection",
+              "400.12(2)"
+            ],
+            [
+              "Through doorways and windows",
+              "Pinched and crushed at the opening",
+              "400.12(3)"
+            ],
+            [
+              "Attached to building surfaces",
+              "Only 590.4 temporary wiring is excepted",
+              "400.12(4)"
+            ],
+            [
+              "Concealed or above dropped ceilings",
+              "Out of sight, jacket ages unseen",
+              "400.12(5)"
+            ],
+            [
+              "Installed in raceways",
+              "Industrial only, qualified persons, 400.17",
+              "400.12(6)"
+            ],
+            [
+              "Subject to physical damage",
+              "No armor where traffic or tools reach it",
+              "400.12(7)"
+            ]
+          ],
+          "note": "Numbering is 2020. In the 2017 edition this same list was 400.8."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-400.12-stop-list.svg",
+          "alt": "Flow diagram of the seven uses 400.12 does not permit for flexible cords, under the permitted uses of 400.10 and the 590.4 temporary-wiring exception.",
+          "caption": "The stop list: if a cord does any of these, it fails.",
+          "w": 900,
+          "h": 1200
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A homeowner runs a heavy-duty cord through a wall to feed a freezer in the garage. The cord is 12 AWG and protected at 20 A. Does it comply?",
+          "choices": [
+            "Yes — the cord is sized to the breaker",
+            "Yes — if the cord is listed",
+            "No — a cord may not run through a wall or substitute for fixed wiring",
+            "No — cords over 6 ft are not permitted"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Size is not the issue. 400.12(1) and (2) bar the use itself; the fix is a fixed wiring method.",
+          "nec_ref": "400.12(1), (2)"
+        },
+        {
+          "question": "Which cord use does 400.12 allow?",
+          "choices": [
+            "A cord attached to a wall for a permanent sign",
+            "A cord attached to building surfaces as temporary wiring under 590.4",
+            "A cord concealed above a dropped ceiling",
+            "A cord in a raceway on any commercial job"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Attaching is barred by 400.12(4) except for temporary wiring under 590.4. Raceways are limited to the 400.17 industrial exception.",
+          "nec_ref": "400.12(4), 590.4"
+        },
+        {
+          "question": "In the 2017 NEC, the flexible-cord uses-not-permitted list was numbered:",
+          "choices": [
+            "400.12",
+            "400.10",
+            "400.8",
+            "400.17"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The 2020 reorganization of Article 400 moved the list from 400.8 to 400.12.",
+          "nec_ref": "400.12"
+        }
+      ],
+      "code_refs": [
+        "400.12",
+        "400.10",
+        "400.17",
+        "590.4",
+        "300.22(C)(3)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C4-ART-402",
@@ -890,8 +1108,8 @@
       "article": "404",
       "section": "404.4",
       "title": "Switches in damp or wet locations — and out of the tub/shower wet location",
-      "plain_explanation": "Article 404 requires switches installed in damp or wet locations to be in enclosures suited to the location, and it separately restricts switches in a bathtub or shower space: a switch may not be installed within the wet location of a tub or shower unless it is part of a listed tub or shower assembly made for that purpose. The rule parallels the receptacle and luminaire zones in 406.9(C) and 410.10(D) — the wettest part of the room is kept free of devices a wet person would operate. A switch on the dry wall outside that space is an ordinary installation.",
-      "on_the_job": "At layout, treat the tub/shower wet location as a no-switch zone the same way you treat it as a no-receptacle zone. Exterior and patio switches get weatherproof enclosures suited to whether a cover must close over a plug or cord. Pool and spa switching also answers to Article 680 — check Chapter 6 before you place a switch near water.",
+      "plain_explanation": "Article 404 requires switches installed in damp or wet locations to be in enclosures suited to the location, and it separately restricts switches in a bathtub or shower space:\n• A switch may not be installed within the wet location of a tub or shower unless it is part of a listed tub or shower assembly made for that purpose.\n• The rule parallels the receptacle and luminaire zones in 406.9(C) and 410.10(D) — measured 3 ft horizontally and 8 ft vertically from the top of the tub rim or the shower threshold — so the wettest part of the room is kept free of devices a wet person would operate.\n• A switch on the dry wall outside that space is an ordinary installation.",
+      "on_the_job": "At layout, treat the tub/shower wet location as a no-switch zone the same way you treat it as a no-receptacle zone: in a Florida master bath, the switch bank goes on the dry wall outside the 3 ft / 8 ft zone, not on the wall beside the tub where the sketch first puts it. Exterior and patio switches get weatherproof enclosures suited to whether a cover must close over a plug or cord. Pool and spa switching also answers to Article 680 — check Chapter 6 before you place a switch near water.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -902,7 +1120,98 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-404.2(C)",
-      "next_id": "C4-404.8(A)"
+      "next_id": "C4-404.8(A)",
+      "why_it_exists": "Water on skin drops the body's resistance, and a person in a tub is usually wet, barefoot, and in contact with grounded plumbing — the worst possible position to touch a line-voltage device. Keeping switches out of the wet location removes the device from the reach of the person least able to survive contact with it. The weatherproof enclosure rule does the quieter job outdoors: it keeps water out of the device so the device does not fail wet.",
+      "exam_trap": "The trap answer is that GFCI protection makes a switch legal inside the tub/shower wet location. It does not — this is a location rule, and the only way in is as part of a listed tub or shower assembly. The second trap is treating a damp-location cover as a wet-location installation. A wet location needs an enclosure suited to wet use, not just a gasketed plate over an indoor switch.",
+      "tables": [
+        {
+          "caption": "Switches by location (404.4)",
+          "headers": [
+            "Location",
+            "Requirement"
+          ],
+          "rows": [
+            [
+              "Damp location",
+              "Enclosure suited to the location"
+            ],
+            [
+              "Wet location",
+              "Weatherproof enclosure suited to wet use"
+            ],
+            [
+              "Tub/shower wet location",
+              "No switch — unless part of a listed tub or shower assembly"
+            ],
+            [
+              "Dry wall outside the zone",
+              "Ordinary installation"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-404.4-wet-zone.svg",
+          "alt": "Bathroom elevation showing the tub and shower wet-location zone measured 3 ft horizontally and 8 ft vertically from the top of the tub rim: a switch inside the zone is crossed out, and a switch on the dry wall outside the zone is marked OK.",
+          "caption": "The wet location is a no-switch zone: 3 ft out, 8 ft up.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "inspection_fails": [
+        "Switch installed inside the tub/shower wet location, not part of a listed tub or shower assembly.",
+        "Standard indoor switch and plate on a lanai wall — no enclosure suited to the damp or wet location.",
+        "Switch roughed in beside the tub inside the 3 ft / 8 ft zone and never moved at trim.",
+        "Pool-area switch placed without checking Article 680."
+      ],
+      "page_quiz": [
+        {
+          "question": "A switch inside the wet location of a tub or shower is permitted when:",
+          "choices": [
+            "It is GFCI protected",
+            "It is part of a listed tub or shower assembly",
+            "It is more than 6 ft from the water line",
+            "It has a weatherproof cover"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The only way in is as part of a listed tub or shower assembly made for that purpose. GFCI protection does not change a location rule.",
+          "nec_ref": "404.4"
+        },
+        {
+          "question": "The tub/shower zone this rule parallels measures:",
+          "choices": [
+            "3 ft horizontally and 8 ft vertically from the top of the tub rim or shower threshold",
+            "2 ft horizontally and 6 ft vertically",
+            "5 ft in every direction from the drain",
+            "The entire bathroom"
+          ],
+          "answer_index": 0,
+          "explain_plain": "406.9(C) and 410.10(D) draw the zone 3 ft horizontally and 8 ft vertically from the top of the tub rim or the shower stall threshold.",
+          "nec_ref": "406.9(C), 410.10(D)"
+        },
+        {
+          "question": "A switch in a wet location must be:",
+          "choices": [
+            "GFCI protected",
+            "In an enclosure suited to the location",
+            "Tamper-resistant",
+            "On a dedicated circuit"
+          ],
+          "answer_index": 1,
+          "explain_plain": "404.4 puts switches in damp or wet locations in enclosures suited to the location.",
+          "nec_ref": "404.4"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "404.4",
+        "406.9(C)",
+        "410.10(D)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C4-404.8(A)",
@@ -1172,8 +1481,8 @@
       "article": "404",
       "section": "404.15(C)",
       "title": "Switch terminal markings for conductor materials (CO/ALR)",
-      "plain_explanation": "Section 404.15(C) carries the CO/ALR marking rule for switches — the switch-side twin of 406.3(C) for receptacles: a switch designed for the direct connection of aluminum conductors must be marked CO/ALR. The terminal rules that go with the marking, stated for the 2020 NEC in NEMA Engineering Bulletin No. 122 from the UL guide information for snap switches: terminals of 15A and 20A snap switches are for use with copper and copper-clad aluminum conductors only, unless marked CO/ALR, which adds aluminum; terminals of switches rated 30A and above are for copper only, unless marked AL/CU. Plain aluminum never lands on an unmarked device terminal.",
-      "on_the_job": "Check the device itself: read the terminal marking on the switch you are holding and match it to the conductor you are landing — no CO/ALR marking, no plain aluminum on the terminal. Do not backstab CCA — Sharma lands CCA on screw terminals only (see S-10).",
+      "plain_explanation": "Section 404.15(C) carries the CO/ALR marking rule for switches — the switch-side twin of 406.3(C) for receptacles:\n• A switch designed for the direct connection of aluminum conductors must be marked CO/ALR.\n• The terminal rules that go with the marking, stated for the 2020 NEC in NEMA Engineering Bulletin No. 122 from the UL guide information for snap switches: terminals of 15A and 20A snap switches are for use with copper and copper-clad aluminum conductors only, unless marked CO/ALR, which adds aluminum.\n• Terminals of switches rated 30A and above are for copper only, unless marked AL/CU.\n• Plain aluminum never lands on an unmarked device terminal.",
+      "on_the_job": "On a service call in a 1970s Florida house with aluminum branch wiring, the replacement switch on the truck is not automatically the right device. Read the terminal marking on the switch you are holding and match it to the conductor you are landing: no CO/ALR marking, no plain aluminum on the terminal — get a CO/ALR device instead of landing it and leaving. With CCA the terminal itself is fine, but land it on the screw terminals only: do not backstab CCA (see S-10).",
       "sharma_note": "S-10 applies: CCA is sized one AWG larger than copper and terminations must be listed for the conductor. Never backstab.",
       "figure_idea": "",
       "related_ids": [
@@ -1185,7 +1494,102 @@
         "S-10"
       ],
       "prev_id": "C4-404.14",
-      "next_id": "C4-ART-406"
+      "next_id": "C4-ART-406",
+      "why_it_exists": "Aluminum and copper do not age the same way under a screw. Aluminum oxidizes and creeps under pressure, so a terminal that was not designed and tested for it can work loose over years of heating and cooling until the connection runs hot. A CO/ALR device is built and tested for that behavior. The marking is how the installer knows which test the terminal passed — from the outside, the two switches look the same.",
+      "exam_trap": "The trap answer is that CO/ALR and AL/CU are two names for the same marking. They are not: 15A and 20A snap switches take aluminum only when marked CO/ALR, while switches rated 30A and above are copper only unless marked AL/CU. The second trap is treating CCA as plain aluminum. The bulletin puts copper-clad aluminum with copper on an unmarked 15A or 20A terminal; plain aluminum is the conductor that needs the marking.",
+      "tables": [
+        {
+          "caption": "What may land on the terminal (NEMA Engineering Bulletin No. 122, for the 2020 NEC)",
+          "headers": [
+            "Switch",
+            "Marking",
+            "Conductors"
+          ],
+          "rows": [
+            [
+              "15 A / 20 A snap switch",
+              "None",
+              "Copper, CCA"
+            ],
+            [
+              "15 A / 20 A snap switch",
+              "CO/ALR",
+              "Copper, CCA, aluminum"
+            ],
+            [
+              "30 A and above",
+              "None",
+              "Copper only"
+            ],
+            [
+              "30 A and above",
+              "AL/CU",
+              "Copper, aluminum"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-404.15C-yoke-markings.svg",
+          "alt": "Three panels comparing switch terminal markings: an unmarked 15 or 20 amp snap switch takes copper and copper-clad aluminum only; a CO/ALR marked switch also takes aluminum; a switch rated 30 amps and above is copper only unless marked AL/CU.",
+          "caption": "Read the device mark before you land the wire.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "inspection_fails": [
+        "Plain aluminum branch conductor landed on a 15 A snap switch with no CO/ALR marking.",
+        "Aluminum landed on a 30 A switch terminal not marked AL/CU.",
+        "CCA conductor backstabbed into a switch instead of landed on the screw terminal.",
+        "Standard copper-only switch installed where the existing aluminum wiring required a CO/ALR device."
+      ],
+      "page_quiz": [
+        {
+          "question": "A 15 A snap switch has no CO/ALR marking. Which conductors may land on its terminals?",
+          "choices": [
+            "Copper only",
+            "Copper and CCA",
+            "Copper, CCA and aluminum",
+            "Aluminum only"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Per NEMA Bulletin No. 122, 15A and 20A snap switch terminals are for copper and copper-clad aluminum unless marked CO/ALR, which adds aluminum.",
+          "nec_ref": "404.15(C)"
+        },
+        {
+          "question": "A switch rated 30 A must land aluminum conductors. What marking is required?",
+          "choices": [
+            "CO/ALR",
+            "AL/CU",
+            "CU only",
+            "No marking is needed"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Switches rated 30A and above are for copper only unless marked AL/CU.",
+          "nec_ref": "404.15(C)"
+        },
+        {
+          "question": "Where do you confirm a switch can take an aluminum conductor before landing it?",
+          "choices": [
+            "The carton it came in",
+            "The panel directory",
+            "The marking on the device itself",
+            "The print on the wire insulation"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The terminal marking is on the device: CO/ALR on a 15A or 20A snap switch, AL/CU at 30A and above.",
+          "nec_ref": "404.15(C)"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "404.15(C)",
+        "406.3(C)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C4-ART-406",
@@ -1362,8 +1766,8 @@
       "article": "406",
       "section": "406.4",
       "title": "Receptacle installation and replacement — the general rules (406.4(A)–(C))",
-      "plain_explanation": "Section 406.4 sets the baseline before the replacement details in 406.4(D). Receptacles must be of the grounding type where the wiring method provides a ground, must match the circuit's rating and configuration, and replacements follow a ladder: grounding-type for grounding-type where an EGC exists; where no grounding means exists, the permitted paths are a nongrounding replacement, a GFCI replacement marked 'No Equipment Ground,' or a grounding-type receptacle fed through a GFCI and marked the same way. The markings are part of the rule, not paperwork. where an EGC exists or is connected under 250.130(C), the replacement is a grounding-type receptacle (406.4(D)(1)). Third replacement option, exactly: a grounding-type receptacle supplied through a GFCI, marked 'GFCI Protected' and 'No Equipment Ground' (406.4(D)(2)(c)).\n\nNEC 2023 CHANGE:\n• 406.4: Food court and transit waiting-area floor receptacles now need GFCI, a CO/ALR replacement on aluminum wire can skip tamper-resistant, and a replacement must provide GFPE wherever GFPE is now required. GFCI now covers 125-volt, 15- and 20-amp floor receptacles in food courts and airport, bus and train waiting areas that allow food or drink (406.4(G)(2)).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Old two-wire house work: carry GFCI receptacles and 'No Equipment Ground' stickers on the truck. An unmarked GFCI swap in a no-ground box fails the detail even though the device itself works.",
+      "plain_explanation": "Section 406.4 sets the baseline before the replacement details in 406.4(D). Receptacles must be of the grounding type where the wiring method provides a ground, must match the circuit's rating and configuration, and replacements follow a ladder:\n• Grounding-type for grounding-type where an EGC exists. Where an EGC exists or is connected under 250.130(C), the replacement is a grounding-type receptacle (406.4(D)(1)).\n• Where no grounding means exists, the permitted paths are a nongrounding replacement, a GFCI replacement marked 'No Equipment Ground,' or a grounding-type receptacle fed through a GFCI and marked the same way.\n• The third replacement option is exactly this: a grounding-type receptacle supplied through a GFCI, marked 'GFCI Protected' and 'No Equipment Ground' (406.4(D)(2)(c)).\nThe markings are part of the rule, not paperwork.",
+      "on_the_job": "Old two-wire house work — a 1960s Orlando home with no EGC in the boxes: carry GFCI receptacles and 'No Equipment Ground' stickers on the truck. Where the owner wants a three-slot receptacle, the path is a GFCI replacement marked 'No Equipment Ground,' or a grounding-type receptacle fed through a GFCI and marked 'GFCI Protected' and 'No Equipment Ground.' An unmarked GFCI swap in a no-ground box fails the detail even though the device itself works.",
       "sharma_note": "",
       "figure_idea": "Three-rung ladder graphic for a no-ground box: nongrounding replacement, GFCI marked, grounding-type through GFCI marked.",
       "related_ids": [
@@ -1383,7 +1787,104 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/406-4",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "A grounding-type receptacle on a circuit with no ground tells a lie to the next person who plugs in: the third slot promises a fault path that is not there. The replacement ladder keeps the protection honest. A GFCI gives real shock protection without pretending to be a ground, and the 'No Equipment Ground' marking tells the truth about what is actually in the box.",
+      "exam_trap": "The trap is the unmarked GFCI swap: 'the GFCI trips, so the replacement is legal.' The device working is not the rule — on a no-ground circuit the GFCI replacement must be marked 'No Equipment Ground,' and a grounding-type receptacle fed through one needs both markings. The second trap is a plain grounding-type receptacle on a two-wire circuit. Without the GFCI and the markings, the ground slot promises a ground that does not exist.",
+      "tables": [
+        {
+          "caption": "Replacement paths under 406.4(D)",
+          "headers": [
+            "In the box",
+            "Replacement",
+            "Marking"
+          ],
+          "rows": [
+            [
+              "EGC exists (or 250.130(C))",
+              "Grounding-type",
+              "None extra"
+            ],
+            [
+              "No grounding means",
+              "Nongrounding type",
+              "None"
+            ],
+            [
+              "No grounding means",
+              "GFCI type",
+              "'No Equipment Ground'"
+            ],
+            [
+              "No grounding means",
+              "Grounding-type through a GFCI",
+              "'GFCI Protected' + 'No Equipment Ground'"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-406.4-ladder.svg",
+          "alt": "Flow chart for receptacle replacement: with an equipment grounding conductor in the box the replacement is a grounding-type receptacle; with no ground there are three permitted paths under 406.4(D)(2), each with its required marking.",
+          "caption": "The replacement ladder: ground in the box, or one of three marked paths.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "inspection_fails": [
+        "GFCI receptacle swapped into a no-ground box with no 'No Equipment Ground' marking.",
+        "Grounding-type receptacle on a two-wire circuit with no GFCI protection and no markings — a ground slot with no ground behind it.",
+        "Receptacle fed through a GFCI but missing its 'GFCI Protected' marking.",
+        "Replacement receptacle that does not match the circuit's rating or configuration."
+      ],
+      "page_quiz": [
+        {
+          "question": "No EGC exists in the box. Which replacement is permitted?",
+          "choices": [
+            "A grounding-type receptacle, unmarked",
+            "A GFCI receptacle marked 'No Equipment Ground'",
+            "A grounding-type receptacle with the ground terminal jumpered to the neutral",
+            "Any receptacle, no marking needed"
+          ],
+          "answer_index": 1,
+          "explain_plain": "With no grounding means, the paths are a nongrounding replacement, a marked GFCI replacement, or a grounding-type receptacle through a GFCI with both markings.",
+          "nec_ref": "406.4(D)(2)"
+        },
+        {
+          "question": "Where an EGC exists in the box, the replacement receptacle must be:",
+          "choices": [
+            "Nongrounding type",
+            "Grounding type",
+            "GFCI type only",
+            "Whatever was cheapest on the truck"
+          ],
+          "answer_index": 1,
+          "explain_plain": "406.4(D)(1): where an EGC exists or is connected under 250.130(C), the replacement is a grounding-type receptacle.",
+          "nec_ref": "406.4(D)(1)"
+        },
+        {
+          "question": "A grounding-type receptacle supplied through a GFCI on a no-ground circuit must be marked:",
+          "choices": [
+            "'No Equipment Ground' only",
+            "'GFCI Protected' only",
+            "Both 'GFCI Protected' and 'No Equipment Ground'",
+            "Nothing — the GFCI is the protection"
+          ],
+          "answer_index": 2,
+          "explain_plain": "406.4(D)(2)(c) requires both markings on that replacement path.",
+          "nec_ref": "406.4(D)(2)(c)"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 406.4: Food court and transit waiting-area floor receptacles now need GFCI, a CO/ALR replacement on aluminum wire can skip tamper-resistant, and a replacement must provide GFPE wherever GFPE is now required. GFCI now covers 125-volt, 15- and 20-amp floor receptacles in food courts and airport, bus and train waiting areas that allow food or drink (406.4(G)(2)).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "406.4",
+        "406.4(D)(1)",
+        "406.4(D)(2)(c)",
+        "250.130(C)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C4-406.4(D)",
@@ -1688,8 +2189,8 @@
       "article": "406",
       "section": "406.5(G)",
       "title": "Face-up receptacles in countertops — the prohibition is 406.5(G)",
-      "plain_explanation": "Section 406.5(G) carries the face-up rule for receptacles in counters and work surfaces. Under (G)(1), a receptacle may not be installed in a face-up position in or on a countertop or work surface unless it is listed for countertop or work surface applications. Under (G)(2), a receptacle may not be installed face-up in the area below a sink at all — the listed-assembly exception does not apply there. The hazard is the position itself: a face-up device collects spills, crumbs, and liquids directly into its face. The separate listing rule for receptacle assemblies made for these surfaces is at 406.5(E) and (F), covered on the previous page.",
-      "on_the_job": "Do not cut a standard duplex into a countertop face-up. Put the receptacle on the side of the cabinet or on the wall at the backsplash, or use a listed pop-up assembly made for countertop use — a listed assembly is the one face-up exception 406.5(G)(1) allows. Nothing goes face-up in the area below a sink.",
+      "plain_explanation": "406.5(G) carries the face-up rule for receptacles in countertops and work surfaces.\n• (G)(1): a receptacle may not be installed in a face-up position in or on a countertop or work surface unless it is listed for countertop or work surface applications.\n• (G)(2): a receptacle may not be installed face-up in the area below a sink at all — the listed-assembly exception does not apply there.\n• The hazard is the position itself: a face-up device collects spills, crumbs and liquids directly into its face.\n• The listing rule for the receptacle assemblies made for these surfaces is at 406.5(E) and (F), covered on the previous page.",
+      "on_the_job": "On a Marion Oaks kitchen, the island is 8 ft long with the sink at one end. The plan's island receptacle cannot be a standard duplex cut face-up into the stone — it is not listed for countertop use. The fixes: a listed pop-up assembly in the counter away from the sink, a receptacle on the side of the cabinet, or one on the wall at the backsplash. Nothing goes face-up in the area below the sink, listed or not.",
       "sharma_note": "",
       "figure_idea": "Countertop from above: a standard duplex crossed out face-up in the surface, a listed pop-up assembly beside it, and the zone below the sink marked no face-up.",
       "related_ids": [
@@ -1700,7 +2201,109 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-406.5(E)",
-      "next_id": "C4-406.9(A)"
+      "next_id": "C4-406.9(A)",
+      "why_it_exists": "A face-up receptacle is a shallow cup wired to power. Coffee, dishwater and cleaning spray fall straight into the slots, and crumbs and dropped utensils land across the contacts. Below a sink it is worse: a slow plumbing leak can drip into the device for weeks before anyone opens the cabinet and notices. The listing requirement, and the flat ban below a sink, keep liquid and debris out of live parts.",
+      "exam_trap": "The trap is 'listed means anywhere.' A listed pop-up assembly is legal face-up in the counter under (G)(1), but (G)(2) bans every face-up receptacle in the area below a sink — no exception, listed or not. The second trap: GFCI protection does not rescue a standard duplex cut face-up into a counter. Protection is not listing.",
+      "inspection_fails": [
+        "Standard duplex cut face-up into an island countertop; the device is not listed for countertop applications — 406.5(G)(1).",
+        "Listed pop-up assembly set face-up in the counter area below the sink — 406.5(G)(2) allows no exception there.",
+        "Face-up countertop receptacle defended as 'GFCI protected' — protection is not listing, 406.5(G)(1).",
+        "Receptacle face-up in a work surface using an assembly listed for wall use only."
+      ],
+      "tables": [
+        {
+          "caption": "Where a face-up receptacle may go (406.5(G))",
+          "headers": [
+            "Location",
+            "Device",
+            "Face-up?",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "Counter / work surface",
+              "Listed for the application",
+              "Yes",
+              "406.5(G)(1)"
+            ],
+            [
+              "Counter / work surface",
+              "Standard receptacle",
+              "No",
+              "406.5(G)(1)"
+            ],
+            [
+              "Area below a sink",
+              "Listed assembly",
+              "No",
+              "406.5(G)(2)"
+            ],
+            [
+              "Area below a sink",
+              "Any receptacle",
+              "No",
+              "406.5(G)(2)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-406.5G-countertop.svg",
+          "alt": "Plan view of an 8 ft kitchen island countertop with a listed pop-up assembly, a standard duplex crossed out face-up in the surface, the sink zone hatched red where no face-up device is allowed, and a receptacle on the cabinet front.",
+          "caption": "Face-up rules on one counter: listed assembly yes, standard duplex no, below the sink never.",
+          "w": 900,
+          "h": 1240
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A receptacle listed for countertop applications may be installed face-up:",
+          "choices": [
+            "Anywhere in the counter, including below the sink",
+            "In a countertop, but never in the area below a sink",
+            "Only in commercial kitchens",
+            "Nowhere — face-up is always banned"
+          ],
+          "answer_index": 1,
+          "explain_plain": "406.5(G)(1) allows the listed assembly face-up; (G)(2) removes the area below a sink from that permission.",
+          "nec_ref": "406.5(G)(1), (G)(2)"
+        },
+        {
+          "question": "Which paragraph bans face-up receptacles below a sink with no listed exception?",
+          "choices": [
+            "406.5(E)",
+            "406.5(F)",
+            "406.5(G)(2)",
+            "406.9(A)"
+          ],
+          "answer_index": 2,
+          "explain_plain": "(G)(2) is the flat ban: no face-up receptacle in the area below a sink, listed or not.",
+          "nec_ref": "406.5(G)(2)"
+        },
+        {
+          "question": "A GFCI-protected standard duplex is cut face-up into a kitchen island, away from the sink. Verdict?",
+          "choices": [
+            "Legal — GFCI makes it safe",
+            "Legal if tamper-resistant",
+            "Violation — the device is not listed for countertop use",
+            "Legal on a 20 A circuit"
+          ],
+          "answer_index": 2,
+          "explain_plain": "406.5(G)(1) turns on listing for the application, not on ground-fault protection.",
+          "nec_ref": "406.5(G)(1)"
+        }
+      ],
+      "code_refs": [
+        "406.5(G)(1)",
+        "406.5(G)(2)",
+        "406.5(E)",
+        "406.5(F)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C4-406.9(A)",
@@ -1814,8 +2417,8 @@
       "article": "406",
       "section": "406.9(B)",
       "title": "Receptacles in wet locations — in-use covers and weather-resistant devices",
-      "plain_explanation": "Section 406.9(B) covers receptacles in wet locations, where water can reach the device whether or not something is plugged in. The enclosure must stay weatherproof while a plug is inserted and the cord is in use — the bubble or in-use cover — and 15A and 20A, 125V and 250V receptacles in wet locations must be weather-resistant (WR) type. An unattended wet-location receptacle, such as one on a house exterior, needs that in-use protection; the rule has specific treatment for receptacles that are attended while in use.\n\nTwo details decide inspections here. First, the in-use cover (the outlet box hood) for a wet-location receptacle must be listed and identified as extra duty — the heavier hinged cover — where 406.9(B)(1) requires it; a light flip lid is a damp-location part, not a wet-location one. Second, the weather-resistant requirement in this section reaches the 15A and 20A, 125V and 250V receptacles a house and a light commercial job actually use; larger pin-and-sleeve and locking devices follow their own listing for the location.",
-      "on_the_job": "Stock both parts on the truck: a WR receptacle and an extra-duty in-use cover. A flat flip lid on an exterior receptacle that runs a pump, a charger, or landscape equipment is a correction waiting to happen. Seat the cover gasket fully and route the cord out the bottom notch so the cover can close.",
+      "plain_explanation": "Section 406.9(B) covers receptacles in wet locations — places where water can reach the device whether or not something is plugged in. Two parts work together:\n• The enclosure must stay weatherproof while a plug is inserted and the cord is in use. That is the bubble, or in-use, cover: protection with the plug IN, not just with the cover closed.\n• 15 A and 20 A, 125 V and 250 V receptacles in wet locations must be weather-resistant (WR) type.\nAn unattended wet-location receptacle, such as one on a house exterior, needs that in-use protection; the rule has specific treatment for receptacles that are attended while in use.\nTwo details decide inspections here. First, the in-use cover (the outlet box hood) must be listed and identified as extra duty — the heavier hinged cover — where 406.9(B)(1) requires it; a light flip lid is a damp-location part, not a wet-location one. Second, the WR requirement in this section reaches the 15 A and 20 A, 125 V and 250 V receptacles a house and a light commercial job actually use; larger pin-and-sleeve and locking devices follow their own listing for the location.",
+      "on_the_job": "Stock both parts on the truck: a WR receptacle and an extra-duty in-use cover. A flat flip lid on an exterior receptacle that runs a pump, a charger, or landscape equipment is a correction waiting to happen. Seat the cover gasket fully and route the cord out the bottom notch so the cover can close. On a Florida exterior, assume wet until proven damp: afternoon storms drive rain sideways under most soffits, so the lanai receptacle by the pool equipment gets the WR device and the bubble cover even when the plan just says 'exterior.'",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1825,9 +2428,106 @@
       ],
       "florida_note": "Florida note: afternoon rain and irrigation spray make most Florida exterior receptacles wet locations in practice, whatever the plan calls them. Default to WR + in-use cover outside.",
       "verified": true,
-      "sharma_rule_ids": [],
       "prev_id": "C4-406.9(A)",
-      "next_id": "C4-406.9(C)"
+      "next_id": "C4-406.9(C)",
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "An ordinary receptacle outdoors corrodes: springs and contacts green up, resistance rises, and the device heats or fails — often with a pump or charger plugged in and nobody watching. The WR device is built with corrosion-resistant parts and UV-stable plastics, and the in-use cover keeps driven rain out of the connection while it is actually working, which is when it matters most.",
+      "inspection_fails": [
+        "Flat flip-lid cover on an exterior receptacle in a wet location — weatherproof only with the plug out.",
+        "Standard (non-WR) receptacle installed outdoors; no WR marking on the face.",
+        "In-use cover not extra duty where 406.9(B)(1) requires it, or gasket not seated so the cover cannot close.",
+        "Cord routed out the side of the bubble cover so the lid stands open in the rain."
+      ],
+      "exam_trap": "The trap swaps the two covers. A flip lid is weatherproof only with the plug out — that is the damp-location rule in 406.9(A). A wet location demands weatherproof with the plug inserted, the in-use cover, and the heavy extra-duty version where 406.9(B)(1) applies. Picking 'flip lid' for a wet location is the classic wrong answer — and WR alone does not fix it: the device and the cover are separate requirements.",
+      "tables": [
+        {
+          "caption": "Damp vs wet at a glance (NEC 2020)",
+          "headers": [
+            "",
+            "Damp — 406.9(A)",
+            "Wet — 406.9(B)"
+          ],
+          "rows": [
+            [
+              "Cover",
+              "Weatherproof with plug out",
+              "Weatherproof with plug in (in-use)"
+            ],
+            [
+              "Cover duty",
+              "Standard flip lid",
+              "Extra duty where (B)(1) requires"
+            ],
+            [
+              "Device",
+              "WR type",
+              "WR type"
+            ],
+            [
+              "Typical spot",
+              "Covered porch, carport",
+              "House exterior, pool equipment"
+            ]
+          ],
+          "note": "Both locations take WR receptacles at 15 A and 20 A, 125 V and 250 V."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-406.9B-in-use-cover.svg",
+          "alt": "Elevation of an exterior wet-location receptacle with an extra-duty in-use bubble cover closed over a plugged-in cord, a WR receptacle inside, and the cord leaving through the bottom notch.",
+          "caption": "Weatherproof with the plug in: WR device plus extra-duty in-use cover.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A wet-location receptacle must remain weatherproof:",
+          "choices": [
+            "Only when nothing is plugged in",
+            "While a plug is inserted and in use",
+            "Only during the inspection",
+            "Only if it is GFCI protected"
+          ],
+          "answer_index": 1,
+          "explain_plain": "That is the in-use cover rule: the enclosure stays weatherproof with the plug in and the cord in use. Weatherproof with the plug out is the damp-location standard.",
+          "nec_ref": "406.9(B)(1)"
+        },
+        {
+          "question": "Which receptacles in wet locations must be WR type?",
+          "choices": [
+            "All receptacles of every size",
+            "15 A and 20 A, 125 V and 250 V",
+            "Only 15 A, 125 V",
+            "Only receptacles near pools"
+          ],
+          "answer_index": 1,
+          "explain_plain": "406.9(B) names the 15 A and 20 A, 125 V and 250 V devices — the ones houses and light commercial jobs use. Larger devices follow their own listing.",
+          "nec_ref": "406.9(B)"
+        },
+        {
+          "question": "The in-use cover on a wet-location receptacle must be listed and identified as:",
+          "choices": [
+            "Damp location",
+            "Extra duty",
+            "Tamper resistant",
+            "Hospital grade"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Where 406.9(B)(1) requires it, the outlet box hood is the heavier extra-duty cover. A light flip lid is a damp-location part.",
+          "nec_ref": "406.9(B)(1)"
+        }
+      ],
+      "code_refs": [
+        "406.9(B)",
+        "406.9(B)(1)",
+        "406.9(A)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C4-406.9(C)",
@@ -3751,8 +4451,8 @@
       "article": "411",
       "section": "411.4",
       "title": "Low-voltage lighting systems — where they may and may not go (Article 411)",
-      "plain_explanation": "Article 411 covers lighting systems operating at not more than 30 volts AC or 60 volts DC (411.1, 2020) — the listed low-voltage systems behind a lot of LED tape, under-cabinet, and accent work. The system must be listed as a complete system or assembled from listed parts, the power source limits the secondary circuit (the article caps secondary output at 25 amperes), and the bare-conductor versions carry location limits: not concealed or run through walls, floors, or ceilings unless the specific listed system permits it, and kept clear of pools, spas, and similar locations except as the article allows. A loose power supply and a roll of tape bought online is not an Article 411 system. Location limits are 411.5: not concealed or extended through a building wall, floor or ceiling unless wired with a Chapter 3 method or Class 2 wiring where the power supply is Class 2, and not within 10 ft of pools, spas, fountains or similar locations unless Article 680 permits. 411.4 itself is the listing rule (a complete listed system, or assembled from listed parts).",
-      "on_the_job": "Spec the listed system — power supply, cable, and fixtures from one listed family — and keep the driver accessible. Inspectors ask whose system it is; 'the homeowner bought it online' is not an answer.",
+      "plain_explanation": "Article 411 covers lighting systems operating at not more than 30 volts AC or 60 volts DC (411.1) — the listed low-voltage systems behind a lot of LED tape, under-cabinet, and accent work. Section 411.4 itself is the listing rule:\n• The system must be listed as a complete system, or assembled from listed parts. A loose power supply and a roll of tape bought online is not an Article 411 system.\n• The power source limits the secondary circuit: the article caps secondary output at 25 amperes.\n• Where contact with water is likely, the limits drop to 15 volts AC or 30 volts DC (411.1).\nThe location limits live in 411.5:\n• Bare-conductor systems are not concealed and do not run through walls, floors, or ceilings unless the specific listed system permits it.\n• Secondary wiring is not concealed or extended through a building wall, floor, or ceiling unless it is wired with a Chapter 3 method, or with Class 2 wiring where the power supply is Class 2.\n• The system stays at least 10 ft from pools, spas, fountains, and similar locations unless Article 680 permits it.",
+      "on_the_job": "Spec the listed system — power supply, cable, and fixtures from one listed family — and keep the driver accessible. Inspectors ask whose system it is; 'the homeowner bought it online' is not an answer. On the Lake Nona lanai job the pattern held: a listed 24 V DC driver rated 100 W feeding tape and puck runs totaling 72 W, inside the rating with room to spare, and the secondary routed so the nearest fixture stays 12 ft from the pool water — outside the 10 ft limit in 411.5. The driver went in an accessible spot, not buried behind the tile.",
       "sharma_note": "",
       "figure_idea": "System diagram: listed power unit to secondary cable to fixtures, with the 30 V and 25 A limits marked on the secondary side.",
       "related_ids": [
@@ -3761,9 +4461,115 @@
       ],
       "florida_note": "",
       "verified": true,
-      "sharma_rule_ids": [],
       "prev_id": "C4-ART-411",
-      "next_id": "C4-ART-422"
+      "next_id": "C4-ART-422",
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Low voltage feels harmless, so it gets installed casually — unlisted drivers buried in walls, bare tape stapled where hands and water reach. The listing rule makes one manufacturer answer for the whole chain: supply, cable, and fixtures tested together. The location limits keep a system nobody thinks of as 'wiring' from being hidden like wiring, or from reaching the pool zone.",
+      "inspection_fails": [
+        "Unlisted LED tape and a loose online driver installed as an 'Article 411 system' — no listing, 411.4.",
+        "Driver buried inside a closed wall or above a sealed ceiling where it cannot be reached for service.",
+        "Bare-conductor system run concealed through a wall where the listed system does not permit it, 411.5.",
+        "Low-voltage accent fixtures 6 ft from the pool water with no Article 680 basis, 411.5.",
+        "Secondary cable extended through an exterior wall in plain cord instead of a Chapter 3 or Class 2 method, 411.5."
+      ],
+      "exam_trap": "The trap is treating 30 volts as 'not real wiring,' so any parts on hand will do. The exam answer is the listing: a complete listed system, or listed parts assembled as a system. A loose online power supply plus unlisted tape fails 411.4 before any location question is even reached — and the 25 A secondary cap and the 10 ft pool clearance still apply to the listed system.",
+      "tables": [
+        {
+          "caption": "Article 411 limits at a glance (NEC 2020)",
+          "headers": [
+            "Item",
+            "Limit",
+            "Section"
+          ],
+          "rows": [
+            [
+              "System voltage",
+              "30 V AC / 60 V DC max",
+              "411.1"
+            ],
+            [
+              "Where water contact is likely",
+              "15 V AC / 30 V DC max",
+              "411.1"
+            ],
+            [
+              "Secondary output",
+              "25 A max",
+              "Art. 411"
+            ],
+            [
+              "Pool, spa, fountain clearance",
+              "10 ft min unless Art. 680 permits",
+              "411.5"
+            ],
+            [
+              "Through walls, floors, ceilings",
+              "Chapter 3 method, or Class 2 wiring with a Class 2 supply",
+              "411.5"
+            ]
+          ],
+          "note": "411.4 is the listing rule; the location limits are 411.5."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-411.4-system.svg",
+          "alt": "One-line diagram of a listed Article 411 system: branch circuit to listed power supply to fixtures, with the 30 V and 25 A secondary limits and the 10 ft pool clearance marked.",
+          "caption": "One listed family, with the secondary limits and pool clearance.",
+          "w": 900,
+          "h": 1180
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "What makes a low-voltage lighting installation an Article 411 system?",
+          "choices": [
+            "Operating at 30 V or less, whatever parts are used",
+            "A complete listed system, or one assembled from listed parts",
+            "A Class 2 power supply by itself",
+            "Fixtures marked for damp locations"
+          ],
+          "answer_index": 1,
+          "explain_plain": "411.4 is the listing rule: listed as a complete system or assembled from listed parts. Voltage alone does not make the system.",
+          "nec_ref": "411.4"
+        },
+        {
+          "question": "The secondary output of an Article 411 power supply is capped at:",
+          "choices": [
+            "10 A",
+            "15 A",
+            "25 A",
+            "30 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The article caps secondary output at 25 amperes, and the power source is what limits the secondary circuit.",
+          "nec_ref": "Article 411"
+        },
+        {
+          "question": "How close may Article 411 secondary wiring come to a pool, absent an Article 680 permission?",
+          "choices": [
+            "5 ft",
+            "6 ft",
+            "10 ft",
+            "No limit — it is low voltage"
+          ],
+          "answer_index": 2,
+          "explain_plain": "411.5 keeps the system at least 10 ft from pools, spas, fountains, and similar locations unless Article 680 permits otherwise.",
+          "nec_ref": "411.5"
+        }
+      ],
+      "code_refs": [
+        "411.1",
+        "411.4",
+        "411.5",
+        "Article 680"
+      ],
+      "uncertain": [
+        "The 25 A secondary cap is stated at article level on this page and on the article page; the exact printed-2020 subsection carrying the cap was not confirmed. Check in print before citing a narrower paragraph."
+      ],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C4-ART-422",
@@ -4070,8 +4876,8 @@
       "article": "422",
       "section": "422.11",
       "title": "Overcurrent protection for appliances (422.11)",
-      "plain_explanation": "Section 422.11 protects the appliance at the size the appliance was built for. Where the appliance is marked with a maximum overcurrent device, that marking governs. For a single non-motor appliance fastened in place and rated over 13.3 amperes, where the appliance is not marked with a maximum OCPD: 20A maximum if the appliance is rated 13.3A or less; 150% of the rated current maximum if rated over 13.3A, and where 150% does not land on a standard rating the next higher standard size is permitted (422.11(E)). — a ceiling, not a target. Motor-operated appliances follow the motor rules for their protection, and infrared heating appliances carry their own subdivision limits in this section. 422.11(F): resistance-type heating elements in electric heating appliances rated over 48A must be subdivided, each subdivided load not over 48A and protected at not more than 60A.",
-      "on_the_job": "Read the appliance label before the breaker is chosen, every time. 'It matched the panel schedule from the last job' is how a 50 A device lands on an appliance marked 30 A maximum.",
+      "plain_explanation": "Section 422.11 protects the appliance at the size the appliance was built for.\n• Where the appliance is marked with a maximum overcurrent device, that marking governs.\n• For a single non-motor appliance fastened in place that is not marked with a maximum OCPD: 20 A maximum if the appliance is rated 13.3 A or less; 150 percent of the rated current maximum if rated over 13.3 A — and where 150 percent does not land on a standard rating, the next higher standard size is permitted (422.11(E)). That 150 percent is a ceiling, not a target.\n• Motor-operated appliances follow the motor rules for their protection.\n• Infrared heating appliances carry their own subdivision limits in this section.\n• 422.11(F): resistance-type heating elements in electric heating appliances rated over 48 A must be subdivided, each subdivided load not over 48 A and protected at not more than 60 A.",
+      "on_the_job": "Read the appliance label before the breaker is chosen, every time. 'It matched the panel schedule from the last job' is how a 50 A device lands on an appliance marked 30 A maximum. Worked example with no marking: an unmarked fastened-in-place appliance rated 16 A gets 150 percent of 16 A = 24 A; 24 A is not a standard rating, so the next higher standard size, 25 A, is the ceiling. If that appliance were marked 'MAX 30 A,' the label — not the math — would set the breaker.",
       "sharma_note": "",
       "figure_idea": "Appliance label zoom: 'MAX FUSE / BREAKER 30 A' with an arrow to the panel breaker slot.",
       "related_ids": [
@@ -4082,7 +4888,104 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-422.10",
-      "next_id": "C4-422.13"
+      "next_id": "C4-422.13",
+      "why_it_exists": "An appliance's internal wiring, switches and controls are tested and listed with a specific maximum protective device ahead of them. A larger breaker lets a fault inside the appliance cook its own small conductors long before the breaker trips. The 150 percent allowance exists because some appliances draw starting surges — but it is a ceiling set by the listing, not a size to aim for.",
+      "exam_trap": "The trap is treating 150 percent as the required size, or applying it to a marked appliance. When the appliance is marked with a maximum overcurrent device, the marking governs and the percentage math never starts. And where 150 percent lands between standard sizes, only the next higher standard size is permitted — not the next one after that.",
+      "inspection_fails": [
+        "50 A breaker on an appliance marked 'MAX BREAKER 30 A' — the marking governs, 422.11(E).",
+        "Unmarked 16 A appliance protected at 40 A 'to stop nuisance trips' — the ceiling is 150 percent (24 A, next standard size 25 A).",
+        "90 A electric heating appliance fed as one load — elements over 48 A must be subdivided, each load not over 48 A, 422.11(F).",
+        "Subdivided heating load protected at 80 A — subdivided loads are protected at not more than 60 A, 422.11(F)."
+      ],
+      "tables": [
+        {
+          "caption": "Maximum overcurrent protection (422.11)",
+          "headers": [
+            "Appliance",
+            "Rule",
+            "Max OCPD"
+          ],
+          "rows": [
+            [
+              "Marked 'MAX 30 A'",
+              "Marking governs",
+              "30 A"
+            ],
+            [
+              "Unmarked, rated 12 A",
+              "13.3 A or less → 20 A cap",
+              "20 A"
+            ],
+            [
+              "Unmarked, rated 16 A",
+              "150% = 24 A → next std size",
+              "25 A"
+            ],
+            [
+              "Heating appliance over 48 A",
+              "Subdivide, each ≤ 48 A (F)",
+              "60 A per load"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-422.11-label.svg",
+          "alt": "An appliance nameplate marked MAX BREAKER 30 A with an arrow to the panel: a 30 A breaker matches the label, a 50 A breaker is over the marked maximum, and the unmarked-appliance rules of 422.11(E) are summarized below.",
+          "caption": "The label sets the breaker — 150 percent is only for unmarked appliances.",
+          "w": 900,
+          "h": 1120
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "An appliance nameplate reads 'MAX BREAKER 30 A.' The panel schedule shows 50 A. The correct protection is:",
+          "choices": [
+            "50 A — follow the schedule",
+            "30 A — the marking governs",
+            "45 A — 150 percent of 30 A",
+            "Whatever breaker is on the truck"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Where the appliance is marked with a maximum overcurrent device, that marking governs.",
+          "nec_ref": "422.11(E)"
+        },
+        {
+          "question": "An unmarked non-motor appliance rated 16 A, fastened in place: maximum overcurrent protection?",
+          "choices": [
+            "20 A",
+            "24 A",
+            "25 A",
+            "30 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "150 percent of 16 A is 24 A, which is not a standard rating, so the next higher standard size, 25 A, is permitted as the maximum.",
+          "nec_ref": "422.11(E)"
+        },
+        {
+          "question": "Resistance heating elements in an appliance rated over 48 A must be subdivided so each load is not over ___ and protected at not more than ___:",
+          "choices": [
+            "48 A / 60 A",
+            "40 A / 50 A",
+            "50 A / 60 A",
+            "60 A / 70 A"
+          ],
+          "answer_index": 0,
+          "explain_plain": "422.11(F): each subdivided load not over 48 A, protected at not more than 60 A.",
+          "nec_ref": "422.11(F)"
+        }
+      ],
+      "code_refs": [
+        "422.11",
+        "422.11(E)",
+        "422.11(F)",
+        "240.6(A)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C4-422.13",
@@ -4103,7 +5006,95 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-422.11",
-      "next_id": "C4-422.16(B)(4)"
+      "next_id": "C4-422.16(B)(4)",
+      "why_it_exists": "A storage heater does not sip power. After showers or a full tank draw, the elements run flat-out for a long stretch to recover the tank, exactly like a continuous load. A circuit sized at exactly the nameplate amps would run its breaker and terminations at the edge for hours. The 125 percent factor is the continuous-load margin that keeps the circuit cool over those long runs.",
+      "exam_trap": "The trap is sizing to the nameplate alone: 4,500 W ÷ 240 V = 18.75 A, so a 20 A breaker on 12 AWG. Wrong — 422.13 treats the heater as a continuous load, so the circuit minimum is 18.75 × 1.25 = 23.4 A, and the job lands on a 30 A breaker with 10 AWG copper.",
+      "inspection_fails": [
+        "4,500 W heater on a 20 A breaker and 12 AWG — sized at nameplate amps, no 125 percent (422.13).",
+        "5,500 W heater on a 25 A breaker: below the 28.6 A minimum the 125 percent rule sets.",
+        "Circuit copied from the last house without reading the nameplate on the heater actually installed.",
+        "Panel schedule shows the heater circuit with no rating recorded — the calc was never run."
+      ],
+      "tables": [
+        {
+          "caption": "Worked examples: 240 V storage heaters",
+          "headers": [
+            "Heater",
+            "Draw",
+            "125% minimum",
+            "Circuit"
+          ],
+          "rows": [
+            [
+              "4,500 W",
+              "18.75 A",
+              "23.4 A",
+              "30 A breaker, 10 AWG Cu"
+            ],
+            [
+              "5,500 W",
+              "22.9 A",
+              "28.6 A",
+              "30 A breaker, 10 AWG Cu"
+            ]
+          ],
+          "note": "Run the arithmetic for the nameplate on the actual job. 422.13 covers fixed storage heaters of 120 gallons or less."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-422.13-heater-calc.svg",
+          "alt": "Bar chart of two worked examples: a 4,500 W heater draws 18.75 A with a 125 percent minimum of 23.4 A, and a 5,500 W heater draws 22.9 A with a minimum of 28.6 A; both land on a 30 A breaker with 10 AWG copper.",
+          "caption": "Nameplate draw, then 125 percent, then the standard circuit.",
+          "w": 900,
+          "h": 1380
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A 4,500 W, 240 V storage water heater. Minimum branch-circuit ampacity under 422.13?",
+          "choices": [
+            "18.75 A",
+            "20 A",
+            "23.4 A",
+            "30 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "4,500 ÷ 240 = 18.75 A; × 1.25 = 23.4 A minimum circuit.",
+          "nec_ref": "422.13"
+        },
+        {
+          "question": "The 125 percent sizing in 422.13 applies to fixed storage water heaters of:",
+          "choices": [
+            "Any size",
+            "120 gallons or less",
+            "Over 120 gallons only",
+            "450 gallons or less"
+          ],
+          "answer_index": 1,
+          "explain_plain": "422.13 covers fixed storage water heaters of 120 gallons or less.",
+          "nec_ref": "422.13"
+        },
+        {
+          "question": "A 5,500 W, 240 V heater works out to a 28.6 A minimum circuit. Which circuit covers it?",
+          "choices": [
+            "25 A breaker, 12 AWG Cu",
+            "30 A breaker, 10 AWG Cu",
+            "20 A breaker, 12 AWG Cu",
+            "28.6 A breaker, 10 AWG Cu"
+          ],
+          "answer_index": 1,
+          "explain_plain": "28.6 A is a calculated minimum, not a standard breaker size; the standard circuit that covers it is 30 A on 10 AWG copper.",
+          "nec_ref": "422.13"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "422.13"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C4-422.16(B)(4)",
@@ -4514,8 +5505,8 @@
       "article": "424",
       "section": "424.4",
       "title": "Branch circuits for fixed electric space heating (424.4(A), 424.4(B))",
-      "plain_explanation": "Fixed electric space heating — baseboard, wall heaters, ceiling heat, and the electric heat built into equipment — is served by individual branch circuits under 424.4(A), with the central systems the article names as the exception pattern. Under 424.4(B) the heating load is treated as continuous: branch-circuit conductors and overcurrent protection are sized at 125 percent of the total heating load on the circuit, before any other load is considered. A heater is not a convenience load that happens to get warm; it runs for hours at full draw. Circuits supplying two or more heater outlets are rated 15, 20, 25 or 30A; in other than dwelling units, fixed infrared heating may be on circuits up to 50A (424.4(A)). (424.3(A)/(B) are the 2017 numbers.)",
-      "on_the_job": "Worked example: a 4,800 W, 240 V wall heater draws 20 A. Continuous sizing makes the circuit 20 × 1.25 = 25 A — so the circuit is built at 25 A or above, never the 20 A circuit the raw math suggests.",
+      "plain_explanation": "Fixed electric space heating — baseboard, wall heaters, ceiling heat, and the electric heat built into equipment — is served by individual branch circuits under 424.4(A), with the central systems the article names as the exception pattern.\n• 424.4(B): the heating load is treated as continuous. Branch-circuit conductors and overcurrent protection are sized at 125 percent of the total heating load on the circuit, before any other load is considered.\n• Circuits supplying two or more heater outlets are rated 15, 20, 25 or 30 A.\n• In other than dwelling units, fixed infrared heating may be on circuits up to 50 A (424.4(A)).\n• (424.3(A)/(B) are the 2017 numbers for these rules.)\nA heater is not a convenience load that happens to get warm; it runs for hours at full draw.",
+      "on_the_job": "Worked example: a 4,800 W, 240 V wall heater draws 20 A (4,800 ÷ 240). Continuous sizing makes the circuit 20 × 1.25 = 25 A — so the circuit is built at 25 A or above, never the 20 A circuit the raw math suggests. Same math in a Florida bonus room: two 1,500 W baseboards on one circuit draw 3,000 W ÷ 240 V = 12.5 A, and 12.5 × 1.25 = 15.6 A, so that circuit is 20 A, not 15 A.",
       "sharma_note": "",
       "figure_idea": "One heater, two math lines: nameplate amps, then the 125 percent continuous line landing on the breaker size.",
       "related_ids": [
@@ -4526,7 +5517,101 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-ART-424",
-      "next_id": "C4-424.4(B)"
+      "next_id": "C4-424.4(B)",
+      "why_it_exists": "On a cold night a space heater does not cycle — it sits at full current for hours. Conductors and a breaker sized at exactly the load would run at their thermal limit the whole time, aging terminations and inviting nuisance trips. The 125 percent continuous factor keeps every part of the circuit below its rating during the longest run the heater can make.",
+      "exam_trap": "The trap is sizing the heater circuit at nameplate amps: 20 A heater, 20 A breaker, done. 424.4(B) treats the load as continuous, so the exam answer is 25 A. The second trap is the section number — in a 2017 book these rules sit at 424.3; in the 2020 book they are at 424.4.",
+      "inspection_fails": [
+        "4,800 W wall heater on a 20 A circuit — heating load not sized at 125 percent, 424.4(B).",
+        "Two baseboard heaters sharing a general lighting circuit instead of an individual branch circuit, 424.4(A).",
+        "40 A circuit feeding three heater outlets — circuits for two or more heater outlets stop at 30 A, 424.4(A).",
+        "Fixed infrared heaters in a shop on a 60 A circuit — outside dwelling units the cap is 50 A, 424.4(A)."
+      ],
+      "tables": [
+        {
+          "caption": "Heater circuit math (424.4(B), 240 V)",
+          "headers": [
+            "Heater load",
+            "Draw",
+            "× 125%",
+            "Circuit min"
+          ],
+          "rows": [
+            [
+              "4,800 W wall heater",
+              "20 A",
+              "25 A",
+              "25 A"
+            ],
+            [
+              "Two 1,500 W baseboards",
+              "12.5 A",
+              "15.6 A",
+              "20 A"
+            ],
+            [
+              "2,400 W wall heater",
+              "10 A",
+              "12.5 A",
+              "15 A"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-424.3-heater-math.svg",
+          "alt": "Bar chart to scale showing a 4,800 W, 240 V heater drawing 20 A, continuous sizing at 125 percent raising the circuit to 25 A, with the standard circuit ratings 15, 20, 25 and 30 A marked on an axis.",
+          "caption": "Nameplate amps are not the circuit size: continuous sizing lands on 25 A.",
+          "w": 900,
+          "h": 1180
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A 4,800 W, 240 V fixed heater draws 20 A. Minimum branch-circuit rating?",
+          "choices": [
+            "20 A",
+            "25 A",
+            "30 A",
+            "15 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Heating is continuous under 424.4(B): 20 A × 1.25 = 25 A.",
+          "nec_ref": "424.4(B)"
+        },
+        {
+          "question": "Circuits supplying two or more heater outlets may be rated:",
+          "choices": [
+            "15, 20, 25 or 30 A",
+            "Any rating up to 60 A",
+            "20 A only",
+            "15 A only"
+          ],
+          "answer_index": 0,
+          "explain_plain": "424.4(A) lists 15, 20, 25 and 30 A for circuits supplying two or more heater outlets.",
+          "nec_ref": "424.4(A)"
+        },
+        {
+          "question": "Fixed infrared heating in a commercial unit may be placed on circuits up to:",
+          "choices": [
+            "30 A",
+            "40 A",
+            "50 A",
+            "60 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "In other than dwelling units, 424.4(A) permits fixed infrared heating on circuits up to 50 A.",
+          "nec_ref": "424.4(A)"
+        }
+      ],
+      "code_refs": [
+        "424.4(A)",
+        "424.4(B)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C4-424.4(B)",
@@ -4535,7 +5620,7 @@
       "section": "424.4(B)",
       "title": "Branch-circuit sizing for fixed space heat — 125 percent",
       "plain_explanation": "Section 424.4(B) is where this rule lives in the 2020 edition — it was 424.3(B) in 2017, before the Article 424 reorganization. The 2020 text states the sizing directly instead of using the old 'shall be considered continuous load' sentence: the branch-circuit conductors for fixed electric space-heating equipment and any associated motors shall be sized not smaller than 125 percent of the load. Overcurrent protection is sized at the same 125 percent through the continuous-load rules of 210.19(A)(1) and 210.20(A), so in practice both the conductors and the breaker come out at 125 percent of the total load connected to the circuit, heater plus any blower or fan motor in the same equipment.",
-      "on_the_job": "Run the math at 125 percent: total nameplate amps, heater plus motor, times 1.25 — then select the conductor and the breaker.\n\nWorked example: a 10 kW duct heater at 240 V draws 41.7 A; × 1.25 = 52.1 A — conductors rated at least 52.1 A (6 AWG copper at the 75°C column gives 65 A) on a 60A breaker, and the blower motor amps in the same equipment are added to the heater amps before the 125 percent is applied.",
+      "on_the_job": "Run the math at 125 percent: total nameplate amps, heater plus motor, times 1.25 — then select the conductor and the breaker.\n\nWorked example: a 10 kW duct heater at 240 V draws 41.7 A; × 1.25 = 52.1 A — conductors rated at least 52.1 A (6 AWG copper at the 75°C column gives 65 A) on a 60A breaker, and the blower motor amps in the same equipment are added to the heater amps before the 125 percent is applied.\n\nSame math with the air handler's blower in the calc: heater 41.7 A plus a 6 A blower motor is 47.7 A connected; × 1.25 = 59.6 A — still a 60A breaker, and the 6 AWG copper still covers it. Leave the motor out and the paperwork says 52.1 A for a circuit that really carries more.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -4547,7 +5632,107 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-424.3",
-      "next_id": "C4-424.19"
+      "next_id": "C4-424.19",
+      "why_it_exists": "Electric space heat is the classic continuous load: on the coldest night the strips run for hours without cycling off. Conductors and a breaker sized at exactly the load amps would sit at their thermal edge all night, heating terminations and inviting nuisance trips that leave the house cold. The 125 percent factor is the margin that keeps a long, full-load run safe.",
+      "exam_trap": "Two traps live here. First, hunting for the rule under its 2017 address, 424.3(B) — in the 2020 book it is 424.4(B). Second, applying 125 percent to the heater nameplate and forgetting the blower motor in the same equipment: the motor amps are added first, then the whole total is multiplied.",
+      "inspection_fails": [
+        "Heat circuit sized at 100 percent of the heater nameplate — no 125 percent (424.4(B)).",
+        "Blower motor amps left out of the calc; conductors and breaker sized on the strips alone.",
+        "8 AWG copper (50 A at 75°C) on a heat load that calculates to a 52.1 A minimum.",
+        "Breaker bumped up for the 125 percent but the conductors left at the old size."
+      ],
+      "tables": [
+        {
+          "caption": "Worked example: 10 kW duct heater at 240 V, with blower",
+          "headers": [
+            "Step",
+            "Value"
+          ],
+          "rows": [
+            [
+              "Heater draw",
+              "41.7 A"
+            ],
+            [
+              "Plus blower motor",
+              "6 A"
+            ],
+            [
+              "Connected load",
+              "47.7 A"
+            ],
+            [
+              "× 125%",
+              "59.6 A minimum"
+            ],
+            [
+              "Conductor",
+              "6 AWG Cu, 65 A at 75°C"
+            ],
+            [
+              "Breaker",
+              "60 A"
+            ]
+          ],
+          "note": "Heater alone: 41.7 A × 1.25 = 52.1 A — the same 60A / 6 AWG answer, before the motor is added."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-4244B-heat-calc.svg",
+          "alt": "Stacked bar worked example: a 10 kW heater at 41.7 A plus a 6 A blower motor makes 47.7 A connected; times 125 percent is 59.6 A minimum, covered by 6 AWG copper at 65 A on a 60 A breaker.",
+          "caption": "Add the motor first, then take 125 percent of the total.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Under 424.4(B), branch-circuit conductors for fixed electric space-heating equipment are sized at not less than:",
+          "choices": [
+            "100% of the load",
+            "115% of the load",
+            "125% of the load",
+            "150% of the load"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Conductors are sized not smaller than 125 percent of the load, heater plus associated motors.",
+          "nec_ref": "424.4(B)"
+        },
+        {
+          "question": "The blower motor in the same heater equipment:",
+          "choices": [
+            "Is ignored — strips only",
+            "Is added to the heater amps before the 125% is applied",
+            "Gets its own 125% after the heater calc",
+            "Is sized by the nameplate alone"
+          ],
+          "answer_index": 1,
+          "explain_plain": "424.4(B) sizes 125 percent of the total load connected to the circuit — heater plus any motor in the same equipment.",
+          "nec_ref": "424.4(B)"
+        },
+        {
+          "question": "In the 2017 NEC, this space-heat sizing rule was found at:",
+          "choices": [
+            "424.4(B)",
+            "424.3(B)",
+            "422.13",
+            "440.14"
+          ],
+          "answer_index": 1,
+          "explain_plain": "It was 424.3(B) in 2017; the Article 424 reorganization moved it to 424.4(B) in 2020.",
+          "nec_ref": "424.4(B)"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "424.4(B)",
+        "210.19(A)(1)",
+        "210.20(A)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C4-424.19",
@@ -5248,8 +6433,8 @@
       "article": "430",
       "section": "430.22",
       "title": "Conductors for a single motor — 125 percent of table full-load current",
-      "plain_explanation": "Section 430.22 sizes the branch-circuit conductors feeding one continuous-duty motor at not less than 125 percent of the motor's full-load current as taken from the Article 430 tables. The extra quarter covers the heating of a motor that runs for long periods at full load. Intermittent and short-time duty motors are treated under their own parts of this section, so the duty rating on the nameplate decides which rule you are in before you do any arithmetic.",
-      "on_the_job": "Take the table FLC for the horsepower and voltage, multiply by 1.25, then select the conductor from the ampacity table using the correct temperature column for the terminations. Do not size the wire from the nameplate amps and do not round the 125 percent away.\n\nWorked example: a 5 hp, 230 V single-phase motor has a table FLC of 28 A (Table 430.248). Conductors: 28 × 1.25 = 35 A minimum — 10 AWG copper at the 75°C column (35 A) is the smallest conductor that covers it, before any voltage-drop or adjustment checks.",
+      "plain_explanation": "Section 430.22 sizes the branch-circuit conductors feeding one continuous-duty motor at not less than 125 percent of the motor's full-load current as taken from the Article 430 tables.\n• Start from the table FLC for the horsepower and voltage — Table 430.248 for single-phase motors — not from the nameplate amps.\n• Multiply by 1.25, then select the conductor from the ampacity table using the temperature column the terminations allow.\n• Intermittent and short-time duty motors are treated under their own parts of this section, so the duty rating on the nameplate decides which rule you are in before you do any arithmetic.\nThe extra quarter covers the heating of a motor that runs for long periods at full load.",
+      "on_the_job": "Take the table FLC for the horsepower and voltage, multiply by 1.25, then select the conductor from the ampacity table using the correct temperature column for the terminations. Do not size the wire from the nameplate amps and do not round the 125 percent away.\n\nWorked example, a shop compressor in Marion County: a 5 hp, 230 V single-phase motor has a table FLC of 28 A (Table 430.248). Conductors: 28 × 1.25 = 35 A minimum — 10 AWG copper at the 75 °C column (35 A) is the smallest conductor that covers it, before any voltage-drop or adjustment checks.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -5259,7 +6444,98 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-430.6",
-      "next_id": "C4-430.24"
+      "next_id": "C4-430.24",
+      "why_it_exists": "A continuous-duty motor can sit at full load for hours — a well pump on a dry day, a shop compressor on a busy one. Conductors sized at exactly full-load current would run at their ampacity limit the whole time, with no margin for a hot attic or a tight bundle. The 125 percent factor is thermal headroom, so the wire never becomes the weak point in the circuit.",
+      "exam_trap": "The trap is reading the amps off the motor nameplate and sizing the conductors to that number. 430.22 wants the table full-load current times 125 percent. The nameplate current is what the overload protection is set from — it is not the conductor number.",
+      "inspection_fails": [
+        "Motor conductors sized from nameplate amps instead of the Article 430 table FLC, 430.22.",
+        "5 hp, 230 V motor wired with 12 AWG copper (25 A at 75 °C) — 125 percent of the 28 A table FLC is 35 A.",
+        "125 percent factor dropped because 'the motor never runs that long' — continuous-duty sizing is not optional, 430.22.",
+        "Conductor picked from the 90 °C column where the equipment terminations are rated 75 °C."
+      ],
+      "tables": [
+        {
+          "caption": "Worked example — 5 hp, 230 V, single-phase",
+          "headers": [
+            "Step",
+            "This job"
+          ],
+          "rows": [
+            [
+              "Table FLC (Table 430.248)",
+              "28 A"
+            ],
+            [
+              "× 125 percent (430.22)",
+              "35 A minimum"
+            ],
+            [
+              "Conductor at 75 °C (Table 310.16)",
+              "10 AWG Cu = 35 A"
+            ],
+            [
+              "Nameplate amps",
+              "Not used for conductors"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-430.22-motor-conductors.svg",
+          "alt": "Flow chart for one motor: table full-load current 28 A from Table 430.248, times 125 percent equals 35 A minimum conductor ampacity; 12 AWG copper at 25 A is too small and 10 AWG copper at 35 A is the smallest conductor that covers it.",
+          "caption": "Table FLC first, then 125 percent, then the conductor.",
+          "w": 900,
+          "h": 1050
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Branch-circuit conductors for one continuous-duty motor are sized at:",
+          "choices": [
+            "100 percent of nameplate amps",
+            "125 percent of the table full-load current",
+            "125 percent of locked-rotor current",
+            "80 percent of the table full-load current"
+          ],
+          "answer_index": 1,
+          "explain_plain": "430.22: not less than 125 percent of the motor's full-load current as taken from the Article 430 tables.",
+          "nec_ref": "430.22"
+        },
+        {
+          "question": "A 5 hp, 230 V single-phase motor has a table FLC of 28 A. Minimum conductor ampacity?",
+          "choices": [
+            "28 A",
+            "32 A",
+            "35 A",
+            "40 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "28 A × 1.25 = 35 A.",
+          "nec_ref": "430.22, Table 430.248"
+        },
+        {
+          "question": "Which conductor is the smallest that covers 35 A in the 75 °C column?",
+          "choices": [
+            "12 AWG copper (25 A)",
+            "10 AWG copper (35 A)",
+            "14 AWG copper (20 A)",
+            "10 AWG aluminum (30 A)"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Table 310.16, 75 °C column: 10 AWG copper is 35 A; 12 AWG copper is 25 A and 10 AWG aluminum is 30 A.",
+          "nec_ref": "Table 310.16"
+        }
+      ],
+      "code_refs": [
+        "430.22",
+        "Table 430.248",
+        "Table 310.16"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C4-430.24",
@@ -5386,8 +6662,8 @@
       "article": "430",
       "section": "430.32",
       "title": "Overload protection — protects the motor from running too hot",
-      "plain_explanation": "Section 430.32 requires overload protection for continuous-duty motors over the small sizes the article sets, sized from the motor's nameplate full-load current with the percentage depending on the motor's service factor and temperature-rise markings. The overload device watches running current over time and trips before the windings cook; it is not there to clear a short circuit, which is the branch protective device's job. A motor with built-in thermal protection meets this requirement through its own device where the article allows it.\n\nThe percentages in 430.32(A)(1), applied to the nameplate full-load current:\n• Motor with a marked service factor of 1.15 or greater — 125 percent\n• Motor with a marked temperature rise of 40°C or less — 125 percent\n• All other motors — 115 percent\nIf an overload selected at those percentages will not let the motor start or carry its load, 430.32(C) permits stepping up — to not more than 140 percent for the first two cases, 130 percent for all others. The step-up is a documented exception for a motor that will not run, not the starting point for selection.",
-      "on_the_job": "Read service factor and rise off the nameplate before you select or set an overload. If the overload trips repeatedly, measure the running amps and find the mechanical cause — do not solve a tripping overload by setting it higher than 430.32 permits.",
+      "plain_explanation": "Section 430.32 requires overload protection for continuous-duty motors over the small sizes the article sets. Size it from the motor's nameplate full-load current — the actual machine in front of you — with the percentage set by the motor's service factor and temperature-rise markings. The overload device watches running current over time and trips before the windings cook; it is not there to clear a short circuit, which is the branch protective device's job. A motor with built-in thermal protection meets this requirement through its own device where the article allows it.\nThe percentages in 430.32(A)(1), applied to the nameplate full-load current:\n• Motor with a marked service factor of 1.15 or greater — 125 percent\n• Motor with a marked temperature rise of 40 °C or less — 125 percent\n• All other motors — 115 percent\nIf an overload selected at those percentages will not let the motor start or carry its load, 430.32(C) permits stepping up — to not more than 140 percent for the first two cases, 130 percent for all others. The step-up is a documented exception for a motor that will not run, not the starting point for selection.",
+      "on_the_job": "Read service factor and rise off the nameplate before you select or set an overload. Worked example: a 3 hp, 230 V pool pump on a Marion Oaks job — the tables give 17 A for that horsepower, but the overload comes off the plate: nameplate FLA 15.2 A, service factor marked 1.15, so 15.2 × 125% = 19.0 A, and the overload is set at 19 A. If the overload trips repeatedly, measure the running amps and find the mechanical cause — a failing bearing, a clogged pump basket, low voltage — do not solve a tripping overload by setting it higher than 430.32 permits.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -5395,9 +6671,101 @@
       ],
       "florida_note": "",
       "verified": true,
-      "sharma_rule_ids": [],
       "prev_id": "C4-430.24",
-      "next_id": "C4-430.52"
+      "next_id": "C4-430.52",
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "A motor rarely fails at a dead short; it fails cooking slowly at 120 or 130 percent of rating, hour after hour, until the insulation gives up. The breaker cannot see that — it is sized to ride through starting current. The overload is the one device watching the motor's own heat, which is why it is set from that motor's nameplate and not from a table.",
+      "inspection_fails": [
+        "Overload set from the Table 430.250 value instead of the installed motor's nameplate FLA.",
+        "Overload cranked past the 430.32(C) ceiling to stop nuisance trips, with no mechanical cause found.",
+        "No overload protection at all on a continuous-duty motor — a breaker alone does not do this job.",
+        "Overload sized at 125% on a motor with no service factor or rise marking that qualifies for it — 115% is the pick."
+      ],
+      "exam_trap": "The trap is sizing the overload from the Article 430 tables, the way conductors and disconnects are sized. Tables are for everything except the overload: 430.32 works off the nameplate FLA of the installed motor, because the overload protects that specific machine. The second trap is starting at the 430.32(C) step-up percentages — 140 and 130 percent are the ceiling for a motor that will not run at the first selection, not the selection.",
+      "tables": [
+        {
+          "caption": "Overload selection, 430.32(A)(1) and (C)",
+          "headers": [
+            "Motor marking",
+            "First pick",
+            "Max step-up"
+          ],
+          "rows": [
+            [
+              "Service factor 1.15 or more",
+              "125% of nameplate FLA",
+              "140%"
+            ],
+            [
+              "Temp rise 40 °C or less",
+              "125% of nameplate FLA",
+              "140%"
+            ],
+            [
+              "All other motors",
+              "115% of nameplate FLA",
+              "130%"
+            ]
+          ],
+          "note": "Percentages apply to the nameplate full-load current of the installed motor — not the Article 430 table values."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-430.32-overload-pick.svg",
+          "alt": "Flow diagram for selecting a motor overload: read the nameplate, pick 125 or 115 percent by the service factor and rise markings, step up only to the 430.32(C) ceiling, with a worked 19 A example.",
+          "caption": "Nameplate first: the percentage follows the motor's markings.",
+          "w": 900,
+          "h": 1240
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Overload protection under 430.32 is sized from:",
+          "choices": [
+            "Table 430.248 / 430.250 full-load current",
+            "The motor's nameplate full-load current",
+            "The branch-circuit breaker rating",
+            "The conductor ampacity"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The overload protects the installed machine, so it works off the nameplate FLA. The tables size conductors, disconnects, and short-circuit protection instead (430.6).",
+          "nec_ref": "430.32(A)(1)"
+        },
+        {
+          "question": "A motor is marked with a service factor of 1.15. Its overload is selected at what maximum percentage of nameplate FLA, before any step-up?",
+          "choices": [
+            "115%",
+            "125%",
+            "140%",
+            "175%"
+          ],
+          "answer_index": 1,
+          "explain_plain": "A marked service factor of 1.15 or greater — or a marked rise of 40 °C or less — selects at 125 percent under 430.32(A)(1).",
+          "nec_ref": "430.32(A)(1)"
+        },
+        {
+          "question": "That 125% selection will not let the motor start and carry its load. 430.32(C) allows up to:",
+          "choices": [
+            "130%",
+            "135%",
+            "140%",
+            "150%"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The step-up ceiling is 140 percent for the service-factor and low-rise cases, 130 percent for all other motors — and only when the first selection will not let the motor run.",
+          "nec_ref": "430.32(C)"
+        }
+      ],
+      "code_refs": [
+        "430.32(A)(1)",
+        "430.32(C)",
+        "430.6"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C4-430.52",
@@ -6013,8 +7381,8 @@
       "article": "440",
       "section": "440",
       "title": "Air-conditioning and refrigerating equipment — article intro",
-      "plain_explanation": "Article 440 takes hermetic refrigerant motor-compressors and air-conditioning equipment out of the general motor rules and gives them a nameplate-driven system. The equipment nameplate states the minimum circuit ampacity (MCA) and the maximum overcurrent protection (MOCP, sometimes marked MOP or 'max fuse/breaker'), and those two printed numbers — not a horsepower table — size the circuit. Article 440 also sets the disconnect rule Sharma's crews use daily: within sight, readily accessible, at the equipment. Where 430 and 440 disagree for a compressor, 440 governs. Florida settles the common condenser question for houses: FBC-Residential §E3408.1 amends 210.8(F) with Exception No. 2 — GFCI protection is not required for listed and labeled HVAC equipment on one- and two-family dwellings.\n\nNEC 2023 CHANGE:\n• 440.11: If unqualified people can readily reach an A/C or refrigeration disconnect, any door or hinged cover that exposes energized parts must take a tool to open or accept a lock. Disconnect readily accessible to unqualified people? A door or hinged cover that opens onto energized parts must need a tool or be lockable.\n• 440.8: Section 440.8 now also controls location: A/C and refrigeration equipment can't sit in the zone 3 ft out and 8 ft up, measured from a bathtub's rim or a shower's threshold. Air-conditioning and refrigeration equipment stays out of the zone 3 ft out and 8 ft up, measured from a bathtub's rim or a shower's threshold.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Read the nameplate before you run the wire, every unit, every change-out. A replacement condenser with a higher MCA than the old one is a new circuit calculation, not a like-for-like swap. Photograph the nameplate for the job file at rough-in and again at start-up.",
+      "plain_explanation": "Article 440 takes hermetic refrigerant motor-compressors and air-conditioning equipment out of the general motor rules and gives them a nameplate-driven system.\n• The equipment nameplate states the minimum circuit ampacity (MCA) and the maximum overcurrent protection (MOCP, sometimes marked MOP or 'max fuse/breaker'), and those two printed numbers — not a horsepower table — size the circuit.\n• Article 440 also sets the disconnect rule Sharma's crews use daily: within sight, readily accessible, at the equipment.\n• Where 430 and 440 disagree for a compressor, 440 governs.\nFlorida settles the common condenser question for houses: FBC-Residential §E3408.1 amends 210.8(F) with Exception No. 2 — GFCI protection is not required for listed and labeled HVAC equipment on one- and two-family dwellings.",
+      "on_the_job": "Read the nameplate before you run the wire, every unit, every change-out. A replacement condenser with a higher MCA than the old one is a new circuit calculation, not a like-for-like swap. The arithmetic behind a typical plate: a compressor with a 20 A rated-load current gives an MCA of 25 A (125 percent, per 440.32) and an MOCP of 35 A (175 percent, per 440.22(A)) — conductors at least the MCA, breaker never above the MOCP. Photograph the nameplate for the job file at rough-in and again at start-up.",
       "sharma_note": "Sharma practice (tip, not an S-rule): the condenser is wired to the nameplate MOCP with a standard 2-pole breaker. The 210.8(F) GFCI question for outdoor outlets/equipment has varied by TIA and local amendment — confirm the AHJ position on the job rather than assuming; see the Chapter 2 cross-link on the 440.4(B) page.",
       "figure_idea": "",
       "related_ids": [
@@ -6046,7 +7414,100 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/440-8",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "A hermetic compressor is sealed in a can with its overload protection inside it, and its starting current dwarfs its running current. General motor rules built on horsepower tables would mis-size both the wire and the breaker. The nameplate system puts the manufacturer's tested numbers in charge — MCA for the conductors, MOCP for the breaker — so the circuit matches the machine that actually shows up on the pad.",
+      "exam_trap": "The trap is sizing a condenser circuit from the tonnage or a horsepower table, or choosing the breaker to match the wire's ampacity. Article 440 is nameplate-driven: the MCA sizes the conductors and the MOCP caps the breaker, and the breaker is allowed to be larger than the conductor ampacity because the equipment's own overload protection does the running protection. Borrowing that allowance for a general circuit outside Article 440 is the second trap — it exists only inside this system.",
+      "tables": [
+        {
+          "caption": "The nameplate runs the job (Article 440)",
+          "headers": [
+            "Nameplate",
+            "It sizes",
+            "Basis"
+          ],
+          "rows": [
+            [
+              "MCA",
+              "Conductors — ampacity at least the MCA",
+              "440.32: 125% of rated-load current"
+            ],
+            [
+              "MOCP",
+              "Breaker or fuse — never above it",
+              "440.22(A): 175% of rated-load current*"
+            ],
+            [
+              "Disconnect",
+              "Within sight, readily accessible",
+              "440.14: visible and within 50 ft"
+            ]
+          ],
+          "note": "*Where 175% will not carry the starting current, 440.22(A) allows up to 225%. On listed equipment the printed MOCP already reflects this math."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-ART-440-nameplate.svg",
+          "alt": "A condensing unit and its nameplate: MCA 25 amps sizes the conductors and MOCP 35 amps caps the breaker, worked from a 20 amp rated-load compressor, with the disconnect within sight of the equipment.",
+          "caption": "MCA sizes the wire, MOCP caps the breaker, disconnect within sight.",
+          "w": 900,
+          "h": 1340
+        }
+      ],
+      "inspection_fails": [
+        "Breaker larger than the nameplate MOCP — rounded up past the printed maximum.",
+        "Conductors sized from the unit's tonnage or a horsepower table instead of the MCA.",
+        "Change-out condenser with a higher MCA landed on the old circuit with no recalculation.",
+        "Disconnect not within sight of the equipment, or mounted where it covers the nameplate."
+      ],
+      "page_quiz": [
+        {
+          "question": "What sizes the conductors for a listed condensing unit?",
+          "choices": [
+            "The horsepower table",
+            "The nameplate MCA",
+            "The unit's tonnage",
+            "The disconnect rating"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The nameplate MCA is the manufacturer's printed minimum circuit ampacity; conductor ampacity must be at least the MCA.",
+          "nec_ref": "440.32"
+        },
+        {
+          "question": "The breaker for a hermetic compressor circuit may not exceed:",
+          "choices": [
+            "The conductor ampacity",
+            "The nameplate MOCP",
+            "225% of the MCA in all cases",
+            "The service rating"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The marked MOCP is the ceiling for the overcurrent device. The arithmetic behind it is 440.22(A): 175% of rated-load current, up to 225% only where starting current requires it.",
+          "nec_ref": "440.22(A)"
+        },
+        {
+          "question": "Articles 430 and 440 disagree on a compressor circuit. Which one governs?",
+          "choices": [
+            "Article 430 — a motor is a motor",
+            "Article 440 — it is written for hermetic compressors",
+            "Neither — the AHJ picks",
+            "The horsepower table in 430"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Article 440 takes hermetic refrigerant motor-compressors out of the general motor rules; where the two disagree for a compressor, 440 governs.",
+          "nec_ref": "Article 440"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 440.11: If unqualified people can readily reach an A/C or refrigeration disconnect, any door or hinged cover that exposes energized parts must take a tool to open or accept a lock. Disconnect readily accessible to unqualified people? A door or hinged cover that opens onto energized parts must need a tool or be lockable.\n• 440.8: Section 440.8 now also controls location: A/C and refrigeration equipment can't sit in the zone 3 ft out and 8 ft up, measured from a bathtub's rim or a shower's threshold. Air-conditioning and refrigeration equipment stays out of the zone 3 ft out and 8 ft up, measured from a bathtub's rim or a shower's threshold.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "440.14",
+        "440.22(A)",
+        "440.32",
+        "210.8(F)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C4-440.4(B)",
@@ -6054,7 +7515,7 @@
       "article": "440",
       "section": "440.4(B)",
       "title": "Reading the HVAC nameplate — MCA and MOCP do the sizing",
-      "plain_explanation": "Section 440.4(B) covers the nameplate marking for equipment with a hermetic refrigerant motor-compressor: the plate carries the rated-load current and the branch-circuit selection current, and the manufacturer's marked minimum circuit ampacity and maximum overcurrent device rating are built from them. In field language: MCA tells you the smallest conductor ampacity the circuit may have; MOCP tells you the largest fuse or breaker you may protect it with. A breaker smaller than MOCP is allowed; a conductor smaller than MCA is not. The plate, not a tonnage rule of thumb, is the calculation.",
+      "plain_explanation": "Section 440.4(B) covers the nameplate marking for equipment with a hermetic refrigerant motor-compressor. The plate carries the rated-load current and the branch-circuit selection current, and the manufacturer's marked minimum circuit ampacity (MCA) and maximum overcurrent device rating (MOCP) are built from them. In field language:\n• MCA tells you the smallest conductor ampacity the circuit may have.\n• MOCP tells you the largest fuse or breaker you may protect it with.\nA breaker smaller than MOCP is allowed; a conductor smaller than MCA is not. The plate, not a tonnage rule of thumb, is the calculation.",
       "on_the_job": "On every condenser and air handler: record MCA, MOCP, voltage, and phase from the plate. Wire to at least MCA, protect at no more than MOCP, and if the installed breaker or wire disagrees with a change-out unit's new plate, stop and tell the office before start-up — that is a change order conversation, not a field improvisation.\n\nWorked example: a condenser plate reads MCA 24.5 A, MOCP 40 A. The conductor ampacity must be at least 24.5 A — 10 AWG copper (35 A at the 75°C column) covers it — and the breaker may be anything up to 40 A; Sharma's standard install protects it at the MOCP with a standard 2-pole breaker. A same-tonnage change-out plate reading MCA 17.5 / MOCP 30 is a different circuit — the plate, not the tons, decides.",
       "sharma_note": "Cross-link (Chapter 2): the question of GFCI protection for outdoor HVAC equipment under 210.8(F) is handled on the Chapter 2 pages and is deliberately not resolved here; local AHJ position governs on the job.",
       "figure_idea": "",
@@ -6067,9 +7528,96 @@
       ],
       "florida_note": "",
       "verified": true,
-      "sharma_rule_ids": [],
       "prev_id": "C4-ART-440",
-      "next_id": "C4-440.10"
+      "next_id": "C4-440.10",
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "A hermetic compressor hides its motor inside the refrigerant circuit, so nobody can read a motor nameplate or apply the general motor tables to it. The manufacturer tests the whole unit and prints the answer: MCA already carries the 125 percent conductor sizing of 440.32, and MOCP already carries the starting-current allowance of 440.22. Reading the plate replaces a calculation the field cannot do — and removes the excuse for guessing from tonnage.",
+      "inspection_fails": [
+        "Breaker larger than the nameplate MOCP left in place on a change-out — the old 50 A breaker kept for a unit marked MOCP 40.",
+        "Conductors below the plate MCA because 'it is only a 3-ton' — tonnage is not an ampacity.",
+        "New unit wired and started without anyone recording MCA and MOCP from the new plate.",
+        "Breaker swapped to a larger size to stop start-up trips instead of diagnosing the unit."
+      ],
+      "exam_trap": "The trap treats MCA and MOCP like a general-purpose circuit: 'MCA 24.5 A, so a 25 A breaker and wire sized to the breaker.' Two errors stack up. The conductor is sized to MCA, not to the breaker — and the breaker may be anything up to MOCP, here 40 A, larger than the conductor's plain ampacity, because the unit's own overload protection does the running protection. The mirror-image error — a breaker above MOCP 'because it trips' — is just as wrong.",
+      "tables": [
+        {
+          "caption": "The two plate numbers (NEC 2020)",
+          "headers": [
+            "Marking",
+            "Sets",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "MCA",
+              "Smallest conductor ampacity",
+              "Wire at or above MCA — never below"
+            ],
+            [
+              "MOCP",
+              "Largest breaker or fuse",
+              "Protect at or below MOCP — never above"
+            ]
+          ],
+          "note": "Worked example: MCA 24.5 A / MOCP 40 A takes 10 AWG copper (35 A at the 75 °C column) and any breaker up to 40 A."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-440.4B-nameplate.svg",
+          "alt": "A condenser nameplate marked MCA 24.5 A and MOCP 40 A, with the wire check — 10 AWG copper at 35 A covers the MCA — and the breaker check — 40 A at the MOCP, never above.",
+          "caption": "MCA is the wire floor; MOCP is the breaker ceiling.",
+          "w": 900,
+          "h": 1180
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A condenser plate reads MCA 24.5 A, MOCP 40 A. Which install complies?",
+          "choices": [
+            "10 AWG copper conductors and a 40 A breaker",
+            "12 AWG copper conductors and a 25 A breaker",
+            "10 AWG copper conductors and a 50 A breaker",
+            "Conductors sized to the tonnage, breaker at 40 A"
+          ],
+          "answer_index": 0,
+          "explain_plain": "10 AWG copper at the 75 °C column is 35 A — at or above the 24.5 A MCA — and 40 A is at, not above, the MOCP. 12 AWG falls below MCA, and 50 A exceeds MOCP.",
+          "nec_ref": "440.4(B)"
+        },
+        {
+          "question": "Which statement about MCA and MOCP is right?",
+          "choices": [
+            "The breaker must equal the MCA",
+            "A breaker smaller than MOCP is allowed; a conductor smaller than MCA is not",
+            "The conductor may be smaller than MCA if the breaker is small",
+            "MOCP is the minimum breaker size"
+          ],
+          "answer_index": 1,
+          "explain_plain": "MCA is a floor for the conductor; MOCP is a ceiling for the protective device. Anything at or below the ceiling protects the circuit.",
+          "nec_ref": "440.4(B)"
+        },
+        {
+          "question": "On a change-out, the new unit is the same tonnage but its plate reads MCA 17.5 / MOCP 30, and the existing circuit is heavier. What decides the install?",
+          "choices": [
+            "The tonnage — same size, same circuit",
+            "The existing breaker, since it passed before",
+            "The new unit's nameplate",
+            "The old unit's nameplate"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The plate, not the tons, is the calculation. A different plate is a different circuit; a mismatch with the installed breaker or wire is a change-order conversation before start-up.",
+          "nec_ref": "440.4(B)"
+        }
+      ],
+      "code_refs": [
+        "440.4(B)",
+        "440.32",
+        "440.22"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C4-440.10",
@@ -6321,8 +7869,8 @@
       "article": "440",
       "section": "440.14",
       "title": "The HVAC disconnect — within sight and readily accessible",
-      "plain_explanation": "Section 440.14 requires the disconnecting means for air-conditioning and refrigerating equipment to be within sight from the equipment and readily accessible to it, with an exception for certain industrial/process installations where conditions are met. 'Within sight' carries the Article 100 meaning: visible and within 50 ft. The disconnect may be on the equipment or separate from it, but a person servicing the unit must be able to reach it and see the unit from it. A breaker inside the house panel does not satisfy this by itself. The disconnect also may not be mounted on a panel that is designed to allow access to the equipment itself, and it may not be placed where it obscures the equipment nameplate.\n\nNEC 2023 CHANGE:\n• 440.14: The A/C and refrigeration disconnect now has to have 110.26(A) working space, on top of the long-standing in-sight and readily accessible rules. The disconnect for A/C or refrigeration equipment must now have working space that meets 110.26(A).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Set the disconnect where the service tech stands: at the condenser pad, in sight, with working space in front of it, not behind a fence line or above reach. On a change-out, if the old disconnect is inside the old unit's shadow or was never installed, relocate or add it as part of the job and note it on the invoice record.",
+      "plain_explanation": "Section 440.14 requires the disconnecting means for air-conditioning and refrigerating equipment to be within sight from the equipment and readily accessible to it, with an exception for certain industrial/process installations where conditions are met.\n• 'Within sight' carries the Article 100 meaning: visible and within 50 ft.\n• The disconnect may be on the equipment or separate from it, but a person servicing the unit must be able to reach it and see the unit from it.\n• A breaker inside the house panel does not satisfy this by itself.\n• The disconnect also may not be mounted on a panel that is designed to allow access to the equipment itself, and it may not be placed where it obscures the equipment nameplate.",
+      "on_the_job": "Set the disconnect where the service tech stands: at the condenser pad, in sight, with working space in front of it, not behind a fence line or above reach. On a Marion Oaks change-out, the old disconnect sat in the old unit's shadow, so we relocated it onto the wall 8 ft from the new condenser as part of the job and noted it on the invoice record. Measure the sight line, not just the distance: at 8 ft the tech sees the unit and the disconnect in one look. If the old disconnect was never installed, add it — the change-out is not finished without it.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -6346,7 +7894,103 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/440-14",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "A tech working on a condenser has the cabinet open and his hands inside. If the only way to kill power is a breaker inside the house, someone can flip it back on without knowing he is there, and he cannot lock it out from where he stands. A disconnect he can see and reach means the unit stays dead while he works, and he can prove it is dead before he touches anything.",
+      "exam_trap": "The trap answer is that the breaker in the house panel is the disconnect. It is not: 440.14 wants a disconnect within sight of the equipment — visible and not over 50 ft away — and readily accessible to it. A second trap is reading 'within sight' as 'on the same lot'; a disconnect 80 ft away around the corner fails both parts of the test.",
+      "inspection_fails": [
+        "No disconnect at the condenser at all — only the breaker inside the house panel.",
+        "Disconnect mounted on the unit's own access panel, so it comes off with the panel.",
+        "Disconnect set where it covers the equipment nameplate.",
+        "Disconnect behind a fence or above reach — not readily accessible from the unit.",
+        "Disconnect out of view of the unit, even though it is under 50 ft away."
+      ],
+      "tables": [
+        {
+          "caption": "The 440.14 test, applied at the unit",
+          "headers": [
+            "Check",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "Location",
+              "On or near the equipment — not on its access panel"
+            ],
+            [
+              "Sight",
+              "Visible from the equipment"
+            ],
+            [
+              "Distance",
+              "Within 50 ft of the equipment"
+            ],
+            [
+              "Access",
+              "Readily accessible — reach it without climbing"
+            ],
+            [
+              "Nameplate",
+              "Stays readable — never mount over it"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-440.14-disconnect-sight.svg",
+          "alt": "House wall with a condenser on its pad and a disconnect mounted on the wall, a dashed line of sight between them, a dimension showing not over 50 ft, and a red panel rejecting the indoor breaker by itself.",
+          "caption": "Within sight: see the unit, reach the disconnect, 50 ft max.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Under 440.14, 'within sight' means the disconnect is:",
+          "choices": [
+            "Anywhere on the same lot",
+            "Visible from the equipment and within 50 ft",
+            "Inside the house panel",
+            "Mounted on the equipment nameplate"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Within sight is the Article 100 term: visible, and not more than 50 ft away.",
+          "nec_ref": "440.14, Article 100"
+        },
+        {
+          "question": "A condenser is fed from a breaker in the indoor panel, with no other disconnect. Does that satisfy 440.14?",
+          "choices": [
+            "Yes — the breaker is a disconnecting means",
+            "Yes, if the breaker is lockable",
+            "No — the disconnect must be within sight of and readily accessible to the equipment",
+            "No — the disconnect must be inside the unit"
+          ],
+          "answer_index": 2,
+          "explain_plain": "A breaker inside the house is neither visible from the unit nor reachable by the tech standing at it.",
+          "nec_ref": "440.14"
+        },
+        {
+          "question": "Where may the 440.14 disconnect NOT be mounted?",
+          "choices": [
+            "On the wall beside the unit",
+            "On the equipment itself",
+            "On a panel designed to allow access to the equipment",
+            "On a post at the pad"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The disconnect cannot ride on the equipment's access panel, and it cannot cover the nameplate.",
+          "nec_ref": "440.14"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 440.14: The A/C and refrigeration disconnect now has to have 110.26(A) working space, on top of the long-standing in-sight and readily accessible rules. The disconnect for A/C or refrigeration equipment must now have working space that meets 110.26(A).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "440.14",
+        "Article 100 — Within Sight",
+        "110.26(A)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C4-440.22",
@@ -6474,8 +8118,8 @@
       "article": "440",
       "section": "440.60",
       "title": "Room air conditioners (440.60–440.65)",
-      "plain_explanation": "Part VII of Article 440 covers the cord-and-plug room air conditioner — the window and through-wall units a tenant or homeowner plugs in. The load rules are the ones that matter: a single room unit on a branch circuit of its own may not exceed 80 percent of that circuit's rating; where the same circuit also feeds lighting or other receptacles, the unit may not exceed 50 percent. Section 440.65 adds the plug protection: single-phase room units must have leakage-current detection (LCDI) or arc-fault protection in the attachment plug or cord — the fat plug with the test buttons is a requirement, not an accessory. 440.65 also allows a factory-installed heat-detecting circuit interrupter (HDCI) besides LCDI or AFCI on single-phase cord-and-plug room air conditioners, and Part VII covers room units rated not over 40A, 250V, single-phase (440.62(A)).",
-      "on_the_job": "A window unit tripping a shared bedroom circuit is usually the 50 percent rule announcing itself. The fix is a dedicated circuit under the 80 percent rule, not a bigger breaker on the shared circuit.",
+      "plain_explanation": "Part VII of Article 440 covers the cord-and-plug room air conditioner — the window and through-wall units a tenant or homeowner plugs in. Part VII covers room units rated not over 40 A, 250 V, single-phase (440.62(A)).\n• A single room unit on a branch circuit of its own may not exceed 80 percent of that circuit's rating.\n• Where the same circuit also feeds lighting or other receptacles, the unit may not exceed 50 percent of the circuit rating.\n• 440.65 adds the plug protection: single-phase room units must have leakage-current detection (LCDI) or arc-fault protection in the attachment plug or cord.\n• 440.65 also allows a factory-installed heat-detecting circuit interrupter (HDCI) besides LCDI or AFCI on single-phase cord-and-plug room air conditioners.\nThe fat plug with the test buttons is a requirement, not an accessory.",
+      "on_the_job": "A window unit tripping a shared bedroom circuit is usually the 50 percent rule announcing itself. The numbers: a 12 A unit in a Winter Garden rental bedroom sits on a 20 A circuit that also feeds the lights and receptacles, so the cap is 50 percent — 10 A — and the unit is already over it. The fix is a dedicated circuit under the 80 percent rule, where the cap is 16 A and the 12 A unit fits — not a bigger breaker on the shared circuit.",
       "sharma_note": "",
       "figure_idea": "Two bars: dedicated circuit — unit up to 80 percent; shared circuit — unit capped at 50 percent.",
       "related_ids": [
@@ -6486,7 +8130,95 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-440.32",
-      "next_id": "C4-ART-445"
+      "next_id": "C4-ART-445",
+      "why_it_exists": "A room unit is a motor load that runs for hours, plugged into whatever circuit is nearby. On a shared circuit it can hold half the capacity all afternoon, heating wiring that was roughed for lights and chargers. The plug protection exists because these cords get pinched in windows, aged and wet; LCDI, AFCI or HDCI in the plug catches cord damage before it starts a fire.",
+      "exam_trap": "The trap: 'The unit draws 12 A and the breaker is 20 A, so it complies.' On a circuit shared with lighting or other receptacles the cap is 50 percent of the rating — 10 A on a 20 A circuit — so the 12 A unit fails. The 80 percent figure only applies when the unit is alone on its own branch circuit.",
+      "inspection_fails": [
+        "12 A window unit on a 20 A bedroom circuit shared with lighting — over the 50 percent cap of 10 A, 440.62.",
+        "Room unit's LCDI plug cut off and replaced with a plain plug after nuisance trips, 440.65.",
+        "'Dedicated circuit' fixed by swapping in a larger breaker on the shared circuit instead of running a new circuit.",
+        "Room unit rated 45 A treated under Part VII — Part VII stops at 40 A, 250 V, single-phase, 440.62(A)."
+      ],
+      "tables": [
+        {
+          "caption": "Room unit caps by circuit (440.62)",
+          "headers": [
+            "Circuit",
+            "Cap",
+            "On a 20 A circuit"
+          ],
+          "rows": [
+            [
+              "Dedicated to the unit",
+              "80% of rating",
+              "16 A max unit"
+            ],
+            [
+              "Shared with lights / receptacles",
+              "50% of rating",
+              "10 A max unit"
+            ]
+          ],
+          "note": "Part VII covers room units rated not over 40 A, 250 V, single-phase (440.62(A))."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-440.60-room-ac-bars.svg",
+          "alt": "Bar chart on a 20 A circuit showing a room air conditioner capped at 80 percent (16 A) on a dedicated circuit and at 50 percent (10 A) on a shared circuit, with an example 12 A unit line that fits the dedicated circuit and fails the shared one.",
+          "caption": "Same unit, same breaker — the circuit it shares decides the cap.",
+          "w": 900,
+          "h": 1150
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A room air conditioner alone on its own 20 A branch circuit may draw at most:",
+          "choices": [
+            "10 A",
+            "12 A",
+            "16 A",
+            "20 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Dedicated circuit: the cap is 80 percent of 20 A = 16 A.",
+          "nec_ref": "440.62"
+        },
+        {
+          "question": "The same unit on a 20 A circuit that also feeds bedroom lighting may draw at most:",
+          "choices": [
+            "16 A",
+            "10 A",
+            "20 A",
+            "15 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Shared circuit: the cap drops to 50 percent of 20 A = 10 A.",
+          "nec_ref": "440.62"
+        },
+        {
+          "question": "Single-phase room air conditioners must have which protection in the attachment plug or cord?",
+          "choices": [
+            "GFCI only",
+            "LCDI or arc-fault protection (factory HDCI also permitted)",
+            "Surge protection only",
+            "No protection is required"
+          ],
+          "answer_index": 1,
+          "explain_plain": "440.65 requires LCDI or AFCI protection in the plug or cord, and also permits a factory-installed HDCI.",
+          "nec_ref": "440.65"
+        }
+      ],
+      "code_refs": [
+        "440.60",
+        "440.62(A)",
+        "440.62",
+        "440.65"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C4-ART-445",
@@ -6843,7 +8575,7 @@
       "section": "445.13",
       "title": "Generator conductors — 115 percent of nameplate current",
       "plain_explanation": "Section 445.13 sizes the conductors from a generator to its first distribution device or devices at not less than 115 percent of the generator's nameplate current rating, with the article's own provisions for cases where design prevents overloading. The margin exists because a generator can be asked to carry its full rating for the whole duration of an outage. Neutral conductor treatment has its own paragraphs in this section, so do not assume the neutral is automatically the same size as the ungrounded conductors on every system type.\n\nWorked example: a 22 kW standby unit at 240 V single-phase has a nameplate current of about 92 A; 92 × 1.15 = 105.8 A minimum conductor ampacity — the feeder lands on conductors rated at least 106 A (2 AWG copper at the 75°C column is 115 A), with the overcurrent arrangement set by the generator and transfer equipment design.",
-      "on_the_job": "Size from the nameplate on the actual machine, and confirm whether the installation is a separately derived system before you settle the neutral and grounding arrangement — that decision belongs with the Chapter 2/Chapter 7 pages and the transfer equipment, and it changes this section's wiring.",
+      "on_the_job": "Size from the nameplate on the actual machine, and confirm whether the installation is a separately derived system before you settle the neutral and grounding arrangement — that decision belongs with the Chapter 2/Chapter 7 pages and the transfer equipment, and it changes this section's wiring.\n\nOn a whole-house standby job in Marion County, read the plate before ordering wire: on the 22 kW unit in the example, the 92 A nameplate set the feeder — not the rounded numbers on the sales sheet.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -6853,7 +8585,95 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-445.12",
-      "next_id": "C4-445.18(D)"
+      "next_id": "C4-445.18(D)",
+      "why_it_exists": "A standby generator earns its keep in the worst hours: a Florida outage after a storm can run for days, with the machine carrying its full rating the whole time. Conductors sized at exactly the nameplate current would run at their limit for that entire run. The 115 percent factor is the standing margin, so the feeder from the machine never becomes the weak point in the middle of an outage.",
+      "exam_trap": "The trap is sizing the generator feeder like an ordinary feeder at 100 percent of the load, or working from kilowatts alone. 445.13 starts from the nameplate current rating and takes 115 percent of it: a 92 A plate means conductors of at least 105.8 A ampacity before any other adjustment is even considered.",
+      "inspection_fails": [
+        "Generator conductors sized at 100 percent of nameplate current — no 115 percent (445.13).",
+        "Feeder sized from the kW rating on the sales sheet; the nameplate current on the machine was never read.",
+        "Neutral assumed the same size as the ungrounded conductors without checking the system type and transfer arrangement."
+      ],
+      "tables": [
+        {
+          "caption": "Worked example: 22 kW standby unit, 240 V single-phase",
+          "headers": [
+            "Step",
+            "Value"
+          ],
+          "rows": [
+            [
+              "Nameplate current",
+              "92 A"
+            ],
+            [
+              "× 115%",
+              "105.8 A"
+            ],
+            [
+              "Minimum conductor ampacity",
+              "106 A"
+            ],
+            [
+              "Conductor picked",
+              "2 AWG Cu, 115 A at 75°C"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-445.13-generator-oneline.svg",
+          "alt": "One-line diagram: a 22 kW generator with a 92 A nameplate feeds conductors to the first distribution device; a calc strip shows 92 A times 1.15 equals 105.8 A, so conductors of at least 106 A, and 2 AWG copper at 75 degrees gives 115 A.",
+          "caption": "115 percent of the nameplate, from the generator to the first device.",
+          "w": 900,
+          "h": 1200
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "445.13 sizes conductors from a generator at not less than what percent of the nameplate current rating?",
+          "choices": [
+            "100%",
+            "115%",
+            "125%",
+            "150%"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Not less than 115 percent of the generator's nameplate current rating.",
+          "nec_ref": "445.13"
+        },
+        {
+          "question": "The conductors sized by 445.13 run from the generator to:",
+          "choices": [
+            "The utility meter",
+            "The first distribution device or devices",
+            "The farthest panel in the building",
+            "The transfer switch only"
+          ],
+          "answer_index": 1,
+          "explain_plain": "445.13 covers the conductors from the generator to its first distribution device or devices.",
+          "nec_ref": "445.13"
+        },
+        {
+          "question": "A generator nameplate reads 92 A. Minimum conductor ampacity under 445.13?",
+          "choices": [
+            "92 A",
+            "100 A",
+            "105.8 A",
+            "115 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "92 × 1.15 = 105.8 A minimum conductor ampacity.",
+          "nec_ref": "445.13"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "445.13"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C4-445.18(D)",
@@ -7369,8 +9189,8 @@
       "article": "450",
       "section": "450.21",
       "title": "Where dry-type transformers may sit (450.21)",
-      "plain_explanation": "Section 450.21 governs indoor dry-type transformer locations. Transformers rated 112½ kVA or less must sit at least 12 inches from combustible material, unless separated from it by a fire-resistant, heat-insulating barrier. This does not apply to transformers rated 1000V or less that are completely enclosed, except for ventilating openings (450.21(A) Exception). Larger indoor dry-types — over 112½ kVA — go in a transformer room of fire-resistant construction with a minimum 1-hour fire rating, with the section's exceptions: Exception No. 1 covers Class 155 or higher insulation systems separated by a fire-resistant, heat-insulating barrier, or by at least 6 ft horizontally and 12 ft vertically from combustible material. Ventilation under 450.9 keeps the heat moving; this section keeps the heat away from things that burn.",
-      "on_the_job": "Setting a dry-type in a wood-framed electrical closet: measure the 12 inches before the transformer is hung, not after. The closet's wall finish decides which rule you are under — confirm what the wall is made of.",
+      "plain_explanation": "Section 450.21 governs indoor dry-type transformer locations.\n• Transformers rated 112½ kVA or less must sit at least 12 inches from combustible material, unless separated from it by a fire-resistant, heat-insulating barrier.\n• That rule does not apply to transformers rated 1000V or less that are completely enclosed, except for ventilating openings (450.21(A) Exception).\n• Larger indoor dry-types — over 112½ kVA — go in a transformer room of fire-resistant construction with a minimum 1-hour fire rating.\n• Exception No. 1 to the room rule covers Class 155 or higher insulation systems separated by a fire-resistant, heat-insulating barrier, or by at least 6 ft horizontally and 12 ft vertically from combustible material.\nVentilation under 450.9 keeps the heat moving; this section keeps the heat away from things that burn.",
+      "on_the_job": "Setting a 75 kVA dry-type in a wood-framed electrical closet on a small commercial build-out: at 75 kVA the unit is under the 112½ kVA line, so the rule is 12 inches from combustible material, or a fire-resistant, heat-insulating barrier between the unit and the wall. Measure the 12 inches before the transformer is hung, not after. The closet's wall finish decides which rule you are under — confirm what the wall is made of before the unit goes up.",
       "sharma_note": "",
       "figure_idea": "Plan-view sketch: transformer with the 12-inch clear ring to a combustible wall, and the barrier alternative.",
       "related_ids": [
@@ -7381,7 +9201,98 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-450.14",
-      "next_id": "C4-ART-455"
+      "next_id": "C4-ART-455",
+      "why_it_exists": "A dry-type transformer is a box of heat by design, and a fault inside one can throw sparks and flame. Combustible material close by turns an equipment failure into a building fire. The 12-inch gap, the barrier, and the rated room all do the same job at different sizes: keep the transformer's worst day from reaching anything that burns.",
+      "exam_trap": "The trap is applying the 12-inch rule to every dry-type. A unit over 112½ kVA does not get in with 12 inches and good intentions — it needs the 1-hour fire-resistant transformer room unless an exception applies. The reverse trap also fails: a completely enclosed unit rated 1000V or less is excepted from the 12-inch rule, ventilating openings and all, so demanding 12 inches there is not the code either.",
+      "tables": [
+        {
+          "caption": "Where the dry-type may sit (450.21)",
+          "headers": [
+            "Unit",
+            "Location rule"
+          ],
+          "rows": [
+            [
+              "112½ kVA or less",
+              "12 in from combustible material, or a fire-resistant, heat-insulating barrier"
+            ],
+            [
+              "1000V or less, enclosed except vents",
+              "12-in rule does not apply (450.21(A) Exception)"
+            ],
+            [
+              "Over 112½ kVA",
+              "Transformer room: fire-resistant construction, 1-hour rating minimum"
+            ],
+            [
+              "Over 112½ kVA, Class 155+ insulation",
+              "Barrier, or 6 ft horizontal and 12 ft vertical separation (Exception No. 1)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-450.21-clearance.svg",
+          "alt": "Plan view of a dry-type transformer rated 112.5 kVA or less with a dimensioned 12 inch minimum clearance to a combustible wall, and a second panel showing a unit over 112.5 kVA in a 1-hour fire-resistant transformer room with the Exception No. 1 alternatives.",
+          "caption": "12 inches at 112½ kVA and under; a rated room above it.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "inspection_fails": [
+        "Dry-type rated 112½ kVA or less set a few inches from a wood-framed wall with no barrier.",
+        "Transformer over 112½ kVA installed in an ordinary electrical closet — no 1-hour fire-resistant room, and no exception met.",
+        "Clearance checked to the studs while the combustible wall finish was ignored — the finish is combustible material.",
+        "Separation provided by a barrier that is not fire-resistant, heat-insulating material."
+      ],
+      "page_quiz": [
+        {
+          "question": "A 100 kVA indoor dry-type sits next to a combustible wall. Minimum separation with no barrier?",
+          "choices": [
+            "6 in",
+            "12 in",
+            "3 ft",
+            "6 ft"
+          ],
+          "answer_index": 1,
+          "explain_plain": "At 112½ kVA or less, the rule is 12 inches from combustible material unless a fire-resistant, heat-insulating barrier separates them.",
+          "nec_ref": "450.21(A)"
+        },
+        {
+          "question": "A 150 kVA indoor dry-type is installed in:",
+          "choices": [
+            "Any closet with 12 in of clearance",
+            "A transformer room of fire-resistant construction, 1-hour rating minimum",
+            "Only an outdoor pad",
+            "A room with sprinklers, no rating needed"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Over 112½ kVA, the default is a fire-resistant transformer room with a minimum 1-hour fire rating, unless an exception such as Exception No. 1 applies.",
+          "nec_ref": "450.21(B)"
+        },
+        {
+          "question": "The 12-inch rule does not apply to which unit?",
+          "choices": [
+            "A 112½ kVA ventilated unit",
+            "A unit rated 1000V or less, completely enclosed except for ventilating openings",
+            "Any unit with Class 155 insulation",
+            "Any unit sitting on a concrete floor"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The 450.21(A) Exception takes completely enclosed units rated 1000V or less out of the 12-inch rule, ventilating openings excepted.",
+          "nec_ref": "450.21(A) Exception"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "450.21(A)",
+        "450.21(B)",
+        "450.9"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C4-ART-455",
