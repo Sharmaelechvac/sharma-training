@@ -400,8 +400,8 @@
       "article": "700",
       "section": "700.5",
       "title": "Equipo de transferencia — sistemas de emergencia",
-      "plain_explanation": "El equipo de transferencia de emergencia tiene que ser automático, listado y marcado para uso de emergencia, y aprobado por la AHJ. Está construido e instalado de modo que la fuente de emergencia y las demás fuentes no puedan conectarse juntas por accidente. Un interruptor de transferencia automática tiene que ser operado eléctricamente y retenido mecánicamente, los interruptores de transferencia reacondicionados no se permiten, el equipo puede alimentar solo cargas de emergencia, y los interruptores de transferencia montados en el medidor no se permiten para uso de emergencia. La regla de documentación de 700.5(E) no lleva excepción para viviendas — a diferencia de 702.5(C) — así que la clasificación de cortocircuito del equipo de transferencia se marca en el campo en el exterior del equipo también en las viviendas.\n\nCAMBIO NEC 2023:\n• 700.5: Cuando un solo alimentador lleva las cargas de emergencia, ahora se requiere equipo de transferencia redundante o un interruptor de transferencia con derivación y aislamiento, para que el mantenimiento del equipo de transferencia no mate la energía de emergencia. Un alimentador que suministra las cargas de emergencia ahora significa que se requiere equipo de transferencia redundante o un interruptor de transferencia con derivación y aislamiento (700.5(D)).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Lee el listado y la marca, no la hoja de ventas. Si el interruptor no está marcado para uso de emergencia, no va en un trabajo 700, por grande que sea.",
+      "plain_explanation": "700.5 fija el nivel para el equipo de transferencia en un sistema de emergencia — el equipo que mueve las cargas de seguridad de vida de la fuente normal a la fuente de emergencia.\n• Tiene que ser automático, listado y marcado para uso de emergencia, y aprobado por la AHJ.\n• Tiene que estar construido e instalado de modo que la fuente de emergencia y las demás fuentes no puedan conectarse juntas por accidente.\n• Un interruptor de transferencia automática tiene que ser operado eléctricamente y retenido mecánicamente — se queda en la fuente en la que está; no se mueve ni se cae.\n• Los interruptores de transferencia reacondicionados no se permiten en un sistema de emergencia.\n• El equipo puede alimentar solo cargas de emergencia. Las cargas de reserva y opcionales van en su propio equipo.\n• Los interruptores de transferencia montados en el medidor no se permiten para uso de emergencia — un dispositivo que está bien en un trabajo 702 de vivienda no cruza a un trabajo 700.\n• Documentación, 700.5(E): la clasificación de corriente de cortocircuito del equipo de transferencia se marca en el campo en el exterior del equipo. La regla de documentación de 700.5(E) no lleva excepción para viviendas — a diferencia de 702.5(C) — así que la clasificación se marca también en las viviendas.",
+      "on_the_job": "Oficina médica pequeña en Kissimmee, acometida de 200 A: el suplidor cotiza un dispositivo de transferencia montado en el medidor porque se instala rápido. Se rechaza antes del rough-in — los interruptores de transferencia montados en el medidor no se permiten para uso de emergencia, punto. El trabajo recibe un interruptor de transferencia automática Siemens de 200 A listado y marcado para uso de emergencia (S-02), y antes de que llegue el inspector la cuadrilla confirma que la clasificación de cortocircuito está marcada en el campo en el exterior del cerramiento, donde 700.5(E) la quiere — los planos muestran 22 kA de corriente de falla disponible, y la clasificación marcada tiene que cubrirla.",
       "sharma_note": "La S-02 aplica al equipo que Sharma suministra: el equipo de transferencia nuevo es Siemens. El listado y la marca de emergencia siguen gobernando — la marca comercial nunca reemplaza a ninguno de los dos.",
       "figure_idea": "Diagrama original: una alimentación de la compañía eléctrica y una alimentación de generador entrando a un interruptor de transferencia automática, con un símbolo de enclavamiento mecánico que muestra que los dos nunca pueden cerrarse juntos.",
       "related_ids": [
@@ -423,7 +423,110 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/700-5",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Las cargas de emergencia son las que sacan a la gente de un edificio oscuro y lleno de humo. Un interruptor de transferencia que puede poner el generador en paralelo con la compañía eléctrica retroalimenta una línea que la cuadrilla de la compañía cree muerta. El equipo que simplemente es suficientemente grande, pero no está identificado para uso de emergencia, no ha sido evaluado para este servicio — y un interruptor que falla en la única transferencia que importa deja oscuras las luces de egreso.",
+      "exam_trap": "La respuesta trampa es que cualquier interruptor de transferencia listado puede servir a un sistema de emergencia si su clasificación de amperes es suficientemente grande. La clasificación no es la prueba — el interruptor tiene que estar listado y marcado para uso de emergencia. La segunda trampa intercambia las reglas de vivienda: 702.5(C) lleva una excepción de documentación para viviendas; 700.5(E) no.",
+      "inspection_fails": [
+        "Interruptor de transferencia listado para uso de reserva instalado en cargas de emergencia — sin marca de uso de emergencia.",
+        "Interruptor de transferencia montado en el medidor sirviendo un sistema de emergencia 700.",
+        "Interruptor de transferencia automática reacondicionado instalado en un trabajo de emergencia.",
+        "Clasificación de cortocircuito del equipo de transferencia sin marcar en el campo en el exterior del equipo (700.5(E)).",
+        "Cargas de reserva u opcionales conectadas en el equipo de transferencia de emergencia."
+      ],
+      "tables": [
+        {
+          "caption": "La puerta de 700.5 — cada punto, siempre",
+          "headers": [
+            "Requisito",
+            "Sección"
+          ],
+          "rows": [
+            [
+              "Operación automática",
+              "700.5"
+            ],
+            [
+              "Listado y marcado para uso de emergencia",
+              "700.5"
+            ],
+            [
+              "Operado eléctricamente, retenido mecánicamente",
+              "700.5"
+            ],
+            [
+              "Sin interruptores de transferencia reacondicionados",
+              "700.5"
+            ],
+            [
+              "Solo cargas de emergencia",
+              "700.5"
+            ],
+            [
+              "Sin interruptores de transferencia montados en el medidor",
+              "700.5"
+            ],
+            [
+              "SCCR marcado en el campo en el exterior",
+              "700.5(E)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-700.5-transfer-switch.svg",
+          "alt": "Diagrama unifilar de las alimentaciones de la compañía eléctrica y del generador entrando a un solo interruptor de transferencia automática con enclavamiento, alimentando un tablero de emergencia solo para cargas 700, con una franja roja que prohíbe interruptores montados en el medidor y reacondicionados y cuatro verificaciones numeradas.",
+          "caption": "Un interruptor, dos fuentes, nunca juntas — y solo cargas de emergencia aguas abajo.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Cuál interruptor de transferencia puede servir a un sistema de emergencia 700?",
+          "choices": [
+            "Cualquier interruptor listado con suficiente ampacidad",
+            "Un interruptor listado y marcado para uso de emergencia",
+            "Un interruptor montado en el medidor, en una vivienda",
+            "Un ATS reacondicionado, si fue probado"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La ampacidad sola no es la prueba. El equipo de transferencia de emergencia tiene que ser automático, listado y marcado para uso de emergencia, y aprobado por la AHJ.",
+          "nec_ref": "700.5"
+        },
+        {
+          "question": "En un sistema de emergencia de vivienda, la clasificación de cortocircuito del equipo de transferencia:",
+          "choices": [
+            "No se requiere en viviendas",
+            "Se requiere solo sobre 400 A",
+            "Se marca en el campo en el exterior — sin excepción para viviendas",
+            "Se marca dentro de la tapa"
+          ],
+          "answer_index": 2,
+          "explain_plain": "700.5(E) no lleva excepción para viviendas, a diferencia de 702.5(C). La clasificación se marca en el campo en el exterior del equipo también en las viviendas.",
+          "nec_ref": "700.5(E)"
+        },
+        {
+          "question": "Un interruptor de transferencia montado en el medidor en un sistema de emergencia es:",
+          "choices": [
+            "Permitido si está listado",
+            "Permitido solo en viviendas",
+            "No permitido",
+            "Permitido si la compañía eléctrica lo permite"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Los interruptores de transferencia montados en el medidor no se permiten para uso de emergencia, sin importar el listado o la práctica de la compañía en trabajos de reserva.",
+          "nec_ref": "700.5"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 700.5: Cuando un solo alimentador lleva las cargas de emergencia, ahora se requiere equipo de transferencia redundante o un interruptor de transferencia con derivación y aislamiento, para que el mantenimiento del equipo de transferencia no mate la energía de emergencia. Un alimentador que suministra las cargas de emergencia ahora significa que se requiere equipo de transferencia redundante o un interruptor de transferencia con derivación y aislamiento (700.5(D)).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "700.5",
+        "700.5(E)",
+        "702.5(C)"
+      ],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C7-700.7",
@@ -450,8 +553,8 @@
       "article": "700",
       "section": "700.8",
       "title": "Protección contra sobretensiones — sistemas de emergencia",
-      "plain_explanation": "Cada tablero de distribución y tablero de paneles de un sistema de emergencia tiene que tener un dispositivo de protección contra sobretensiones listado. Este es un requisito plano del artículo, no una venta adicional ni algo para recortar por ingeniería de valor.\n\nEl dispositivo tiene que estar listado, y se instala en o sobre el tablero de distribución o tablero de paneles que protege, conectado como dirigen su listado y las instrucciones del fabricante — los conductores cortos y rectos importan, porque un dispositivo contra sobretensiones trabaja a través de su conexión, y un conductor de entrada largo y enrollado añade impedancia exactamente donde llega la sobretensión. Un SPD fallado o al final de su vida útil que nadie nota deja el tablero sin protección mientras se ve completo, y por eso la indicación de estado del dispositivo pertenece a las rondas de prueba y mantenimiento de 700.3.",
-      "on_the_job": "Cuenta un SPD para cada tablero de paneles y tablero de distribución de emergencia en la lista de materiales, y confirma que esté listado.",
+      "plain_explanation": "Cada tablero de distribución y tablero de paneles de un sistema de emergencia tiene que tener un dispositivo de protección contra sobretensiones listado. Este es un requisito plano del artículo, no una venta adicional ni algo para recortar por ingeniería de valor.\nEl dispositivo tiene que estar listado, y se instala en o sobre el tablero de distribución o tablero de paneles que protege, conectado como dirigen su listado y las instrucciones del fabricante.\n• Los conductores cortos y rectos importan: un dispositivo contra sobretensiones trabaja a través de su conexión, y un conductor de entrada largo y enrollado añade impedancia exactamente donde llega la sobretensión.\n• Un SPD fallado o al final de su vida útil que nadie nota deja el tablero sin protección mientras se ve completo — y por eso la indicación de estado del dispositivo pertenece a las rondas de prueba y mantenimiento de 700.3.",
+      "on_the_job": "Oficina médica pequeña en Lakeland: el tablero de distribución de emergencia y un tablero de paneles de emergencia aguas abajo reciben cada uno un SPD listado en la lista de materiales — dos tableros, dos dispositivos, sin excepción para el tablero más pequeño. Cada SPD se monta en el tablero que protege, con sus conductores tan cortos y rectos como la envolvente permite, y su indicador de estado entra en el registro de pruebas de 700.3. Los tableros de energía normal en el mismo trabajo son otra conversación — 700.8 habla solo del sistema de emergencia.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -462,7 +565,98 @@
       "verified": true,
       "prev_id": "C7-700.7",
       "next_id": "C7-700.10",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Los rayos de Florida y las maniobras de la compañía eléctrica lanzan sobretensiones sobre los conductores de acometida cada temporada de tormentas. El tablero de emergencia alimenta las cargas que protegen la vida — alumbrado de egreso, letreros de salida, alarma de incendio — y esas cargas son electrónicas. Una sobretensión a través de un tablero de emergencia sin protección puede matar el sistema el día que se necesita, y un SPD muerto en silencio da el mismo resultado detrás de un tablero de aspecto normal. La regla pone un supresor listado en cada tablero y una revisión de estado en las rondas de mantenimiento.",
+      "exam_trap": "La trampa es proteger el tablero de distribución de emergencia y dar el trabajo por terminado, porque la sobretensión 'pega primero en el primer tablero'. La Sección 700.8 nombra tableros de distribución y tableros de paneles — cada tablero de paneles de emergencia aguas abajo necesita su propio SPD listado. La otra respuesta equivocada es el dispositivo no listado sacado de la camioneta: la palabra de la sección es listado, y un SPD no listado es una corrección, no protección.",
+      "tables": [
+        {
+          "caption": "Dos reglas de SPD, dos disparadores diferentes",
+          "headers": [
+            "Dónde",
+            "Regla",
+            "Sección"
+          ],
+          "rows": [
+            [
+              "Tablero de distribución de emergencia",
+              "SPD listado requerido",
+              "700.8"
+            ],
+            [
+              "Tablero de paneles de emergencia",
+              "SPD listado requerido",
+              "700.8"
+            ],
+            [
+              "Servicio de una unidad de vivienda",
+              "SPD listado Tipo 1 o Tipo 2",
+              "230.67"
+            ]
+          ],
+          "note": "230.67 es la regla del servicio de vivienda del Capítulo 2; 700.8 es la regla del sistema de emergencia. Un trabajo puede deber una, la otra, o ambas."
+        }
+      ],
+      "inspection_fails": [
+        "Tablero de paneles de emergencia sin SPD — solo se protegió el tablero de distribución.",
+        "Dispositivo contra sobretensiones no listado instalado en un tablero de paneles de emergencia.",
+        "Conductores del SPD largos y enrollados en la canaleta, añadiendo impedancia antes del dispositivo.",
+        "Indicador de estado del SPD fallado y nunca detectado — sin registro de pruebas ni mantenimiento de 700.3."
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-700.8-spd-leads.svg",
+          "alt": "Comparación de un tablero de paneles de emergencia con un SPD listado con conductores cortos y rectos, marcado correcto, contra el mismo tablero con el SPD en un conductor largo y enrollado, marcado incorrecto.",
+          "caption": "Conductores cortos y rectos — una entrada enrollada gasta la protección antes de que empiece.",
+          "w": 900,
+          "h": 1400
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿En qué equipo exige 700.8 un SPD listado?",
+          "choices": [
+            "Solo en el tablero de distribución de emergencia",
+            "En cada tablero de distribución y tablero de paneles de emergencia",
+            "Solo en tableros de paneles sobre 400 A",
+            "Solo en tableros que alimentan la alarma de incendio"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La sección nombra tableros de distribución y tableros de paneles — cada tablero de emergencia recibe su propio SPD listado.",
+          "nec_ref": "700.8"
+        },
+        {
+          "question": "¿Por qué los conductores de un SPD se mantienen cortos y rectos?",
+          "choices": [
+            "Por apariencia",
+            "Un conductor largo añade impedancia exactamente donde llega la sobretensión",
+            "El listado exige una revisión de torque",
+            "Para ahorrar espacio en la canaleta"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El dispositivo trabaja a través de su conexión; un conductor de entrada largo y enrollado añade impedancia y debilita la supresión.",
+          "nec_ref": "700.8"
+        },
+        {
+          "question": "¿Cómo se detecta más probablemente un SPD fallado o al final de su vida útil?",
+          "choices": [
+            "Por el medidor de la compañía",
+            "Por su indicación de estado, revisada en las rondas de prueba y mantenimiento de 700.3",
+            "Por un directorio de tablero más brillante",
+            "Por nada — los SPD nunca fallan"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Un SPD muerto se ve completo. Su indicación de estado pertenece a las rondas de prueba y mantenimiento de 700.3.",
+          "nec_ref": "700.8 / 700.3"
+        }
+      ],
+      "code_refs": [
+        "700.8",
+        "700.3",
+        "230.67"
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C7-700.10",
@@ -655,8 +849,8 @@
       "article": "700",
       "section": "700.25",
       "title": "Interruptor de transferencia de iluminación de emergencia de circuito ramal (700.25)",
-      "plain_explanation": "700.25 cubre el interruptor de transferencia de iluminación de emergencia de circuito ramal: donde la iluminación de emergencia se alimenta desde un circuito ramal, un interruptor de transferencia listado a nivel del circuito ramal es el dispositivo que traslada esa carga de iluminación a la fuente de emergencia cuando falla la energía normal, de modo que la iluminación de egreso no depende de una decisión aguas arriba. Es una regla estrecha, de dispositivo listado: el interruptor, su listado y su cableado siguen la sección impresa y los documentos de diseño. Nota de edición: esta página declara la regla del NEC 2020 que Florida aplica; cualquier cambio de 2023 se confirma contra el texto impreso de 2023 antes de enseñarse aquí.",
-      "on_the_job": "El diseño de los sistemas de emergencia es trabajo de ingeniería. Si un plano muestra interruptores de transferencia de circuito ramal para la iluminación de egreso, instálelos exactamente como dicen los dibujos y el listado del dispositivo, y avise al diseñador de cualquier cambio de campo: no realimente la iluminación de egreso por decisión propia.",
+      "plain_explanation": "La 700.25 cubre un solo dispositivo: el interruptor de transferencia de iluminación de emergencia de circuito ramal. Donde la iluminación de emergencia se alimenta desde un circuito ramal, un interruptor de transferencia listado a nivel del circuito ramal es el dispositivo que traslada esa carga de iluminación del circuito ramal normal a un circuito ramal de emergencia cuando falla la energía normal, de modo que la iluminación de egreso no depende de una decisión aguas arriba.\n• La transferencia ocurre allá en el circuito de iluminación, no de vuelta en la acometida ni en el interruptor de transferencia principal.\n• Las cargas que puede transferir son cargas de iluminación de emergencia en circuitos ramales de no más de 20 A.\n• El dispositivo está listado como equipo de transferencia. Un relé automático de control de carga (700.26) es un dispositivo distinto: puede forzar el encendido de las luces de emergencia, pero no se le permite transferir una carga entre dos fuentes.\nEs una regla estrecha, de dispositivo listado: el interruptor, su listado y su cableado siguen la sección impresa y los documentos de diseño.",
+      "on_the_job": "El diseño de los sistemas de emergencia es trabajo de ingeniería. Si un plano muestra interruptores de transferencia de circuito ramal para la iluminación de egreso de un pasillo de una oficina pequeña en Orlando, instálelos exactamente como dicen los dibujos y el listado del dispositivo: entra la alimentación normal, entra la de emergencia, sale la carga hacia las luces del pasillo. Avise al diseñador de cualquier cambio de campo: no realimente la iluminación de egreso por decisión propia, y no sustituya un relé de control de carga por un interruptor de transferencia. Son dispositivos distintos con listados distintos, y solo uno de ellos puede trasladar una carga entre fuentes.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -668,7 +862,113 @@
       "unverified_reason": "Página corta nueva escrita el 2026-11-25 según la resolución 8 de Mike Holt. Verificado=false hasta comprobarla contra el NEC 2020 impreso.",
       "prev_id": "C7-700.16",
       "next_id": "C7-700.32",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "La iluminación de egreso tiene que encenderse cuando muere la energía normal, incluso cuando solo falla el circuito local de iluminación. Si el interruptor de transferencia principal es el único camino, un solo breaker ramal disparado puede dejar una escalera a oscuras mientras el generador corre afuera. Poner un dispositivo de transferencia listado allá en el circuito ramal traslada la decisión al circuito que realmente falló.",
+      "inspection_fails": [
+        "Relé automático de control de carga instalado donde la carga tenía que transferirse entre la fuente normal y la de emergencia: un ALCR no es equipo de transferencia (700.26).",
+        "Interruptor de transferencia de circuito ramal moviendo iluminación de emergencia en un circuito ramal de más de 20 A.",
+        "Dispositivo sin listado usado como interruptor de transferencia de iluminación de emergencia de circuito ramal; el interruptor debe ser equipo de transferencia listado (UL 1008).",
+        "Iluminación de egreso realimentada en campo desde un circuito distinto al que muestran los dibujos, sin avisar al diseñador."
+      ],
+      "exam_trap": "La respuesta trampa trata el relé automático de control de carga como si fuera un interruptor de transferencia pequeño. No lo es. El ALCR (700.26) salta los controles locales para forzar el encendido de las luces desde el circuito de emergencia; solo el interruptor de transferencia de iluminación de emergencia de circuito ramal listado (700.25) puede trasladar la carga del circuito ramal normal al circuito ramal de emergencia.",
+      "tables": [
+        {
+          "caption": "La 700.25 de un vistazo",
+          "headers": [
+            "Punto",
+            "Regla"
+          ],
+          "rows": [
+            [
+              "Qué se transfiere",
+              "Solo cargas de iluminación de emergencia"
+            ],
+            [
+              "Tamaño del circuito",
+              "Circuitos ramales de no más de 20 A"
+            ],
+            [
+              "Dispositivo",
+              "Un interruptor de transferencia de iluminación de emergencia de circuito ramal listado (UL 1008)"
+            ],
+            [
+              "Regla de retención mecánica",
+              "El requisito de retención mecánica de la 700.5(C) no aplica a un interruptor listado bajo esta sección"
+            ]
+          ],
+          "note": "Esta página todavía no se ha comprobado contra el NEC 2020 impreso: vea el recuadro «Verifique en el impreso»."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-700.25-branch-transfer.svg",
+          "alt": "Diagrama unifilar de un circuito ramal normal y un circuito ramal de emergencia que alimentan un interruptor de transferencia de iluminación de emergencia de circuito ramal listado, con el lado de carga alimentando las luminarias de egreso.",
+          "caption": "Transferencia en el circuito ramal: entra lo normal, entra la emergencia, sale la luz de egreso.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Cuando falla la energía normal, ¿qué hace un interruptor de transferencia de iluminación de emergencia de circuito ramal?",
+          "choices": [
+            "Fuerza el encendido de las luces a través de sus controles locales",
+            "Traslada la carga de iluminación de emergencia del circuito ramal normal a un circuito ramal de emergencia",
+            "Arranca el generador",
+            "Suena la alarma de incendios"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El interruptor listado transfiere la carga de iluminación del circuito ramal normal a un circuito ramal de emergencia, allá a nivel del circuito ramal.",
+          "nec_ref": "700.25"
+        },
+        {
+          "question": "La mayor capacidad de circuito ramal cuya carga de iluminación de emergencia puede transferir este interruptor es…",
+          "choices": [
+            "15 A",
+            "20 A",
+            "30 A",
+            "60 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La 700.25 cubre cargas de iluminación de emergencia alimentadas por circuitos ramales de no más de 20 A.",
+          "nec_ref": "700.25"
+        },
+        {
+          "question": "Un relé automático de control de carga (700.26) puede usarse para transferir una carga entre dos fuentes. ¿Verdadero o falso?",
+          "choices": [
+            "Verdadero: está listado para iluminación de emergencia",
+            "Falso: un ALCR no es equipo de transferencia",
+            "Verdadero: si la carga es menor de 20 A",
+            "Falso: los relés no se permiten en absoluto"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Un ALCR fuerza el encendido de las luces; no puede transferir una carga entre dos fuentes no sincronizadas. Solo el equipo de transferencia listado (UL 1008) puede hacerlo.",
+          "nec_ref": "700.26"
+        }
+      ],
+      "code_refs": [
+        "700.25",
+        "700.26",
+        "700.5(C)"
+      ],
+      "uncertain": [
+        "Esta página todavía no se ha comprobado contra el NEC 2020 impreso. Confirme el texto de la 700.25 en el libro impreso antes de confiar en él.",
+        "Si el NEC 2023 cambió la 700.25 no se ha confirmado contra el texto impreso de 2023. La nota de edición de arriba refleja las fuentes públicas de cambios de 2023 revisadas."
+      ],
+      "rich_sources": [
+        {
+          "claim": "La 700.25 permite que las cargas de iluminación de emergencia en circuitos ramales de no más de 20 A se transfieran del circuito ramal normal a un circuito ramal de emergencia usando un interruptor de transferencia de iluminación de emergencia de circuito ramal listado, y el requisito de retención mecánica de la 700.5(C) no aplica al interruptor listado.",
+          "source": "Isolite, 'Emergency Lighting Transfer Switches' (cita el texto del NEC 700.25); EC&M, 'Green Wire Nuts, Emergency Lighting Controls and More'",
+          "url": "https://www.ecmag.com/magazine/articles/article-detail/green-wire-nuts--emergency-lighting-controls-and-more"
+        },
+        {
+          "claim": "El interruptor de transferencia de iluminación de emergencia de circuito ramal está listado bajo UL 1008 como equipo de transferencia; un relé automático de control de carga (700.26) es un dispositivo UL 924 y no puede usarse para transferir una carga entre dos fuentes.",
+          "source": "ETC, 'Why are fuses required with a BCELTS?'; EC&M (arriba)",
+          "url": "https://blog.etcconnect.com/2019/10/why-are-fuses-required-with-a-branch-circuit-emergency-lighting-transfer-switch-bcelts"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C7-700.32",
@@ -1229,8 +1529,8 @@
       "article": "702",
       "section": "702",
       "title": "Sistemas de reserva opcionales — generadores de casa y negocio",
-      "plain_explanation": "El Artículo 702 cubre los sistemas de reserva que nadie requirió: el dueño de casa que quiere la nevera, la bomba del pozo y unas cuantas luces durante un apagón en Florida, o el negocio que protege producto y comodidad. La seguridad de vida no depende de estos sistemas, y ese hecho solo es lo que los mantiene fuera de los Artículos 700 y 701. El artículo todavía los regula fuerte donde cuenta: capacidad, equipo de transferencia que nunca puede amarrar el generador a la compañía eléctrica por accidente, letreros, cableado y grupos generadores de exterior. Los generadores portátiles que nunca se conectan al cableado de la propiedad están fuera de este artículo; en el momento en que uno se conecta a través de una entrada y equipo de transferencia, el 702 entra en juego.",
-      "on_the_job": "La mayoría del trabajo de generadores de Sharma vive aquí. Empieza cada cotización ordenando las cargas en lo que corre automáticamente, lo que el dueño cambiará a mano, y lo que nunca corre con el generador.",
+      "plain_explanation": "El Artículo 702 cubre los sistemas de reserva que nadie requirió: el dueño de casa que quiere la nevera, la bomba del pozo y unas cuantas luces durante un apagón en Florida, o el negocio que protege producto y comodidad. La seguridad de vida no depende de estos sistemas, y ese hecho solo es lo que los mantiene fuera de los Artículos 700 y 701. El artículo todavía los regula fuerte donde cuenta:\n• Capacidad: el sistema tiene que llevar las cargas conectadas a él, con gestión de carga donde el diseño la usa (702.4)\n• Equipo de transferencia: equipo listado que nunca puede amarrar el generador a la compañía eléctrica por accidente (702.5)\n• Letreros: un letrero en el equipo de acometida dice que hay una fuente de reserva en la propiedad (702.7)\n• El cableado, y las reglas para grupos generadores de exterior, completan el artículo\nLos generadores portátiles que nunca se conectan al cableado de la propiedad están fuera de este artículo. En el momento en que uno se conecta a través de una entrada y equipo de transferencia, el 702 entra en juego.",
+      "on_the_job": "La mayoría del trabajo de generadores de Sharma vive aquí. Empiece cada cotización ordenando las cargas en lo que corre automáticamente, lo que el dueño cambiará a mano, y lo que nunca corre con el generador. En una casa de Marion Oaks con pozo, la lista de lo que debe correr lee: nevera 200 VA, bomba del pozo 1,800 VA, luces 900 VA, microondas 1,500 VA, TV y equipo de red 300 VA: 4,700 VA en total. Un grupo portátil de 6,500 W en una entrada, a través de equipo de transferencia Siemens (S-02), lleva esa lista con margen. La estufa de 12,000 VA y la secadora de 5,600 VA se quedan fuera de la lista del generador por completo.",
       "sharma_note": "S-02: el equipo de transferencia que Sharma suministra es Siemens. La S-09 solo entra si el trabajo de reserva cambia la disposición del medidor/tablero.",
       "figure_idea": "Diagrama original: un tablero de casa, un interruptor de transferencia y un generador, con las alimentaciones de la compañía eléctrica y del generador mostradas como dos puertas que nunca pueden estar ambas abiertas.",
       "related_ids": [
@@ -1248,7 +1548,102 @@
       "next_id": "C7-702.4(A)",
       "sharma_rule_ids": [
         "S-02"
-      ]
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Opcional no significa descuidado. Un sistema de reserva conecta una segunda fuente a un edificio que las cuadrillas de la compañía eléctrica y los bomberos esperan que quede sin energía cuando se abre la acometida. Una retroalimentación por una transferencia mal hecha puede poner voltaje completo en una línea que una cuadrilla cree muerta. Las reglas de capacidad, transferencia y letreros son lo que evita que un sistema de comodidad se convierta en el cableado más peligroso de la propiedad.",
+      "inspection_fails": [
+        "Generador retroalimentado al tablero por un receptáculo de secadora y un cable de doble macho: sin equipo de transferencia alguno.",
+        "Entrada y equipo de transferencia instalados, pero el equipo de transferencia no está listado, o puede amarrar el generador a la compañía eléctrica (702.5).",
+        "Sin letrero en el equipo de acometida que muestre que hay una fuente de reserva en la propiedad (702.7).",
+        "Sistema de reserva conectado a más carga de la que puede llevar (702.4).",
+        "El interruptor de transferencia iguala la acometida en amperios, pero su capacidad de cortocircuito queda por debajo de la corriente de falla disponible (702.4(A))."
+      ],
+      "exam_trap": "La trampa es «reserva es reserva»: archivar cada generador bajo el 702. Si una agencia gubernamental requiere el sistema, o la seguridad de vida depende de él, no es opcional: cae en el Artículo 700 o el 701, con sus reglas de separación, pruebas y 10 segundos. El Artículo 702 es solo para los sistemas que nadie requirió.",
+      "tables": [
+        {
+          "caption": "¿Qué artículo es dueño del sistema de reserva?",
+          "headers": [
+            "Artículo",
+            "Aplica cuando",
+            "Ojo con"
+          ],
+          "rows": [
+            [
+              "700 — Emergencia",
+              "La ley lo requiere y la seguridad de vida depende de él",
+              "Energía disponible en 10 segundos; cableado separado"
+            ],
+            [
+              "701 — Requerido por ley",
+              "La ley lo requiere, pero la seguridad de vida no es el punto",
+              "Reglas de sistema requerido sin el nivel de emergencia"
+            ],
+            [
+              "702 — Opcional",
+              "Nadie lo requirió; comodidad y protección de producto",
+              "Capacidad, equipo de transferencia, letreros"
+            ]
+          ],
+          "note": "La etiqueta la decide quién requirió el sistema, no el tamaño del generador."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-ART-702-two-doors.svg",
+          "alt": "Diagrama unifilar de un tablero de casa alimentado por la compañía eléctrica y por un generador exterior a través de un interruptor de transferencia listado que solo puede conectar una fuente a la vez.",
+          "caption": "Dos fuentes, un tablero: el interruptor de transferencia las mantiene separadas.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un dueño de casa instala un generador solo por comodidad durante los apagones. ¿Qué artículo lo gobierna?",
+          "choices": [
+            "700",
+            "701",
+            "702",
+            "No está regulado"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Nadie requirió el sistema y la seguridad de vida no depende de él, así que es un sistema de reserva opcional bajo el Artículo 702.",
+          "nec_ref": "702"
+        },
+        {
+          "question": "¿Qué debe hacer imposible el equipo de transferencia del Artículo 702?",
+          "choices": [
+            "Que el generador arranque durante un apagón",
+            "La conexión inadvertida del generador a la fuente de la compañía eléctrica",
+            "La transferencia en menos de 10 segundos",
+            "La operación manual por el dueño"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El equipo de transferencia tiene que mantener separadas la fuente normal y la alterna: el generador nunca puede amarrarse a la compañía eléctrica por accidente.",
+          "nec_ref": "702.5"
+        },
+        {
+          "question": "Un interruptor de transferencia de 200 A en una acometida de 200 A siempre es el interruptor correcto. ¿Verdadero o falso?",
+          "choices": [
+            "Verdadero: los amperajes coinciden",
+            "Falso: su capacidad de cortocircuito también debe convenir a la corriente de falla disponible",
+            "Verdadero: la corriente de falla es problema de la compañía eléctrica",
+            "Falso: el interruptor debe ser de 400 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El amperaje y la capacidad de cortocircuito son números distintos. El equipo debe ser adecuado para la máxima corriente de falla disponible en sus terminales (702.4(A)).",
+          "nec_ref": "702.4(A)"
+        }
+      ],
+      "code_refs": [
+        "702.4",
+        "702.4(A)",
+        "702.4(B)",
+        "702.5",
+        "702.7"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C7-702.4(A)",
@@ -1391,8 +1786,8 @@
       "article": "702",
       "section": "702.4(B)",
       "title": "Capacidad del sistema — la bifurcación de dimensionamiento en el Artículo 702",
-      "plain_explanation": "Qué tan grande tiene que ser la fuente de reserva depende de cómo la carga llega a ella. Con transferencia manual, el usuario escoge la carga, así que la fuente solo tiene que llevar lo que se piensa correr al mismo tiempo. Con transferencia automática, nadie está parado ahí escogiendo, así que la fuente se dimensiona a la carga calculada — calculada bajo el Artículo 220 o por otro método aprobado — y tiene que llevar la carga transferida completa o estar emparejada con manejo automático de carga. Esta página y las dos que siguen se volvieron a revisar contra fuentes de 2020 para esta edición, porque la redacción de v1 en esta sección estaba marcada como no verificada.",
-      "on_the_job": "Escribe de qué lado de la bifurcación está el trabajo antes de dimensionar nada. 'Transferencia automática, carga parcial, sin manejo de carga' no es una tercera opción.",
+      "plain_explanation": "702.4(B) es la bifurcación que decide qué tan grande tiene que ser una fuente de reserva opcional, y la bifurcación es el equipo de transferencia.\n• Transferencia manual, 702.4(B)(1): el usuario está parado en el interruptor y escoge la carga. La fuente solo tiene que suministrar las cargas que se piensa operar al mismo tiempo — el usuario es el manejo de carga.\n• Transferencia automática, 702.4(B)(2): nadie está parado ahí escogiendo, así que la fuente se dimensiona a la carga calculada, calculada bajo el Artículo 220 o por otro método aprobado. Entonces tiene que llevar la carga completa que el equipo de transferencia conecta, o estar emparejada con manejo automático de carga que limita lo que se conecta.\nNo hay una tercera rama. «Transferencia automática, carga parcial, sin manejo de carga» es la combinación que esta sección existe para prohibir. De qué lado de la bifurcación está un trabajo se decide en papel, antes de dimensionar o cotizar nada.",
+      "on_the_job": "Dos casas del condado de Marion, la misma semana. La primera lleva un generador portátil de 9 kW con interlock manual: las cargas que el dueño piensa correr — refrigerador, bomba de pozo, algunas luces y el televisor — suman unos 7.5 kW al mismo tiempo, así que la fuente encaja en 702.4(B)(1). La segunda casa quiere un interruptor automático de casa completa: el cálculo del Artículo 220 llega a 24 kW, así que la fuente de reserva es una unidad de 24 kW — o una unidad menor solo si el manejo automático de carga listado es parte del diseño. La misma calle, dos tamaños distintos, y el equipo de transferencia es toda la razón.",
       "sharma_note": "",
       "figure_idea": "Diagrama original: una bifurcación en un camino — la rama izquierda MANUAL con una mano escogiendo interruptores de carga, la rama derecha AUTOMÁTICA dividiéndose de nuevo en CARGA COMPLETA y MANEJO DE CARGA.",
       "related_ids": [
@@ -1407,7 +1802,98 @@
       "verified": true,
       "prev_id": "C7-702.4(A)",
       "next_id": "C7-702.4(B)(1)",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Un generador dimensionado por optimismo falla en el peor momento: el interruptor automático transfiere la casa entera a las 2 a.m. en una tormenta, el aire acondicionado y la bomba del pozo arrancan juntos, y la fuente pequeña se ahoga o se dispara — dejando la casa oscura y la comida caliente. La bifurcación obliga a responder la pregunta del dimensionamiento según quién escoge la carga, no según la fuente que resulta estar en el camión.",
+      "exam_trap": "A los que escriben exámenes les encanta la respuesta del medio: un interruptor de transferencia automática con un generador dimensionado solo para «las cargas esenciales» y sin manejo de carga. Esa no es una configuración legal bajo 702.4(B)(2). Con transferencia automática, las salidas son la carga calculada completa o el manejo automático de carga — la promesa del dueño de portarse bien no es ninguna de las dos.",
+      "inspection_fails": [
+        "Interruptor de transferencia automática instalado con una fuente dimensionada por debajo de la carga calculada y sin manejo de carga.",
+        "Manejo de carga reclamado en el permiso, pero sin equipo de manejo listado en el trabajo.",
+        "Dimensionamiento de transferencia manual usado para justificar la fuente en un sistema automático.",
+        "Sin cálculo del Artículo 220 ni registro de demanda aprobado en el expediente del trabajo para un sistema automático."
+      ],
+      "tables": [
+        {
+          "caption": "La bifurcación de 702.4(B)",
+          "headers": [
+            "Transferencia",
+            "Quién escoge la carga",
+            "La fuente debe llevar"
+          ],
+          "rows": [
+            [
+              "Manual — 702.4(B)(1)",
+              "El usuario escoge",
+              "Todas las cargas pensadas a la vez"
+            ],
+            [
+              "Automática — carga completa",
+              "Nadie en el interruptor",
+              "La carga calculada completa"
+            ],
+            [
+              "Automática — manejada",
+              "El sistema de manejo",
+              "La carga máxima que conectará"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-702.4B-the-fork.svg",
+          "alt": "Diagrama de flujo de la bifurcación de dimensionamiento de 702.4(B): transferencia manual donde el usuario escoge las cargas, frente a transferencia automática dividida en carga calculada completa o manejo de carga, con una franja roja que declara que no hay tercera rama.",
+          "caption": "La bifurcación: quién escoge la carga decide qué tan grande debe ser la fuente.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Con equipo de transferencia manual, la fuente de reserva debe poder suministrar:",
+          "choices": [
+            "La carga calculada completa del Artículo 220",
+            "Todas las cargas que se piensa operar al mismo tiempo",
+            "El 125 por ciento del motor más grande",
+            "Solo las cargas de seguridad de vida"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La transferencia manual significa que el usuario escoge las cargas, así que la fuente se dimensiona a todo lo que se piensa correr a la vez — ni más, ni menos.",
+          "nec_ref": "702.4(B)(1)"
+        },
+        {
+          "question": "Un sistema de transferencia automática sin manejo de carga necesita una fuente dimensionada a:",
+          "choices": [
+            "Las cargas esenciales",
+            "La mitad de la carga calculada",
+            "La carga calculada, calculada bajo el Artículo 220 o un método aprobado",
+            "La carga individual más grande"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Nadie escoge la carga en un sistema automático, así que la fuente lleva la carga calculada completa a menos que el manejo automático de carga la limite.",
+          "nec_ref": "702.4(B)(2)"
+        },
+        {
+          "question": "En un sistema automático manejado, ¿qué limita la carga que la fuente debe llevar?",
+          "choices": [
+            "El dueño de la casa",
+            "El inspector",
+            "El sistema automático de manejo de carga",
+            "La clasificación del interruptor de transferencia"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La fuente debe llevar la carga máxima que el sistema de manejo realmente conectará — el equipo hace la escogencia, automáticamente.",
+          "nec_ref": "702.4(B)(2)"
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "702.4(B)",
+        "702.4(B)(1)",
+        "702.4(B)(2)",
+        "Article 220"
+      ],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C7-702.4(B)(1)",
@@ -1521,8 +2007,8 @@
       "article": "702",
       "section": "702.4(B)(2)",
       "title": "Transferencia automática — carga completa, o manejo de carga",
-      "plain_explanation": "Donde se usa equipo de transferencia automática, la fuente de reserva se dimensiona a la carga calculada, calculada bajo el Artículo 220 o por otro método aprobado — para una instalación existente, la demanda máxima registrada es una de las rutas aprobadas que el código reconoce a través de 220.87. El sistema entonces tiene que satisfacer uno de dos deberes. Bajo el deber de carga completa, la fuente lleva la carga entera que el equipo automático transfiere. Bajo el deber de manejo de carga, un sistema automático maneja la carga conectada y la fuente solo tiene que llevar la carga máxima que ese sistema de manejo realmente conectará.",
-      "on_the_job": "Haz el cálculo del Artículo 220 o saca los datos de demanda primero, y luego revisa qué deber reclama el diseño. Un reclamo de manejo de carga necesita el equipo de manejo listado real en el trabajo, no una promesa de que el dueño apagará cosas.",
+      "plain_explanation": "Donde se usa equipo de transferencia automática, 702.4(B)(2) dimensiona la fuente de reserva a la carga calculada — calculada bajo el Artículo 220, o por otro método aprobado. Para una instalación existente, la demanda máxima registrada es una de las rutas aprobadas que el código reconoce a través de 220.87: historial medido real en vez de un cálculo nuevo.\nEl sistema entonces tiene que satisfacer uno de dos deberes:\n• Deber de carga completa: la fuente lleva la carga entera que el equipo automático transfiere. Nada se descarga y nada se maneja — la fuente simplemente es suficientemente grande.\n• Deber de manejo de carga: un sistema automático maneja la carga conectada, y la fuente solo tiene que llevar la carga máxima que ese sistema de manejo realmente conectará. Las cargas por encima de ese techo las descarga o las bloquea el equipo, no las buenas intenciones del dueño.\nEscoja el deber en papel. El tamaño de la fuente, la lista de equipo y el permiso tienen que contar la misma historia.",
+      "on_the_job": "Casa existente en Ocala que pasa a automática de casa completa. El cálculo del Artículo 220 dice 24 kW, y doce meses de historial de demanda de la compañía — la ruta de 220.87 — respaldan dimensionar desde el uso real en vez del peor caso en papel. El diseño reclama el deber de manejo de carga: un sistema de manejo listado descarga el segundo aire acondicionado y la estufa, topando la carga conectada en 16 kW, y una fuente de reserva Siemens de 20 kW la lleva con margen. El equipo de manejo está en el camión y en el permiso — un reclamo de manejo de carga sin equipo listado en el trabajo es solo un generador más pequeño y una esperanza.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1541,7 +2027,92 @@
       "verified": true,
       "prev_id": "C7-702.4(B)(1)",
       "next_id": "C7-702.5",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "La transferencia automática pasa sin nadie en casa para tomar buenas decisiones — el interruptor mueve la carga entera en el momento en que la compañía se cae. Si la fuente no puede llevar lo que el interruptor conecta, el generador se sobrecarga y suelta todo lo que fue comprado para salvar. El manejo de carga es la alternativa honesta: el equipo, no el optimismo, decide qué corre.",
+      "exam_trap": "La trampa es usar la ruta de demanda o el deber de manejo en el trabajo equivocado. La demanda máxima registrada bajo 220.87 es una ruta para instalaciones existentes, no para trabajo nuevo sin historial. Y el deber de manejo no es el dueño prometiendo apagar cosas — si la descarga no es automática, la fuente tiene que llevar la carga transferida completa.",
+      "inspection_fails": [
+        "Sistema automático dimensionado a «cargas esenciales» sin equipo de manejo de carga instalado.",
+        "Ajustes del manejo de carga subidos después de la inspección, dejando la fuente pequeña para la carga conectada.",
+        "Dimensionamiento por demanda registrada usado en una instalación nueva sin historial de demanda.",
+        "Fuente menor que la carga máxima que el sistema de manejo puede conectar."
+      ],
+      "tables": [
+        {
+          "caption": "Los dos deberes de 702.4(B)(2)",
+          "headers": [
+            "Deber",
+            "La fuente debe llevar",
+            "Prueba en el trabajo"
+          ],
+          "rows": [
+            [
+              "Carga completa",
+              "La carga transferida entera",
+              "Cálculo Art. 220 o registro de demanda 220.87"
+            ],
+            [
+              "Manejo de carga",
+              "La carga máxima que el sistema conecta",
+              "Equipo de manejo listado + ajustes"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-702.4B2-two-duties.svg",
+          "alt": "Comparación de barras de los dos deberes de 702.4(B)(2) con una carga calculada de 24 kW: carga completa con una fuente de 24 kW, frente a manejo de carga que topa la carga conectada en 16 kW con una fuente de 20 kW, y una nota sobre la ruta de demanda registrada de 220.87.",
+          "caption": "Carga completa o carga manejada — las dos formas legales de un sistema automático.",
+          "w": 900,
+          "h": 1460
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Para una instalación existente, ¿qué ruta reconoce 702.4(B)(2) para hallar la carga desde el historial real?",
+          "choices": [
+            "El total de la factura de un mes de la compañía",
+            "La demanda máxima registrada bajo 220.87",
+            "La suma de todas las clasificaciones de interruptores",
+            "La clasificación de placa del generador"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La demanda máxima registrada, reconocida a través de 220.87, es un método aprobado para instalaciones existentes — historial medido en vez de un cálculo nuevo del Artículo 220.",
+          "nec_ref": "220.87"
+        },
+        {
+          "question": "Bajo el deber de manejo de carga, la fuente debe llevar:",
+          "choices": [
+            "La carga calculada completa de todos modos",
+            "La mitad de la carga calculada",
+            "La carga máxima que el sistema de manejo conectará",
+            "Solo las cargas corriendo al momento de la transferencia"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La fuente se dimensiona al techo que el sistema de manejo impone — lo máximo que conectará a la vez.",
+          "nec_ref": "702.4(B)(2)"
+        },
+        {
+          "question": "El manejo de carga bajo 702.4(B)(2) tiene que ser:",
+          "choices": [
+            "Una nota en el manual del dueño",
+            "Automático, por equipo listado",
+            "Hecho por el dueño en el tablero",
+            "Ajustado por el inspector en la inspección final"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El manejo lo hace un sistema automático. Una promesa de que alguien apagará cargas a mano es selección manual, y pertenece al lado de transferencia manual de la bifurcación.",
+          "nec_ref": "702.4(B)(2)"
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "702.4(B)(2)",
+        "220.87",
+        "Article 220"
+      ],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C7-702.5",
@@ -1549,8 +2120,8 @@
       "article": "702",
       "section": "702.5",
       "title": "Equipo de transferencia — requerido, listado, y construido para mantener las fuentes separadas",
-      "plain_explanation": "El equipo de transferencia se requiere para conectar una fuente de reserva opcional al cableado de la propiedad, y en el código de 2020 tiene que estar listado — un endurecimiento sobre ediciones anteriores que atrapa el hardware de enclavamiento no listado. Existe una excepción estrecha: una conexión temporal de generador portátil sin equipo de transferencia, solo donde el mantenimiento y la supervisión aseguran que personas calificadas le den servicio y la alimentación normal está físicamente aislada por un interruptor de desconexión bloqueable o desconectando los conductores normales. Los cuatro deberes que lo siguen en la sección — interruptores montados en el medidor, documentación, interconexión inadvertida y operación en paralelo — tienen sus propias páginas a continuación, en el orden propio de la sección.",
-      "on_the_job": "Respuesta por defecto en una casa: un interruptor de transferencia listado o un arreglo de enclavamiento listado, instalado de modo que la compañía eléctrica y el generador nunca puedan encontrarse. Si un producto no puede mostrar su listado, no entra, diga lo que diga su papeleo sobre haber sido probado en el tablero de otra persona.",
+      "plain_explanation": "Se requiere equipo de transferencia para conectar una fuente de reserva opcional al cableado de la propiedad, y en el código de 2020 tiene que estar listado — un endurecimiento sobre ediciones anteriores que atrapa el hardware de enclavamiento no listado.\n• Lo que cuenta: un interruptor de transferencia listado, o un arreglo de enclavamiento listado que impide mecánicamente que la fuente normal y la fuente de reserva estén conectadas al mismo tiempo.\n• Una excepción estrecha: una conexión temporal de generador portátil sin equipo de transferencia, solo donde el mantenimiento y la supervisión aseguran que personas calificadas le den servicio y la alimentación normal está físicamente aislada por un interruptor de desconexión bloqueable o desconectando los conductores normales.\nLos cuatro deberes que lo siguen en la sección — interruptores de transferencia montados en el medidor, documentación, interconexión inadvertida y operación en paralelo — tienen sus propias páginas a continuación, en el orden propio de la sección.",
+      "on_the_job": "Casa en Marion Oaks, tablero Siemens de 200 A, el propietario quiere respaldo contra tormentas con un generador portátil de 12 kW. La respuesta de Sharma es un kit de enclavamiento Siemens listado, hecho para ese tablero, y una entrada de 50 A: la placa deslizante permite que el interruptor principal y el del generador estén encendidos de uno en uno, nunca los dos. El kit 'universal' que el propietario compró en línea, probado solo en el tablero de otra persona, se queda en su caja — sin listado, no se instala.",
       "sharma_note": "S-02: el equipo de transferencia que Sharma suministra es Siemens, y todavía tiene que llevar el listado que esta sección requiere.",
       "figure_idea": "Diagrama original: tres bosquejos de conexión lado a lado — interruptor de transferencia, enclavamiento listado, y un cable tachado retroalimentando un receptáculo de secadora.",
       "related_ids": [
@@ -1567,7 +2138,96 @@
       "next_id": "C7-702.5(B)",
       "sharma_rule_ids": [
         "S-02"
-      ]
+      ],
+      "why_it_exists": "El punto de transferencia es donde un generador puede matar a alguien que nunca conoce. Si la energía del generador llega a las líneas de la compañía eléctrica, un liniero en un poste a varias cuadras puede tocar un conductor que la compañía puso a tierra y declaró muerto. El equipo de transferencia listado está probado para hacer imposible esa conexión; un kit no listado es una promesa que nadie verificó.",
+      "exam_trap": "La respuesta trampa es que un kit de enclavamiento 'probado para ajustarse' a su tablero es suficiente. Probado no es listado. La sección 702.5 exige que el equipo de transferencia esté listado en el código de 2020, y la excepción estrecha sin equipo de transferencia es para conexiones portátiles temporales bajo supervisión calificada — no para una conexión permanente de una casa.",
+      "tables": [
+        {
+          "caption": "Tres maneras en que un generador llega al tablero (NEC 2020)",
+          "headers": [
+            "Método",
+            "¿Listado?",
+            "Veredicto"
+          ],
+          "rows": [
+            [
+              "Interruptor de transferencia",
+              "Listado",
+              "OK — una fuente a la vez"
+            ],
+            [
+              "Kit de enclavamiento",
+              "Listado para ese tablero",
+              "OK — la placa impide que ambos estén encendidos"
+            ],
+            [
+              "Retroalimentación por cable",
+              "No",
+              "Nunca — retroalimenta la red de la compañía"
+            ]
+          ]
+        }
+      ],
+      "inspection_fails": [
+        "Kit de enclavamiento no listado instalado en el tablero — sin marca de listado para el tablero en que está montado.",
+        "Generador retroalimentado a través de un receptáculo de secadora con un cable macho a macho.",
+        "Equipo de transferencia cableado de modo que la compañía eléctrica y el generador pueden estar encendidos juntos.",
+        "Conexión permanente de generador portátil sin equipo de transferencia, reclamada bajo la excepción de conexión temporal."
+      ],
+      "page_quiz": [
+        {
+          "question": "Bajo el NEC 2020, el equipo de transferencia de un sistema de reserva opcional debe estar:",
+          "choices": [
+            "Listado",
+            "Solo etiquetado",
+            "Probado por el fabricante",
+            "Aprobado por la compañía eléctrica"
+          ],
+          "answer_index": 0,
+          "explain_plain": "La 702.5 se endureció en 2020: el equipo de transferencia tiene que estar listado, no solo probado o etiquetado.",
+          "nec_ref": "702.5"
+        },
+        {
+          "question": "Una conexión temporal de generador portátil puede omitir el equipo de transferencia solo cuando:",
+          "choices": [
+            "El generador es de menos de 15 kW",
+            "Personas calificadas le dan servicio bajo mantenimiento y supervisión, y la alimentación normal está físicamente aislada",
+            "El propietario firma una exención",
+            "El interruptor principal del tablero está apagado"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La excepción necesita las dos mitades: supervisión de personas calificadas y aislamiento físico de la alimentación normal, con un interruptor bloqueable o desconectando los conductores normales.",
+          "nec_ref": "702.5"
+        },
+        {
+          "question": "Un kit de enclavamiento vendido como 'probado para ajustarse' a un tablero Siemens, sin listado, es:",
+          "choices": [
+            "Aceptable — probado equivale a listado",
+            "Aceptable solo en tableros de 200 A",
+            "No permitido — el equipo debe estar listado",
+            "Aceptable si no se le dice a la AHJ"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Probado es una palabra de mercadeo. La 702.5 exige equipo de transferencia listado.",
+          "nec_ref": "702.5"
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "702.5"
+      ],
+      "rich_sources": [],
+      "figures": [
+        {
+          "src": "fig/c7/C7-702.5-three-ways.svg",
+          "alt": "Tres bosquejos de conexión: un interruptor de transferencia listado y un kit de enclavamiento listado que mantienen separadas la compañía eléctrica y el generador, y un cable de retroalimentación macho a macho tachado en un receptáculo de secadora.",
+          "caption": "Interruptor de transferencia listado, enclavamiento listado — o nunca un cable de retroalimentación.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "uncertain": [],
+      "rich": 1
     },
     {
       "id": "C7-702.5(B)",
@@ -2010,8 +2670,8 @@
       "article": "702",
       "section": "702.7",
       "title": "Letreros — fuentes de reserva, y el letrero de la entrada de energía",
-      "plain_explanation": "Los letreros cierran el círculo que el equipo de transferencia empieza. En el equipo de acometida, un letrero identifica el tipo y la ubicación de cada fuente de reserva opcional en el sitio — para una casa, el letrero se sienta en el interruptor de desconexión de emergencia de 230.85 y apunta al interruptor de desconexión de la fuente de reserva instalada permanentemente o al medio para apagar el motor primario. Donde se usa una entrada de energía para un generador portátil, un letrero en la entrada declara qué tipo de sistema de generador puede conectarse ahí: solo un sistema derivado por separado (neutro unido), o solo un sistema no derivado por separado (neutro flotante).\n\nCAMBIO NEC 2023:\n• 702.7: Todo edificio excepto una vivienda de una o dos familias ahora necesita el letrero de la fuente de reserva en su acometida, no solo los sitios comerciales e industriales. Las casas todavía reciben el suyo en el interruptor de desconexión de emergencia exterior. Todo edificio excepto una vivienda de una o dos familias, apartamentos incluidos, ahora recibe el letrero en el equipo de acometida. En 2020, solo los comerciales e industriales lo recibían.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Dos letreros diferentes, dos trabajos diferentes: el letrero de la acometida dice dónde está la fuente; el letrero de la entrada dice qué tipo de arreglo de neutro acepta la entrada. Revisa la unión del neutro del generador antes de rotular el letrero de la entrada.",
+      "plain_explanation": "Los letreros cierran el círculo que el equipo de transferencia empieza.\n• En el equipo de acometida, un letrero identifica el tipo y la ubicación de cada fuente de reserva opcional en el sitio.\n• Para una casa, el letrero se sienta en el interruptor de desconexión de emergencia de 230.85 y apunta al interruptor de desconexión de la fuente de reserva instalada permanentemente, o al medio para apagar el motor primario.\n• Donde se usa una entrada de energía para un generador portátil, un letrero en la entrada declara qué tipo de sistema de generador puede conectarse ahí: solo un sistema derivado por separado (neutro unido), o solo un sistema no derivado por separado (neutro flotante).\nDos letreros, dos trabajos diferentes — y el letrero de la entrada no se puede rotular hasta que alguien haya revisado cómo está unido de verdad el neutro del generador.",
+      "on_the_job": "Casa en Marion Oaks con una caja de entrada para generador portátil en la pared del garaje. El letrero de la acometida va en el interruptor de desconexión de emergencia exterior de 230.85 y dice dónde está el interruptor de desconexión de la fuente de reserva. Antes de rotular el letrero de la entrada, se revisa el generador en el sitio: su neutro está unido en el bastidor, así que la entrada se rotula solo para un sistema derivado por separado. Si el generador hubiera sido un modelo de neutro flotante, la misma entrada llevaría el letrero opuesto — la misma caja, otras palabras, decidido por la máquina, no por la pared.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -2035,7 +2695,92 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/702-7",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "La energía de reserva hace peligroso un edificio para cualquiera que lo crea muerto. Un bombero o el próximo electricista corta la acometida y todavía tiene un generador sosteniendo el tablero. El letrero de la acometida le dice que existe una segunda fuente y dónde cortarla. El letrero de la entrada evita el error más silencioso: el arreglo de neutro equivocado en una conexión portátil, que pone corriente de neutro en las rutas de puesta a tierra y derrota la protección contra fallas a tierra.",
+      "exam_trap": "La respuesta equivocada común rotula el letrero de la entrada según el equipo de transferencia, o copia el letrero del último trabajo. El letrero de la entrada declara una propiedad del sistema del generador — solo derivado por separado, o solo no derivado por separado. Rotúlelo para el neutro equivocado y el letrero mismo se vuelve el peligro, porque el próximo generador que se conecte será confiado por lo que dice.",
+      "tables": [
+        {
+          "caption": "Dos letreros, dos trabajos",
+          "headers": [
+            "Letrero",
+            "Dónde",
+            "Qué dice"
+          ],
+          "rows": [
+            [
+              "Letrero de la acometida",
+              "Equipo de acometida; casas: en el interruptor 230.85",
+              "Tipo + ubicación de cada fuente de reserva"
+            ],
+            [
+              "Letrero de la entrada",
+              "En la entrada de energía",
+              "Solo derivado por separado, o solo no derivado por separado"
+            ]
+          ],
+          "note": "El letrero de la acometida es para encontrar la fuente. El letrero de la entrada es sobre el neutro."
+        }
+      ],
+      "inspection_fails": [
+        "Sin letrero en el equipo de acometida que identifique la fuente de reserva y su ubicación.",
+        "Letrero de reserva de la casa puesto en el generador en vez de en el interruptor de desconexión de emergencia de 230.85.",
+        "Entrada de energía sin letrero que declare qué sistema de generador puede conectarse.",
+        "Letrero de la entrada rotulado para neutro flotante mientras el neutro del generador está unido — el letrero miente."
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-702.7-two-signs.svg",
+          "alt": "Pared de acometida de una casa con un medidor, un interruptor de desconexión de emergencia de 230.85 con el letrero de la acometida, y una caja de entrada de generador con el letrero de la entrada, con un generador portátil afuera.",
+          "caption": "El letrero 1 encuentra la fuente; el letrero 2 declara el neutro que la entrada acepta.",
+          "w": 900,
+          "h": 1450
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "En una casa, ¿dónde va el letrero de la fuente de reserva de 702.7?",
+          "choices": [
+            "En el generador",
+            "En el interruptor de desconexión de emergencia de 230.85",
+            "Dentro de la puerta del tablero",
+            "En la caja del medidor"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Para una vivienda, el letrero va en el interruptor de desconexión de emergencia exterior y apunta al interruptor de la fuente o al medio para apagar el motor primario.",
+          "nec_ref": "702.7"
+        },
+        {
+          "question": "¿Qué declara el letrero en una entrada de energía para generador portátil?",
+          "choices": [
+            "La capacidad en kW del generador",
+            "Si puede conectarse un sistema derivado por separado o uno no derivado por separado",
+            "La marca del interruptor de transferencia",
+            "El tipo de combustible"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El letrero de la entrada declara el tipo de sistema de generador: solo derivado por separado (neutro unido), o solo no derivado por separado (neutro flotante).",
+          "nec_ref": "702.7"
+        },
+        {
+          "question": "¿Qué debe identificar el letrero de la acometida sobre cada fuente de reserva en el sitio?",
+          "choices": [
+            "Su edad y combustible",
+            "Su tipo y ubicación",
+            "Su costo",
+            "Su tiempo de operación"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El letrero en el equipo de acometida identifica el tipo y la ubicación de cada fuente de reserva opcional en el sitio.",
+          "nec_ref": "702.7"
+        }
+      ],
+      "code_refs": [
+        "702.7",
+        "230.85"
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 702.7: Todo edificio excepto una vivienda de una o dos familias ahora necesita el letrero de la fuente de reserva en su acometida, no solo los sitios comerciales e industriales. Las casas todavía reciben el suyo en el interruptor de desconexión de emergencia exterior. Todo edificio excepto una vivienda de una o dos familias, apartamentos incluidos, ahora recibe el letrero en el equipo de acometida. En 2020, solo los comerciales e industriales lo recibían.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C7-702.10",
@@ -2178,8 +2923,8 @@
       "article": "702",
       "section": "702.12",
       "title": "Grupos generadores de exterior — cuando no se requiere un interruptor de desconexión en el edificio",
-      "plain_explanation": "Para generadores instalados permanentemente y generadores portátiles de más de 15 kW usados en el exterior, si el generador tiene un interruptor de desconexión fácilmente accesible y a la vista del edificio que suministra, no se requiere un interruptor adicional en el edificio — siempre que ese interruptor del generador esté de acuerdo con 445.18, y donde los conductores de alimentación del generador terminan en un medio de desconexión en o sobre el edificio, ese interruptor cumple 225.36. Para un generador portátil de 15 kW o menos conectado a través de una entrada con brida u otra conexión de cable y enchufe, no se requiere medio de desconexión en el edificio para los conductores sin puesta a tierra que sirve o que pasan a través de él. Ambas reglas tratan de no duplicar un interruptor que ya hace el trabajo — ninguna quita el deber de equipo de transferencia en 702.5.",
-      "on_the_job": "Confirma que el interruptor propio del generador sea fácilmente accesible y esté a la vista antes de apoyarte en la primera regla, y confirma la clasificación y la entrada con brida antes de apoyarte en la segunda.",
+      "plain_explanation": "La 702.12 trata de no duplicar un interruptor que ya hace el trabajo.\n• Para generadores instalados permanentemente y generadores portátiles de más de 15 kW usados en el exterior, si el generador tiene un interruptor de desconexión fácilmente accesible y a la vista del edificio que suministra, no se requiere un interruptor adicional en el edificio — siempre que ese interruptor del generador esté de acuerdo con 445.18, y donde los conductores de alimentación del generador terminan en un medio de desconexión en o sobre el edificio, ese interruptor cumple 225.36.\n• Para un generador portátil de 15 kW o menos conectado a través de una entrada con brida u otra conexión de cable y enchufe, no se requiere medio de desconexión en el edificio para los conductores sin puesta a tierra que sirve o que pasan a través de él.\nA la vista tiene un significado del código: visible y a no más de 50 ft de distancia. Ninguna de las dos reglas quita el deber de equipo de transferencia en 702.5.",
+      "on_the_job": "Grupo electrógeno de reserva de casa completa en una plataforma fuera de una casa en Marion Oaks: el interruptor propio del generador es fácilmente accesible y está a 22 ft de la casa, a plena vista de ella, así que no va un segundo interruptor en el edificio. El equipo aun así verifica las dos condiciones antes de apoyarse en eso — interruptor según 445.18, y el interruptor del edificio donde terminan los conductores de alimentación cumple 225.36. En el trabajo siguiente, un portátil de 12 kW en una entrada con brida no necesita interruptor en el edificio para sus conductores sin puesta a tierra en absoluto.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -2191,7 +2936,105 @@
       "verified": true,
       "prev_id": "C7-702.11",
       "next_id": "C7-702.12(C)",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Un segundo interruptor que nadie necesita añade costo y una cosa más que mantener, pero el alivio solo funciona si el interruptor propio del generador está de verdad ahí — alcanzable con prisa y lo bastante cerca para verlo desde el edificio. Las condiciones son el caso de seguridad: accesible, a la vista, y construido según las reglas de generadores y alimentadores exteriores.",
+      "exam_trap": "La respuesta trampa es 'los generadores exteriores nunca necesitan un interruptor en el edificio'. El alivio es condicional: por encima de 15 kW necesita el interruptor del generador fácilmente accesible y a la vista — visible y a no más de 50 ft — y según 445.18. La segunda trampa es pensar que el alivio de la 702.12 elimina el equipo de transferencia; la 702.5 sigue aplicando por completo.",
+      "tables": [
+        {
+          "caption": "Cuándo el edificio necesita su propio interruptor (NEC 2020)",
+          "headers": [
+            "Situación",
+            "¿Interruptor en el edificio?",
+            "Sección"
+          ],
+          "rows": [
+            [
+              "Permanente o portátil de más de 15 kW en exterior; interruptor del generador accesible y a la vista",
+              "No se requiere",
+              "702.12"
+            ],
+            [
+              "Portátil de 15 kW o menos, entrada con brida o cable y enchufe",
+              "No se requiere para los conductores sin puesta a tierra",
+              "702.12"
+            ],
+            [
+              "Interruptor del generador no está a la vista del edificio",
+              "Se requiere — el alivio no aplica",
+              "702.12"
+            ]
+          ]
+        }
+      ],
+      "inspection_fails": [
+        "Sin interruptor en el edificio, y el interruptor propio del generador está a la vuelta de la esquina — no está a la vista.",
+        "Interruptor del generador encerrado dentro de un cercado con llave, reclamado como fácilmente accesible.",
+        "Interruptor del edificio donde terminan los conductores del generador sin clasificación de acuerdo con 225.36.",
+        "Generador portátil de más de 15 kW en conexión de cable sin medio de desconexión en el edificio y ninguno a la vista en el generador."
+      ],
+      "page_quiz": [
+        {
+          "question": "Un generador portátil de 15 kW o menos en una entrada con brida necesita interruptor en el edificio para sus conductores sin puesta a tierra:",
+          "choices": [
+            "Siempre",
+            "Nunca bajo la 702.12",
+            "Solo si pasa de 30 A",
+            "Solo en viviendas"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La 702.12 lo exime para los conductores sin puesta a tierra en esa conexión de cable y enchufe.",
+          "nec_ref": "702.12"
+        },
+        {
+          "question": "El interruptor del generador que gana el alivio de no poner otro interruptor debe estar de acuerdo con:",
+          "choices": [
+            "225.36",
+            "445.18",
+            "702.5",
+            "110.26"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La 445.18 cubre el medio de desconexión del generador; la 225.36 clasifica el interruptor del edificio donde los conductores terminan en uno.",
+          "nec_ref": "702.12"
+        },
+        {
+          "question": "'A la vista' del edificio significa:",
+          "choices": [
+            "En el mismo lote",
+            "Visible y a no más de 50 ft de distancia",
+            "Dentro de 100 ft",
+            "Visible desde la calle"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Artículo 100: visible y a no más de 50 ft de distancia. Las dos mitades deben cumplirse.",
+          "nec_ref": "702.12"
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "702.12",
+        "445.18",
+        "225.36",
+        "702.5"
+      ],
+      "rich_sources": [
+        {
+          "claim": "'A la vista' significa visible y a no más de 50 ft de distancia (definición del Artículo 100).",
+          "source": "Mike Holt, NEC Questions and Answers based on the 2020 NEC (Nov 2021)",
+          "url": "https://www.mikeholt.com/newsletters.php?action=display&letterID=2418&email="
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-702.12-within-sight.svg",
+          "alt": "Vista en planta de una casa y un generador exterior cuyo propio interruptor está a la vista del edificio, dimensionado visible y a no más de 50 ft, más un generador portátil de 15 kW en una entrada con brida.",
+          "caption": "Sin interruptor extra en el edificio — cuando el interruptor del generador es accesible y está a la vista.",
+          "w": 900,
+          "h": 1400
+        }
+      ],
+      "uncertain": [],
+      "rich": 1
     },
     {
       "id": "C7-702.12(C)",
@@ -2199,8 +3042,8 @@
       "article": "702",
       "section": "702.12(C)",
       "title": "Entradas de energía de 100 A y más — listadas, con un interruptor de desconexión enclavado",
-      "plain_explanation": "Donde un generador portátil se conecta a través de una entrada clasificada a 100 amperes o más, el código de 2020 añade dos requisitos al equipo de la entrada. El equipo tiene que estar listado para el uso pensado, y tiene que proveerse con un medio de desconexión enclavado, para que el arreglo de la entrada no pueda dejar el edificio conectado de la manera equivocada. Dos excepciones lo suavizan: el dispositivo de entrada mismo puede servir como el medio de desconexión donde está clasificado para ese deber, y las instalaciones industriales supervisadas con un espacio permanente de generador a la vista siguen sus propias condiciones. Por debajo de 100 amperes este párrafo no aplica — las reglas de 702.12(A) y (B) en la página anterior gobiernan en su lugar.",
-      "on_the_job": "En una conexión portátil grande, lee el listado de la entrada y encuentra el enclavamiento antes de conectar conductores. Si la entrada es de 100 A o más y no hay interruptor de desconexión enclavado, eso es un alto y llamada, no un arreglo de campo.",
+      "plain_explanation": "Donde un generador portátil se conecta a través de una entrada clasificada a 100 amperes o más, el código de 2020 añade dos requisitos al equipo de la entrada.\n• El equipo tiene que estar listado para el uso pensado.\n• Tiene que proveerse con un medio de desconexión enclavado, para que el arreglo de la entrada no pueda dejar el edificio conectado de la manera equivocada.\nDos excepciones lo suavizan: el dispositivo de entrada mismo puede servir como el medio de desconexión donde está clasificado para ese deber, y las instalaciones industriales supervisadas con un espacio permanente de generador a la vista siguen sus propias condiciones. Por debajo de 100 amperes este párrafo no aplica — las reglas de 702.12(A) y (B) en la página anterior gobiernan en su lugar.",
+      "on_the_job": "Un muelle comercial pequeño en Leesburg recibe energía de tormenta de un generador portátil a través de una entrada de 100 A. Antes de conectar cualquier conductor, el equipo lee el listado de la entrada y acciona el interruptor enclavado por sus posiciones: la entrada está viva solo en la posición de generador, y el edificio queda aislado de la compañía eléctrica en ese mismo movimiento. Si falta el listado o el enclavamiento a 100 A, el trabajo se detiene en el muelle — es un alto y llamada, no un arreglo de campo.",
       "sharma_note": null,
       "figure_idea": "Caja de entrada de muelle: entrada listada de 100 A, interruptor de desconexión enclavado a su lado, juego de cables del generador listo y tapado.",
       "related_ids": [
@@ -2212,7 +3055,103 @@
       "verified": true,
       "prev_id": "C7-702.12",
       "next_id": "C7-ART-705",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "A 100 amperes y más, una conexión portátil mueve energía seria a través de una conexión que alguien hace a mano, a menudo en la oscuridad después de una tormenta. El enclavamiento hace físicamente imposible la conexión equivocada en lugar de solo prohibirla, y el listado prueba que el equipo de la entrada fue probado para servicio de generador.",
+      "exam_trap": "La trampa es aplicar este párrafo a cada entrada. El deber de listado más enclavamiento empieza a los 100 A; por debajo, gobiernan 702.12(A) y (B). La otra trampa corre al revés: llamar interruptor a cualquier entrada. El dispositivo de entrada puede servir como medio de desconexión solo donde está clasificado para ese deber.",
+      "tables": [
+        {
+          "caption": "Qué cambia a los 100 A (NEC 2020)",
+          "headers": [
+            "Entrada",
+            "Regla",
+            "Sección"
+          ],
+          "rows": [
+            [
+              "Menos de 100 A",
+              "Gobiernan las reglas de 702.12(A) y (B)",
+              "702.12(A), (B)"
+            ],
+            [
+              "100 A y más",
+              "Equipo listado + interruptor enclavado",
+              "702.12(C)"
+            ],
+            [
+              "Entrada clasificada como interruptor",
+              "El dispositivo de entrada puede servir como el interruptor",
+              "702.12(C)"
+            ],
+            [
+              "Industrial supervisada",
+              "Espacio permanente de generador a la vista — condiciones propias",
+              "702.12(C)"
+            ]
+          ]
+        }
+      ],
+      "inspection_fails": [
+        "Entrada clasificada a 100 A o más sin medio de desconexión enclavado.",
+        "Equipo de entrada no listado en una conexión de generador portátil de 100 A.",
+        "Dispositivo de entrada usado como medio de desconexión sin clasificación para ese deber.",
+        "Arreglo de entrada que permite que el generador opere en paralelo con el servicio de la compañía eléctrica."
+      ],
+      "page_quiz": [
+        {
+          "question": "Los deberes de listado e interruptor enclavado de 702.12(C) empiezan a una clasificación de entrada de:",
+          "choices": [
+            "30 A",
+            "60 A",
+            "100 A",
+            "200 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "El párrafo se activa a 100 amperes o más; las entradas menores siguen 702.12(A) y (B).",
+          "nec_ref": "702.12(C)"
+        },
+        {
+          "question": "¿Cuándo puede el dispositivo de entrada mismo servir como medio de desconexión?",
+          "choices": [
+            "Siempre",
+            "Nunca",
+            "Donde está clasificado para ese deber",
+            "Solo en exteriores"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La excepción depende de la clasificación del dispositivo para servicio de desconexión, no de la conveniencia.",
+          "nec_ref": "702.12(C)"
+        },
+        {
+          "question": "Una entrada de generador de 60 A se gobierna por:",
+          "choices": [
+            "702.12(C)",
+            "702.12(A) y (B)",
+            "Solo el Artículo 445",
+            "Ninguna regla — las entradas no están reguladas"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Por debajo de 100 A este párrafo no aplica; gobiernan las reglas (A) y (B) de la página de 702.12.",
+          "nec_ref": "702.12(C)"
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "702.12(C)",
+        "702.12(A)",
+        "702.12(B)"
+      ],
+      "rich_sources": [],
+      "figures": [
+        {
+          "src": "fig/c7/C7-702.12C-interlocked-inlet.svg",
+          "alt": "Elevación de pared de una entrada de energía listada de 100 A junto a un interruptor enclavado, con el enlace de enclavamiento dibujado entre ellos, y un juego de cables de generador portátil listo y tapado abajo.",
+          "caption": "A 100 A y más: entrada listada, interruptor enclavado.",
+          "w": 900,
+          "h": 1320
+        }
+      ],
+      "uncertain": [],
+      "rich": 1
     },
     {
       "id": "C7-ART-705",
@@ -2602,8 +3541,8 @@
       "article": "705",
       "section": "705.12",
       "title": "Conexiones de fuente en el lado de carga — la forma de la regla",
-      "plain_explanation": "La salida de una fuente puede conectarse en el lado de carga del interruptor de desconexión de acometida de la otra fuente, en cualquier equipo de distribución de la propiedad. Donde ese equipo es alimentado por dos fuentes a la vez y alimenta circuitos ramales o alimentadores, la conexión tiene que satisfacer las sub-reglas que siguen: un interruptor dedicado o interruptor de desconexión con fusibles para cada fuente, los métodos de clasificación de amperes del busbar y los conductores, la marca del equipo que contiene más de una fuente, interruptores adecuados para retroalimentación, y fijación donde un interruptor retroalimentado pudiera soltarse. Donde se instala un sistema de control de energía bajo 705.13, el ajuste del controlador ocupa el lugar de la corriente de salida de la fuente en estos cálculos.",
-      "on_the_job": "Trabaja las sub-reglas en orden en el plano, no en el tablero con la tapa quitada. Para el acabado, la posición y el tamaño del interruptor ya los decidió esta sección.",
+      "plain_explanation": "La salida de una fuente puede conectarse en el lado de carga del interruptor de desconexión de acometida de la otra fuente, en cualquier equipo de distribución de la propiedad. Esa libertad es lo que las sub-reglas de 705.12 se pasan controlando. Donde el equipo es alimentado por dos fuentes a la vez y alimenta circuitos ramales o alimentadores, trabaje la lista en orden:\n• Un interruptor dedicado o interruptor de desconexión con fusibles para cada fuente, 705.12(A). Dos inversores nunca comparten un dispositivo, y una fuente nunca cae en un interruptor que también alimenta una carga.\n• Ampacidad de conductores y busbar, 705.12(B). Para un busbar, uno de los métodos de (B)(3) tiene que pasar: el método del 100 por ciento (el 125 por ciento de la salida de la fuente más la clasificación del dispositivo que protege el busbar no puede exceder la clasificación del busbar — el interruptor puede ir en cualquier punto), la regla del 120 por ciento (la misma suma puede llegar al 120 por ciento del busbar, con las fuentes en extremos opuestos), el método de la suma de interruptores, o el método de alimentación central.\n• La marca del equipo que contiene más de una fuente, para que la próxima persona sepa que puede estar vivo desde dos direcciones.\n• Interruptores adecuados para retroalimentación, y fijación donde un interruptor retroalimentado pudiera soltarse — un interruptor enchufable que alimenta el bus necesita sujeción.\nDonde se instala un sistema de control de energía bajo 705.13, el ajuste del controlador ocupa el lugar de la corriente de salida de la fuente en estos cálculos.",
+      "on_the_job": "Solar de techo en una casa de Marion Oaks, tablero Siemens de 200 A con principal de 200 A. La salida continua máxima del inversor es 32 A. Bajo la regla del 120 por ciento la suma puede llegar a 240 A — el 120 por ciento del bus de 200 A — así que el 125 por ciento de la salida del inversor, 40 A, cae exacto en el tope: 200 + 40 = 240. El interruptor solar va en el extremo opuesto del bus desde el principal, recibe su kit de sujeción, y el tablero recibe su etiqueta de advertencia de fuentes múltiples. Bajo el método del 100 por ciento este mismo inversor no cabría para nada — la posición es lo que compra el espacio.",
       "sharma_note": "",
       "figure_idea": "Diagrama original: un bus de tablero dibujado verticalmente, el principal arriba, las cargas en el medio, el interruptor de la fuente abajo, con notas para interruptor dedicado, marca y sujeción.",
       "related_ids": [
@@ -2619,7 +3558,109 @@
       "verified": true,
       "prev_id": "C7-705.11",
       "next_id": "C7-705.12(A)",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Un busbar alimentado por los dos extremos puede llevar la suma de dos fuentes en su medio mientras cada extremo se ve bien por su cuenta. Los métodos de 705.12 son contabilidad térmica: evitan que el bus se convierta en el fusible. Las reglas de marca y sujeción protegen a la próxima persona — un interruptor retroalimentado que se suelta, o un tablero del que nadie advirtió, es como un bus «muerto» se queda vivo.",
+      "exam_trap": "La trampa clásica pone el interruptor solar donde quepa y aun así reclama la regla del 120 por ciento. La posición es parte del método: el 120 por ciento compra su espacio extra solo con las fuentes en extremos opuestos del bus. Un interruptor que puede ir en cualquier punto significa el método del 100 por ciento — y ahí la suma no puede exceder la clasificación del busbar misma.",
+      "inspection_fails": [
+        "Dos inversores conectados en un solo interruptor compartido — sin dispositivo dedicado por fuente (705.12(A)).",
+        "Método del 120 por ciento reclamado con el interruptor de la fuente al lado del principal en vez del extremo opuesto.",
+        "Interruptor enchufable retroalimentado sin sujetador de fijación.",
+        "Tablero alimentado por la compañía y por solar sin marca de advertencia de fuentes múltiples.",
+        "Salida de la fuente sobre el tope del método del busbar — la suma excede el 120 por ciento del bus."
+      ],
+      "tables": [
+        {
+          "caption": "705.12 en orden",
+          "headers": [
+            "Paso",
+            "Regla",
+            "Sección"
+          ],
+          "rows": [
+            [
+              "1",
+              "Interruptor dedicado o desconexión con fusibles por fuente",
+              "705.12(A)"
+            ],
+            [
+              "2",
+              "Un método de busbar tiene que pasar: 100%, 120%, suma o central",
+              "705.12(B)(3)"
+            ],
+            [
+              "3",
+              "Marcar el equipo alimentado por más de una fuente",
+              "705.12"
+            ],
+            [
+              "4",
+              "Interruptores aptos para retroalimentación, fijados contra soltarse",
+              "705.12"
+            ],
+            [
+              "5",
+              "Con un PCS, use el ajuste del controlador como la salida",
+              "705.13"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-705.12-panel-bus.svg",
+          "alt": "Elevación de tablero con un principal de 200 A arriba, interruptores de carga en el medio, y un interruptor solar de 40 A en el extremo opuesto del bus de 200 A con sujeción y una etiqueta de fuentes múltiples, mostrando la matemática del 120 por ciento: 200 más 40 igual al tope de 240 A.",
+          "caption": "El tablero trabajado del 120 por ciento: principal en un extremo, fuente en el otro, suma en el tope.",
+          "w": 900,
+          "h": 1660
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un bus de 200 A está protegido por un principal de 200 A. Bajo la regla del 120 por ciento, la suma del 125 por ciento de la salida de la fuente más el principal puede llegar a:",
+          "choices": [
+            "200 A",
+            "220 A",
+            "240 A",
+            "250 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "El 120 por ciento del busbar de 200 A es 240 A. Ese espacio se compra con la posición: la fuente se conecta en el extremo opuesto del bus.",
+          "nec_ref": "705.12(B)(3)(2)"
+        },
+        {
+          "question": "Dos inversores se conectan al mismo tablero. 705.12(A) requiere:",
+          "choices": [
+            "Un interruptor bipolar compartido",
+            "Un interruptor dedicado o desconexión con fusibles para cada fuente",
+            "Una desconexión con fusibles para los dos juntos",
+            "Conexión en las terminales del principal"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Cada interconexión de fuente recibe su propio dispositivo de sobrecorriente y desconexión dedicado — las fuentes nunca comparten un dispositivo, ni lo comparten con una carga.",
+          "nec_ref": "705.12(A)"
+        },
+        {
+          "question": "Con un sistema de control de energía instalado bajo 705.13, los cálculos de 705.12 usan:",
+          "choices": [
+            "El máximo de placa del inversor",
+            "La clasificación de la acometida",
+            "El ajuste del controlador",
+            "La suma de todos los interruptores de carga"
+          ],
+          "answer_index": 2,
+          "explain_plain": "El ajuste del controlador del PCS ocupa el lugar de la corriente de salida de la fuente en todo cálculo de 705.12 que usa esa corriente.",
+          "nec_ref": "705.13"
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "705.12",
+        "705.12(A)",
+        "705.12(B)(3)",
+        "705.13"
+      ],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C7-705.12(A)",
@@ -3432,8 +4473,8 @@
       "article": "706",
       "section": "706",
       "title": "Sistemas de almacenamiento de energía — baterías bajo el código",
-      "plain_explanation": "El Artículo 706 cubre los sistemas de almacenamiento de energía de más de 1 kWh que pueden alimentar un sistema de cableado de propiedad, solos o junto a otras fuentes. Solo personas calificadas instalan y mantienen estos sistemas, cada sistema está listado, y su placa lleva las clasificaciones con las que el instalador y el inspector trabajan. Los dos peligros que dan forma al artículo son la energía almacenada que sigue viva cuando todo parece apagado, y la corriente de falla que un banco de baterías puede entregar sin ninguna compañía eléctrica detrás. Las viviendas reciben atención extra: el interruptor que un respondedor puede alcanzar, y un límite de voltaje cc dentro de la casa — 100 volts entre conductores o a tierra, con hasta 600 volts permitidos donde las partes vivas no son accesibles durante el mantenimiento de rutina (706.20(B)).",
-      "on_the_job": "Trata cada terminal de un ESS como viva hasta que lo hayas probado de otra manera con un medidor. 'El inversor está apagado' no es un resultado de prueba.",
+      "plain_explanation": "El Artículo 706 cubre los sistemas de almacenamiento de energía de más de 1 kWh que pueden alimentar un sistema de cableado de propiedad, solos o junto a otras fuentes.\n• Solo personas calificadas instalan y mantienen estos sistemas.\n• Cada sistema está listado, y su placa lleva las clasificaciones con las que el instalador y el inspector trabajan.\nLos dos peligros que dan forma al artículo son la energía almacenada que sigue viva cuando todo parece apagado, y la corriente de falla que un banco de baterías puede entregar sin ninguna compañía eléctrica detrás. Las viviendas reciben atención extra: el interruptor que un respondedor puede alcanzar, y un límite de voltaje cc dentro de la casa — 100 volts entre conductores o a tierra, con hasta 600 volts permitidos donde las partes vivas no son accesibles durante el mantenimiento de rutina (706.20(B)).",
+      "on_the_job": "Pared del garaje de una casa en Marion Oaks: un gabinete ESS listado, con placa de más de 1 kWh, se instala con su interruptor donde un respondedor que llega por la entrada puede alcanzarlo. Antes de conectar un solo conductor, el equipo mide los terminales de la batería — la pantalla del inversor dice apagado, y el medidor es la única opinión que cuenta. El voltaje cc del banco se mantiene bajo el límite de vivienda de 100 V con sus partes vivas tal como quedó instalado.",
       "sharma_note": "",
       "figure_idea": "Diagrama original: un gabinete de baterías, un inversor y un tablero, con un símbolo de interruptor en negrita entre las baterías y todo lo demás, y una nota de 'la energía almacenada sigue viva' en el lado de las baterías.",
       "related_ids": [
@@ -3447,7 +4488,107 @@
       "verified": true,
       "prev_id": "C7-705.40",
       "next_id": "C7-706.7",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Una batería no se queda sin energía cuando usted abre un interruptor — la energía sigue en el gabinete, y un banco en cortocircuito puede entregar una corriente de falla enorme sin ninguna compañía eléctrica detrás. Por eso el artículo insiste en sistemas listados, manos calificadas, una placa con la que todos trabajan, y un interruptor que un bombero puede encontrar en la oscuridad.",
+      "exam_trap": "La trampa es citar 600 V como el límite de la vivienda. Dentro de una casa el límite es 100 V cc entre conductores o a tierra; 600 V se permite solo donde las partes vivas no son accesibles durante el mantenimiento de rutina. La segunda trampa es confiar en el estado 'apagado' del inversor — la energía almacenada está viva hasta que un medidor demuestre lo contrario.",
+      "tables": [
+        {
+          "caption": "El Artículo 706 de un vistazo (NEC 2020)",
+          "headers": [
+            "Elemento",
+            "Regla",
+            "Sección"
+          ],
+          "rows": [
+            [
+              "Alcance",
+              "ESS de más de 1 kWh que alimenta el cableado de la propiedad",
+              "706"
+            ],
+            [
+              "Quién trabaja en él",
+              "Solo personas calificadas",
+              "706"
+            ],
+            [
+              "Equipo",
+              "Listado, con clasificaciones en la placa",
+              "706"
+            ],
+            [
+              "Límite cc en vivienda",
+              "100 V entre conductores o a tierra",
+              "706.20(B)"
+            ],
+            [
+              "Excepción en vivienda",
+              "Hasta 600 V donde las partes vivas no son accesibles en el mantenimiento de rutina",
+              "706.20(B)"
+            ]
+          ]
+        }
+      ],
+      "inspection_fails": [
+        "Sistema de almacenamiento de energía instalado sin listado — gabinete de baterías no listado conectado al tablero.",
+        "Sin interruptor del ESS fácilmente accesible que un respondedor pueda alcanzar en una vivienda.",
+        "ESS de vivienda funcionando a más de 100 V cc con partes vivas accesibles durante el mantenimiento de rutina.",
+        "Placa faltante o ilegible — las clasificaciones en que se basó la instalación no se pueden verificar."
+      ],
+      "page_quiz": [
+        {
+          "question": "El Artículo 706 aplica a los sistemas de almacenamiento de energía de más de:",
+          "choices": [
+            "1 kWh",
+            "10 kWh",
+            "100 V",
+            "600 V"
+          ],
+          "answer_index": 0,
+          "explain_plain": "El artículo empieza por encima de 1 kWh de almacenamiento que puede alimentar un sistema de cableado de propiedad.",
+          "nec_ref": "706"
+        },
+        {
+          "question": "¿Voltaje cc máximo entre conductores en una vivienda, con partes vivas accesibles durante el mantenimiento de rutina?",
+          "choices": [
+            "50 V",
+            "100 V",
+            "600 V",
+            "1000 V"
+          ],
+          "answer_index": 1,
+          "explain_plain": "100 V es el límite de la vivienda; 600 V necesita partes vivas que no sean accesibles durante el mantenimiento de rutina.",
+          "nec_ref": "706.20(B)"
+        },
+        {
+          "question": "¿Quién puede instalar y mantener un ESS bajo el Artículo 706?",
+          "choices": [
+            "Cualquier ayudante de oficial",
+            "El propietario",
+            "Solo personas calificadas",
+            "La compañía eléctrica"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La energía almacenada sigue viva y la corriente de falla de la batería es severa; el artículo limita el trabajo a personas calificadas.",
+          "nec_ref": "706"
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "706",
+        "706.20(B)"
+      ],
+      "rich_sources": [],
+      "figures": [
+        {
+          "src": "fig/c7/C7-ART-706-battery-line.svg",
+          "alt": "Diagrama unifilar de un sistema de almacenamiento de energía de vivienda: gabinete de baterías marcado como todavía vivo, un interruptor fácilmente accesible, un inversor y el tablero, con distintivos de límite cc de vivienda de 100 V y 600 V.",
+          "caption": "El interruptor separa la energía almacenada de la casa.",
+          "w": 900,
+          "h": 1440
+        }
+      ],
+      "uncertain": [],
+      "rich": 1
     },
     {
       "id": "C7-706.7",
@@ -3884,8 +5025,8 @@
       "article": "710",
       "section": "710",
       "title": "Sistemas autónomos — energía sin compañía eléctrica en qué apoyarse",
-      "plain_explanation": "El Artículo 710 cubre los sistemas que operan en modo isla, no conectados a una red de producción y distribución de energía: la casa fuera de la red, la bomba remota, la microrred que corre sola. Porque no hay compañía eléctrica detrás de la fuente, el artículo permite que la alimentación sea más pequeña que una carga calculada normal — pero nunca más pequeña que las realidades en sus propias páginas. Las fuentes se combinan libremente aquí (solar, almacenamiento, generador), y el mismo equipo a menudo también aparece bajo los Artículos 702, 705 y 706 cuando trabaja junto a una compañía eléctrica, así que el primer trabajo es decidir en qué modo está el sistema de verdad.",
-      "on_the_job": "Pregunta si la compañía eléctrica existe en este trabajo en absoluto. 'Sin compañía eléctrica, nunca' es 710; 'compañía eléctrica más respaldo' es 702 o 705, y las reglas de dimensionamiento difieren.",
+      "plain_explanation": "El Artículo 710 cubre los sistemas que operan en modo isla — no conectados a una red de producción y distribución de energía. La casa fuera de la red, la bomba remota, la microrred que corre sola: si no hay compañía eléctrica detrás de la fuente, este artículo es el dueño del trabajo.\n• La alimentación puede ser más pequeña que una carga calculada normal del Artículo 220 — pero nunca más pequeña que el piso que fija 710.15: las fuentes combinadas deben cargar al menos la pieza individual más grande de equipo de utilización.\n• Las fuentes se combinan libremente aquí: solar, almacenamiento y un generador pueden alimentar el mismo sistema autónomo.\n• Las fuentes todavía tienen que estar identificadas: 710.10 exige una placa o directorio permanente que nombre cada fuente y su interruptor de desconexión.\nEl mismo equipo a menudo también aparece bajo los Artículos 702, 705 y 706 cuando trabaja junto a una compañía eléctrica, así que el primer trabajo en cualquiera de estos sistemas es decidir en qué modo está de verdad.",
+      "on_the_job": "Caseta de bomba de un huerto en las afueras de Ocala, sin servicio de compañía eléctrica disponible ni en camino. Un arreglo solar, un inversor de baterías y un generador pequeño alimentan un solo tablero — no existe alimentación de la compañía, así que el trabajo es Artículo 710 desde el primer croquis, no 702. La lista de cargas empieza con la bomba de pozo, la carga individual más grande del lugar. La capacidad combinada de las fuentes tiene que superar esa carga de la bomba bajo 710.15, y la placa de 710.10 en el interruptor de desconexión nombra las tres fuentes para que la próxima persona pueda apagar el sistema.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -3896,7 +5037,102 @@
       "verified": true,
       "prev_id": "C7-ART-708",
       "next_id": "C7-710.10",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Un sistema alimentado por la compañía eléctrica toma prestadas la capacidad de la red y su corriente de falla. Un sistema en isla no tiene ninguna de las dos. Si las fuentes combinadas no pueden cargar la carga más grande que el edificio va a conectar, el sistema falla en un día ordinario, no en una emergencia — y sin compañía eléctrica en qué apoyarse, una casa fuera de la red a oscuras o una bomba de pozo muerta es toda la historia. La decisión del modo importa porque el artículo equivocado dimensiona el sistema con la regla equivocada.",
+      "exam_trap": "La respuesta trampa es el Artículo 702, escogida porque el sistema tiene un generador. Un generador solo no lo convierte en reserva opcional. El Artículo 702 necesita un servicio de compañía eléctrica para el cual el generador sirve de respaldo. Sin conexión alguna a la compañía, el sistema es autónomo y manda el Artículo 710 — y 710 dimensiona la alimentación con su propio piso, no con las reglas de reserva.",
+      "tables": [
+        {
+          "caption": "¿Qué artículo es el dueño del sistema?",
+          "headers": [
+            "Sistema",
+            "Artículo"
+          ],
+          "rows": [
+            [
+              "Sin conexión a la compañía — corre solo",
+              "710"
+            ],
+            [
+              "Servicio de compañía + respaldo para cargas escogidas",
+              "702"
+            ],
+            [
+              "Fuentes que corren en paralelo con la compañía",
+              "705"
+            ],
+            [
+              "Almacenamiento de baterías ligado a un servicio",
+              "706"
+            ],
+            [
+              "Microrred de cd en un bus común de cd",
+              "712"
+            ]
+          ],
+          "note": "El mismo equipo, otro artículo — el modo decide. Una microrred de cd puede estar junto a un sistema 710; vea la página del Artículo 712."
+        }
+      ],
+      "inspection_fails": [
+        "Sistema autónomo permitido y cableado como un trabajo de reserva 702, sin placa de 710.10 en ninguna parte.",
+        "Sin placa ni directorio que identifique las fuentes de energía en el medio de desconexión.",
+        "La placa lista el arreglo solar pero no el generador, así que una fuente queda viva después de apagar.",
+        "Fuentes listadas una por una en el permiso, sin una cifra de capacidad combinada que la autoridad pueda revisar."
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-ART-710-which-mode.svg",
+          "alt": "Flujo de decisión: sin servicio de compañía eléctrica el sistema está en modo isla bajo el Artículo 710, con solar, batería y generador combinados en un solo tablero autónomo; con servicio de compañía el mismo equipo cae bajo los Artículos 702, 705 o 706.",
+          "caption": "El modo escoge el artículo — decídalo antes de dimensionar cualquier cosa.",
+          "w": 900,
+          "h": 1270
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Una cabaña tiene solar, baterías y un generador, y ningún servicio de compañía eléctrica. ¿Qué artículo manda?",
+          "choices": [
+            "Artículo 702",
+            "Artículo 710",
+            "Artículo 705",
+            "Artículo 690"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Sin conexión a la compañía es modo isla. El Artículo 710 cubre los sistemas autónomos; 702 y 705 necesitan una compañía en el panorama.",
+          "nec_ref": "Article 710"
+        },
+        {
+          "question": "Bajo 710.15, la capacidad combinada de todas las fuentes autónomas debe igualar al menos ¿qué?",
+          "choices": [
+            "La carga calculada completa del Artículo 220",
+            "La carga de alumbrado general",
+            "La carga de la pieza individual más grande de equipo de utilización",
+            "La capacidad del servicio de compañía más cercano"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La alimentación puede ser más pequeña que la carga del Artículo 220, pero nunca menor que la pieza individual más grande de equipo de utilización.",
+          "nec_ref": "710.15"
+        },
+        {
+          "question": "¿Qué exige 710.10 en un sistema autónomo?",
+          "choices": [
+            "Una segunda alimentación de compañía",
+            "Una placa o directorio permanente que identifique cada fuente y su interruptor de desconexión",
+            "Un interruptor de transferencia",
+            "Un dispositivo de protección contra sobretensiones"
+          ],
+          "answer_index": 1,
+          "explain_plain": "710.10 exige que las fuentes estén identificadas con una placa o directorio permanente en el lugar del medio de desconexión.",
+          "nec_ref": "710.10"
+        }
+      ],
+      "code_refs": [
+        "Article 710",
+        "710.10",
+        "710.15"
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C7-710.10",
@@ -4017,8 +5253,8 @@
       "article": "710",
       "section": "710.15",
       "title": "Reglas generales — dimensionamiento de una alimentación autónoma",
-      "plain_explanation": "El cableado de la propiedad alimentado por un sistema autónomo todavía tiene que cumplir el código como lo hace una instalación alimentada por alimentador o acometida, con las modificaciones en esta página. La alimentación puede ser más pequeña que la carga calculada del Artículo 220, pero la capacidad combinada de todas las fuentes autónomas tiene que igualar al menos la carga de la pieza individual más grande de equipo de utilización conectado — la carga de alumbrado general no cuenta como esa carga individual. El código de 2020 también permite expresamente que estos sistemas suministren cargas trifásicas de tres hilos o cuatro hilos.",
-      "on_the_job": "Construye la lista de cargas alrededor del motor o aparato más grande primero, incluida su demanda de arranque en la conversación del mundo real con el fabricante del inversor. Un sistema que no puede arrancar su propia bomba de pozo está subdimensionado por la prueba propia de esta sección.",
+      "plain_explanation": "El cableado de la propiedad alimentado por un sistema autónomo todavía tiene que cumplir el código como lo hace una instalación alimentada por alimentador o acometida, con las modificaciones en esta página.\n• La alimentación puede ser más pequeña que la carga calculada del Artículo 220. El Artículo 710 no obliga a un sistema en isla a fingir que la compañía eléctrica está detrás de él.\n• El piso: la capacidad combinada de todas las fuentes autónomas tiene que igualar al menos la carga de la pieza individual más grande de equipo de utilización conectado.\n• La carga de alumbrado general no cuenta como esa carga individual — el piso lo fija el equipo real, no el cálculo de alumbrado.\n• El código de 2020 permite expresamente que estos sistemas suministren cargas trifásicas de tres hilos o cuatro hilos.",
+      "on_the_job": "Casa fuera de la red en el condado de Marion. La hoja de cálculo del Artículo 220 dice 12,000 VA, pero nadie tiene que construir una isla de 12,000 VA. La lista de cargas se construye alrededor de la bomba de pozo de 3,000 VA — la pieza individual más grande de equipo de utilización. Un inversor de 4,500 VA más un generador de 3,000 VA da 7,500 VA de capacidad combinada, cómodamente sobre la bomba y muy por debajo del número del 220. La carga de alumbrado, 1,500 VA, nunca entra en la prueba del piso. Lo que sí se revisa con el fabricante del inversor es el arranque de la bomba, porque cargar la carga en marcha y arrancarla son dos días diferentes.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -4029,7 +5265,97 @@
       "verified": true,
       "prev_id": "C7-710.10",
       "next_id": "C7-ART-712",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "La carga individual más grande es la única demanda que el sistema no puede esquivar: tarde o temprano esa bomba, compresor o estufa corre sola, y las fuentes la cargan o el inversor se dispara y el edificio queda a oscuras. Dimensionar con un promedio o un número diversificado solo funciona mientras la red absorbe los picos — una isla no tiene nada con qué absorber picos. El piso mantiene honesto a un sistema pequeño sin obligarlo a ser una compañía eléctrica.",
+      "exam_trap": "La respuesta equivocada trata la carga de alumbrado general como la carga individual más grande y dimensiona las fuentes con ella — 1,500 VA en la casa del diagrama. La Sección 710.15 saca el alumbrado de esa prueba por nombre. El piso es la pieza individual más grande de equipo de utilización, la bomba de pozo de 3,000 VA, y un sistema dimensionado para las luces falla la prueba de la propia sección la primera vez que la bomba arranca.",
+      "tables": [
+        {
+          "caption": "La prueba de dimensionamiento de 710.15",
+          "headers": [
+            "Número",
+            "Regla"
+          ],
+          "rows": [
+            [
+              "Carga calculada del Artículo 220",
+              "La alimentación puede ser menor — permitido"
+            ],
+            [
+              "Capacidad combinada de todas las fuentes",
+              "Debe ser ≥ la carga individual de utilización más grande"
+            ],
+            [
+              "Carga de alumbrado general",
+              "No cuenta como la carga individual"
+            ],
+            [
+              "Cargas trifásicas",
+              "Tres hilos o cuatro hilos permitidos (2020)"
+            ]
+          ],
+          "note": "Trabajado con los números del diagrama: 7,500 VA de fuentes contra un piso de 3,000 VA."
+        }
+      ],
+      "inspection_fails": [
+        "Capacidad combinada de las fuentes por debajo de la carga individual conectada más grande — el sistema no puede cargar su propia bomba de pozo.",
+        "Carga de alumbrado general usada como la 'carga individual más grande' en el cálculo de dimensionamiento.",
+        "Cableado autónomo de la propiedad sin cumplir el mismo código de una instalación alimentada por alimentador.",
+        "Fuentes listadas una por una en el permiso, sin una cifra de capacidad combinada que la autoridad pueda revisar."
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-710.15-sizing-floor.svg",
+          "alt": "Gráfico de barras de la prueba de 710.15: una carga del Artículo 220 de 12,000 VA por debajo de la cual la alimentación puede quedar, 7,500 VA de fuentes combinadas que superan el piso de la bomba de pozo de 3,000 VA, y una alimentación de solo alumbrado de 1,500 VA que no lo supera.",
+          "caption": "El piso es la carga individual más grande — no el cálculo del 220, no las luces.",
+          "w": 900,
+          "h": 1160
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Cuál es el piso de 710.15 para la capacidad combinada de las fuentes autónomas?",
+          "choices": [
+            "La carga calculada completa del Artículo 220",
+            "La carga de la pieza individual más grande de equipo de utilización",
+            "La carga de alumbrado general",
+            "El 125% de la capacidad del inversor"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La capacidad combinada de las fuentes debe igualar al menos la carga individual de utilización más grande conectada.",
+          "nec_ref": "710.15"
+        },
+        {
+          "question": "¿Cuenta la carga de alumbrado general como la carga individual más grande bajo 710.15?",
+          "choices": [
+            "Sí, siempre",
+            "Sí, si es el número más grande",
+            "No — la sección la excluye",
+            "Solo en viviendas"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La carga de alumbrado general no cuenta como la carga individual; el equipo de utilización real fija el piso.",
+          "nec_ref": "710.15"
+        },
+        {
+          "question": "¿Puede un sistema autónomo bajo el código de 2020 suministrar una carga trifásica de cuatro hilos?",
+          "choices": [
+            "No — solo monofásica",
+            "Sí — tres hilos y cuatro hilos están permitidos",
+            "Solo con una compañía presente",
+            "Solo sobre 10 kW"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El código de 2020 permite expresamente que los sistemas autónomos suministren cargas trifásicas de tres hilos o cuatro hilos.",
+          "nec_ref": "710.15"
+        }
+      ],
+      "code_refs": [
+        "710.15",
+        "Article 220"
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C7-ART-712",
@@ -4169,8 +5495,8 @@
       "article": "712",
       "section": "712.10",
       "title": "Directorio — fuentes de microrred cc",
-      "plain_explanation": "Esta es la regla de directorio del Artículo 712, la contraparte cc de 705.10 y 710.10: una placa o directorio permanente denotando todas las fuentes de energía eléctrica en o dentro de la propiedad, instalada en cada ubicación de equipo de acometida y en las ubicaciones de fuentes de producción de energía capaces de interconectarse, para que cualquiera que trabaje el edificio pueda encontrar cada fuente y su interruptor. La subsección (B) cubre el directorio para un edificio suministrado por una microrred cc. Otros artículos mandan el trabajo de microrred cc aquí por sus placas y directorios: sistemas de baterías bajo 480.7(G)(1), PV bajo 690.56(B), celdas de combustible bajo 692.4(B)(2) y sistemas eólicos bajo 694.54(B).",
-      "on_the_job": "Sharma no ha instalado una microrred cc; esta página es el letrero para el día en que una aparezca en un juego de planos. El hábito de campo se transfiere directo del trabajo de 705.10: directorio en la acometida, cada fuente nombrada, ubicaciones de interruptores mostradas.",
+      "plain_explanation": "La 712.10 es la regla de directorio del Artículo 712, la contraparte cc de la 705.10 y la 710.10:\n• Una placa o directorio permanente que denote todas las fuentes de energía eléctrica en o dentro de la propiedad.\n• Instalada en cada ubicación de equipo de acometida, y en las ubicaciones de las fuentes de producción de energía capaces de interconectarse.\n• La subsección (B) cubre el directorio para un edificio suministrado por una microrred cc.\nCualquiera que trabaje el edificio debe poder encontrar cada fuente y su interruptor a partir del directorio. Otros artículos mandan el trabajo de microrred cc aquí por sus placas y directorios: sistemas de baterías bajo la 480.7(G)(1), FV bajo la 690.56(B), celdas de combustible bajo la 692.4(B)(2) y sistemas eólicos bajo la 694.54(B).",
+      "on_the_job": "Sharma no ha instalado una microrred cc; esta página es el letrero para el día en que una aparezca en un juego de planos. Cuando eso pase — digamos un almacén pequeño en Orlando con FV en el techo y un rack de baterías alimentando un bus cc para iluminación LED — el trabajo de directorio se instala y se cotiza como el trabajo de la 705.10: un directorio permanente en el equipo de acometida que nombre cada fuente, directorios en cada fuente que pueda interconectarse, y la ubicación del interruptor de cada una indicada. El hábito de campo se transfiere directo: directorio en la acometida, cada fuente nombrada, ubicaciones de interruptores mostradas.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -4181,7 +5507,107 @@
       "verified": true,
       "prev_id": "C7-ART-712",
       "next_id": "C7-ART-720",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Una microrred cc esconde sus fuentes a plena vista: un rack de baterías en un clóset, un combinador FV en el techo, una celda de combustible junto a la losa. Abra la acometida y el bus cc todavía puede estar energizado desde tres direcciones a la vez. El directorio es como el próximo electricista — o un bombero a las 2 a.m. — se entera de que el edificio tiene más de una manera de estar energizado, y de dónde está cada interruptor.",
+      "inspection_fails": [
+        "Microrred cc energizada sin directorio en la ubicación del equipo de acometida.",
+        "El directorio nombra el arreglo FV pero deja el sistema de baterías fuera de la placa.",
+        "Directorio de papel pegado dentro de la puerta del tablero en vez de una placa o directorio permanente.",
+        "Directorio solo en la acometida: nada en las ubicaciones de las fuentes que pueden interconectarse."
+      ],
+      "exam_trap": "La respuesta trampa pone el directorio solo en el equipo de acometida. La 712.10 también quiere directorios en las ubicaciones de las fuentes de producción de energía capaces de interconectarse. El otro giro equivocado es citar la 705.10 o la 710.10: esas son las contrapartes ca. La regla de directorio de la microrred cc es la 712.10, y la subsección (B) es la parte escrita para un edificio suministrado por una microrred cc.",
+      "tables": [
+        {
+          "caption": "A quién mandan a la 712.10",
+          "headers": [
+            "Sistema",
+            "Lo manda",
+            "Para"
+          ],
+          "rows": [
+            [
+              "Sistemas de baterías",
+              "480.7(G)(1)",
+              "Placas y directorios de la microrred cc"
+            ],
+            [
+              "Sistemas FV",
+              "690.56(B)",
+              "Placas y directorios de la microrred cc"
+            ],
+            [
+              "Sistemas de celdas de combustible",
+              "692.4(B)(2)",
+              "Placas y directorios de la microrred cc"
+            ],
+            [
+              "Sistemas eólicos",
+              "694.54(B)",
+              "Placas y directorios de la microrred cc"
+            ]
+          ],
+          "note": "Las reglas de directorio ca son la 705.10 (interconectados) y la 710.10 (independientes)."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-712.10-directory-plaque.svg",
+          "alt": "Placa de directorio permanente en el equipo de acometida que enumera el arreglo FV, el sistema de baterías, la celda de combustible y el convertidor ca-cc de una microrred cc, cada uno con la ubicación de su interruptor.",
+          "caption": "El directorio de la 712.10: cada fuente nombrada, cada interruptor ubicado.",
+          "w": 900,
+          "h": 1400
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Dónde quiere la 712.10 que se instale el directorio?",
+          "choices": [
+            "Solo en la acometida principal",
+            "En cada ubicación de equipo de acometida y en las ubicaciones de las fuentes interconectables",
+            "Solo en el rack de baterías",
+            "En cualquier lugar de la propiedad"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El directorio va en cada ubicación de equipo de acometida y en las ubicaciones de las fuentes de producción de energía capaces de interconectarse.",
+          "nec_ref": "712.10"
+        },
+        {
+          "question": "¿Cuál subsección cubre el directorio para un edificio suministrado por una microrred cc?",
+          "choices": [
+            "712.10(A)",
+            "712.10(B)",
+            "705.10",
+            "710.10"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La 712.10(B) es la parte escrita para un edificio suministrado por una microrred cc.",
+          "nec_ref": "712.10(B)"
+        },
+        {
+          "question": "A un sistema FV conectado a una microrred cc lo manda a la 712.10 por su directorio la…",
+          "choices": [
+            "690.56(B)",
+            "705.10",
+            "480.7(G)(1)",
+            "694.54(B)"
+          ],
+          "answer_index": 0,
+          "explain_plain": "El FV manda el trabajo de directorio de microrred cc a la 712.10 desde la 690.56(B). Los sistemas de baterías vienen de la 480.7(G)(1), las celdas de combustible de la 692.4(B)(2) y el viento de la 694.54(B).",
+          "nec_ref": "690.56(B)"
+        }
+      ],
+      "code_refs": [
+        "712.10",
+        "712.10(B)",
+        "480.7(G)(1)",
+        "690.56(B)",
+        "692.4(B)(2)",
+        "694.54(B)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C7-ART-720",
@@ -4363,8 +5789,8 @@
       "article": "725",
       "section": "725",
       "title": "Circuitos Clase 1, Clase 2 y Clase 3 — controles y señalización",
-      "plain_explanation": "El Artículo 725 clasifica los circuitos de control remoto, señalización y energía limitada en tres clases, y la clase viene de la fuente de energía, no del cable en tu mano. Los circuitos Clase 1 pueden llevar energía seria y se cablean mucho como circuitos de energía. Los circuitos Clase 2 se limitan tan estrictamente que se tratan como seguros tanto de choque como de inicio de fuego — el termostato, el timbre, la mayoría de los controles. Los circuitos Clase 3 permiten más voltaje y energía que la Clase 2, se quedan limitados contra el fuego, y necesitan protección añadida contra el choque. Los métodos de cableado relajados en este artículo se ganan con la fuente de energía listada; cambia la fuente y puede que hayas cambiado la clase.\n\nCAMBIO NEC 2023:\n• 724/726: El Artículo 725 se dividió: los circuitos de energía limitada Clase 1 se movieron al nuevo Artículo 724; el Artículo 725 conserva la Clase 2 y la Clase 3; el nuevo Artículo 726 cubre los sistemas de energía gestionada por fallas Clase 4; las reglas de cables se movieron al nuevo Artículo 722.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "En cada trabajo de controles, encuentra la fuente de energía y lee su etiqueta antes de escoger un cable. Sin fuente Clase 2 listada, no hay métodos de cableado Clase 2.",
+      "plain_explanation": "El Artículo 725 clasifica los circuitos de control remoto, señalización y energía limitada en tres clases, y la clase viene de la fuente de energía, no del cable en su mano.\n• Los circuitos Clase 1 no están limitados en energía. Pueden llevar energía seria — los circuitos de control remoto y señalización pueden llegar hasta 600 V — y se cablean mucho como circuitos de energía.\n• Los circuitos Clase 2 se limitan tan estrictamente en la fuente que se tratan como seguros tanto de choque como de inicio de fuego: el termostato, el timbre, la mayoría de los controles.\n• Los circuitos Clase 3 permiten más voltaje y energía que la Clase 2. Se quedan limitados contra el inicio de fuego, pero la energía todavía puede presentar un peligro de choque, así que la protección añadida contra el choque es parte del trato.\nLos métodos de cableado relajados en este artículo se ganan con la fuente de energía listada. Cambie la fuente y puede que haya cambiado la clase, y cada regla de cableado que venía con ella.",
+      "on_the_job": "En cada trabajo de controles, encuentre la fuente de energía y lea su etiqueta antes de escoger un cable. Sin fuente Clase 2 listada, no hay métodos de cableado Clase 2. En una casa de serie en Marion Oaks, el transformador de control del manejador de aire alimenta el termostato y el interruptor de flotador de condensado: un circuito Clase 2, tendido con cable Clase 2 y sin canalización, exactamente lo que el artículo permite. La interconexión de alarmas de humo de 120 V en el mismo plano no es un circuito del 725 en absoluto: es cableado ordinario de circuito ramal. Ordenar esos dos en la etapa de rough-in, por la fuente, es todo el juego.",
       "sharma_note": "",
       "figure_idea": "Diagrama original: tres cajas de fuente rotuladas Clase 1, Clase 2 y Clase 3 alimentando el mismo bosquejo de termostato, con la caja Clase 2 resaltada y las palabras 'la fuente hace la clase' debajo.",
       "related_ids": [
@@ -4387,7 +5813,102 @@
           "url": "https://www.iccsafe.org/wp-content/uploads/Session-10-and-40-2023-NEC-Changes.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 724/726: El Artículo 725 se dividió: los circuitos de energía limitada Clase 1 se movieron al nuevo Artículo 724; el Artículo 725 conserva la Clase 2 y la Clase 3; el nuevo Artículo 726 cubre los sistemas de energía gestionada por fallas Clase 4; las reglas de cables se movieron al nuevo Artículo 722.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Limitar la energía es una promesa: una falla en un circuito Clase 2 no puede entregar energía suficiente para iniciar un fuego ni para dar un choque a nadie, así que el código puede relajar los métodos de cableado a su alrededor. Rompa la promesa en la fuente — una alimentación más grande instalada después, un transformador no listado — y el cableado relajado no protege a nadie. El cable fino sin canalización solo es seguro mientras la energía detrás de él se mantenga limitada, y por eso la decisión de clase en la fuente sostiene todo el artículo.",
+      "inspection_fails": [
+        "Métodos de cableado Clase 2 usados en un circuito alimentado por una fuente que no es una fuente Clase 2 listada.",
+        "Cable Clase 2 tendido en la misma canalización que los conductores de energía que controla (725.136).",
+        "Circuito Clase 3 instalado con métodos de Clase 2 y sin la protección añadida contra choques que su clase requiere.",
+        "Fuente de energía cambiada por una unidad más grande en la terminación; la clase del circuito cambió y los métodos de cableado nunca se volvieron a revisar."
+      ],
+      "exam_trap": "La trampa es clasificar por el cable: «cable CL2, así que es un circuito Clase 2». La clase viene de la fuente de energía. El mismo cable alimentado desde una fuente no limitada no es un circuito Clase 2, los métodos de cableado Clase 2 no aplican, y cada respuesta construida sobre la marca de la cubierta del cable cae con ella.",
+      "tables": [
+        {
+          "caption": "Las tres clases de un vistazo (NEC 2020)",
+          "headers": [
+            "Clase",
+            "Energía",
+            "Cómo se trata",
+            "Trabajo típico"
+          ],
+          "rows": [
+            [
+              "Clase 1",
+              "Sin límite de energía; hasta 600 V",
+              "Se cablea mucho como circuito de energía",
+              "Control remoto y señalización"
+            ],
+            [
+              "Clase 2",
+              "Limitada en la fuente listada",
+              "Segura de choque y de inicio de fuego",
+              "Termostato, timbre, la mayoría de los controles"
+            ],
+            [
+              "Clase 3",
+              "Limitada contra el fuego; más que la Clase 2",
+              "Protección añadida contra el choque",
+              "Control y señalización de mayor energía"
+            ]
+          ],
+          "note": "La clase viene de la fuente de energía, nunca del cable solo (725.2)."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-ART-725-source-makes-class.svg",
+          "alt": "Tres cajas de fuente de energía rotuladas Clase 1, Clase 2 y Clase 3, todas alimentando el mismo termostato, con la fuente Clase 2 resaltada en dorado para mostrar que la fuente hace la clase.",
+          "caption": "El mismo termostato, tres clases posibles: la fuente decide.",
+          "w": 900,
+          "h": 1400
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Qué decide la clase de un circuito de control remoto?",
+          "choices": [
+            "La marca en la cubierta del cable",
+            "La fuente de energía que lo alimenta",
+            "El voltaje en la carga",
+            "La canalización por la que corre"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La clase es una propiedad de la fuente y del circuito juntos, nunca del cable solo.",
+          "nec_ref": "725.2"
+        },
+        {
+          "question": "La Clase 3 se diferencia de la Clase 2 porque la Clase 3…",
+          "choices": [
+            "No tiene límite de voltaje ni de energía",
+            "Permite más voltaje y energía y necesita protección añadida contra choques",
+            "No necesita una fuente listada",
+            "Se cablea exactamente como la Clase 1"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La Clase 3 se queda limitada contra el inicio de fuego, pero su voltaje y su energía todavía pueden presentar un peligro de choque, así que la protección añadida es parte del trato.",
+          "nec_ref": "725.2"
+        },
+        {
+          "question": "Los circuitos Clase 1 de control remoto y señalización pueden operar hasta…",
+          "choices": [
+            "30 V",
+            "50 V",
+            "150 V",
+            "600 V"
+          ],
+          "answer_index": 3,
+          "explain_plain": "Los circuitos Clase 1 no están limitados en energía de esa manera, y los circuitos de control remoto y señalización de esta familia pueden llegar hasta 600 V (725.2).",
+          "nec_ref": "725.2"
+        }
+      ],
+      "code_refs": [
+        "725.2",
+        "725.136"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C7-725.2",
@@ -4621,8 +6142,8 @@
       "article": "725",
       "section": "725.130",
       "title": "Métodos de cableado en el lado de carga de la fuente",
-      "plain_explanation": "En el lado de carga de una fuente Clase 2 o Clase 3, los métodos de cableado se relajan: los tipos de cable listados para estos circuitos — las familias CL2 y CL3, el cable de bandeja de energía limitada y sus sustituciones permitidas — pueden instalarse sin las canalizaciones y cajas que el cableado de energía ordinaria necesita, siguiendo las reglas de aplicación para el cable escogido. El lado de alimentación de la fuente se cablea bajo los capítulos normales; solo el lado de energía limitada se gana los métodos relajados. La elección del cable todavía sigue el espacio del edificio por el que corre, como las elecciones de plenum y riser en otras partes del libro.",
-      "on_the_job": "Mantén la línea recta en el campo: métodos de cableado completos hasta la fuente, métodos de cable Clase 2 o 3 después de ella. Borrar esa línea en la fuente es el error más común del despiece de controles.",
+      "plain_explanation": "En el lado de carga de una fuente Clase 2 o Clase 3, los métodos de cableado se relajan. Los tipos de cable listados para estos circuitos — las familias CL2 y CL3, el cable de bandeja de energía limitada y sus sustituciones permitidas — pueden instalarse sin las canalizaciones y cajas que el cableado de energía ordinaria necesita, siguiendo las reglas de aplicación para el cable escogido.\n• La línea está en la fuente: el lado de alimentación se cablea bajo los capítulos normales; solo el lado de energía limitada se gana los métodos relajados.\n• La relajación la gana la fuente — una fuente Clase 2 o Clase 3 listada bajo 725.121 es lo que hace que el circuito sea Clase 2 o Clase 3 en primer lugar.\n• La elección del cable todavía sigue el espacio del edificio por el que corre, como las elecciones de plenum y riser en otras partes del libro: empareje el nivel del cable con el espacio, según 725.154.",
+      "on_the_job": "Despiece de controles en un trabajo comercial pequeño en Winter Haven. La alimentación de 120 V al transformador Clase 2 listado se corre en EMT con cajas, como cualquier otro cableado de energía — ese lado es trabajo del Capítulo 3. Desde el lado de carga del transformador, los recorridos del termostato y las compuertas salen en cable CL2, grapado y soportado sin canalización, exactamente lo que 725.130 permite. Donde un recorrido cruza el plafón de retorno de aire, el cable cambia a CL2P para ese espacio. El atajo del aprendiz — métodos CL2 hasta el tablero — es la corrección que esta página existe para evitar.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -4632,7 +6153,119 @@
       "verified": true,
       "prev_id": "C7-725.121",
       "next_id": "C7-725.136",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Los métodos relajados son seguros por una razón: la fuente listada no puede entregar energía suficiente para iniciar un incendio ni para dar una descarga peligrosa, así que el cable no necesita la protección de una canalización. Ese trato termina en los terminales de entrada de la fuente. Cablee el lado de alimentación con métodos del lado de carga y la energía completa del circuito derivado va montada en un cable sin protección. Las reglas de niveles cargan la segunda mitad del trato — el cable equivocado en un plenum o en un pozo vertical reparte humo y fuego entre pisos.",
+      "exam_trap": "La respuesta trampa extiende los métodos relajados a todo el recorrido: 'Es un circuito Clase 2, así que los métodos Clase 2 aplican desde el tablero'. No aplican. La relajación empieza en el lado de carga de la fuente listada. Todo lo que está antes de la fuente — la alimentación de 120 V que la energiza — se cablea bajo los capítulos normales, canalizaciones y cajas incluidas.",
+      "tables": [
+        {
+          "caption": "Niveles de cable (aplicaciones de 725.154)",
+          "headers": [
+            "Espacio",
+            "Clase 2",
+            "Clase 3"
+          ],
+          "rows": [
+            [
+              "Plenum / aire ambiental",
+              "CL2P",
+              "CL3P"
+            ],
+            [
+              "Pozo vertical (riser)",
+              "CL2R",
+              "CL3R"
+            ],
+            [
+              "Uso general",
+              "CL2",
+              "CL3"
+            ],
+            [
+              "Bandeja de cables",
+              "PLTC",
+              "PLTC"
+            ],
+            [
+              "Uso limitado",
+              "CL2X",
+              "CL3X"
+            ]
+          ],
+          "note": "La sustitución corre solo hacia abajo: un cable de nivel superior puede reemplazar a uno inferior, nunca al revés. PLTC es cable de bandeja de energía limitada."
+        }
+      ],
+      "inspection_fails": [
+        "Métodos de cable Clase 2 usados en el lado de alimentación de la fuente — cableado relajado cargando energía completa.",
+        "CL2 corrido a través de un plafón plenum donde se exige CL2P.",
+        "Cable de nivel inferior sustituido hacia arriba: CL2X instalado donde CL2 es el mínimo.",
+        "Cable no listado en un recorrido Clase 2 — la clase viene de una fuente listada y cable listado."
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-725.130-line-at-source.svg",
+          "alt": "Una alimentación de tablero en canalización hasta una fuente Clase 2 listada, cable CL2 sin canalización en el lado de carga, y la escalera de niveles de cable desde plenum CL2P/CL3P hasta uso limitado CL2X/CL3X.",
+          "caption": "Métodos completos hasta la fuente; métodos de cable después — y los niveles sustituyen solo hacia abajo.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Dónde empiezan los métodos de cableado relajados de Clase 2 y Clase 3?",
+          "choices": [
+            "En el tablero",
+            "En el lado de carga de la fuente Clase 2 o Clase 3 listada",
+            "En la primera caja de conexiones",
+            "Donde sea que el cable esté marcado CL2"
+          ],
+          "answer_index": 1,
+          "explain_plain": "725.130 cubre los métodos de cableado en el lado de carga de la fuente. El lado de alimentación se cablea bajo los capítulos normales.",
+          "nec_ref": "725.130"
+        },
+        {
+          "question": "Un recorrido Clase 2 cruza un plafón plenum. ¿Qué cable?",
+          "choices": [
+            "CL2X",
+            "CL2R",
+            "CL2P",
+            "Cualquier cable de la familia CL2"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Los espacios plenum toman el nivel plenum: CL2P para un circuito Clase 2. Los cables de riser y de uso limitado no sustituyen hacia arriba.",
+          "nec_ref": "725.154"
+        },
+        {
+          "question": "¿Puede CL2R sustituir a CL2P en un plenum?",
+          "choices": [
+            "Sí — misma familia",
+            "No — la sustitución corre de un nivel superior a uno inferior solamente",
+            "Sí, en viviendas",
+            "Solo si va en canalización"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La sustitución corre hacia abajo: el cable plenum puede servir en niveles inferiores, pero un cable de riser no puede subir a un plenum.",
+          "nec_ref": "725.154"
+        }
+      ],
+      "code_refs": [
+        "725.130",
+        "725.121",
+        "725.154"
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich_sources": [
+        {
+          "claim": "Class 2 and Class 3 cable tiers run plenum (CL2P/CL3P), riser (CL2R/CL3R), general purpose (CL2/CL3 and PLTC), limited use (CL2X/CL3X), highest to lowest",
+          "source": "Windy City Wire — NEC Cable Substitution / Fire-Resistance Test Chart",
+          "url": "https://cdn.windycitywire.com/resources/general/WCW_NEC_Cable_Sub_Fire-Resistant_Test_Chart_2023.pdf"
+        },
+        {
+          "claim": "A higher-rated cable may substitute for a lower-rated one (plenum over riser over general over limited use), never the reverse",
+          "source": "Resideo / Genesis — NEC Cable Substitution Hierarchy, Ultimate Product Guide Book 2 (2020)",
+          "url": "https://content.yudu.com/web/1ocq2/0A1omxk/UltProdGuidBook22020/html/389.html"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C7-725.136",
@@ -4640,8 +6273,8 @@
       "article": "725",
       "section": "725.136",
       "title": "Separación de conductores de energía — la regla general",
-      "plain_explanation": "Los cables y conductores Clase 2 y Clase 3 no se colocan en el mismo cable, canalización, cerramiento, caja o accesorio similar que los conductores de luz eléctrica, energía, Clase 1, alarma de incendios no limitada en energía o banda ancha de potencia media, a menos que aplique uno de los permisos en esta sección. Los permisos permanentes son la separación por una barrera, las reglas apretadas para conductores que entran en el mismo equipo, y la regla de espaciamiento para otras aplicaciones en la próxima página. Esta sección, y la cifra de 2 pulgadas dentro de ella, se volvieron a revisar contra fuentes de 2020 para esta pasada; la cifra es real, pero pertenece a un párrafo de esta sección, no a cada tramo de bajo voltaje.",
-      "on_the_job": "Regla de campo por defecto: dale a los tramos Clase 2 y 3 su propio camino. Luego usa los permisos a propósito, por nombre, cuando una caja compartida o una ruta apretada es inevitable.",
+      "plain_explanation": "La 725.136 es la regla de separación para el cableado de control de energía limitada. Los cables y conductores Clase 2 y Clase 3 no pueden colocarse en el mismo cable, canalización, cerramiento, caja o accesorio similar que ninguno de los siguientes:\n• Conductores de luz eléctrica y energía\n• Conductores Clase 1\n• Conductores de alarma de incendios no limitada en energía\n• Conductores de banda ancha alimentados por la red, de potencia media\na menos que aplique uno de los permisos de esta sección. Los permisos permanentes son:\n• La separación mediante una barrera dentro del cerramiento, la canalización o el accesorio compartido\n• Las reglas estrictas para los conductores que entran en el mismo equipo, donde las dos familias tienen que encontrarse\n• La regla de espaciamiento para otras aplicaciones, cubierta en la página siguiente en la 725.136(I)\nLa cifra de 2 pulgadas dentro de esta sección es real, pero pertenece a ese único párrafo: la regla de espaciamiento para tramos abiertos. No es una distancia general para cada tramo de bajo voltaje, y nunca autoriza compartir una caja.",
+      "on_the_job": "En una casa de serie en Marion Oaks, los cables de control del manejador de aire son Clase 2: el tramo del termostato y los cables del interruptor de flotador de condensado. El látigo de energía de 240 V llega al interruptor del manejador y a su propio compartimento; los cables Clase 2 entran por su propia abertura y se quedan fuera del lado de energía, encontrándose con el equipo solo donde las reglas de equipo lo permiten. En el ático, el tramo Clase 2 y el cable de energía del manejador viajan en la misma dirección por unos 20 pies. Mantenga los dos tramos separados por lo menos 2 pulgadas en ese trecho, o ponga un lado en una canalización: la regla de las 2 pulgadas cubre tramos abiertos como este. No se traslada a la caja de conexiones al final del tramo; en la caja mandan los permisos de barrera y de equipo.",
       "sharma_note": "",
       "figure_idea": "Diagrama original: una caja de dispositivo dividida por una barrera, conductores de energía en un lado y un cable de termostato en el otro, con un segundo bosquejo mostrando las dos familias de cables en canalizaciones separadas.",
       "related_ids": [
@@ -4655,7 +6288,104 @@
       "verified": true,
       "prev_id": "C7-725.130",
       "next_id": "C7-725.136(I)",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "El cableado Clase 2 y Clase 3 se gana sus métodos relajados — cable ligero, sin canalización, tramos abiertos — porque la fuente limita la energía. Meta ese cable en la misma caja que un conductor de 120 V y una falla, una cubierta cortada o un empalme descuidado puede poner voltaje de línea en un cable que recorre todo el edificio, que se maneja como cable de timbre y que llega a equipos nunca construidos para eso. La separación mantiene el sistema de energía limitada limitado en los hechos, no solo en la fuente.",
+      "inspection_fails": [
+        "Cable de termostato Clase 2 conectado en la misma caja de dispositivo que el cable de interruptor de 120 V, sin barrera entre ellos.",
+        "Conductores Clase 2 y de energía compartiendo una misma canalización en el tramo de control del manejador de aire.",
+        "Cable Clase 2 pegado al cable de energía en todo el tramo del ático: sin separación de 2 pulgadas, sin canalización, sin barrera (725.136(I)).",
+        "Conductores Clase 3 mezclados con conductores de alarma de incendios no limitada en energía en el mismo cerramiento."
+      ],
+      "exam_trap": "La respuesta trampa es «mantenga 2 pulgadas y puede compartir lo que sea». La cifra de 2 pulgadas pertenece a la 725.136(I), la regla de espaciamiento para otras aplicaciones fuera de los cerramientos. Dentro de una caja o cerramiento, 2 pulgadas de aire no son un permiso: la respuesta allí es una barrera, o las reglas estrictas para conductores que entran en el mismo equipo.",
+      "tables": [
+        {
+          "caption": "Dónde se encuentran las dos familias (NEC 2020)",
+          "headers": [
+            "Situación",
+            "Regla",
+            "Sección"
+          ],
+          "rows": [
+            [
+              "Misma caja o cerramiento",
+              "Separados por una barrera, o las reglas de entrada al equipo",
+              "725.136"
+            ],
+            [
+              "Misma canalización",
+              "No se permite, a menos que aplique un permiso de esta sección",
+              "725.136"
+            ],
+            [
+              "Tramo abierto fuera de cerramientos",
+              "Por lo menos 2 pulgadas de separación, o un lado en canalización o cable listado, o una barrera permanente",
+              "725.136(I)"
+            ],
+            [
+              "Circuitos de comunicaciones, regla paralela",
+              "También 2 pulgadas, con sus propias excepciones de canalización y cable",
+              "800.133(A)(2)"
+            ]
+          ],
+          "note": "Dos pulgadas es un espaciamiento para tramos abiertos. No es una licencia para compartir una caja."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-725.136-barrier-box.svg",
+          "alt": "Caja de dispositivo dividida por una barrera, con conductores de energía de 120 V en un lado y un cable de termostato Clase 2 en el otro, sobre un tramo abierto que muestra las dos familias de cables separadas por 2 pulgadas.",
+          "caption": "Barrera en la caja; 2 pulgadas en el tramo abierto.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un cable Clase 2 tiene que entrar en la misma caja de dispositivo que un cable de interruptor de 120 V. ¿Qué hace legal la instalación?",
+          "choices": [
+            "Una barrera que separa los dos dentro de la caja",
+            "2 pulgadas de aire dentro de la caja",
+            "Encintar la cubierta del cable Clase 2",
+            "Nada: nunca se permite"
+          ],
+          "answer_index": 0,
+          "explain_plain": "Dentro de un cerramiento el permiso es la separación mediante una barrera, o las reglas de entrada al equipo. La cifra de 2 pulgadas pertenece a los tramos abiertos bajo la 725.136(I).",
+          "nec_ref": "725.136"
+        },
+        {
+          "question": "En un tramo abierto fuera de todo cerramiento, los conductores Clase 2 corren paralelos a conductores de energía, sin que ningún lado esté en canalización ni en cable listado. ¿Separación mínima?",
+          "choices": [
+            "½ pulgada",
+            "1 pulgada",
+            "2 pulgadas",
+            "6 pulgadas"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La 725.136(I) fija 2 pulgadas para otras aplicaciones, a menos que una canalización, un cable listado o una barrera permanente haga la separación.",
+          "nec_ref": "725.136(I)"
+        },
+        {
+          "question": "¿Con cuál de estos pueden los conductores Clase 2 compartir una canalización, sin ningún permiso?",
+          "choices": [
+            "Conductores Clase 1",
+            "Conductores de alarma de incendios no limitada en energía",
+            "Conductores de luz eléctrica y energía",
+            "Con ninguno de ellos"
+          ],
+          "answer_index": 3,
+          "explain_plain": "La 725.136 prohíbe que la Clase 2 y la Clase 3 compartan con energía, Clase 1, alarma de incendios no limitada en energía y banda ancha de potencia media, a menos que aplique un permiso.",
+          "nec_ref": "725.136"
+        }
+      ],
+      "code_refs": [
+        "725.136",
+        "725.136(I)",
+        "800.133(A)(2)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C7-725.136(I)",
@@ -4663,8 +6393,8 @@
       "article": "725",
       "section": "725.136(I)",
       "title": "Otras aplicaciones — la regla de espaciamiento de 2 pulgadas",
-      "plain_explanation": "Para aplicaciones fuera de cerramientos y equipo, los conductores Clase 2 y Clase 3 se separan por lo menos 2 pulgadas de los conductores de circuitos de luz eléctrica, energía, Clase 1, alarma de incendios no limitada en energía y banda ancha de potencia media — a menos que un lado o el otro esté en una canalización o en un cable con cubierta metálica, blindado metálico, con cubierta no metálica o Tipo UF, o los dos estén permanentemente separados por una barrera o tubería aislante adecuada. La regla paralela para circuitos de comunicaciones vive en el Capítulo 8 en 800.133(A)(2), y también es 2 pulgadas, con sus propias excepciones de canalización y cable. Dos pulgadas es un espaciamiento para tramos abiertos, no una licencia para compartir una caja, y no un número para aplicar donde una regla de barrera ya gobierna.",
-      "on_the_job": "Lleva las excepciones con el número: cable NM en el lado de energía, o una canalización en cualquier lado, satisface la condición sin el espaciamiento al aire libre. Cuando ningún lado tiene esa protección, mantén las 2 pulgadas a lo largo del tramo.",
+      "plain_explanation": "Para aplicaciones fuera de cerramientos y equipo, los conductores Clase 2 y Clase 3 se separan por lo menos 2 pulgadas de los conductores de circuitos de luz eléctrica, energía, Clase 1, alarma de incendios no limitada en energía y banda ancha de potencia media — a menos que una de las excepciones haga la separación en su lugar:\n• Un lado o el otro está en una canalización, o en un cable con cubierta metálica, blindado metálico, con cubierta no metálica o Tipo UF.\n• Los dos están permanentemente separados por una barrera o tubería aislante adecuada.\nLa regla paralela para circuitos de comunicaciones vive en el Capítulo 8 en 800.133(A)(2), y también es 2 pulgadas, con sus propias excepciones de canalización y cable. Dos pulgadas es un espaciamiento para tramos abiertos, no una licencia para compartir una caja, y no un número para aplicar donde una regla de barrera ya gobierna.",
+      "on_the_job": "Ático de una casa de serie en Marion Oaks: los tramos Clase 2 de termostato y alarma cruzan las mismas bahías de viguetas que los tramos de energía en NM. Como el lado de energía es cable con cubierta no metálica, la excepción cubre esos cruces sin espaciamiento al aire libre que mantener. Donde un tramo Clase 2 sale de la protección del cable y corre abierto junto a los conductores de energía del manejador de aire, el equipo mantiene las 2 pulgadas completas a lo largo del tramo — y lleva las excepciones con el número, no en lugar de él.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -4677,7 +6407,107 @@
       "verified": true,
       "prev_id": "C7-725.136",
       "next_id": "C7-725.144",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "El cableado Clase 2 y Clase 3 está construido y aislado para energía baja. Si usted lo pasa pegado a conductores de energía, una falla de energía — o incluso un voltaje inducido constante — llega a cable de termostato, datos y señalización que nunca fue hecho para soportarlo. Dos pulgadas de aire, o una canalización, cubierta de cable o barrera que hace el mismo trabajo, mantienen la falla en el lado que puede soportarla.",
+      "exam_trap": "La trampa es usar la regla de 2 pulgadas dentro de una caja. La 725.136(I) cubre aplicaciones fuera de cerramientos y equipo; compartir un cerramiento es otro párrafo con sus propias reglas de barrera. La trampa inversa también reprueba respuestas: las 2 pulgadas no son absolutas — una canalización, un cable con cubierta en cualquier lado, o una barrera permanente satisface la sección sin ellas.",
+      "tables": [
+        {
+          "caption": "La regla de 2 pulgadas y sus salidas (NEC 2020)",
+          "headers": [
+            "Condición",
+            "Qué la satisface",
+            "Sección"
+          ],
+          "rows": [
+            [
+              "Tramo abierto, ningún lado protegido",
+              "Separación mínima de 2 in",
+              "725.136(I)"
+            ],
+            [
+              "Cualquier lado en una canalización",
+              "Excepción cumplida — sin espaciamiento al aire libre",
+              "725.136(I)"
+            ],
+            [
+              "Cualquier lado en cable con cubierta metálica, blindado metálico, NM o Tipo UF",
+              "Excepción cumplida",
+              "725.136(I)"
+            ],
+            [
+              "Barrera o tubería aislante permanente entre ellos",
+              "Excepción cumplida",
+              "725.136(I)"
+            ],
+            [
+              "Circuitos de comunicaciones, tramos abiertos",
+              "También 2 in, con sus propias excepciones",
+              "800.133(A)(2)"
+            ]
+          ]
+        }
+      ],
+      "inspection_fails": [
+        "Cable Clase 2 de termostato grapado pegado a conductores de energía abiertos — sin espaciamiento, sin canalización, sin cable con cubierta.",
+        "La regla de 2 pulgadas de tramo abierto citada para justificar conductores Clase 2 y de energía compartiendo un cerramiento.",
+        "Cinta eléctrica enrollada en un cruce reclamada como la barrera aislante permanente.",
+        "Cable de comunicaciones pasado contra conductores de energía sin separación y sin excepción de canalización o cable, 800.133(A)(2)."
+      ],
+      "page_quiz": [
+        {
+          "question": "Separación mínima entre conductores Clase 2 y conductores de energía en un tramo abierto, sin excepciones en juego:",
+          "choices": [
+            "½ in",
+            "1 in",
+            "2 in",
+            "6 in"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Dos pulgadas es el espaciamiento de tramo abierto de la 725.136(I).",
+          "nec_ref": "725.136(I)"
+        },
+        {
+          "question": "El lado de energía del tramo es cable Tipo NM. El cable Clase 2:",
+          "choices": [
+            "Todavía necesita 2 in",
+            "Necesita 6 in",
+            "Está cubierto por la excepción de cable — no se requiere espaciamiento al aire libre",
+            "Debe ir en conduit"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Un cable con cubierta no metálica en cualquier lado es una de las excepciones que la sección lista.",
+          "nec_ref": "725.136(I)"
+        },
+        {
+          "question": "La regla paralela de separación para circuitos de comunicaciones es:",
+          "choices": [
+            "725.136(I)",
+            "800.133(A)(2), también 2 in",
+            "310.15",
+            "Tabla 1 del Capítulo 9"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El Capítulo 8 lleva su propia versión en 800.133(A)(2), con el mismo espaciamiento de 2 pulgadas y sus propias excepciones.",
+          "nec_ref": "800.133(A)(2)"
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "725.136(I)",
+        "800.133(A)(2)"
+      ],
+      "rich_sources": [],
+      "figures": [
+        {
+          "src": "fig/c7/C7-725.136I-two-inch.svg",
+          "alt": "Vista en sección de un tramo abierto: conductores de energía arriba y un cable Clase 2 abajo mantenidos a 2 pulgadas de distancia con una línea de cota, sobre un panel que lista las excepciones de canalización, cable y barrera.",
+          "caption": "2 in en tramos abiertos — o una canalización, un cable con cubierta, o una barrera.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "uncertain": [],
+      "rich": 1
     },
     {
       "id": "C7-725.144",
@@ -5725,8 +7555,8 @@
       "article": "770",
       "section": "770",
       "title": "Cables de fibra óptica",
-      "plain_explanation": "El Artículo 770, el último artículo del Capítulo 7, cubre la instalación de cables de fibra óptica — fibras de vidrio o plástico llevando luz en vez de corriente. La fibra no puede dar un choque a nadie ni iniciar un fuego con su señal, así que los temas reales del artículo son el listado de fuego y humo del cable para el espacio por el que corre, y qué pasa cuando la fibra comparte canalizaciones y cerramientos con conductores que sí llevan energía, especialmente los cables de fibra conductores con miembros de resistencia metálicos. La fibra de comunicaciones también aparece en el mundo del Capítulo 8; este artículo es el hogar de la fibra para reglas de instalación.",
-      "on_the_job": "Trata el miembro metálico de un cable de fibra conductor con el mismo respeto que un conductor hasta que hayas confirmado cómo está terminado y unido. La luz en la fibra es inofensiva; el metal a su alrededor no lo es automáticamente.",
+      "plain_explanation": "El Artículo 770, el último artículo del Capítulo 7, cubre la instalación de cables de fibra óptica — fibras de vidrio o plástico que llevan luz en vez de corriente. La señal no puede dar un choque a nadie ni iniciar un fuego, así que el artículo concentra su fuerza en el listado de fuego y humo del cable para el espacio por el que corre, y en qué pasa cuando la fibra comparte canalizaciones y cerramientos con conductores que sí llevan energía.\n• Dos familias. Un cable no conductor (los tipos N, como OFNP) no tiene metal. Un cable conductor (los tipos C, como OFCP) tiene un miembro metálico, armadura o cubierta — metal que puede importar una falla o un voltaje extraño.\n• Listado por espacio, 770.179 y 770.154: cable de plenum (OFNP, OFCP) para ductos y espacios de aire; cable riser (OFNR, OFCR) para recorridos verticales; cable de uso general (OFNG, OFCG, y OFN, OFC) para el resto. Un cable con listado mayor puede sustituir a uno menor — nunca al revés.\n• Compartir espacio, 770.133: la fibra no conductora puede ocupar una canalización o bandeja con conductores de luz, energía y Clase 1, pero no un gabinete, caja o tablero con las terminaciones de esos circuitos, a menos que esté funcionalmente asociada a ellos. La fibra conductora no puede compartir canalización ni bandeja con circuitos de luz, energía o Clase 1. Un cable compuesto — fibra y conductores en una sola chaqueta — se permite solo donde los dos están funcionalmente asociados.\n• Desde afuera, 770.48: la fibra de planta externa sin listado puede correr hasta 50 ft hacia adentro desde su punto de entrada, y debe terminar en un cerramiento.\nLa fibra de comunicaciones también aparece en el mundo del Capítulo 8; el 770 es el hogar de la fibra para reglas de instalación.",
+      "on_the_job": "Remodelación de oficina en Winter Park: el carrete del contratista de datos está marcado OFN — uso general — pero el recorrido va 120 ft por un techo plenum de aire de retorno y sube por un eje de dos pisos. El OFN falla en los dos espacios. La corrección: OFNP por el plenum, OFNR por el eje — o OFNP en todo el recorrido, porque el cable de plenum sustituye hacia abajo. El cable sin listado del portador entra 30 ft hasta el cerramiento de demarcación — dentro del límite de 50 ft de 770.48, así que se queda.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -5736,7 +7566,130 @@
       "verified": true,
       "prev_id": "C7-760.135",
       "next_id": "C7-770.133",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "La luz en una fibra es inofensiva, pero la chaqueta que la rodea sí quema. Un cable de uso general en un eje vertical o en un techo de aire de retorno lleva fuego y humo por donde el edificio sube y respira. El miembro conductor es el segundo peligro: el acero o la armadura que toca algo vivo puede llevar ese voltaje a una caja de terminaciones de bajo voltaje, donde nadie espera un choque.",
+      "exam_trap": "La respuesta favorita del examen es «la fibra no lleva corriente, así que el tipo de cable no importa». Sí importa: el listado sigue al espacio, no a la señal. La trampa pareja va al revés: un cable riser OFNR ofrecido como sustituto de un OFNP en un plenum. Las sustituciones solo bajan por la escalera, nunca suben.",
+      "inspection_fails": [
+        "Cable OFN o OFNG corrido por un techo plenum de aire de retorno sin listado de plenum.",
+        "Eje riser cableado con cable de uso general en vez de OFNR o mejor.",
+        "Cable de fibra conductor compartiendo una canalización con conductores de energía de 120 V.",
+        "Fibra de planta externa sin listado corrida 80 ft dentro del edificio, pasado el límite de entrada de 50 ft.",
+        "Fibra no conductora terminada en un cerramiento de tablero con terminaciones de energía, sin asociación funcional."
+      ],
+      "tables": [
+        {
+          "caption": "La escalera de listados de fibra (NEC 2020)",
+          "headers": [
+            "Tipos de cable",
+            "Corre en",
+            "Puede reemplazar"
+          ],
+          "rows": [
+            [
+              "OFNP / OFCP",
+              "Ductos, plenums, espacios de aire",
+              "OFNR, OFNG, OFN"
+            ],
+            [
+              "OFNR / OFCR",
+              "Risers, de piso a piso",
+              "OFNG, OFN"
+            ],
+            [
+              "OFNG / OFCG",
+              "Uso general",
+              "OFN, OFC"
+            ],
+            [
+              "OFN / OFC",
+              "Uso general",
+              "—"
+            ]
+          ],
+          "note": "Las sustituciones solo bajan por la escalera (Tabla 770.154(E)). Los tipos N son no conductores; los tipos C son conductores y siguen la misma escalera."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c7/C7-ART-770-listing-ladder.svg",
+          "alt": "Escalera de sustitución para cables de fibra óptica desde los tipos de plenum OFNP y OFCP hasta OFN y OFC, con una flecha verde hacia abajo y una flecha roja de nunca hacia arriba, más las reglas de 770.133 para fibra no conductora y conductora.",
+          "caption": "La escalera de listados: sustituya hacia abajo, nunca hacia arriba — y quién puede compartir espacio con energía.",
+          "w": 900,
+          "h": 1580
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un recorrido de fibra cruza un techo plenum de aire de retorno. ¿Qué tipo de cable se requiere ahí?",
+          "choices": [
+            "OFN",
+            "OFNR",
+            "OFNP",
+            "OFNG"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Los espacios plenum llevan cable de plenum: OFNP (no conductor) u OFCP (conductor), listado para ductos, plenums y otros espacios de manejo de aire.",
+          "nec_ref": "770.179(A)"
+        },
+        {
+          "question": "¿Cuál sustitución se permite?",
+          "choices": [
+            "OFNR en lugar de OFNP en un plenum",
+            "OFNP en lugar de OFNR en un riser",
+            "OFN en lugar de OFNG",
+            "OFNG en lugar de OFNR en un eje"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Un cable con listado mayor puede reemplazar a uno menor. El cable de plenum en un riser está bien; cada sustitución hacia arriba de la lista es una violación.",
+          "nec_ref": "Table 770.154(E)"
+        },
+        {
+          "question": "Un cable de fibra conductor en la misma canalización que conductores ramales de 120 V es:",
+          "choices": [
+            "Permitido libremente",
+            "Permitido si se separa con cinta",
+            "No permitido",
+            "Permitido bajo 50 ft"
+          ],
+          "answer_index": 2,
+          "explain_plain": "El cable de fibra conductor no puede ocupar una canalización o bandeja con circuitos de luz, energía o Clase 1 — su miembro metálico puede llevar una falla al recorrido.",
+          "nec_ref": "770.133"
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "770.48",
+        "770.133",
+        "770.154",
+        "Table 770.154(E)",
+        "770.179"
+      ],
+      "uncertain": [
+        "Las letras de subsección dentro de 770.133 y el número de la tabla de sustituciones (citada aquí como Tabla 770.154(E)) siguen reproducciones públicas del Artículo 770. Confírmelos en el libro impreso de 2020 antes de citarlos con más precisión."
+      ],
+      "rich_sources": [
+        {
+          "claim": "Escalera de tipos de cable de fibra (OFNP/OFCP plenum, OFNR/OFCR riser, OFNG/OFCG y OFN/OFC uso general) y la tabla de sustituciones de cables",
+          "source": "Solar365, NEC Article 770 text (770.154, 770.179)",
+          "url": "https://www.solar365.com/green-homes/national-electric-code-2008/optical-fiber-cables-and-raceways/page/0/6?page=0,6"
+        },
+        {
+          "claim": "Las sustituciones corren solo hacia abajo: OFNP reemplaza a OFNR, OFNG y OFN; OFNR reemplaza a OFNG y OFN; OFNG no puede usarse en un plenum ni en un riser",
+          "source": "Glory Optics, Plenum vs Non-Plenum Fiber Cable: NEC Rules That Affect Installation",
+          "url": "https://www.gloryoptics.com/info/plenum-vs-non-plenum-fiber-optic-cable-nec-103509798.html"
+        },
+        {
+          "claim": "Los cables de fibra óptica conductores no se permiten en una bandeja o canalización con circuitos de luz, energía o Clase 1; la fibra no conductora puede compartir la canalización pero no un cerramiento con esas terminaciones a menos que esté funcionalmente asociada; el cable compuesto solo donde está funcionalmente asociado (770.133)",
+          "source": "Mike Holt, Article 770: Optical Fiber Cables",
+          "url": "https://www.mikeholt.com/newsletters.php?action=reply&inResponseTo=2132&letterID=219"
+        },
+        {
+          "claim": "El cable de fibra óptica sin listado puede entrar a un edificio hasta 50 ft desde el punto de entrada y debe terminar en un cerramiento (770.48)",
+          "source": "Mike Holt, Optical Fiber Cables & Raceways, Art 770",
+          "url": "https://www.mikeholt.com/newsletters.php?action=display&letterID=1298&srsltid=AfmBOooc9VjlBRAmbcNEsBwthnESeWYVyQQtCguk-UWbbAkJfBCi92fm"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C7-770.133",
