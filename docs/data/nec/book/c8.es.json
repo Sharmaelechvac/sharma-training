@@ -143,8 +143,8 @@
       "article": "800",
       "section": "800",
       "title": "Artículo 800 — Requisitos generales para sistemas de comunicaciones",
-      "plain_explanation": "El Artículo 800 es el artículo general que fue nuevo en la edición de 2020. Reúne las reglas que solían repetirse en casi cada artículo de comunicaciones — cosas como mano de obra, cable abandonado, propagación de fuego, cables entrando a un edificio, unión y puesta a tierra, separación de energía, y listado de cables — y las declara una vez. Esas reglas generales luego aplican a los sistemas específicos en los Artículos 805, 820, 830 y 840, a menos que uno de esos artículos las cambie. El Artículo 810, antenas, es la excepción: se aparta del Artículo 800 y lleva sus propias reglas.",
-      "on_the_job": "Lee el Artículo 800 primero en cualquier trabajo de comunicaciones, luego lee el artículo específico para el sistema que estás instalando. La mayoría de las fallas de inspección que Sharma pegaría en este capítulo — sin unión en la entrada, cable mezclado con energía, cable muerto dejado en un techo — son fallas del Artículo 800, no fallas del artículo del sistema específico.",
+      "plain_explanation": "El Artículo 800 es el artículo general para los sistemas de comunicaciones, y fue nuevo en la edición de 2020. Antes de 2020, casi cada artículo de comunicaciones repetía las mismas reglas de orden en sus propias páginas. El Artículo 800 las reúne y las declara una sola vez:\n• Ejecución mecánica del trabajo, y cómo se soporta el cable\n• Cable abandonado — lo que tiene que salir\n• Propagación de fuego y humo: sellado cortafuego, y cable listado para el espacio\n• Cables entrando a un edificio, y protección en la entrada\n• Unión y puesta a tierra de protectores, blindajes y herrajes de entrada\n• Separación de los conductores de alumbrado y energía eléctrica\n• Listado y marcado de cables\nEsas reglas generales aplican después a los sistemas específicos en los Artículos 805, 820, 830 y 840, a menos que uno de esos artículos las cambie. El Artículo 810, antenas, es la excepción: se aparta del Artículo 800 y lleva sus propias reglas.",
+      "on_the_job": "Lea el Artículo 800 primero en cualquier trabajo de comunicaciones, y después lea el artículo específico del sistema que está instalando. En un despiece de oficina en Winter Park, el Cat 6, el coaxial y las salidas de banda ancha entran todos por una misma pared de demarc — un solo punto de unión, un solo estándar de sellado cortafuego y una sola regla de separación cubren los tres, porque los tres quedan bajo el Artículo 800. La mayoría de las fallas de inspección que Sharma pegaría en este capítulo — sin unión en la entrada, cable mezclado con energía, cable muerto dejado en un techo — son fallas del Artículo 800, no fallas del artículo del sistema específico.",
       "sharma_note": "",
       "figure_idea": "Un mapa del capítulo mostrando el Artículo 800 en el centro, con líneas a 805, 820, 830 y 840, y el Artículo 810 dibujado a un lado en su propia caja marcada 'se sostiene solo.'",
       "related_ids": [
@@ -155,7 +155,113 @@
       "verified": true,
       "prev_id": "C8-90.3",
       "next_id": "C8-800.1",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "El trabajo de comunicaciones falla en el mismo puñado de maneras sin importar qué sistema va en el camión — una unión que falta, un cable corrido con energía, cable muerto dejado en un techo. Declarar la regla una sola vez significa que cada sistema hereda el mismo piso, y un instalador que aprende una vez las reglas de entrada, unión y separación puede llegar a cualquier trabajo de comunicaciones del capítulo sabiendo ya la mayoría de lo que el inspector va a revisar.",
+      "exam_trap": "La trampa es suponer que el Artículo 800 cubre todo el Capítulo 8 de la misma manera. No alcanza al Artículo 810: las antenas se sostienen solas, con su propia receta de puesta a tierra en 810.21. La segunda trampa es leer solo el artículo del sistema — los deberes generales, como retirar el cable abandonado, viven en el Artículo 800 y son fáciles de pasar por alto si usted nunca lo abre.",
+      "tables": [
+        {
+          "caption": "A quién alcanza el Artículo 800",
+          "headers": [
+            "Artículo",
+            "Sistema",
+            "¿Bajo el 800?"
+          ],
+          "rows": [
+            [
+              "805",
+              "Circuitos de comunicaciones",
+              "Sí"
+            ],
+            [
+              "820",
+              "CATV y distribución de radio",
+              "Sí"
+            ],
+            [
+              "830",
+              "Banda ancha alimentada por la red",
+              "Sí"
+            ],
+            [
+              "840",
+              "Banda ancha alimentada en el local",
+              "Sí"
+            ],
+            [
+              "810",
+              "Antenas de radio y TV",
+              "No — se sostiene solo"
+            ]
+          ],
+          "note": "Un artículo específico puede cambiar una regla general para su propio sistema. Donde calla, gobierna el Artículo 800."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c8/C8-ART-800-chapter-map.svg",
+          "alt": "Mapa del capítulo con el Artículo 800 en el centro sosteniendo las reglas generales, líneas que salen a los Artículos 805, 820, 830 y 840 marcados como cubiertos, y el Artículo 810 dibujado aparte en una caja punteada marcada se sostiene solo.",
+          "caption": "El Artículo 800 en el centro; 805, 820, 830 y 840 bajo él; el 810 por su cuenta.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "inspection_fails": [
+        "Sin unión en la entrada de comunicaciones — una falla de puesta a tierra del Artículo 800, sea cual sea el sistema instalado.",
+        "Cable de comunicaciones corrido con conductores de energía, contra las reglas de separación del Artículo 800.",
+        "Cable abandonado dejado en el techo en una remodelación en vez de retirarlo.",
+        "Penetraciones a través de una pared clasificada dejadas sin sellar — el deber de sellado cortafuego está en el Artículo 800, no en el artículo del sistema."
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Qué artículo del Capítulo 8 NO está bajo las reglas generales del Artículo 800?",
+          "choices": [
+            "805",
+            "820",
+            "810",
+            "840"
+          ],
+          "answer_index": 2,
+          "explain_plain": "El Artículo 810, antenas, se sostiene solo en el Capítulo 8 — lleva sus propias reglas, incluida su propia sección de puesta a tierra en 810.21.",
+          "nec_ref": "Article 800; Article 810"
+        },
+        {
+          "question": "¿En qué edición apareció por primera vez el Artículo 800 como artículo general del capítulo?",
+          "choices": [
+            "NEC 2014",
+            "NEC 2017",
+            "NEC 2020",
+            "NEC 2023"
+          ],
+          "answer_index": 2,
+          "explain_plain": "El Artículo 800 fue nuevo en la edición de 2020, reuniendo las reglas generales de comunicaciones que solían repetirse en cada artículo de sistema.",
+          "nec_ref": "Article 800"
+        },
+        {
+          "question": "Un artículo de sistema no dice nada sobre retirar el cable abandonado. ¿De dónde sale el deber?",
+          "choices": [
+            "No aplica",
+            "De las reglas generales del Artículo 800",
+            "Solo de las instrucciones del fabricante",
+            "Del Artículo 725"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Las reglas generales del Artículo 800 aplican a los sistemas específicos en 805, 820, 830 y 840 a menos que el artículo del sistema las cambie.",
+          "nec_ref": "Article 800"
+        }
+      ],
+      "code_refs": [
+        "Article 800",
+        "800.1",
+        "Article 805",
+        "Article 810",
+        "Article 820",
+        "Article 830",
+        "Article 840"
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C8-800.1",
@@ -288,8 +394,8 @@
       "article": "800",
       "section": "800.2",
       "title": "Definiciones que pertenecen a este capítulo",
-      "plain_explanation": "Algunas palabras en este capítulo llevan definiciones del Código, y esta sección guarda las que el trabajo de comunicaciones gira sobre ellas. Dos hacen deber diario. El punto de entrada es el punto donde un cable o alambre de comunicaciones entra al edificio desde fuera — a través de una pared, un piso, o una canalización metálica puesta a tierra que lo extiende — y casi cada regla de entrada en el capítulo se mide desde él. El cable de comunicaciones abandonado, definido aquí, es cable que no está terminado en equipo y no está identificado para uso futuro con una etiqueta, que es la prueba que 800.25 luego aplica.",
-      "on_the_job": "Antes de discutir sobre dónde cae un protector, una unión o un límite de 50 ft, decide dónde está el punto de entrada — la penetración de la pared, o el fin de la tubería de entrada puesta a tierra si una lo extiende. Y cuando un cable muerto se disputa, corre la definición: ¿terminado, o etiquetado para uso futuro? Si ninguno, está abandonado.",
+      "plain_explanation": "Algunas palabras en este capítulo llevan definiciones del Código, y esta sección guarda las que el trabajo de comunicaciones gira sobre ellas. Dos hacen deber diario:\n• Punto de entrada: el punto donde un alambre o cable de comunicaciones entra al edificio desde fuera — a través de una pared, un piso, o una canalización metálica puesta a tierra que lo extiende.\n• Cable de comunicaciones abandonado: cable que no está terminado en equipo y no está identificado para uso futuro con una etiqueta.\nCasi cada regla de entrada en el capítulo se mide desde el punto de entrada, y la definición de cable abandonado es la prueba que 800.25 luego aplica.",
+      "on_the_job": "Antes de discutir sobre dónde cae un protector, una unión o un límite de 50 ft, decida dónde está el punto de entrada — la penetración de la pared, o el fin de la tubería de entrada puesta a tierra si una lo extiende. Y cuando un cable muerto se disputa, corra la definición: ¿terminado, o etiquetado para uso futuro? Si ninguno, está abandonado.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -300,7 +406,93 @@
       "verified": true,
       "prev_id": "C8-800.1",
       "next_id": "C8-800.3",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Las definiciones son donde las inspecciones se ganan y se pierden. Mida el permiso de 50 ft para coaxial de planta exterior no listado desde el tablero en vez de desde el punto de entrada y el tramo está sobre el límite antes de que nadie lo revise. Discuta «abandonado» desde el significado común en vez de la definición y el cable muerto se queda en el techo. La definición es la vara de medir con la que se corta cada otra regla del capítulo.",
+      "exam_trap": "La respuesta trampa pone el punto de entrada donde el cable llega al tablero. Equivocado — es donde el cable entra al edificio, y cuando una canalización metálica puesta a tierra extiende la entrada, el punto se mueve al fin de esa canalización. Mida el protector, la unión y los 50 ft desde el punto equivocado y cada uno de ellos puede fallar.",
+      "inspection_fails": [
+        "Coaxial de planta exterior no listado medido 50 ft desde el tablero en vez de desde el punto de entrada — tramo sobre el límite.",
+        "Protector primario colocado bien adentro del edificio porque el punto de entrada nunca se decidió.",
+        "Cable muerto dejado en su lugar como «no abandonado» — sin terminar y sin etiquetar.",
+        "Cable marcado «repuesto» con bolígrafo en la cubierta, sin etiqueta durable — reclamado como identificado para uso futuro."
+      ],
+      "tables": [
+        {
+          "caption": "Las dos definiciones de trabajo (NEC 2020)",
+          "headers": [
+            "Término",
+            "Definición",
+            "Lo que decide"
+          ],
+          "rows": [
+            [
+              "Punto de entrada",
+              "Donde el cable entra desde fuera: penetración de pared o piso, o el fin de una canalización metálica puesta a tierra que lo extiende",
+              "Desde dónde se miden los protectores, la unión y el límite de 50 ft"
+            ],
+            [
+              "Cable de comunicaciones abandonado",
+              "No terminado en equipo y no identificado para uso futuro con una etiqueta",
+              "Si 800.25 requiere remoción"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c8/C8-800.2-two-definitions.svg",
+          "alt": "Dos bosquejos de entrada: un cable entrando a través de una pared con el punto de entrada en la penetración, y una canalización metálica puesta a tierra extendiendo la entrada para que el punto de entrada quede al fin de la canalización, sobre las dos cajas de definiciones.",
+          "caption": "El punto de entrada queda en la pared — o al fin de la canalización puesta a tierra que lo extiende.",
+          "w": 900,
+          "h": 1620
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Una canalización metálica de entrada puesta a tierra extiende la entrada del cable 15 ft dentro del edificio. El punto de entrada es:",
+          "choices": [
+            "En la pared exterior",
+            "Al fin de la canalización puesta a tierra",
+            "En el protector primario",
+            "En el tablero de distribución"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La definición cuenta una canalización metálica puesta a tierra como extensión de la entrada, así que el punto de entrada se mueve a su fin.",
+          "nec_ref": "800.2"
+        },
+        {
+          "question": "¿Qué cable cumple la definición de cable de comunicaciones abandonado?",
+          "choices": [
+            "Un repuesto con etiqueta durable de uso futuro",
+            "Un cable terminado en un tablero de parcheo de repuesto",
+            "Un cable sin terminar y sin etiqueta de uso futuro",
+            "Cualquier cable de más de 25 años"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Abandonado significa ambas cosas: no terminado en equipo, y no identificado para uso futuro con una etiqueta.",
+          "nec_ref": "800.2"
+        },
+        {
+          "question": "Las reglas de entrada como el límite de 50 ft para cable no listado se miden desde:",
+          "choices": [
+            "El tablero de distribución",
+            "El punto de entrada",
+            "La varilla de tierra del protector",
+            "El límite de la propiedad"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Las reglas de entrada del capítulo se miden desde el punto de entrada como lo define 800.2.",
+          "nec_ref": "800.2, 820.48"
+        }
+      ],
+      "code_refs": [
+        "800.2",
+        "800.25",
+        "820.48"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C8-800.3",
@@ -418,8 +610,8 @@
       "article": "800",
       "section": "800.21",
       "title": "Mantén los paneles del techo removibles — el cable no puede bloquear el acceso",
-      "plain_explanation": "El acceso al equipo eléctrico no debe negarse por una acumulación de alambres y cables de comunicaciones que impida la remoción de paneles, incluidos los paneles de techo suspendido. En términos sencillos, las losetas de un techo suspendido son una puerta de acceso a las cajas de empalme, interruptores y otro equipo eléctrico sobre ellas. Un paquete de cable de datos colgado a través de la rejilla de modo que un panel no pueda levantarse falla esta sección, aunque cada cable en el paquete sea del tipo correcto, adecuadamente soportado y adecuadamente unido. La regla no trata del cable — trata de mantener el acceso que el techo fue diseñado para dar.",
-      "on_the_job": "Rutea y soporta los tramos para que cualquier panel del techo todavía pueda levantarse y moverse a un lado: paquetes en sus propios colgadores o ganchos J sobre la rejilla, nunca descansando en las losetas, nunca amontonados a través del panel debajo de una caja o interruptor que alguien necesitará alcanzar. Si tú no puedes levantar la loseta, el próximo electricista tampoco — y el inspector probará la loseta más cercana al equipo.",
+      "plain_explanation": "El acceso al equipo eléctrico no debe negarse por una acumulación de alambres y cables de comunicaciones que impida la remoción de paneles, incluidos los paneles de techo suspendido. En términos sencillos, las losetas de un techo suspendido son una puerta de acceso a las cajas de empalme, interruptores y otro equipo eléctrico sobre ellas. Un paquete de cable de datos colgado a través de la rejilla de modo que un panel no pueda levantarse falla esta sección, aunque cada cable en el paquete sea del tipo correcto, adecuadamente soportado y adecuadamente unido. La regla no trata del cable — trata de mantener el acceso que el techo fue diseñado para dar.\n• Las losetas de un techo suspendido son paneles de acceso, no un estante.\n• El cable sobre el techo tiene que rutearse y soportarse de modo que el panel bajo el equipo todavía pueda salir.",
+      "on_the_job": "Acabado de inquilino en una oficina de Orlando: cuarenta bajadas Cat 6A para una suite. Rutee y soporte los tramos para que cualquier panel del techo todavía pueda levantarse y moverse a un lado — paquetes en sus propios colgadores o ganchos J sobre la rejilla, nunca descansando en las losetas, nunca amontonados a través del panel debajo de una caja o interruptor que alguien necesitará alcanzar. Si usted no puede levantar la loseta, el próximo electricista tampoco — y el inspector probará la loseta más cercana al equipo.",
       "sharma_note": "",
       "figure_idea": "Un techo suspendido dibujado desde arriba: una bahía con cable soportado en ganchos J libre de los paneles y el panel levantándose libre, junto a una bahía con cable colgado a través de la loseta y la loseta atorada, marcada como falla.",
       "related_ids": [],
@@ -427,7 +619,98 @@
       "verified": true,
       "prev_id": "C8-800.3",
       "next_id": "C8-800.24",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Tarde o temprano alguien tiene que entrar sobre ese techo: un interruptor disparado, una conexión fallida, un olor a quemado a las 2 a.m. Si la loseta no puede moverse, la búsqueda de la falla se convierte en demolición, y en una emergencia la demora es el peligro. El techo fue diseñado como la puerta de acceso a todo lo que está sobre él; esta sección mantiene esa puerta funcionando.",
+      "exam_trap": "La respuesta trampa es «cada cable es del tipo correcto, está bien soportado y bien unido, así que la instalación pasa». Todavía falla 800.21 si el paquete mantiene un panel del techo fijo. La sección no trata del cable en absoluto — trata de mantener el acceso que el techo fue diseñado para dar.",
+      "inspection_fails": [
+        "Paquete de cable colgado a través de las losetas del techo de modo que un panel no puede levantarse.",
+        "Losetas usadas como soporte de tramos de cable sobre el techo.",
+        "Paquete amontonado a través del único panel debajo de un interruptor o caja de empalme.",
+        "Panel de acceso junto a equipo eléctrico bloqueado por una acumulación de cable abandonado."
+      ],
+      "tables": [
+        {
+          "caption": "Sobre el techo: qué mantiene el acceso",
+          "headers": [
+            "Práctica",
+            "Veredicto"
+          ],
+          "rows": [
+            [
+              "Paquetes en ganchos J o colgadores propios, libres de los paneles",
+              "Acceso mantenido"
+            ],
+            [
+              "Cualquier panel se levanta y se mueve con el cable en su lugar",
+              "Acceso mantenido"
+            ],
+            [
+              "Cable descansando en las losetas",
+              "Falla — las losetas no son soporte"
+            ],
+            [
+              "Paquete colgado a través del panel bajo una caja",
+              "Falla 800.21"
+            ]
+          ],
+          "note": "El inspector probará la loseta más cercana al equipo."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c8/C8-800.21-ceiling-access.svg",
+          "alt": "Vista en planta de un techo suspendido en dos bahías: en la primera, un paquete de cable viaja en ganchos J libre de los paneles y una loseta se levanta libre hacia una caja de empalme; en la segunda, un paquete colgado a través de la loseta la mantiene fija y la loseta no puede removerse.",
+          "caption": "El mismo techo, dos resultados: el panel todavía tiene que salir.",
+          "w": 900,
+          "h": 1400
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un paquete de datos es del tipo de cable correcto y está soportado desde la estructura, pero cuelga a través de una loseta del techo de modo que la loseta no puede levantarse. ¿Veredicto?",
+          "choices": [
+            "Pasa — el soporte es lo que la sección revisa",
+            "Falla 800.21 — el acceso al equipo eléctrico está bloqueado",
+            "Falla solo si el cable no está listado",
+            "Pasa si el paquete está unido"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La sección protege el acceso, no el cable: una acumulación de cable que impide la remoción de paneles es la violación.",
+          "nec_ref": "800.21"
+        },
+        {
+          "question": "La sección 800.21 trata en realidad de:",
+          "choices": [
+            "La clasificación de fuego del cable",
+            "Mantener el acceso al equipo eléctrico",
+            "Unir la pantalla del cable",
+            "La resistencia de la loseta del techo"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Los paneles de techo suspendido son la puerta de acceso al equipo sobre ellos; el cable no puede bloquear esa puerta.",
+          "nec_ref": "800.21"
+        },
+        {
+          "question": "¿Qué instalación mantiene satisfecho 800.21?",
+          "choices": [
+            "Paquetes descansando en las losetas, bien peinados",
+            "Paquetes en sus propios colgadores sobre la rejilla, paneles libres para levantarse",
+            "Cable extra enrollado en el panel debajo de cada caja",
+            "Cable abandonado dejado en su lugar sobre el techo"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Soporte el cable desde la estructura y deje cada panel removible.",
+          "nec_ref": "800.21"
+        }
+      ],
+      "code_refs": [
+        "800.21",
+        "800.24"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C8-800.24",
@@ -558,8 +841,8 @@
       "article": "800",
       "section": "800.25",
       "title": "El cable abandonado tiene que salir",
-      "plain_explanation": "Un cable de comunicaciones que ya no está terminado en equipo, y no está etiquetado para uso futuro, cuenta como abandonado. La parte accesible del cable abandonado tiene que removerse, porque el cable muerto es combustible en un techo o un eje y confunde a cada cuadrilla que viene después. Un cable que honestamente planeas reusar puede quedarse, pero solo si lleva una etiqueta durable diciéndolo, adecuada al ambiente en que se sienta. El cable escondido dentro de una canalización oculta no se trata como accesible, así que el deber de remoción apunta a lo que una cuadrilla de verdad puede alcanzar.",
-      "on_the_job": "En una remodelación o un acabado de inquilino, camina el techo antes de añadir nada. Saca el coaxial muerto y el cable de teléfono viejo que puedas alcanzar, y etiqueta cualquier repuesto que estés guardando con qué es y a dónde va. 'Puede que lo usemos algún día' sin etiqueta no cuenta.",
+      "plain_explanation": "Un cable de comunicaciones que ya no está terminado en equipo, y no está etiquetado para uso futuro, cuenta como cable abandonado — la definición está en 800.2. La regla aquí:\n• La parte accesible del cable abandonado tiene que removerse.\n• Un cable que honestamente planea reusar puede quedarse, pero solo si lleva una etiqueta durable que lo identifica para uso futuro, adecuada al ambiente en que se sienta.\n• El cable escondido dentro de una canalización oculta no se trata como accesible, así que el deber de remoción alcanza solo lo que una cuadrilla de verdad puede alcanzar.\nEl cable muerto es combustible en un techo o un eje, y confunde a cada cuadrilla que viene después.",
+      "on_the_job": "En una remodelación o un acabado de inquilino, camine el techo antes de añadir nada. En un acabado de oficina en Winter Park sacamos unas 300 ft de coaxial muerto y cable de teléfono viejo de un solo techo antes de que entrara el Cat 6 nuevo. Etiquete cualquier repuesto que esté guardando con qué es y a dónde va — «uso futuro, repuesto al tablero de la Suite 210» — no un pedazo de cinta. «Puede que lo usemos algún día» sin etiqueta no cuenta.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -571,7 +854,102 @@
       "verified": true,
       "prev_id": "C8-800.24",
       "next_id": "C8-800.26",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "El cable abandonado es cubierta y aislamiento sin ningún trabajo que hacer. Sobre un techo añade carga de combustible y humo exactamente donde el fuego se propaga sin verse, y en un eje puede llevar la llama de piso en piso. También le miente a la próxima cuadrilla: un generador de tonos encuentra un par «vivo» que no va a ningún lado, un tablero se llena de puertos que no sirven a nada, y una cotización de remodelación incluye en silencio una demolición que nadie presupuestó.",
+      "exam_trap": "La trampa es «todo el cable abandonado tiene que salir, en todas partes». El deber se detiene en la parte accesible: el cable abandonado dentro de una canalización oculta no es accesible, y el Código no le hace abrir paredes para perseguirlo. La otra respuesta equivocada es el repuesto sin etiqueta — sin etiqueta durable no hay uso futuro, y el cable es abandonado por definición.",
+      "inspection_fails": [
+        "Cable coaxial y de teléfono abandonado dejado sobre el techo, sin terminar y sin etiquetar.",
+        "Cable de repuesto guardado para uso futuro sin etiqueta, o con una etiqueta de papel que no sobrevivirá el ambiente del techo.",
+        "Cable muerto cortado en la placa de pared y dejado abandonado en el eje.",
+        "Cable nuevo instalado sobre capas de cable abandonado en el mismo espacio de techo."
+      ],
+      "tables": [
+        {
+          "caption": "La prueba del cable abandonado (NEC 2020)",
+          "headers": [
+            "Cable encontrado",
+            "Resultado",
+            "Acción"
+          ],
+          "rows": [
+            [
+              "Terminado en equipo",
+              "En servicio",
+              "Se queda"
+            ],
+            [
+              "Sin terminar, etiqueta durable de uso futuro",
+              "Repuesto identificado",
+              "Puede quedarse"
+            ],
+            [
+              "Sin terminar, sin etiqueta",
+              "Abandonado",
+              "Remueva la parte accesible"
+            ],
+            [
+              "Abandonado, dentro de canalización oculta",
+              "No accesible",
+              "El deber de remoción no lo alcanza"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c8/C8-800.25-abandoned-test.svg",
+          "alt": "Bosquejo de techo con tres cables — uno terminado en equipo, un repuesto con etiqueta durable de uso futuro, y una bobina muerta sin etiqueta — y los veredictos se queda, puede quedarse, y remueva la parte accesible.",
+          "caption": "Terminado, etiquetado, o fuera: la prueba de dos partes sobre un techo.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un cable de comunicaciones cuenta como abandonado cuando:",
+          "choices": [
+            "Es más viejo que la última remodelación",
+            "No está terminado en equipo y no está etiquetado para uso futuro",
+            "Es cualquier cable que el proveedor ya no usa",
+            "Está desconectado solo en la roseta"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La definición de 800.2 necesita ambas cosas: no terminado en equipo, y no identificado para uso futuro con una etiqueta.",
+          "nec_ref": "800.2, 800.25"
+        },
+        {
+          "question": "¿Qué parte del cable abandonado tiene que removerse?",
+          "choices": [
+            "Todo, incluido dentro de las paredes",
+            "La parte accesible",
+            "Solo lo que está en techos plenum",
+            "Solo cable de más de 10 años"
+          ],
+          "answer_index": 1,
+          "explain_plain": "800.25 requiere remover la parte accesible; el cable en una canalización oculta no es accesible.",
+          "nec_ref": "800.25"
+        },
+        {
+          "question": "Un cable de repuesto puede quedarse en el techo si:",
+          "choices": [
+            "Está enrollado con cuidado sobre una losa",
+            "Lleva una etiqueta durable que lo identifica para uso futuro, adecuada al ambiente",
+            "Está listado en los documentos de cierre",
+            "Todavía da tono de extremo a extremo"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Un repuesto que se queda necesita una etiqueta durable que lo identifique para uso futuro, adecuada al ambiente donde se sienta.",
+          "nec_ref": "800.25"
+        }
+      ],
+      "code_refs": [
+        "800.25",
+        "800.2"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C8-800.26",
@@ -706,8 +1084,8 @@
       "article": "800",
       "section": "800.44",
       "title": "Alambres y cables aéreos entrando a un edificio",
-      "plain_explanation": "Los alambres y cables de comunicaciones aéreos que entran a un edificio tienen reglas de altura libre y separación donde cruzan techos y donde corren cerca de la acometida de energía. Las bajadas de comunicaciones tienen que mantener una altura libre vertical de por lo menos 8 ft sobre los techos que pasan, con excepciones limitadas. Donde una bajada de acometida de energía de 750 volts o menos corre sobre y en paralelo a una bajada de comunicaciones o coaxial, las dos necesitan por lo menos 12 in de separación a través del vano y en la conexión al edificio, siempre que los conductores de energía estén aislados y se mantengan por lo menos 40 in de altura libre entre los dos servicios en el poste.",
-      "on_the_job": "Antes de poner una escalera, mira hacia arriba: revisa la altura de la bajada de comunicaciones sobre el techo y su distancia de la bajada de energía en la pared y de vuelta en el poste. Nunca uses el mástil de la acometida de energía para soportar una bajada de comunicaciones. Si la bajada existente cuelga dentro de la bajada de energía, eso es una llamada al proveedor, no algo para arreglar halándola más apretada tú mismo.",
+      "plain_explanation": "Los alambres y cables de comunicaciones aéreos que entran a un edificio tienen reglas de altura libre y separación donde cruzan techos y donde corren cerca de la acometida de energía.\n• Una bajada de comunicaciones mantiene una altura libre vertical de por lo menos 8 ft sobre los techos que pasa, con excepciones limitadas.\n• Donde una bajada de acometida de energía de 750 volts o menos corre sobre y en paralelo a una bajada de comunicaciones o coaxial, las dos mantienen por lo menos 12 in de separación a través del vano y en la conexión al edificio.\n• Esa regla de separación se sostiene siempre que los conductores de energía estén aislados y se mantengan por lo menos 40 in de altura libre entre los dos servicios en el poste.",
+      "on_the_job": "Antes de poner una escalera, mire hacia arriba: revise la altura de la bajada de comunicaciones sobre el techo y su distancia de la bajada de energía en la pared y de vuelta en el poste. Mida, no estime — 8 ft sobre el techo, 12 in en la pared, 40 in en el poste. Nunca use el mástil de la acometida de energía para soportar una bajada de comunicaciones. Si la bajada existente cuelga dentro de la bajada de energía, eso es una llamada al proveedor, no algo para arreglar halándola más apretada usted mismo.",
       "sharma_note": "",
       "figure_idea": "Un bosquejo de elevación de casa mostrando una bajada coaxial cruzando un techo con una flecha de altura libre de 8 ft, y un espacio de 12 in marcado entre la bajada de comunicaciones y la bajada de energía aislada en la conexión.",
       "related_ids": [
@@ -718,7 +1096,94 @@
       "verified": true,
       "prev_id": "C8-800.27",
       "next_id": "C8-800.47",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Dos bajadas envejecen a ritmos distintos. Una bajada de comunicaciones que cuelga hasta una bajada de energía pone voltaje de línea en la red de teléfono y coaxial, y en cada equipo y cada mano que lo toca adentro. La altura libre sobre el techo mantiene la bajada fuera del alcance de techadores, escaleras y antenas — las personas y cosas que se mueven allá arriba — y la separación evita que un soporte fallido se convierta en un contacto cruzado.",
+      "exam_trap": "La respuesta trampa es «12 in de separación en todas partes lo cubre». Las 12 in son solo la mitad de la regla: corren a través del vano y en la conexión, y solo se sostienen mientras los conductores de energía estén aislados y el poste mantenga 40 in entre los dos servicios. Segunda trampa: 8 ft es la altura libre sobre un techo que la bajada pasa — no sobre el suelo, y no una sugerencia cuando el techo está «apenas» bajo el vano.",
+      "inspection_fails": [
+        "Bajada de comunicaciones cruzando un techo con menos de 8 ft de altura libre vertical.",
+        "Bajadas de comunicaciones y de energía tocándose o casi tocándose en la conexión al edificio.",
+        "Bajada de comunicaciones soportada desde el mástil de la acometida de energía.",
+        "Separación correcta en la pared pero perdida en el poste, donde los dos servicios comparten herrajes.",
+        "Bajada existente combada dejada en contacto con la bajada de energía después de un cambio de acometida."
+      ],
+      "tables": [
+        {
+          "caption": "Los tres números (800.44)",
+          "headers": [
+            "Dónde",
+            "Mínimo"
+          ],
+          "rows": [
+            [
+              "Bajada de comunicaciones sobre un techo",
+              "8 ft de altura libre vertical"
+            ],
+            [
+              "Bajada de energía (750 V o menos) en paralelo encima",
+              "12 in de separación, vano y conexión"
+            ],
+            [
+              "Entre los dos servicios en el poste",
+              "40 in de altura libre"
+            ]
+          ],
+          "note": "La separación de 12 in supone que los conductores de energía están aislados."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c8/C8-800.44-drop-clearances.svg",
+          "alt": "Elevación de una casa con una bajada de comunicaciones cruzando el techo bajo una dimensión de altura libre de 8 ft, una bajada de energía aislada corriendo encima y en paralelo con 12 in de separación en la conexión, y 40 in entre los dos servicios en el poste.",
+          "caption": "8 ft sobre el techo, 12 in de la energía, 40 in en el poste.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Altura libre vertical mínima de una bajada de comunicaciones sobre un techo que pasa?",
+          "choices": [
+            "3 ft",
+            "8 ft",
+            "10 ft",
+            "12 ft"
+          ],
+          "answer_index": 1,
+          "explain_plain": "8 ft, con solo las excepciones limitadas que la sección permite.",
+          "nec_ref": "800.44"
+        },
+        {
+          "question": "Una bajada de energía aislada de 240 V corre encima y en paralelo a una bajada coaxial. ¿Separación requerida a través del vano y en la conexión?",
+          "choices": [
+            "No se requiere separación",
+            "6 in",
+            "12 in",
+            "40 in"
+          ],
+          "answer_index": 2,
+          "explain_plain": "12 in a través del vano y en la conexión al edificio; la cifra de 40 in es la altura libre entre los servicios en el poste.",
+          "nec_ref": "800.44"
+        },
+        {
+          "question": "En el poste, los servicios de energía y comunicaciones deben mantener por lo menos:",
+          "choices": [
+            "12 in",
+            "24 in",
+            "40 in",
+            "8 ft"
+          ],
+          "answer_index": 2,
+          "explain_plain": "40 in en el poste es una de las condiciones que hace aceptable la separación de 12 in en el vano.",
+          "nec_ref": "800.44"
+        }
+      ],
+      "code_refs": [
+        "800.44"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C8-800.47",
@@ -951,8 +1416,8 @@
       "article": "800",
       "section": "800.53",
       "title": "Mantener el cable de comunicaciones lejos de la protección contra rayos",
-      "plain_explanation": "Donde es practicable, los alambres y cables de comunicaciones en un edificio, incluido el coaxial, deben mantenerse por lo menos 6 ft lejos de los conductores del sistema de protección contra rayos. Un conductor de bajada de rayos lleva una sobretensión enorme por unos microsegundos, y un cable de comunicaciones corriendo junto a él puede recoger suficiente de esa energía por inducción para destruir equipo o iniciar un fuego adentro. Donde 6 ft de verdad no se puede tener, el Código apunta al enfoque de cálculo de arco lateral en el estándar de protección contra rayos en vez de una adivinanza.",
-      "on_the_job": "Florida es país de rayos, así que esta no es teórica aquí. En cualquier edificio con terminales aéreas y bajadas — iglesias, escuelas, casas personalizadas más grandes — rutea las entradas de datos y coaxial a una pared o esquina diferente siempre que puedas. Si la única entrada está junto a una bajada, levántalo con el líder antes del despiece, no en el final.",
+      "plain_explanation": "Donde es practicable, los alambres y cables de comunicaciones en un edificio — incluido el coaxial — se mantienen por lo menos 6 ft lejos de los conductores del sistema de protección contra rayos.\n• Los 6 ft se miden entre el camino del cable de comunicaciones y el conductor de rayos más cercano, incluidas las bajadas.\n• Donde 6 ft de verdad no se puede tener, la separación no se adivina: se calcula con la ecuación de arco lateral de NFPA 780, el estándar de protección contra rayos.\nUn conductor de bajada lleva una sobretensión enorme por unos microsegundos. Un cable de comunicaciones corriendo junto a él puede recoger suficiente de esa energía por inducción para destruir equipo o iniciar un fuego adentro.",
+      "on_the_job": "Florida es país de rayos, así que esta no es teórica aquí. En cualquier edificio con terminales aéreas y bajadas — iglesias, escuelas, casas personalizadas más grandes — rutee las entradas de datos y coaxial a una pared o esquina diferente siempre que pueda. En un trabajo de iglesia, la bajada bajaba por la pared este, así que pusimos la entrada de coaxial y Cat 6 en la pared sur y mantuvimos 9 ft entre los dos caminos en el punto más cercano. Si la única entrada está junto a una bajada, plantéelo con el líder antes del despiece, no en el final.",
       "sharma_note": "",
       "figure_idea": "Un bosquejo de esquina de edificio con una bajada de rayos en una cara, la entrada de comunicaciones movida a la cara adyacente, y una dimensión de 6 ft entre los dos caminos.",
       "related_ids": [
@@ -963,7 +1428,103 @@
       "verified": true,
       "prev_id": "C8-800.49",
       "next_id": "C8-800.100",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Un rayo no tiene que pegarle a un cable para destruir lo que está conectado a él. La sobretensión que baja por una bajada lanza un pulso magnético rápido y enorme, y cualquier cable largo corriendo paralelo y cerca se acopla a él como el secundario de un transformador. La sobretensión inducida viaja por el coaxial o el cable de datos directo a módems, tableros y televisores. Seis pies de aire rompen ese acoplamiento hasta un nivel que el equipo puede sobrevivir.",
+      "exam_trap": "La respuesta trampa es que la unión lo arregla: «el sistema de comunicaciones está unido al sistema de protección contra rayos, así que el cable puede correr con la bajada». La unión conecta los electrodos de puesta a tierra entre sí; no hace nada contra la inducción a lo largo de un tramo paralelo. La separación de 6 ft todavía se requiere donde es practicable.",
+      "inspection_fails": [
+        "Entrada de coaxial corrida a unas 2 ft de una bajada de rayos donde la pared adyacente estaba libre.",
+        "Cable de comunicaciones amarrado al conductor de bajada de rayos como soporte.",
+        "Separación menor de 6 ft sin cálculo de arco lateral y sin nada documentado.",
+        "Bajada reubicada junto a la entrada de comunicaciones existente, y el cable nunca se movió."
+      ],
+      "tables": [
+        {
+          "caption": "Separación de los conductores de protección contra rayos (NEC 2020)",
+          "headers": [
+            "Situación",
+            "Requisito",
+            "Base"
+          ],
+          "rows": [
+            [
+              "Hay otra ruta disponible",
+              "Mantenga el cable de comunicaciones a 6 ft mín. de los conductores del LPS",
+              "800.53"
+            ],
+            [
+              "No se pueden tener 6 ft",
+              "Calcule la separación con la ecuación de arco lateral de NFPA 780",
+              "800.53"
+            ],
+            [
+              "Sistema de comunicaciones unido al LPS",
+              "La unión es un deber aparte — no reemplaza los 6 ft",
+              "800.53"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c8/C8-800.53-lightning-separation.svg",
+          "alt": "Dos paneles de pared: una entrada de comunicaciones a unas 2 ft de una bajada de rayos marcada como muy cerca, y la misma entrada movida a la vuelta de la esquina manteniendo 6 ft mínimo, con la nota de arco lateral de NFPA 780.",
+          "caption": "Mueva la entrada a la vuelta de la esquina: 6 ft mín. del camino de la bajada.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Donde es practicable, la separación mínima entre el cable de comunicaciones y los conductores de protección contra rayos es:",
+          "choices": [
+            "2 ft",
+            "3 ft",
+            "6 ft",
+            "12 ft"
+          ],
+          "answer_index": 2,
+          "explain_plain": "800.53 fija 6 ft entre los conductores de rayos y los alambres y cables de comunicaciones, incluido el coaxial.",
+          "nec_ref": "800.53"
+        },
+        {
+          "question": "En una iglesia, la única pared de entrada tiene una bajada y no se pueden lograr 6 ft. El camino del Código es:",
+          "choices": [
+            "Unir la malla del coaxial a la bajada y correrlos juntos",
+            "Calcular la separación usando la ecuación de arco lateral de NFPA 780",
+            "Mover la bajada a otra pared",
+            "Saltárselo — los 6 ft son solo una sugerencia"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Donde 6 ft no es practicable, la distancia de separación se calcula con la ecuación de arco lateral de NFPA 780, no se adivina.",
+          "nec_ref": "800.53"
+        },
+        {
+          "question": "¿Por qué un cable de comunicaciones corriendo paralelo a una bajada recoge energía de rayo?",
+          "choices": [
+            "Contacto directo con la bajada",
+            "Inducción de la corriente de sobretensión en el conductor de bajada",
+            "Acumulación de estática en la cubierta del cable",
+            "Un lazo de tierra a través de la malla del cable"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La sobretensión en la bajada se acopla por inducción a un cable paralelo cercano, por eso la separación — no la unión — es la solución.",
+          "nec_ref": "800.53"
+        }
+      ],
+      "code_refs": [
+        "800.53",
+        "NFPA 780 (ecuación de arco lateral)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "Donde 6 ft no es practicable, la distancia de separación puede calcularse con la ecuación de arco lateral de NFPA 780",
+          "source": "Texto del NEC 2020 de 800.53, Nota Informativa N.º 2 (NEC 2020)",
+          "url": "https://www.yumpu.com/fr/document/view/67330429/nfpa-70-2020-national-electrical-code/669"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C8-800.100",
@@ -971,8 +1532,8 @@
       "article": "800",
       "section": "800.100",
       "title": "Unión y puesta a tierra en la entrada — el corazón del Capítulo 8",
-      "plain_explanation": "Esta es la sección en la que cuelga todo el capítulo. Cubre cómo los cables de comunicaciones y los protectores primarios se unen y se ponen a tierra: las partes metálicas que llegan desde fuera — cubiertas de cable, tierras de protector, pantallas coaxiales manejadas bajo sus propios artículos — tienen que amarrarse al sistema de puesta a tierra del edificio en la entrada. El conductor de unión o de puesta a tierra tiene sus propias reglas para material, tamaño y largo, y para dónde se le permite conectar, que las próximas tres páginas desglosan. Hecho bien, una sobretensión llegando en una línea de teléfono o una pantalla coaxial se lleva a la misma referencia de tierra que la acometida de energía, así que los dos sistemas suben y bajan juntos en vez de chispear a través el uno al otro.",
-      "on_the_job": "Escoge la ubicación del protector y del bloque de puesta a tierra para mantener este conductor tan corto y recto como puedas. Conéctalo en la terminación de unión entre sistemas cuando una está ahí — ese dispositivo existe precisamente para este trabajo (ver 250.94, ítem L-060). Fotografía la unión terminada; es lo primero que un inspector de comunicaciones busca.",
+      "plain_explanation": "Esta es la sección en la que cuelga todo el capítulo. Cubre cómo los cables de comunicaciones y los protectores primarios se unen y se ponen a tierra: las partes metálicas que llegan desde fuera — cubiertas de cable, tierras de protector, pantallas coaxiales manejadas bajo sus propios artículos — tienen que amarrarse al sistema de puesta a tierra del edificio en la entrada. El conductor de unión o de puesta a tierra tiene sus propias reglas, desglosadas en las próximas tres páginas:\n• Material y tamaño: cobre u otro material conductor resistente a la corrosión, no menor de 14 AWG, con capacidad por lo menos igual a la cubierta o conductor que sirve — y nunca se requiere que sea mayor de 6 AWG (800.100(A)).\n• Largo: tan corto como sea practicable; en una vivienda de una o dos familias no puede exceder 20 ft (800.100(A)).\n• Dónde conecta: la primera opción es la terminación de unión entre sistemas; sin una, el sistema de electrodos de puesta a tierra u otro punto accesible que nombra 800.100(B).\n• Un electrodo de comunicaciones separado se permite más allá del límite de largo solo cuando está unido al sistema de puesta a tierra de energía con un conductor no menor de 6 AWG (800.100(D)).\nHecho bien, una sobretensión llegando en una línea de teléfono o una pantalla coaxial se lleva a la misma referencia de tierra que la acometida de energía, así que los dos sistemas suben y bajan juntos en vez de chispear a través el uno al otro.",
+      "on_the_job": "Escoja la ubicación del protector y del bloque de puesta a tierra para mantener este conductor tan corto y recto como pueda. Conéctelo en la terminación de unión entre sistemas cuando una está ahí — ese dispositivo existe precisamente para este trabajo (ver 250.94, ítem L-060). Fotografíe la unión terminada; es lo primero que un inspector de comunicaciones busca.",
       "sharma_note": "S-09 pone el medidor fuera con el tablero directamente detrás de él adentro, donde la casa lo permite. Ese mismo lugar de la acometida es donde pertenece la terminación de unión entre sistemas, así que planea que la unión de comunicaciones conecte en la acometida, no en una varilla cualquiera clavada por el instalador del cable.",
       "figure_idea": "Una pared de acometida de casa en elevación: medidor y tablero espalda con espalda, una terminación de unión entre sistemas junto al medidor, y conductores de unión cortos llegando desde el protector de teléfono y el bloque de puesta a tierra del coaxial.",
       "related_ids": [
@@ -988,7 +1549,106 @@
       "next_id": "C8-800.100(A)",
       "sharma_rule_ids": [
         "S-09"
-      ]
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Dos sistemas con dos tierras separadas es la falla que esta sección previene. Un rayo o una falla puede elevar una tierra miles de volts sobre la otra por una fracción de segundo, y esa diferencia aparece a través del televisor, del módem, y de la persona que toca ambos. Un sistema unido significa una referencia: todo sube y baja junto, y la sobretensión sale por el camino construido para ella.",
+      "exam_trap": "La respuesta trampa es «clave una varilla separada para el sistema de cable y manténgala alejada de la tierra de energía — más limpio así». Al revés. Un electrodo de comunicaciones separado tiene que unirse al sistema de electrodos de puesta a tierra de energía con 6 AWG o mayor (800.100(D)); dos tierras sin unir son el peligro, no la cura. Segunda trampa: dimensionar la unión desde el tamaño de la acometida. El piso es 14 AWG, y nunca tiene que ser mayor de 6 AWG.",
+      "inspection_fails": [
+        "Protector o bloque de puesta a tierra unido a una varilla separada sin unión de vuelta al sistema de puesta a tierra de energía.",
+        "Conductor de unión menor de 14 AWG.",
+        "Conductor de unión largo y serpenteante en una vivienda — sobre el límite de 20 ft.",
+        "Unión conectada en una tubería de agua cualquiera o una terminal al azar en vez de la terminación de unión entre sistemas o un punto que nombra 800.100(B).",
+        "Canalización metálica que lleva el conductor de unión dejada sin unir en un extremo."
+      ],
+      "tables": [
+        {
+          "caption": "El conductor de unión de un vistazo",
+          "headers": [
+            "Ítem",
+            "Regla"
+          ],
+          "rows": [
+            [
+              "Material",
+              "Cobre u otro resistente a la corrosión, listado para el propósito"
+            ],
+            [
+              "Tamaño",
+              "14 AWG mín; nunca se requiere sobre 6 AWG"
+            ],
+            [
+              "Largo",
+              "Tan corto como sea practicable; 20 ft máx en viviendas de 1 y 2 familias"
+            ],
+            [
+              "Primera opción de conexión",
+              "Terminación de unión entre sistemas (250.94)"
+            ],
+            [
+              "Electrodo de comunicaciones separado",
+              "Unir al sistema de tierra de energía, 6 AWG mín"
+            ]
+          ],
+          "note": "El detalle vive en 800.100(A), (B) y (D), en las próximas tres páginas."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c8/C8-800.100-entrance-bond.svg",
+          "alt": "Pared de acometida de una casa en elevación: medidor-principal afuera con el tablero directamente detrás adentro, una terminación de unión entre sistemas junto al medidor, y conductores de unión cortos llegando desde el protector primario de teléfono y el bloque de puesta a tierra del coaxial.",
+          "caption": "Toda parte metálica exterior conecta en un sistema de tierra, en la acometida.",
+          "w": 900,
+          "h": 1600
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Tamaño mínimo del conductor de unión o de puesta a tierra de entrada para un protector primario?",
+          "choices": [
+            "18 AWG",
+            "14 AWG",
+            "10 AWG",
+            "6 AWG"
+          ],
+          "answer_index": 1,
+          "explain_plain": "14 AWG de cobre u otro material resistente a la corrosión — y nunca tiene que ser mayor de 6 AWG.",
+          "nec_ref": "800.100(A)"
+        },
+        {
+          "question": "En una vivienda de una familia, el conductor de unión no puede exceder:",
+          "choices": [
+            "10 ft",
+            "20 ft",
+            "50 ft",
+            "Sin límite"
+          ],
+          "answer_index": 1,
+          "explain_plain": "20 ft en viviendas de una y dos familias, y tan corto como sea practicable en todas partes.",
+          "nec_ref": "800.100(A)"
+        },
+        {
+          "question": "Una varilla de tierra separada clavada para el sistema de comunicaciones se permite solo si está:",
+          "choices": [
+            "Mantenida por lo menos 6 ft de la varilla de energía",
+            "Pintada para identificarla",
+            "Unida al sistema de electrodos de puesta a tierra de energía con 6 AWG o mayor",
+            "Conectada con 14 AWG"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Dos conexiones a tierra sin unir son peores que una; la unión entre ellas es de 6 AWG mínimo.",
+          "nec_ref": "800.100(D)"
+        }
+      ],
+      "code_refs": [
+        "800.100",
+        "800.100(A)",
+        "800.100(B)",
+        "800.100(D)",
+        "250.94"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C8-800.100(A)",
@@ -1019,8 +1679,8 @@
       "article": "800",
       "section": "800.100(B)",
       "title": "Dónde se le permite conectar al conductor de unión",
-      "plain_explanation": "Esta parte lista, en orden, los lugares donde el conductor de unión o de puesta a tierra de la entrada puede terminar. La primera opción es la terminación de unión entre sistemas, si el edificio tiene una. Sin una, conecta en el sistema de electrodos de puesta a tierra del edificio o uno de los puntos de puesta a tierra accesibles que la sección nombra, como el conductor de electrodo de puesta a tierra o el cerramiento del equipo de acometida, siguiendo la lista exacta en la sección impresa. En un edificio sin ningún medio de puesta a tierra, conecta en un electrodo instalado para el propósito — una varilla de por lo menos 5 ft de largo y 1/2 in de diámetro es el mínimo que la sección describe para ese caso.",
-      "on_the_job": "Usa el primer punto de conexión en la lista que el edificio de verdad tiene, y usa el accesible más cercano. No conectes la unión en una tierra de receptáculo cualquiera, una ventilación de plomería, o una varilla que no puedes probar que está unida al sistema de energía. El ítem L-060 (250.94) explica el dispositivo de terminación mismo.",
+      "plain_explanation": "Esta parte lista, en orden, los lugares donde el conductor de unión o de puesta a tierra de la entrada puede terminar.\n• La primera opción es la terminación de unión entre sistemas, si el edificio tiene una.\n• Sin una, conecta en el sistema de electrodos de puesta a tierra del edificio o uno de los puntos de puesta a tierra accesibles que la sección nombra, como el conductor de electrodo de puesta a tierra o el cerramiento del equipo de acometida, siguiendo la lista exacta en la sección impresa.\n• En un edificio sin ningún medio de puesta a tierra, conecta en un electrodo instalado para el propósito — una varilla de por lo menos 5 ft de largo y 1/2 in de diámetro es el mínimo que la sección describe para ese caso.",
+      "on_the_job": "Casa adosada nueva en Winter Garden: el meter-main Siemens tiene una terminación de unión entre sistemas, así que las uniones de cable y teléfono conectan ahí — primera opción, listo. En una casa ranch más vieja en Orlando sin IBT, conecte en el conductor de electrodo de puesta a tierra en la acometida, el punto accesible más cercano de la lista. Use el primer punto de conexión en la lista que el edificio de verdad tiene, y use el accesible más cercano. No conecte la unión en una tierra de receptáculo cualquiera, una ventilación de plomería, o una varilla que no puede probar que está unida al sistema de energía. El ítem L-060 (250.94) explica el dispositivo de terminación mismo.",
       "sharma_note": "",
       "figure_idea": "Una gráfica de escalera de decisión: terminación de unión entre sistemas arriba, luego los puntos del sistema de electrodos de puesta a tierra del edificio, luego un electrodo nuevo abajo para edificios sin medio de puesta a tierra.",
       "related_ids": [
@@ -1032,7 +1692,100 @@
       "verified": true,
       "prev_id": "C8-800.100(A)",
       "next_id": "C8-800.100(D)",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Cada entrada de comunicaciones tiene que terminar en la misma referencia eléctrica que el sistema de energía. Si la planta de cable se une a un punto y el sistema de energía a otro, un rayo o una falla pone la diferencia entre esos puntos a través del equipo — y a través de cualquiera que toque ambos. La lista ordenada existe para que el instalador tome la mejor conexión disponible en vez de inventar una.",
+      "inspection_fails": [
+        "Unión conectada en una tierra de receptáculo o un tubo de agua en vez de un punto de la lista de 800.100(B).",
+        "Varilla nueva clavada en la entrada del cable mientras el sistema de electrodos de puesta a tierra del edificio queda sin usar.",
+        "Varilla instalada para el propósito más corta de 5 ft o menor de 1/2 in de diámetro.",
+        "Unión conectada en una varilla sin prueba de que está unida al sistema de electrodos de puesta a tierra de energía.",
+        "IBT presente en el meter-main pero la unión corrida más allá hasta un punto más lejos."
+      ],
+      "exam_trap": "La trampa es clavar una varilla nueva donde entra el cable y llamarlo puesto a tierra. Una varilla instalada para el propósito es la última conexión de la lista, para un edificio sin ningún medio de puesta a tierra — y de por lo menos 5 ft de largo y 1/2 in de diámetro. Si el edificio tiene un sistema de electrodos de puesta a tierra, la unión pertenece en la lista, no en una varilla nueva suya.",
+      "tables": [
+        {
+          "caption": "La escalera de conexión, en orden",
+          "headers": [
+            "Orden",
+            "Punto de conexión",
+            "Cuándo"
+          ],
+          "rows": [
+            [
+              "1",
+              "Terminación de unión entre sistemas",
+              "Si el edificio tiene una"
+            ],
+            [
+              "2",
+              "Puntos del sistema de electrodos",
+              "GES, GEC o cerramiento de acometida"
+            ],
+            [
+              "3",
+              "Electrodo instalado para el propósito",
+              "Sin ningún medio de puesta a tierra"
+            ]
+          ],
+          "note": "Tome la primera conexión que el edificio de verdad tiene, y la accesible más cercana. Varilla para el propósito mínimo: 5 ft × 1/2 in."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c8/C8-800.100B-landing-ladder.svg",
+          "alt": "Escalera de decisión para el conductor de unión de la entrada: primero la terminación de unión entre sistemas, luego los puntos del sistema de electrodos de puesta a tierra, y al final un electrodo instalado para el propósito de por lo menos 5 ft por 1/2 in.",
+          "caption": "La escalera de conexión: tome el primer punto que el edificio tiene.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Primera opción de conexión para el conductor de unión de la entrada?",
+          "choices": [
+            "Una varilla de tierra nueva en la entrada",
+            "La terminación de unión entre sistemas, si está presente",
+            "Cualquier tierra de receptáculo",
+            "El sistema de tubería de agua"
+          ],
+          "answer_index": 1,
+          "explain_plain": "800.100(B) pone la terminación de unión entre sistemas primera en la lista, cuando el edificio tiene una.",
+          "nec_ref": "800.100(B)"
+        },
+        {
+          "question": "Un edificio no tiene ningún medio de puesta a tierra, así que la unión conecta en un electrodo instalado para el propósito. ¿Varilla mínima?",
+          "choices": [
+            "8 ft de largo, 5/8 in de diámetro",
+            "5 ft de largo, 1/2 in de diámetro",
+            "4 ft de largo, 3/8 in de diámetro",
+            "Cualquier varilla clavada"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El mínimo que la sección describe para ese caso es una varilla de por lo menos 5 ft de largo y 1/2 in de diámetro.",
+          "nec_ref": "800.100(B)"
+        },
+        {
+          "question": "El edificio tiene un IBT y un sistema de electrodos de puesta a tierra. ¿Dónde conecta la unión?",
+          "choices": [
+            "En una varilla nueva que usted clava",
+            "Solo en el GES",
+            "En el IBT — primero en la lista",
+            "En cualquiera, a elección del instalador"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La lista está en orden: use el primer punto de conexión que el edificio de verdad tiene, y el accesible más cercano.",
+          "nec_ref": "800.100(B)"
+        }
+      ],
+      "code_refs": [
+        "800.100(B)",
+        "800.100(A)",
+        "250.94"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C8-800.100(D)",
@@ -1040,8 +1793,8 @@
       "article": "800",
       "section": "800.100(D)",
       "title": "Unir un electrodo de comunicaciones separado de vuelta al sistema de energía",
-      "plain_explanation": "A veces el conductor de unión no puede quedarse dentro de su límite de largo — el caso clásico de casa es la excepción que deja clavar una varilla de tierra separada para el sistema de comunicaciones cuando el tramo pasaría de 20 ft. Ese electrodo separado nunca puede quedarse solo. Tiene que unirse al sistema de electrodos de puesta a tierra de energía del edificio con un conductor no menor de 6 AWG. Dos conexiones a tierra sin unir en una casa son peores que una, porque una sobretensión puede poner miles de volts entre ellas, justo a través del equipo adentro.",
-      "on_the_job": "Si clavas una varilla para la entrada de teléfono o coaxial, el trabajo no está terminado hasta que la unión de 6 AWG de vuelta al sistema de puesta a tierra de energía esté puesta. La misma regla de unión de 6 AWG aparece de nuevo para antenas en 810.21(J) y para CATV en 820.100(D) — apréndela una vez, úsala tres veces.",
+      "plain_explanation": "A veces el conductor de unión de una entrada de comunicaciones no puede quedarse dentro de su límite de largo — en una vivienda, 800.100(A) limita ese tramo a 20 ft. Cuando no se puede, se puede clavar una varilla de tierra separada para el sistema de comunicaciones en la entrada. La Sección 800.100(D) agrega entonces la condición que hace seguro ese electrodo separado:\n• El electrodo separado nunca puede quedarse solo\n• Tiene que unirse al sistema de electrodos de puesta a tierra de energía del edificio\n• El conductor de unión no es menor de 6 AWG\nDos conexiones a tierra sin unir en una casa son peores que una, porque una sobretensión puede poner miles de volts entre ellas, justo a través del equipo adentro.",
+      "on_the_job": "Casa de dos pisos en Orlando: el medidor principal está en la pared oeste y el demarc de cable y teléfono en la pared este, a unos 34 ft de recorrido del conductor de unión — más allá del límite de 20 ft para viviendas. Clavamos una varilla en el demarc, aterrizamos en ella la unión del protector, y después corremos una unión de cobre de 6 AWG desde esa varilla de vuelta al sistema de electrodos de puesta a tierra de energía en el medidor principal. La misma regla de unión de 6 AWG aparece de nuevo para antenas en 810.21(J) y para CATV en 820.100(D) — apréndala una vez, úsela tres veces.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1052,7 +1805,96 @@
       "verified": true,
       "prev_id": "C8-800.100(B)",
       "next_id": "C8-800.106",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "La tierra no está a un voltaje uniforme durante un rayo o una sobretensión de la compañía. Dos varillas separadas pueden quedar a potenciales muy distintos en el instante que importa, y la diferencia aparece entre el blindaje del coaxial y la tierra de energía dentro de un televisor o un módem. La unión de 6 AWG obliga a los dos sistemas a subir y bajar juntos, para que esa diferencia nunca aparezca a través del equipo.",
+      "exam_trap": "La respuesta trampa es «la varilla separada es la tierra de comunicaciones, así que el trabajo está terminado». Un electrodo separado por sí solo es exactamente lo que 800.100(D) prohíbe: la varilla se permite solo con la unión de 6 AWG de vuelta al sistema de energía. La segunda trampa es el tamaño: 14 AWG es el piso para el conductor de unión del protector en 800.100(A), pero la unión de electrodo a sistema en (D) es de 6 AWG mínimo.",
+      "tables": [
+        {
+          "caption": "Una regla, tres sistemas",
+          "headers": [
+            "Sistema",
+            "Unión del electrodo separado"
+          ],
+          "rows": [
+            [
+              "Comunicaciones — 800.100(D)",
+              "6 AWG mín. al GES de energía"
+            ],
+            [
+              "Antenas — 810.21(J)",
+              "6 AWG mín. al GES de energía"
+            ],
+            [
+              "CATV — 820.100(D)",
+              "6 AWG mín. al GES de energía"
+            ]
+          ],
+          "note": "El electrodo separado se permite. Quedarse solo, no."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c8/C8-800.100D-two-rods-bond.svg",
+          "alt": "Plano de una casa con el medidor principal y la varilla del electrodo de puesta a tierra de energía en la pared oeste y la entrada de comunicaciones con su propia varilla de tierra separada en la pared este, las dos varillas unidas por un conductor de unión de 6 AWG, más un panel de advertencia sobre varillas sin unir en una sobretensión.",
+          "caption": "Varilla separada en el demarc, unida de vuelta al GES de energía con 6 AWG — el paquete de 800.100(D).",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "inspection_fails": [
+        "Varilla clavada en la entrada de cable y dejada sin unir — ningún conductor de vuelta al sistema de electrodos de puesta a tierra de energía.",
+        "Unión entre la varilla de comunicaciones y el sistema de energía menor de 6 AWG.",
+        "Protector unido solo a la varilla separada, tratando esa varilla como la tierra del edificio.",
+        "Conductor de unión corrido más allá del límite de 20 ft para viviendas sin instalar el electrodo separado — no se siguió ninguna de las dos vías de 800.100."
+      ],
+      "page_quiz": [
+        {
+          "question": "Se clava una varilla de tierra separada para una entrada de comunicaciones. ¿Qué exige 800.100(D) después?",
+          "choices": [
+            "Nada — la varilla es la tierra",
+            "Unirla al sistema de electrodos de puesta a tierra de energía con 6 AWG mínimo",
+            "Unirla con 14 AWG mínimo",
+            "Conectarla solo si los dos sistemas comparten equipo"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Un electrodo de comunicaciones separado tiene que unirse al sistema de electrodos de puesta a tierra de energía del edificio con un conductor no menor de 6 AWG.",
+          "nec_ref": "800.100(D)"
+        },
+        {
+          "question": "¿Por qué una segunda varilla sin unir es peor que ninguna?",
+          "choices": [
+            "Atrae los rayos a la casa",
+            "Una sobretensión puede poner miles de volts entre las dos conexiones a tierra, a través del equipo adentro",
+            "Anula la garantía de la compañía de cable",
+            "Sube el voltaje del servicio"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Durante una sobretensión, los dos electrodos sin unir pueden quedar a potenciales muy distintos, y la diferencia cae a través del equipo conectado a ambos sistemas.",
+          "nec_ref": "800.100(D)"
+        },
+        {
+          "question": "En una vivienda, ¿pasado qué largo del conductor de unión entra en juego la vía del electrodo separado?",
+          "choices": [
+            "10 ft",
+            "20 ft",
+            "25 ft",
+            "50 ft"
+          ],
+          "answer_index": 1,
+          "explain_plain": "800.100(A) limita el tramo del conductor de unión en viviendas a 20 ft; cuando eso no se puede cumplir, la vía es el electrodo separado de 800.100(D) — con su unión de 6 AWG.",
+          "nec_ref": "800.100(A), (D)"
+        }
+      ],
+      "code_refs": [
+        "800.100(A)",
+        "800.100(D)",
+        "810.21(J)",
+        "820.100(D)"
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C8-800.106",
@@ -1232,8 +2074,8 @@
       "article": "800",
       "section": "800.133(A)(1)",
       "title": "Compartir una canalización, caja o cerramiento con energía",
-      "plain_explanation": "Los conductores de comunicaciones no se permiten en la misma canalización, caja o cerramiento que los conductores de luz eléctrica, energía, Clase 1 o alarma de incendios no limitada en energía como regla general. Las excepciones son estrechas. Compartir se permite donde los dos sistemas están separados por una barrera permanente o un divisor listado, y los conductores de energía pueden traerse a un cerramiento de comunicaciones solo para alimentar el equipo de comunicaciones mismo, ruteados dentro del cerramiento para mantener por lo menos 1/4 in (6 mm) de separación del cableado de comunicaciones (800.133(A)(1), Excepción No. 2). Una caja compartida con un divisor listado es un producto diseñado, no dos cables metidos en una caja conveniente.",
-      "on_the_job": "Respuesta por defecto en el sitio: cajas separadas, canalizaciones separadas. Si un plano muestra una caja dividida, verifica que el divisor sea el listado hecho para esa caja antes del despiece, no después de que el drywall esté puesto. La cifra de 1/4 in (6 mm) dentro de un cerramiento de equipo no es permiso para mezclar sistemas en una caja de empalme.",
+      "plain_explanation": "Los conductores de comunicaciones no se permiten en la misma canalización, caja o cerramiento que los conductores de luz eléctrica, energía, Clase 1 o alarma de incendios no limitada en energía como regla general. Las excepciones son estrechas:\n• Compartir se permite donde los dos sistemas están separados por una barrera permanente o un divisor listado.\n• Los conductores de energía pueden traerse a un cerramiento de comunicaciones solo para alimentar el equipo de comunicaciones mismo, ruteados dentro del cerramiento para mantener por lo menos 1/4 in (6 mm) de separación del cableado de comunicaciones (800.133(A)(1), Excepción No. 2).\nUna caja compartida con un divisor listado es un producto diseñado, no dos cables metidos en una caja conveniente.",
+      "on_the_job": "Panel de cableado estructurado en una casa en Lake Nona: el panel necesita un receptáculo adentro para alimentar el switch y el módem. Esa alimentación de energía puede entrar al cerramiento de comunicaciones porque alimenta el equipo de comunicaciones mismo — y adentro, la ruteamos apartada del paquete de Cat 6, manteniendo por lo menos 1/4 in (6 mm) de separación. Respuesta por defecto en el sitio: cajas separadas, canalizaciones separadas. Si un plano muestra una caja dividida, verifique que el divisor sea el listado hecho para esa caja antes del despiece, no después de que el drywall esté puesto.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1244,7 +2086,105 @@
       "verified": true,
       "prev_id": "C8-800.133",
       "next_id": "C8-800.133(A)(2)",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "La aislación de los cables de comunicaciones no está clasificada para quedar contra conductores de energía, y una falla en el lado de energía puede poner voltaje de línea en un cable que corre a cada cuarto y sale a la planta de la calle. Mezclar los sistemas en una canalización o caja también pone una sorpresa de voltaje de línea frente al próximo técnico que abre la caja esperando trabajo de bajo voltaje. La barrera y el divisor son lo que hace segura la excepción.",
+      "inspection_fails": [
+        "Cat 6 y un circuito ramal de 120 V jalados en el mismo conduit «porque el tramo era corto».",
+        "Cables de energía y de comunicaciones conectados en una caja común sin barrera ni divisor listado.",
+        "Divisor encajado de otra línea de cajas: no es el divisor listado hecho para esa caja.",
+        "Alimentación de energía dentro del panel de cableado estructurado amarrada apretada contra el paquete de Cat 6, sin la separación de 1/4 in.",
+        "Conductores de alarma de incendios no limitada en energía compartiendo una canalización con cables de comunicaciones."
+      ],
+      "exam_trap": "La trampa es leer la cifra de 1/4 in (6 mm) como un permiso general para mezclar: «mantenga un cuarto de pulgada de separación y puede compartir la caja». Incorrecto. La separación de 1/4 in pertenece a la Excepción No. 2, dentro de un cerramiento de comunicaciones, solo para la energía que alimenta ese equipo. Una caja de empalme compartida sin barrera permanente o divisor listado falla la regla general.",
+      "tables": [
+        {
+          "caption": "Compartir con energía: qué pasa",
+          "headers": [
+            "Arreglo",
+            "Veredicto",
+            "Base"
+          ],
+          "rows": [
+            [
+              "Misma canalización o caja, nada entre medio",
+              "No permitido",
+              "Regla general"
+            ],
+            [
+              "Barrera permanente o divisor listado",
+              "Permitido",
+              "Excepción"
+            ],
+            [
+              "Energía al cerramiento de comunicaciones, alimenta ese equipo",
+              "Permitido, ≥ 1/4 in (6 mm) de separación",
+              "Excepción No. 2"
+            ],
+            [
+              "Energía al cerramiento de comunicaciones, alimenta otras cargas",
+              "No permitido",
+              "Regla general"
+            ]
+          ],
+          "note": "La cifra de 1/4 in vive solo dentro de cerramientos de equipo — no es un permiso para cajas de empalme."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c8/C8-800.133A1-shared-box.svg",
+          "alt": "Una caja compartida por conductores de energía y de comunicaciones con un divisor listado, una caja compartida sin barrera marcada no permitida, y la Excepción No. 2 dentro de un cerramiento con separación de 1/4 in (6 mm).",
+          "caption": "Divisor, barrera o la excepción estrecha del cerramiento — nada más.",
+          "w": 900,
+          "h": 1320
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Conductores de comunicaciones en la misma canalización que conductores de energía?",
+          "choices": [
+            "Siempre permitido si están aislados",
+            "Permitido donde están separados por una barrera permanente o un divisor listado",
+            "Permitido si es menos de 10 ft",
+            "Permitido solo en viviendas"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La regla general prohíbe compartir; la barrera o el divisor listado es la excepción que lo permite.",
+          "nec_ref": "800.133(A)(1)"
+        },
+        {
+          "question": "Dentro de un cerramiento de comunicaciones, la energía que alimenta el equipo de comunicaciones debe mantener ¿qué separación del cableado de comunicaciones?",
+          "choices": [
+            "No necesita separación",
+            "Por lo menos 1/4 in (6 mm)",
+            "Por lo menos 2 in",
+            "Por lo menos 6 in"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La Excepción No. 2 permite la energía solo para alimentar ese equipo, ruteada para mantener por lo menos 1/4 in (6 mm) de separación.",
+          "nec_ref": "800.133(A)(1) Ex. No. 2"
+        },
+        {
+          "question": "Una caja dividida pasa cuando el divisor es:",
+          "choices": [
+            "Cualquier partición de plástico",
+            "El divisor listado hecho para esa caja",
+            "Pegado con cinta en su lugar",
+            "Removido después de la inspección"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Una caja compartida con un divisor listado es un producto diseñado: el divisor tiene que ser el listado hecho para esa caja.",
+          "nec_ref": "800.133(A)(1)"
+        }
+      ],
+      "code_refs": [
+        "800.133(A)(1)",
+        "800.133(A)(2)",
+        "800.133"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C8-800.133(A)(2)",
@@ -1294,8 +2234,8 @@
       "article": "800",
       "section": "800.179",
       "title": "Los tipos de cable mismos — CMP, CMR, CMG, CM, CMX",
-      "plain_explanation": "Esta sección define los tipos de cable de comunicaciones listados por cómo se comportan en el fuego. El Tipo CMP es el tipo plenum, probado para baja propagación de llama y humo en espacios de manejo de aire. El Tipo CMR es el tipo riser, para tramos verticales entre pisos, y los Tipos CMG y CM son tipos de propósito general para tramos horizontales ordinarios. El Tipo CMX es el tipo de uso limitado, restringido en tamaño y uso, y en casa principalmente en viviendas de una y dos familias. Los conductores en estos cables son cobre, excepto en construcciones coaxiales manejadas bajo el Artículo 820. Las letras no dicen nada sobre velocidad o categoría — un Cat 5e CMP y un Cat 6 CM se clasifican por comportamiento en fuego, no por rendimiento.\n\nCAMBIO NEC 2023:\n• 800.179: Se trasladaron los requisitos generales de los cables híbridos de energía y comunicaciones al Artículo 800, junto con los demás tipos de cable de comunicaciones.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Lee la cubierta antes de halar: las letras del tipo deciden dónde puede ir el cable, y la marca de categoría decide qué puede llevar. No dejes que un rollo barato de CMX te convenza a un riser comercial. Mantén una regla de estante en tu cabeza: espacio plenum, CMP; entre pisos, CMR; mismo piso, CM o CMG; casa, CM o CMX dentro de sus límites.",
+      "plain_explanation": "Esta sección define los tipos de cable de comunicaciones listados por cómo se comportan en el fuego. El Tipo CMP es el tipo plenum, probado para baja propagación de llama y humo en espacios de manejo de aire. El Tipo CMR es el tipo riser, para tramos verticales entre pisos, y los Tipos CMG y CM son tipos de propósito general para tramos horizontales ordinarios. El Tipo CMX es el tipo de uso limitado, restringido en tamaño y uso, y en casa principalmente en viviendas de una y dos familias. Los conductores en estos cables son cobre, excepto en construcciones coaxiales manejadas bajo el Artículo 820. Las letras no dicen nada sobre velocidad o categoría — un Cat 5e CMP y un Cat 6 CM se clasifican por comportamiento en fuego, no por rendimiento.\nLas sustituciones corren solo hacia abajo (800.154):\n• CMP puede reemplazar a cualquier tipo debajo de él.\n• CMR puede reemplazar a CMG, CM o CMX.\n• CMG puede reemplazar a CM o CMX, y CM puede reemplazar a CMX.\n• Nada sustituye hacia arriba — CMX nunca reemplaza a CM, y CM nunca va en un riser ni en un plenum.",
+      "on_the_job": "Lea la cubierta antes de tender el cable: las letras del tipo deciden dónde puede ir el cable, y la marca de categoría decide qué puede llevar. No deje que un rollo barato de CMX lo convenza para un riser comercial. Mantenga una regla de estante en su cabeza: espacio plenum, CMP; entre pisos, CMR; mismo piso, CM o CMG; casa, CM o CMX dentro de sus límites.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1316,7 +2256,109 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 800.179: Se trasladaron los requisitos generales de los cables híbridos de energía y comunicaciones al Artículo 800, junto con los demás tipos de cable de comunicaciones.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "En un incendio, el cable es una mecha que corre a través de todo el edificio. La cubierta equivocada lleva la llama de piso en piso a través de un riser, y el cable quemándose en un espacio de manejo de aire pone el humo directo en el aire respirable de cada cuarto que el sistema sirve. La escalera de tipos existe para que el cable en cada espacio haya sido probado para exactamente la forma en que el fuego y el humo se comportan en ese espacio.",
+      "exam_trap": "La respuesta trampa es «Cat 6 supera a Cat 5e, así que un Cat 6 CM puede ir en el plenum donde se especificó Cat 5e CMP». La categoría es rendimiento; las letras del tipo son comportamiento en fuego. Un cable CM en un plenum falla sin importar lo que pueda llevar. Segunda trampa: leer CMX como un tipo comercial general. Es de uso limitado, y en casa principalmente en viviendas de una y dos familias.",
+      "inspection_fails": [
+        "Cable CM o CMG instalado en un eje riser entre pisos.",
+        "Cable CMR tendido expuesto en un techo de manejo de aire (plenum).",
+        "Cable CMX usado para un tramo comercial general.",
+        "Impresión de cubierta ilegible o cable sin marcas instalado como si estuviera listado.",
+        "Construcción tipo coaxial supuesta bajo las letras de tipo del par trenzado."
+      ],
+      "tables": [
+        {
+          "caption": "Los cinco tipos (800.179)",
+          "headers": [
+            "Tipo",
+            "Dónde corre"
+          ],
+          "rows": [
+            [
+              "CMP",
+              "Plenums y espacios de manejo de aire; dondequiera que corran los tipos menores"
+            ],
+            [
+              "CMR",
+              "Risers — tramos verticales entre pisos"
+            ],
+            [
+              "CMG",
+              "Propósito general, tramos horizontales ordinarios"
+            ],
+            [
+              "CM",
+              "Propósito general, tramos horizontales ordinarios"
+            ],
+            [
+              "CMX",
+              "Uso limitado — principalmente viviendas de 1 y 2 familias"
+            ]
+          ],
+          "note": "Los conductores son cobre, excepto en construcciones coaxiales manejadas bajo el Artículo 820."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c8/C8-800.179-cable-ladder.svg",
+          "alt": "Escalera de sustitución de los cinco tipos de cable de comunicaciones: CMP para plenums arriba, luego CMR para risers, CMG y CM para propósito general, y CMX para uso limitado abajo, con una flecha verde mostrando sustitución solo hacia abajo y una flecha roja tachada hacia arriba.",
+          "caption": "Los tipos mayores pueden sustituir hacia abajo. Nada sustituye hacia arriba.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un tramo vertical entre pisos de una oficina requiere por lo menos ¿qué tipo de cable?",
+          "choices": [
+            "CMX",
+            "CM",
+            "CMR",
+            "Cualquier tipo listado"
+          ],
+          "answer_index": 2,
+          "explain_plain": "CMR es el tipo riser. CMP puede sustituir hacia abajo dentro del riser, pero CM, CMG y CMX no pueden ir ahí.",
+          "nec_ref": "800.179"
+        },
+        {
+          "question": "Las letras CMP, CMR y CM en una cubierta le dicen:",
+          "choices": [
+            "La velocidad de datos que el cable puede llevar",
+            "El comportamiento en fuego del cable y dónde puede correr",
+            "El tamaño del conductor",
+            "Si el cable es blindado"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Las letras del tipo son un listado de fuego. Las marcas de categoría — Cat 5e, Cat 6 — son la clasificación de rendimiento.",
+          "nec_ref": "800.179"
+        },
+        {
+          "question": "¿Qué sustitución está permitida?",
+          "choices": [
+            "CM en lugar de CMP en un plenum",
+            "CMX en lugar de CM en un piso comercial",
+            "CMP en lugar de CMR en un riser",
+            "CMR en lugar de CMP en un plenum"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Las sustituciones corren solo hacia abajo: un tipo de clasificación mayor puede reemplazar a uno menor, nunca al revés.",
+          "nec_ref": "800.154"
+        }
+      ],
+      "code_refs": [
+        "800.179",
+        "800.154"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "Jerarquía de sustitución: CMP puede reemplazar a cualquier tipo menor; CMR puede reemplazar a CMG, CM o CMX; CMG puede reemplazar a CM o CMX; CM puede reemplazar a CMX; nada sustituye hacia arriba.",
+          "source": "Liberty Wire & Cable, NEC Cable Substitution and Hierarchy Chart (Catalog #817), resumido en SystemStackHQ",
+          "url": "https://www.systemstackhq.com/protocols/nec-communications-cable-ratings/"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C8-800.180",
@@ -1620,8 +2662,8 @@
       "article": "805",
       "section": "805.90",
       "title": "Protectores primarios — dónde se requieren y dónde van",
-      "plain_explanation": "Un protector primario listado se requiere en cada circuito de comunicaciones que está expuesto a rayos o a posible contacto con conductores de energía operando sobre el umbral que la sección fija. El protector es un descargador conectado entre cada conductor de línea y tierra, montado como el listado dirige, con sus terminales marcadas para línea y tierra. Tiene que sentarse en, sobre, o inmediatamente junto al edificio servido, tan cerca como sea practicable de donde el circuito entra, y no debe colocarse en una ubicación peligrosa (clasificada) ni cerca de material fácilmente ignitable. La sección también reconoce diseños de protector con fusible y sin fusible y provee protectores secundarios adentro, en serie entre el protector primario y el equipo.",
-      "on_the_job": "Tierra de protector corta, problema corto: monta el protector en la entrada y únelos bajo 800.100 con el tramo honesto más corto. Si un circuito llega sin protector y está expuesto, eso es un ítem de alto y llamada para el proveedor o el líder — no un detalle para pasar en el acabado.",
+      "plain_explanation": "Se requiere un protector primario listado en cada circuito de comunicaciones que está expuesto a rayos, o expuesto a contacto accidental con conductores de energía que operan a más de 300 volts a tierra. El protector es un descargador conectado entre cada conductor de línea y tierra, montado como lo indica su listado, con sus terminales marcadas para línea y tierra.\n• Se ubica en, sobre, o inmediatamente junto al edificio servido, tan cerca como sea practicable del punto donde el circuito entra.\n• Nunca va en una ubicación peligrosa (clasificada), ni cerca de material fácilmente ignitable.\n• La sección reconoce diseños con fusible y sin fusible; un protector sin fusible se permite solo donde se cumplen las condiciones que la sección enumera.\n• Los protectores secundarios pueden agregarse adentro, en serie entre el protector primario y el equipo que sirve.",
+      "on_the_job": "Las bajadas aéreas de teléfono y coaxial llegan a una casa de Winter Garden en la misma pared que el medidor-principal Siemens. Monte el protector primario listado en su cerramiento justo en la entrada, junto a la acometida, y únelo bajo 800.100 con el tramo honesto más corto a la terminación de unión entre sistemas — tierra de protector corta, problema corto. Si un circuito llega expuesto sin protector, eso es un ítem de alto y llamada para el proveedor o el líder, no un detalle para pasar por alto en el acabado.",
       "sharma_note": "",
       "figure_idea": "Un detalle de entrada: cable de bajada llegando, un protector primario listado en un cerramiento pequeño junto a la acometida, y su conductor de unión bajando recto a la terminación de unión entre sistemas.",
       "related_ids": [
@@ -1633,7 +2675,110 @@
       "verified": true,
       "prev_id": "C8-805.50",
       "next_id": "C8-805.93",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Una bajada exterior es un conductor largo colgando a la intemperie. Recoge la energía de los rayos y, si un soporte falla, puede caer sobre un conductor de energía. Sin un descargador en la entrada, esa energía viaja por el par directo al sistema telefónico, al equipo de red, y a cualquiera que lo toque. El protector le da a la sobretensión un camino corto y deliberado a tierra en la puerta, en vez de a través del edificio.",
+      "exam_trap": "La respuesta trampa es «el protector puede ir en cualquier parte adentro, mientras esté antes del equipo». La ubicación es parte de la regla: en, sobre, o inmediatamente junto al edificio, tan cerca como sea practicable de la entrada, y nunca en una ubicación clasificada. Segunda trampa: escoger un protector sin fusible porque es más barato. El diseño sin fusible se permite solo bajo las condiciones que enumera 805.90, no como una elección libre.",
+      "inspection_fails": [
+        "Circuito aéreo expuesto conectado al bloque sin ningún protector primario.",
+        "Protector montado muy adentro del edificio, lejos del punto de entrada.",
+        "Protector instalado en una ubicación clasificada o junto a pintura y solventes almacenados.",
+        "Protector sin fusible usado donde no se cumple ninguna de las condiciones de 805.90 para diseños sin fusible.",
+        "Terminales del protector conectadas al revés — ignoradas las marcas de línea y tierra."
+      ],
+      "tables": [
+        {
+          "caption": "El paquete del protector (805.90)",
+          "headers": [
+            "Parte",
+            "Regla"
+          ],
+          "rows": [
+            [
+              "Dispositivo",
+              "Protector primario listado (descargador)"
+            ],
+            [
+              "Conexión",
+              "Entre cada conductor de línea y tierra"
+            ],
+            [
+              "Ubicación",
+              "En, sobre, o junto al edificio, en la entrada"
+            ],
+            [
+              "Mantener alejado de",
+              "Ubicaciones clasificadas, material fácilmente ignitable"
+            ],
+            [
+              "Opción interior",
+              "Protector secundario en serie, después del primario"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c8/C8-805.90-protector-entrance.svg",
+          "alt": "Elevación de entrada: una bajada aérea llegando a la pared de una casa, un protector primario listado en un cerramiento pequeño en el punto de entrada, y su conductor de unión bajando recto a la terminación de unión entre sistemas junto al medidor-principal.",
+          "caption": "El protector vive en la entrada, unido corto y recto.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un circuito de comunicaciones está expuesto a contacto accidental con conductores de energía que operan a 480 volts a tierra. ¿Qué requiere 805.90?",
+          "choices": [
+            "Nada — los circuitos de comunicaciones son de bajo voltaje",
+            "Un protector primario listado en el circuito",
+            "Solo un protector secundario en el equipo",
+            "Protección GFCI para el circuito"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La exposición a contacto con conductores de energía a más de 300 volts a tierra es uno de los dos disparadores; la exposición a rayos es el otro.",
+          "nec_ref": "805.90(A)"
+        },
+        {
+          "question": "¿Dónde va el protector primario?",
+          "choices": [
+            "En cualquier parte adentro, antes del equipo",
+            "Solo en el cuarto de comunicaciones",
+            "En, sobre, o inmediatamente junto al edificio, tan cerca como sea practicable de la entrada",
+            "En una ubicación clasificada, si está listado"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La ubicación es parte de la regla, y las ubicaciones clasificadas y el material fácilmente ignitable están prohibidos.",
+          "nec_ref": "805.90"
+        },
+        {
+          "question": "Un protector primario sin fusible se permite:",
+          "choices": [
+            "Dondequiera que se permita uno con fusible",
+            "Solo donde se cumplen las condiciones enumeradas en 805.90",
+            "Nunca — los protectores sin fusible están prohibidos",
+            "Solo en exteriores"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La sección reconoce ambos diseños, pero el diseño sin fusible es condicional.",
+          "nec_ref": "805.90"
+        }
+      ],
+      "code_refs": [
+        "805.90",
+        "805.93",
+        "800.100",
+        "250.94"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "Se requiere un protector primario listado donde un circuito está expuesto a contacto accidental con conductores de energía que operan a más de 300 volts a tierra.",
+          "source": "Installer/Tech 2 2020 Lesson 9 Q&A, citando NEC 805.90(A) (Stuvia)",
+          "url": "https://www.stuvia.com/en-us/doc/8266694/installertech-2-2020-lesson-9-questions-with-verified-answers"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C8-805.93",
@@ -1753,8 +2898,8 @@
       "article": "805",
       "section": "805.156",
       "title": "Una salida de comunicaciones en cada vivienda nueva",
-      "plain_explanation": "Para construcción nueva, cada unidad de vivienda recibe por lo menos una salida de comunicaciones, instalada en un área fácilmente accesible dentro de la vivienda y cableada de vuelta al punto de demarcación del proveedor de servicio. Esta es la regla que solía vivir en 800.156 antes de que la reorganización de 2020 la moviera aquí, por lo que las listas de verificación y guías de estudio más viejas todavía citan el número viejo. Una salida es el piso, no un diseño: los constructores de Sharma rutinariamente quieren datos y coaxial en varios cuartos, pero el mínimo propio del Código es esta única salida cableada y accesible.",
-      "on_the_job": "Haz el despiece aunque el comprador no haya escogido un proveedor — una salida cableada en el demarc es el requisito, no un tono de marcado vivo. Ponla en algún lugar genuinamente accesible, no enterrada detrás de un aparato fijo. Y cuando una lista de verificación vieja de Sharma dice 800.156, tradúcelo: en el libro de 2020 es 805.156.",
+      "plain_explanation": "Para construcción nueva, cada unidad de vivienda recibe por lo menos una salida de comunicaciones. La regla lleva tres condiciones:\n• La salida se instala dentro de la vivienda, en un área fácilmente accesible\n• Va cableada de vuelta al punto de demarcación del proveedor de servicio\n• Se deja instalada en el despiece aunque todavía no se haya escogido un proveedor\nEsta es la regla que solía vivir en 800.156 antes de que la reorganización de 2020 la moviera a 805.156, por lo que las listas de verificación y guías de estudio más viejas todavía citan el número viejo. Una salida es el piso, no un diseño: los constructores de Sharma rutinariamente quieren datos y coaxial en varios cuartos, pero el mínimo propio del Código es esta única salida, cableada y accesible.",
+      "on_the_job": "Casa nueva de losa en Kissimmee: el demarc queda en la pared del garaje, donde llegan las acometidas del proveedor. Desde ahí corremos un tramo principal de Cat 6 — unos 55 ft — hasta una salida de comunicaciones en la pared de la sala, en un tramo abierto al que el dueño llega sin mover muebles. El plano del constructor agrega coaxial y datos a los cuartos y a la oficina, y esos también se dejan en el despiece, pero si el plano no mostrara nada, la única salida de la sala es lo que el inspector busca. Déjela instalada aunque el comprador no haya escogido proveedor: el requisito es una salida cableada en el demarc, no un tono de marcado vivo. Y cuando una lista vieja de Sharma diga 800.156, tradúzcalo: en el libro de 2020 es 805.156.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1765,7 +2910,97 @@
       "verified": true,
       "prev_id": "C8-805.93",
       "next_id": "C8-ART-810",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Una vivienda sin ninguna salida de comunicaciones cableada es una casa que los instaladores de teléfono e internet tienen que reformar después — cableado superficial, pisos perforados, o un servicio solo inalámbrico que el dueño nunca escogió. La regla trata una salida como infraestructura básica que se instala mientras las paredes están abiertas, porque agregarla después del panel de yeso cuesta mucho más y casi siempre se nota.",
+      "exam_trap": "La trampa es el número viejo y la cuenta equivocada. Una respuesta que cita 800.156 está citando el libro anterior a 2020 — en la edición de 2020 la regla es 805.156. La otra respuesta equivocada es «una salida por cuarto»: el mínimo del Código es una salida por unidad de vivienda. Las salidas extra son especificación del constructor, no una cuenta del Código.",
+      "tables": [
+        {
+          "caption": "El mínimo de 805.156, pieza por pieza",
+          "headers": [
+            "Pieza",
+            "Lo que pide el Código"
+          ],
+          "rows": [
+            [
+              "Cuántas",
+              "Por lo menos una salida por unidad de vivienda"
+            ],
+            [
+              "Dónde",
+              "Dentro de la vivienda, fácilmente accesible"
+            ],
+            [
+              "Cableada a",
+              "El punto de demarcación del proveedor de servicio"
+            ],
+            [
+              "Cuándo",
+              "Construcción nueva — déjela en el despiece, con proveedor o sin él"
+            ]
+          ],
+          "note": "Antes de la reorganización de 2020, esta regla llevaba el número 800.156."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c8/C8-805.156-one-outlet.svg",
+          "alt": "Plano de planta de una unidad de vivienda que muestra el punto de demarcación del proveedor en la pared del garaje, un tramo de cable hasta una sola salida de comunicaciones en la sala, y salidas adicionales punteadas que el constructor agrega más allá del mínimo del Código.",
+          "caption": "Una salida cableada dentro de la vivienda, corrida de vuelta al demarc — el piso de 805.156.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "inspection_fails": [
+        "Ninguna salida de comunicaciones en el despiece de una vivienda nueva — la cuadrilla trató el bajo voltaje como problema del proveedor.",
+        "Salida instalada detrás de un aparato fijo o dentro de un gabinete sellado, donde no es fácilmente accesible.",
+        "Placa de salida en la pared, pero el cable nunca se corrió de vuelta al punto de demarcación.",
+        "La única salida puesta en el garaje — la regla la quiere dentro de la unidad de vivienda."
+      ],
+      "page_quiz": [
+        {
+          "question": "Según el NEC 2020, ¿cuántas salidas de comunicaciones debe tener como mínimo una unidad de vivienda nueva?",
+          "choices": [
+            "Ninguna — las comunicaciones no están en el NEC",
+            "Una, cableada al punto de demarcación",
+            "Una en cada cuarto",
+            "Dos — una de datos y una de coaxial"
+          ],
+          "answer_index": 1,
+          "explain_plain": "805.156 fija el piso en una salida por unidad de vivienda, fácilmente accesible y cableada al punto de demarcación del proveedor de servicio.",
+          "nec_ref": "805.156"
+        },
+        {
+          "question": "Una lista de verificación vieja cita 800.156 para la regla de la salida en viviendas. ¿Qué pasó con esa regla?",
+          "choices": [
+            "Se eliminó en 2020",
+            "Se movió a 805.156 en la reorganización de 2020",
+            "800.156 sigue siendo la cita correcta en el libro de 2020",
+            "Se movió al Artículo 725"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La reorganización del Capítulo 8 en 2020 movió la regla de la salida en viviendas de 800.156 a 805.156; el requisito en sí no cambió.",
+          "nec_ref": "805.156"
+        },
+        {
+          "question": "El comprador todavía no ha escogido un proveedor de servicio. ¿Qué exige 805.156 en el despiece?",
+          "choices": [
+            "Nada hasta que se escoja un proveedor",
+            "Un punto de acceso inalámbrico en vez de la salida",
+            "La salida cableada de todos modos — el requisito es la salida y su cable al demarc",
+            "Un tono de marcado vivo en la inspección final"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La regla exige la salida y su cable hasta el punto de demarcación. El servicio activo o el tono de marcado es trabajo del proveedor, no del Código.",
+          "nec_ref": "805.156"
+        }
+      ],
+      "code_refs": [
+        "805.156"
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C8-ART-810",
@@ -1773,8 +3008,8 @@
       "article": "810",
       "section": "810",
       "title": "Artículo 810 — Equipo de radio y televisión",
-      "plain_explanation": "El Artículo 810 cubre los sistemas de antena: antenas receptoras para radio y televisión, platos satelitales, sus mástiles y conductores de entrada, y estaciones transmisoras y receptoras de aficionado y banda ciudadana. Únicamente en este capítulo, el Artículo 810 no lo cubren las reglas generales del Artículo 800 — se sostiene solo, y su propia sección de puesta a tierra, 810.21, es la receta completa para unir un sistema de antena. Sus preocupaciones son las que el clima de Florida escribe en grande: rayos, entradas sopladas por el viento, y mantener el cableado de antena libre de conductores de energía.",
-      "on_the_job": "Un trabajo de plato o antena es un trabajo de puesta a tierra con una foto al final. Cotiza y planea la unión del mástil, la unidad de descarga, y el tramo a un punto de puesta a tierra legal antes de que alguien suba. Si un mástil se para dentro de 5 ft de una piscina, también tiene que unirse a la rejilla equipotencial de la piscina — ver las reglas de piscina en el Capítulo 6.",
+      "plain_explanation": "El Artículo 810 cubre los sistemas de antena:\n• Antenas receptoras para radio y televisión, y platos satelitales\n• Sus mástiles y conductores de entrada\n• Estaciones transmisoras y receptoras de aficionado y banda ciudadana\nÚnicamente en este capítulo, el Artículo 810 no lo cubren las reglas generales del Artículo 800 — se sostiene solo, y su propia sección de puesta a tierra, 810.21, es la receta completa para unir un sistema de antena: el mástil, la unidad de descarga y el tramo a tierra se responden todos dentro del artículo. Sus preocupaciones son las que el clima de Florida escribe en grande: rayos, entradas sopladas por el viento, y mantener el cableado de antena libre de conductores de energía.",
+      "on_the_job": "Un trabajo de plato o antena es un trabajo de puesta a tierra con una foto al final. Cotice y planee la unión del mástil, la unidad de descarga, y el tramo a un punto de puesta a tierra legal antes de que alguien suba: el conductor de unión es de 10 AWG cobre mínimo bajo 810.21(H), y si se clava una varilla separada para la antena, se une de vuelta al sistema de puesta a tierra de energía con 6 AWG bajo 810.21(J) — nunca se queda sola. Si un mástil se para dentro de 5 ft de una piscina, también tiene que unirse a la rejilla equipotencial de la piscina — ver las reglas de piscina en el Capítulo 6.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1784,7 +3019,101 @@
       "verified": true,
       "prev_id": "C8-805.156",
       "next_id": "C8-810.15",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Una antena suele ser el metal más alto de la casa, cableado directo al equipo electrónico más sensible que hay en ella. Un rayo en el mástil o cerca de él — o una entrada soplada por una tormenta hasta caer sobre un conductor de energía — pone esa energía en el coaxial y dentro del edificio. La receta de puesta a tierra del Artículo 810 le da a la energía un camino deliberado a tierra que no pasa por el televisor, el receptor, ni la persona que los toca.",
+      "exam_trap": "La trampa es ir a buscar el Artículo 800 en un trabajo de antena. El Artículo 810 se sostiene solo: los tamaños de unión y toda la receta de puesta a tierra están en 810.21, no en 800.100. La segunda trampa es tratar la varilla propia de la antena como el trabajo terminado — un electrodo separado todavía necesita su unión de 6 AWG de vuelta al sistema de energía.",
+      "tables": [
+        {
+          "caption": "La receta de puesta a tierra de antenas (810.21)",
+          "headers": [
+            "Pieza",
+            "Regla"
+          ],
+          "rows": [
+            [
+              "Conductor de unión",
+              "10 AWG Cu mínimo — 810.21(H)"
+            ],
+            [
+              "Varilla separada de antena",
+              "Unir al GES de energía, 6 AWG mín. — 810.21(J)"
+            ],
+            [
+              "Protección de la entrada",
+              "Unidad de descarga listada en la entrada — 810.20"
+            ],
+            [
+              "Mástil cerca de una piscina",
+              "Dentro de 5 ft: unir a la rejilla equipotencial de la piscina"
+            ]
+          ],
+          "note": "El Artículo 810 se sostiene solo — estas reglas viven dentro del artículo, no en el Artículo 800."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c8/C8-ART-810-antenna-elevation.svg",
+          "alt": "Elevación de una casa con una antena de mástil en el techo y un plato satelital, conductores de entrada que bajan hasta unidades de descarga listadas en la entrada, y un conductor de unión dorado de 10 AWG que une el mástil y las unidades de descarga al electrodo de puesta a tierra en el medidor principal.",
+          "caption": "Mástil, entradas y unidades de descarga, unidos de vuelta a la tierra de energía — la receta de 810.21.",
+          "w": 900,
+          "h": 1640
+        }
+      ],
+      "inspection_fails": [
+        "Mástil nunca unido — el plato se montó y se apuntó, y quedó sin ningún conductor de puesta a tierra.",
+        "Conductor de unión menor de 10 AWG cobre aterrizado en el mástil o la unidad de descarga.",
+        "Varilla separada clavada para la antena y dejada sin unir al sistema de puesta a tierra de energía.",
+        "Entrada que entra al edificio sin una unidad de descarga listada."
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Dónde está la receta completa de puesta a tierra para un sistema de antena?",
+          "choices": [
+            "800.100",
+            "810.21",
+            "250.50",
+            "725.41"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El Artículo 810 se sostiene solo en el Capítulo 8, y 810.21 es su receta completa de unión y puesta a tierra — mástil, unidad de descarga y electrodos.",
+          "nec_ref": "810.21"
+        },
+        {
+          "question": "¿Conductor de unión de cobre mínimo para un mástil de antena o una unidad de descarga?",
+          "choices": [
+            "14 AWG",
+            "10 AWG",
+            "8 AWG",
+            "6 AWG"
+          ],
+          "answer_index": 1,
+          "explain_plain": "810.21(H) fija el piso en 10 AWG cobre (17 AWG acero revestido de cobre o bronce, u 8 AWG aluminio, son las alternativas).",
+          "nec_ref": "810.21(H)"
+        },
+        {
+          "question": "Se clava una varilla de tierra separada para la antena. ¿Qué más se exige?",
+          "choices": [
+            "Nada — la varilla completa el trabajo",
+            "Una segunda varilla a 6 ft",
+            "Una unión al sistema de electrodos de puesta a tierra de energía, 6 AWG mínimo",
+            "Un protector de sobretensión en el televisor"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Bajo 810.21(J), un electrodo separado de antena tiene que unirse al sistema de electrodos de puesta a tierra de energía del edificio con 6 AWG cobre o equivalente — nunca se queda solo.",
+          "nec_ref": "810.21(J)"
+        }
+      ],
+      "code_refs": [
+        "Article 810",
+        "810.20",
+        "810.21",
+        "810.21(H)",
+        "810.21(J)"
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C8-810.15",
@@ -2286,8 +3615,8 @@
       "article": "810",
       "section": "810.57",
       "title": "Estaciones transmisoras de aficionado y banda ciudadana",
-      "plain_explanation": "Las antenas transmisoras para estaciones de aficionado (ham) y banda ciudadana reciben las reglas de estación receptora más las suyas. Cada conductor de entrada de antena de exterior necesita una unidad de descarga de antena u otro medio adecuado de drenar la estática, bajo 810.57. Los conductores de unión y puesta a tierra luego siguen 810.58: el conductor protector de unión o puesta a tierra tiene que ser por lo menos tan grande como la entrada y nunca menor de 10 AWG cobre, bronce o acero revestido de cobre, mientras el conductor operativo de unión o puesta a tierra no puede ser menor de 14 AWG cobre o su equivalente. Estas estaciones también todavía deben la puesta a tierra del mástil de 810.15 y las reglas de instalación de la Parte III de este artículo.",
-      "on_the_job": "Sharma encuentra esto mayormente en casas personalizadas con un cuarto de radio (ham shack) en el despiece de un estudio o garaje. Trata la tierra del cuarto de radio como un sistema: unidad de descarga en la entrada, unión protectora a 10 AWG mínimo, unión operativa a 14 AWG mínimo, todo amarrado a la única referencia de puesta a tierra del edificio.",
+      "plain_explanation": "Las antenas transmisoras para estaciones de aficionado (ham) y banda ciudadana reciben las reglas de estación receptora más las suyas.\n• Cada conductor de entrada de antena de exterior necesita una unidad de descarga de antena u otro medio adecuado de drenar la estática (810.57).\n• Los conductores de unión y puesta a tierra luego siguen 810.58: el conductor protector de unión o puesta a tierra tiene que ser por lo menos tan grande como la entrada y nunca menor de 10 AWG cobre, bronce o acero revestido de cobre.\n• El conductor operativo de unión o puesta a tierra no puede ser menor de 14 AWG cobre o su equivalente.\nEstas estaciones también todavía deben la puesta a tierra del mástil de 810.15 y las reglas de instalación de la Parte III de este artículo.",
+      "on_the_job": "Casa personalizada en Ocala con un cuarto de radio en el despiece del garaje. El dueño corre una entrada coaxial desde una antena en mástil hasta el cuarto. En la entrada instalamos una unidad de descarga de antena listada donde la entrada entra, corremos el conductor protector de unión en 10 AWG cobre — nunca menor que la entrada — directo a la terminación de unión entre sistemas en el meter-main Siemens, y corremos la unión operativa en 14 AWG cobre al bus de tierra de la estación. El mástil mismo se une bajo 810.15. Una referencia, un sistema: nada en el cuarto flota a su propio potencial.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -2297,7 +3626,97 @@
       "verified": true,
       "prev_id": "C8-810.21(J)",
       "next_id": "C8-ART-820",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Una antena transmisora es un conductor alto en el cielo, y transmite: acopla energía real a lo que toca. El viento acumula carga estática en el alambre, y un rayo cercano puede subir la entrada a un voltaje peligroso. La unidad de descarga drena esa carga a tierra antes de que llegue a la radio, y los dos conductores de unión mantienen el metal de la estación a un solo potencial, para que una falla o sobretensión no use al operador como camino.",
+      "inspection_fails": [
+        "Entrada llevada al cuarto de radio sin unidad de descarga de antena y sin otro drenaje de estática en la entrada.",
+        "Conductor protector de unión corrido en 14 AWG: las estaciones transmisoras necesitan por lo menos el tamaño de la entrada y nunca menos de 10 AWG.",
+        "Conductor operativo de unión menor de 14 AWG cobre equivalente.",
+        "Tierra de la estación amarrada a su propia varilla sin unión de vuelta al sistema de electrodos de puesta a tierra del edificio.",
+        "Mástil dejado sin unir: la puesta a tierra del mástil de 810.15 todavía aplica a las estaciones transmisoras."
+      ],
+      "exam_trap": "La trampa es dimensionar la unión protectora como un plato receptor: 14 AWG es el piso de comunicaciones en otras partes del capítulo, así que se siente correcto. Aquí no. Para una estación transmisora, el conductor protector de unión o puesta a tierra tiene que ser por lo menos tan grande como la entrada y nunca menor de 10 AWG. El mínimo de 14 AWG pertenece al conductor operativo.",
+      "tables": [
+        {
+          "caption": "Los dos conductores de unión (810.58)",
+          "headers": [
+            "Conductor",
+            "Mínimo",
+            "Material"
+          ],
+          "rows": [
+            [
+              "Protector",
+              "≥ tamaño de la entrada, nunca < 10 AWG",
+              "Cu, bronce o acero revestido de cobre"
+            ],
+            [
+              "Operativo",
+              "14 AWG Cu o equivalente",
+              "Cobre o equivalente"
+            ]
+          ],
+          "note": "Ambos conectan en la única referencia de tierra del edificio. El mástil todavía debe 810.15."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c8/C8-810.57-ham-station.svg",
+          "alt": "Elevación de la entrada de una estación transmisora de aficionado: mástil de antena y entrada a una unidad de descarga, unión protectora de 10 AWG mínimo, unión operativa de 14 AWG mínimo, una sola tierra del edificio.",
+          "caption": "Unidad de descarga en la entrada, dos uniones, una sola tierra.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Tamaño mínimo del conductor protector de unión en una estación transmisora de aficionado?",
+          "choices": [
+            "14 AWG cobre",
+            "10 AWG cobre, y nunca menor que la entrada",
+            "6 AWG cobre",
+            "17 AWG acero revestido de cobre"
+          ],
+          "answer_index": 1,
+          "explain_plain": "810.58: el conductor protector es por lo menos tan grande como la entrada y nunca menor de 10 AWG cobre, bronce o acero revestido de cobre.",
+          "nec_ref": "810.58"
+        },
+        {
+          "question": "¿Qué necesita cada entrada de antena de exterior en una estación transmisora?",
+          "choices": [
+            "Un protector de sobretensión en la radio",
+            "Una unidad de descarga de antena u otro medio adecuado de drenar la estática",
+            "Una varilla de tierra separada en el mástil",
+            "Un conductor de unión de 20 ft"
+          ],
+          "answer_index": 1,
+          "explain_plain": "810.57 requiere la unidad de descarga, u otro drenaje de estática adecuado, en cada entrada de exterior.",
+          "nec_ref": "810.57"
+        },
+        {
+          "question": "¿Tamaño mínimo del conductor operativo de unión o puesta a tierra?",
+          "choices": [
+            "10 AWG cobre",
+            "12 AWG cobre",
+            "14 AWG cobre o equivalente",
+            "Sin mínimo"
+          ],
+          "answer_index": 2,
+          "explain_plain": "El piso del conductor operativo es 14 AWG cobre o su equivalente bajo 810.58.",
+          "nec_ref": "810.58"
+        }
+      ],
+      "code_refs": [
+        "810.57",
+        "810.58",
+        "810.15",
+        "810.20",
+        "810.21"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C8-ART-820",
@@ -2366,8 +3785,8 @@
       "article": "820",
       "section": "820.113",
       "title": "Instalación de cable coaxial dentro del edificio",
-      "plain_explanation": "El cable coaxial listado dentro de un edificio sigue el marco de instalación del Artículo 800 como esta sección lo aplica: el tipo de cable correcto para el espacio — plenum, riser o uso general — escogido de la lista de cables de este artículo y las tablas de aplicación. Hay una regla de distancia que maneja la mayoría del trabajo de casa: el coaxial de planta exterior no listado puede venir dentro de un edificio solo una distancia limitada — 50 ft desde el punto de entrada — antes de que se requiera cable listado, bajo 820.48. Pasado ese punto, el tramo tiene que ser coaxial listado de un tipo permitido para el espacio por el que pasa.",
-      "on_the_job": "Mide el camino de entrada en casas personalizadas largas: si el tablero de distribución se sienta a más de 50 ft de tramo de cable desde donde la bajada entra, todo el tramo necesita cable listado, no el carrete de exterior del proveedor. En techos y ejes comerciales, trata el coaxial exactamente como cable de comunicaciones para clasificación de fuego — CMP en plenums, cable riser tipo CATVR entre pisos.",
+      "plain_explanation": "El cable coaxial listado dentro de un edificio sigue el marco de instalación del Artículo 800 como esta sección lo aplica. Dos reglas manejan el trabajo:\n• El tipo de cable tiene que corresponder al espacio — plenum, riser o uso general — de la lista de cables de este artículo: CATVP para plenums, CATVR para risers, CATV para uso general, y CATVX para uso limitado en viviendas y canalizaciones.\n• El coaxial de planta exterior no listado puede entrar a un edificio solo una distancia limitada — 50 ft desde el punto de entrada — antes de que se requiera cable listado, bajo 820.48. Pasado ese punto, el tramo tiene que ser coaxial listado de un tipo permitido para el espacio por el que pasa.",
+      "on_the_job": "Mida el camino de entrada en casas personalizadas largas: si el tablero de distribución se sienta a más de 50 ft de tramo de cable desde donde la bajada entra, todo el tramo necesita cable listado, no el carrete de exterior del proveedor. En techos y ejes comerciales, trate el coaxial exactamente como cable de comunicaciones para clasificación de fuego — tipo plenum (CATVP) en plenums, cable riser CATVR entre pisos.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -2377,7 +3796,119 @@
       "verified": true,
       "prev_id": "C8-820.100",
       "next_id": "C8-820.133",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Una cubierta de planta exterior está hecha para sol y agua, no para fuego. Córrela profundo dentro de un edificio y se convierte en carga de combustible y humo exactamente en los espacios de donde la gente respira, y en un camino para que la llama viaje. El límite de 50 ft pone tope a cuánta de esa cubierta no listada entra, y las reglas de tipo por espacio evitan que un fuego en un piso suba por el coaxial al siguiente.",
+      "exam_trap": "La trampa es medir los 50 ft desde el tablero de distribución, o en línea recta. Son 50 ft de tramo de cable desde el punto de entrada. La segunda trampa es «listado es listado»: un CATV listado de uso general corrido por un techo plenum o subiendo por un eje riser todavía falla — el tipo tiene que corresponder al espacio.",
+      "inspection_fails": [
+        "Coaxial de planta exterior no listado corrido unas 80 ft desde la entrada hasta el tablero de distribución.",
+        "Coaxial CATV de uso general corrido sobre un techo plenum de aire de retorno.",
+        "Coaxial de uso general corrido de piso en piso en un eje riser en vez de CATVR.",
+        "Coaxial listado del tipo equivocado para el espacio, sustituido porque era el que estaba en el camión."
+      ],
+      "tables": [
+        {
+          "caption": "Coaxial dentro del edificio (NEC 2020)",
+          "headers": [
+            "Tramo / espacio",
+            "Cable requerido",
+            "Base"
+          ],
+          "rows": [
+            [
+              "Coaxial de planta exterior no listado adentro",
+              "50 ft máx. desde el punto de entrada",
+              "820.48"
+            ],
+            [
+              "Más allá de 50 ft de tramo",
+              "Coaxial listado, tipo según el espacio",
+              "820.113"
+            ],
+            [
+              "Plenum / aire ambiental",
+              "Tipo CATVP",
+              "820.179(A)"
+            ],
+            [
+              "Eje riser, de piso en piso",
+              "Tipo CATVR",
+              "820.179(B)"
+            ],
+            [
+              "Uso general",
+              "Tipo CATV",
+              "820.179(C)"
+            ],
+            [
+              "Uso limitado — viviendas, canalización",
+              "Tipo CATVX",
+              "820.179(D)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c8/C8-820.113-fifty-foot-line.svg",
+          "alt": "Elevación de casa dibujada a escala: la bajada entra en el punto de entrada, el coaxial de planta exterior no listado puede correr 50 ft de cable, y un tablero de distribución a 65 ft de tramo tiene que alcanzarse con coaxial listado, sobre el tipo listado para cada espacio.",
+          "caption": "50 ft de tramo desde el punto de entrada — pasado eso, coaxial listado del tipo correcto.",
+          "w": 900,
+          "h": 1600
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "El coaxial de planta exterior no listado puede extenderse dentro de un edificio no más de:",
+          "choices": [
+            "10 ft",
+            "25 ft",
+            "50 ft",
+            "100 ft"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Bajo 820.48, el coaxial de planta exterior no listado está limitado a 50 ft desde el punto de entrada; pasado eso, se requiere cable listado.",
+          "nec_ref": "820.48"
+        },
+        {
+          "question": "El coaxial corrido de piso en piso en un eje riser tiene que ser por lo menos:",
+          "choices": [
+            "Tipo CATVX",
+            "Tipo CATV",
+            "Tipo CATVR",
+            "Planta exterior no listado"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Los tramos verticales en un eje o que penetran más de un piso toman tipo riser, CATVR (o CATVP).",
+          "nec_ref": "820.179(B)"
+        },
+        {
+          "question": "El permiso de 50 ft para coaxial no listado se mide desde:",
+          "choices": [
+            "El tablero de distribución",
+            "El punto de entrada",
+            "El límite de la propiedad",
+            "El primer divisor"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La distancia corre desde el punto de entrada, a lo largo del tramo de cable — no desde el tablero y no en línea recta.",
+          "nec_ref": "820.48"
+        }
+      ],
+      "code_refs": [
+        "820.113",
+        "820.48",
+        "820.179(A)–(D)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "Tipos de coaxial listado: CATVP es el tipo plenum [820.179(A)], CATVR el tipo riser [820.179(B)], CATV de uso general [820.179(C)], y CATVX de uso limitado para viviendas y canalizaciones [820.179(D)]",
+          "source": "Mike Holt, Article 820: Community Antenna Television (CATV) and Radio Distribution Systems",
+          "url": "https://www.mikeholt.com/newsletters.php?action=reply&inResponseTo=3587&letterID=299"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C8-820.133",
@@ -2385,8 +3916,8 @@
       "article": "820",
       "section": "820.133",
       "title": "Separación para cable coaxial",
-      "plain_explanation": "El cable coaxial obedece la misma disciplina de separación que el resto del capítulo. No puede compartir una canalización o caja con conductores de luz eléctrica y energía, no puede soportarse desde una canalización que contiene conductores de energía, y mantiene por lo menos 2 in de conductores de luz y energía a menos que esos conductores estén en una canalización o en un ensamble de cable con cubierta como con cubierta no metálica, blindado o cable UF. El 800.133 del Artículo 800 declara la regla general; esta sección la lleva al mundo coaxial, así que un ayudante que aprende una ha aprendido ambas.",
-      "on_the_job": "Corre el coaxial en sus propios huecos, en sus propios soportes, a 2 in de los tramos de energía — la misma memoria muscular que Cat 6. La falla clásica es un paquete de tramos principales coaxiales amarrado con zip ties a lo largo de un EMT o colgado sobre un paquete de Romex en el ático. Los soportes separados cuestan minutos; una inspección fallada cuesta un viaje de vuelta.",
+      "plain_explanation": "El cable coaxial obedece la misma disciplina de separación que el resto del capítulo. El 800.133 del Artículo 800 declara la regla general; esta sección la lleva al mundo coaxial, así que un ayudante que aprende una ha aprendido ambas.\n• El coaxial no puede compartir una canalización o caja con conductores de luz eléctrica y energía.\n• El coaxial no puede soportarse desde una canalización que contiene conductores de energía.\n• El coaxial mantiene por lo menos 2 in de los conductores de luz y energía — a menos que esos conductores estén en una canalización o en un ensamble de cable con cubierta como con cubierta no metálica, blindado o cable UF.",
+      "on_the_job": "Corra el coaxial en sus propios huecos, en sus propios soportes, a 2 in de los tramos de energía — la misma memoria muscular que Cat 6. La falla clásica es un paquete de tramos principales coaxiales amarrado con zip ties a lo largo de un EMT o colgado sobre un paquete de Romex en el ático. Los soportes separados cuestan minutos; una inspección fallada cuesta un viaje de vuelta.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -2397,7 +3928,102 @@
       "verified": true,
       "prev_id": "C8-820.113",
       "next_id": "C8-820.154",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "La separación evita que una falla de energía ponga voltaje de línea en una malla coaxial que un cliente toca en el televisor, y mantiene el calor y el ruido de los conductores de energía fuera de la señal. También mantiene los dos sistemas honestos en la inspección: una canalización compartida esconde a qué sistema pertenece un conductor, y el coaxial amarrado a una canalización de energía hereda cada problema que esa canalización tiene.",
+      "exam_trap": "La trampa corre en los dos sentidos. «El coaxial nunca puede estar a menos de 2 in de Romex» es equivocado — el cable con cubierta no metálica es un ensamble de cable con cubierta, así que la separación de 2 in para conductores abiertos no es lo que gobierna ahí. Y «el coaxial en el mismo conduit está bien si ambos están aislados» es siempre equivocado: compartir una canalización con conductores de energía está prohibido por completo.",
+      "inspection_fails": [
+        "Paquete de tramos principales coaxiales amarrado con zip ties a lo largo de un EMT y soportado desde él.",
+        "Coaxial halado dentro de la misma canalización que conductores de circuito ramal.",
+        "Coaxial colgado sobre conductores de energía abiertos, tocándolos, en el ático.",
+        "Coaxial y conductores de energía compartiendo una sola caja de conexiones."
+      ],
+      "tables": [
+        {
+          "caption": "Reglas de separación para coaxial (NEC 2020)",
+          "headers": [
+            "Situación",
+            "Veredicto",
+            "Base"
+          ],
+          "rows": [
+            [
+              "Misma canalización o caja que energía",
+              "No permitido",
+              "820.133"
+            ],
+            [
+              "Soportado desde una canalización de energía",
+              "No permitido",
+              "820.133"
+            ],
+            [
+              "Tramo abierto junto a conductores de energía abiertos",
+              "Separación de 2 in mín.",
+              "820.133"
+            ],
+            [
+              "Energía en canalización o ensamble con cubierta (NM, AC, UF)",
+              "Separación abierta de 2 in no requerida",
+              "820.133"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c8/C8-820.133-coax-separation.svg",
+          "alt": "Sección de ático con un tramo de energía abierto y un tramo coaxial en soportes separados dimensionados a 2 in mínimo entre ellos, sobre paneles que listan los tres arreglos prohibidos y la excepción de canalización o cable con cubierta.",
+          "caption": "Canalización propia, soportes propios, 2 in de conductores de energía abiertos.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "La separación mínima entre el coaxial y los conductores abiertos de luz eléctrica y energía es:",
+          "choices": [
+            "½ in",
+            "1 in",
+            "2 in",
+            "6 in"
+          ],
+          "answer_index": 2,
+          "explain_plain": "El coaxial mantiene por lo menos 2 in de los conductores de luz y energía a menos que aplique la excepción de canalizaciones y ensambles con cubierta.",
+          "nec_ref": "820.133"
+        },
+        {
+          "question": "¿Qué instalación está permitida?",
+          "choices": [
+            "Coaxial y energía en una canalización, ambos aislados",
+            "Coaxial amarrado con zip ties a una canalización de energía como soporte",
+            "Coaxial en sus propios soportes, a 1 in de un tramo de cable con cubierta no metálica",
+            "Coaxial compartiendo una caja de conexiones con un circuito de receptáculos"
+          ],
+          "answer_index": 2,
+          "explain_plain": "El cable con cubierta no metálica es un ensamble de cable con cubierta, así que la separación de 2 in para conductores abiertos no gobierna ahí. Compartir canalizaciones, cajas y soportes está prohibido.",
+          "nec_ref": "820.133"
+        },
+        {
+          "question": "La separación de 2 in no se requiere donde los conductores de energía están:",
+          "choices": [
+            "Desenergizados en el breaker",
+            "En una canalización o en un ensamble de cable con cubierta",
+            "Menores de 10 AWG",
+            "Protegidos por un breaker GFCI"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La excepción cubre conductores de energía en una canalización o en un ensamble de cable con cubierta como con cubierta no metálica, blindado o cable UF.",
+          "nec_ref": "820.133"
+        }
+      ],
+      "code_refs": [
+        "820.133",
+        "800.133"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C8-820.154",
@@ -2685,8 +4311,8 @@
       "article": "830",
       "section": "830",
       "title": "Artículo 830 — Sistemas de banda ancha alimentados por red",
-      "plain_explanation": "El Artículo 830 cubre los sistemas de banda ancha donde la red misma manda la energía: la red del proveedor alimenta la unidad de interfaz de red en el edificio del cliente, sobre la misma planta que lleva la señal. Porque la energía llega desde fuera de la propiedad en un cable de comunicaciones, este artículo es más estricto en la entrada que el CATV sencillo — sus circuitos reciben protección primaria, y sus pantallas, protectores y cerramientos de unidad de interfaz todos se ponen a tierra. Las reglas generales del Artículo 800 todavía se ponen en capas debajo, y 830 toma prestada la receta de puesta a tierra de 800.100 para sus conductores. Sharma encuentra 830 como la entrada de banda ancha por cable con energía en trabajo comercial y de vivienda múltiple más que en casas individuales.",
-      "on_the_job": "Reconoce la entrada con energía por la unidad de interfaz de red y el arreglo de alimentación del proveedor, no por la forma del cable. Una vez que sabes que la energía viene en él, las páginas de protector y puesta a tierra que siguen no son lectura opcional. Mantén las manos fuera de la planta con energía del proveedor más allá del demarc — ese lado es de ellos.",
+      "plain_explanation": "El Artículo 830 cubre los sistemas de banda ancha donde la red misma manda la energía: la red del proveedor alimenta la unidad de interfaz de red en el edificio del cliente, sobre la misma planta que lleva la señal. Porque la energía llega desde fuera de la propiedad en un cable de comunicaciones, este artículo es más estricto en la entrada que el CATV sencillo:\n• Sus circuitos reciben protección primaria.\n• Sus pantallas, protectores y cerramientos de unidad de interfaz todos se ponen a tierra.\nLas reglas generales del Artículo 800 todavía se ponen en capas debajo, y 830 toma prestada la receta de puesta a tierra de 800.100 para sus conductores. Sharma encuentra 830 como la entrada de banda ancha por cable con energía en trabajo comercial y de vivienda múltiple más que en casas individuales.",
+      "on_the_job": "Condominio de varios pisos en el centro de Orlando: la entrada con energía del proveedor de cable conecta en el cuarto de telecomunicaciones, unidades de interfaz de red en la pared, alimentadas desde la planta de la calle. Nuestro alcance se detiene en el demarc: verificamos que el protector primario esté en su lugar y que los cerramientos y pantallas de la NIU estén puestos a tierra con la receta de 800.100 que el artículo toma prestada. Reconozca la entrada con energía por la unidad de interfaz de red y el arreglo de alimentación del proveedor, no por la forma del cable. Mantenga las manos fuera de la planta con energía del proveedor más allá del demarc — ese lado es de ellos.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -2696,7 +4322,102 @@
       "verified": true,
       "prev_id": "C8-820.179",
       "next_id": "C8-830.90",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Un cable de comunicaciones sencillo trae señal; un cable de banda ancha alimentado por red trae energía de una planta que el edificio no controla, y la sigue trayendo durante un apagón del edificio. Sin protección primaria y puesta a tierra en la entrada, una sobretensión o falla en la planta del proveedor tiene camino directo al cableado y equipo del cliente. El Artículo 830 existe para poner la misma disciplina de entrada en la banda ancha con energía que los artículos más viejos pusieron en el teléfono y el CATV.",
+      "inspection_fails": [
+        "Entrada de banda ancha con energía instalada sin protector primario: tratada como CATV sencillo.",
+        "Cerramiento de la NIU y pantalla del cable dejados sin puesta a tierra en la entrada.",
+        "Planta con energía del proveedor retrabajada en el lado de red del demarc.",
+        "Entrada puesta a tierra con una receta inventada en vez del patrón de 800.100 que el artículo toma prestado."
+      ],
+      "exam_trap": "La trampa es tratar la entrada de banda ancha con energía como CATV sencillo bajo el Artículo 820 porque el cable se ve igual. Artículo equivocado. Donde la red alimenta la unidad de interfaz, gobierna el Artículo 830: se requiere protección primaria y la puesta a tierra sigue la receta de 800.100, no las páginas de CATV.",
+      "tables": [
+        {
+          "caption": "El Artículo 830 en la entrada",
+          "headers": [
+            "Ítem",
+            "Deber de 830"
+          ],
+          "rows": [
+            [
+              "Circuitos",
+              "Protección primaria"
+            ],
+            [
+              "Pantallas, protectores, cerramientos de NIU",
+              "Puestos a tierra"
+            ],
+            [
+              "Conductores de unión y puesta a tierra",
+              "Receta de 800.100"
+            ],
+            [
+              "Reglas generales debajo",
+              "Artículo 800"
+            ]
+          ],
+          "note": "Reconózcala por la NIU alimentada por red, no por el cable."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c8/C8-ART-830-powered-entrance.svg",
+          "alt": "Flujo de una entrada de banda ancha alimentada por red: red del proveedor, protector primario, punto de demarcación, unidad de interfaz de red y cableado interior, puestos a tierra con la receta de 800.100.",
+          "caption": "Entrada con energía: protéjala, póngala a tierra, deténgase en el demarc.",
+          "w": 900,
+          "h": 1360
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Qué hace que una entrada sea una entrada del Artículo 830?",
+          "choices": [
+            "Se usa cable coaxial",
+            "La red del proveedor alimenta la unidad de interfaz de red",
+            "El edificio es comercial",
+            "El cable está enterrado"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El Artículo 830 cubre la banda ancha donde la red misma manda la energía a la NIU, sobre la misma planta que lleva la señal.",
+          "nec_ref": "Article 830"
+        },
+        {
+          "question": "En una entrada 830, los circuitos reciben:",
+          "choices": [
+            "Ninguna protección si están adentro",
+            "Protección primaria",
+            "Solo protección secundaria",
+            "Una acometida separada"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Porque la energía llega desde fuera de la propiedad, los circuitos 830 reciben protección primaria, y las pantallas, protectores y cerramientos de NIU se ponen a tierra.",
+          "nec_ref": "Article 830"
+        },
+        {
+          "question": "¿La receta de puesta a tierra de quién toma prestada 830 para sus conductores?",
+          "choices": [
+            "Los tamaños de la Tabla 250.66",
+            "800.100",
+            "Solo 820.100",
+            "La especificación del proveedor"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El Artículo 830 toma prestada la receta de puesta a tierra de 800.100, y las reglas generales del Artículo 800 se ponen en capas debajo.",
+          "nec_ref": "830.100"
+        }
+      ],
+      "code_refs": [
+        "830",
+        "800",
+        "800.100",
+        "830.90",
+        "830.93",
+        "830.100"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C8-830.90",
@@ -2926,8 +4647,8 @@
       "article": "830",
       "section": "830.100",
       "title": "Conductores de unión y puesta a tierra de banda ancha",
-      "plain_explanation": "Los conductores de unión y puesta a tierra para una entrada de banda ancha alimentada por red siguen las mismas reglas dimensionales que el resto del capítulo: no menores de 14 AWG, no requeridos a exceder 6 AWG, tan cortos como sea practicable, y no más de 20 ft en una vivienda de una o dos familias. La sección lleva la misma válvula de escape que 800.100 y 820.100 — donde el largo no puede cumplirse, un electrodo separado se permite, y su estructura de excepción requiere que ese electrodo se una de vuelta al sistema de electrodos de puesta a tierra de energía con un conductor de por lo menos 6 AWG. Para este punto en el capítulo el patrón debería ser familiar, porque el Código quiere que sea un patrón repetido.",
-      "on_the_job": "No vuelvas a derivar los números en una entrada de banda ancha; son los números del capítulo. Catorce a seis AWG, veinte pies en una casa, seis AWG para unir una varilla separada. Si conoces 800.100 al dedillo, ya conoces esta página.",
+      "plain_explanation": "Los conductores de unión y puesta a tierra para una entrada de banda ancha alimentada por red siguen las mismas reglas dimensionales que el resto del capítulo:\n• No menores de 14 AWG, y no requeridos a exceder 6 AWG.\n• Corridos tan cortos como sea practicable.\n• No más de 20 ft de largo en una vivienda de una o dos familias.\nLa sección lleva la misma válvula de escape que 800.100 y 820.100: donde el largo no puede cumplirse, un electrodo separado se permite, y su estructura de excepción requiere que ese electrodo se una de vuelta al sistema de electrodos de puesta a tierra de energía con un conductor de por lo menos 6 AWG. Para este punto en el capítulo el patrón debería ser familiar, porque el Código quiere que sea un patrón repetido.",
+      "on_the_job": "Entrada de banda ancha por cable en una vivienda de dos familias en Kissimmee: la unidad de interfaz de red del proveedor conecta en la pared del garaje, con 12 ft de conductor desde la acometida. Corremos 14 AWG cobre desde el terminal de tierra de la NIU directo a la terminación de unión entre sistemas en el meter-main — dentro del límite de 20 ft de vivienda, sin necesidad de subir el tamaño. En una entrada comercial más grande donde el tramo no puede mantenerse corto, la respuesta no es un alambre fino más largo: es un electrodo separado en la entrada, unido de vuelta al sistema de electrodos de puesta a tierra de energía con 6 AWG.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -2937,7 +4658,100 @@
       "verified": true,
       "prev_id": "C8-830.93",
       "next_id": "C8-830.133",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "El conductor de unión es el camino que arrastra una sobretensión o una falla en la planta de banda ancha hasta la única referencia de tierra del edificio. Un conductor largo y fino tiene una impedancia que lo derrota: la sobretensión llega más rápido de lo que el camino puede llevarla, y la diferencia aparece como voltaje entre la planta de cable y todo lo demás en la casa. Corto, de tamaño adecuado y unido de vuelta es lo que mantiene los potenciales juntos.",
+      "inspection_fails": [
+        "Conductor de unión corrido 30 ft por un ático de vivienda: el límite en vivienda es 20 ft.",
+        "Varilla separada clavada en la entrada de banda ancha y nunca unida de vuelta al sistema de electrodos de puesta a tierra de energía.",
+        "Unión de vuelta desde el electrodo separado corrida en 14 AWG: tiene que ser por lo menos 6 AWG.",
+        "Conductor menor de 14 AWG, o enrollado y flojo en vez de corto y recto."
+      ],
+      "exam_trap": "La trampa es tratar 6 AWG como el tamaño requerido: «los conductores de unión son 6 AWG». Dirección equivocada. 14 AWG es el mínimo y el conductor nunca se requiere que exceda 6 AWG; 6 AWG es el tamaño de la unión de vuelta cuando se usa un electrodo separado porque el límite de largo no puede cumplirse.",
+      "tables": [
+        {
+          "caption": "Un patrón, tres entradas",
+          "headers": [
+            "Entrada",
+            "Sección",
+            "Los mismos números"
+          ],
+          "rows": [
+            [
+              "Comunicaciones",
+              "800.100",
+              "14–6 AWG, 20 ft en viviendas"
+            ],
+            [
+              "CATV",
+              "820.100",
+              "14–6 AWG, 20 ft en viviendas"
+            ],
+            [
+              "Banda ancha",
+              "830.100",
+              "14–6 AWG, 20 ft en viviendas"
+            ]
+          ],
+          "note": "Electrodo separado permitido cuando el largo no puede cumplirse; únalo de vuelta con 6 AWG mínimo."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c8/C8-830.100-broadband-bond.svg",
+          "alt": "Entrada de banda ancha unida a la terminación de unión entre sistemas del meter-main, dimensionada a 20 ft máximo en una vivienda, con la válvula de escape del electrodo separado unido de vuelta a 6 AWG mínimo.",
+          "caption": "Corto y recto al IBT; una varilla separada se une de vuelta a 6 AWG.",
+          "w": 900,
+          "h": 1440
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Largo máximo del conductor de unión en una entrada de banda ancha de vivienda unifamiliar?",
+          "choices": [
+            "10 ft",
+            "20 ft",
+            "25 ft",
+            "Sin límite"
+          ],
+          "answer_index": 1,
+          "explain_plain": "830.100 repite el patrón del capítulo: no más de 20 ft en una vivienda de una o dos familias.",
+          "nec_ref": "830.100"
+        },
+        {
+          "question": "El límite de largo no puede cumplirse en una entrada de banda ancha. ¿Qué se permite?",
+          "choices": [
+            "Correrlo de todos modos en 14 AWG",
+            "Un electrodo separado, unido de vuelta con por lo menos 6 AWG",
+            "Dos conductores de 14 AWG en paralelo",
+            "Un conductor más largo en 10 AWG"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La válvula de escape es un electrodo separado, y tiene que unirse de vuelta al sistema de electrodos de puesta a tierra de energía con por lo menos 6 AWG.",
+          "nec_ref": "830.100"
+        },
+        {
+          "question": "¿Rango de tamaño del conductor de unión de banda ancha?",
+          "choices": [
+            "No menor de 10 AWG",
+            "No menor de 14 AWG, no requerido a exceder 6 AWG",
+            "6 AWG exacto",
+            "Dimensionado de la Tabla 250.66"
+          ],
+          "answer_index": 1,
+          "explain_plain": "14 AWG es el piso y 6 AWG es el tope: el conductor no se requiere que exceda 6 AWG.",
+          "nec_ref": "830.100"
+        }
+      ],
+      "code_refs": [
+        "830.100",
+        "800.100",
+        "820.100",
+        "830.93"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C8-830.133",
@@ -3098,9 +4912,9 @@
       "chapter": 8,
       "article": "840",
       "section": "840.160",
-      "title": "Circuitos de banda ancha alimentados en el local y circuitos de energía — 840.160",
-      "plain_explanation": "840.160 es la sección que enfrenta la pregunta que el resto del Capítulo 8 responde con separación: qué pasa cuando los circuitos de comunicaciones de banda ancha alimentados en el local se encuentran con circuitos de alumbrado y energía. La regla por defecto del capítulo no cambia — comunicaciones y energía se mantienen apartados bajo las reglas de instalación que aplican al sistema de banda ancha — y 840.160 funciona como la puerta estrecha y condicionada, tratando las combinaciones que el propio artículo describe, como circuitos asociados al mismo equipo. Es una vía de excepción con condiciones, no un permiso general para aterrizar banda ancha y energía en la misma caja porque ambos sirven la misma terminal.\n\nCAMBIO NEC 2023:\n• 840.160: Se cambió la referencia de la Sección 725.154(A) a la Sección 722.135 en cuanto a la sustitución de cables, y los requisitos de instalación ahora están en el Artículo 722.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "En una terminal de red óptica: la fuente de energía y las salidas de banda ancha siguen cada una sus propias reglas, y cualquier envolvente combinada o camino compartido tiene que ser uno que el listado del equipo y 840.160 describan de verdad. Ante la duda, separe: la separación nunca es la violación.",
+      "title": "Circuitos de alimentación — un solo cable lleva la señal y la energía",
+      "plain_explanation": "La Sección 840.160 se titula «Circuitos de alimentación» (Powering Circuits), y responde una pregunta estrecha: ¿puede un cable de comunicaciones llevar energía además de señal? Sí — con condiciones:\n• El cable es un cable de comunicaciones listado (805.179), y el equipo que alimenta es equipo de comunicaciones listado (805.170)\n• La fuente de energía está listada para ese fin (840.170(G))\n• Lo que el cable lleva es energía para equipo de comunicaciones — esto no es permiso para poner energía de circuitos ramales en un cable de comunicaciones\nDonde los cables de comunicaciones se sustituyen por cables Clase 2 y Clase 3 bajo 725.154(A), la instalación también tiene que cumplir 725.144, las reglas que evitan que los paquetes de cables con energía y datos se sobrecalienten. Una excepción: los cables listados de 4 pares donde la corriente nominal no excede 0.3 amperes en ningún conductor, 24 AWG o mayor, no tienen que cumplir 725.144. El caso típico es un cable de datos de 4 pares que lleva Ethernet y energía tipo PoE a una cámara, un teléfono o un punto de acceso.",
+      "on_the_job": "Remodelación pequeña de oficina en Orlando: un switch PoE listado en el rack alimenta 14 cámaras de techo y puntos de acceso sobre Cat 6. Cada tramo es un cable listado de 4 pares, la corriente por conductor queda bien por debajo de la línea de excepción de 0.3 amperes, y la fuente de energía es la propia fuente listada del switch — la instalación queda dentro de 840.160 sin necesitar el cálculo de paquete de 725.144. La respuesta cambia cuando el diseño crece: un paquete grueso de tramos con energía, o cable de comunicaciones sustituido por cableado Clase 2, lo manda a usted a 725.144 y su tabla antes de amarrar el paquete.",
       "sharma_note": "",
       "florida_note": "",
       "figure_idea": "Instalación de una ONT: caminos de energía y banda ancha mostrados separados, con el caso condicionado de equipo compartido señalado.",
@@ -3123,7 +4937,120 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "La energía sobre pares de señal es calor dentro de un paquete de cables. Un cable que lleva una fracción de ampere no es nada; docenas de cables con energía amarrados bien juntos pueden cocinar su propio aislamiento, porque el centro del paquete no puede soltar el calor. Las condiciones de listado y el enlace con 725.144 existen para mantener la energía dentro de lo que el sistema de cable fue probado para llevar — y para que «alimentar» no se convierta en una puerta trasera para energía no listada en un cable de señal.",
+      "exam_trap": "La trampa es leer 840.160 como un permiso general para mezclar energía y comunicaciones. No es una excepción de separación, y no permite que un circuito ramal de 120 volts comparta un cable o una caja con las salidas de banda ancha. El permiso corre al revés: los cables de comunicaciones listados pueden llevar circuitos que alimentan equipo de comunicaciones, desde una fuente listada, dentro de los límites indicados.",
+      "tables": [
+        {
+          "caption": "840.160, pieza por pieza",
+          "headers": [
+            "Pieza",
+            "Lo que pide el texto de 2020"
+          ],
+          "rows": [
+            [
+              "Cable",
+              "Cable de comunicaciones listado (805.179)"
+            ],
+            [
+              "Equipo alimentado",
+              "Equipo de comunicaciones listado (805.170)"
+            ],
+            [
+              "Fuente de energía",
+              "Listada para ese fin (840.170(G))"
+            ],
+            [
+              "Sustituido por Clase 2/3",
+              "La instalación cumple 725.144"
+            ],
+            [
+              "Excepción",
+              "4 pares, ≤ 0.3 A por conductor, 24 AWG o mayor: no se exige 725.144"
+            ]
+          ],
+          "note": "Esta página todavía no se ha verificado contra el NEC 2020 impreso — vea el recuadro Verificar en el libro impreso."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c8/C8-840.160-powering-circuits.svg",
+          "alt": "Una fuente de energía listada alimentando un solo cable de comunicaciones listado de 4 pares que lleva a la vez un circuito de comunicaciones y un circuito de alimentación hasta equipo de comunicaciones listado, con la banda de la excepción de 0.3 amperes y un panel rojo que muestra que un circuito ramal de 120 voltios no está cubierto.",
+          "caption": "Circuitos de alimentación: señal y energía en un solo cable listado, dentro de las condiciones de 840.160.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "inspection_fails": [
+        "Cable no listado usado para llevar circuitos de alimentación a equipo de comunicaciones.",
+        "Circuitos de alimentación alimentados desde una fuente que no está listada para ese fin.",
+        "Un paquete grande de cables de comunicaciones con energía amarrado sin ninguna revisión de 725.144, donde los cables sustituyen cables Clase 2 o Clase 3.",
+        "840.160 citado para aterrizar un circuito ramal de 120 V en la misma envolvente que las salidas de banda ancha — la sección cubre energía para equipo de comunicaciones en cables de comunicaciones listados, no circuitos ramales."
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Qué permite 840.160 que lleve un cable de comunicaciones listado, además del circuito de comunicaciones?",
+          "choices": [
+            "Un circuito ramal de 120 V",
+            "Circuitos para alimentar equipo de comunicaciones",
+            "Circuitos de energía Clase 1",
+            "Cualquier circuito menor de 300 V"
+          ],
+          "answer_index": 1,
+          "explain_plain": "840.160, «Circuitos de alimentación», permite que los cables de comunicaciones listados lleven también circuitos que alimentan equipo de comunicaciones — nada más general que eso.",
+          "nec_ref": "840.160"
+        },
+        {
+          "question": "Un cable listado de 4 pares lleva una corriente nominal de 0.2 A en un conductor, 24 AWG. ¿Debe la instalación cumplir 725.144?",
+          "choices": [
+            "Sí, siempre",
+            "No — cae en la excepción de 840.160: 0.3 A o menos por conductor, 24 AWG o mayor",
+            "Solo si el paquete tiene más de 10 cables",
+            "Solo en un techo plenum"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La excepción dispensa el cumplimiento de 725.144 para cables de comunicaciones listados de 4 pares donde la corriente nominal no excede 0.3 amperes en ningún conductor de 24 AWG o mayor.",
+          "nec_ref": "840.160, Exception"
+        },
+        {
+          "question": "Donde los cables de comunicaciones se sustituyen por cables Clase 2 y Clase 3 bajo 725.154(A), ¿qué más debe cumplir la instalación?",
+          "choices": [
+            "725.144",
+            "800.133",
+            "310.15",
+            "Nada más"
+          ],
+          "answer_index": 0,
+          "explain_plain": "840.160 manda las instalaciones con cables sustituidos a 725.144, las reglas de transmisión de energía y datos que controlan el calentamiento de los paquetes.",
+          "nec_ref": "840.160; 725.144"
+        }
+      ],
+      "code_refs": [
+        "840.160",
+        "805.179",
+        "805.170",
+        "840.170(G)",
+        "725.144",
+        "725.154(A)"
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 840.160: Se cambió la referencia de la Sección 725.154(A) a la Sección 722.135 en cuanto a la sustitución de cables, y los requisitos de instalación ahora están en el Artículo 722.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "uncertain": [
+        "Esta página no se ha comprobado contra el NEC 2020 impreso. La redacción aquí sigue el texto del Segundo Borrador de 2020 de 840.160 publicado por el Panel de Elaboración de Códigos 16; confírmelo contra la sección impresa antes de confiar en él.",
+        "Una versión anterior de esta página describía 840.160 como una excepción de separación entre circuitos de banda ancha y de alumbrado y energía. Esa lectura no se pudo confirmar en las fuentes de 2020 revisadas y se ha eliminado — revise la sección impresa para el texto de «Circuitos de alimentación»."
+      ],
+      "rich_sources": [
+        {
+          "claim": "840.160 se titula 'Powering Circuits'; su texto de 2020 permite que los cables de comunicaciones listados de acuerdo con 805.179 lleven también circuitos para alimentar equipo de comunicaciones listado de acuerdo con 805.170, desde una fuente listada de acuerdo con 840.170(G), con cumplimiento de 725.144 donde los cables se sustituyen por cables Clase 2 y Clase 3 de acuerdo con 725.154(A), y una excepción para cables listados de 4 pares con corriente nominal de 0.3 amperes o menos en cualquier conductor de 24 AWG o mayor",
+          "source": "CMP-16 Second Draft Meeting Report, 2020 NEC, SR-7751 (IEEE 802.3 SCC-18 hosting)",
+          "url": "https://grouper.ieee.org/groups/802/3/ad_hoc/SCC_18/public/INEC20202020%20Second%20Draft%20MeetingCMP-16CMP-16%20Second%20Draft%20Meeting%20Report%20Rev%201.pdf"
+        },
+        {
+          "claim": "805.179 existe en el libro publicado de 2020, incluido 805.179(D) cables de potencia limitada (LP), y 840.160 se trata como una sección del Artículo 840 publicado",
+          "source": "IAEI Analysis of Changes — 2020 NEC course outline (Nebraska State Electrical Board)",
+          "url": "https://secure.utah.gov/ce-public/files/objectives/10665.pdf"
+        }
+      ],
+      "rich": 1
     }
   ],
   "toc": [
