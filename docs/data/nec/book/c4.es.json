@@ -1391,8 +1391,8 @@
       "article": "406",
       "section": "406.4(D)",
       "title": "Reemplazo de un tomacorriente — el reemplazo debe cumplir las reglas de hoy para ese lugar",
-      "plain_explanation": "La sección 406.4(D) rige lo que debes hacer cuando cambias un tomacorriente existente. Donde el código actual exige protección GFCI, AFCI, contra manipulación o contra la intemperie en ese lugar, el reemplazo tiene que proporcionarla. Donde no hay conductor de puesta a tierra del equipo en la caja, los caminos permitidos son un reemplazo tipo sin puesta a tierra, un reemplazo tipo GFCI marcado como sin tierra del equipo, o un tomacorriente tipo con puesta a tierra alimentado a través de un dispositivo GFCI y marcado en consecuencia. No puedes simplemente instalar un tomacorriente estándar con puesta a tierra en un circuito sin tierra y dejarlo aparentando que está puesto a tierra.\n\nCAMBIO NEC 2023:\n• 406.4(D)(3): Se proporcionó sustento que exigirá que los tomacorrientes con interruptor de circuito por falla a tierra (GFCI) estén listados según 406.4(D)(3).\n• 406.4(D)(8): Se ha proporcionado sustento para exigir que se proporcione protección contra falla a tierra del equipo (GFPE) en los tomacorrientes de reemplazo que requieren protección GFPE según los requisitos actuales del Código en otras partes del NEC\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "En un cambio de servicio, prueba primero si hay una tierra real, luego elige el camino de reemplazo y aplica la etiqueta o grabado de marcado requerido antes de irte. Fotografía el marcado para el registro del trabajo cuando sea una instalación sin tierra del equipo.",
+      "plain_explanation": "La sección 406.4(D) establece las reglas para cambiar un tomacorriente existente. El reemplazo no queda protegido por antigüedad: donde el código de hoy exige protección GFCI, AFCI, contra manipulación o contra la intemperie en ese lugar, el reemplazo debe proporcionarla.\n• Tierra en la caja — 406.4(D)(1): si existe un medio de puesta a tierra en la caja, o se instala un conductor de puesta a tierra del equipo según 250.130(C), el reemplazo debe ser un tomacorriente tipo con puesta a tierra, conectado a esa tierra.\n• Sin tierra en la caja — 406.4(D)(2): se permiten exactamente tres caminos. (a) Otro tomacorriente tipo sin puesta a tierra. (b) Un tomacorriente tipo GFCI marcado \"No Equipment Ground\". (c) Un tomacorriente tipo con puesta a tierra alimentado a través de un GFCI, marcado \"GFCI Protected\" y \"No Equipment Ground\".\n• La familia de protecciones acompaña: GFCI donde se requiere (D)(3), AFCI donde 210.12 lo exige (D)(4), contra manipulación donde 406.12 lo exige (D)(5), contra la intemperie donde se requiere (D)(6). Un tomacorriente de control automático se reemplaza por uno de control equivalente (D)(7).\nUn tomacorriente común con puesta a tierra en un circuito sin tierra, sin marcar, nunca es uno de los caminos.",
+      "on_the_job": "Llamada de servicio en una casa ranch de Orlando de 1962: el tomacorriente del baño junto al lavamanos está muerto, la caja no tiene tierra del equipo y el tablero es viejo, sin protección GFCI ni AFCI en el breaker. Pruebe primero — no hay tierra. El cambio legal es un tomacorriente tipo GFCI marcado \"No Equipment Ground\", que también da a ese lugar la protección GFCI que el código de hoy exige allí. Aplique el marcado antes de irse y fotografíelo para el registro del trabajo. En el trabajo nuevo de Sharma el panorama cambia: la protección vive en el breaker de doble función (S-07), así que un reemplazo en ese circuito normalmente mantiene un dispositivo estándar contra manipulación.",
       "sharma_note": "Nota de S-07: en el trabajo nuevo de Sharma la protección GFCI/AFCI vive en el interruptor DFN, así que un reemplazo en un circuito DFN de Sharma normalmente mantiene un dispositivo TR estándar. En tableros más viejos sin esa protección, 406.4(D) es lo que obliga a la mejora en el dispositivo.",
       "figure_idea": "",
       "related_ids": [
@@ -1423,7 +1423,143 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Un reemplazo es el único momento en que se toca una instalación vieja, así que el código lo usa para cerrar las brechas que lastiman a las personas: protección contra falla a tierra donde hay agua, protección contra arco en los circuitos de dormitorios, obturadores donde los niños empujan objetos en las ranuras. Las reglas de marcado existen porque una cara de tres patas en un circuito sin tierra le miente a la siguiente persona. Los probadores de enchufar, las regletas con supresor y las herramientas de carcasa metálica suponen que esa pata de tierra es real.",
+      "exam_trap": "La respuesta trampa: «El tomacorriente viejo era de tres patas, así que un reemplazo estándar de tres patas está bien». Si no hay tierra del equipo en la caja, ese dispositivo no está en la lista. Los caminos permitidos son un reemplazo sin puesta a tierra, un reemplazo GFCI marcado, o un tomacorriente con puesta a tierra alimentado a través de un GFCI y marcado. Y un GFCI no crea una tierra — protege a las personas, y el dispositivo tiene que decirlo.",
+      "inspection_fails": [
+        "Tomacorriente estándar con puesta a tierra instalado en un circuito sin tierra, sin marcar — no es un camino permitido de 406.4(D)(2).",
+        "Reemplazo tipo GFCI en una caja sin tierra sin el marcado \"No Equipment Ground\" (406.4(D)(2)(b)).",
+        "Tomacorriente con puesta a tierra alimentado a través de un GFCI pero sin los marcados \"GFCI Protected\" y \"No Equipment Ground\" (406.4(D)(2)(c)).",
+        "Reemplazo en un lugar de baño o cocina sin la protección GFCI que el código actual exige (406.4(D)(3)).",
+        "Neutro puenteado al terminal de tierra — una tierra falsa — para que un probador lea «con tierra»."
+      ],
+      "tables": [
+        {
+          "caption": "Sin tierra del equipo en la caja — los únicos tres caminos (406.4(D)(2))",
+          "headers": [
+            "Camino",
+            "Dispositivo",
+            "Marcado"
+          ],
+          "rows": [
+            [
+              "(a)",
+              "Tomacorriente tipo sin puesta a tierra",
+              "Ninguno"
+            ],
+            [
+              "(b)",
+              "Tomacorriente tipo GFCI",
+              "No Equipment Ground"
+            ],
+            [
+              "(c)",
+              "Con puesta a tierra, alimentado por un GFCI",
+              "GFCI Protected + No Equipment Ground"
+            ]
+          ]
+        },
+        {
+          "caption": "Protección que el lugar exige hoy — el reemplazo la proporciona",
+          "headers": [
+            "Protección",
+            "Exigida por",
+            "Regla de reemplazo"
+          ],
+          "rows": [
+            [
+              "GFCI",
+              "210.8",
+              "406.4(D)(3)"
+            ],
+            [
+              "AFCI",
+              "210.12",
+              "406.4(D)(4)"
+            ],
+            [
+              "Contra manipulación",
+              "406.12",
+              "406.4(D)(5)"
+            ],
+            [
+              "Contra la intemperie",
+              "406.9",
+              "406.4(D)(6)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-406.4D-replacement-paths.svg",
+          "alt": "Diagrama de decisión para reemplazar un tomacorriente: compruebe si hay tierra del equipo y luego siga el camino con puesta a tierra o uno de los tres caminos sin tierra, cada uno con su marcado requerido.",
+          "caption": "Reemplazo de un tomacorriente: primero compruebe la tierra, luego elija el camino.",
+          "w": 900,
+          "h": 1760
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Una caja de tomacorriente no tiene conductor de puesta a tierra del equipo. ¿Qué reemplazo está permitido?",
+          "choices": [
+            "Un tomacorriente estándar con puesta a tierra",
+            "Un tomacorriente con puesta a tierra alimentado a través de un GFCI, marcado \"GFCI Protected\" y \"No Equipment Ground\"",
+            "Un tomacorriente con puesta a tierra con el neutro puenteado al terminal de tierra",
+            "Cualquier tomacorriente, si existe un breaker GFCI en alguna parte del edificio"
+          ],
+          "answer_index": 1,
+          "explain_plain": "406.4(D)(2) permite exactamente tres caminos. El de tipo con puesta a tierra es el (c), y se exigen ambos marcados.",
+          "nec_ref": "406.4(D)(2)(c)"
+        },
+        {
+          "question": "Usted reemplaza un tomacorriente en un baño donde 210.8 exige hoy protección GFCI. El reemplazo debe:",
+          "choices": [
+            "Ser idéntico al dispositivo viejo",
+            "Proporcionar protección GFCI",
+            "Ser solo contra manipulación",
+            "Ser contra la intemperie"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Los reemplazos no quedan protegidos por antigüedad: donde otra parte del Código exige protección GFCI, el tomacorriente de reemplazo debe estar protegido por GFCI.",
+          "nec_ref": "406.4(D)(3)"
+        },
+        {
+          "question": "Un tomacorriente tipo GFCI reemplaza uno de dos patas en una caja sin tierra. ¿Qué marcado se exige?",
+          "choices": [
+            "Solo \"GFCI Protected\"",
+            "\"No Equipment Ground\"",
+            "Ningún marcado — el GFCI crea una tierra",
+            "\"Circuito sin tierra\""
+          ],
+          "answer_index": 1,
+          "explain_plain": "El GFCI protege a las personas contra descargas; no crea una tierra del equipo, así que el dispositivo debe estar marcado \"No Equipment Ground\".",
+          "nec_ref": "406.4(D)(2)(b)"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 406.4(D)(3): Se proporcionó sustento que exigirá que los tomacorrientes con interruptor de circuito por falla a tierra (GFCI) estén listados según 406.4(D)(3).\n• 406.4(D)(8): Se ha proporcionado sustento para exigir que se proporcione protección contra falla a tierra del equipo (GFPE) en los tomacorrientes de reemplazo que requieren protección GFPE según los requisitos actuales del Código en otras partes del NEC\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "406.4(D)(1)",
+        "406.4(D)(2)",
+        "406.4(D)(3)",
+        "406.4(D)(4)",
+        "406.4(D)(5)",
+        "406.4(D)(6)",
+        "406.4(D)(7)",
+        "250.130(C)",
+        "210.8",
+        "210.12",
+        "406.12"
+      ],
+      "rich_sources": [
+        {
+          "claim": "Opciones de reemplazo AFCI de 406.4(D)(4) (tomacorriente AFCI listado, tomacorriente protegido por uno, o tomacorriente protegido por un breaker AFCI tipo combinación) y reemplazo de tomacorrientes controlados de 406.4(D)(7)",
+          "source": "Mike Holt, Receptacles, based on the 2020 NEC",
+          "url": "http://www.mikeholt.com/newsletters.php?action=display&letterID=2645&srsltid=AfmBOorg10zotmXFCQ7XEAbkB9lE4BbX2kNX4pqk_2uHklCd6TJBaQie"
+        }
+      ],
+      "uncertain": [],
+      "rich": 1
     },
     {
       "id": "C4-406.5(E)",
@@ -1699,8 +1835,8 @@
       "article": "406",
       "section": "406.9(C)",
       "title": "Sin tomacorrientes dentro de la zona de la tina o la ducha",
-      "plain_explanation": "La sección 406.9(C) mantiene los tomacorrientes fuera de la zona directamente dentro e inmediatamente alrededor de una tina o un cubículo de ducha. En el arreglo de 2020 esta zona se mide 3 ft en horizontal y 8 ft en vertical desde la parte superior del borde de la tina o el umbral del cubículo de ducha, y ningún tomacorriente se puede instalar dentro de esa zona. La regla existe porque una persona en el agua está en la peor posición posible para tocar un dispositivo o un cordón conectado a él.\n\nCAMBIO NEC 2023:\n• 406.9(C): Se aclararon las restricciones de tomacorrientes en tinas y duchas y alrededor de ellas en la Sección 406.9(C). Se agregó una nueva Excepción n.º 4 para permitir tomacorrientes sencillos dentro de 36\" de la tina o la ducha con limitaciones.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "En el trazado, marca la zona en el plano de planta antes de colocar los tomacorrientes del baño, no en los acabados. Los tomacorrientes del tocador pertenecen fuera de la zona aunque la encimera corra cerca de la tina. Si el único espacio de pared está dentro de la zona, lleva la conversación al constructor antes de la instalación en bruto, no al inspector en la inspección final.",
+      "plain_explanation": "La sección 406.9(C) mantiene los tomacorrientes fuera de la zona directamente dentro e inmediatamente alrededor de una tina o un cubículo de ducha.\n• La zona mide 3 ft en horizontal y 8 ft en vertical desde la parte superior del borde de la tina o el umbral del cubículo de ducha.\n• Ningún tomacorriente se puede instalar dentro de esa zona. La protección GFCI no cambia la respuesta: es una regla de ubicación.\n• El tomacorriente que el lavamanos requiere igual hay que proveerlo; solo tiene que quedar fuera de la zona.\nLa regla existe porque una persona en el agua está en la peor posición posible para tocar un dispositivo o un cordón conectado a él.",
+      "on_the_job": "En el trazado, marque la zona en el plano de planta antes de colocar los tomacorrientes del baño, no en los acabados. Los tomacorrientes del tocador pertenecen fuera de la zona aunque la encimera corra cerca de la tina. Si el único espacio de pared está dentro de la zona, lleve la conversación al constructor antes de la instalación en bruto, no al inspector en la inspección final. En un baño de producción ajustado de Florida — combinación de tina y ducha junto a un tocador largo — mida ambas reglas de 3 ft antes de clavar la caja: el tomacorriente del lavamanos tiene que quedar al alcance del lavamanos y aun así fuera de la zona medida desde el borde de la tina.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1721,7 +1857,97 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 406.9(C): Se aclararon las restricciones de tomacorrientes en tinas y duchas y alrededor de ellas en la Sección 406.9(C). Se agregó una nueva Excepción n.º 4 para permitir tomacorrientes sencillos dentro de 36\" de la tina o la ducha con limitaciones.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "El agua, la piel desnuda y una tina o un drenaje puestos a tierra hacen que la persona en la tina sea el mejor conductor del cuarto. Un tomacorriente dentro de la zona pone un dispositivo y su cordón al alcance de una mano mojada: el cordón de la secadora de pelo colgando hacia el agua es el caso clásico. Ningún dispositivo de protección compra lo que compra la distancia, así que el Código mantiene el tomacorriente fuera del alcance del agua por completo.",
+      "inspection_fails": [
+        "Tomacorriente instalado dentro de la zona de la tina o la ducha, a menos de 3 ft en horizontal del borde de la tina.",
+        "Zona medida desde la llave o el centro de la tina en vez de la parte superior del borde o el umbral.",
+        "Tomacorriente del tocador colocado en la zona porque la encimera se extendió: nunca se volvió a medir en la instalación en bruto.",
+        "Tomacorriente agregado dentro de la zona en los acabados para un asiento bidé o un toallero sin revisar 406.9(C)."
+      ],
+      "exam_trap": "La respuesta trampa es «está protegido por GFCI, así que puede ir junto a la tina». La sección 406.9(C) es una regla de ubicación, no de protección: en el Código 2020 ningún tomacorriente está permitido dentro de la zona, con GFCI o sin él. La protección nunca corrige una ubicación prohibida: hay que mover el dispositivo, no ponerle un interruptor mejor.",
+      "tables": [
+        {
+          "caption": "La zona de la tina y la ducha (406.9(C))",
+          "headers": [
+            "Dónde",
+            "Regla"
+          ],
+          "rows": [
+            [
+              "Extensión horizontal",
+              "3 ft desde la parte superior del borde de la tina o el umbral de la ducha"
+            ],
+            [
+              "Extensión vertical",
+              "8 ft hacia arriba desde el mismo punto"
+            ],
+            [
+              "Tomacorrientes dentro de la zona",
+              "No permitidos (2020)"
+            ],
+            [
+              "Tomacorriente del lavamanos",
+              "Sigue siendo requerido: se coloca fuera de la zona"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-406.9C-zone-plan.svg",
+          "alt": "Vista en planta de un baño con una tina, la zona de 3 ft frente a la tina y a su lado sombreada en rojo, un tomacorriente tachado dentro de la zona y el tomacorriente del tocador fuera de la zona.",
+          "caption": "Vista en planta: la zona se mide desde el borde, no desde la llave.",
+          "w": 900,
+          "h": 1320
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Cómo se mide la zona de 406.9(C)?",
+          "choices": [
+            "3 ft en horizontal y 8 ft en vertical desde la parte superior del borde de la tina o el umbral de la ducha",
+            "3 ft desde la llave y 8 ft desde el drenaje",
+            "8 ft en horizontal y 3 ft en vertical desde el centro de la tina",
+            "Todo el baño es la zona"
+          ],
+          "answer_index": 0,
+          "explain_plain": "La zona corre 3 ft hacia afuera y 8 ft hacia arriba, medidos desde la parte superior del borde de la tina o el umbral del cubículo de ducha.",
+          "nec_ref": "406.9(C)"
+        },
+        {
+          "question": "Un tomacorriente GFCI instalado dentro de la zona es:",
+          "choices": [
+            "Permitido — está protegido",
+            "Permitido si también es resistente a manipulación",
+            "No permitido — 406.9(C) es una regla de ubicación",
+            "Permitido si sirve solo al tocador"
+          ],
+          "answer_index": 2,
+          "explain_plain": "En el Código 2020 ningún tomacorriente se puede instalar dentro de la zona. La protección GFCI no corrige una ubicación prohibida.",
+          "nec_ref": "406.9(C)"
+        },
+        {
+          "question": "La regla del tomacorriente del lavamanos y la regla de la zona usan ambas 3 ft. ¿Qué cambia?",
+          "choices": [
+            "Nada — son la misma medida",
+            "La regla del lavamanos mide desde el borde exterior del lavamanos hasta donde el tomacorriente debe alcanzar; la zona mide desde el borde de la tina, espacio del que el tomacorriente debe mantenerse fuera",
+            "La zona se mide en pulgadas y la regla del lavamanos en pies",
+            "La regla del lavamanos aplica solo a duchas"
+          ],
+          "answer_index": 1,
+          "explain_plain": "210.52(D) pone un tomacorriente dentro de 3 ft del borde exterior del lavamanos; 406.9(C) mantiene los tomacorrientes a 3 ft del borde de la tina o el umbral de la ducha. Ambas deben cumplirse a la vez.",
+          "nec_ref": "406.9(C)"
+        }
+      ],
+      "code_refs": [
+        "406.9(C)",
+        "210.52(D)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C4-406.12",
@@ -1914,8 +2140,8 @@
       "article": "408",
       "section": "408.4(A)",
       "title": "El directorio de circuitos — específico, en el sitio y actualizado",
-      "plain_explanation": "La sección 408.4(A) exige que cada circuito y cada modificación de circuito se identifique en el tablero con suficiente detalle para distinguir los circuitos entre sí, y que se proporcione un directorio de circuitos (o identificación de circuitos) en el tablero. Etiquetas genéricas como 'enchufes', 'luces' o 'recámara' escritas para otra casa no cumplen la intención; la identificación tiene que describir el propósito o uso real de cada circuito en ese edificio. Las posiciones de reserva deben marcarse como reservas, y el directorio debe actualizarse cuando los circuitos cambian.\n\nCAMBIO NEC 2023:\n• 408.4(A): Las reglas del directorio de circuitos se convirtieron en una lista de verificación de seis partes que ahora exige explicar cualquier abreviatura o símbolo. En edificios que no sean casas de una y dos familias, los tableros alimentados por alimentador también deben mostrar dónde se ubica físicamente su fuente. Los tableros alimentados por alimentador fuera de viviendas de una y dos familias deben nombrar el equipo que los alimenta y dónde está físicamente (408.4(B)).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Llena el directorio en los acabados, desde el programa de tablero real, y haz que la persona que cableó la casa lo revise circuito por circuito con un probador o conmutando. Un directorio copiado del plano sin verificación en campo es como 'Cocina' termina alimentando el calentador de agua.",
+      "plain_explanation": "La sección 408.4(A) exige un directorio de circuitos en todo tablero, y una identificación lo bastante específica para distinguir los circuitos entre sí:\n• Cada circuito, y cada modificación de circuito, se identifica de forma legible con una descripción clara y específica de su propósito o uso — la carga real, en el edificio real.\n• Las palabras genéricas que sirven para cualquier casa — «enchufes», «luces», «recámara» — no cumplen la regla. Tampoco un directorio copiado del plano o de otro trabajo.\n• Las posiciones de reserva se identifican como reservas.\n• El directorio se actualiza cada vez que se añaden, mueven o cambian circuitos.\nEl directorio vive en el tablero, para que la siguiente persona que abra el panel pueda desconectar el circuito correcto sin adivinar.",
+      "on_the_job": "Llene el directorio en los acabados, desde el programa de tablero real, y haga que la persona que cableó la casa lo verifique circuito por circuito con un probador o encendiendo y apagando cargas. Un directorio copiado del plano sin verificación en campo es como «Cocina» termina alimentando el calentador de agua. Estándar de Sharma: ordenado, específico y correcto — «Tomacorrientes recámara NE», no «REC.»",
       "sharma_note": "Nota de Sharma: el directorio es parte del producto terminado que ve el constructor. Ordenado, específico y correcto — 'Tomacorrientes recámara NE', no 'REC.'",
       "figure_idea": "",
       "related_ids": [
@@ -1936,7 +2162,106 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/408-4",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "La búsqueda de fallas y el bloqueo empiezan en el directorio. Una etiqueta equivocada o vaga hace que un técnico desconecte «Cocina» mientras el calentador de agua sigue energizado, o deja a una cuadrilla adivinando qué breaker alimenta el circuito que está a punto de tocar. Un directorio específico es un dispositivo de seguridad que no cuesta nada más que diez minutos honestos en los acabados.",
+      "exam_trap": "La trampa: copiar el directorio del juego de planos, o de la casa idéntica de al lado. El examen — y el inspector — quieren el directorio que describe los circuitos de este edificio tal como están realmente cableados y verificados. «Luces» y «enchufes» son las respuestas equivocadas clásicas: no identifican nada, y no distinguen nada.",
+      "inspection_fails": [
+        "Sin directorio de circuitos en el tablero (408.4(A)).",
+        "Entradas del directorio genéricas — «enchufes», «luces» — los circuitos no pueden distinguirse entre sí.",
+        "Posiciones de breaker de reserva no identificadas como reservas.",
+        "Directorio no actualizado después de añadir o mover circuitos.",
+        "Directorio escrito para otro edificio — las etiquetas no coinciden con las cargas realmente alimentadas."
+      ],
+      "tables": [
+        {
+          "caption": "Entradas del directorio: qué pasa, qué no pasa",
+          "headers": [
+            "Entrada",
+            "Veredicto"
+          ],
+          "rows": [
+            [
+              "Tomacorrientes recámara NE",
+              "Específica — pasa"
+            ],
+            [
+              "Calentador de agua — pared del garaje",
+              "Específica — pasa"
+            ],
+            [
+              "Reserva",
+              "Correcta para una posición sin uso"
+            ],
+            [
+              "Enchufes",
+              "Genérica — no pasa"
+            ],
+            [
+              "Luces",
+              "Genérica — no pasa"
+            ],
+            [
+              "REC.",
+              "Abreviatura sin explicar — no pasa"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-408.4A-directory.svg",
+          "alt": "Un tablero con su tarjeta de directorio de circuitos: entradas específicas marcadas como correctas, posiciones de reserva marcadas como reservas, y entradas genéricas como enchufes, luces y REC. marcadas como incorrectas.",
+          "caption": "La tarjeta del directorio: las entradas específicas pasan, las genéricas no.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Qué entrada del directorio cumple 408.4(A)?",
+          "choices": [
+            "Enchufes",
+            "Luces",
+            "Tomacorrientes recámara NE",
+            "Recámara"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La identificación debe describir el propósito o uso real del circuito en ese edificio, con suficiente especificidad para distinguir los circuitos entre sí.",
+          "nec_ref": "408.4(A)"
+        },
+        {
+          "question": "Una posición de breaker sin uso en el tablero debe:",
+          "choices": [
+            "Quedar en blanco en el directorio",
+            "Identificarse como reserva",
+            "Retirarse del tablero",
+            "Etiquetarse con su carga futura"
+          ],
+          "answer_index": 1,
+          "explain_plain": "408.4(A) exige que las posiciones de reserva se identifiquen como reservas.",
+          "nec_ref": "408.4(A)"
+        },
+        {
+          "question": "Un circuito se mueve para alimentar una carga distinta. El directorio debe:",
+          "choices": [
+            "Quedar como está hasta la próxima inspección",
+            "Actualizarse para describir el circuito como es ahora",
+            "Reemplazarse solo en trabajos comerciales",
+            "Ser verificado por la compañía eléctrica"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Toda modificación de circuito debe identificarse — el directorio se mantiene actualizado, no se escribe una vez y se olvida.",
+          "nec_ref": "408.4(A)"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 408.4(A): Las reglas del directorio de circuitos se convirtieron en una lista de verificación de seis partes que ahora exige explicar cualquier abreviatura o símbolo. En edificios que no sean casas de una y dos familias, los tableros alimentados por alimentador también deben mostrar dónde se ubica físicamente su fuente. Los tableros alimentados por alimentador fuera de viviendas de una y dos familias deben nombrar el equipo que los alimenta y dónde está físicamente (408.4(B)).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "408.4(A)",
+        "408.4(B)"
+      ],
+      "rich_sources": [],
+      "uncertain": [],
+      "rich": 1
     },
     {
       "id": "C4-408.4(B)",
@@ -1944,8 +2269,8 @@
       "article": "408",
       "section": "408.4(B)",
       "title": "Identificación de la fuente de alimentación",
-      "plain_explanation": "La sección 408.4(B) trata los tableros alimentados por un alimentador: el tablero debe marcarse para identificar de dónde viene su alimentación cuando esa fuente está en un lugar distinto o no es obvia, de modo que una persona de pie frente al tablero pueda encontrar la desconexión que lo desenergiza. Las reglas compañeras de identificación en el Artículo 408 también exigen que las desconexiones y los circuitos se marquen según su propósito donde no sean evidentes. El tema de toda la parte es que nadie tenga que adivinar qué alimenta a qué.\n\nCAMBIO NEC 2023:\n• 408.4: Las reglas del directorio de circuitos se convirtieron en una lista de verificación de seis partes que ahora exige explicar cualquier abreviatura o símbolo. En edificios que no sean casas de una y dos familias, los tableros alimentados por alimentador también deben mostrar dónde se ubica físicamente su fuente. Los tableros alimentados por alimentador fuera de viviendas de una y dos familias deben nombrar el equipo que los alimenta y dónde está físicamente (408.4(B)).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "En un subtablero, etiqueta la fuente del alimentador (por ejemplo, 'Alimentado desde el tablero principal, garaje') en el subtablero y etiqueta el interruptor del alimentador en el tablero fuente. Haz lo mismo con cualquier tablero alimentado desde un generador o un segundo servicio, y haz que las dos etiquetas coincidan entre sí.",
+      "plain_explanation": "La sección 408.4(B) trata los tableros alimentados por un alimentador: el tablero debe marcarse para identificar de dónde viene su alimentación cuando esa fuente está en un lugar distinto o no es obvia, de modo que una persona de pie frente al tablero pueda encontrar la desconexión que lo desenergiza.\n• La marca de la fuente va en el propio tablero alimentado por el alimentador.\n• Las reglas del directorio en 408.4(A) trabajan en la otra dirección: identifican qué alimenta cada circuito del tablero.\n• Las desconexiones y los circuitos también se marcan según su propósito donde no sean evidentes.\nEl tema de toda la parte es que nadie tenga que adivinar qué alimenta a qué.",
+      "on_the_job": "En un subtablero, etiquete la fuente del alimentador (por ejemplo, «Alimentado desde el tablero principal, garaje») en el subtablero y etiquete el interruptor del alimentador en el tablero fuente. Haga lo mismo con cualquier tablero alimentado desde un generador o un segundo servicio, y haga que las dos etiquetas coincidan entre sí. En una casa de Florida el caso de todos los días es el subtablero del garaje separado o de la casa de la piscina: cinco minutos en los acabados deciden si el próximo técnico desenergiza el interruptor correcto al primer intento.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1964,7 +2289,93 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/408-4",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 408.4: Las reglas del directorio de circuitos se convirtieron en una lista de verificación de seis partes que ahora exige explicar cualquier abreviatura o símbolo. En edificios que no sean casas de una y dos familias, los tableros alimentados por alimentador también deben mostrar dónde se ubica físicamente su fuente. Los tableros alimentados por alimentador fuera de viviendas de una y dos familias deben nombrar el equipo que los alimenta y dónde está físicamente (408.4(B)).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "El tablero peligroso es el que está vivo y nadie puede desenergizar. Un subtablero alimentado desde otro edificio, un segundo servicio o un generador puede seguir energizado después de abrir el principal que usted tiene enfrente: la sorpresa clásica durante trabajo de servicio y en incendios. Una marca de la fuente en el tablero convierte una búsqueda por todo el edificio en un solo viaje a la desconexión correcta.",
+      "inspection_fails": [
+        "Tablero alimentado por alimentador sin identificación de su fuente de alimentación.",
+        "Subtablero en un edificio separado, sin nada que nombre el tablero o el edificio que lo alimenta.",
+        "Las etiquetas de fuente en los dos extremos no coinciden: el subtablero nombra una fuente que el tablero principal no nombra.",
+        "Tablero alimentado desde un generador o un segundo servicio, sin marca que muestre la otra fuente."
+      ],
+      "exam_trap": "La trampa es marcar el directorio de circuitos y dar el tablero por identificado. El directorio de 408.4(A) dice qué alimenta cada circuito; 408.4(B) responde en la otra dirección: qué alimenta a este tablero y dónde está esa fuente. Un directorio perfecto en un tablero alimentado por alimentador, sin marca de fuente, igual deja a la próxima persona adivinando qué edificio, principal o generador lo mantiene vivo.",
+      "tables": [
+        {
+          "caption": "Dos direcciones de identificación (408.4)",
+          "headers": [
+            "Marca",
+            "Qué responde"
+          ],
+          "rows": [
+            [
+              "Directorio de circuitos — 408.4(A)",
+              "Qué alimenta cada circuito de este tablero"
+            ],
+            [
+              "Fuente de alimentación — 408.4(B)",
+              "Qué alimenta a este tablero, y dónde está"
+            ],
+            [
+              "Interruptor del alimentador, en la fuente",
+              "Qué interruptor desenergiza este tablero"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-408.4B-source-labels.svg",
+          "alt": "Un tablero principal en un garaje que alimenta un subtablero en la casa de la piscina: el interruptor del alimentador está etiquetado en el tablero principal, la etiqueta de fuente en el subtablero dice Alimentado desde el tablero principal, garaje, y las dos etiquetas coinciden.",
+          "caption": "Dos etiquetas, un alimentador: cada extremo nombra al otro.",
+          "w": 900,
+          "h": 1380
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Qué exige 408.4(B) en un tablero alimentado por un alimentador?",
+          "choices": [
+            "Un segundo directorio de circuitos",
+            "Una marca que identifique la fuente de alimentación cuando está en un lugar distinto o no es obvia",
+            "Un candado en el interruptor del alimentador",
+            "Un conductor de puesta a tierra de equipo dedicado"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El propio tablero debe estar marcado para que una persona frente a él pueda encontrar la desconexión que lo desenergiza.",
+          "nec_ref": "408.4(B)"
+        },
+        {
+          "question": "Un subtablero de la casa de la piscina se alimenta desde el tablero principal del garaje. El trabajo completo de marcado es:",
+          "choices": [
+            "Etiquetar solo el subtablero",
+            "Etiquetar solo el tablero principal",
+            "Etiquetar la fuente en el subtablero y el interruptor del alimentador en el principal — y hacer que las etiquetas coincidan",
+            "Sin etiquetas; es una sola propiedad"
+          ],
+          "answer_index": 2,
+          "explain_plain": "408.4(B) pone la marca de la fuente en el tablero alimentado; etiquetar el interruptor del alimentador en la fuente, con ambas etiquetas en acuerdo, es lo que hace que la marca se encuentre y se crea.",
+          "nec_ref": "408.4(B)"
+        },
+        {
+          "question": "¿Qué sección cubre el directorio de circuitos en sí?",
+          "choices": [
+            "408.4(A)",
+            "408.6",
+            "404.2(C)",
+            "210.52(D)"
+          ],
+          "answer_index": 0,
+          "explain_plain": "408.4(A) es el directorio de circuitos; 408.4(B) es la identificación de la fuente de alimentación.",
+          "nec_ref": "408.4(A)"
+        }
+      ],
+      "code_refs": [
+        "408.4(B)",
+        "408.4(A)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C4-408.6",
@@ -1972,8 +2383,8 @@
       "article": "408",
       "section": "408.6",
       "title": "La capacidad de corriente de cortocircuito del equipo debe cubrir la corriente de falla disponible",
-      "plain_explanation": "La sección 408.6 exige que los tableros de distribución, el equipo de conmutación y los tableros tengan una capacidad de corriente de cortocircuito (SCCR) al menos igual a la corriente de falla disponible donde están instalados. Un tablero que coincide con el trabajo en voltios y amperios puede seguir siendo el tablero equivocado si su SCCR está por debajo de la corriente de falla que el servicio puede entregar en un cortocircuito. Este requisito se agregó en la edición 2020, y por eso los viejos hábitos de cambio nunca hacían la pregunta.",
-      "on_the_job": "En un cambio de servicio o un conjunto de tableros comerciales, obtén la corriente de falla disponible (de la compañía eléctrica o de los documentos de diseño) y compárala con el SCCR marcado en el equipo antes de pedir el equipo. Registra ambos números en el archivo del trabajo. Si la corriente de falla es desconocida, eso es una pregunta de ingeniería para Mike, no una estimación de campo.",
+      "plain_explanation": "La sección 408.6 exige que los tableros de distribución, el equipo de conmutación y los tableros tengan una capacidad de corriente de cortocircuito (SCCR) al menos igual a la corriente de falla disponible donde están instalados. Un tablero que coincide con el trabajo en voltios y amperios puede seguir siendo el tablero equivocado si su SCCR está por debajo de la corriente de falla que el servicio puede entregar en un cortocircuito.\n• El SCCR está marcado en el equipo. La corriente de falla disponible viene de la compañía eléctrica o de los documentos de diseño — no es un número que usted estima en el campo.\n• En el equipo de servicio que no es de una vivienda, la corriente de falla disponible y la fecha del cálculo deben marcarse en el campo sobre el equipo (110.24).\n• Los interruptores dentro del equipo llevan sus propias capacidades de interrupción (110.9). El SCCR del equipo y las capacidades de interrupción de los dispositivos deben cubrir la misma corriente de falla.\nEste requisito se agregó en la edición 2020, y por eso los viejos hábitos de cambio nunca hacían la pregunta.",
+      "on_the_job": "Cambio de servicio comercial pequeño en Orlando: la carta de la compañía eléctrica pone la corriente de falla disponible en 22,000 A en el servicio nuevo de 400 A. El tablero económico que va en el camión está marcado 10 kA de SCCR — no puede instalarse, aunque su barra y su voltaje coincidan. Según S-02, el equipo de reemplazo es Siemens, seleccionado con un SCCR de 22 kA o mayor, y ambos números — los 22,000 A disponibles y el SCCR marcado del equipo — quedan en el archivo del trabajo antes de pedir el equipo. Si la corriente de falla es desconocida, eso es una pregunta de ingeniería para Mike, no una estimación de campo.",
       "sharma_note": "S-02 va junto con esta página: el equipo nuevo de Sharma es Siemens, y la verificación del SCCR es parte de seleccionarlo, no una ocurrencia tardía en la inspección.",
       "figure_idea": "",
       "related_ids": [
@@ -1986,7 +2397,116 @@
         "S-02"
       ],
       "prev_id": "C4-408.4(B)",
-      "next_id": "C4-408.7"
+      "next_id": "C4-408.7",
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Una falla franca deja que el servicio entregue miles de amperios en una fracción de ciclo. Un equipo cuyo SCCR está por debajo de esa corriente puede romperse, expulsar metal fundido o volar sus puertas en vez de soportar la falla hasta que el dispositivo de sobrecorriente la despeje. La capacidad es lo que se interpone entre una falla despejada y una envolvente que explota.",
+      "inspection_fails": [
+        "Tablero instalado donde la corriente de falla disponible excede su SCCR marcado (408.6).",
+        "Equipo pedido e instalado antes de obtener la corriente de falla disponible de la compañía eléctrica.",
+        "Sin corriente de falla documentada en el archivo del trabajo — nada contra qué comparar el SCCR.",
+        "Corriente de falla disponible no marcada en el equipo de servicio, o la marca desactualizada después de un cambio de la compañía eléctrica (110.24)."
+      ],
+      "exam_trap": "La respuesta trampa lee la capacidad en amperios del tablero como si fuera su capacidad de falla: 'un tablero de 200 A en un servicio de 200 A soporta la falla'. Los amperios de la barra y el SCCR son números distintos. Un tablero de 200 A marcado 10 kA de SCCR sigue fallando en un servicio que puede entregar 22,000 A de corriente de falla.",
+      "tables": [
+        {
+          "caption": "La comparación que exige 408.6",
+          "headers": [
+            "Elemento",
+            "De dónde viene"
+          ],
+          "rows": [
+            [
+              "Corriente de falla disponible",
+              "Compañía eléctrica o documentos de diseño; marcada en el equipo de servicio (110.24)"
+            ],
+            [
+              "SCCR del equipo",
+              "Marcado en el tablero de distribución, equipo de conmutación o tablero"
+            ],
+            [
+              "Pasa / no pasa",
+              "Un SCCR al menos igual a la corriente de falla disponible pasa"
+            ]
+          ]
+        },
+        {
+          "caption": "Ejemplo resuelto — 22,000 A disponibles en el servicio",
+          "headers": [
+            "SCCR del tablero",
+            "Veredicto"
+          ],
+          "rows": [
+            [
+              "10,000 A",
+              "No pasa — por debajo de la corriente de falla"
+            ],
+            [
+              "22,000 A",
+              "Pasa — la cubre"
+            ],
+            [
+              "65,000 A",
+              "Pasa — la cubre con margen"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-408.6-sccr-bars.svg",
+          "alt": "Gráfico de barras que compara una corriente de falla disponible de 22,000 A con tres valores de SCCR de tableros: 10,000 A no pasa, 22,000 A pasa y 65,000 A pasa con margen.",
+          "caption": "SCCR contra corriente de falla disponible — la capacidad debe cubrir el número que la compañía eléctrica puede entregar.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un tablero está marcado 10 kA de SCCR. La compañía eléctrica pone la corriente de falla disponible en 22,000 A. ¿Puede instalarse el tablero?",
+          "choices": [
+            "Sí — la capacidad de la barra coincide con el servicio",
+            "Sí — los interruptores despejarán la falla",
+            "No — el SCCR está por debajo de la corriente de falla disponible",
+            "Solo si el tablero es Siemens"
+          ],
+          "answer_index": 2,
+          "explain_plain": "408.6 exige que el SCCR del equipo sea al menos igual a la corriente de falla disponible donde el equipo está instalado.",
+          "nec_ref": "408.6"
+        },
+        {
+          "question": "¿De dónde viene el número de la corriente de falla disponible?",
+          "choices": [
+            "De una estimación según el tamaño del transformador",
+            "De la compañía eléctrica o de los documentos de diseño",
+            "De la capacidad en amperios del tablero",
+            "Del interruptor más grande del tablero"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Lo suministra la compañía eléctrica o el diseñador, y en el equipo de servicio que no es de una vivienda se marca en el campo con la fecha del cálculo.",
+          "nec_ref": "110.24"
+        },
+        {
+          "question": "¿Por qué los viejos hábitos de cambio no hacían esta verificación?",
+          "choices": [
+            "Antes los tableros no llevaban marca de SCCR",
+            "El requisito se agregó en la edición 2020",
+            "Las corrientes de falla eran menores en los servicios viejos",
+            "Los inspectores no lo exigían antes de 2020"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El requisito de SCCR de 408.6 llegó con el NEC 2020, así que los hábitos formados antes nunca incluían la comparación.",
+          "nec_ref": "408.6"
+        }
+      ],
+      "code_refs": [
+        "408.6",
+        "110.9",
+        "110.10",
+        "110.24"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C4-408.7",
@@ -2222,8 +2742,8 @@
       "article": "408",
       "section": "408.41",
       "title": "Cada conductor puesto a tierra (neutro) lleva su propia terminal",
-      "plain_explanation": "La sección 408.41 exige que cada conductor puesto a tierra en un tablero termine en su propia terminal individual que no se use para ningún otro conductor, salvo que la terminal esté específicamente identificada para más de uno. Doblar dos neutros bajo un tornillo es una corrección clásica: cuando se trabaja en un circuito, aflojar la terminal compartida puede abrir el neutro de un circuito con corriente que la comparte. Los conductores de puesta a tierra del equipo siguen sus propias reglas de terminación y el listado del tablero; la disciplina de uno por terminal en esta página trata de los conductores puestos a tierra.",
-      "on_the_job": "En los acabados, conecta los neutros uno por tornillo y apriétalos con torque; nunca estaciones un segundo neutro bajo un tornillo 'temporalmente'. En un cambio de tablero, presupuesta el tiempo para separar los neutros doblados — encontrarlos es parte del trabajo, y la actualización del directorio de 408.4(A) ocurre en la misma visita.",
+      "plain_explanation": "La sección 408.41 exige que cada conductor puesto a tierra en un tablero termine en su propia terminal individual que no se use para ningún otro conductor, salvo que la terminal esté específicamente identificada para más de uno.\n• Un conductor puesto a tierra (neutro) por terminal. Doblar dos neutros bajo un tornillo es una corrección clásica.\n• El peligro es mecánico: cuando se trabaja en un circuito, aflojar la terminal compartida puede abrir el neutro de un circuito con corriente que la comparte.\n• Los conductores de puesta a tierra del equipo siguen sus propias reglas de terminación y el listado del tablero; la disciplina de uno por terminal en esta página trata de los conductores puestos a tierra.",
+      "on_the_job": "En los acabados, conecte los neutros uno por tornillo y apriételos con torque; nunca estacione un segundo neutro bajo un tornillo 'temporalmente'. En un cambio de tablero — el equipo nuevo es Siemens según S-02 — presupueste el tiempo para separar los neutros doblados: un tablero viejo de Florida típicamente esconde varios, y encontrarlos es parte del trabajo. La actualización del directorio de 408.4(A) ocurre en la misma visita.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -2234,7 +2754,94 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-408.36",
-      "next_id": "C4-408.43"
+      "next_id": "C4-408.43",
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Una terminal de neutro compartida es un punto único de falla para dos circuitos. Afloje un tornillo para mover un circuito y el otro circuito pierde su neutro mientras sigue con corriente — en un circuito ramal de varios conductores las cargas quedan en serie a través de 240 V y los equipos electrónicos se queman. Aun sin eso, dos conductores bajo un tornillo asientan de forma desigual, se aflojan con el tiempo y se calientan.",
+      "inspection_fails": [
+        "Dos conductores puestos a tierra (neutros) bajo un solo tornillo de terminal en el tablero (408.41).",
+        "Conductor puesto a tierra conectado con otro conductor en una terminal no identificada para más de un conductor (408.41).",
+        "Neutros doblados dejados en su lugar durante un cambio de tablero.",
+        "Tornillos de terminal de neutro aflojados o sin torque después de mover circuitos durante un trabajo de servicio."
+      ],
+      "exam_trap": "La trampa es tratar los neutros como las tierras: 'dos bajo un tornillo está bien — la barra es una sola pieza de todos modos'. La sección 408.41 está escrita sobre los conductores puestos a tierra, uno por terminal, y una terminal específicamente identificada para más de un conductor es la única salida. Doblar neutros porque caen en la misma barra es la observación de inspección.",
+      "tables": [
+        {
+          "caption": "Qué se conecta dónde en el tablero",
+          "headers": [
+            "Conductor",
+            "Regla de terminación"
+          ],
+          "rows": [
+            [
+              "Puesto a tierra (neutro)",
+              "Uno por terminal, salvo que la terminal esté identificada para más de uno (408.41)"
+            ],
+            [
+              "Puesta a tierra del equipo",
+              "Sigue el listado del tablero y sus propias reglas de terminación — no esta sección"
+            ],
+            [
+              "Cualquier conductor",
+              "Una terminal para más de un conductor debe estar identificada para ello (110.14(A))"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-408.41-neutral-bar.svg",
+          "alt": "Comparación de una barra de neutros de un tablero: arriba cada neutro llega a su propio tornillo de terminal; abajo dos neutros comparten un tornillo, con una nota que muestra que aflojar ese tornillo abre el neutro de un circuito con corriente.",
+          "caption": "Un neutro, una terminal — un tornillo compartido es un punto de falla compartido.",
+          "w": 900,
+          "h": 1400
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Dos neutros están conectados bajo un tornillo en la barra de neutros. ¿Veredicto?",
+          "choices": [
+            "OK — misma barra, mismo potencial",
+            "OK si ambos circuitos están en el mismo interruptor",
+            "Violación — cada conductor puesto a tierra lleva su propia terminal",
+            "Violación solo en subtableros"
+          ],
+          "answer_index": 2,
+          "explain_plain": "408.41 exige que cada conductor puesto a tierra termine en una terminal individual que no se use para ningún otro conductor.",
+          "nec_ref": "408.41"
+        },
+        {
+          "question": "¿Por qué es peligroso un neutro doblado durante el trabajo de servicio?",
+          "choices": [
+            "Sobrecarga la barra de neutros",
+            "Aflojar la terminal compartida puede abrir el neutro de un circuito con corriente que la comparte",
+            "Anula el listado del tablero",
+            "Aumenta la caída de voltaje del circuito"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La terminal compartida es el peligro: trabajar en un circuito puede abrir el retorno de neutro de otro circuito que sigue energizado.",
+          "nec_ref": "408.41"
+        },
+        {
+          "question": "¿Cuándo puede una terminal recibir dos conductores puestos a tierra?",
+          "choices": [
+            "Cuando ambos conductores son del mismo calibre",
+            "Cuando el tablero es el tablero principal",
+            "Nunca, bajo ninguna condición",
+            "Cuando la terminal está específicamente identificada para más de un conductor"
+          ],
+          "answer_index": 3,
+          "explain_plain": "La única apertura en 408.41 es una terminal específicamente identificada para más de un conductor.",
+          "nec_ref": "408.41"
+        }
+      ],
+      "code_refs": [
+        "408.41",
+        "110.14(A)",
+        "408.4(A)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C4-408.43",
@@ -2485,8 +3092,8 @@
       "article": "409",
       "section": "409.110",
       "title": "Paneles de control industrial — marcado y capacidad de corriente de cortocircuito (409.110)",
-      "plain_explanation": "Los paneles del Artículo 409 — los paneles de control construidos en fábrica que operan maquinaria y equipos de HVAC — deben marcarse bajo 409.110 con las capacidades eléctricas del panel, y el marcado incluye la capacidad de corriente de cortocircuito (SCCR) del panel. La SCCR es un techo: el panel no puede instalarse donde la corriente de falla disponible la supere. Lea la etiqueta del panel como lee la placa de un motor antes de instalarlo — voltaje de alimentación, fases y SCCR salen de esa marca, y una SCCR ausente o ilegible es motivo de detenerse y preguntar, no de adivinar.",
-      "on_the_job": "En cambios de equipos comerciales ligeros, fotografíe la etiqueta del panel de control con el resto de las placas. Si la SCCR del panel nuevo es menor que lo que el servicio puede entregar, eso es una conversación de ingeniería antes de instalar el panel, no después.",
+      "plain_explanation": "La sección 409.110 exige que todo panel de control industrial esté marcado con sus capacidades eléctricas, como un motor lleva su placa:\n• El nombre o la marca del fabricante.\n• Voltaje de entrada y número de fases.\n• Corriente a plena carga.\n• La capacidad de corriente de cortocircuito — la SCCR.\nLa SCCR es un techo, no una sugerencia: el panel no puede instalarse donde la corriente de falla disponible en su alimentación supere la capacidad marcada. Un panel que coincide con el trabajo en voltaje y amperios puede ser de todos modos el panel equivocado. Lea la etiqueta antes de instalar el panel. Una SCCR ausente o ilegible es motivo de detenerse y preguntar, no de adivinar. Los tableros de distribución y paneles llevan la misma idea bajo 408.6.",
+      "on_the_job": "Cambio de equipo comercial ligero en Orlando: la carta de la compañía eléctrica pone la corriente de falla disponible en el servicio en 22 kA. La etiqueta del panel de control de reemplazo muestra el voltaje y las fases correctos — y SCCR de 10 kA. Ese panel no se instala, aunque los breakers dentro de él sean de 22 kA: manda la SCCR marcada del conjunto, no la pieza de mayor capacidad en su interior. Fotografíe la etiqueta con el resto de las placas, y si la SCCR no alcanza, eso es una conversación de ingeniería con la oficina antes de instalar el panel, no después.",
       "sharma_note": "",
       "figure_idea": "Etiqueta de panel de ejemplo con la línea de SCCR circulada junto al voltaje y las fases.",
       "related_ids": [
@@ -2497,7 +3104,99 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-ART-409",
-      "next_id": "C4-ART-410"
+      "next_id": "C4-ART-410",
+      "why_it_exists": "Cuando ocurre una falla, un panel tiene que soportar la energía que el servicio puede entregar hasta que un breaker la despeje. Un panel cuya SCCR está por debajo de la corriente de falla disponible puede desarmarse en vez de simplemente disparar. La regla de marcado pone el número que decide «¿puede este panel vivir aquí?» en el propio panel, donde el instalador lo lee antes de atornillarlo — no después de la falla.",
+      "exam_trap": "La respuesta trampa: «Los breakers de adentro son de 22 kA, así que el panel sirve para 22 kA de corriente de falla». No. La capacidad del panel es la SCCR marcada en su etiqueta según 409.110. Las piezas fuertes en el interior no elevan la capacidad del conjunto — la SCCR marcada es el techo para todo el panel.",
+      "inspection_fails": [
+        "Panel de control instalado donde la corriente de falla disponible supera su SCCR marcada (409.110).",
+        "Panel instalado con el marcado de SCCR ausente o ilegible — la capacidad nunca se verificó.",
+        "Panel alimentado con un voltaje o arreglo de fases distinto de su marcado de 409.110.",
+        "Corriente de falla disponible del lugar nunca obtenida ni registrada antes de instalar el panel."
+      ],
+      "tables": [
+        {
+          "caption": "El marcado de 409.110 — lea las cuatro líneas",
+          "headers": [
+            "Marcado",
+            "Por qué lo lee"
+          ],
+          "rows": [
+            [
+              "Nombre del fabricante",
+              "De quién es el conjunto listado y sus instrucciones"
+            ],
+            [
+              "Voltaje de entrada + fases",
+              "Debe coincidir con la alimentación que llega al panel"
+            ],
+            [
+              "Corriente a plena carga",
+              "Dimensiona los conductores de alimentación"
+            ],
+            [
+              "SCCR",
+              "El techo — la corriente de falla disponible no puede superarla"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-409.110-panel-label.svg",
+          "alt": "Una etiqueta de ejemplo de un panel de control industrial con los cuatro marcados de 409.110 y la línea de SCCR resaltada, comparada contra 22 kA de corriente de falla disponible: un panel de 10 kA no se puede instalar, uno de 65 kA sí.",
+          "caption": "Lea la etiqueta: la línea de la SCCR decide si el panel puede vivir aquí.",
+          "w": 900,
+          "h": 1400
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "La corriente de falla disponible en la alimentación de un panel es 22 kA. La etiqueta del panel dice SCCR 10 kA. ¿Se puede instalar el panel?",
+          "choices": [
+            "Sí — sus breakers son de 22 kA",
+            "Sí — la SCCR es solo un marcado",
+            "No — la SCCR marcada está por debajo de la corriente de falla disponible",
+            "Solo si se añade un fusible antes de él"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La SCCR marcada es un techo. Donde la corriente de falla disponible la supera, el panel no puede instalarse.",
+          "nec_ref": "409.110"
+        },
+        {
+          "question": "¿Qué elemento NO forma parte del marcado de 409.110?",
+          "choices": [
+            "Nombre del fabricante",
+            "Corriente a plena carga",
+            "Capacidad de corriente de cortocircuito",
+            "El número de licencia del instalador"
+          ],
+          "answer_index": 3,
+          "explain_plain": "409.110 marca el panel con sus capacidades eléctricas: fabricante, voltaje de entrada y fases, corriente a plena carga, y SCCR.",
+          "nec_ref": "409.110"
+        },
+        {
+          "question": "La línea de la SCCR en la etiqueta de un panel falta o es ilegible. La acción correcta es:",
+          "choices": [
+            "Instalarlo — el voltaje coincide",
+            "Adivinar la capacidad por los breakers de adentro",
+            "Detenerse y obtener la capacidad antes de instalar el panel",
+            "Instalarlo solo en exteriores"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Una SCCR ausente es motivo de detenerse y preguntar. La capacidad viene del marcado del fabricante, no de las piezas en el interior.",
+          "nec_ref": "409.110"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "409.110",
+        "408.6",
+        "110.9",
+        "110.10"
+      ],
+      "rich_sources": [],
+      "uncertain": [],
+      "rich": 1
     },
     {
       "id": "C4-ART-410",
@@ -2683,8 +3382,8 @@
       "article": "410",
       "section": "410.10(D)",
       "title": "Luminarias en la zona de la tina y la ducha",
-      "plain_explanation": "La sección 410.10(D) controla las luminarias dentro de la zona medida 3 ft en horizontal y 8 ft en vertical desde la parte superior del borde de la tina o el umbral de la ducha. Dentro de esa zona una luminaria debe estar listada para lugares húmedos, y para lugares mojados donde esté expuesta al rocío de la ducha, y ciertos tipos de luminaria — incluyendo luminarias colgantes, colgantes tipo pendant y ventiladores suspendidos del techo — no están permitidos en la zona en absoluto. Una luminaria fuera de la zona no se rige por esta subsección aunque esté en el mismo baño.",
-      "on_the_job": "Marca la zona en el plano en la instalación en bruto y revisa cada luminaria del baño contra ella, incluyendo la luz de la ducha y cualquier combinación ventilador/luz. Confirma que la marca de húmedo o mojado en la etiqueta de la luminaria coincide con donde realmente queda, y guarda la información de la etiqueta en el archivo del trabajo.",
+      "plain_explanation": "La sección 410.10(D) controla las luminarias dentro de la zona de la tina y la ducha: el espacio medido 3 ft en horizontal y 8 ft en vertical desde la parte superior del borde de la tina o el umbral de la ducha.\n• Dentro de esa zona una luminaria debe estar listada para lugares húmedos, y para lugares mojados donde esté expuesta al rocío de la ducha.\n• Ciertos tipos de luminaria no están permitidos en la zona en absoluto, incluyendo luminarias colgantes, colgantes tipo pendant y ventiladores suspendidos del techo.\n• Una luminaria fuera de la zona no se rige por esta subsección aunque esté en el mismo baño.",
+      "on_the_job": "Marque la zona en el plano en la instalación en bruto y revise cada luminaria del baño contra ella, incluyendo la luz de la ducha y cualquier combinación ventilador/luz. Confirme que la marca de húmedo o mojado en la etiqueta de la luminaria coincide con donde realmente queda, y guarde la información de la etiqueta en el archivo del trabajo. Ojo con la combinación ventilador/luz centrada sobre una tina-ducha: el ventilador convierte la luminaria en un ventilador suspendido del techo — un tipo que la zona prohíbe — aunque su mitad de luz esté listada para lugar mojado. Toda la luminaria tiene que ser de un tipo que la zona permite, con el listado que la ubicación exige.",
       "sharma_note": "Nota de Sharma: la luz de ducha especificada por el arquitecto es la luminaria de registro — instala el modelo listado para lugar mojado especificado, no un sustituto solo para lugar húmedo del inventario.",
       "figure_idea": "",
       "related_ids": [
@@ -2696,7 +3395,97 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-ART-410",
-      "next_id": "C4-410.16"
+      "next_id": "C4-410.16",
+      "edition_note": "CAMBIO NEC 2023: No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Una luminaria sobre una tina o dentro de una ducha vive entre vapor y rocío directo, al alcance de una persona mojada parada en el agua. Las reglas de listado mantienen el agua lejos de las partes vivas de la luminaria, y los tipos prohibidos son los que cuelgan hasta quedar al alcance: un pendant que la persona en la tina puede agarrar, o un ventilador colgando sobre el agua.",
+      "inspection_fails": [
+        "Luminaria colgante tipo pendant instalada sobre la tina, dentro de la zona.",
+        "Luminaria para lugar húmedo instalada donde le llega el rocío de la ducha: se requiere listado para lugar mojado.",
+        "Ventilador suspendido del techo, o combinación ventilador/luz, instalado sobre una tina-ducha dentro de la zona.",
+        "Etiqueta de listado de la luminaria no disponible en la inspección, de modo que la clasificación de húmedo o mojado no se pudo verificar."
+      ],
+      "exam_trap": "La trampa es responder desde el cuarto en vez de desde la zona: «todo el baño necesita luminarias listadas para lugar mojado», o al revés, «el pendant está listado para lugar mojado, así que puede colgar sobre la tina». La ubicación decide primero. Fuera de la zona, esta subsección no aplica en absoluto; dentro de ella, un tipo prohibido sigue prohibido sin importar lo que diga su listado.",
+      "tables": [
+        {
+          "caption": "Zona de la tina y la ducha (410.10(D))",
+          "headers": [
+            "Dónde",
+            "Regla"
+          ],
+          "rows": [
+            [
+              "Tamaño de la zona",
+              "3 ft en horizontal, 8 ft en vertical desde el borde de la tina o el umbral de la ducha"
+            ],
+            [
+              "Dentro de la zona",
+              "Listada para lugares húmedos; lugares mojados donde le llega el rocío de la ducha"
+            ],
+            [
+              "No permitido en la zona",
+              "Luminarias colgantes, pendants y ventiladores suspendidos del techo"
+            ],
+            [
+              "Fuera de la zona",
+              "Esta subsección no aplica"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-410.10D-zone-elevation.svg",
+          "alt": "Elevación de un baño que muestra la zona de 3 ft por 8 ft sobre una tina en dorado, una luz de ducha listada para lugar mojado dentro de la zona, un pendant tachado dentro de la zona y una luz de tocador fuera de ella.",
+          "caption": "Elevación: la ubicación decide primero, el listado después.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Cuáles son las dimensiones de la zona de 410.10(D)?",
+          "choices": [
+            "3 ft en horizontal y 8 ft en vertical desde la parte superior del borde de la tina o el umbral de la ducha",
+            "3 ft desde la llave y 6 ft hacia arriba",
+            "Todo el baño",
+            "30 in en horizontal y 8 ft en vertical desde el drenaje"
+          ],
+          "answer_index": 0,
+          "explain_plain": "La zona se mide 3 ft en horizontal y 8 ft en vertical desde la parte superior del borde de la tina o el umbral de la ducha.",
+          "nec_ref": "410.10(D)"
+        },
+        {
+          "question": "Un pendant listado para lugar mojado cuelga sobre la tina, dentro de la zona. ¿Está permitido?",
+          "choices": [
+            "Sí — está listado para lugar mojado",
+            "Sí, si tiene protección GFCI",
+            "No — los pendants son un tipo prohibido dentro de la zona",
+            "Solo si cuelga por encima de 8 ft"
+          ],
+          "answer_index": 2,
+          "explain_plain": "410.10(D) prohíbe los pendants en la zona sin excepción. Un listado no corrige un tipo prohibido.",
+          "nec_ref": "410.10(D)"
+        },
+        {
+          "question": "Una luminaria dentro de la zona no está expuesta al rocío de la ducha. Su listado mínimo es:",
+          "choices": [
+            "Lugar seco",
+            "Lugar húmedo",
+            "Lugar mojado",
+            "Lugar peligroso"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Dentro de la zona el mínimo es el listado para lugar húmedo; el de lugar mojado se requiere donde el rocío de la ducha expone la luminaria al agua.",
+          "nec_ref": "410.10(D)"
+        }
+      ],
+      "code_refs": [
+        "410.10(D)",
+        "110.3(B)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C4-410.16",
@@ -2724,8 +3513,8 @@
       "article": "410",
       "section": "410.116",
       "title": "Luminarias empotradas — contacto con aislamiento y protección térmica",
-      "plain_explanation": "La sección 410.116 cubre las luminarias empotradas: la distancia libre que deben mantener del material combustible, la protección térmica que apaga la luminaria si se sobrecalienta, y la diferencia entre luminarias listadas para contacto directo con el aislamiento (Tipo IC) y las que deben mantener el aislamiento alejado. Una clasificación IC es una propiedad de la luminaria específica, no de las luminarias empotradas en general. La marca de la luminaria también decide si se puede instalar en un techo que se aislará después.",
-      "on_the_job": "Lee la etiqueta de la carcasa antes de que cierre el techo: IC o no IC, y la distancia libre al aislamiento si no es IC. En un techo de ático de Florida con aislamiento, una lata no IC enterrada en aislamiento soplado es a la vez una corrección de código y un problema de calor — repórtala en la instalación en bruto, cuando la solución todavía es barata.",
+      "plain_explanation": "La sección 410.116 cubre las luminarias empotradas — las latas y downlights que quedan dentro de los techos:\n• Distancia a combustibles — 410.116(A)(1): una luminaria no identificada para contacto con aislamiento mantiene sus partes empotradas a 1/2 in o más del material combustible. Los puntos de soporte y el borde decorativo en la abertura del techo pueden tocar.\n• Distancia al aislamiento — 410.116(A)(2): a menos que la luminaria sea Tipo IC, no se puede instalar aislamiento térmico sobre la luminaria ni dentro de 3 in de su envolvente, compartimento de cableado, balastro, transformador, driver LED o fuente de alimentación.\n• Las luminarias Tipo IC están identificadas para contacto directo con el aislamiento, y pueden tocar el aislamiento y el material combustible.\n• Protección térmica: las luminarias empotradas llevan protección térmica — un sensor apaga la luminaria si se sobrecalienta — excepto donde la luminaria está identificada como inherentemente protegida.\nLa clasificación IC pertenece a la luminaria específica y está impresa en su etiqueta. Nunca es una propiedad de las luminarias empotradas en general.",
+      "on_the_job": "Ático de Florida, aislamiento soplado sobre un techo terminado: lea la etiqueta de cada carcasa en la instalación en bruto, antes de que cierre el techo. Las latas Tipo IC pueden enterrarse. Una lata no IC necesita sus 3 in de aire libre y 1/2 in de los combustibles — en aislamiento soplado eso significa una barrera o cubierta que sobreviva a la cuadrilla de aislamiento. Repórtela en la instalación en bruto, cuando la solución todavía es barata, no después de que se vaya el camión soplador.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -2736,7 +3525,104 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-410.16",
-      "next_id": "C4-ART-411"
+      "next_id": "C4-ART-411",
+      "why_it_exists": "Una lata empotrada es una fuente de calor sellada dentro de un techo con estructura de madera. El aislamiento que va en todas las demás partes de un ático de Florida atrapa ese calor contra la estructura y el cableado. Las distancias mantienen un paso de aire alrededor de una luminaria no IC, y la protección térmica es el respaldo que apaga la luz antes de que el calor haga daño. Una clasificación IC traslada la protección a la propia luminaria, así el techo puede aislarse por completo sin cocinar la lata.",
+      "exam_trap": "La trampa: «Todas las latas LED modernas son clasificación IC, así que el aislamiento puede tocar cualquiera de ellas». La clasificación IC pertenece a la luminaria específica y está impresa en su etiqueta — muchas latas no son IC. La trampa inversa corta al revés: una luminaria no IC no está prohibida en un techo aislado. Solo tiene que mantener sus distancias.",
+      "inspection_fails": [
+        "Luminaria empotrada no IC enterrada en aislamiento soplado — sin la distancia de 3 in (410.116(A)(2)).",
+        "Partes empotradas de una luminaria no IC contra la estructura combustible — menos de 1/2 in de distancia (410.116(A)(1)).",
+        "Luminaria sin marcado Tipo IC instalada en contacto directo con el aislamiento.",
+        "Protección térmica anulada o puenteada después de apagados repetidos."
+      ],
+      "tables": [
+        {
+          "caption": "No IC vs Tipo IC (410.116)",
+          "headers": [
+            "Regla",
+            "No IC",
+            "Tipo IC"
+          ],
+          "rows": [
+            [
+              "Material combustible",
+              "Partes empotradas a 1/2 in o más",
+              "Contacto permitido"
+            ],
+            [
+              "Aislamiento térmico",
+              "Nada encima; 3 in o más de la envolvente y las partes",
+              "Contacto directo permitido"
+            ],
+            [
+              "Dónde vive la clasificación",
+              "Sin marcado IC en la etiqueta",
+              "Marcada Tipo IC en la etiqueta"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-410.116-ic-section.svg",
+          "alt": "Secciones de techo que comparan una lata empotrada no IC, que mantiene el aislamiento a 3 in y los combustibles a 1/2 in, con una lata Tipo IC enterrada en el aislamiento, lo cual está permitido.",
+          "caption": "El mismo techo, dos luminarias: la etiqueta decide qué puede hacer el aislamiento.",
+          "w": 900,
+          "h": 1760
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "El aislamiento térmico debe mantenerse al menos a qué distancia de la envolvente de una luminaria empotrada no IC?",
+          "choices": [
+            "1/2 in",
+            "3 in",
+            "6 in",
+            "12 in"
+          ],
+          "answer_index": 1,
+          "explain_plain": "410.116(A)(2): nada de aislamiento sobre una luminaria no IC, y nada dentro de 3 in de su envolvente, compartimento de cableado, balastro, transformador, driver o fuente de alimentación.",
+          "nec_ref": "410.116(A)(2)"
+        },
+        {
+          "question": "Las partes empotradas de una luminaria no IC deben espaciarse al menos ___ del material combustible.",
+          "choices": [
+            "3 in",
+            "1 in",
+            "1/2 in",
+            "No se requiere distancia"
+          ],
+          "answer_index": 2,
+          "explain_plain": "410.116(A)(1) fija 1/2 in. Solo los puntos de soporte y el borde decorativo en la abertura pueden tocar.",
+          "nec_ref": "410.116(A)(1)"
+        },
+        {
+          "question": "¿Qué decide si una luminaria empotrada puede enterrarse en aislamiento?",
+          "choices": [
+            "Su vataje",
+            "Si es LED",
+            "Su marcado Tipo IC en la etiqueta",
+            "La altura del techo"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La clasificación IC es una propiedad de la luminaria específica, impresa en su etiqueta — no de las luminarias empotradas en general.",
+          "nec_ref": "410.116"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "410.116(A)(1)",
+        "410.116(A)(2)",
+        "410.116"
+      ],
+      "rich_sources": [
+        {
+          "claim": "410.116(A)(1): partes empotradas no IC a 1/2 in o más del material combustible (los soportes y el borde decorativo pueden tocar); 410.116(A)(2): nada de aislamiento térmico encima ni dentro de 3 in de la envolvente, compartimento de cableado, balastro, transformador, driver LED o fuente de alimentación, a menos que la luminaria sea Tipo IC",
+          "source": "EC&M, Recessed Luminaires and Blown Insulation: Be careful insulating around lighting in a residential attic",
+          "url": "https://www.ecmag.com/magazine/articles/article-detail/recessed-luminaires-and-blown-insulation-be-careful-insulating-around-lighting-in-a-residential-attic"
+        }
+      ],
+      "uncertain": [],
+      "rich": 1
     },
     {
       "id": "C4-ART-411",
@@ -3359,8 +4245,8 @@
       "article": "422",
       "section": "422.31",
       "title": "Medio de desconexión para aparatos conectados permanentemente",
-      "plain_explanation": "La sección 422.31 cubre cómo se desconecta un aparato conectado permanentemente para servicio. Según la capacidad del aparato, la desconexión puede ser un interruptor o un interruptor termomagnético que cumpla las condiciones del artículo, y para aparatos más grandes la desconexión debe poder bloquearse en la posición abierta o cumplir la subsección que aplica a su tamaño. La intención es simple: la persona que da servicio al aparato debe poder cortar su energía y mantenerla cortada. El interruptor del circuito derivado puede cumplir este papel solo donde se cumplen las condiciones para hacerlo.",
-      "on_the_job": "En la instalación en bruto, decide dónde vive la desconexión de cada aparato de conexión fija y confirma que un técnico pueda alcanzarla. Un calentador de agua, un manejador de aire o una parrilla de cocción cuya única desconexión es un interruptor sin etiquetar a dos cuartos de distancia es una conversación para tener antes de la inspección final, no después.",
+      "plain_explanation": "La sección 422.31 cubre cómo se desconecta un aparato conectado permanentemente para servicio. Cada aparato necesita un medio de desconexión que abra todos los conductores de fase a la vez (422.30), y la persona que da servicio al aparato debe poder cortar su energía y mantenerla cortada. Qué dispositivo puede servir depende de la capacidad del aparato:\n• No más de 300 VA o 1/8 hp — 422.31(A): el interruptor o el interruptor termomagnético del circuito ramal puede servir como medio de desconexión, donde está a la vista desde el aparato o puede bloquearse en la posición abierta conforme a 110.25.\n• Más de 300 VA o 1/8 hp — 422.31(B): un interruptor o interruptor termomagnético a la vista desde el aparato, o que pueda bloquearse en la posición abierta según 110.25, puede servir. Si el interruptor está fuera de la vista y no puede bloquearse, instale una desconexión a la vista del aparato.\n• Aparatos accionados por motor de más de 1/8 hp — 422.31(C): el medio de desconexión debe estar a la vista desde el aparato, salvo que un interruptor de unidad que cumpla 422.34 sirva como desconexión.\nA la vista significa visible y a no más de 50 ft de distancia (Artículo 100). El interruptor del circuito ramal puede cumplir este papel solo donde se cumplen las condiciones para hacerlo.",
+      "on_the_job": "En la instalación en bruto, decida dónde vive la desconexión de cada aparato de conexión fija y confirme que un técnico pueda alcanzarla. Ejemplo de Florida: un calentador de agua de 4,500 W en el garaje, en un circuito de 30 A. El tablero está en el mismo garaje, visible desde el calentador y bien dentro de los 50 ft, así que el interruptor sirve como desconexión. Ponga ese mismo calentador con el tablero dentro de la casa, fuera de la vista, y el trabajo cambia: haga el interruptor bloqueable según 110.25 o instale una desconexión junto a la unidad. Un calentador de agua, un manejador de aire o una parrilla de cocción cuya única desconexión es un interruptor sin etiquetar a dos cuartos de distancia es una conversación para tener antes de la inspección final, no después.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -3371,7 +4257,114 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-422.16(B)(4)",
-      "next_id": "C4-ART-424"
+      "next_id": "C4-ART-424",
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Los aparatos reciben servicio de alguien con la tapa quitada y las manos adentro — un cambio de resistencia de calentador, el soplador de un manejador de aire. Si la única desconexión es un interruptor en otro cuarto, cualquiera en el edificio puede volver a energizar la unidad a mitad de la reparación. Una desconexión a la vista del aparato, o una que el técnico pueda bloquear abierta, mantiene el control en la persona que la abrió.",
+      "inspection_fails": [
+        "Calentador de agua de más de 300 VA sin desconexión a la vista, y el interruptor no puede bloquearse abierto (422.31(B)).",
+        "El bloqueo del interruptor es un dispositivo de clip suelto que no permanece en su lugar sin el candado puesto (110.25).",
+        "Desconexión instalada, pero no abre todos los conductores de fase a la vez (422.30).",
+        "Aparato accionado por motor de más de 1/8 hp sin desconexión a la vista y sin interruptor de unidad que cumpla 422.34 (422.31(C))."
+      ],
+      "exam_trap": "La respuesta trampa: 'el interruptor del circuito ramal siempre es la desconexión del aparato'. Para un aparato de más de 300 VA cuyo interruptor está fuera de la vista y no puede bloquearse abierto, el interruptor solo no cumple — 422.31(B) quiere una desconexión a la vista, o un interruptor que pueda bloquearse en la posición abierta según 110.25.",
+      "tables": [
+        {
+          "caption": "422.31 — qué desconexión puede servir",
+          "headers": [
+            "Aparato",
+            "Desconexión que puede servir"
+          ],
+          "rows": [
+            [
+              "No más de 300 VA o 1/8 hp — (A)",
+              "Interruptor o interruptor termomagnético del circuito ramal, a la vista o bloqueable abierto (110.25)"
+            ],
+            [
+              "Más de 300 VA o 1/8 hp — (B)",
+              "Interruptor o interruptor termomagnético a la vista, o bloqueable abierto (110.25)"
+            ],
+            [
+              "Accionado por motor, más de 1/8 hp — (C)",
+              "Desconexión a la vista, o un interruptor de unidad según 422.34"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-422.31-disconnect-flow.svg",
+          "alt": "Diagrama de decisión para desconexiones de aparatos conectados permanentemente: accionado por motor de más de 1/8 hp lleva a una desconexión a la vista o un interruptor de unidad 422.34; más de 300 VA o 1/8 hp lleva a un interruptor a la vista o bloqueable abierto; no más de 300 VA o 1/8 hp permite el interruptor del circuito ramal a la vista o bloqueable.",
+          "caption": "Baje por el diagrama: la capacidad del aparato decide qué desconexión cuenta.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "El tablero de un calentador de agua de 4,500 W está dentro de la casa, fuera de la vista de la unidad, y el interruptor no tiene provisión de bloqueo. ¿Qué cumple?",
+          "choices": [
+            "El interruptor solo — es la desconexión",
+            "Una desconexión a la vista del calentador, o un interruptor bloqueable abierto según 110.25",
+            "Una etiqueta en el directorio del tablero",
+            "Nada — los calentadores de agua no necesitan desconexión"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Con más de 300 VA, 422.31(B) exige la desconexión a la vista desde el aparato, o un interruptor que pueda bloquearse en la posición abierta según 110.25.",
+          "nec_ref": "422.31(B)"
+        },
+        {
+          "question": "'A la vista' significa que la desconexión está:",
+          "choices": [
+            "En el mismo edificio",
+            "Visible y a no más de 50 ft de distancia",
+            "En el mismo piso",
+            "Alcanzable sin una escalera"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El Artículo 100 define 'a la vista' como visible y a no más de 50 ft del equipo.",
+          "nec_ref": "Article 100"
+        },
+        {
+          "question": "Un aparato conectado permanentemente tiene una capacidad de 240 VA. ¿Qué dispositivo puede servir como su desconexión?",
+          "choices": [
+            "Solo una desconexión con fusibles junto al aparato",
+            "El interruptor o interruptor termomagnético del circuito ramal, si está a la vista o puede bloquearse abierto",
+            "No se requiere desconexión a ninguna capacidad",
+            "El termostato propio del aparato"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Con no más de 300 VA o 1/8 hp, 422.31(A) permite que el interruptor del circuito ramal sirva, donde está a la vista o puede bloquearse en la posición abierta.",
+          "nec_ref": "422.31(A)"
+        }
+      ],
+      "code_refs": [
+        "422.30",
+        "422.31(A)",
+        "422.31(B)",
+        "422.31(C)",
+        "422.34",
+        "110.25",
+        "Article 100 — Within Sight"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "422.31(A)/(B): el interruptor o interruptor termomagnético del circuito ramal puede servir como medio de desconexión donde está a la vista desde el aparato o puede bloquearse en la posición abierta según 110.25; 'a la vista' significa visible y a no más de 50 ft",
+          "source": "EC&M, Stumped by the Code? — Desconexiones y conductores para aparatos conectados permanentemente (basado en el NEC 2020)",
+          "url": "https://www.ecmweb.com/national-electrical-code/qa/article/21214907/stumped-by-the-code-nec-requirements-for-disconnects-and-conductors-serving-permanently-connected-appliances-and-space-heating-equipment"
+        },
+        {
+          "claim": "422.31(C): los aparatos accionados por motor de más de 1/8 hp requieren un medio de desconexión a la vista del aparato, salvo que se alimenten con un interruptor de unidad conforme al Código",
+          "source": "City of Saint Paul, lista de verificación eléctrica de vivienda del NEC 2017 (línea de 422.31(C))",
+          "url": "https://www.stpaul.gov/sites/default/files/Media%20Root/Safety%20&%20Inspections/DSI.Building.Electrical%20Checklist%20Dwelling%20Unit%20Final.pdf"
+        },
+        {
+          "claim": "422.30: cada aparato debe tener un medio que desconecte simultáneamente todos los conductores de fase del circuito",
+          "source": "Mike Holt, Understanding Requirements for Appliances — Article 422",
+          "url": "https://www.mikeholt.com/newsletters.php?action=display&letterID=1855"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C4-ART-424",
@@ -3379,8 +4372,8 @@
       "article": "424",
       "section": "424",
       "title": "Equipo fijo de calefacción eléctrica de espacios — introducción al artículo",
-      "plain_explanation": "El Artículo 424 cubre la calefacción que está incorporada al edificio: calefactores de zócalo, calefactores de pared, paneles y cables radiantes, calefactores de ducto y calderas usadas para calefacción de espacios. Sus ideas centrales son que las cargas de calefacción se tratan como continuas, que el equipo debe estar listado e instalado según sus instrucciones, y que las desconexiones y controles deben permitir dar servicio al calefactor y apagarlo con seguridad. En las casas de Florida Sharma se encuentra con este artículo con más frecuencia en las tiras de calor de ducto en un manejador de aire y en el ocasional calefactor de pared o de baño.\n\nCAMBIO NEC 2023:\n• 424.48: La nueva 424.48 permite cable calefactor en, sobre o detrás de paredes si el cable está identificado para paredes, tiene GFCI, AFCI y un medio de puesta a tierra, y se mantiene a 4 ft o menos. Efectiva el 1 de enero de 2026. El cable calefactor ahora puede ir en, sobre o detrás de una pared cuando el cable o el juego de cables está identificado para uso en paredes.\n• 424.10: La Sección 424.10, Permiso Especial, fue eliminada, y la 424.9, General, fue reubicada a 424.10 al comienzo de la Parte II del Artículo 424.\n• 424.93(C): Esta nueva subdivisión de primer nivel que se creará permitirá instalar paneles calefactores y juegos de paneles calefactores en paredes con protección y limitaciones específicas. La disposición incluye una fecha de entrada en vigor del 1 de enero de 2026.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Dimensiona cada circuito de calefactor desde la placa de datos como una carga continua, y confirma el arreglo de desconexión y control antes de instalar el manejador de aire o el calefactor. Las tiras de calor también son un dato para el cálculo de carga — dile a la oficina el tamaño de tira que realmente instalaste, no el que el plano mostró primero.",
+      "plain_explanation": "El Artículo 424 cubre la calefacción que está incorporada al edificio: calefactores de zócalo, calefactores de pared, paneles y cables radiantes, calefactores de ducto y calderas usadas para calefacción de espacios. Tres ideas rigen el artículo:\n• La calefacción es una carga continua. Los conductores del circuito ramal y la protección contra sobrecorriente se dimensionan al 125 por ciento de la carga total de calefacción del circuito (424.4(B)) — un calefactor funciona durante horas a plena carga; no es una carga de conveniencia que simplemente se calienta.\n• El equipo debe estar listado e instalado según sus instrucciones (110.3(B)).\n• Las desconexiones y los controles deben permitir dar servicio al calefactor y apagarlo con seguridad. La desconexión de 424.19 apaga el calefactor, su controlador y cualquier dispositivo suplementario de protección contra sobrecorriente en una sola operación, se puede bloquear en la posición abierta y tiene una capacidad de al menos el 125 por ciento de la carga que conmuta.\nLos circuitos que alimentan dos o más salidas de calefactor tienen capacidades de 15, 20, 25 o 30 A; la calefacción infrarroja fija en lugares que no son unidades de vivienda puede llegar a 50 A (424.4(A)). En las casas de Florida Sharma se encuentra con este artículo con más frecuencia en las tiras de calor de ducto en un manejador de aire y en el ocasional calefactor de pared o de baño.",
+      "on_the_job": "Una casa de construcción nueva de Sharma en Ocala recibe un manejador de aire de 3 toneladas con un juego de tiras de 10 kW. La placa de la tira indica 10 kW a 240 V, es decir, 41.7 A. Trátela como continua: 41.7 × 1.25 = 52.1 A, así que el circuito queda en un interruptor de 60 A con cobre de 6 AWG. Confirme el arreglo de desconexión y control antes de instalar el manejador de aire: el interruptor junto a la unidad debe apagar las tiras, el soplador y los fusibles suplementarios juntos, y bloquearse abierto. Las tiras de calor también son un dato para el cálculo de carga — dígale a la oficina el tamaño de tira que realmente instaló, no el que el plano mostró primero.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -3414,7 +4407,106 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "rich": 1,
+      "why_it_exists": "Un calefactor no cicla como una carga de receptáculo — en una mañana fría consume la corriente plena de la placa durante horas. Dimensionar al 100 por ciento hace trabajar los conductores y los interruptores a su límite hasta que algo falla, por eso el artículo incorpora el margen del 125 por ciento. La desconexión de una sola operación existe porque una tira de calor con el soplador vivo, o un segundo elemento vivo, es exactamente como un técnico de servicio se quema o se electrocuta dentro de un manejador de aire.",
+      "exam_trap": "La trampa es dimensionar el circuito del calefactor al 100 por ciento porque 'el calor por resistencia es una carga simple'. La calefacción eléctrica fija de espacios es una carga continua: los conductores y la protección contra sobrecorriente van al 125 por ciento de la placa. Una tira de 41.7 A en un interruptor de 50 A es la respuesta equivocada — necesita 52.1 A de capacidad antes de elegir el dispositivo.",
+      "inspection_fails": [
+        "Circuito de calefactor dimensionado al 100 por ciento de la placa — sin el factor de carga continua del 125 por ciento (424.4(B)).",
+        "La desconexión del manejador de aire apaga las tiras de calor pero deja vivos el soplador y el controlador (424.19).",
+        "La desconexión no se puede bloquear en la posición abierta mientras se da servicio al calefactor (424.19, 110.25).",
+        "Calefactor instalado contra las instrucciones de su listado — no se mantuvieron las distancias a combustibles (110.3(B))."
+      ],
+      "tables": [
+        {
+          "caption": "Un circuito de calefactor, tres verificaciones — tira de 10 kW a 240 V",
+          "headers": [
+            "Verificación",
+            "Regla de 2020",
+            "Este trabajo"
+          ],
+          "rows": [
+            [
+              "Base de la carga",
+              "Capacidad de la placa",
+              "10 kW = 41.7 A"
+            ],
+            [
+              "Conductores + interruptor",
+              "125% — continua (424.4(B))",
+              "52.1 A → interruptor de 60 A"
+            ],
+            [
+              "Desconexión",
+              "Apaga calefactor + controlador + fusibles, bloqueable (424.19)",
+              "Junto al manejador de aire"
+            ],
+            [
+              "Cálculo de carga",
+              "El tamaño de tira instalado va a la oficina",
+              "10 kW como se instaló"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-ART-424-duct-heat.svg",
+          "alt": "Manejador de aire con un banco de tiras de calor de 10 kW y soplador, una desconexión bloqueable a su lado que apaga juntos las tiras, el soplador y los fusibles suplementarios, y la cadena de dimensionamiento: 41.7 A por 125 por ciento es igual a 52.1 A, así que un interruptor de 60 A.",
+          "caption": "Tiras de calor de ducto: carga continua, y una desconexión apaga toda la máquina.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un calefactor eléctrico fijo de espacios consume 41.7 A según su placa. ¿Qué capacidad mínima deben tener los conductores de su circuito ramal y su protección contra sobrecorriente?",
+          "choices": [
+            "41.7 A",
+            "45 A",
+            "52.1 A",
+            "60 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La calefacción fija de espacios es una carga continua: 41.7 × 1.25 = 52.1 A antes de elegir el interruptor.",
+          "nec_ref": "424.4(B)"
+        },
+        {
+          "question": "¿Qué debe hacer el medio de desconexión del equipo fijo de calefacción de espacios en una sola operación?",
+          "choices": [
+            "Apagar solo los elementos calefactores",
+            "Apagar el calefactor, su controlador y cualquier dispositivo suplementario de protección contra sobrecorriente",
+            "Apagar todo el tablero",
+            "Apagar solo el circuito del termostato"
+          ],
+          "answer_index": 1,
+          "explain_plain": "424.19 exige que una sola operación desconecte el calefactor, el/los controlador(es) de motor y los dispositivos suplementarios de protección contra sobrecorriente de todos los conductores no puestos a tierra.",
+          "nec_ref": "424.19"
+        },
+        {
+          "question": "Los circuitos que alimentan dos o más salidas de calefactor fijo tienen capacidades de:",
+          "choices": [
+            "Solo 15 A o 20 A",
+            "15, 20, 25 o 30 A",
+            "Cualquier capacidad que la carga necesite",
+            "50 A en unidades de vivienda"
+          ],
+          "answer_index": 1,
+          "explain_plain": "424.4(A) da a esos circuitos capacidades de 15, 20, 25 o 30 A; el permiso de 50 A es para calefacción infrarroja fija fuera de unidades de vivienda.",
+          "nec_ref": "424.4(A)"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 424.48: La nueva 424.48 permite cable calefactor en, sobre o detrás de paredes si el cable está identificado para paredes, tiene GFCI, AFCI y un medio de puesta a tierra, y se mantiene a 4 ft o menos. Efectiva el 1 de enero de 2026. El cable calefactor ahora puede ir en, sobre o detrás de una pared cuando el cable o el juego de cables está identificado para uso en paredes.\n• 424.10: La Sección 424.10, Permiso Especial, fue eliminada, y la 424.9, General, fue reubicada a 424.10 al comienzo de la Parte II del Artículo 424.\n• 424.93(C): Esta nueva subdivisión de primer nivel que se creará permitirá instalar paneles calefactores y juegos de paneles calefactores en paredes con protección y limitaciones específicas. La disposición incluye una fecha de entrada en vigor del 1 de enero de 2026.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "424.4(B)",
+        "424.4(A)",
+        "424.19",
+        "110.25",
+        "110.3(B)",
+        "Article 424"
+      ],
+      "uncertain": [],
+      "rich_sources": []
     },
     {
       "id": "C4-424.3",
@@ -3995,8 +5087,8 @@
       "article": "430",
       "section": "430",
       "title": "Motores, circuitos de motor y controladores — introducción al artículo",
-      "plain_explanation": "El Artículo 430 es el artículo de trabajo más largo del Capítulo 4 y el que más se aplica mal, porque es un sistema, no una sola regla: conductores dimensionados desde la corriente de plena carga de las tablas, protección separada contra sobrecarga dimensionada desde la placa de datos, protección contra cortocircuito y falla a tierra dimensionada desde sus propias tablas y porcentajes, un controlador, y una desconexión a la vista. Cada uno de esos cinco trabajos tiene su propia base de dimensionamiento, y usar un solo número para los cinco es el error clásico de 430. El equipo de aire acondicionado sale de partes de 430 por el Artículo 440, que tiene sus propias reglas guiadas por la placa — revisa siempre qué artículo rige el equipo que tienes enfrente.\n\nCAMBIO NEC 2023:\n• 430.2: Los motores reconstruidos ahora tienen un lugar en 430.2: se permiten cuando el trabajo sigue las instrucciones del fabricante, o una norma reconocida nacionalmente si el fabricante no ofrece ninguna. Un motor reacondicionado puede volver a servicio cuando la reconstrucción siguió las instrucciones del fabricante.\n• 430.1: La figura anterior de la Sección 430.1 fue eliminada, y se agregó una figura ampliada para incluir todas las partes relevantes del circuito del motor y qué partes del Artículo 430 aplican.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Trabaja un motor en este orden, cada vez: (1) FLC de tabla para conductores y protección contra cortocircuito, (2) FLA de la placa para sobrecargas, (3) desconexión a la vista, (4) capacidad del controlador. Escribe los cuatro antes de pedir material.",
+      "plain_explanation": "El Artículo 430 es el artículo de trabajo más largo del Capítulo 4 y el que más se aplica mal, porque es un sistema, no una sola regla. Cinco trabajos, cinco bases de dimensionamiento:\n• Conductores — desde la corriente de plena carga de tabla, al 125 por ciento para un motor de servicio continuo (430.22).\n• Protección contra sobrecarga — separada del interruptor, dimensionada desde la corriente de la placa del motor realmente instalado: 125 por ciento para un motor con factor de servicio marcado de 1.15 o mayor, o un aumento de temperatura marcado de 40 °C o menos; 115 por ciento para todos los demás motores (430.32).\n• Protección contra cortocircuito y falla a tierra — desde los porcentajes de la Tabla 430.52 sobre el FLC de tabla: un interruptor de tiempo inverso puede llegar al 250 por ciento, y por eso un interruptor de motor puede parecer sobredimensionado para su cable.\n• Un controlador con capacidad para el motor.\n• Una desconexión a la vista (430.102), con capacidad de al menos el 115 por ciento del FLC de tabla o por su capacidad en caballos de fuerza (430.110).\nLa 430.6 es la regla de tráfico detrás de todo: todo excepto las sobrecargas parte de las tablas del Artículo 430, porque el próximo motor de reemplazo puede diferir de esta placa. Usar un solo número para los cinco trabajos es el error clásico de 430. El equipo de aire acondicionado sale de partes de 430 por el Artículo 440, que tiene sus propias reglas guiadas por la placa — revise siempre qué artículo rige el equipo que tiene enfrente.",
+      "on_the_job": "Trabaje un motor en este orden, cada vez: (1) FLC de tabla para conductores y protección contra cortocircuito, (2) FLA de la placa para sobrecargas, (3) desconexión a la vista, (4) capacidad del controlador. Escriba los cuatro antes de pedir material. Ejemplo: un motor trifásico de 10 hp a 208 V tiene un FLC de tabla de 30.8 A. Sus conductores necesitan el 125 por ciento — 38.5 A de capacidad. El interruptor de tiempo inverso puede llegar al 250 por ciento — 77 A — y por eso se ve sobredimensionado junto al cable; las sobrecargas, ajustadas desde la placa, son la protección que realmente vigila la carga.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -4024,7 +5116,112 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "rich": 1,
+      "why_it_exists": "Un motor consume varias veces su corriente de operación al arrancar, y puede quedarse atascado, cocinándose, sin disparar nunca una protección dimensionada para cargas ordinarias. El Artículo 430 divide la protección en trabajos separados para que la corriente de arranque pueda pasar, un motor atascado igual sea despejado, y el dispositivo de sobrecarga — no el interruptor grande — vigile el motor y sus conductores contra una sobrecarga lenta.",
+      "exam_trap": "La trampa es un solo número para todo el trabajo — normalmente el FLA de la placa, usado para los conductores, el interruptor, las sobrecargas y la desconexión. Solo las sobrecargas salen de la placa. Los conductores, la protección contra cortocircuito y la desconexión parten todos de la corriente de plena carga de tabla según 430.6, porque un motor de reemplazo puede no coincidir con la placa de este.",
+      "inspection_fails": [
+        "Conductores dimensionados desde el FLA de la placa en vez de la corriente de plena carga de tabla (430.6).",
+        "Elementos de sobrecarga ajustados desde el valor de tabla — el motor dispara sin motivo o se cocina (430.32).",
+        "Interruptor reemplazado por uno que 'iguala el cable' y el motor ya no arranca (430.52).",
+        "Sin desconexión a la vista del motor (430.102)."
+      ],
+      "tables": [
+        {
+          "caption": "Un circuito de motor, cinco trabajos de dimensionamiento",
+          "headers": [
+            "Trabajo",
+            "Base de dimensionamiento",
+            "Sección"
+          ],
+          "rows": [
+            [
+              "Conductores",
+              "125% del FLC de tabla",
+              "430.22"
+            ],
+            [
+              "Sobrecargas",
+              "FLA de la placa — 115% o 125%",
+              "430.32"
+            ],
+            [
+              "Interruptor / fusibles",
+              "% de la Tabla 430.52 sobre el FLC de tabla",
+              "430.52"
+            ],
+            [
+              "Desconexión",
+              "A la vista; 115% o capacidad en hp",
+              "430.102, 430.110"
+            ],
+            [
+              "Todo parte de",
+              "FLC de tabla, no la placa",
+              "430.6"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-ART-430-five-jobs.svg",
+          "alt": "Un circuito de motor dibujado como cinco estaciones: interruptor dimensionado desde la Tabla 430.52, conductores al 125 por ciento del FLC de tabla, controlador, sobrecargas dimensionadas desde la placa, y el motor, con una desconexión a la vista con capacidad del 115 por ciento.",
+          "caption": "Cinco trabajos, cinco bases — solo las sobrecargas leen la placa.",
+          "w": 900,
+          "h": 1600
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "La protección contra sobrecarga del motor se dimensiona desde:",
+          "choices": [
+            "La corriente de plena carga de tabla",
+            "La corriente de la placa del motor instalado",
+            "La capacidad del interruptor del circuito ramal",
+            "La corriente de rotor bloqueado"
+          ],
+          "answer_index": 1,
+          "explain_plain": "430.32 trabaja desde la placa — la sobrecarga protege esta máquina específica. Todo lo demás parte de las tablas (430.6).",
+          "nec_ref": "430.32"
+        },
+        {
+          "question": "Según la Tabla 430.52, un interruptor de tiempo inverso para un circuito ramal de motor puede tener una capacidad de hasta:",
+          "choices": [
+            "115% del FLC",
+            "125% del FLC",
+            "175% del FLC",
+            "250% del FLC"
+          ],
+          "answer_index": 3,
+          "explain_plain": "Los interruptores de tiempo inverso llegan al 250 por ciento del FLC de tabla para que el motor pueda arrancar; el dispositivo de sobrecarga da la protección de operación.",
+          "nec_ref": "Tabla 430.52"
+        },
+        {
+          "question": "Un circuito de compresor hermético de aire acondicionado se rige principalmente por:",
+          "choices": [
+            "Solo el Artículo 430",
+            "El Artículo 440, con sus reglas de placa",
+            "El Artículo 424",
+            "El Artículo 445"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El Artículo 440 saca el equipo de aire acondicionado y refrigeración de partes de 430 y guía el dimensionamiento desde la placa del equipo.",
+          "nec_ref": "Artículo 440"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 430.2: Los motores reconstruidos ahora tienen un lugar en 430.2: se permiten cuando el trabajo sigue las instrucciones del fabricante, o una norma reconocida nacionalmente si el fabricante no ofrece ninguna. Un motor reacondicionado puede volver a servicio cuando la reconstrucción siguió las instrucciones del fabricante.\n• 430.1: La figura anterior de la Sección 430.1 fue eliminada, y se agregó una figura ampliada para incluir todas las partes relevantes del circuito del motor y qué partes del Artículo 430 aplican.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "430.6",
+        "430.22",
+        "430.32",
+        "Table 430.52",
+        "430.102",
+        "430.110",
+        "Article 440"
+      ],
+      "uncertain": [],
+      "rich_sources": []
     },
     {
       "id": "C4-430.6",
@@ -4070,8 +5267,8 @@
       "article": "430",
       "section": "430.24",
       "title": "Conductores que alimentan varios motores",
-      "plain_explanation": "La sección 430.24 dimensiona los conductores que alimentan dos o más motores (o motores con otras cargas): toma el 125 por ciento de la corriente de plena carga del motor más grande, suma las corrientes de plena carga de los demás motores al 100 por ciento, y suma cualquier otra carga bajo sus propias reglas, todo usando los valores de las tablas del Artículo 430. El motor más grande recibe el margen de servicio continuo; los demás se suman a su valor nominal, sobre la base razonable de que el alimentador ve la suma. Es la compañera a nivel de alimentador de la regla de un solo motor en 430.22.",
-      "on_the_job": "Construye la suma en una columna etiquetada — el motor más grande primero al 125 por ciento, luego cada motor adicional al 100 por ciento — para que la siguiente persona pueda auditarla. No apliques el 125 por ciento a cada motor del alimentador, y no dimensiones un alimentador de varios motores desde una sola placa.",
+      "plain_explanation": "La sección 430.24 dimensiona los conductores que alimentan dos o más motores (o motores con otras cargas):\n• Tome el 125 por ciento de la corriente de plena carga del motor más grande.\n• Sume las corrientes de plena carga de los demás motores al 100 por ciento.\n• Sume cualquier otra carga bajo sus propias reglas.\nTodas las corrientes de plena carga vienen de las tablas del Artículo 430 — la Tabla 430.248 para monofásicos, la Tabla 430.250 para trifásicos — no de las placas (430.6). El motor más grande recibe el margen de servicio continuo; los demás se suman a su valor nominal, sobre la base razonable de que el alimentador ve la suma. Es la compañera a nivel de alimentador de la regla de un solo motor en 430.22.",
+      "on_the_job": "Taller pequeño en Orlando, un alimentador para tres motores monofásicos de 230 V: un compresor de 5 hp con 28 A de FLC de tabla, un 3 hp con 17 A y un 2 hp con 12 A. El más grande primero al 125 por ciento: 28 × 1.25 = 35 A. Sume el resto a su valor nominal: 35 + 17 + 12 = 64 A de ampacidad mínima del conductor. Un conductor de cobre 6 AWG en la columna de 75°C tiene capacidad de 65 A (Tabla 310.16), así que cubre el alimentador antes de cualquier factor de ajuste o corrección. Construya la suma en una columna etiquetada — el motor más grande primero al 125 por ciento, luego cada motor adicional al 100 por ciento — para que la siguiente persona pueda auditarla. No aplique el 125 por ciento a cada motor del alimentador, y no dimensione un alimentador de varios motores desde una sola placa.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -4082,7 +5279,106 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-430.22",
-      "next_id": "C4-430.32"
+      "next_id": "C4-430.32",
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "El alimentador lleva todos los motores a la vez, en una sola canalización, donde el calor no tiene a dónde ir. El motor más grande es el que probablemente trabaja cargado por horas seguidas, así que lleva el margen de servicio continuo. Si dimensiona el alimentador a un 100 por ciento plano de la suma, trabajará caliente justo en esos tramos largos — el aislamiento envejece dentro del tubo donde nadie lo ve.",
+      "inspection_fails": [
+        "Conductores del alimentador dimensionados al 100 por ciento de la suma de los FLC de los motores — sin el factor de 125 por ciento en el motor más grande (430.24).",
+        "Alimentador de motores dimensionado desde una corriente de placa en vez de los valores de tabla del Artículo 430 (430.6).",
+        "Carga que no es motor en el mismo alimentador dejada fuera del cálculo de conductores.",
+        "Cálculo del alimentador ausente en la documentación del trabajo — el calibre del conductor no puede auditarse."
+      ],
+      "exam_trap": "Dos respuestas trampa: aplicar el 125 por ciento a cada motor del alimentador — solo el más grande recibe el margen — y dimensionar desde los amperios de placa del motor más grande. La sección 430.24 trabaja con las corrientes de plena carga de tabla según 430.6, con el factor de 125 por ciento solo en el motor más grande.",
+      "tables": [
+        {
+          "caption": "Ejemplo resuelto — tres motores, un alimentador",
+          "headers": [
+            "Motor",
+            "FLC de tabla",
+            "Cuenta como"
+          ],
+          "rows": [
+            [
+              "5 hp, 230 V, monofásico (el más grande)",
+              "28 A",
+              "28 × 125% = 35 A"
+            ],
+            [
+              "3 hp, 230 V, monofásico",
+              "17 A",
+              "17 A"
+            ],
+            [
+              "2 hp, 230 V, monofásico",
+              "12 A",
+              "12 A"
+            ],
+            [
+              "Total del alimentador",
+              "—",
+              "64 A de ampacidad mín."
+            ]
+          ],
+          "note": "Valores de FLC de la Tabla 430.248 (vea la página de 430.6). Cobre 6 AWG a 75°C = 65 A (Tabla 310.16)."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-430.24-feeder-sum.svg",
+          "alt": "Barra apilada del cálculo del alimentador de 430.24: el motor de 5 hp con 28 A cuenta 35 A al 125 por ciento, el de 3 hp cuenta 17 A y el de 2 hp cuenta 12 A, para un total de 64 A de ampacidad mínima del conductor, cubierto por cobre 6 AWG de 65 A.",
+          "caption": "La suma del alimentador: el motor más grande al 125%, cada otro motor a su valor nominal.",
+          "w": 900,
+          "h": 1280
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Bajo 430.24, ¿qué motor se toma al 125 por ciento?",
+          "choices": [
+            "Cada motor del alimentador",
+            "Solo el motor más grande",
+            "El motor más pequeño",
+            "Ninguno — los alimentadores usan el 100 por ciento"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Solo el motor más grande recibe el margen de servicio continuo; los demás se suman al 100 por ciento de su FLC de tabla.",
+          "nec_ref": "430.24"
+        },
+        {
+          "question": "Motores de 28 A, 17 A y 12 A de FLC de tabla comparten un alimentador. ¿Ampacidad mínima del conductor?",
+          "choices": [
+            "57 A",
+            "64 A",
+            "71.25 A",
+            "28 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El más grande al 125 por ciento: 28 × 1.25 = 35. El resto a su valor nominal: 35 + 17 + 12 = 64 A.",
+          "nec_ref": "430.24"
+        },
+        {
+          "question": "¿Qué corriente usa para cada motor en la suma de 430.24?",
+          "choices": [
+            "Los amperios de placa del motor instalado",
+            "El FLC de las tablas del Artículo 430 para la potencia y el voltaje",
+            "El calibre del interruptor de cada circuito ramal",
+            "Los amperios medidos en operación"
+          ],
+          "answer_index": 1,
+          "explain_plain": "430.6 manda el dimensionamiento de conductores y protecciones a las tablas del Artículo 430, no a la placa; la placa es para la protección de sobrecarga.",
+          "nec_ref": "430.6"
+        }
+      ],
+      "code_refs": [
+        "430.24",
+        "430.22",
+        "430.6",
+        "Table 430.248",
+        "Table 430.250"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C4-430.32",
@@ -4128,8 +5424,8 @@
       "article": "430",
       "section": "430.62",
       "title": "Protección del alimentador cuando varios motores comparten un alimentador (430.62)",
-      "plain_explanation": "Cuando un alimentador alimenta varios circuitos ramales de motores, 430.62(A) limita el dispositivo de protección del alimentador: no mayor que el dispositivo de cortocircuito y falla a tierra del circuito ramal más grande del alimentador, más las corrientes de plena carga de los demás motores de ese alimentador. Los conductores del alimentador se dimensionan bajo 430.24 — 125 por ciento del motor más grande más el 100 por ciento del resto. Las dos reglas trabajan en pareja: la matemática del conductor evita que el alimentador se caliente, y la del dispositivo evita que una falla en un motor sea invisible para un breaker de alimentador dimensionado para todo a la vez.",
-      "on_the_job": "Ejemplo resuelto: tres motores de 14 A, 10 A y 10 A de FLC de tabla, dispositivo ramal más grande de 40 A. Techo del dispositivo del alimentador: 40 + 10 + 10 = 60 A. Conductores del alimentador: 14 × 1.25 + 10 + 10 = 37.5 A de ampacidad mínima antes de otros ajustes.",
+      "plain_explanation": "Cuando un alimentador alimenta varios circuitos ramales de motores, 430.62(A) limita el dispositivo de protección del alimentador:\n• No mayor que el dispositivo de cortocircuito y falla a tierra del circuito ramal más grande del alimentador,\n• más las corrientes de plena carga de los demás motores de ese alimentador.\nLos conductores del alimentador se dimensionan bajo 430.24 — 125 por ciento del motor más grande más el 100 por ciento del resto. Las dos reglas trabajan en pareja: la matemática del conductor evita que el alimentador se caliente, y la del dispositivo evita que una falla en un motor sea invisible para un interruptor de alimentador dimensionado para todo a la vez. El resultado de 430.62 es un techo, no una meta — un dispositivo estándar más pequeño siempre está permitido.",
+      "on_the_job": "Ejemplo resuelto: tres motores de 14 A, 10 A y 10 A de FLC de tabla, dispositivo ramal más grande de 40 A. Techo del dispositivo del alimentador: 40 + 10 + 10 = 60 A — un interruptor de alimentador de 60 A es el mayor permitido, y cualquiera más grande es una violación aunque los conductores pudieran llevarlo. Conductores del alimentador, con la otra fórmula: 14 × 1.25 + 10 + 10 = 37.5 A de ampacidad mínima antes de otros ajustes. Escriba ambos números en el programa del tablero; vienen de secciones distintas y responden preguntas distintas.",
       "sharma_note": "",
       "figure_idea": "Árbol de alimentador: tres ramales de motor uniéndose a un alimentador, las dos fórmulas escritas en el tramo del alimentador.",
       "related_ids": [
@@ -4140,7 +5436,94 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-430.52",
-      "next_id": "C4-430.102"
+      "next_id": "C4-430.102",
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Si el interruptor del alimentador se dimensiona como un servicio — suficientemente grande para la suma de los arranques de todos los motores — una falla en el motor más pequeño puede nunca tomar suficiente corriente para abrirlo, y la falla quema hasta que algo más cede. Limitar el dispositivo del alimentador al dispositivo ramal más grande más las corrientes de operación de los demás motores lo mantiene suficientemente cerca para ver una falla ramal, mientras los dispositivos ramales y las sobrecargas de los motores hacen su propio trabajo.",
+      "inspection_fails": [
+        "Interruptor del alimentador mayor que el techo de 430.62(A) — dispositivo ramal más grande más el FLC de los demás motores.",
+        "Dispositivo de protección del alimentador dimensionado con la fórmula de conductores de 430.24 (125 por ciento del motor más grande).",
+        "Conductores del alimentador dimensionados con la fórmula del dispositivo — sin el factor de 125 por ciento en el motor más grande (430.24).",
+        "Dispositivo del circuito ramal más grande aumentado de tamaño sin reverificar el techo del dispositivo del alimentador."
+      ],
+      "exam_trap": "Las respuestas trampa intercambian la pareja: dimensionar el dispositivo del alimentador con la fórmula de conductores de 430.24, o dimensionar los conductores con la fórmula de dispositivo de 430.62. El techo del dispositivo es el dispositivo ramal más grande más las corrientes de plena carga de los demás motores — no hay ningún factor de 125 por ciento en él.",
+      "tables": [
+        {
+          "caption": "Ejemplo resuelto — la pareja de fórmulas",
+          "headers": [
+            "Elemento",
+            "Matemática",
+            "Resultado"
+          ],
+          "rows": [
+            [
+              "Techo del dispositivo del alimentador — 430.62(A)",
+              "40 + 10 + 10",
+              "60 A máx."
+            ],
+            [
+              "Conductores del alimentador — 430.24",
+              "14 × 1.25 + 10 + 10",
+              "37.5 A de ampacidad mín."
+            ]
+          ],
+          "note": "Motores: 14 A, 10 A y 10 A de FLC de tabla; dispositivo del circuito ramal más grande de 40 A."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-430.62-feeder-tree.svg",
+          "alt": "Árbol de alimentador con tres ramales de motor de 14 A, 10 A y 10 A de corriente de plena carga uniéndose a un alimentador, mostrando el techo de dispositivo de 430.62 de 60 A y el mínimo de conductores de 430.24 de 37.5 A de ampacidad.",
+          "caption": "Un alimentador, dos fórmulas: el techo del dispositivo y el piso del conductor.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "El techo del dispositivo del alimentador de 430.62(A) es:",
+          "choices": [
+            "125% del motor más grande más el 100% del resto",
+            "El dispositivo ramal más grande más el FLC de los demás motores",
+            "La suma de todos los dispositivos ramales",
+            "250% del motor más grande"
+          ],
+          "answer_index": 1,
+          "explain_plain": "430.62(A) limita el dispositivo del alimentador al dispositivo de cortocircuito y falla a tierra del circuito ramal más grande, más las corrientes de plena carga de los demás motores.",
+          "nec_ref": "430.62(A)"
+        },
+        {
+          "question": "Dispositivo ramal más grande de 40 A; los demás motores son de 10 A y 10 A de FLC. ¿El mayor dispositivo de alimentador permitido?",
+          "choices": [
+            "37.5 A",
+            "50 A",
+            "60 A",
+            "100 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "40 + 10 + 10 = 60 A. Es un techo, no una meta — un dispositivo estándar más pequeño está permitido.",
+          "nec_ref": "430.62(A)"
+        },
+        {
+          "question": "Los conductores del alimentador para los mismos tres motores se dimensionan bajo:",
+          "choices": [
+            "430.62",
+            "430.24 — 125% del más grande más el 100% del resto",
+            "Los porcentajes de la Tabla 430.52",
+            "La capacidad del dispositivo del alimentador"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Conductores y dispositivos son una pareja de reglas separadas: 430.24 dimensiona el conductor, 430.62 limita el dispositivo.",
+          "nec_ref": "430.24"
+        }
+      ],
+      "code_refs": [
+        "430.62(A)",
+        "430.24",
+        "430.52"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C4-430.102",
@@ -4148,8 +5531,8 @@
       "article": "430",
       "section": "430.102",
       "title": "La desconexión del motor debe estar a la vista",
-      "plain_explanation": "La sección 430.102 coloca el medio de desconexión para un motor y su controlador a la vista desde el equipo que desconecta — visible y a no más de 50 ft de distancia, el significado de 'a la vista' del Artículo 100. La persona que da servicio a la máquina debe poder ver la desconexión, o la desconexión debe ser de un tipo que pueda bloquearse abierta bajo las condiciones que permite el artículo. Un interruptor en un tablero al otro lado del edificio, sin un arreglo bloqueable, no le da a un técnico el control de la máquina que tiene enfrente.",
-      "on_the_job": "Párate junto al motor y señala su desconexión antes de dar el trabajo por terminado. Si no puedes verla, muévela, agrega la desconexión local, o confirma el arreglo bloqueable que permite el artículo y documéntalo. El mismo hábito de a la vista es lo que 440.14 exige para el equipo de HVAC.",
+      "plain_explanation": "La sección 430.102 coloca el medio de desconexión de un motor y su controlador a la vista desde el equipo que desconecta. 'A la vista' es el significado del Artículo 100: visible, y a no más de 50 ft de distancia.\n• Párese junto al motor: debe poder ver su desconexión.\n• Donde la desconexión no puede estar a la vista, debe poder bloquearse en la posición abierta bajo las condiciones que permite el artículo.\nUn interruptor en un tablero al otro lado del edificio, sin un arreglo bloqueable, no le da a un técnico el control de la máquina que tiene enfrente.",
+      "on_the_job": "Párese junto al motor y señale su desconexión antes de dar el trabajo por terminado. Si no puede verla, muévala, agregue la desconexión local, o confirme el arreglo bloqueable que permite el artículo y documéntelo. En una llamada de servicio de Sharma en una casa de Kissimmee, la única desconexión del soplador del manejador de aire era el interruptor en el tablero del garaje — a unas 70 ft y tras dos esquinas. Eso no pasa la prueba de a la vista, así que se instaló una desconexión local a 8 ft del manejador de aire, a plena vista de quien trabaje en él. El mismo hábito de a la vista es lo que 440.14 exige para el equipo de HVAC.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -4160,7 +5543,99 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-430.62",
-      "next_id": "C4-430.109"
+      "next_id": "C4-430.109",
+      "rich": 1,
+      "why_it_exists": "La persona que da servicio a un motor debe saber que la máquina no puede ser reenergizada a sus espaldas. Una desconexión que usted puede ver es una desconexión que usted controla: nadie rearranca el equipo sin entrar en su campo de visión. Donde la vista es imposible, un candado en la posición abierta es el sustituto — su candado, su llave, su máquina.",
+      "exam_trap": "La respuesta trampa es 'en el mismo cuarto' o 'en el mismo piso'. A la vista es un término definido con dos partes: la desconexión debe ser visible Y estar a no más de 50 ft. Un interruptor rotulado en un tablero a 80 ft por el pasillo falla tanto la pregunta del examen como la regla, a menos que pueda bloquearse abierto como permite el artículo.",
+      "inspection_fails": [
+        "Desconexión del motor en un tablero remoto — no está a la vista ni es bloqueable (430.102).",
+        "Desconexión visible desde el motor pero a más de 50 ft de distancia.",
+        "Línea de vista bloqueada — material almacenado entre el motor y su desconexión.",
+        "Sin desconexión a la vista de la unidad condensadora (440.14)."
+      ],
+      "tables": [
+        {
+          "caption": "A la vista — la prueba de dos partes",
+          "headers": [
+            "Prueba",
+            "Respuesta de 430.102"
+          ],
+          "rows": [
+            [
+              "¿Visible?",
+              "Sí — se ve desde el motor y el controlador"
+            ],
+            [
+              "¿A qué distancia?",
+              "A no más de 50 ft"
+            ],
+            [
+              "¿No puede estar a la vista?",
+              "Desconexión bloqueable en la posición abierta, como permite el artículo"
+            ],
+            [
+              "¿Equipo de HVAC?",
+              "La misma prueba — 440.14"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-430.102-within-sight.svg",
+          "alt": "Vista en planta de un cuarto de máquinas: un motor con una zona dorada de 50 ft de a la vista a su alrededor, una desconexión dentro de la zona marcada como a la vista, y un tablero a 80 ft fuera de la zona marcado como fuera de la vista.",
+          "caption": "A la vista significa las dos cosas: visible, y a no más de 50 ft.",
+          "w": 900,
+          "h": 1400
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "'A la vista desde' el equipo significa que la desconexión está:",
+          "choices": [
+            "En el mismo cuarto",
+            "Visible y a no más de 50 ft de distancia",
+            "En cualquier parte del edificio",
+            "Rotulada en el directorio del tablero"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El Artículo 100 define 'a la vista desde' como visible y dentro de 50 ft; 430.102 lo aplica a los medios de desconexión del motor y del controlador.",
+          "nec_ref": "430.102, Artículo 100"
+        },
+        {
+          "question": "La única desconexión de un motor es un interruptor de tablero a 80 ft que no se puede bloquear abierto. ¿Qué exige 430.102?",
+          "choices": [
+            "Nada — el interruptor está rotulado",
+            "Una desconexión a la vista, o un arreglo bloqueable que el artículo permite",
+            "Un segundo interruptor en el mismo tablero",
+            "Un letrero de advertencia en el motor"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La distancia más la falta de arreglo bloqueable significa que el técnico no tiene control de la máquina. Mueva o agregue una desconexión a la vista, o use el arreglo bloqueable que permite el artículo.",
+          "nec_ref": "430.102"
+        },
+        {
+          "question": "¿Qué sección aplica la misma regla de a la vista al equipo de aire acondicionado?",
+          "choices": [
+            "410.16",
+            "424.19",
+            "440.14",
+            "445.18"
+          ],
+          "answer_index": 2,
+          "explain_plain": "440.14 coloca el medio de desconexión del equipo de aire acondicionado y refrigeración a la vista desde el equipo — un interruptor en el tablero de la casa no lo satisface por sí solo.",
+          "nec_ref": "440.14"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "430.102",
+        "Article 100 — In Sight From",
+        "440.14",
+        "430.109"
+      ],
+      "uncertain": [],
+      "rich_sources": []
     },
     {
       "id": "C4-430.109",
@@ -4293,8 +5768,8 @@
       "article": "430",
       "section": "430.110",
       "title": "Capacidad de la desconexión del motor — al menos 115 por ciento",
-      "plain_explanation": "La sección 430.110 dimensiona el medio de desconexión para un circuito de motor: un interruptor de uso general usado como desconexión de motor debe tener una capacidad en amperios de al menos el 115 por ciento de la corriente de plena carga del motor según las tablas del Artículo 430, y los dispositivos con capacidad en caballos de fuerza se seleccionan por su capacidad en caballos de fuerza para el motor servido. La desconexión es un dispositivo de conmutación que debe cerrar y abrir la corriente del motor con seguridad, y por eso su base de dimensionamiento es su propia regla y no simplemente 'igualar el interruptor'. Junto con 430.102 (a la vista) y 430.109 (tipos permitidos), esto completa el panorama de la desconexión.",
-      "on_the_job": "Revisa dos marcas en una desconexión de motor: la capacidad en amperios contra el 115 por ciento del FLC de tabla, o la capacidad en caballos de fuerza contra el motor. Si cualquiera falla, la desconexión es el dispositivo equivocado aunque haya funcionado años en el motor viejo.",
+      "plain_explanation": "La sección 430.110 dimensiona el medio de desconexión para un circuito de motor:\n• Un interruptor de uso general usado como desconexión de motor debe tener una capacidad en amperios de al menos el 115 por ciento de la corriente de plena carga del motor, tomada de las tablas del Artículo 430 — no de la placa (430.6).\n• Los dispositivos con capacidad en caballos de fuerza se seleccionan por su capacidad en caballos de fuerza para el motor servido.\nLa desconexión es un dispositivo de conmutación que debe cerrar y abrir la corriente del motor con seguridad, y por eso su base de dimensionamiento es su propia regla y no simplemente 'igualar el interruptor'. Verificación trabajada: un motor monofásico de 5 hp a 230 V tiene una corriente de plena carga de tabla de 28 A. El 115 por ciento de 28 A es 32.2 A — así que un interruptor de uso general de 30 A es demasiado pequeño, aunque 30 A está por encima de la corriente de operación. Junto con 430.102 (a la vista) y 430.109 (tipos permitidos), esto completa el panorama de la desconexión.",
+      "on_the_job": "Revise dos marcas en una desconexión de motor: la capacidad en amperios contra el 115 por ciento del FLC de tabla, o la capacidad en caballos de fuerza contra el motor. Si cualquiera falla, la desconexión es el dispositivo equivocado aunque haya funcionado años en el motor viejo. En una llamada de servicio comercial de Sharma, se instaló un motor de escape de reemplazo de 5 hp donde la desconexión existente era un interruptor de uso general de 30 A. El FLC de tabla es 28 A, así que 430.110 quiere al menos 32.2 A — el interruptor de 30 A salió y entró uno de 60 A, aunque el interruptor viejo 'siempre había funcionado'.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -4306,7 +5781,100 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-430.109",
-      "next_id": "C4-430.122"
+      "next_id": "C4-430.122",
+      "rich": 1,
+      "why_it_exists": "Una desconexión de motor no solo conduce corriente — tiene que cerrar sobre un motor que arranca y abrir uno que está girando sin soldar sus contactos ni fallar en la mano de quien la opera. El margen del 115 por ciento pone la capacidad del interruptor por encima de la demanda de plena carga del motor, para que el dispositivo nunca trabaje a su límite cada vez que la máquina cicla.",
+      "exam_trap": "La trampa es igualar la desconexión al interruptor, o calcular el 115 por ciento desde los amperios de la placa. El interruptor se dimensiona desde los porcentajes de la Tabla 430.52 — una regla distinta. La desconexión parte de la corriente de plena carga de tabla según 430.6 y toma el 115 por ciento, o se elige por su capacidad en caballos de fuerza. Un interruptor de 30 A 'porque el motor consume 28' es la respuesta equivocada.",
+      "inspection_fails": [
+        "Interruptor de uso general de 30 A desconectando un motor que necesita 32.2 A al 115 por ciento (430.110).",
+        "Desconexión elegida para igualar el interruptor, sin verificación del 115 por ciento ni de caballos de fuerza.",
+        "Interruptor con capacidad en caballos de fuerza menor que el motor que desconecta.",
+        "Capacidad de la desconexión calculada desde el FLA de la placa en vez del FLC de tabla (430.6, 430.110)."
+      ],
+      "tables": [
+        {
+          "caption": "Dos maneras de pasar 430.110 — 5 hp, 230 V, monofásico",
+          "headers": [
+            "Base",
+            "Regla",
+            "Este motor"
+          ],
+          "rows": [
+            [
+              "Capacidad en amperios",
+              "≥ 115% del FLC de tabla",
+              "28 A → mín. 32.2 A"
+            ],
+            [
+              "Capacidad en hp",
+              "hp del interruptor ≥ hp del motor",
+              "5 hp a 230 V"
+            ],
+            [
+              "No es la base",
+              "Tamaño del interruptor o FLA de la placa",
+              "Las sobrecargas usan la placa"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-430.110-disconnect-rating.svg",
+          "alt": "Un motor de 5 hp a 230 V con FLC de tabla de 28 A: el 115 por ciento es 32.2 A, así que un interruptor de uso general de 30 A falla y uno de 60 A pasa; un interruptor con capacidad en caballos de fuerza debe estar clasificado para el motor de 5 hp.",
+          "caption": "115 por ciento del FLC de tabla — un interruptor de 30 A es muy pequeño para un motor de 28 A.",
+          "w": 900,
+          "h": 1350
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un motor monofásico de 5 hp a 230 V tiene un FLC de tabla de 28 A. ¿Cuál es la capacidad mínima en amperios para un interruptor de uso general usado como su desconexión?",
+          "choices": [
+            "28 A",
+            "30 A",
+            "32.2 A",
+            "40 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "430.110: al menos el 115 por ciento del FLC de tabla. 28 × 1.15 = 32.2 A — un interruptor de 30 A es demasiado pequeño.",
+          "nec_ref": "430.110"
+        },
+        {
+          "question": "Un medio de desconexión con capacidad en caballos de fuerza se selecciona por:",
+          "choices": [
+            "La capacidad del interruptor del circuito",
+            "Su capacidad en caballos de fuerza para el motor servido",
+            "El tamaño del conductor",
+            "La letra de código de rotor bloqueado"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Los dispositivos con capacidad en caballos de fuerza se eligen por su capacidad en hp para el motor servido, no por un cálculo en amperios.",
+          "nec_ref": "430.110"
+        },
+        {
+          "question": "El 115 por ciento para una desconexión de motor se calcula desde:",
+          "choices": [
+            "El FLA de la placa",
+            "La corriente de plena carga de tabla (430.6)",
+            "El ajuste de la sobrecarga",
+            "El interruptor del circuito ramal"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Las desconexiones, los conductores, los controladores y la protección contra cortocircuito parten de las tablas del Artículo 430; solo la protección contra sobrecarga usa la placa.",
+          "nec_ref": "430.6, 430.110"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "430.110",
+        "430.6",
+        "Table 430.248",
+        "430.102",
+        "430.109"
+      ],
+      "uncertain": [],
+      "rich_sources": []
     },
     {
       "id": "C4-430.122",
@@ -4509,8 +6077,8 @@
       "article": "440",
       "section": "440.10",
       "title": "Capacidad de corriente de cortocircuito del equipo de aire acondicionado y refrigeración",
-      "plain_explanation": "La sección 440.10 exige que los controladores de motor y el equipo de control industrial usados con equipo de aire acondicionado y refrigeración tengan una capacidad de corriente de cortocircuito adecuada para la corriente de falla disponible, con la capacidad marcada como exige el artículo. Es la compañera en el Artículo 440 de 408.6 y 409: el equipo moderno empacado de HVAC y sus tableros de control llevan un SCCR, y una unidad instalada donde la corriente de falla disponible lo excede es una incompatibilidad aunque el MCA y el MOCP sean perfectos. El problema surge en azoteas comerciales y servicios más grandes, rara vez en un condensador de casa.",
-      "on_the_job": "En trabajo comercial de HVAC, agrega el SCCR al conjunto de fotos de la placa: MCA, MOCP y SCCR, más la corriente de falla disponible cuando el diseño la proporciona. Una incompatibilidad va a Mike antes de instalar la unidad, no al inspector en la inspección final.",
+      "plain_explanation": "La sección 440.10 exige que los controladores de motor, el medio de desconexión y los controladores combinados de carga usados con equipo de aire acondicionado y refrigeración tengan una capacidad de corriente de cortocircuito (SCCR) al menos igual a la corriente de falla disponible donde se instala el equipo. La capacidad viene marcada en el equipo. Es la compañera en el Artículo 440 de 408.6 para tableros y de 409.110 para tableros de control industrial.\n• El MCA y el MOCP pueden ser perfectos y la instalación aun así estar mal: una unidad cuyo SCCR queda por debajo de la corriente de falla disponible es una incompatibilidad.\n• El SCCR se lee en la placa de la unidad o en la etiqueta del tablero de control, junto con el MCA y el MOCP, antes de instalar la unidad.\n• La corriente de falla disponible viene de la compañía eléctrica o de los documentos de diseño. Nunca se estima en el campo.\nEl problema surge en azoteas comerciales y servicios más grandes, donde la corriente de falla es alta. Rara vez decide algo en un condensador de casa.",
+      "on_the_job": "En trabajo comercial de HVAC, agregue el SCCR al conjunto de fotos de la placa: MCA, MOCP y SCCR, más la corriente de falla disponible cuando el diseño la proporciona. Una incompatibilidad va a Mike antes de instalar la unidad, no al inspector en la inspección final.\nCaso práctico, una unidad paquete de azotea en un local comercial pequeño: el diseño muestra 22 kA de corriente de falla disponible. La primera unidad presentada está marcada SCCR 10 kA: no se puede instalar, aunque su MCA y su MOCP calcen con el circuito. La unidad aprobada está marcada 65 kA, que cubre los 22 kA. Registre ambos números, el SCCR marcado y la corriente de falla disponible, en el archivo del trabajo.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -4522,7 +6090,117 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-440.4(B)",
-      "next_id": "C4-440.12"
+      "next_id": "C4-440.12",
+      "edition_note": "CAMBIO NEC 2023: No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "La corriente de falla es lo que el servicio puede empujar hacia un cortocircuito franco. Un equipo construido para menos que eso no despeja la falla: se convierte en la falla. Los contactos se sueldan, las envolventes se rompen y la falla ocurre frente a quien esté parado junto a la unidad. La marca del SCCR existe para que la comparación se haga en papel, desde la placa y el diseño, antes de instalar el equipo.",
+      "inspection_fails": [
+        "Unidad empacada instalada donde la corriente de falla disponible excede su SCCR marcado.",
+        "Sin comparación de SCCR en el registro: la presentación muestra solo MCA y MOCP.",
+        "Etiqueta del tablero de control ausente o ilegible, de modo que el SCCR no se puede verificar.",
+        "Unidad de reemplazo instalada con un SCCR menor que el equipo que reemplazó, sin volver a revisar contra el servicio."
+      ],
+      "exam_trap": "La trampa es tratar el SCCR como un número más que la placa dimensiona por usted, como el MCA o el MOCP. Esos dos dimensionan el circuito según la unidad. El SCCR va al revés: la corriente de falla disponible del edificio la fija el servicio, y la capacidad marcada de la unidad tiene que cubrirla. Una unidad de 10 kA en un servicio de 22 kA no pasa, aunque el cable y el interruptor sean perfectos.",
+      "tables": [
+        {
+          "caption": "Los tres números de la placa (Artículo 440)",
+          "headers": [
+            "Número",
+            "Qué decide"
+          ],
+          "rows": [
+            [
+              "MCA",
+              "La ampacidad mínima permitida del conductor (440.4(B))"
+            ],
+            [
+              "MOCP",
+              "El interruptor o fusible más grande permitido (440.4(B))"
+            ],
+            [
+              "SCCR",
+              "Debe igualar o exceder la corriente de falla disponible (440.10)"
+            ]
+          ]
+        },
+        {
+          "caption": "Reglas de SCCR en el libro",
+          "headers": [
+            "Equipo",
+            "Sección"
+          ],
+          "rows": [
+            [
+              "Tableros de distribución y tableros de fuerza",
+              "408.6"
+            ],
+            [
+              "Tableros de control industrial",
+              "409.110"
+            ],
+            [
+              "Equipo de aire acondicionado y refrigeración",
+              "440.10"
+            ]
+          ],
+          "note": "La misma regla en los tres: el SCCR marcado debe ser al menos la corriente de falla disponible."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-440.10-sccr-bars.svg",
+          "alt": "Gráfico de barras que compara una corriente de falla disponible de 22 kA con dos marcas de SCCR de unidades de azotea: una unidad de 10 kA que no pasa y una de 65 kA que la cubre.",
+          "caption": "La revisión del SCCR: la capacidad marcada de la unidad contra la corriente de falla del edificio.",
+          "w": 900,
+          "h": 1180
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Una unidad de azotea está marcada SCCR 10 kA. El diseño muestra 22 kA de corriente de falla disponible, y el MCA y el MOCP calzan. ¿Se puede instalar la unidad?",
+          "choices": [
+            "Sí — el MCA y el MOCP rigen la instalación",
+            "Sí, si el interruptor es igual o menor que el MOCP",
+            "No — el SCCR debe cubrir la corriente de falla disponible",
+            "Solo si el medio de desconexión lleva fusibles"
+          ],
+          "answer_index": 2,
+          "explain_plain": "440.10 exige que el SCCR sea al menos igual a la corriente de falla disponible. El MCA y el MOCP no corrigen una incompatibilidad de SCCR.",
+          "nec_ref": "440.10"
+        },
+        {
+          "question": "¿De dónde viene la corriente de falla disponible?",
+          "choices": [
+            "Se estima desde el tonelaje de la unidad",
+            "De la compañía eléctrica o de los documentos de diseño",
+            "Viene impresa junto al SCCR en la placa",
+            "Se mide poniendo el servicio en corto"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Es una propiedad del servicio, suministrada por la compañía eléctrica o por el diseño; nunca es una estimación de campo.",
+          "nec_ref": "440.10"
+        },
+        {
+          "question": "¿Qué sección establece la misma regla de SCCR para los tableros?",
+          "choices": [
+            "408.36",
+            "408.6",
+            "404.8(A)",
+            "430.102"
+          ],
+          "answer_index": 1,
+          "explain_plain": "408.6 exige que los tableros de distribución, el equipo de maniobra y los tableros tengan un SCCR al menos igual a la corriente de falla disponible.",
+          "nec_ref": "408.6"
+        }
+      ],
+      "code_refs": [
+        "440.10",
+        "440.4(B)",
+        "408.6",
+        "409.110"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C4-440.12",
@@ -5183,8 +6861,8 @@
       "article": "445",
       "section": "445.18(D)",
       "title": "Apagado exterior para un generador en una vivienda unifamiliar",
-      "plain_explanation": "La sección 445.18(D) es la disposición de 2020 que el resumen asigna al apagado de emergencia de un generador instalado en el exterior en una vivienda de una o dos familias: además de las disposiciones de apagado que aplican a los generadores en general, un generador de unidad de vivienda ubicado afuera debe tener un dispositivo de desconexión/apagado fácilmente accesible ubicado fuera de la vivienda, para que la máquina pueda apagarse por los ocupantes o los primeros respondedores sin entrar al edificio ni pararse junto a la máquina misma. Léela junto con el resto de 445.18, que rige el apagado del motor primario en general.\n\nCAMBIO NEC 2023:\n• 445.19: Las reglas de apagado de emergencia se movieron de 445.18 a la nueva 445.19; para viviendas de una y dos familias el apagado remoto de emergencia debe estar fuera de la vivienda (445.19(C)). La 445.18 ahora permite que la desconexión del generador se ubique dentro de la unidad detrás de una cubierta si un letrero según 110.21(B) muestra dónde está.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "En un trabajo de generador en vivienda, ubica el apagado exterior donde un respondedor lo buscaría — en el lado de entrada normal de la casa, claramente identificado — y pruébalo en el arranque. Confirma que el dispositivo que instalaste es el que esperan el listado del generador y la AHJ; anota su ubicación en el registro del trabajo y en el directorio del tablero.",
+      "plain_explanation": "La sección 445.18(D) cubre el apagado de emergencia de un generador instalado en el exterior en una vivienda de una o dos familias. Además de las disposiciones de apagado que aplican a los generadores en general, un generador de unidad de vivienda ubicado afuera debe tener un dispositivo de desconexión/apagado fácilmente accesible ubicado fuera de la vivienda. La ubicación es el punto: la máquina puede ser apagada por los ocupantes o los primeros respondedores sin entrar al edificio, y sin pararse junto a la máquina misma. Léala junto con el resto de 445.18, que rige el apagado del motor primario en general — este apagado detiene el motor, no solo la salida eléctrica.",
+      "on_the_job": "En un trabajo de generador en vivienda, ubique el apagado exterior donde un respondedor lo buscaría — en el lado de entrada normal de la casa, claramente identificado — y pruébelo en el arranque. En un trabajo de respaldo de Sharma en Winter Park, el apagado se instaló en la pared exterior junto a la entrada principal, rotulado como el apagado de emergencia del generador, donde tanto el propietario como un equipo de bomberos lo encontrarían. Confirme que el dispositivo que instaló es el que esperan el listado del generador y la AHJ; anote su ubicación en el registro del trabajo y en el directorio del tablero.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -5206,7 +6884,97 @@
           "url": "https://dca.georgia.gov/document/public-notices/2023necchangespresentationpdf/download",
           "confirmed": true
         }
-      ]
+      ],
+      "rich": 1,
+      "why_it_exists": "Cuando un generador falla, se incendia, o sigue alimentando un servicio dañado a las 2 a.m., las personas que llegan primero son la familia y los bomberos — no electricistas. Ninguno debería tener que entrar a la casa, buscar un tablero, o pararse junto a una máquina en marcha para detenerla. Un apagado exterior pone el interruptor de parada donde un respondedor lo buscaría.",
+      "exam_trap": "La respuesta trampa es que la propia desconexión del generador, o el interruptor en el tablero de la casa, satisface la regla de la vivienda. 445.18(D) quiere un dispositivo de apagado separado, ubicado fuera de la vivienda y fácilmente accesible, para que el motor primario pueda detenerse sin entrar al edificio ni pararse junto a la máquina.",
+      "inspection_fails": [
+        "Generador exterior de vivienda sin dispositivo de apagado fuera de la casa (445.18(D)).",
+        "Dispositivo de apagado tras una puerta con candado o dentro del garaje — no es fácilmente accesible.",
+        "Dispositivo de apagado sin rotular; un respondedor no puede saber qué apaga.",
+        "Ubicación del apagado ausente del directorio del tablero y del registro del trabajo."
+      ],
+      "tables": [
+        {
+          "caption": "445.18(D) — lista de verificación del apagado en vivienda",
+          "headers": [
+            "Verificación",
+            "La regla"
+          ],
+          "rows": [
+            [
+              "¿Qué generadores?",
+              "En el exterior, en una vivienda de una o dos familias"
+            ],
+            [
+              "¿Dispositivo extra?",
+              "Un dispositivo de apagado, además de las disposiciones generales de 445.18"
+            ],
+            [
+              "¿Ubicado dónde?",
+              "Fuera de la vivienda, fácilmente accesible"
+            ],
+            [
+              "¿Qué detiene?",
+              "El motor primario — el motor mismo"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-445.18D-shutdown.svg",
+          "alt": "Elevación de una casa con un generador de respaldo sobre una base en el exterior y un dispositivo de apagado de emergencia rotulado en la pared exterior junto a la entrada, para que el motor primario pueda detenerse sin entrar a la casa ni pararse junto a la máquina.",
+          "caption": "El apagado vive fuera de la vivienda, donde un respondedor lo buscaría.",
+          "w": 900,
+          "h": 1450
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un generador de respaldo está en el exterior de una vivienda unifamiliar. El dispositivo de apagado extra que exige 445.18(D) debe ubicarse:",
+          "choices": [
+            "En el propio generador",
+            "Adentro, junto al tablero",
+            "Fuera de la vivienda",
+            "Dentro del interruptor de transferencia"
+          ],
+          "answer_index": 2,
+          "explain_plain": "El dispositivo se ubica fuera de la vivienda y es fácilmente accesible, para que los ocupantes y los primeros respondedores puedan detener la máquina sin entrar a la casa.",
+          "nec_ref": "445.18(D)"
+        },
+        {
+          "question": "El apagado de 445.18(D) detiene:",
+          "choices": [
+            "Solo el interruptor de transferencia",
+            "El motor primario",
+            "El servicio de la compañía eléctrica",
+            "El cargador de batería"
+          ],
+          "answer_index": 1,
+          "explain_plain": "445.18 rige el apagado del motor primario; la regla de la vivienda agrega el dispositivo exterior que lo opera.",
+          "nec_ref": "445.18"
+        },
+        {
+          "question": "¿Para quién está principalmente el apagado exterior?",
+          "choices": [
+            "El lector de medidores de la compañía",
+            "Los ocupantes y los primeros respondedores",
+            "Solo el técnico de servicio del generador",
+            "El inspector de la AHJ"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Está colocado donde los ocupantes o los primeros respondedores pueden alcanzarlo en una emergencia, sin entrar al edificio ni pararse junto a la máquina.",
+          "nec_ref": "445.18(D)"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 445.19: Las reglas de apagado de emergencia se movieron de 445.18 a la nueva 445.19; para viviendas de una y dos familias el apagado remoto de emergencia debe estar fuera de la vivienda (445.19(C)). La 445.18 ahora permite que la desconexión del generador se ubique dentro de la unidad detrás de una cubierta si un letrero según 110.21(B) muestra dónde está.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "445.18(D)",
+        "445.18"
+      ],
+      "uncertain": [],
+      "rich_sources": []
     },
     {
       "id": "C4-ART-450",
@@ -5481,8 +7249,8 @@
       "article": "450",
       "section": "450.14",
       "title": "Un transformador necesita un medio de desconexión",
-      "plain_explanation": "La sección 450.14 exige un medio de desconexión para transformadores, ubicado en un lugar fácilmente accesible a la vista del transformador o en un lugar remoto, con las excepciones del artículo (que incluyen ciertos transformadores pequeños como Clase 2 y casos limitados similares). Donde la desconexión es remota, debe poder bloquearse en la posición abierta y el transformador debe marcarse con la ubicación de la desconexión, para que una persona que da servicio al transformador pueda encontrar y asegurar su fuente. Las aclaraciones de 2020 a esta sección tratan exactamente de ese caso remoto.",
-      "on_the_job": "En una instalación tipo seco, decide la ubicación de la desconexión junto con la ubicación del transformador, no después. Si la desconexión termina remota, aplica el arreglo bloqueable y el marcado de ubicación en la misma visita y registra ambos en el archivo del trabajo.",
+      "plain_explanation": "La sección 450.14 exige un medio de desconexión para todo transformador, excepto las unidades Clase 2 y Clase 3. La desconexión abre todos los conductores primarios no puestos a tierra, y tiene exactamente dos lugares legales donde vivir:\n• A la vista del transformador — visible desde el transformador y a no más de 50 ft de distancia (Artículo 100).\n• En un lugar remoto — permitido solo cuando la desconexión puede bloquearse en la posición abierta según 110.25, con el dispositivo de bloqueo en su lugar esté o no esté el candado, y la ubicación de la desconexión está marcada en campo en el transformador.\nEl breaker primario o un interruptor de seguridad puede servir como medio de desconexión. Lo que la sección no acepta es una desconexión remota que nadie pueda bloquear ni encontrar.",
+      "on_the_job": "Un transformador tipo seco de 45 kVA, 480 V a 208Y/120 V, en un local comercial de Orlando. Consume unos 54 A en el primario, protegido a 70 A según la Tabla 450.3(B) — el ejemplo resuelto de la página hermana. El tablero que lo alimenta está en un cuarto eléctrico a 60 ft, fuera de la vista: eso es una desconexión remota, no una a la vista. Así que el breaker primario recibe su arreglo bloqueable en su lugar, y el transformador recibe una etiqueta aplicada en campo — «Desconexión primaria: Tablero MDP, cuarto eléctrico». Decida ambos junto con la ubicación del transformador, no después, y regístrelos en el archivo del trabajo.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -5493,7 +7261,107 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-450.9",
-      "next_id": "C4-450.21"
+      "next_id": "C4-450.21",
+      "why_it_exists": "Un transformador permanece energizado desde su lado primario aunque todos los breakers secundarios estén abiertos, y un interruptor cerrado en algún punto aguas arriba puede re-energizarlo sin aviso. La regla garantiza a la persona que da servicio a la unidad una forma de abrir su fuente y mantenerla abierta — y, cuando ese interruptor está en otro cuarto, una forma de encontrarlo. Bloqueable significa que el estado abierto sobrevive a otras personas: el dispositivo de bloqueo permanece en su lugar con o sin el candado.",
+      "exam_trap": "La trampa: «El transformador se alimenta de un breaker en el tablero, así que ya tiene desconexión — no se requiere nada más». Solo es verdad a medias. El breaker puede servir como medio de desconexión, pero cuando no está a la vista del transformador, 450.14 añade dos condiciones: bloqueable según 110.25, y su ubicación marcada en campo en el transformador. Si falta cualquiera de las dos, la instalación no pasa.",
+      "inspection_fails": [
+        "Transformador instalado sin medio de desconexión (450.14).",
+        "Desconexión remota que no puede bloquearse en la posición abierta (450.14, 110.25).",
+        "Ubicación de la desconexión remota no marcada en campo en el transformador (450.14).",
+        "Desconexión tratada como «a la vista» cuando no es visible desde el transformador, o está a más de 50 ft."
+      ],
+      "tables": [
+        {
+          "caption": "Dónde puede vivir la desconexión del transformador (450.14)",
+          "headers": [
+            "Ubicación",
+            "Qué se requiere"
+          ],
+          "rows": [
+            [
+              "A la vista",
+              "Visible desde el transformador, a no más de 50 ft"
+            ],
+            [
+              "Remota",
+              "Bloqueable abierta según 110.25 + ubicación marcada en campo en el transformador"
+            ],
+            [
+              "Unidad Clase 2 / Clase 3",
+              "No se requiere desconexión de 450.14"
+            ]
+          ],
+          "note": "La desconexión abre todos los conductores primarios no puestos a tierra. El breaker primario puede servir como desconexión."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-450.14-disconnect.svg",
+          "alt": "Dos casos para el medio de desconexión de un transformador: a la vista del transformador y dentro de 50 ft, o remoto con una desconexión bloqueable cuya ubicación está marcada en campo en el transformador.",
+          "caption": "A la vista, o remota + bloqueable + marcada — los únicos dos casos.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "La desconexión de un transformador es un breaker en un tablero a 60 ft, fuera de la vista. ¿Qué más exige 450.14?",
+          "choices": [
+            "Nada — un breaker siempre es una desconexión",
+            "Debe poder bloquearse según 110.25 y su ubicación debe marcarse en campo en el transformador",
+            "Una segunda desconexión junto al transformador",
+            "Un letrero de advertencia en la puerta del cuarto eléctrico"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Una desconexión remota se permite solo con ambas condiciones: bloqueable en la posición abierta, y su ubicación marcada en campo en el transformador.",
+          "nec_ref": "450.14"
+        },
+        {
+          "question": "«A la vista» significa visible y a no más de:",
+          "choices": [
+            "25 ft",
+            "50 ft",
+            "100 ft",
+            "Cualquier distancia dentro del mismo cuarto"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El Artículo 100 define «a la vista» como visible y a no más de 50 ft de uno a otro.",
+          "nec_ref": "Artículo 100"
+        },
+        {
+          "question": "¿Qué transformador no necesita medio de desconexión según 450.14?",
+          "choices": [
+            "Un tipo seco de 45 kVA",
+            "Un transformador Clase 2",
+            "Cualquier transformador alimentado a 480 V",
+            "Un transformador sobre un techo suspendido"
+          ],
+          "answer_index": 1,
+          "explain_plain": "450.14 exceptúa los transformadores Clase 2 y Clase 3. El tamaño y el voltaje no eliminan el requisito para los demás.",
+          "nec_ref": "450.14"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "450.14",
+        "110.25",
+        "Artículo 100 — A la vista",
+        "Tabla 450.3(B)"
+      ],
+      "rich_sources": [
+        {
+          "claim": "450.14: desconexión a la vista o remota; una desconexión remota debe poder bloquearse según 110.25 y su ubicación debe marcarse en campo en el transformador; Clase 2 y Clase 3 exceptuados; a la vista = visible y a no más de 50 ft (Artículo 100); el breaker primario puede servir",
+          "source": "Mike Holt, Transformers, based on the 2020 NEC",
+          "url": "https://www.mikeholt.com/newsletters.php?action=display&letterID=2544"
+        },
+        {
+          "claim": "110.25: el dispositivo de bloqueo permanece en su lugar esté o no esté el candado instalado",
+          "source": "EC&M, Stay Aware: Things to Know About Transformer Installations",
+          "url": "https://www.ecmag.com/magazine/articles/article-detail/codes-standards-stay-aware-things-know-about-transformer-installations"
+        }
+      ],
+      "uncertain": [],
+      "rich": 1
     },
     {
       "id": "C4-450.21",
@@ -6180,8 +8048,8 @@
       "article": "480",
       "section": "480.12",
       "title": "Interconexiones de baterías (movidas a 480 en 2020)",
-      "plain_explanation": "La sección 480.12 contiene los requisitos de interconexión de baterías que la edición 2020 movió al Artículo 480 desde el Artículo 706: los conductores y conexiones que unen celdas y baterías en un banco, dimensionados para la corriente máxima que el banco puede entregar y hechos con terminales y métodos aptos para el sistema de baterías. Los bancos de baterías pueden entregar una corriente de falla enorme a muy baja impedancia, así que la calidad de la conexión — terminales correctas, torque correcto, recorridos protegidos — es un punto de seguridad, no de pulcritud. Las instrucciones del fabricante para el sistema de baterías específico rigen los detalles que el artículo deja al listado.",
-      "on_the_job": "Aprieta con torque la tornillería de interconexión según la especificación del fabricante de la batería y regístralo; una conexión entre celdas floja se anuncia como calor bajo carga. Mantén los recorridos de interconexión protegidos contra daño físico y contra el ambiente de electrolito del tipo de batería instalado.",
+      "plain_explanation": "La sección 480.12 contiene los requisitos de interconexión de baterías que la edición 2020 movió al Artículo 480 desde el Artículo 706: los conductores y conexiones que unen celdas y baterías en un banco.\n• Las interconexiones se dimensionan para la corriente máxima que el banco puede entregar.\n• Los terminales y métodos de conexión deben ser aptos para el sistema de baterías instalado.\n• Las instrucciones del fabricante para el sistema de baterías específico rigen los detalles que el artículo deja al listado.\nLos bancos de baterías pueden entregar una corriente de falla enorme a muy baja impedancia, así que la calidad de la conexión — terminales correctas, torque correcto, recorridos protegidos — es un punto de seguridad, no de pulcritud.",
+      "on_the_job": "Apriete la tornillería de interconexión con el torque de la especificación del fabricante de la batería y regístrelo; una conexión entre celdas floja se anuncia como calor bajo carga. Mantenga los recorridos de interconexión protegidos contra daño físico y contra el ambiente de electrolito del tipo de batería instalado.\nCaso práctico: la cadena de baterías detrás de un UPS comercial pequeño son diez baterías de 12 V en serie: 120 V DC. Sus conectores entre celdas son las piezas propias del fabricante de la batería, cada uno apretado con el torque de la especificación del fabricante y con los valores anotados en el archivo del trabajo. A 120 V DC la cadena supera la línea de 60 V de 480.7(A), así que su desconexión es el medio de desconexión con capacidad DC, a la vista, que cubre la página de 480.7.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -6192,7 +8060,99 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C4-480.7",
-      "next_id": "C4-ART-490"
+      "next_id": "C4-ART-490",
+      "edition_note": "CAMBIO NEC 2023: No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Un banco de baterías no se hunde como una acometida de la compañía eléctrica. Su impedancia es tan baja que una interconexión floja o subdimensionada se convierte en el punto débil de un circuito que puede entregar una corriente enorme: la junta mala se calienta bajo carga normal, se corroe más rápido en el aire del cuarto de baterías y puede hacer arco o fundirse bajo corriente de falla. Las conexiones sanas, listadas y protegidas mantienen la energía del banco en los cables, donde pertenece.",
+      "inspection_fails": [
+        "Conexión entre celdas floja o corroída, con daño por calor visible en el terminal.",
+        "Terminales o conectores que no son las piezas del fabricante de la batería para el sistema.",
+        "Tornillería de interconexión sin el torque de la especificación del fabricante, o sin registro de torque en el archivo del trabajo.",
+        "Recorridos de interconexión sin protección donde cruzan el bastidor o están expuestos a daño físico."
+      ],
+      "exam_trap": "La trampa es tratar los puentes entre celdas como puentes ordinarios: cualquier terminal que entre, apretado al tacto. La sección 480.12 dimensiona el puente para la corriente máxima que el banco puede entregar, y el método de conexión y el torque vienen del listado del sistema de baterías y de las instrucciones del fabricante, no de la costumbre. «Bien apretado» no es un valor de torque, y un torque sin registrar no se puede verificar después.",
+      "tables": [
+        {
+          "caption": "Lista de verificación de interconexiones (480.12)",
+          "headers": [
+            "Punto",
+            "Regla"
+          ],
+          "rows": [
+            [
+              "Dimensionado",
+              "La corriente máxima que el banco puede entregar"
+            ],
+            [
+              "Terminales",
+              "Aptos para el sistema de baterías; piezas del fabricante"
+            ],
+            [
+              "Torque",
+              "La especificación del fabricante — y regístrelo"
+            ],
+            [
+              "Recorridos",
+              "Protegidos contra daño físico y electrolito"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c4/C4-480.12-battery-bank.svg",
+          "alt": "Elevación de un banco de diez baterías de 12 V en dos repisas, unidas por conectores entre celdas, con un recorrido de cable protegido hasta un medio de desconexión DC y una leyenda de cuatro puntos.",
+          "caption": "Una cadena, diez baterías: cada puente es una conexión de 480.12.",
+          "w": 900,
+          "h": 1640
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Los requisitos de interconexión de baterías pasaron al Artículo 480 en la edición 2020. ¿De dónde vinieron?",
+          "choices": [
+            "Artículo 690",
+            "Artículo 705",
+            "Artículo 706",
+            "Artículo 725"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La edición 2020 reunió de nuevo las reglas de baterías en el Artículo 480 desde el artículo de almacenamiento de energía, el 706.",
+          "nec_ref": "480.12"
+        },
+        {
+          "question": "Los conductores y conexiones de interconexión se dimensionan para:",
+          "choices": [
+            "Solo la corriente de salida del cargador",
+            "La corriente máxima que el banco puede entregar",
+            "El voltaje nominal de la cadena",
+            "El 125 por ciento de la capacidad del UPS"
+          ],
+          "answer_index": 1,
+          "explain_plain": "480.12 dimensiona las interconexiones para la corriente máxima que el banco puede entregar.",
+          "nec_ref": "480.12"
+        },
+        {
+          "question": "El torque de la tornillería entre celdas viene de:",
+          "choices": [
+            "El tacto normal de un electricista",
+            "La Tabla 250.66",
+            "La especificación del fabricante de la batería",
+            "La preferencia del inspector"
+          ],
+          "answer_index": 2,
+          "explain_plain": "El listado del sistema de baterías y las instrucciones del fabricante rigen los detalles de la conexión, incluido el torque, y Sharma registra los valores.",
+          "nec_ref": "480.12"
+        }
+      ],
+      "code_refs": [
+        "480.12",
+        "480.3",
+        "480.7",
+        "Article 706"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C4-ART-490",
