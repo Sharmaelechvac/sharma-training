@@ -938,7 +938,90 @@
       "verified": true,
       "prev_id": "C2-210.4",
       "next_id": "C2-210.8",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Identification is what keeps the next person safe and the job fast. In a two-system building, a brown conductor and a black conductor look the same in a dark ceiling until somebody meters them — land 277 V on a 120 V load, or open the wrong system's neutral, and people and equipment get hurt. A posted color code and an honest directory mean the identification survives the crew that pulled the wire.",
+      "inspection_fails": [
+        "Two voltage systems in one building and no identification method posted at the panelboard (210.5(C)(1)).",
+        "Ungrounded conductors not identified by phase and by system where more than one nominal voltage system supplies the building.",
+        "Panel directory blank, or entries like 'lights' and 'plugs' that do not name a clear, specific purpose (408.4(A)).",
+        "Circuits re-identified with tape at some boxes and missed at others, so the posted code cannot be trusted."
+      ],
+      "exam_trap": "Two trap answers live on this page. First: '210.5 requires black, red, blue and brown, orange, yellow.' It does not — those colors are trade convention; 210.5(C)(1) requires identification by phase and by system, with the method posted at each panelboard. Second: citing 210.5 for a missing panel directory. The directory rule is 408.4(A).",
+      "tables": [
+        {
+          "caption": "Trade color convention — know it, and know it is convention",
+          "headers": [
+            "System",
+            "Phase colors"
+          ],
+          "rows": [
+            [
+              "208Y/120 V",
+              "Black, red, blue"
+            ],
+            [
+              "480Y/277 V",
+              "Brown, orange, yellow"
+            ]
+          ],
+          "note": "The NEC requires identification by phase and system, with the method posted at each panelboard (210.5(C)(1)); it does not mandate these particular colors."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-210.5-color-card.svg",
+          "alt": "Panelboard door with the posted identification card for two voltage systems, 208Y/120 with black red blue phase colors and 480Y/277 with brown orange yellow, above a circuit directory filled in circuit by circuit with specific purposes.",
+          "caption": "The posted card and the directory: identification the next crew can read.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A building is supplied by both 208Y/120 and 480Y/277 systems. What does 210.5(C)(1) require?",
+          "choices": [
+            "Ungrounded conductors identified by phase and system, with the method posted at each panelboard",
+            "Only black, red and blue conductors anywhere in the building",
+            "A label on the meter only",
+            "Nothing — the rule is for houses only"
+          ],
+          "answer_index": 0,
+          "explain_plain": "Where branch circuits are supplied from more than one nominal voltage system, the ungrounded conductors are identified by phase and by system, and the method is posted at each branch-circuit panelboard.",
+          "nec_ref": "210.5(C)(1)"
+        },
+        {
+          "question": "The rule that every circuit in a panelboard directory be legibly identified by its clear, specific purpose is:",
+          "choices": [
+            "210.5",
+            "408.4(A)",
+            "210.52",
+            "110.12"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The panel-directory rule is 408.4(A), not 210.5 — 210.5 is about identifying conductors by phase and system.",
+          "nec_ref": "408.4(A)"
+        },
+        {
+          "question": "Brown, orange and yellow is the trade convention for which system?",
+          "choices": [
+            "120/208 V",
+            "277/480 V",
+            "DC systems",
+            "Control wiring"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Brown, orange, yellow is the trade convention for 277/480 V systems; black, red, blue is the convention for 120/208 V. The NEC requires identification, not these colors.",
+          "nec_ref": "210.5(C)(1)"
+        }
+      ],
+      "code_refs": [
+        "210.5(C)(1)",
+        "408.4(A)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-210.8",
@@ -2661,7 +2744,7 @@
       "section": "210.21",
       "title": "Outlet devices and receptacle ratings on a circuit",
       "plain_explanation": "This section matches the device to the circuit: lampholders, receptacles, and cord-and-plug equipment may not be loaded beyond their own ratings, and a receptacle's rating must fit the circuit it sits on. On a 20A multi-outlet circuit, 15A duplex receptacles are permitted because the load is spread across outlets; a single receptacle on an individual 20A circuit is a different case and must match the circuit. The existing lookup item carries the rating table in plain form.\n\nThe rating match, from Table 210.21(B)(3) — where a circuit feeds two or more receptacles, the receptacle rating may be:\n• 15A circuit — receptacles not over 15A\n• 20A circuit — 15A or 20A receptacles\n• 30A circuit — 30A receptacles\n• 40A circuit — 40A or 50A receptacles\n• 50A circuit — 50A receptacles\nA single receptacle on an individual branch circuit must be rated not less than the circuit. And the most one cord-and-plug load may draw on a multi-outlet circuit (Table 210.21(B)(2)):\n• 15A circuit — 12A\n• 20A circuit — 16A\n• 30A circuit — 24A",
-      "on_the_job": "When a plan calls for a single dedicated receptacle — a fridge, a microwave, a shop tool — check the device rating against the circuit rating before trim. Do not let a trim bin of 15A devices decide the question.",
+      "on_the_job": "When a plan calls for a single dedicated receptacle — a fridge, a microwave, a shop tool — check the device rating against the circuit rating before trim. Do not let a trim bin of 15A devices decide the question. On trim in a Lake County kitchen, the microwave's individual 20A circuit gets a single 20A receptacle — a 15A duplex out of the trim bin fails the match, even though the same device is fine on the shared countertop circuits (S-06).",
       "sharma_note": "S-06: the microwave's individual 20A circuit pairs with that sizing check.",
       "figure_idea": "",
       "related_ids": [
@@ -2675,7 +2758,124 @@
       "next_id": "C2-210.23",
       "sharma_rule_ids": [
         "S-06"
-      ]
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "A receptacle is the weakest link a load plugs into. If a device is rated below what the circuit can deliver, the device — not the breaker — becomes the fuse: contacts overheat inside the box where nobody sees it. Matching the receptacle rating to the circuit, and capping what one cord-and-plug load may draw, keeps the breaker as the device that opens first.",
+      "inspection_fails": [
+        "Single 15A receptacle on an individual 20A circuit — the microwave or refrigerator location.",
+        "20A receptacle installed on a 15A circuit.",
+        "Cord-and-plug load over the Table 210.21(B)(2) cap, such as a 16A appliance on a 15A multi-outlet circuit.",
+        "Receptacle rating at final that does not match the circuit shown on the panel schedule.",
+        "Lampholder or outlet device loaded beyond its own rating."
+      ],
+      "exam_trap": "The trap: '15A receptacles are never allowed on a 20A circuit.' They are — where the circuit feeds two or more receptacles, Table 210.21(B)(3) allows 15A or 20A devices. The trap's other side is that same 15A duplex used as the single receptacle on an individual 20A circuit. There it must be rated not less than the circuit: 20A.",
+      "tables": [
+        {
+          "caption": "Receptacle rating on a multi-outlet circuit — Table 210.21(B)(3)",
+          "headers": [
+            "Circuit",
+            "Receptacle rating"
+          ],
+          "rows": [
+            [
+              "15A",
+              "Not over 15A"
+            ],
+            [
+              "20A",
+              "15A or 20A"
+            ],
+            [
+              "30A",
+              "30A"
+            ],
+            [
+              "40A",
+              "40A or 50A"
+            ],
+            [
+              "50A",
+              "50A"
+            ]
+          ]
+        },
+        {
+          "caption": "Most one cord-and-plug load may draw — Table 210.21(B)(2)",
+          "headers": [
+            "Circuit",
+            "Max load"
+          ],
+          "rows": [
+            [
+              "15A",
+              "12A"
+            ],
+            [
+              "20A",
+              "16A"
+            ],
+            [
+              "30A",
+              "24A"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-210.21-rating-match.svg",
+          "alt": "Two tables drawn as charts: the receptacle ratings allowed on each circuit size where two or more receptacles are fed, the most one cord-and-plug load may draw, and the warning that a single receptacle on an individual circuit must rate at least the circuit.",
+          "caption": "Match the device to the circuit — multi-outlet and single-receptacle cases.",
+          "w": 900,
+          "h": 1400
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A 20A circuit feeds four countertop receptacles. Which receptacle ratings are permitted?",
+          "choices": [
+            "20A only",
+            "15A or 20A",
+            "15A only",
+            "30A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "With two or more receptacles on the circuit, Table 210.21(B)(3) allows 15A or 20A devices on a 20A circuit.",
+          "nec_ref": "Table 210.21(B)(3)"
+        },
+        {
+          "question": "A single receptacle on an individual 20A branch circuit must be rated at least…",
+          "choices": [
+            "15A",
+            "20A",
+            "25A",
+            "No minimum applies"
+          ],
+          "answer_index": 1,
+          "explain_plain": "A single receptacle on an individual branch circuit must be rated not less than the circuit — so 20A, not 15A.",
+          "nec_ref": "210.21"
+        },
+        {
+          "question": "On a 20A multi-outlet circuit, the largest single cord-and-plug load is…",
+          "choices": [
+            "20A",
+            "18A",
+            "16A",
+            "12A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Table 210.21(B)(2) caps one cord-and-plug load at 16A on a 20A circuit (12A on 15A, 24A on 30A).",
+          "nec_ref": "Table 210.21(B)(2)"
+        }
+      ],
+      "code_refs": [
+        "210.21",
+        "Table 210.21(B)(2)",
+        "Table 210.21(B)(3)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-210.23",
@@ -2683,8 +2883,8 @@
       "article": "210",
       "section": "210.23",
       "title": "How much load a branch circuit may carry",
-      "plain_explanation": "This section caps what may be put on a circuit by its rating. Any one cord-and-plug-connected utilization equipment not fastened in place may not take more than 80 percent of the branch-circuit rating (12A on 15A, 16A on 20A) on any 15A or 20A branch circuit, and fastened-in-place equipment has its own limit when it shares a circuit with lighting or portable loads. Motor and specific-appliance loads are sent to their own articles instead of being judged by a general percentage.\n\nThe percentages in amperes:\n• A cord-and-plug appliance that is not fastened in place, on a circuit that also serves other outlets — not over 80 percent of the circuit rating: 12A on a 15A circuit, 16A on a 20A circuit\n• Fastened-in-place equipment sharing a circuit with lighting outlets or portable cord-and-plug loads — not over 50 percent of the circuit rating: 10A on a 20A circuit\nA circuit that serves only its own fastened equipment is judged by the equipment's own article and nameplate, not by these shared-circuit caps. 7.5A on a 15A circuit, 10A on a 20A circuit\n\nNEC 2023 CHANGE:\n• 210.23: Only three things fit a 10-amp circuit: lighting, a dwelling bath or laundry fan on that room's lights, and a lone gas fireplace. Receptacles, laundry equipment, garage door openers and other fixed appliances stay off. Lighting outlets are the main job for a 10-amp branch circuit.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Do the percentage math for the big plug-in loads: space heaters, window units, and shop equipment are where a shared 20A circuit quietly goes over. If a load is fastened in place and shares the circuit, check the second limit too.",
+      "plain_explanation": "This section caps what may be put on a circuit by its rating. Any one cord-and-plug-connected utilization equipment not fastened in place may not take more than 80 percent of the branch-circuit rating (12A on 15A, 16A on 20A) on any 15A or 20A branch circuit, and fastened-in-place equipment has its own limit when it shares a circuit with lighting or portable loads. Motor and specific-appliance loads are sent to their own articles instead of being judged by a general percentage.\n\nThe percentages in amperes:\n• A cord-and-plug appliance that is not fastened in place, on a circuit that also serves other outlets — not over 80 percent of the circuit rating: 12A on a 15A circuit, 16A on a 20A circuit\n• Fastened-in-place equipment sharing a circuit with lighting outlets or portable cord-and-plug loads — not over 50 percent of the circuit rating: 7.5A on a 15A circuit, 10A on a 20A circuit\nA circuit that serves only its own fastened equipment is judged by the equipment's own article and nameplate, not by these shared-circuit caps.",
+      "on_the_job": "Do the percentage math for the big plug-in loads: space heaters, window units, and shop equipment are where a shared 20A circuit quietly goes over. If a load is fastened in place and shares the circuit, check the second limit too. Run the numbers on the heater: a 1,500W space heater pulls 12.5A at 120V. Alone on a 20A circuit it fits the 16A cap; on a 15A circuit it is already over the 12A cap before anything else is plugged in.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -2705,7 +2905,100 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/210-23",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 210.23: Only three things fit a 10-amp circuit: lighting, a dwelling bath or laundry fan on that room's lights, and a lone gas fireplace. Receptacles, laundry equipment, garage door openers and other fixed appliances stay off. Lighting outlets are the main job for a 10-amp branch circuit.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Plug-in loads are the ones nobody calculates. A space heater or window unit can sit at full draw for hours, and on a shared circuit it stacks on top of everything else plugged in that day. The 80 percent cap leaves headroom so one portable load cannot cook the circuit by itself; the 50 percent cap on fastened equipment protects the lighting and portable loads that share its circuit from being crowded out.",
+      "inspection_fails": [
+        "Space heater pulling more than 80 percent of the circuit rating on a shared circuit.",
+        "Fastened-in-place equipment over 50 percent of the rating on a circuit shared with lighting.",
+        "Two large plug-in loads stacked on one 20A circuit past its rating.",
+        "Motor load judged by the 80 percent rule instead of its own article."
+      ],
+      "exam_trap": "The trap: using the 80 percent number for everything. Fastened-in-place equipment that shares a circuit with lighting or portable loads is capped at 50 percent, not 80 — 10A on a 20A circuit, 7.5A on a 15A circuit. Eighty percent is only for the one cord-and-plug load that is not fastened in place.",
+      "tables": [
+        {
+          "caption": "The two caps, in amperes",
+          "headers": [
+            "Circuit",
+            "Portable, 80%",
+            "Fastened + shared, 50%"
+          ],
+          "rows": [
+            [
+              "15A",
+              "12A",
+              "7.5A"
+            ],
+            [
+              "20A",
+              "16A",
+              "10A"
+            ]
+          ],
+          "note": "A circuit serving only its own fastened equipment is judged by the equipment's article and nameplate instead."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-210.23-load-caps.svg",
+          "alt": "Bar chart of the 210.23 load caps: a 15A circuit bar marked at 12A for portable loads and 7.5A for fastened equipment sharing the circuit, and a 20A circuit bar marked at 16A and 10A.",
+          "caption": "Two caps per circuit: 80% for one portable load, 50% for fastened equipment that shares.",
+          "w": 900,
+          "h": 1250
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "What is the largest single cord-and-plug load, not fastened in place, allowed on a 20A branch circuit?",
+          "choices": [
+            "20A",
+            "16A",
+            "10A",
+            "12A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "80 percent of 20A is 16A — the cap for one portable cord-and-plug load.",
+          "nec_ref": "210.23(A)(1)"
+        },
+        {
+          "question": "Fastened-in-place equipment shares a 15A circuit with lighting outlets. Its cap is…",
+          "choices": [
+            "12A",
+            "15A",
+            "7.5A",
+            "10A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Sharing with lighting or portable loads caps fastened equipment at 50 percent: 7.5A on a 15A circuit.",
+          "nec_ref": "210.23(A)(2)"
+        },
+        {
+          "question": "A motor load on a branch circuit is judged by…",
+          "choices": [
+            "The 80 percent rule",
+            "The 50 percent rule",
+            "Its own article and nameplate",
+            "The lighting load"
+          ],
+          "answer_index": 2,
+          "explain_plain": "210.23 sends motor and specific-appliance loads to their own articles instead of the general percentages.",
+          "nec_ref": "210.23"
+        }
+      ],
+      "code_refs": [
+        "210.23",
+        "210.23(A)(1)",
+        "210.23(A)(2)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "210.23(A)(1) sets the 80 percent cap for cord-and-plug equipment not fastened in place; 210.23(A)(2) sets the 50 percent cap for fastened-in-place equipment sharing a circuit",
+          "source": "EC&M Code Quiz of the Day: Rating Requirement for Equipment Fastened in Place (quotes 210.23(A)(2))",
+          "url": "https://www.ecmweb.com/code-quiz-of-day/article/20899310/rating-requirement-for-equipment-fastened-in-place"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C2-210.52",
@@ -4435,7 +4728,7 @@
       "section": "215.3",
       "title": "Feeder overcurrent protection",
       "plain_explanation": "A feeder is protected by an overcurrent device rated not over the ampacity of its conductors, subject to the allowances in Article 240 — including the next-higher-standard-rating allowance where it applies and the tap rules where it does not. The breaker at the start of the feeder is therefore a conductor-protection question first and a load question second. Where a feeder continues to a subpanel, the equipment grounding conductor and the neutral treatment at that subpanel are Article 250 questions, covered later in this chapter.\n\nThe feeder's equipment grounding conductor is part of the feeder: it is sized from Table 250.122 by the rating of this overcurrent device and run with the feeder conductors. Where the feeder supplies a separate building, the grounding arrangement at that building follows 250.32 — this device's rating still sets the equipment grounding conductor size. Where a feeder supplies continuous loads, or a mix of continuous and noncontinuous loads, the overcurrent device rating may not be less than the noncontinuous load plus 125 percent of the continuous load (unless the assembly with its OCPD is listed for 100 percent operation). The protection itself follows Part I of Article 240.",
-      "on_the_job": "Match three numbers before energizing: feeder conductor ampacity, breaker rating, and the Article 240 rule you are relying on. If the middle number is larger than the first, name the allowance in the job file.",
+      "on_the_job": "Match three numbers before energizing: feeder conductor ampacity, breaker rating, and the Article 240 rule you are relying on. If the middle number is larger than the first, name the allowance in the job file. Worked check: a feeder carrying 20 A of noncontinuous load and 40 A of continuous load needs an overcurrent device of at least 20 + (125% of 40) = 70 A, on conductors the Article 240 rule you are relying on actually protects.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -4446,7 +4739,99 @@
       "verified": true,
       "prev_id": "C2-215.2",
       "next_id": "C2-ART-220",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "A feeder breaker has one main job: open before the conductors it protects overheat. Size the breaker to the load, or to the panel bus it feeds, and the wire becomes the fuse — insulation cooks inside conduit and walls long before anyone smells it. The continuous-load rule exists because a device carrying load for three hours or more runs hot itself; the 125 percent factor keeps it from thermal damage and nuisance trips.",
+      "inspection_fails": [
+        "Feeder breaker larger than the conductor ampacity, with no Article 240 allowance that applies.",
+        "Continuous load carried at 100 percent of a standard breaker — no 125 percent factor applied (215.3).",
+        "Equipment grounding conductor sized from the conductor size instead of from the overcurrent device rating (Table 250.122).",
+        "Feeder breaker matched to the subpanel bus rating instead of to the feeder conductors."
+      ],
+      "exam_trap": "The trap answer sizes the feeder breaker from the load calculation alone — or from the bus rating of the subpanel it feeds. 215.3 protects conductors: the device is rated not over the ampacity of the feeder conductors, with only the Article 240 allowances letting it go above. A 200 A panel bus does not make a 200 A feeder, and the load answer still has to pass the 125 percent continuous check.",
+      "tables": [
+        {
+          "caption": "215.3 — what sets what",
+          "headers": [
+            "Question",
+            "Answer"
+          ],
+          "rows": [
+            [
+              "Breaker rating",
+              "Not over the feeder conductor ampacity, Article 240 allowances aside"
+            ],
+            [
+              "Continuous loads",
+              "OCPD at least the noncontinuous load plus 125% of the continuous"
+            ],
+            [
+              "Feeder EGC size",
+              "Table 250.122, by this overcurrent device's rating"
+            ],
+            [
+              "Separate building",
+              "Grounding per 250.32; the EGC is still sized by this device"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-215.3-three-numbers.svg",
+          "alt": "Flow chart for feeder overcurrent protection: start with the feeder conductor ampacity, set the overcurrent device not over that ampacity with only Article 240 allowances above it, then check continuous loads at 125 percent, ending in a worked example of 20 A noncontinuous plus 40 A continuous landing on a 70 A minimum device.",
+          "caption": "Three numbers, in order: ampacity, breaker, and the rule you are relying on.",
+          "w": 900,
+          "h": 1450
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A feeder overcurrent device is rated not over what, first?",
+          "choices": [
+            "The connected load",
+            "The ampacity of the feeder conductors",
+            "The rating of the panel it feeds",
+            "The utility transformer size"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The breaker protects the conductors: it is rated not over their ampacity, subject to the allowances in Article 240.",
+          "nec_ref": "215.3"
+        },
+        {
+          "question": "A feeder carries 20 A noncontinuous and 40 A continuous load. Minimum overcurrent device (not a 100%-rated assembly)?",
+          "choices": [
+            "60 A",
+            "70 A",
+            "80 A",
+            "100 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "20 A plus 125 percent of 40 A (50 A) is 70 A. The device may not be smaller than that.",
+          "nec_ref": "215.3"
+        },
+        {
+          "question": "The feeder's equipment grounding conductor is sized from Table 250.122 by:",
+          "choices": [
+            "The feeder conductor size",
+            "The rating of the feeder overcurrent device",
+            "The connected load",
+            "The number of panel spaces"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Table 250.122 keys the equipment grounding conductor to the rating of the overcurrent device ahead of the feeder — this breaker.",
+          "nec_ref": "Table 250.122"
+        }
+      ],
+      "code_refs": [
+        "215.3",
+        "240.4",
+        "Table 250.122",
+        "250.32"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-ART-220",
@@ -4644,8 +5029,8 @@
       "article": "220",
       "section": "220.12",
       "title": "General lighting load by floor area",
-      "plain_explanation": "In NEC 2020, 220.12 and Table 220.12 set the minimum general lighting load for NON-DWELLING occupancies: the table's unit load (volt-amperes per square foot) times the floor area figured under 220.11 (outside dimensions). The table values already include the 125 percent continuous-load multiplier (table note), so do not apply it again. Dwellings are no longer in this table: the dwelling 3 VA per square foot is 220.14(J).\n\nTable 220.12 unit loads (VA per sq ft):\n• Automotive facility — 1.5\n• Convention center — 1.4\n• Courthouse — 1.4\n• Dormitory — 1.5\n• Exercise center — 1.4\n• Fire station — 1.3\n• Gymnasium (armories, auditoriums) — 1.7\n• Health care clinic — 1.6\n• Hospital — 1.6\n• Hotel/motel, incl. apartment houses without tenant cooking (lodge rooms) — 1.7\n• Library — 1.5\n• Manufacturing facility (industrial commercial lofts) — 2.2\n• Motion picture theater — 1.6\n• Museum — 1.6\n• Office (banks) — 1.3\n• Parking garage (commercial storage garages) — 0.3\n• Penitentiary — 1.2\n• Performing arts theater — 1.5\n• Police station — 1.3\n• Post office — 1.6\n• Religious facility — 2.2\n• Restaurant (clubs) — 1.5\n• Retail (stores, barber shops, beauty parlors) — 1.9\n• School/university — 3\n• Sports arena — 3\n• Town hall — 1.4\n• Transportation — 1.2\n• Warehouse — 1.2\n• Workshop — 1.7\nOffice and bank receptacle load is separate: 220.14(K), the larger of 1 VA per sq ft or the 180 VA-per-outlet total after 220.44 demand.\n\nNEC 2023 CHANGE:\n• 220.42(A): The non-dwelling unit-load rule moved from 220.12 to 220.42(A) (Table 220.42(A)); the old 220.42 demand factors became 220.45. School/university and sports arena dropped from 3 to 1.5 VA/ft²; all other occupancy values stayed the same. The informational note now assumes 80% power factor.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "On a commercial job, pick the occupancy row, multiply by the outside-dimension floor area, and stop there: the 125 percent is already in the number. On a house, use 220.14(J) (3 VA per sq ft), not this table.",
+      "plain_explanation": "In NEC 2020, 220.12 and Table 220.12 set the minimum general lighting load for NON-DWELLING occupancies: the table's unit load (volt-amperes per square foot) times the floor area figured under 220.11 (outside dimensions). The table values already include the 125 percent continuous-load multiplier (table note), so do not apply it again. Dwellings are no longer in this table: the dwelling 3 VA per square foot is 220.14(J). The full table is below; the chart shows the same numbers.\n\nTable 220.12 unit loads (VA per sq ft):\n• Automotive facility — 1.5\n• Convention center — 1.4\n• Courthouse — 1.4\n• Dormitory — 1.5\n• Exercise center — 1.4\n• Fire station — 1.3\n• Gymnasium (armories, auditoriums) — 1.7\n• Health care clinic — 1.6\n• Hospital — 1.6\n• Hotel/motel, incl. apartment houses without tenant cooking (lodge rooms) — 1.7\n• Library — 1.5\n• Manufacturing facility (industrial commercial lofts) — 2.2\n• Motion picture theater — 1.6\n• Museum — 1.6\n• Office (banks) — 1.3\n• Parking garage (commercial storage garages) — 0.3\n• Penitentiary — 1.2\n• Performing arts theater — 1.5\n• Police station — 1.3\n• Post office — 1.6\n• Religious facility — 2.2\n• Restaurant (clubs) — 1.5\n• Retail (stores, barber shops, beauty parlors) — 1.9\n• School/university — 3\n• Sports arena — 3\n• Town hall — 1.4\n• Transportation — 1.2\n• Warehouse — 1.2\n• Workshop — 1.7\nOffice and bank receptacle load is separate: 220.14(K), the larger of 1 VA per sq ft or the 180 VA-per-outlet total after 220.44 demand.",
+      "on_the_job": "A 6,000 sq ft retail tenant in a Winter Garden plaza: retail reads 1.9 VA per sq ft from the table, so the general lighting load is 6,000 × 1.9 = 11,400 VA — and you stop there, because the 125 percent continuous multiplier is already in the 1.9. Receptacle load is a separate line: offices and banks use 220.14(K), and the same receptacle rules get figured apart from lighting. If the same crew roughs the model home next door, none of this table applies: the house is 3 VA per sq ft under 220.14(J).",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -4666,7 +5051,178 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/220-42",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 220.42(A): The non-dwelling unit-load rule moved from 220.12 to 220.42(A) (Table 220.42(A)); the old 220.42 demand factors became 220.45. School/university and sports arena dropped from 3 to 1.5 VA/ft²; all other occupancy values stayed the same. The informational note now assumes 80% power factor.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Lighting is the one load that runs for hours at full draw, in every occupancy, every day. The unit loads force the feeder and service to be sized for that real, continuous lighting load before anyone counts receptacles or equipment, so a building's lights never become the load the service cannot carry.",
+      "inspection_fails": [
+        "Lighting load calculated with the 125 percent multiplier applied twice — the table value already includes it.",
+        "Dwelling lighting load taken from Table 220.12 instead of 220.14(J) at 3 VA per sq ft.",
+        "Floor area figured from inside dimensions; 220.11 requires outside dimensions.",
+        "Office receptacle load folded into the lighting number instead of figured separately under 220.14(K)."
+      ],
+      "exam_trap": "The trap answer doubles the continuous load: the candidate multiplies the table value by 125 percent a second time. The Table 220.12 note already includes it. The second trap is reading the dwelling row: there is none in 2020 — dwellings moved to 220.14(J).",
+      "tables": [
+        {
+          "caption": "Table 220.12: unit load by occupancy (NEC 2020)",
+          "headers": [
+            "Occupancy",
+            "VA/sq ft",
+            "Occupancy",
+            "VA/sq ft"
+          ],
+          "rows": [
+            [
+              "Automotive facility",
+              "1.5",
+              "Library",
+              "1.5"
+            ],
+            [
+              "Convention center",
+              "1.4",
+              "Manufacturing facility",
+              "2.2"
+            ],
+            [
+              "Courthouse",
+              "1.4",
+              "Motion picture theater",
+              "1.6"
+            ],
+            [
+              "Dormitory",
+              "1.5",
+              "Museum",
+              "1.6"
+            ],
+            [
+              "Exercise center",
+              "1.4",
+              "Office (banks)",
+              "1.3"
+            ],
+            [
+              "Fire station",
+              "1.3",
+              "Parking garage",
+              "0.3"
+            ],
+            [
+              "Gymnasium",
+              "1.7",
+              "Penitentiary",
+              "1.2"
+            ],
+            [
+              "Health care clinic",
+              "1.6",
+              "Performing arts theater",
+              "1.5"
+            ],
+            [
+              "Hospital",
+              "1.6",
+              "Police station",
+              "1.3"
+            ],
+            [
+              "Hotel/motel",
+              "1.7",
+              "Post office",
+              "1.6"
+            ],
+            [
+              "Religious facility",
+              "2.2",
+              "Town hall",
+              "1.4"
+            ],
+            [
+              "Restaurant (clubs)",
+              "1.5",
+              "Transportation",
+              "1.2"
+            ],
+            [
+              "Retail",
+              "1.9",
+              "Warehouse",
+              "1.2"
+            ],
+            [
+              "School/university",
+              "3",
+              "Workshop",
+              "1.7"
+            ],
+            [
+              "Sports arena",
+              "3",
+              "",
+              ""
+            ]
+          ],
+          "note": "Values already include the 125% continuous-load multiplier — do not apply it again. Parenthetical names from the table (armories and auditoriums under gymnasium, clubs under restaurant, lodge rooms under hotel/motel, stores and shops under retail) are shortened here; check the printed table."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-220.12-unit-loads.svg",
+          "alt": "Horizontal bar chart of NEC 2020 Table 220.12 unit loads in VA per square foot: school/university and sports arena at 3, manufacturing and religious facility at 2.2, down to parking garage at 0.3, with a red note that NEC 2023 drops school and arena to 1.5.",
+          "caption": "Table 220.12 unit loads — the 125% is already in the number.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A 4,000 sq ft school is calculated under NEC 2020. What is the general lighting load from Table 220.12?",
+          "choices": [
+            "6,000 VA",
+            "12,000 VA",
+            "15,000 VA",
+            "4,000 VA"
+          ],
+          "answer_index": 1,
+          "explain_plain": "School/university reads 3 VA per sq ft in the 2020 table: 4,000 × 3 = 12,000 VA. The drop to 1.5 is a 2023 change.",
+          "nec_ref": "Table 220.12"
+        },
+        {
+          "question": "Where does the NEC 2020 general lighting load for a dwelling come from?",
+          "choices": [
+            "Table 220.12",
+            "220.14(J), 3 VA per sq ft",
+            "220.42 demand factors",
+            "Table 220.42(A)"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Dwellings are not in Table 220.12 in 2020; 220.14(J) sets 3 VA per sq ft.",
+          "nec_ref": "220.14(J)"
+        },
+        {
+          "question": "The Table 220.12 value for an office is 1.3 VA per sq ft. What do you do about the 125 percent continuous-load multiplier?",
+          "choices": [
+            "Multiply by 125 percent",
+            "Nothing — it is already included",
+            "Add 125 VA per circuit",
+            "Apply it only to receptacles"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The table note includes the 125 percent in the listed values.",
+          "nec_ref": "Table 220.12, note"
+        }
+      ],
+      "code_refs": [
+        "220.11",
+        "220.12",
+        "Table 220.12",
+        "220.14(J)",
+        "220.14(K)",
+        "220.44"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-220.14",
@@ -5297,8 +5853,8 @@
       "article": "220",
       "section": "220.61",
       "title": "The neutral load — and the 70 percent rule",
-      "plain_explanation": "The grounded (neutral) conductor of a feeder or service only carries the unbalanced load — the largest load connected between the neutral and any one ungrounded conductor. This section then allows demand on that neutral load:\n• The portion of the neutral load from line-to-neutral loads — the first 200A counts at 100 percent, and any portion over 200A counts at 70 percent\n• The neutral portion of range and dryer loads may be taken at 70 percent (the range and dryer demand values themselves come from 220.55 and 220.54)\n• No reduction is permitted for the neutral of a 4-wire, 3-phase wye system feeding nonlinear loads — discharge lighting, electronic gear, and the like can load a neutral beyond the unbalance, and the 70 percent step does not apply there No reduction is permitted on the neutral of a 3-wire circuit made of two ungrounded conductors and the neutral of a 4-wire, 3-phase wye system (220.61(C)(1)), and none on the portion made of nonlinear loads on a 4-wire, 3-phase wye (220.61(C)(2)). The 70 percent step over 200A applies only to the portion of the unbalanced load in excess of 200 amperes (220.61(B)(2)).",
-      "on_the_job": "On a large house service the neutral can legitimately come out smaller than the ungrounded conductors — but only by this arithmetic, written into the calculation in the job file. If the calc does not show the 200A step and the 70 percent step, the smaller neutral is an assumption, not a design.",
+      "plain_explanation": "The grounded (neutral) conductor of a feeder or service only carries the unbalanced load — the largest load connected between the neutral and any one ungrounded conductor. This section then allows demand on that neutral load:\n• The portion of the neutral load from line-to-neutral loads — the first 200A counts at 100 percent, and any portion over 200A counts at 70 percent\n• The neutral portion of range and dryer loads may be taken at 70 percent (the range and dryer demand values themselves come from 220.55 and 220.54)\n• No reduction is permitted for the neutral of a 4-wire, 3-phase wye system feeding nonlinear loads — discharge lighting, electronic gear, and the like can load a neutral beyond the unbalance, and the 70 percent step does not apply there.\n• No reduction is permitted on the neutral of a 3-wire circuit made of two ungrounded conductors and the neutral of a 4-wire, 3-phase wye system (220.61(C)(1)), and none on the portion made of nonlinear loads on a 4-wire, 3-phase wye (220.61(C)(2)).\nThe 70 percent step over 200A applies only to the portion of the unbalanced load in excess of 200 amperes (220.61(B)(2)).",
+      "on_the_job": "On a large house service the neutral can legitimately come out smaller than the ungrounded conductors — but only by this arithmetic, written into the calculation in the job file. If the calc does not show the 200A step and the 70 percent step, the smaller neutral is an assumption, not a design. Worked example: a large house service calculates to a 300A unbalanced neutral load. The first 200A counts in full; the remaining 100A counts at 70 percent, or 70A. The neutral is sized for 200 + 70 = 270A, as drawn above — not for 300A, and not for 70 percent of the whole 300A.",
       "sharma_note": "",
       "figure_idea": "A neutral load bar split at 200A: the first block marked 100 percent, the remainder marked 70 percent, feeding the neutral conductor size.",
       "related_ids": [
@@ -5310,7 +5866,112 @@
       "verified": true,
       "prev_id": "C2-220.55",
       "next_id": "C2-220.82",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "On a balanced system the neutral currents cancel, so the neutral only ever carries what does not cancel. Sizing it for the full phase load wastes copper; sizing it below the real unbalance overheats it. The demand steps credit the diversity that shows up on big services, and the (C) bans exist because harmonic currents from nonlinear loads add in the neutral instead of canceling.",
+      "inspection_fails": [
+        "Neutral reduced by 70 percent across the whole load instead of only the portion over 200A.",
+        "Neutral reduction taken on a 4-wire wye feeder serving nonlinear loads — office LED lighting and computer loads (220.61(C)(2)).",
+        "Smaller neutral installed with no load calculation in the job file showing the 200A and 70 percent steps.",
+        "Neutral of a 3-wire circuit taken from a 4-wire wye system reduced below the (C)(1) limit."
+      ],
+      "exam_trap": "The common wrong answer takes 70 percent of the entire neutral load. The 70 percent applies only to the portion over 200A — the first 200A always counts at 100 percent. The second trap is applying the reduction to the neutral of a wye system feeding LED drivers and computers: 220.61(C) forbids it.",
+      "tables": [
+        {
+          "caption": "Neutral demand steps (220.61)",
+          "headers": [
+            "Portion of neutral load",
+            "Counts at",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "First 200A of unbalanced load",
+              "100%",
+              "220.61(B)"
+            ],
+            [
+              "Portion over 200A",
+              "70%",
+              "220.61(B)(2)"
+            ],
+            [
+              "Range and dryer neutral portions",
+              "70%",
+              "Values from 220.55 / 220.54"
+            ],
+            [
+              "Nonlinear portion, 4-wire wye",
+              "No reduction",
+              "220.61(C)(2)"
+            ],
+            [
+              "3-wire circuit off a 4-wire wye",
+              "No reduction",
+              "220.61(C)(1)"
+            ]
+          ],
+          "note": "The neutral load itself is the maximum unbalance: the largest load between the neutral and any one ungrounded conductor."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-220.61-neutral-bar.svg",
+          "alt": "Bar showing a 300 A unbalanced neutral load split at 200 A: the first 200 A counts at 100 percent, the next 100 A at 70 percent, giving a 270 A neutral load, with red notes for the two cases where no reduction is permitted.",
+          "caption": "The 200A step: 100% first, 70% only on the excess.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A feeder's unbalanced neutral load calculates to 300A. After the 220.61 demand steps, the neutral is sized for:",
+          "choices": [
+            "300A",
+            "210A",
+            "270A",
+            "200A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "First 200A at 100 percent, remaining 100A at 70 percent = 70A; 200 + 70 = 270A.",
+          "nec_ref": "220.61(B)(2)"
+        },
+        {
+          "question": "Which neutral load may NOT be reduced under 220.61?",
+          "choices": [
+            "Range neutral portion",
+            "Dryer neutral portion",
+            "Nonlinear load portion on a 4-wire wye",
+            "Portion over 200A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "220.61(C)(2) permits no reduction for the portion made of nonlinear loads on a 4-wire, 3-phase wye system.",
+          "nec_ref": "220.61(C)(2)"
+        },
+        {
+          "question": "The neutral load of a feeder is based on:",
+          "choices": [
+            "The sum of all phase loads",
+            "The largest load between the neutral and any one ungrounded conductor",
+            "70 percent of the service rating",
+            "The smallest phase load"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The neutral carries only the unbalanced load — the maximum connected between neutral and one ungrounded conductor.",
+          "nec_ref": "220.61(A)"
+        }
+      ],
+      "code_refs": [
+        "220.61(A)",
+        "220.61(B)(2)",
+        "220.61(C)(1)",
+        "220.61(C)(2)",
+        "220.54",
+        "220.55"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-220.82",
@@ -5472,7 +6133,7 @@
       "article": "220",
       "section": "220.82(C)",
       "title": "Optional method — heating and cooling",
-      "plain_explanation": "Heating and cooling do not run at full load together, so this part adds only the largest of six selections, in kVA: (1) air conditioning and cooling at 100 percent of nameplate; (2) a heat pump with no supplemental electric heat, at 100 percent; (3) a heat pump at 100 percent of the compressor plus 65 percent of the supplemental electric heat — the compressor is omitted if it is prevented from running at the same time as that heat; (4) electric space heating at 65 percent with fewer than four separately controlled units; (5) electric space heating at 40 percent with four or more separately controlled units; and (6) electric thermal storage and other heating expected to run continuously at full nameplate, at 100 percent — a system counted under (6) is not counted again under another selection.",
+      "plain_explanation": "220.82(C) covers heating and cooling in the optional method for a dwelling. Heating and cooling do not run at full load together, so you do not add both. You work out six selections, in kVA, and add only the largest one to the load calculation:\n• (1) Air conditioning and cooling: 100 percent of nameplate rating.\n• (2) A heat pump with no supplemental electric heat: 100 percent.\n• (3) A heat pump with supplemental electric heat: 100 percent of the compressor plus 65 percent of the supplemental heat. Leave the compressor out only if it is prevented from running at the same time as that heat.\n• (4) Electric space heating with fewer than four separately controlled units: 65 percent.\n• (5) Electric space heating with four or more separately controlled units: 40 percent.\n• (6) Electric thermal storage and other heating expected to run continuously at full nameplate: 100 percent. A system counted under (6) is not counted again under another selection.",
       "on_the_job": "In Florida the air-conditioning figure usually wins this comparison, but a house with strip heat or a heat pump with auxiliary heat still needs the comparison done and written down. Take the compressor and air-handler figures from nameplates, not from tonnage rules of thumb.",
       "sharma_note": "",
       "figure_idea": "A balance graphic: AC load on one side, heating load on the other, with only the heavier side carried into the total.",
@@ -5484,7 +6145,114 @@
       "verified": true,
       "prev_id": "C2-220.82(B)",
       "next_id": "C2-220.83",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "A service sized for heating and cooling at full load together would be sized for a day that never comes — the compressor and the strip heat carry the house in different seasons. The percentages credit how the equipment really runs: supplemental heat stages in under the compressor, and separately controlled space heaters cycle instead of all running at once. The rule keeps the service honest without paying for capacity that nothing uses.",
+      "inspection_fails": [
+        "Load calculation adds the air-conditioning load and the full strip-heat load together — 220.82(C) takes the largest selection only.",
+        "Supplemental heat figured at 100 percent instead of 65 percent under (C)(3), oversizing the service on paper.",
+        "Compressor dropped out of the (C)(3) figure with nothing preventing it from running at the same time as the strips.",
+        "Heating and cooling figures taken from tonnage rules of thumb instead of nameplate ratings.",
+        "Thermal storage counted under (C)(6) and then counted again under a space-heating selection."
+      ],
+      "exam_trap": "The trap is adding the air conditioning and the heat-pump-with-strips figures together 'to be safe.' 220.82(C) adds the largest single selection only. The second trap is taking the heat pump at 100 percent of everything — compressor plus full strip heat. Selection (3) takes the strips at 65 percent, not 100.",
+      "tables": [
+        {
+          "caption": "The six selections of 220.82(C) — add the largest only",
+          "headers": [
+            "Selection",
+            "System",
+            "How it counts"
+          ],
+          "rows": [
+            [
+              "(1)",
+              "Air conditioning and cooling",
+              "100% of nameplate"
+            ],
+            [
+              "(2)",
+              "Heat pump, no supplemental heat",
+              "100%"
+            ],
+            [
+              "(3)",
+              "Heat pump + supplemental heat",
+              "Compressor 100% + strips 65%"
+            ],
+            [
+              "(4)",
+              "Electric space heat, under 4 units",
+              "65%"
+            ],
+            [
+              "(5)",
+              "Electric space heat, 4 or more units",
+              "40%"
+            ],
+            [
+              "(6)",
+              "Thermal storage, continuous heat",
+              "100%"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-220.82C-heating-cooling.svg",
+          "alt": "Chart of the six heating and cooling selections of 220.82(C) with their demand factors, and a worked Florida heat pump example where selection (3) at 19.75 kVA beats the 12.0 kVA cooling selection.",
+          "caption": "Six selections, six factors — only the largest goes into the total.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A heat pump has a 10 kVA compressor and 15 kVA of supplemental strip heat. What does selection (C)(3) give?",
+          "choices": [
+            "25 kVA",
+            "19.75 kVA",
+            "15 kVA",
+            "9.75 kVA"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Compressor at 100 percent (10 kVA) plus 65 percent of the strips (9.75 kVA) = 19.75 kVA.",
+          "nec_ref": "220.82(C)(3)"
+        },
+        {
+          "question": "Under 220.82(C), how many of the six selections go into the total load?",
+          "choices": [
+            "All six, added together",
+            "The two largest",
+            "Only the largest",
+            "Heating selections only"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Heating and cooling do not run at full load together, so only the largest single selection is added.",
+          "nec_ref": "220.82(C)"
+        },
+        {
+          "question": "Four or more separately controlled electric space heaters are taken at what percent?",
+          "choices": [
+            "100%",
+            "65%",
+            "40%",
+            "25%"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Four or more separately controlled units get the 40 percent factor of selection (5); fewer than four get 65 percent.",
+          "nec_ref": "220.82(C)(5)"
+        }
+      ],
+      "code_refs": [
+        "220.82(C)",
+        "220.82(C)(1)–(6)",
+        "220.82"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-220.83",
@@ -5935,7 +6703,95 @@
       "verified": true,
       "prev_id": "C2-225.31",
       "next_id": "C2-ART-230",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Conductors ahead of the building's disconnect have no local shutoff. If a fault starts in that inside run, the only protection is the feeder breaker back in the main building — and nobody in the garage can kill it. Keeping the disconnect at the point of entrance keeps the unprotected inside run as short as possible and puts the shutoff where a person entering the building can reach it.",
+      "inspection_fails": [
+        "Disconnect or panel placed across the building from the feeder entry, with a long conductor run inside ahead of it.",
+        "Disconnect inside the building but not readily accessible — behind stored material or in a locked room.",
+        "Feeder enters underground on one side of the building and the panel was roughed on the opposite wall.",
+        "No disconnecting means at the separate building at all — the crew is relying on the breaker in the main house.",
+        "Industrial or institutional campus exception claimed for an ordinary detached garage."
+      ],
+      "exam_trap": "The trap is treating the separate building like a subpanel in the same building and landing the disconnect wherever it fits the layout. 225.32 wants it outside, or inside nearest the point of entrance. The second trap: citing a fire pump as a 225.32 location exception. A fire pump is an additional-supply permission under 225.30, not an exception to this section.",
+      "tables": [
+        {
+          "caption": "What decides the disconnect location",
+          "headers": [
+            "Situation",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "Feeder or branch circuit to a separate building",
+              "Disconnect readily accessible — outside, or inside nearest the point of entrance"
+            ],
+            [
+              "Conductors run in or under the building envelope",
+              "The 230.6 rules decide when conductors count as outside the building"
+            ],
+            [
+              "Large industrial or institutional site, single management",
+              "Listed exceptions may apply — read them in the printed text before relying on one"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-225.32-disconnect-entry.svg",
+          "alt": "Plan of a detached garage: the feeder enters the bottom wall and the disconnect sits right at the entry, while a dashed red run crosses the building to a far panel, the placement the section rejects.",
+          "caption": "Disconnect at the entry — not across the building.",
+          "w": 900,
+          "h": 1260
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A feeder enters a detached garage through the east wall. Where does the disconnect go?",
+          "choices": [
+            "On the west wall, by the workbench",
+            "Outside, or inside nearest the east-wall entry point",
+            "Back in the main house panel",
+            "Anywhere in the garage that is readily accessible"
+          ],
+          "answer_index": 1,
+          "explain_plain": "225.32: outside the building, or inside nearest the point where the conductors enter.",
+          "nec_ref": "225.32"
+        },
+        {
+          "question": "For 225.32, which rules decide when conductors are considered outside the building?",
+          "choices": [
+            "230.6",
+            "225.30",
+            "240.4",
+            "110.26"
+          ],
+          "answer_index": 0,
+          "explain_plain": "The section points to the 230.6 rules for when conductors count as outside a building.",
+          "nec_ref": "225.32 / 230.6"
+        },
+        {
+          "question": "A fire pump supplied at a separate building is handled under…",
+          "choices": [
+            "225.30, as an additional supply — not a 225.32 exception",
+            "225.32, as a location exception",
+            "210.52",
+            "220.82"
+          ],
+          "answer_index": 0,
+          "explain_plain": "Fire pumps are an additional-supply permission under 225.30. They are not a location exception in 225.32.",
+          "nec_ref": "225.30 / 225.32"
+        }
+      ],
+      "code_refs": [
+        "225.32",
+        "225.30",
+        "230.6"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-ART-230",
@@ -6185,7 +7041,105 @@
       "verified": true,
       "prev_id": "C2-230.24",
       "next_id": "C2-230.42",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "The mast is the anchor point for the utility's drop, and the drop pulls on it every day — more in a Florida storm. Anything else clamped to the mast adds wind load and strain the mast was never sized for, and puts foreign wiring in the one place reserved for the service. If the mast bends or pulls loose, it takes live, unfused service conductors down with it.",
+      "inspection_fails": [
+        "Cable TV drop or antenna clamped to the service mast.",
+        "Yard-light feed run up the mast with the service conductors.",
+        "Service drop attached between the weatherhead and a coupling above the last conduit support (230.28(B)).",
+        "Mast hub not identified for use with service-entrance equipment (230.28(A)).",
+        "Mast left unbraced on a long span — bent or pulling away from the wall."
+      ],
+      "exam_trap": "The trap: 'the TV drop can ride the mast if it is bonded to it.' No — bonding does not make it a service conductor. Only power service-drop or overhead service conductors may be attached to the mast; antennas and every other conductor stay off, bonded or not.",
+      "tables": [
+        {
+          "caption": "What may ride the mast",
+          "headers": [
+            "Item",
+            "Allowed?"
+          ],
+          "rows": [
+            [
+              "Power service-drop conductors",
+              "Yes"
+            ],
+            [
+              "Overhead service conductors",
+              "Yes"
+            ],
+            [
+              "TV antenna or cable drop",
+              "No"
+            ],
+            [
+              "Yard-light feed",
+              "No"
+            ],
+            [
+              "Any other equipment",
+              "No — service only"
+            ]
+          ],
+          "note": "230.28(A): mast hubs must be identified for use with service-entrance equipment."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-230.28-service-mast.svg",
+          "alt": "Elevation of a service mast through a roof: weatherhead and drip loop at the top, the utility drop arriving, a guy wire bracing the mast, the meter-main below, and a TV antenna and yard-light cable crossed out in red on the same mast.",
+          "caption": "Only the service rides the mast — everything else stays off.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Which of these may be attached to a service mast?",
+          "choices": [
+            "A TV antenna, if bonded",
+            "A yard-light feed",
+            "Only power service-drop or overhead service conductors",
+            "Any conductor in conduit"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The mast is part of the service. Nothing but the service conductors themselves may ride it.",
+          "nec_ref": "230.28"
+        },
+        {
+          "question": "Hubs used with a conduit service mast must be…",
+          "choices": [
+            "Painted to match",
+            "Identified for use with service-entrance equipment",
+            "Threadless",
+            "Plastic"
+          ],
+          "answer_index": 1,
+          "explain_plain": "230.28(A) requires mast hubs identified for use with service-entrance equipment.",
+          "nec_ref": "230.28(A)"
+        },
+        {
+          "question": "Service conductors may not be attached to the mast…",
+          "choices": [
+            "Below the meter",
+            "Between the weatherhead and a coupling above the last support",
+            "Within 3 ft of the roof",
+            "On the street side"
+          ],
+          "answer_index": 1,
+          "explain_plain": "230.28(B) bars attachment between the weatherhead (or end of conduit) and a coupling above the last conduit support or the building.",
+          "nec_ref": "230.28(B)"
+        }
+      ],
+      "code_refs": [
+        "230.28",
+        "230.28(A)",
+        "230.28(B)",
+        "230.54"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-230.42",
@@ -6312,8 +7266,8 @@
       "article": "230",
       "section": "230.54",
       "title": "Overhead service connections — attachment and drip loop",
-      "plain_explanation": "Where an overhead drop lands, three things have to be right at the top of the service. The point of attachment is located so the clearances on the 230.24 and 230.9 pages can actually be met, and the service head (weatherhead) sits at or above the point of attachment wherever practicable, so water runs away from the raceway instead of into it. The conductors form a drip loop below the weatherhead: each conductor loops down and back up, so rain drips off the bottom of the loop instead of following the wire into the head. Service heads must have conductors of different potential brought out through separately bushed openings (230.54(E))., and splices in service conductors are made only by the methods 230.46 allows. Where it is impracticable to put the service head above the point of attachment, it must be within 24 in. of the point of attachment (230.54(C) exception). Drip loops and service-entrance conductors must be arranged so water will not enter the raceway or equipment (230.54(F), (G)).",
-      "on_the_job": "Form the drip loop long enough to actually drip — a tight little kink at the head is not a loop. Leave the utility the working tails at the length its standards call for, and do not tape or splice anything at the weatherhead that the utility will have to undo.",
+      "plain_explanation": "Where an overhead drop lands, three things have to be right at the top of the service. The point of attachment is located so the clearances on the 230.24 and 230.9 pages can actually be met, and the service head (weatherhead) sits at or above the point of attachment wherever practicable, so water runs away from the raceway instead of into it. The conductors form a drip loop below the weatherhead: each conductor loops down and back up, so rain drips off the bottom of the loop instead of following the wire into the head. Service heads must have conductors of different potential brought out through separately bushed openings (230.54(E)), and splices in service conductors are made only by the methods 230.46 allows. Where it is impracticable to put the service head above the point of attachment, it must be within 24 in. of the point of attachment (230.54(C) exception). Drip loops and service-entrance conductors must be arranged so water will not enter the raceway or equipment (230.54(F), (G)).",
+      "on_the_job": "Form the drip loop long enough to actually drip — a tight little kink at the head is not a loop. Leave the utility the working tails at the length its standards call for, and do not tape or splice anything at the weatherhead that the utility will have to undo. On a Sharma overhead service, set the attachment so the clearances work, land the head above the attachment, and form each loop below the head before the utility makes its connections. If the wall layout forces the head below the attachment point, keep it within 24 in. — and expect the inspector to measure it.",
       "sharma_note": "",
       "figure_idea": "Weatherhead detail: attachment point, head above it, drip loop hanging below with a droplet falling from the bottom of the loop.",
       "related_ids": [
@@ -6326,7 +7280,110 @@
       "verified": true,
       "prev_id": "C2-230.42",
       "next_id": "C2-230.67",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Rain is the enemy at the top of a service. Water that follows a conductor into the weatherhead runs down inside the raceway, corrodes lugs and conductor ends, and can reach the meter and the panel. Florida storms drive rain sideways, so the geometry has to shed water by gravity: head high, loop low, drip off the bottom. The separately bushed openings also keep conductors of different potential from chafing on one shared edge.",
+      "inspection_fails": [
+        "Weatherhead below the point of attachment with no impracticable condition — and more than 24 in. away from it.",
+        "No drip loop: conductors run straight into the head, or the loop is taped flat against the mast.",
+        "Conductors of different potential brought out of the service head through one shared opening instead of separately bushed openings (230.54(E)).",
+        "Splice in the service conductors at the weatherhead made by a method 230.46 does not allow."
+      ],
+      "exam_trap": "The trap answer: the weatherhead can sit below the point of attachment as long as the splices are well taped. It cannot. Below the attachment is allowed only where putting the head above is impracticable — and then the head must be within 24 in. of the attachment point. Tape is not a drip loop either: the loop has to hang below the head so water drips off its bottom.",
+      "tables": [
+        {
+          "caption": "At the top of the service — what has to be right",
+          "headers": [
+            "Part",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "Point of attachment",
+              "Located so the 230.24 and 230.9 clearances can be met"
+            ],
+            [
+              "Service head",
+              "At or above the point of attachment where practicable"
+            ],
+            [
+              "Head below attachment",
+              "Only if impracticable — and within 24 in. of it"
+            ],
+            [
+              "Drip loop",
+              "Below the head; water drips off the bottom of the loop"
+            ],
+            [
+              "Head openings",
+              "Different potentials through separately bushed openings"
+            ],
+            [
+              "Splices",
+              "Only the methods 230.46 allows"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-230.54-weatherhead.svg",
+          "alt": "Elevation detail of the top of an overhead service: the utility drop landing on the point of attachment, the weatherhead above the attachment point, drip loops hanging below the head with a raindrop falling from the bottom of a loop, and the 24 in. exception noted.",
+          "caption": "Head above the attachment, loops below the head: water drips off, not in.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Where must the service head sit relative to the point of attachment?",
+          "choices": [
+            "Below it, so the drop reaches easily",
+            "At or above it, wherever practicable",
+            "Anywhere on the mast",
+            "Inside the meter base"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The head sits at or above the point of attachment wherever practicable, so water runs away from the raceway instead of into it.",
+          "nec_ref": "230.54(C)"
+        },
+        {
+          "question": "Where it is impracticable to put the head above the point of attachment, how close must the head be?",
+          "choices": [
+            "6 in.",
+            "12 in.",
+            "24 in.",
+            "48 in."
+          ],
+          "answer_index": 2,
+          "explain_plain": "The exception allows the head below the attachment only within 24 in. of the point of attachment.",
+          "nec_ref": "230.54(C) Exception"
+        },
+        {
+          "question": "Conductors of different potential leave the service head through:",
+          "choices": [
+            "One common opening",
+            "A single bushing, if taped",
+            "Separately bushed openings",
+            "Any opening with a connector"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Service heads must have conductors of different potential brought out through separately bushed openings.",
+          "nec_ref": "230.54(E)"
+        }
+      ],
+      "code_refs": [
+        "230.54",
+        "230.54(C)",
+        "230.54(E)",
+        "230.54(F)",
+        "230.46",
+        "230.24",
+        "230.9"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-230.67",
@@ -7671,8 +8728,8 @@
       "article": "240",
       "section": "240.6",
       "title": "Standard ratings for breakers and fuses",
-      "plain_explanation": "Overcurrent devices come in standard ampere ratings, and this section lists them — the familiar steps from small branch ratings through the large service ratings, plus the additional standard ratings it names for fuses. Nonstandard ratings exist only in the limited cases the Code allows. A calculation that lands between two standard ratings is resolved by the protection rules, not by ordering a breaker in the calculated size.\n\nThe standard ratings (240.6(A)):\n• 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100\n• 110, 125, 150, 175, 200, 225, 250, 300, 350, 400, 450, 500, 600\n• 700, 800, 1000, 1200, 1600, 2000, 2500, 3000, 4000, 5000, 6000\nFuses also have additional standard ratings of 1, 3, 6, 10, and 601 amperes. Note the gaps crews trip on: there is no standard 105A, 130A, or 275A device — a calculation landing there resolves to a standard rating under the protection rules.\n\nNEC 2023 CHANGE:\n• 240.6: Ten amps moved into the standard ratings table, so 10-amp breakers are now standard along with fuses. New 240.6(D) covers breakers whose trip setting can be changed remotely. Table 240.6(A) now starts at 10 amps, making 10 a standard size for inverse-time breakers as well as fuses.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "When a load calculation lands at a nonstandard number, write the next step as a choice between the standard ratings on either side and record which rule you used. Do not write a nonstandard breaker size on a material list.",
+      "plain_explanation": "Overcurrent devices come in standard ampere ratings, and this section lists them — the familiar steps from small branch ratings through the large service ratings, plus the additional standard ratings it names for fuses. Nonstandard ratings exist only in the limited cases the Code allows. A calculation that lands between two standard ratings is resolved by the protection rules, not by ordering a breaker in the calculated size.\n\nThe standard ratings (240.6(A)):\n• 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100\n• 110, 125, 150, 175, 200, 225, 250, 300, 350, 400, 450, 500, 600\n• 700, 800, 1000, 1200, 1600, 2000, 2500, 3000, 4000, 5000, 6000\nFuses also have additional standard ratings of 1, 3, 6, 10, and 601 amperes. Note the gaps crews trip on: there is no standard 105A, 130A, or 275A device — a calculation landing there resolves to a standard rating under the protection rules.",
+      "on_the_job": "When a load calculation lands at a nonstandard number, write the next step as a choice between the standard ratings on either side and record which rule you used. Do not write a nonstandard breaker size on a material list. Example: the optional-method calculation for a Marion Oaks house lands at 130 A. There is no standard 130 A breaker — the material list gets the standard size the protection rules point to, and the calc sheet shows the step that was taken.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -7692,7 +8749,110 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/240-6",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 240.6: Ten amps moved into the standard ratings table, so 10-amp breakers are now standard along with fuses. New 240.6(D) covers breakers whose trip setting can be changed remotely. Table 240.6(A) now starts at 10 amps, making 10 a standard size for inverse-time breakers as well as fuses.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Breakers and fuses are built, listed and stocked in the standard steps. If every calculation produced its own device size, panels could not be planned, breakers could not be swapped, and an inspector could not check a rating at a glance. The steps also leave room for the protection rules to work: a load that lands between two steps is resolved by rule, not by inventing a size.",
+      "inspection_fails": [
+        "Panel schedule or material list calling for a nonstandard breaker size — 105 A, 130 A or 275 A.",
+        "Breaker installed that does not match the size shown on the approved load calculation.",
+        "Fuse replaced with the next larger standard size 'because it was on the truck.'",
+        "Calculated load written on the schedule as if it were the breaker size, instead of the standard rating the rules select."
+      ],
+      "exam_trap": "The trap is answering with the calculated number — a 105 A or 130 A 'breaker.' Neither exists as a standard rating in NEC 2020. The second trap is putting 10 A in the 2020 standard table: in 2020, 10 A is only an additional standard rating for fuses. It joins the main table in 2023 (see the 2020 vs 2023 box).",
+      "tables": [
+        {
+          "caption": "No standard device at these sizes (NEC 2020)",
+          "headers": [
+            "Calculation lands at",
+            "What happens"
+          ],
+          "rows": [
+            [
+              "105 A",
+              "No standard rating — resolve to a standard size under the protection rules"
+            ],
+            [
+              "130 A",
+              "No standard rating — resolve to a standard size under the protection rules"
+            ],
+            [
+              "275 A",
+              "No standard rating — resolve to a standard size under the protection rules"
+            ]
+          ]
+        },
+        {
+          "caption": "Additional standard ratings — fuses only (NEC 2020)",
+          "headers": [
+            "Device",
+            "Extra ratings (A)"
+          ],
+          "rows": [
+            [
+              "Fuses",
+              "1, 3, 6, 10, 601"
+            ],
+            [
+              "Inverse-time breakers",
+              "The 240.6(A) list only"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-240.6-standard-ratings.svg",
+          "alt": "The standard ampere ratings of 240.6(A) as a ladder of steps, with the 105, 130 and 275 ampere gaps marked as having no standard device, and the additional fuse-only ratings in a separate strip.",
+          "caption": "The standard steps — and the gaps crews trip on.",
+          "w": 900,
+          "h": 1180
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A load calculation lands at 130 A. What goes on the material list?",
+          "choices": [
+            "A 130 A breaker",
+            "The standard rating the protection rules select",
+            "Two 65 A breakers in parallel",
+            "A 130 A fuse"
+          ],
+          "answer_index": 1,
+          "explain_plain": "There is no standard 130 A device. The calculation resolves to a standard rating under the protection rules.",
+          "nec_ref": "240.6(A)"
+        },
+        {
+          "question": "Which of these is NOT a standard rating in NEC 2020?",
+          "choices": [
+            "175 A",
+            "225 A",
+            "275 A",
+            "450 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The 240.6(A) steps jump from 250 to 300. There is no 275 A standard device.",
+          "nec_ref": "240.6(A)"
+        },
+        {
+          "question": "In NEC 2020, 10 A is a standard rating for…",
+          "choices": [
+            "Breakers and fuses alike",
+            "Fuses only, as an additional rating",
+            "No device at all",
+            "Service disconnects only"
+          ],
+          "answer_index": 1,
+          "explain_plain": "In 2020 the main table starts at 15 A; 10 A appears only in the additional standard ratings for fuses. NEC 2023 moves it into the table.",
+          "nec_ref": "240.6(A)"
+        }
+      ],
+      "code_refs": [
+        "240.6",
+        "240.6(A)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-240.21",
@@ -7853,8 +9013,8 @@
       "article": "240",
       "section": "240.83 / 240.85",
       "title": "Breaker markings — and the slash-rating trap",
-      "plain_explanation": "A circuit breaker's markings are working information: ampere rating and voltage rating are marked by the manufacturer, the interrupting rating is marked on breakers with an interrupting rating other than 5,000A (240.83(C))., and special-duty markings tell you where the breaker may be applied — SWD for breakers used to switch fluorescent or HID lighting loads, HACR for heating, air-conditioning and refrigeration equipment. Voltage markings come in two forms. A straight-rated breaker (e.g., 240V) may be applied where the nominal voltage between any two conductors does not exceed its rating. A slash-rated breaker (120/240V, 480Y/277V) may be applied only in a solidly grounded circuit where no conductor's nominal voltage to ground exceeds the lower value and the voltage between any two conductors does not exceed the higher value — which is why a slash-rated breaker does not belong on the high leg of a 240V delta system (208V to ground) or on a corner-grounded system.",
-      "on_the_job": "On a high-leg delta panel, read the breaker voltage marking before you land the high leg: a 120/240 slash-rated breaker is the wrong breaker there even though the amp rating matches. Check the marking on the breaker in your hand, not the one you expected to find in the box.",
+      "plain_explanation": "A circuit breaker's markings are working information: ampere rating and voltage rating are marked by the manufacturer, the interrupting rating is marked on breakers with an interrupting rating other than 5,000A (240.83(C)), and special-duty markings tell you where the breaker may be applied — SWD for breakers used to switch fluorescent or HID lighting loads, HACR for heating, air-conditioning and refrigeration equipment. Voltage markings come in two forms. A straight-rated breaker (e.g., 240V) may be applied where the nominal voltage between any two conductors does not exceed its rating. A slash-rated breaker (120/240V, 480Y/277V) may be applied only in a solidly grounded circuit where no conductor's nominal voltage to ground exceeds the lower value and the voltage between any two conductors does not exceed the higher value — which is why a slash-rated breaker does not belong on the high leg of a 240V delta system (208V to ground) or on a corner-grounded system.",
+      "on_the_job": "On a high-leg delta panel, read the breaker voltage marking before you land the high leg: a 120/240 slash-rated breaker is the wrong breaker there even though the amp rating matches. Check the marking on the breaker in your hand, not the one you expected to find in the box. On a small commercial service call in Winter Park, the failed 20A breaker on the high leg gets replaced with a straight 240V Siemens breaker, not the 120/240V slash breaker riding in the truck stock.",
       "sharma_note": "S-02: new gear is Siemens. The marking check applies to whatever breaker is actually installed — a substituted breaker with the wrong voltage rating is still the wrong breaker.",
       "figure_idea": "Two breaker labels side by side: a '240V' straight rating approved for the high leg, a '120/240V' slash rating crossed out for the high leg, with the SWD and HACR marks called out.",
       "related_ids": [
@@ -7868,7 +9028,99 @@
       "next_id": "C2-ART-250",
       "sharma_rule_ids": [
         "S-02"
-      ]
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "A breaker has to interrupt the arc inside itself when it opens on a fault. If the voltage across the open contacts is higher than the breaker was tested for, the arc can restrike or blow through the case instead of clearing. The slash-rating rule exists because a high leg sits 208V to ground — well over the 120V a 120/240V breaker is built to hold off to ground — even though the load voltage looks like an ordinary 240V.",
+      "inspection_fails": [
+        "Slash-rated 120/240V breaker landed on the high leg of a 240V delta panel.",
+        "Breaker switching a fluorescent lighting load with no SWD marking.",
+        "Replacement breaker installed with a voltage rating below the system voltage.",
+        "Breaker markings painted over or illegible — the rating can no longer be verified."
+      ],
+      "exam_trap": "The trap: a 120/240V breaker 'matches' a 240V high-leg delta because 240 is the bigger number on the label. Wrong — on the high leg the voltage to ground is 208V, which beats the 120V lower number of the slash rating. The lower number is the one that decides where a slash-rated breaker may go.",
+      "tables": [
+        {
+          "caption": "Straight vs slash voltage ratings",
+          "headers": [
+            "Marking",
+            "The test",
+            "High leg?"
+          ],
+          "rows": [
+            [
+              "240V (straight)",
+              "No conductor pair over 240V",
+              "Yes"
+            ],
+            [
+              "120/240V (slash)",
+              "≤120V to ground, ≤240V across",
+              "No — 208V to ground"
+            ],
+            [
+              "480Y/277V (slash)",
+              "≤277V to ground, ≤480V across",
+              "Only on a 480Y/277V system"
+            ]
+          ],
+          "note": "A slash rating works only on a solidly grounded system that meets both numbers."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-240.83-slash-rating.svg",
+          "alt": "Comparison panel of two breaker labels: a straight-rated 240V breaker approved for the high leg of a delta system, and a 120/240V slash-rated breaker crossed out for the high leg because the leg sits 208V to ground.",
+          "caption": "Straight vs slash: on the high leg, the lower number decides.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A 120/240V slash-rated breaker may be installed on the high leg of a 240V delta system when…",
+          "choices": [
+            "The load is single-phase 240V",
+            "Never — the high leg is 208V to ground, over the 120V lower rating",
+            "The panel is labeled for it",
+            "The breaker is HACR rated"
+          ],
+          "answer_index": 1,
+          "explain_plain": "A slash rating caps voltage to ground at the lower number. The high leg sits at 208V to ground.",
+          "nec_ref": "240.85"
+        },
+        {
+          "question": "The interrupting rating must be marked on a breaker when it is…",
+          "choices": [
+            "5,000A",
+            "Other than 5,000A",
+            "Slash rated",
+            "SWD rated"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Breakers with an interrupting rating other than 5,000A carry the marking; 5,000A is the assumed floor.",
+          "nec_ref": "240.83(C)"
+        },
+        {
+          "question": "A breaker used to switch HID lighting loads must be marked…",
+          "choices": [
+            "HACR",
+            "SWD",
+            "GFCI",
+            "AFCI"
+          ],
+          "answer_index": 1,
+          "explain_plain": "SWD is the special-duty marking for switching fluorescent and HID lighting loads.",
+          "nec_ref": "240.83"
+        }
+      ],
+      "code_refs": [
+        "240.83",
+        "240.83(C)",
+        "240.85"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-ART-250",
@@ -8546,8 +9798,8 @@
       "article": "250",
       "section": "250.28",
       "title": "Main and system bonding jumpers",
-      "plain_explanation": "The bonding jumper is the conductor or connection that ties the grounded conductor, the equipment grounding system, and the enclosure together at the service, and the system bonding jumper does the same job for a separately derived system. This section covers their material and how they are sized — for the main bonding jumper, by reference to the same sizing table used for the grounding electrode conductor, with the limits the section states. A jumper that is present but undersized or poorly landed does not do the job.\n\nThe sizing numbers: a main bonding jumper is sized from Table 250.102(C)(1) by the size of the largest ungrounded service conductor (250.28(D)(1)).. Where the service conductors are larger than 1100 kcmil copper (1750 kcmil aluminum), the table stops and the jumper must be not less than 12-1/2 percent of the cross-sectional area of the largest phase conductor. On ordinary house services the table rows are the whole answer: 8 AWG copper behind a 100A service on 4 AWG copper conductors, 4 AWG copper behind a 200A service on 2/0 copper.",
-      "on_the_job": "Factory-installed straps and screws count only when they are the listed means for that equipment and actually installed. On a service change, verify the jumper exists before you call for inspection — it is a small part with a whole article riding on it.",
+      "plain_explanation": "The bonding jumper is the conductor or connection that ties the grounded conductor, the equipment grounding system, and the enclosure together at the service, and the system bonding jumper does the same job for a separately derived system. This section covers their material and how they are sized — for the main bonding jumper, by reference to the same sizing table used for the grounding electrode conductor, with the limits the section states. A jumper that is present but undersized or poorly landed does not do the job.\n\nThe sizing numbers: a main bonding jumper is sized from Table 250.102(C)(1) by the size of the largest ungrounded service conductor (250.28(D)(1)). Where the service conductors are larger than 1100 kcmil copper (1750 kcmil aluminum), the table stops and the jumper must be not less than 12-1/2 percent of the cross-sectional area of the largest phase conductor. On ordinary house services the table rows are the whole answer: 8 AWG copper behind a 100A service on 4 AWG copper conductors, 4 AWG copper behind a 200A service on 2/0 copper.",
+      "on_the_job": "Factory-installed straps and screws count only when they are the listed means for that equipment and actually installed. On a service change, verify the jumper exists before you call for inspection — it is a small part with a whole article riding on it. On a 200 A Siemens meter-main with 2/0 copper service conductors, the table answer is a 4 AWG copper jumper — confirm the factory strap is the listed means for that can and that it is actually landed, not still in the parts bag.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -8558,7 +9810,94 @@
       "verified": true,
       "prev_id": "C2-250.24",
       "next_id": "C2-250.30",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "The main bonding jumper is the link that ties the enclosure, the equipment grounding system and the grounded conductor together at one point — the service. When a hot conductor faults to the enclosure, that jumper is part of the path that carries the fault back to the source so the overcurrent device opens. A jumper that is missing or undersized is a bottleneck in that path: the enclosure can sit energized while the breaker never trips.",
+      "inspection_fails": [
+        "No main bonding jumper installed at the service — the factory strap or bonding screw was never landed.",
+        "Bonding jumper undersized for the service conductors (Table 250.102(C)(1)).",
+        "Panel swapped on a service change and the bonding strap left off the new enclosure.",
+        "Bonding jumper present but landed loose, so the connection is not doing the job."
+      ],
+      "exam_trap": "The trap answer sizes the main bonding jumper from the service breaker rating — or, on a service over 1100 kcmil copper, grabs the largest row in the table. The table is keyed to the largest ungrounded service conductor, not the breaker. And past 1100 kcmil copper (1750 kcmil aluminum) the table stops: the jumper must be not less than 12-1/2 percent of the largest phase conductor's cross-sectional area.",
+      "tables": [
+        {
+          "caption": "Main bonding jumper — the rows a house service uses",
+          "headers": [
+            "Service",
+            "Largest conductor, Cu",
+            "MBJ, Cu"
+          ],
+          "rows": [
+            [
+              "100 A",
+              "4 AWG",
+              "8 AWG"
+            ],
+            [
+              "200 A",
+              "2/0",
+              "4 AWG"
+            ]
+          ],
+          "note": "From Table 250.102(C)(1). Larger than 1100 kcmil Cu (1750 kcmil Al), the table stops: the jumper is not less than 12-1/2% of the largest phase conductor's area (250.28(D)(1))."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-250.28-bonding-jumper.svg",
+          "alt": "Service panel detail showing the grounded conductor landed on the neutral bar, the main bonding jumper tying the neutral bar to the enclosure and the equipment grounding bar at the service, sized from Table 250.102(C)(1), with the grounding electrode conductor leaving the ground bar.",
+          "caption": "One point ties it together: neutral, enclosure and grounding system meet at the service.",
+          "w": 900,
+          "h": 1450
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A 200 A service has 2/0 copper service conductors. What size copper main bonding jumper?",
+          "choices": [
+            "8 AWG",
+            "6 AWG",
+            "4 AWG",
+            "2 AWG"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Table 250.102(C)(1) reads 2/0 copper service conductors to a 4 AWG copper bonding jumper.",
+          "nec_ref": "Table 250.102(C)(1)"
+        },
+        {
+          "question": "The service conductors are larger than 1100 kcmil copper. How is the main bonding jumper sized?",
+          "choices": [
+            "By the largest row in the table",
+            "Not less than 12-1/2% of the largest phase conductor's area",
+            "The same size as the largest phase conductor",
+            "A fixed 250 kcmil"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Past 1100 kcmil copper (1750 kcmil aluminum) the table stops, and the jumper must be at least 12-1/2 percent of the cross-sectional area of the largest phase conductor.",
+          "nec_ref": "250.28(D)(1)"
+        },
+        {
+          "question": "At the service, the main bonding jumper ties together the grounded conductor, the enclosure and:",
+          "choices": [
+            "The utility neutral only",
+            "The equipment grounding system",
+            "The water pipe electrode only",
+            "The surge protector"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The bonding jumper ties the grounded conductor, the equipment grounding system and the enclosure together at the service.",
+          "nec_ref": "250.28"
+        }
+      ],
+      "code_refs": [
+        "250.28",
+        "250.28(D)(1)",
+        "Table 250.102(C)(1)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-250.30",
@@ -8566,7 +9905,7 @@
       "article": "250",
       "section": "250.30",
       "title": "Separately derived systems — generators and transformers",
-      "plain_explanation": "A separately derived system (SDS) is a source — a transformer, or a generator whose neutral is switched — that has no direct electrical connection to the supply system's circuit conductors; the two systems touch only through grounding and bonding. Because it is its own system, it needs its own grounding arrangement: a system bonding jumper connecting the derived neutral to the equipment grounds and enclosure, made at the source or at the first disconnecting means — at one point; both are allowed only where doing so does not create a parallel path for neutral current (250.30(A)(1) Exception No. 2). — and a grounding electrode conductor run to the building or structure grounding electrode system, as near as practicable to the point where the GEC connects to the system (250.30(A)(4)). A new rod is only needed where the building has no electrode system., sized from the derived conductors by the same table used at a service (250.66). A ground rod driven beside a generator, without the bonding jumper and electrode conductor, is decoration, not grounding.\n\nNEC 2023 CHANGE:\n• 250.30(C): Removed the word \"neutral'' from 250.30(C) to be consistent with other locations within the NEC and with language found at 250.36 and 250.187.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "plain_explanation": "A separately derived system (SDS) is a source — a transformer, or a generator whose neutral is switched — that has no direct electrical connection to the supply system's circuit conductors; the two systems touch only through grounding and bonding. Because it is its own system, it needs its own grounding arrangement:\n• A system bonding jumper connecting the derived neutral to the equipment grounds and enclosure, made at the source or at the first disconnecting means — at one point only; both locations are permitted only where doing so does not create a parallel path for neutral current (250.30(A)(1) Exception No. 2)\n• A grounding electrode conductor run to the building or structure grounding electrode system, as near as practicable to the point where the system bonding jumper connects (250.30(A)(4)), sized from the derived conductors by the same table used at a service (250.66)\nA new rod is only needed where the building has no electrode system. A ground rod driven beside a generator, without the bonding jumper and electrode conductor, is decoration, not grounding.",
       "on_the_job": "The transfer switch decides the design. If the switch does not switch the neutral, the generator is usually NOT separately derived, and the neutral stays bonded only at the service. If it does switch the neutral, the generator is an SDS and gets its bonding jumper at the generator end. Confirm which design the job has before anyone bonds a generator neutral — two bonding points put neutral current on the grounding path.",
       "sharma_note": "",
       "figure_idea": "Generator and transfer switch one-line in both forms: unswitched neutral (bond at the service only) and switched neutral (SDS — bond at the generator), with the electrode conductor shown at the source.",
@@ -8590,7 +9929,101 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 250.30(C): Removed the word \"neutral'' from 250.30(C) to be consistent with other locations within the NEC and with language found at 250.36 and 250.187.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "A derived system has no metallic path back to the utility source, so a ground fault inside it has no way to trip anything until the system gets its own bond and electrode connection. That bond is also a hazard when doubled: two neutral-to-ground bonds split neutral current onto equipment grounds and enclosures, where it heats connections and shocks anyone who touches metal.",
+      "inspection_fails": [
+        "Generator neutral bonded at the generator and again at the service — parallel neutral current on the grounding path.",
+        "Separately derived transformer with no system bonding jumper, or the jumper made at both the source and the first disconnect with a parallel path.",
+        "Ground rod driven at the generator with no grounding electrode conductor to the building electrode system.",
+        "GEC for the derived system sized by guess instead of Table 250.66 from the derived conductors."
+      ],
+      "exam_trap": "The trap is “every generator is separately derived.” A generator fed through a transfer switch that does not switch the neutral is usually NOT separately derived, and bonding its neutral creates the second bond the rule forbids. The switch gear decides, not the generator.",
+      "tables": [
+        {
+          "caption": "Bonding a separately derived system (250.30(A))",
+          "headers": [
+            "Piece",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "System bonding jumper",
+              "At the source OR the first disconnect — one point"
+            ],
+            [
+              "Both locations",
+              "Only if no parallel neutral path results (Ex. No. 2)"
+            ],
+            [
+              "Grounding electrode conductor",
+              "To the building electrode system, near the bond point"
+            ],
+            [
+              "GEC size",
+              "Table 250.66, from the derived conductors"
+            ]
+          ],
+          "note": "Outdoor sources have their own rule at 250.30(C); portable and vehicle-mounted generators are covered on the 250.34 page."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-250.30-sds-panels.svg",
+          "alt": "Two one-line panels: a generator whose neutral is not switched at the transfer switch is not separately derived and the neutral stays bonded at the service only; a generator with a switched neutral is separately derived and gets its system bonding jumper at the generator and a grounding electrode conductor to the building electrode system.",
+          "caption": "The transfer switch decides: switched neutral or not.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A generator is separately derived when:",
+          "choices": [
+            "It is larger than 15 kW",
+            "Its neutral is switched at the transfer switch",
+            "It sits outdoors",
+            "It has its own ground rod"
+          ],
+          "answer_index": 1,
+          "explain_plain": "With no direct connection to the supply conductors — the switched neutral is what makes a generator separately derived.",
+          "nec_ref": "250.30"
+        },
+        {
+          "question": "The system bonding jumper of an SDS is made:",
+          "choices": [
+            "At every disconnect",
+            "At the source or the first disconnect, at one point",
+            "Only at the ground rod",
+            "At the utility meter"
+          ],
+          "answer_index": 1,
+          "explain_plain": "One point: at the source or at the first disconnecting means; both only where no parallel neutral path results.",
+          "nec_ref": "250.30(A)(1)"
+        },
+        {
+          "question": "The GEC of a separately derived system is sized from:",
+          "choices": [
+            "Table 250.66, using the derived conductors",
+            "The generator nameplate alone",
+            "Table 250.102(C)(1)",
+            "A fixed 6 AWG"
+          ],
+          "answer_index": 0,
+          "explain_plain": "Same table as a service: Table 250.66, based on the largest derived conductor.",
+          "nec_ref": "250.30(A)(4)"
+        }
+      ],
+      "code_refs": [
+        "250.30(A)(1)",
+        "250.30(A)(4)",
+        "250.30(C)",
+        "250.66",
+        "250.34"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-250.32",
@@ -9034,7 +10467,7 @@
       "section": "250.52",
       "title": "Electrodes that are permitted — and the ones that are not",
       "plain_explanation": "This section lists what may serve as a grounding electrode, from underground water pipe with its conditions, through building steel and concrete-encased electrodes — at least 20 ft of the stated rebar or bare copper conductor encased in the foundation — to rods, pipes, and plates. It also lists what may not be used, which includes metal underground gas piping and aluminum electrodes. A water pipe electrode has its own supplementing rule, covered with the installation section.\n\nThe electrode specifications in numbers:\n• Metal underground water pipe — at least 10 ft of pipe in direct contact with the earth\n• Concrete-encased electrode — at least 20 ft of 1/2 in or larger rebar, or at least 20 ft of bare 4 AWG copper conductor, encased in at least 2 in of concrete in the footing or foundation\n• Ground ring — at least 20 ft of bare 2 AWG copper, buried at least 30 in below grade\n• Rod and pipe electrodes — at least 8 ft long in contact with the soil; pipe not smaller than 3/4 in trade size; rods not smaller than 5/8 in diameter unless listed for the use\n• Plate electrodes — at least 2 sq ft of surface exposed to the surrounding soil",
-      "on_the_job": "The concrete-encased electrode is the one to coordinate with the builder: 20 ft of qualifying rebar or conductor, encased as the section requires, with an accessible connection. Confirm it with the concrete crew before the pour, in writing on the job notes.",
+      "on_the_job": "The concrete-encased electrode is the one to coordinate with the builder: 20 ft of qualifying rebar or conductor, encased as the section requires, with an accessible connection. Confirm it with the concrete crew before the pour, in writing on the job notes. On a Florida slab home the crew's default set is the concrete-encased electrode in the footing plus the rods the AHJ expects; Florida water services are usually PVC or PEX, so do not count a water pipe that is not metal in the earth for 10 ft.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -9046,7 +10479,105 @@
       "verified": true,
       "prev_id": "C2-250.50",
       "next_id": "C2-250.53",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "The electrode is the building's one connection to earth for lightning, utility surges and line-to-ground faults on the supply side. Each permitted type has a proven minimum size and contact with the soil; below that minimum the connection is too weak or corrodes away too fast to trust. The banned list is just as important: a gas pipe must never carry electrical fault energy, and aluminum corrodes in soil and concrete.",
+      "inspection_fails": [
+        "Concrete-encased electrode short of 20 ft, or the stub-up cut off before the GEC lands.",
+        "Metal gas piping bonded in as a grounding electrode — prohibited by 250.52(B).",
+        "Ground rod driven less than 8 ft, or a rod under 5/8 in that is not listed.",
+        "Water pipe electrode with no supplemental electrode (250.53(D)).",
+        "Aluminum electrode, or an aluminum GEC in direct contact with concrete or earth."
+      ],
+      "exam_trap": "Two traps: counting a metal underground gas pipe as an electrode — it is prohibited, not just discouraged — and accepting 10 ft of rebar as a concrete-encased electrode. The Ufer needs 20 ft; 10 ft is the water pipe number.",
+      "tables": [
+        {
+          "caption": "Permitted electrodes and their minimums (250.52(A))",
+          "headers": [
+            "Electrode",
+            "Minimum"
+          ],
+          "rows": [
+            [
+              "Metal underground water pipe",
+              "10 ft in direct contact with earth; must be supplemented"
+            ],
+            [
+              "Concrete-encased",
+              "20 ft of ½ in rebar or bare 4 AWG Cu, in 2 in of concrete"
+            ],
+            [
+              "Ground ring",
+              "20 ft of bare 2 AWG Cu, 30 in deep"
+            ],
+            [
+              "Rod and pipe",
+              "8 ft in soil; rod 5/8 in min, pipe 3/4 in trade size min"
+            ],
+            [
+              "Plate",
+              "2 sq ft exposed to soil"
+            ]
+          ],
+          "note": "Not permitted as electrodes: metal underground gas piping and aluminum electrodes (250.52(B))."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-250.52-electrodes.svg",
+          "alt": "Five permitted grounding electrodes with their minimum sizes: metal underground water pipe 10 ft in earth, concrete-encased electrode 20 ft of rebar or 4 AWG copper, ground ring 20 ft of 2 AWG copper 30 in deep, rod and pipe electrodes 8 ft long, plate electrodes 2 sq ft, and a red strip naming the two electrodes never permitted.",
+          "caption": "The permitted electrodes and their minimums — gas pipe and aluminum never count.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Minimum length of a concrete-encased electrode?",
+          "choices": [
+            "8 ft",
+            "10 ft",
+            "20 ft",
+            "30 ft"
+          ],
+          "answer_index": 2,
+          "explain_plain": "At least 20 ft of ½ in or larger rebar, or 20 ft of bare 4 AWG copper, in at least 2 in of concrete.",
+          "nec_ref": "250.52(A)(3)"
+        },
+        {
+          "question": "Which of these may NOT be used as a grounding electrode?",
+          "choices": [
+            "Metal underground water pipe",
+            "Ground ring",
+            "Metal underground gas piping",
+            "Plate electrode"
+          ],
+          "answer_index": 2,
+          "explain_plain": "250.52(B) prohibits metal underground gas piping — and aluminum electrodes.",
+          "nec_ref": "250.52(B)"
+        },
+        {
+          "question": "A ground ring must be buried at least:",
+          "choices": [
+            "12 in",
+            "18 in",
+            "24 in",
+            "30 in"
+          ],
+          "answer_index": 3,
+          "explain_plain": "At least 20 ft of bare 2 AWG copper buried at least 30 in below grade.",
+          "nec_ref": "250.52(A)(4)"
+        }
+      ],
+      "code_refs": [
+        "250.52(A)",
+        "250.52(B)",
+        "250.53(D)",
+        "250.53(H)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-250.53",
@@ -9055,7 +10586,7 @@
       "section": "250.53",
       "title": "Installing electrodes — rods, depth, and the second rod",
       "plain_explanation": "Electrodes must be installed as this section requires: driven or buried to the depths it states, kept as close as practicable to each other and to the service, and supplemented where a single rod, pipe, or plate does not meet the stated resistance to earth — 25 ohms or less — or is not tested at all. In practice that means a second rod, spaced at least 6 ft from the first, on almost every job. Rod connections must be accessible or of the irreversible or exothermic type the article allows where they are buried.\n\nThe installation numbers:\n• Rod, pipe, and plate electrodes — at least 8 ft of the electrode in contact with the soil, with the top end flush with or below grade level unless the connection is protected\n• Two rods — spaced at least 6 ft apart; the 6 ft is a floor, and wider spacing makes the pair work better\n• A single rod, pipe, or plate may stand alone only with a measured resistance to earth of 25 ohms or less — without that measurement on file, the second electrode is required, not optional",
-      "on_the_job": "Drive two rods at least 6 ft apart unless you have a tested 25-ohm-or-less result in the job file. Keep the grounding electrode conductor run short, straight, and protected where it is exposed.",
+      "on_the_job": "Drive two rods at least 6 ft apart unless you have a tested 25-ohm-or-less result in the job file. Keep the grounding electrode conductor run short, straight, and protected where it is exposed. On a 200A slab house in Marion Oaks, plan on two 8 ft rods from the start: drive the first, clamp the grounding electrode conductor, then drive the second at least 6 ft away and land the same run on it — no test instrument, no argument at inspection.",
       "sharma_note": "",
       "figure_idea": "Two ground rods driven flush, spaced with a 6 ft tape between them, and the conductor clamped to each in turn on its way to the service.",
       "related_ids": [
@@ -9070,7 +10601,97 @@
       "verified": true,
       "prev_id": "C2-250.52",
       "next_id": "C2-250.64",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "The electrode system gives lightning and surge energy a path into the earth and holds the service near earth potential. A single rod in dry sand can measure far above 25 ohms — the connection to earth is then mostly wishful thinking. Two rods, spread apart so their resistance areas do not overlap, bring the pair down where one rod alone could not.",
+      "inspection_fails": [
+        "Single ground rod with no 25-ohm test result in the job file.",
+        "Two rods driven 3 ft apart — under the 6 ft minimum spacing.",
+        "Rod left sticking above grade with the clamp connection unprotected.",
+        "Buried rod connection made with a clamp not listed for the purpose — not accessible, irreversible, or exothermic."
+      ],
+      "exam_trap": "The trap: 'one 8 ft rod is always enough — the second rod is just belt and suspenders.' Wrong. A single rod, pipe, or plate stands alone only with a measured resistance to earth of 25 ohms or less. No measurement on file means the supplemental electrode is required.",
+      "tables": [
+        {
+          "caption": "One rod or two?",
+          "headers": [
+            "Situation",
+            "What is required"
+          ],
+          "rows": [
+            [
+              "Measured 25 Ω or less, on file",
+              "One rod, pipe, or plate may stand alone"
+            ],
+            [
+              "No resistance measurement",
+              "Add a supplemental electrode"
+            ],
+            [
+              "Two rods installed",
+              "Space them at least 6 ft apart"
+            ],
+            [
+              "Rod driven",
+              "At least 8 ft in contact with the soil"
+            ]
+          ],
+          "note": "Wider rod spacing works better — 6 ft is the floor, not the target."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-250.53-two-rods.svg",
+          "alt": "Two 8 ft ground rods driven flush with grade and spaced 6 ft apart, with the grounding electrode conductor clamped to each rod in turn on its way to the service equipment.",
+          "caption": "Two rods, 6 ft apart minimum — one rod alone needs a 25 Ω test.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A single ground rod may stand alone only when…",
+          "choices": [
+            "It is 10 ft long",
+            "Its measured resistance to earth is 25 ohms or less",
+            "The soil is wet",
+            "It is copper-clad"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Without a measured 25 Ω or less on file, a supplemental electrode is required.",
+          "nec_ref": "250.53"
+        },
+        {
+          "question": "Two rod electrodes must be spaced at least…",
+          "choices": [
+            "3 ft",
+            "6 ft",
+            "8 ft",
+            "25 ft"
+          ],
+          "answer_index": 1,
+          "explain_plain": "6 ft is the minimum spacing — and wider works better.",
+          "nec_ref": "250.53"
+        },
+        {
+          "question": "How much of a rod electrode must be in contact with the soil?",
+          "choices": [
+            "6 ft",
+            "8 ft",
+            "10 ft",
+            "The full rod above grade"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Rod, pipe, and plate electrodes need at least 8 ft in contact with the soil, top flush with or below grade unless protected.",
+          "nec_ref": "250.53"
+        }
+      ],
+      "code_refs": [
+        "250.53"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-250.64",
@@ -9078,7 +10699,7 @@
       "article": "250",
       "section": "250.64",
       "title": "Installing the grounding electrode conductor",
-      "plain_explanation": "The grounding electrode conductor is sized on the 250.66 page; this section is how it must be run:\n• Continuous, in one unbroken length, without a splice or joint — except splices made with irreversible compression connectors listed as grounding and bonding equipment, or by exothermic welding\n• Bare or covered aluminum or copper-clad aluminum GECs without an extruded polymeric covering may not be installed where subject to corrosive conditions or in direct contact with concrete; terminations inside listed enclosures identified for the environment are allowed within 18 in. of the enclosure bottom; outside buildings or enclosures, they may not be terminated within 18 in. of the earth\n• Where exposed, a conductor 6 AWG or larger may follow the surface of the building construction without a raceway where it is securely fastened and not subject to physical damage; smaller conductors, and any run exposed to damage, must be protected — in rigid metal conduit, IMC, EMT, schedule 80 PVC, RTRC-XW, or cable armor, or another method this section lists\n• A ferrous metal raceway or armor enclosing the conductor must be electrically continuous and bonded to the conductor at both ends — an unbonded steel sleeve chokes the fault path it was meant to protect\n\nNEC 2023 CHANGE:\n• 250.64: New 250.64(G): a grounding electrode conductor (GEC) can't pass through an enclosure's ventilation openings. Bring it in through a knockout, hub or other proper opening. A GEC can't pass through a ventilation opening in an enclosure (250.64(G)). Bring it in through a knockout, hub or other proper opening.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "plain_explanation": "The grounding electrode conductor is sized on the 250.66 page; this section is how it must be run:\n• Continuous, in one unbroken length, without a splice or joint — except splices made with irreversible compression connectors listed as grounding and bonding equipment, or by exothermic welding\n• Bare or covered aluminum or copper-clad aluminum GECs without an extruded polymeric covering may not be installed where subject to corrosive conditions or in direct contact with concrete; terminations inside listed enclosures identified for the environment are allowed within 18 in. of the enclosure bottom; outside buildings or enclosures, they may not be terminated within 18 in. of the earth\n• Where exposed, a conductor 6 AWG or larger may follow the surface of the building construction without a raceway where it is securely fastened and not subject to physical damage; smaller conductors, and any run exposed to damage, must be protected — in rigid metal conduit, IMC, EMT, schedule 80 PVC, RTRC-XW, or cable armor, or another method this section lists\n• A ferrous metal raceway or armor enclosing the conductor must be electrically continuous and bonded to the conductor at both ends — an unbonded steel sleeve chokes the fault path it was meant to protect",
       "on_the_job": "Plan the run as one piece from the service to the electrode before anything is cut. A grounding electrode conductor that comes up short gets replaced or extended by an irreversible splice — never by a split bolt that will end up buried in a wall or a trench.",
       "sharma_note": "",
       "figure_idea": "A grounding electrode conductor run from panel to rod in one unbroken line, with a callout at a steel sleeve showing bonds at both ends.",
@@ -9099,7 +10720,107 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/250-64",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 250.64: New 250.64(G): a grounding electrode conductor (GEC) can't pass through an enclosure's ventilation openings. Bring it in through a knockout, hub or other proper opening. A GEC can't pass through a ventilation opening in an enclosure (250.64(G)). Bring it in through a knockout, hub or other proper opening.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "The GEC is the path that ties the electrode system to the service. A splice that corrodes, a split bolt that loosens, or a steel sleeve that chokes the conductor all break that path silently — nothing trips and nothing looks wrong until lightning or a fault finds the weak point. One unbroken, protected, properly bonded run is what keeps the connection real for the life of the building.",
+      "inspection_fails": [
+        "GEC spliced with a split bolt inside a wall or trench.",
+        "Steel sleeve or ferrous raceway around the GEC with no bonds at the ends.",
+        "8 AWG GEC run exposed on the building surface with no raceway or armor (250.64(B)).",
+        "Bare aluminum GEC terminated within 18 in of the earth outside the building.",
+        "GEC cut short and extended with a mechanical connector instead of an irreversible splice."
+      ],
+      "exam_trap": "The trap answers name the split bolt as an acceptable GEC splice. It is not: splices must be irreversible compression connectors listed as grounding and bonding equipment, or exothermic welds. The second trap is forgetting that a ferrous raceway around the GEC must be bonded at both ends.",
+      "tables": [
+        {
+          "caption": "Running the GEC (250.64)",
+          "headers": [
+            "Situation",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "Splice or joint",
+              "Irreversible compression (listed) or exothermic weld only"
+            ],
+            [
+              "6 AWG or larger, exposed",
+              "May follow the building surface if fastened and not subject to damage"
+            ],
+            [
+              "Smaller, or subject to damage",
+              "RMC, IMC, EMT, Sch 80 PVC, RTRC-XW, or armor"
+            ],
+            [
+              "Ferrous raceway or armor",
+              "Electrically continuous, bonded to the GEC at both ends"
+            ],
+            [
+              "Bare Al/CCA GEC terminations",
+              "Not within 18 in of the earth outdoors; not in concrete contact"
+            ]
+          ],
+          "note": "Aluminum or copper-clad aluminum GECs without an extruded polymeric covering are barred where subject to corrosive conditions or in direct contact with concrete (250.64(A))."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-250.64-gec-run.svg",
+          "alt": "A grounding electrode conductor runs in one unbroken gold line from a service panel, through a steel sleeve bonded at both ends, down to a ground rod in the earth, with numbered callouts for the one-length rule, the bonded sleeve, and the electrode connection.",
+          "caption": "One unbroken run: panel to electrode, sleeve bonded at both ends.",
+          "w": 900,
+          "h": 1750
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A GEC may be spliced only by:",
+          "choices": [
+            "A split bolt",
+            "A listed irreversible compression connector or exothermic weld",
+            "A wire connector rated for the size",
+            "Solder"
+          ],
+          "answer_index": 1,
+          "explain_plain": "250.64(C): irreversible compression connectors listed as grounding and bonding equipment, or exothermic welding — nothing else.",
+          "nec_ref": "250.64(C)"
+        },
+        {
+          "question": "An exposed 6 AWG copper GEC may run on the building surface without a raceway when:",
+          "choices": [
+            "It is painted",
+            "It is securely fastened and not subject to physical damage",
+            "It is under 10 ft long",
+            "Never — raceway is always required"
+          ],
+          "answer_index": 1,
+          "explain_plain": "6 AWG or larger may follow the surface if securely fastened and not subject to damage; smaller conductors need protection.",
+          "nec_ref": "250.64(B)"
+        },
+        {
+          "question": "A ferrous metal raceway enclosing a GEC must be:",
+          "choices": [
+            "Painted to match",
+            "Bonded to the conductor at both ends",
+            "Left floating to avoid loops",
+            "Filled with sealant"
+          ],
+          "answer_index": 1,
+          "explain_plain": "It must be electrically continuous and bonded at both ends, or it chokes the fault path.",
+          "nec_ref": "250.64(E)"
+        }
+      ],
+      "code_refs": [
+        "250.64(A)",
+        "250.64(B)",
+        "250.64(C)",
+        "250.64(E)",
+        "250.66",
+        "250.68"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-250.66",
@@ -9383,7 +11104,96 @@
       "verified": true,
       "prev_id": "C2-250.94",
       "next_id": "C2-250.118",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Any metal pipe that can become energized becomes a building-wide shock path — every faucet, valve and appliance handle is connected to it. A fault, a failed neutral or a lightning event can put voltage on piping that runs to every room. Bonding ties the piping into the grounding system, so that voltage is held down and a fault gets the low-impedance path it needs to open the overcurrent device.",
+      "inspection_fails": [
+        "Metal water piping not bonded at the service.",
+        "No bonding jumper across the water meter or filter, so the bond opens when the meter is pulled.",
+        "Gas piping with no bonding jumper sized for the circuit that could energize it.",
+        "Bond clamp landed on painted or corroded pipe with no clean metal contact."
+      ],
+      "exam_trap": "The trap answer treats bonding the water pipe and using the water pipe as a grounding electrode as one job — or sizes the gas-piping bond out of the service table. They are different jobs with different tables: water piping at a service bonds per Table 250.102(C)(1), while other piping, like gas, bonds per Table 250.122 by the rating of the circuit likely to energize it.",
+      "tables": [
+        {
+          "caption": "Which table sizes which bond (250.104)",
+          "headers": [
+            "Piping",
+            "Jumper sized from"
+          ],
+          "rows": [
+            [
+              "Water piping, at a service",
+              "Table 250.102(C)(1), by the service-entrance conductors"
+            ],
+            [
+              "Water piping, feeder-supplied building",
+              "250.102(D) — Table 250.122, by the feeder OCPD rating"
+            ],
+            [
+              "Other piping, such as gas",
+              "Table 250.122, by the circuit likely to energize it"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-250.104-piping-bonds.svg",
+          "alt": "House piping elevation showing the bonding jumper from the service equipment to the metal water piping with the bond carried across the water meter so the path stays continuous, and a separate bonding jumper to the gas piping, each sized from the table 250.104 points to.",
+          "caption": "Bond the piping, keep the path continuous, size each jumper from its own table.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "The bonding jumper for metal water piping at a service is sized from:",
+          "choices": [
+            "Table 250.122, by the largest breaker",
+            "Table 250.102(C)(1), by the service-entrance conductors",
+            "The diameter of the water pipe",
+            "A fixed 6 AWG for every house"
+          ],
+          "answer_index": 1,
+          "explain_plain": "250.104(A)(1) sizes the water-piping bond from Table 250.102(C)(1), by the size of the service-entrance conductors — the same table that sizes the grounding electrode conductor.",
+          "nec_ref": "250.104(A)(1)"
+        },
+        {
+          "question": "The bonding jumper for gas piping is sized from Table 250.122 by:",
+          "choices": [
+            "The size of the service",
+            "The rating of the circuit likely to energize the piping",
+            "A default 20 A circuit",
+            "The size of the gas pipe"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Other metal piping is bonded with a jumper sized by the rating of the circuit that is likely to energize the piping.",
+          "nec_ref": "250.104"
+        },
+        {
+          "question": "Bonding a metal water pipe and using it as a grounding electrode are:",
+          "choices": [
+            "The same job — one connection does both",
+            "Different jobs — a pipe can need both treatments in different places",
+            "Interchangeable — either one replaces the other",
+            "Both covered by sizing from Table 250.122"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Bonding a pipe is a different job from using it as an electrode, and a pipe can need both treatments in different places.",
+          "nec_ref": "250.104"
+        }
+      ],
+      "code_refs": [
+        "250.104(A)(1)",
+        "250.104(A)(3)",
+        "250.102(D)",
+        "Table 250.102(C)(1)",
+        "Table 250.122"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-250.118",
@@ -9391,8 +11201,8 @@
       "article": "250",
       "section": "250.118",
       "title": "Equipment grounding conductors — what counts as one",
-      "plain_explanation": "The fault path back to the source may be a wire, or it may be one of the wiring methods this section recognizes as an equipment grounding conductor:\n• A wire-type conductor — copper, aluminum, or copper-clad aluminum, bare, covered, or insulated, run with the circuit conductors\n• Rigid metal conduit, intermediate metal conduit, and electrical metallic tubing — the raceway itself is the ground path, which is why its fittings must be listed and made up tight\n• The armor of Type AC cable, with its internal bonding strip; and Type MC cable where the armor, alone or combined with its contained grounding conductor, is listed as the ground path\n• Flexible metal conduit and liquidtight flexible metal conduit — only within this section's limits on length (6 ft combined in the ground-return path), fitting listing, and overcurrent rating; outside those limits a wire-type ground must be pulled with the circuit\nA method not on this section's list is not a ground path, however solid it looks.\n\nNEC 2023 CHANGE:\n• 250.118: Stainless steel flexible metal conduit (FMC), and liquidtight flex (LFMC) with a stainless core, can't serve as the equipment grounding conductor (EGC) anymore. Add a wire-type EGC or a bonding jumper. Stainless steel FMC doesn't count as the EGC. Install a wire-type EGC, or a bonding jumper that meets 250.102(E)(2) (250.118(A)(5)(f)).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "An EMT run with tight listed fittings is its own ground; a loose set-screw coupling is a break in that ground. On a long flexible whip to a motor or rooftop unit, pull the green wire instead of asking the flex to be the path.",
+      "plain_explanation": "The fault path back to the source may be a wire, or it may be one of the wiring methods this section recognizes as an equipment grounding conductor:\n• A wire-type conductor — copper, aluminum, or copper-clad aluminum, bare, covered, or insulated, run with the circuit conductors\n• Rigid metal conduit, intermediate metal conduit, and electrical metallic tubing — the raceway itself is the ground path, which is why its fittings must be listed and made up tight\n• The armor of Type AC cable, with its internal bonding strip; and Type MC cable where the armor, alone or combined with its contained grounding conductor, is listed as the ground path\n• Flexible metal conduit and liquidtight flexible metal conduit — only within this section's limits on length (6 ft combined in the ground-return path), fitting listing, and overcurrent rating; outside those limits a wire-type ground must be pulled with the circuit\nA method not on this section's list is not a ground path, however solid it looks.",
+      "on_the_job": "An EMT run with tight listed fittings is its own ground; a loose set-screw coupling is a break in that ground. On a long flexible whip to a motor or rooftop unit, pull the green wire instead of asking the flex to be the path. Count the flex in the ground path, not just the piece in your hand: two 4 ft whips joined in one run put 8 ft of flex in the return path — over the 6 ft combined limit — so a wire-type EGC goes in with the circuit conductors.",
       "sharma_note": "",
       "figure_idea": "Four ground paths drawn side by side: a green wire in conduit, an EMT run with tight fittings, AC armor with its bonding strip, and a flex whip with a wire-type ground pulled inside.",
       "related_ids": [
@@ -9412,7 +11222,107 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/250-118",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 250.118: Stainless steel flexible metal conduit (FMC), and liquidtight flex (LFMC) with a stainless core, can't serve as the equipment grounding conductor (EGC) anymore. Add a wire-type EGC or a bonding jumper. Stainless steel FMC doesn't count as the EGC. Install a wire-type EGC, or a bonding jumper that meets 250.102(E)(2) (250.118(A)(5)(f)).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "The equipment grounding conductor is the path that carries fault current back to the source so the breaker trips in a fraction of a second. That path has to be permanent and low-impedance. A raceway only works as the path while every fitting stays listed and tight — one loose coupling or corroded joint raises the impedance, the fault current drops, the breaker never trips, and the metal case of the equipment sits energized waiting for a hand.",
+      "inspection_fails": [
+        "Loose set-screw EMT coupling left in the ground path — the raceway ground is broken at the joint.",
+        "Flexible whip over 6 ft in the ground-return path with no wire-type EGC pulled in.",
+        "MC armor relied on as the only ground where the cable is not listed for it.",
+        "Wire-type EGC run outside the raceway instead of with the circuit conductors."
+      ],
+      "exam_trap": "The trap: 'the EMT is the ground, so the green wire is optional — and a flex whip is the same thing.' Wrong twice. Flex only counts within its limits — 6 ft combined in the ground-return path, listed fittings, and the overcurrent limits of the section. Past those limits the flex is just a raceway, and a wire-type EGC must be pulled with the circuit.",
+      "tables": [
+        {
+          "caption": "What counts as an equipment grounding conductor",
+          "headers": [
+            "Method",
+            "Counts?",
+            "Condition"
+          ],
+          "rows": [
+            [
+              "Wire-type conductor",
+              "Yes",
+              "Run with the circuit conductors"
+            ],
+            [
+              "RMC, IMC, EMT",
+              "Yes",
+              "Fittings listed and made up tight"
+            ],
+            [
+              "Type AC armor",
+              "Yes",
+              "With its internal bonding strip"
+            ],
+            [
+              "Type MC armor",
+              "Only where listed",
+              "Armor listed as the ground path"
+            ],
+            [
+              "FMC / LFMC",
+              "Within limits",
+              "6 ft combined max in the ground path"
+            ]
+          ],
+          "note": "A method not listed in 250.118 is not a ground path, however solid it looks."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-250.118-egc-types.svg",
+          "alt": "Four panels showing what counts as an equipment grounding conductor: a wire-type conductor in conduit, an EMT run with tight listed fittings, Type AC armor with its bonding strip, and a flexible whip with a wire-type ground pulled inside.",
+          "caption": "Four recognized ground paths — and the flex limit that comes with the fourth.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "What is the maximum combined length of flexible conduit allowed in the ground-return path?",
+          "choices": [
+            "3 ft",
+            "6 ft",
+            "10 ft",
+            "No limit"
+          ],
+          "answer_index": 1,
+          "explain_plain": "FMC and LFMC count as the EGC only within the section's limits — 6 ft combined in the ground-return path, with listed fittings.",
+          "nec_ref": "250.118"
+        },
+        {
+          "question": "An EMT run serves as the equipment grounding conductor when…",
+          "choices": [
+            "It is painted",
+            "Its fittings are listed and made up tight",
+            "A green wire is also pulled",
+            "It is under 6 ft"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The raceway itself is the path, so the joints carry the fault — fittings must be listed and tight.",
+          "nec_ref": "250.118"
+        },
+        {
+          "question": "Which of these is NOT, by itself, an equipment grounding conductor under 250.118?",
+          "choices": [
+            "Copper wire run with the circuit",
+            "Intermediate metal conduit",
+            "A raceway method not listed in the section",
+            "Type AC armor with bonding strip"
+          ],
+          "answer_index": 2,
+          "explain_plain": "If the method is not on the 250.118 list, it is not a ground path, however solid it looks.",
+          "nec_ref": "250.118"
+        }
+      ],
+      "code_refs": [
+        "250.118"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-250.119",
@@ -9559,8 +11469,8 @@
       "article": "250",
       "section": "250.140",
       "title": "Frames of ranges and dryers on existing circuits",
-      "plain_explanation": "New work is 4-wire: the frames of ranges, wall-mounted ovens, counter-mounted cooking units, clothes dryers, and the outlet or junction boxes on their circuits connect to the equipment grounding conductor. This section keeps the older 3-wire arrangement lawful only for an existing branch circuit where no equipment grounding conductor is present in the outlet or junction box, and only if all four conditions are met: the supply is 120/240-volt, single-phase, 3-wire, or 208Y/120-volt from a 3-phase, 4-wire wye system; the grounded conductor is not smaller than 10 AWG copper or 8 AWG aluminum; that conductor is insulated, or uninsulated only as part of a Type SE cable on a circuit originating at the service equipment; and the grounding contacts of receptacles furnished as part of the equipment are bonded to the equipment.\n\nNEC 2023 CHANGE:\n• 250.140: Old 3-wire range and dryer circuits fed with service-entrance (SE) cable from a panel that isn't the service can keep using the neutral for the frame, once the bare neutral is covered. New 250.140(B)(5): existing SE cable from equipment other than the service can bond the frame through its neutral, if that neutral is insulated or covered.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "On a service call, identify what is actually in the wall before quoting a receptacle swap. If the circuit is being replaced or extended as new work, pull 4-wire and set a 4-wire receptacle and cord; never create a new 3-wire installation, and never leave the strap in place on a 4-wire hookup.",
+      "plain_explanation": "New work is 4-wire: the frames of ranges, wall-mounted ovens, counter-mounted cooking units, clothes dryers, and the outlet or junction boxes on their circuits connect to the equipment grounding conductor. This section keeps the older 3-wire arrangement lawful only for an existing branch circuit where no equipment grounding conductor is present in the outlet or junction box, and only if all four conditions are met:\n• The supply is 120/240-volt, single-phase, 3-wire, or 208Y/120-volt from a 3-phase, 4-wire wye system.\n• The grounded conductor is not smaller than 10 AWG copper or 8 AWG aluminum.\n• That conductor is insulated, or uninsulated only as part of a Type SE cable on a circuit originating at the service equipment.\n• The grounding contacts of receptacles furnished as part of the equipment are bonded to the equipment.",
+      "on_the_job": "On a service call, identify what is actually in the wall before quoting a receptacle swap. If the circuit is being replaced or extended as new work, pull 4-wire and set a 4-wire receptacle and cord; never create a new 3-wire installation, and never leave the strap in place on a 4-wire hookup. On a dryer swap in an older Kissimmee home, check the box first: a 3-wire SE run from the service panel, with a 10 AWG copper neutral and the receptacle's grounding contacts bonded to the frame, meets all four conditions, so the existing circuit may stay. The same run from a subpanel with a bare SE neutral fails the third condition — that is a rewire conversation, not a receptacle swap.",
       "sharma_note": "",
       "figure_idea": "A dryer back panel showing the bonding strap removed and a 4-wire cord's green lead landed on the frame screw.",
       "related_ids": [
@@ -9580,7 +11490,97 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/250-140",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 250.140: Old 3-wire range and dryer circuits fed with service-entrance (SE) cable from a panel that isn't the service can keep using the neutral for the frame, once the bare neutral is covered. New 250.140(B)(5): existing SE cable from equipment other than the service can bond the frame through its neutral, if that neutral is insulated or covered.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "On a 3-wire hookup the frame is bonded to the neutral, so the metal case of the dryer sits at neutral potential. If that neutral ever opens or goes high-resistance, the frame can rise toward line voltage through the heating element — and the person touching the dryer and a faucet at the same time becomes the path. Four-wire wiring gives the frame its own grounding conductor, so a fault trips the breaker instead of energizing the case.",
+      "inspection_fails": [
+        "Bonding strap left in place on a 4-wire dryer or range hookup — the frame is still tied to the neutral.",
+        "New 3-wire receptacle and cord installed on a remodel circuit.",
+        "3-wire arrangement kept on a circuit fed from a subpanel with an uninsulated SE neutral — fails the originating-at-service condition.",
+        "Grounded conductor smaller than 10 AWG copper (or 8 AWG aluminum) on a kept 3-wire circuit.",
+        "Range or dryer frame not connected to the equipment grounding conductor on new 4-wire work."
+      ],
+      "exam_trap": "The trap answer is that 3-wire range and dryer circuits are simply 'grandfathered.' They are not: 250.140 allows the arrangement only on an existing circuit, with no equipment grounding conductor in the box, and all four conditions met. The second trap is leaving the bonding strap in place when a 4-wire cord goes on — the strap ties the frame back to the neutral and defeats the new grounding conductor.",
+      "tables": [
+        {
+          "caption": "The four conditions for keeping a 3-wire hookup (250.140)",
+          "headers": [
+            "#",
+            "Condition"
+          ],
+          "rows": [
+            [
+              "1",
+              "Supply is 120/240 V single-phase 3-wire, or 208Y/120 V from a wye system"
+            ],
+            [
+              "2",
+              "Grounded conductor not smaller than 10 AWG copper or 8 AWG aluminum"
+            ],
+            [
+              "3",
+              "Conductor insulated, or bare only in Type SE cable from the service equipment"
+            ],
+            [
+              "4",
+              "Receptacle grounding contacts furnished with the equipment bonded to the equipment"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-250.140-dryer-panel.svg",
+          "alt": "Back of a clothes dryer wired with a 4-wire cord: the bonding strap is removed and the green grounding lead lands on the frame screw, beside panels contrasting the existing-only 3-wire arrangement and the neutral minimum sizes.",
+          "caption": "The 4-wire hookup: strap out, green lead on the frame screw.",
+          "w": 900,
+          "h": 1200
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A 4-wire cord is installed on a dryer. What happens to the bonding strap?",
+          "choices": [
+            "Leave it — it does no harm",
+            "Remove it; the frame bonds through the green conductor",
+            "Move it to the neutral terminal",
+            "Cut the green conductor instead"
+          ],
+          "answer_index": 1,
+          "explain_plain": "With a 4-wire cord the frame connects to the equipment grounding conductor. A strap left in place ties the frame back to the neutral.",
+          "nec_ref": "250.140"
+        },
+        {
+          "question": "What is the smallest grounded conductor allowed on a kept 3-wire range circuit?",
+          "choices": [
+            "12 AWG copper",
+            "10 AWG copper",
+            "8 AWG copper",
+            "No minimum"
+          ],
+          "answer_index": 1,
+          "explain_plain": "One of the four conditions: the grounded conductor must not be smaller than 10 AWG copper or 8 AWG aluminum.",
+          "nec_ref": "250.140"
+        },
+        {
+          "question": "A 3-wire dryer circuit may stay in service only when…",
+          "choices": [
+            "The homeowner asks for it",
+            "It is an existing circuit, no grounding conductor is in the box, and all four conditions are met",
+            "The dryer is less than 10 years old",
+            "The run is under 25 ft"
+          ],
+          "answer_index": 1,
+          "explain_plain": "250.140 is an existing-circuit permission with four conditions — it never authorizes a new 3-wire installation.",
+          "nec_ref": "250.140"
+        }
+      ],
+      "code_refs": [
+        "250.140"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     }
   ],
   "toc": [

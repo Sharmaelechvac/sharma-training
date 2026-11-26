@@ -938,7 +938,90 @@
       "verified": true,
       "prev_id": "C2-210.4",
       "next_id": "C2-210.8",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "La identificación es lo que mantiene segura a la próxima persona y rápido el trabajo. En un edificio con dos sistemas, un conductor marrón y un conductor negro se ven iguales en un techo oscuro hasta que alguien los mide — conectar 277 V en una carga de 120 V, o abrir el neutro del sistema equivocado, y la gente y el equipo salen lastimados. Un código de colores publicado y un directorio honesto hacen que la identificación sobreviva a la cuadrilla que instaló el cable.",
+      "inspection_fails": [
+        "Dos sistemas de voltaje en un edificio y ningún método de identificación publicado en el tablero (210.5(C)(1)).",
+        "Conductores no puestos a tierra sin identificar por fase y por sistema donde más de un sistema de voltaje nominal alimenta el edificio.",
+        "Directorio del tablero en blanco, o con entradas como «luces» y «enchufes» que no nombran un propósito claro y específico (408.4(A)).",
+        "Circuitos re-identificados con cinta en algunas cajas y olvidados en otras, así que el código publicado no es confiable."
+      ],
+      "exam_trap": "Dos respuestas trampa viven en esta página. Primera: «210.5 exige negro, rojo, azul y marrón, naranja, amarillo». No los exige — esos colores son convención del oficio; 210.5(C)(1) exige la identificación por fase y por sistema, con el método publicado en cada tablero. Segunda: citar 210.5 por un directorio de tablero que falta. La regla del directorio es 408.4(A).",
+      "tables": [
+        {
+          "caption": "Convención de colores del oficio — conózcala, y sepa que es convención",
+          "headers": [
+            "Sistema",
+            "Colores por fase"
+          ],
+          "rows": [
+            [
+              "208Y/120 V",
+              "Negro, rojo, azul"
+            ],
+            [
+              "480Y/277 V",
+              "Marrón, naranja, amarillo"
+            ]
+          ],
+          "note": "El NEC exige la identificación por fase y por sistema, con el método publicado en cada tablero (210.5(C)(1)); no exige estos colores en particular."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-210.5-color-card.svg",
+          "alt": "Puerta de un tablero con la tarjeta de identificación publicada para dos sistemas de voltaje, 208Y/120 con colores por fase negro rojo azul y 480Y/277 con marrón naranja amarillo, sobre un directorio de circuitos llenado circuito por circuito con propósitos específicos.",
+          "caption": "La tarjeta publicada y el directorio: una identificación que la próxima cuadrilla puede leer.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un edificio se alimenta con sistemas 208Y/120 y 480Y/277. ¿Qué exige 210.5(C)(1)?",
+          "choices": [
+            "Conductores no puestos a tierra identificados por fase y por sistema, con el método publicado en cada tablero",
+            "Solo conductores negro, rojo y azul en todo el edificio",
+            "Una etiqueta solo en el medidor",
+            "Nada — la regla es solo para casas"
+          ],
+          "answer_index": 0,
+          "explain_plain": "Donde los circuitos derivados se alimentan desde más de un sistema de voltaje nominal, los conductores no puestos a tierra se identifican por fase y por sistema, y el método se publica en cada tablero de circuitos derivados.",
+          "nec_ref": "210.5(C)(1)"
+        },
+        {
+          "question": "La regla de que cada circuito en el directorio de un tablero se identifique de forma legible por su propósito claro y específico es:",
+          "choices": [
+            "210.5",
+            "408.4(A)",
+            "210.52",
+            "110.12"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La regla del directorio del tablero es 408.4(A), no 210.5 — 210.5 trata de identificar conductores por fase y por sistema.",
+          "nec_ref": "408.4(A)"
+        },
+        {
+          "question": "Marrón, naranja y amarillo es la convención del oficio para ¿qué sistema?",
+          "choices": [
+            "120/208 V",
+            "277/480 V",
+            "Sistemas de DC",
+            "Cableado de control"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Marrón, naranja y amarillo es la convención del oficio para sistemas de 277/480 V; negro, rojo y azul es la convención para 120/208 V. El NEC exige la identificación, no estos colores.",
+          "nec_ref": "210.5(C)(1)"
+        }
+      ],
+      "code_refs": [
+        "210.5(C)(1)",
+        "408.4(A)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-210.8",
@@ -2661,7 +2744,7 @@
       "section": "210.21",
       "title": "Dispositivos de salida y capacidades de tomacorrientes en un circuito",
       "plain_explanation": "Esta sección hace corresponder el dispositivo con el circuito: los portalámparas, los tomacorrientes y los equipos de cordón y enchufe no pueden cargarse más allá de sus propias capacidades, y la capacidad de un tomacorriente debe ajustarse al circuito en el que está. En un circuito de 20A con múltiples salidas, se permiten tomacorrientes dúplex de 15A porque la carga se reparte entre las salidas; un tomacorriente único en un circuito individual de 20A es un caso diferente y debe corresponder al circuito. El elemento de consulta existente trae la tabla de capacidades en forma sencilla.\n\nLa correspondencia de capacidades, de la Tabla 210.21(B)(3) — donde un circuito alimenta dos o más tomacorrientes, la capacidad del tomacorriente puede ser:\n• Circuito de 15A — tomacorrientes de no más de 15A\n• Circuito de 20A — tomacorrientes de 15A o 20A\n• Circuito de 30A — tomacorrientes de 30A\n• Circuito de 40A — tomacorrientes de 40A o 50A\n• Circuito de 50A — tomacorrientes de 50A\nUn tomacorriente único en un circuito ramal individual debe tener una capacidad no menor que la del circuito. Y lo máximo que una carga de cordón y enchufe puede tomar en un circuito de múltiples salidas (Tabla 210.21(B)(2)):\n• Circuito de 15A — 12A\n• Circuito de 20A — 16A\n• Circuito de 30A — 24A",
-      "on_the_job": "Cuando un plano pide un tomacorriente único dedicado — una nevera, un microondas, una herramienta de taller — verifique la capacidad del dispositivo contra la capacidad del circuito antes de la terminación. No deje que una caja de terminación con dispositivos de 15A decida la cuestión.",
+      "on_the_job": "Cuando un plano pide un tomacorriente único dedicado — una nevera, un microondas, una herramienta de taller — verifique la capacidad del dispositivo contra la capacidad del circuito antes de la terminación. No deje que una caja de terminación con dispositivos de 15A decida la cuestión. En la terminación de una cocina en Lake County, el circuito individual de 20A del microondas recibe un solo tomacorriente de 20A — un dúplex de 15A de la caja de terminación no cumple la correspondencia, aunque el mismo dispositivo está bien en los circuitos compartidos de tope (S-06).",
       "sharma_note": "S-06: el circuito individual de 20A del microondas va junto con esa verificación de dimensionamiento.",
       "figure_idea": "",
       "related_ids": [
@@ -2675,7 +2758,124 @@
       "next_id": "C2-210.23",
       "sharma_rule_ids": [
         "S-06"
-      ]
+      ],
+      "edition_note": "CAMBIO NEC 2023: No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Un tomacorriente es el eslabón más débil al que se conecta una carga. Si un dispositivo tiene una capacidad menor de lo que el circuito puede entregar, el dispositivo — no el breaker — se convierte en el fusible: los contactos se sobrecalientan dentro de la caja donde nadie lo ve. Hacer corresponder la capacidad del tomacorriente con el circuito, y limitar lo que una carga de cordón y enchufe puede tomar, mantiene el breaker como el dispositivo que abre primero.",
+      "inspection_fails": [
+        "Un solo tomacorriente de 15A en un circuito individual de 20A — la ubicación del microondas o la nevera.",
+        "Tomacorriente de 20A instalado en un circuito de 15A.",
+        "Carga de cordón y enchufe sobre el límite de la Tabla 210.21(B)(2), como un aparato de 16A en un circuito de 15A de múltiples salidas.",
+        "Capacidad del tomacorriente en la inspección final que no corresponde al circuito mostrado en el horario del tablero.",
+        "Portalámparas o dispositivo de salida cargado más allá de su propia capacidad."
+      ],
+      "exam_trap": "La trampa: «los tomacorrientes de 15A nunca se permiten en un circuito de 20A». Sí se permiten — donde el circuito alimenta dos o más tomacorrientes, la Tabla 210.21(B)(3) permite dispositivos de 15A o 20A. El otro lado de la trampa es ese mismo dúplex de 15A usado como el único tomacorriente en un circuito individual de 20A. Ahí debe tener una capacidad no menor que la del circuito: 20A.",
+      "tables": [
+        {
+          "caption": "Capacidad del tomacorriente en un circuito de múltiples salidas — Tabla 210.21(B)(3)",
+          "headers": [
+            "Circuito",
+            "Capacidad del tomacorriente"
+          ],
+          "rows": [
+            [
+              "15A",
+              "No más de 15A"
+            ],
+            [
+              "20A",
+              "15A o 20A"
+            ],
+            [
+              "30A",
+              "30A"
+            ],
+            [
+              "40A",
+              "40A o 50A"
+            ],
+            [
+              "50A",
+              "50A"
+            ]
+          ]
+        },
+        {
+          "caption": "Lo máximo que una carga de cordón y enchufe puede tomar — Tabla 210.21(B)(2)",
+          "headers": [
+            "Circuito",
+            "Carga máx."
+          ],
+          "rows": [
+            [
+              "15A",
+              "12A"
+            ],
+            [
+              "20A",
+              "16A"
+            ],
+            [
+              "30A",
+              "24A"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-210.21-rating-match.svg",
+          "alt": "Dos tablas dibujadas como gráficos: las capacidades de tomacorriente permitidas en cada tamaño de circuito donde se alimentan dos o más tomacorrientes, lo máximo que una carga de cordón y enchufe puede tomar, y la advertencia de que un solo tomacorriente en un circuito individual debe tener una capacidad al menos igual a la del circuito.",
+          "caption": "Haga corresponder el dispositivo con el circuito — casos de múltiples salidas y de un solo tomacorriente.",
+          "w": 900,
+          "h": 1400
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un circuito de 20A alimenta cuatro tomacorrientes de tope. ¿Qué capacidades de tomacorriente se permiten?",
+          "choices": [
+            "Solo 20A",
+            "15A o 20A",
+            "Solo 15A",
+            "30A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Con dos o más tomacorrientes en el circuito, la Tabla 210.21(B)(3) permite dispositivos de 15A o 20A en un circuito de 20A.",
+          "nec_ref": "Tabla 210.21(B)(3)"
+        },
+        {
+          "question": "Un solo tomacorriente en un circuito ramal individual de 20A debe tener una capacidad de al menos…",
+          "choices": [
+            "15A",
+            "20A",
+            "25A",
+            "No aplica un mínimo"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Un solo tomacorriente en un circuito ramal individual debe tener una capacidad no menor que la del circuito — así que 20A, no 15A.",
+          "nec_ref": "210.21"
+        },
+        {
+          "question": "En un circuito de 20A de múltiples salidas, la carga individual de cordón y enchufe más grande es…",
+          "choices": [
+            "20A",
+            "18A",
+            "16A",
+            "12A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La Tabla 210.21(B)(2) limita una carga de cordón y enchufe a 16A en un circuito de 20A (12A en 15A, 24A en 30A).",
+          "nec_ref": "Tabla 210.21(B)(2)"
+        }
+      ],
+      "code_refs": [
+        "210.21",
+        "Table 210.21(B)(2)",
+        "Table 210.21(B)(3)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-210.23",
@@ -2683,8 +2883,8 @@
       "article": "210",
       "section": "210.23",
       "title": "Cuánta carga puede llevar un circuito ramal",
-      "plain_explanation": "Esta sección limita lo que puede ponerse en un circuito según su capacidad. Cualquier equipo de utilización único conectado con cordón y enchufe que no esté fijo en su lugar no puede tomar más del 80 por ciento de la capacidad del circuito derivado (12A en 15A, 16A en 20A) en cualquier circuito derivado de 15A o 20A, y el equipo fijo en su lugar tiene su propio límite cuando comparte un circuito con iluminación o cargas portátiles. Las cargas de motores y de aparatos específicos se remiten a sus propios artículos, en lugar de juzgarse por un porcentaje general.\n\nLos porcentajes en amperios:\n• Un aparato de cordón y enchufe que no está fijo en su lugar, en un circuito que también sirve a otras salidas — no más del 80 por ciento de la capacidad del circuito: 12A en un circuito de 15A, 16A en un circuito de 20A\n• Equipos fijos en su lugar que comparten un circuito con salidas de alumbrado o cargas portátiles de cordón y enchufe — no más del 50 por ciento de la capacidad del circuito: 10A en un circuito de 20A\nUn circuito que sirve solo a su propio equipo fijo se juzga por el artículo y la placa del propio equipo, no por estos límites de circuito compartido. 7.5A en un circuito de 15A, 10A en un circuito de 20A\n\nCAMBIO NEC 2023:\n• 210.23: Solo tres cosas caben en un circuito de 10 amps: iluminación, un ventilador de baño o lavandería de vivienda en las luces de ese cuarto, y una chimenea de gas sola. Los tomacorrientes, el equipo de lavandería, los abridores de puerta de garaje y otros aparatos fijos quedan fuera. Las salidas de iluminación son el trabajo principal de un circuito derivado de 10 amps.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Haga el cálculo de porcentajes para las cargas grandes que se enchufan: calentadores portátiles, unidades de ventana y equipos de taller son donde un circuito compartido de 20A se pasa sin darse cuenta. Si una carga está fija en su lugar y comparte el circuito, revise también el segundo límite.",
+      "plain_explanation": "Esta sección limita lo que puede ponerse en un circuito según su capacidad. Cualquier equipo de utilización único conectado con cordón y enchufe que no esté fijo en su lugar no puede tomar más del 80 por ciento de la capacidad del circuito derivado (12A en 15A, 16A en 20A) en cualquier circuito derivado de 15A o 20A, y el equipo fijo en su lugar tiene su propio límite cuando comparte un circuito con iluminación o cargas portátiles. Las cargas de motores y de aparatos específicos se remiten a sus propios artículos, en lugar de juzgarse por un porcentaje general.\n\nLos porcentajes en amperios:\n• Un aparato de cordón y enchufe que no está fijo en su lugar, en un circuito que también sirve a otras salidas — no más del 80 por ciento de la capacidad del circuito: 12A en un circuito de 15A, 16A en un circuito de 20A\n• Equipos fijos en su lugar que comparten un circuito con salidas de alumbrado o cargas portátiles de cordón y enchufe — no más del 50 por ciento de la capacidad del circuito: 7.5A en un circuito de 15A, 10A en un circuito de 20A\nUn circuito que sirve solo a su propio equipo fijo se juzga por el artículo y la placa del propio equipo, no por estos límites de circuito compartido.",
+      "on_the_job": "Haga el cálculo de porcentajes para las cargas grandes que se enchufan: calentadores portátiles, unidades de ventana y equipos de taller son donde un circuito compartido de 20A se pasa sin darse cuenta. Si una carga está fija en su lugar y comparte el circuito, revise también el segundo límite. Haga el número con el calentador: un calentador portátil de 1,500W toma 12.5A a 120V. Solo en un circuito de 20A cabe en el límite de 16A; en un circuito de 15A ya pasa el límite de 12A antes de que se enchufe cualquier otra cosa.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -2705,7 +2905,100 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/210-23",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 210.23: Solo tres cosas caben en un circuito de 10 amps: iluminación, un ventilador de baño o lavandería de vivienda en las luces de ese cuarto, y una chimenea de gas sola. Los tomacorrientes, el equipo de lavandería, los abridores de puerta de garaje y otros aparatos fijos quedan fuera. Las salidas de iluminación son el trabajo principal de un circuito derivado de 10 amps.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Las cargas que se enchufan son las que nadie calcula. Un calentador portátil o una unidad de ventana puede quedar a plena carga por horas, y en un circuito compartido se suma a todo lo demás enchufado ese día. El límite del 80 por ciento deja margen para que una carga portátil no cocine el circuito por sí sola; el límite del 50 por ciento en el equipo fijo protege a las cargas de alumbrado y portátiles que comparten su circuito.",
+      "inspection_fails": [
+        "Calentador portátil que toma más del 80 por ciento de la capacidad en un circuito compartido.",
+        "Equipo fijo en su lugar sobre el 50 por ciento de la capacidad en un circuito compartido con alumbrado.",
+        "Dos cargas grandes de enchufe apiladas en un solo circuito de 20A más allá de su capacidad.",
+        "Carga de motor juzgada por la regla del 80 por ciento en lugar de su propio artículo."
+      ],
+      "exam_trap": "La trampa: usar el número del 80 por ciento para todo. El equipo fijo en su lugar que comparte un circuito con alumbrado o cargas portátiles tiene un límite del 50 por ciento, no del 80 — 10A en un circuito de 20A, 7.5A en uno de 15A. El 80 por ciento es solo para la carga de cordón y enchufe que no está fija en su lugar.",
+      "tables": [
+        {
+          "caption": "Los dos límites, en amperios",
+          "headers": [
+            "Circuito",
+            "Portátil, 80%",
+            "Fijo + compartido, 50%"
+          ],
+          "rows": [
+            [
+              "15A",
+              "12A",
+              "7.5A"
+            ],
+            [
+              "20A",
+              "16A",
+              "10A"
+            ]
+          ],
+          "note": "Un circuito que sirve solo a su propio equipo fijo se juzga por el artículo y la placa del equipo."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-210.23-load-caps.svg",
+          "alt": "Gráfico de barras de los límites de carga de 210.23: una barra de circuito de 15A marcada en 12A para cargas portátiles y 7.5A para equipo fijo que comparte el circuito, y una barra de 20A marcada en 16A y 10A.",
+          "caption": "Dos límites por circuito: 80% para una carga portátil, 50% para el equipo fijo que comparte.",
+          "w": 900,
+          "h": 1250
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Cuál es la carga única de cordón y enchufe, no fija en su lugar, más grande permitida en un circuito ramal de 20A?",
+          "choices": [
+            "20A",
+            "16A",
+            "10A",
+            "12A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El 80 por ciento de 20A es 16A — el límite para una carga portátil de cordón y enchufe.",
+          "nec_ref": "210.23(A)(1)"
+        },
+        {
+          "question": "Un equipo fijo en su lugar comparte un circuito de 15A con salidas de alumbrado. Su límite es…",
+          "choices": [
+            "12A",
+            "15A",
+            "7.5A",
+            "10A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Compartir con alumbrado o cargas portátiles limita el equipo fijo al 50 por ciento: 7.5A en un circuito de 15A.",
+          "nec_ref": "210.23(A)(2)"
+        },
+        {
+          "question": "Una carga de motor en un circuito ramal se juzga por…",
+          "choices": [
+            "La regla del 80 por ciento",
+            "La regla del 50 por ciento",
+            "Su propio artículo y su placa",
+            "La carga de alumbrado"
+          ],
+          "answer_index": 2,
+          "explain_plain": "210.23 remite las cargas de motores y aparatos específicos a sus propios artículos, no a los porcentajes generales.",
+          "nec_ref": "210.23"
+        }
+      ],
+      "code_refs": [
+        "210.23",
+        "210.23(A)(1)",
+        "210.23(A)(2)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "210.23(A)(1) fija el límite del 80 por ciento para el equipo de cordón y enchufe no fijo en su lugar; 210.23(A)(2) fija el límite del 50 por ciento para el equipo fijo en su lugar que comparte un circuito",
+          "source": "EC&M Code Quiz of the Day: Rating Requirement for Equipment Fastened in Place (quotes 210.23(A)(2))",
+          "url": "https://www.ecmweb.com/code-quiz-of-day/article/20899310/rating-requirement-for-equipment-fastened-in-place"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C2-210.52",
@@ -4435,7 +4728,7 @@
       "section": "215.3",
       "title": "Protección contra sobrecorriente del alimentador",
       "plain_explanation": "Un alimentador está protegido por un dispositivo contra sobrecorriente con capacidad no mayor que la ampacidad de sus conductores, sujeto a los permisos del Artículo 240 — incluido el permiso de la capacidad estándar inmediata superior donde aplica y las reglas de derivación (tap) donde no aplica. Por lo tanto, el breaker al inicio del alimentador es primero una cuestión de protección del conductor y segundo una cuestión de carga. Donde un alimentador continúa hacia un subtablero, el conductor de puesta a tierra del equipo y el tratamiento del neutro en ese subtablero son cuestiones del Artículo 250, cubiertas más adelante en este capítulo.\n\nEl conductor de puesta a tierra de equipo del alimentador es parte del alimentador: se dimensiona de la Tabla 250.122 según la capacidad de este dispositivo de sobrecorriente y se instala con los conductores del alimentador. Donde el alimentador sirve a un edificio separado, el arreglo de puesta a tierra en ese edificio sigue 250.32 — la capacidad de este dispositivo sigue fijando el tamaño del conductor de puesta a tierra de equipo. Donde un alimentador sirve cargas continuas, o una mezcla de cargas continuas y no continuas, la capacidad del dispositivo de sobrecorriente no puede ser menor que la carga no continua más el 125 por ciento de la carga continua (a menos que el conjunto con su OCPD esté listado para operación al 100 por ciento). La protección en sí sigue la Parte I del Artículo 240.",
-      "on_the_job": "Compare tres números antes de energizar: la ampacidad del conductor del alimentador, la capacidad del breaker y la regla del Artículo 240 en la que se apoya. Si el número del medio es mayor que el primero, nombre el permiso en el archivo del trabajo.",
+      "on_the_job": "Compare tres números antes de energizar: la ampacidad del conductor del alimentador, la capacidad del breaker y la regla del Artículo 240 en la que se apoya. Si el número del medio es mayor que el primero, nombre el permiso en el archivo del trabajo. Verificación con números: un alimentador que lleva 20 A de carga no continua y 40 A de carga continua necesita un dispositivo de sobrecorriente de al menos 20 + (125% de 40) = 70 A, sobre conductores que la regla del Artículo 240 en la que usted se apoya realmente protege.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -4446,7 +4739,99 @@
       "verified": true,
       "prev_id": "C2-215.2",
       "next_id": "C2-ART-220",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Un breaker de alimentador tiene un trabajo principal: abrir antes de que los conductores que protege se sobrecalienten. Si dimensiona el breaker según la carga, o según la barra del tablero que alimenta, el cable se convierte en el fusible — el aislamiento se cocina dentro del tubo y las paredes mucho antes de que alguien lo huela. La regla de carga continua existe porque un dispositivo que lleva carga por tres horas o más se calienta él mismo; el factor del 125 por ciento lo protege de daño térmico y disparos molestos.",
+      "inspection_fails": [
+        "Breaker del alimentador mayor que la ampacidad del conductor, sin ningún permiso del Artículo 240 que aplique.",
+        "Carga continua llevada al 100 por ciento de un breaker estándar — sin aplicar el factor del 125 por ciento (215.3).",
+        "Conductor de puesta a tierra de equipo dimensionado desde el tamaño del conductor en vez de desde la capacidad del dispositivo de sobrecorriente (Tabla 250.122).",
+        "Breaker del alimentador igualado a la capacidad de la barra del subtablero en vez de a los conductores del alimentador."
+      ],
+      "exam_trap": "La respuesta trampa dimensiona el breaker del alimentador solo desde el cálculo de carga — o desde la capacidad de la barra del subtablero que alimenta. 215.3 protege conductores: el dispositivo tiene capacidad no mayor que la ampacidad de los conductores del alimentador, y solo los permisos del Artículo 240 dejan subir por encima. Una barra de tablero de 200 A no hace un alimentador de 200 A, y la respuesta por carga todavía debe pasar la revisión del 125 por ciento por carga continua.",
+      "tables": [
+        {
+          "caption": "215.3 — qué fija qué",
+          "headers": [
+            "Pregunta",
+            "Respuesta"
+          ],
+          "rows": [
+            [
+              "Capacidad del breaker",
+              "No mayor que la ampacidad del conductor del alimentador, aparte de los permisos del Artículo 240"
+            ],
+            [
+              "Cargas continuas",
+              "OCPD al menos la carga no continua más el 125% de la continua"
+            ],
+            [
+              "Tamaño del EGC del alimentador",
+              "Tabla 250.122, según la capacidad de este dispositivo de sobrecorriente"
+            ],
+            [
+              "Edificio separado",
+              "Puesta a tierra según 250.32; el EGC se sigue dimensionando por este dispositivo"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-215.3-three-numbers.svg",
+          "alt": "Diagrama de flujo para la protección contra sobrecorriente del alimentador: empiece con la ampacidad del conductor del alimentador, fije el dispositivo de sobrecorriente no mayor que esa ampacidad con solo los permisos del Artículo 240 por encima, luego revise las cargas continuas al 125 por ciento, terminando en un ejemplo de 20 A no continuos más 40 A continuos que llega a un dispositivo mínimo de 70 A.",
+          "caption": "Tres números, en orden: ampacidad, breaker, y la regla en la que usted se apoya.",
+          "w": 900,
+          "h": 1450
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un dispositivo de sobrecorriente de alimentador tiene capacidad no mayor que ¿qué, primero?",
+          "choices": [
+            "La carga conectada",
+            "La ampacidad de los conductores del alimentador",
+            "La capacidad del tablero que alimenta",
+            "El tamaño del transformador de la empresa eléctrica"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El breaker protege los conductores: su capacidad no es mayor que la ampacidad de ellos, sujeto a los permisos del Artículo 240.",
+          "nec_ref": "215.3"
+        },
+        {
+          "question": "Un alimentador lleva 20 A no continuos y 40 A de carga continua. ¿Dispositivo de sobrecorriente mínimo (que no sea un conjunto listado al 100%)?",
+          "choices": [
+            "60 A",
+            "70 A",
+            "80 A",
+            "100 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "20 A más el 125 por ciento de 40 A (50 A) son 70 A. El dispositivo no puede ser menor que eso.",
+          "nec_ref": "215.3"
+        },
+        {
+          "question": "El conductor de puesta a tierra de equipo del alimentador se dimensiona de la Tabla 250.122 según:",
+          "choices": [
+            "El tamaño del conductor del alimentador",
+            "La capacidad del dispositivo de sobrecorriente del alimentador",
+            "La carga conectada",
+            "El número de espacios del tablero"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La Tabla 250.122 basa el conductor de puesta a tierra de equipo en la capacidad del dispositivo de sobrecorriente antes del alimentador — este breaker.",
+          "nec_ref": "Tabla 250.122"
+        }
+      ],
+      "code_refs": [
+        "215.3",
+        "240.4",
+        "Table 250.122",
+        "250.32"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-ART-220",
@@ -4644,8 +5029,8 @@
       "article": "220",
       "section": "220.12",
       "title": "Carga general de iluminación por área de piso",
-      "plain_explanation": "En el NEC 2020, 220.12 y la Tabla 220.12 fijan la carga mínima de alumbrado general para ocupaciones que NO son vivienda: la carga unitaria de la tabla (volt-amperios por pie cuadrado) por el área de piso calculada bajo 220.11 (dimensiones exteriores). Los valores de la tabla ya incluyen el multiplicador de carga continua del 125 por ciento (nota de la tabla), así que no lo aplique de nuevo. Las viviendas ya no están en esta tabla: los 3 VA por pie cuadrado de vivienda son 220.14(J).\n\nCargas unitarias de la Tabla 220.12 (VA por sq ft):\n• Instalación automotriz — 1.5\n• Centro de convenciones — 1.4\n• Palacio de justicia — 1.4\n• Dormitorio — 1.5\n• Centro de ejercicios — 1.4\n• Estación de bomberos — 1.3\n• Gimnasio (armerías, auditorios) — 1.7\n• Clínica de salud — 1.6\n• Hospital — 1.6\n• Hotel/motel, incluidos edificios de apartamentos sin cocina para inquilinos (cuartos de alojamiento) — 1.7\n• Biblioteca — 1.5\n• Instalación de manufactura (lofts comerciales industriales) — 2.2\n• Cine — 1.6\n• Museo — 1.6\n• Oficina (bancos) — 1.3\n• Garaje de estacionamiento (garajes comerciales de almacenamiento) — 0.3\n• Penitenciaría — 1.2\n• Teatro de artes escénicas — 1.5\n• Estación de policía — 1.3\n• Oficina de correos — 1.6\n• Instalación religiosa — 2.2\n• Restaurante (clubes) — 1.5\n• Comercio minorista (tiendas, barberías, salones de belleza) — 1.9\n• Escuela/universidad — 3\n• Arena deportiva — 3\n• Ayuntamiento — 1.4\n• Transporte — 1.2\n• Almacén — 1.2\n• Taller — 1.7\nLa carga de tomacorrientes de oficinas y bancos va por separado: 220.14(K), el mayor entre 1 VA por sq ft o el total de 180 VA por salida después de la demanda de 220.44.\n\nCAMBIO NEC 2023:\n• 220.42(A): La regla de carga unitaria para no viviendas se movió de 220.12 a 220.42(A) (Tabla 220.42(A)); los antiguos factores de demanda de 220.42 pasaron a ser 220.45. Escuela/universidad y arena deportiva bajaron de 3 a 1.5 VA/ft²; todos los demás valores de ocupación se mantuvieron iguales. La nota informativa ahora supone un factor de potencia del 80%.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "En un trabajo comercial, escoja la fila de la ocupación, multiplíquela por el área de piso de dimensiones exteriores, y deténgase ahí: el 125 por ciento ya está en el número. En una casa, use 220.14(J) (3 VA por sq ft), no esta tabla.",
+      "plain_explanation": "En el NEC 2020, 220.12 y la Tabla 220.12 fijan la carga mínima de alumbrado general para ocupaciones que NO son vivienda: la carga unitaria de la tabla (volt-amperios por pie cuadrado) por el área de piso calculada bajo 220.11 (dimensiones exteriores). Los valores de la tabla ya incluyen el multiplicador de carga continua del 125 por ciento (nota de la tabla), así que no lo aplique de nuevo. Las viviendas ya no están en esta tabla: los 3 VA por pie cuadrado de vivienda son 220.14(J). La tabla completa está abajo; el gráfico muestra los mismos números.\n\nCargas unitarias de la Tabla 220.12 (VA por sq ft):\n• Instalación automotriz — 1.5\n• Centro de convenciones — 1.4\n• Palacio de justicia — 1.4\n• Dormitorio — 1.5\n• Centro de ejercicios — 1.4\n• Estación de bomberos — 1.3\n• Gimnasio (armerías, auditorios) — 1.7\n• Clínica de salud — 1.6\n• Hospital — 1.6\n• Hotel/motel, incluidos edificios de apartamentos sin cocina para inquilinos (cuartos de alojamiento) — 1.7\n• Biblioteca — 1.5\n• Instalación de manufactura (lofts comerciales industriales) — 2.2\n• Cine — 1.6\n• Museo — 1.6\n• Oficina (bancos) — 1.3\n• Garaje de estacionamiento (garajes comerciales de almacenamiento) — 0.3\n• Penitenciaría — 1.2\n• Teatro de artes escénicas — 1.5\n• Estación de policía — 1.3\n• Oficina de correos — 1.6\n• Instalación religiosa — 2.2\n• Restaurante (clubes) — 1.5\n• Comercio minorista (tiendas, barberías, salones de belleza) — 1.9\n• Escuela/universidad — 3\n• Arena deportiva — 3\n• Ayuntamiento — 1.4\n• Transporte — 1.2\n• Almacén — 1.2\n• Taller — 1.7\nLa carga de tomacorrientes de oficinas y bancos va por separado: 220.14(K), el mayor entre 1 VA por sq ft o el total de 180 VA por salida después de la demanda de 220.44.",
+      "on_the_job": "Un local comercial minorista de 6,000 sq ft en una plaza de Winter Garden: el comercio minorista lee 1.9 VA por sq ft en la tabla, así que la carga general de alumbrado es 6,000 × 1.9 = 11,400 VA — y usted se detiene ahí, porque el multiplicador de carga continua del 125 por ciento ya está en el 1.9. La carga de tomacorrientes es una línea aparte: oficinas y bancos usan 220.14(K), y las mismas reglas de tomacorrientes se calculan aparte del alumbrado. Si el mismo equipo hace el trabajo en bruto de la casa modelo de al lado, nada de esta tabla aplica: la casa es 3 VA por sq ft bajo 220.14(J).",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -4666,7 +5051,178 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/220-42",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 220.42(A): La regla de carga unitaria para no viviendas se movió de 220.12 a 220.42(A) (Tabla 220.42(A)); los antiguos factores de demanda de 220.42 pasaron a ser 220.45. Escuela/universidad y arena deportiva bajaron de 3 a 1.5 VA/ft²; todos los demás valores de ocupación se mantuvieron iguales. La nota informativa ahora supone un factor de potencia del 80%.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "El alumbrado es la única carga que funciona durante horas a plena demanda, en toda ocupación, todos los días. Las cargas unitarias obligan a dimensionar el alimentador y la acometida para esa carga real y continua antes de contar tomacorrientes o equipos, para que las luces de un edificio nunca se conviertan en la carga que la acometida no puede llevar.",
+      "inspection_fails": [
+        "Carga de alumbrado calculada con el multiplicador del 125 por ciento aplicado dos veces — el valor de la tabla ya lo incluye.",
+        "Carga de alumbrado de vivienda tomada de la Tabla 220.12 en lugar de 220.14(J) a 3 VA por sq ft.",
+        "Área de piso calculada con dimensiones interiores; 220.11 exige dimensiones exteriores.",
+        "Carga de tomacorrientes de oficina incluida en el número de alumbrado en lugar de calcularse por separado bajo 220.14(K)."
+      ],
+      "exam_trap": "La respuesta trampa duplica la carga continua: el candidato multiplica el valor de la tabla por 125 por ciento una segunda vez. La nota de la Tabla 220.12 ya lo incluye. La segunda trampa es buscar la fila de vivienda: no hay ninguna en 2020 — las viviendas se movieron a 220.14(J).",
+      "tables": [
+        {
+          "caption": "Tabla 220.12: carga unitaria por ocupación (NEC 2020)",
+          "headers": [
+            "Ocupación",
+            "VA/sq ft",
+            "Ocupación",
+            "VA/sq ft"
+          ],
+          "rows": [
+            [
+              "Instalación automotriz",
+              "1.5",
+              "Biblioteca",
+              "1.5"
+            ],
+            [
+              "Centro de convenciones",
+              "1.4",
+              "Instalación de manufactura",
+              "2.2"
+            ],
+            [
+              "Palacio de justicia",
+              "1.4",
+              "Cine",
+              "1.6"
+            ],
+            [
+              "Dormitorio",
+              "1.5",
+              "Museo",
+              "1.6"
+            ],
+            [
+              "Centro de ejercicios",
+              "1.4",
+              "Oficina (bancos)",
+              "1.3"
+            ],
+            [
+              "Estación de bomberos",
+              "1.3",
+              "Garaje de estacionamiento",
+              "0.3"
+            ],
+            [
+              "Gimnasio",
+              "1.7",
+              "Penitenciaría",
+              "1.2"
+            ],
+            [
+              "Clínica de salud",
+              "1.6",
+              "Teatro de artes escénicas",
+              "1.5"
+            ],
+            [
+              "Hospital",
+              "1.6",
+              "Estación de policía",
+              "1.3"
+            ],
+            [
+              "Hotel/motel",
+              "1.7",
+              "Oficina de correos",
+              "1.6"
+            ],
+            [
+              "Instalación religiosa",
+              "2.2",
+              "Ayuntamiento",
+              "1.4"
+            ],
+            [
+              "Restaurante (clubes)",
+              "1.5",
+              "Transporte",
+              "1.2"
+            ],
+            [
+              "Comercio minorista",
+              "1.9",
+              "Almacén",
+              "1.2"
+            ],
+            [
+              "Escuela/universidad",
+              "3",
+              "Taller",
+              "1.7"
+            ],
+            [
+              "Arena deportiva",
+              "3",
+              "",
+              ""
+            ]
+          ],
+          "note": "Los valores ya incluyen el multiplicador de carga continua del 125% — no lo aplique de nuevo. Los nombres entre paréntesis de la tabla (armerías y auditorios bajo gimnasio, clubes bajo restaurante, cuartos de alojamiento bajo hotel/motel, tiendas y salones bajo comercio minorista) están abreviados aquí; verifique la tabla impresa."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-220.12-unit-loads.svg",
+          "alt": "Gráfico de barras horizontales de las cargas unitarias de la Tabla 220.12 del NEC 2020 en VA por pie cuadrado: escuela/universidad y arena deportiva en 3, manufactura e instalación religiosa en 2.2, hasta garaje de estacionamiento en 0.3, con una nota roja de que el NEC 2023 baja escuela y arena a 1.5.",
+          "caption": "Cargas unitarias de la Tabla 220.12 — el 125% ya está incluido.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Una escuela de 4,000 sq ft se calcula bajo el NEC 2020. ¿Cuál es la carga general de alumbrado de la Tabla 220.12?",
+          "choices": [
+            "6,000 VA",
+            "12,000 VA",
+            "15,000 VA",
+            "4,000 VA"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Escuela/universidad lee 3 VA por sq ft en la tabla de 2020: 4,000 × 3 = 12,000 VA. La bajada a 1.5 es un cambio de 2023.",
+          "nec_ref": "Tabla 220.12"
+        },
+        {
+          "question": "¿De dónde sale la carga general de alumbrado de una vivienda en el NEC 2020?",
+          "choices": [
+            "Tabla 220.12",
+            "220.14(J), 3 VA por sq ft",
+            "Factores de demanda de 220.42",
+            "Tabla 220.42(A)"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Las viviendas no están en la Tabla 220.12 en 2020; 220.14(J) fija 3 VA por sq ft.",
+          "nec_ref": "220.14(J)"
+        },
+        {
+          "question": "El valor de la Tabla 220.12 para una oficina es 1.3 VA por sq ft. ¿Qué hace con el multiplicador de carga continua del 125 por ciento?",
+          "choices": [
+            "Multiplicar por 125 por ciento",
+            "Nada — ya está incluido",
+            "Sumar 125 VA por circuito",
+            "Aplicarlo solo a tomacorrientes"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La nota de la tabla incluye el 125 por ciento en los valores listados.",
+          "nec_ref": "Tabla 220.12, nota"
+        }
+      ],
+      "code_refs": [
+        "220.11",
+        "220.12",
+        "Table 220.12",
+        "220.14(J)",
+        "220.14(K)",
+        "220.44"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-220.14",
@@ -5297,8 +5853,8 @@
       "article": "220",
       "section": "220.61",
       "title": "La carga del neutro — y la regla del 70 por ciento",
-      "plain_explanation": "El conductor puesto a tierra (neutro) de un alimentador o acometida solo lleva la carga desbalanceada — la carga mayor conectada entre el neutro y cualquier conductor no puesto a tierra. Esta sección permite entonces demanda sobre esa carga del neutro:\n• La porción de la carga del neutro proveniente de cargas de línea a neutro — los primeros 200A cuentan al 100 por ciento, y cualquier porción sobre 200A cuenta al 70 por ciento\n• La porción del neutro de las cargas de estufa y secadora puede tomarse al 70 por ciento (los valores de demanda de estufa y secadora en sí vienen de 220.55 y 220.54)\n• No se permite reducción para el neutro de un sistema estrella trifásico de 4 hilos que alimenta cargas no lineales — el alumbrado de descarga, los equipos electrónicos y similares pueden cargar un neutro más allá del desbalance, y el paso del 70 por ciento no aplica ahí No se permite reducción en el neutro de un circuito de 3 hilos formado por dos conductores no puestos a tierra y el neutro de un sistema estrella trifásico de 4 hilos (220.61(C)(1)), ni en la porción formada por cargas no lineales en un estrella trifásico de 4 hilos (220.61(C)(2)). El paso del 70 por ciento sobre 200A aplica solo a la porción de la carga desbalanceada que excede 200 amperios (220.61(B)(2)).",
-      "on_the_job": "En una acometida grande de casa, el neutro puede legítimamente salir menor que los conductores no puestos a tierra — pero solo por esta aritmética, escrita en el cálculo en el archivo del trabajo. Si el cálculo no muestra el paso de 200A y el paso del 70 por ciento, el neutro menor es una suposición, no un diseño.",
+      "plain_explanation": "El conductor puesto a tierra (neutro) de un alimentador o acometida solo lleva la carga desbalanceada — la carga mayor conectada entre el neutro y cualquier conductor no puesto a tierra. Esta sección permite entonces demanda sobre esa carga del neutro:\n• La porción de la carga del neutro proveniente de cargas de línea a neutro — los primeros 200A cuentan al 100 por ciento, y cualquier porción sobre 200A cuenta al 70 por ciento\n• La porción del neutro de las cargas de estufa y secadora puede tomarse al 70 por ciento (los valores de demanda de estufa y secadora en sí vienen de 220.55 y 220.54)\n• No se permite reducción para el neutro de un sistema estrella trifásico de 4 hilos que alimenta cargas no lineales — el alumbrado de descarga, los equipos electrónicos y similares pueden cargar un neutro más allá del desbalance, y el paso del 70 por ciento no aplica ahí.\n• No se permite reducción en el neutro de un circuito de 3 hilos formado por dos conductores no puestos a tierra y el neutro de un sistema estrella trifásico de 4 hilos (220.61(C)(1)), ni en la porción formada por cargas no lineales en un estrella trifásico de 4 hilos (220.61(C)(2)).\nEl paso del 70 por ciento sobre 200A aplica solo a la porción de la carga desbalanceada que excede 200 amperios (220.61(B)(2)).",
+      "on_the_job": "En una acometida grande de casa, el neutro puede legítimamente salir menor que los conductores no puestos a tierra — pero solo por esta aritmética, escrita en el cálculo en el archivo del trabajo. Si el cálculo no muestra el paso de 200A y el paso del 70 por ciento, el neutro menor es una suposición, no un diseño. Ejemplo práctico: una acometida grande de casa calcula una carga desbalanceada del neutro de 300A. Los primeros 200A cuentan completos; los 100A restantes cuentan al 70 por ciento, o 70A. El neutro se dimensiona para 200 + 70 = 270A, como se dibuja arriba — no para 300A, y no para el 70 por ciento de los 300A completos.",
       "sharma_note": "",
       "figure_idea": "Una barra de carga del neutro dividida en 200A: el primer bloque marcado 100 por ciento, el resto marcado 70 por ciento, alimentando el tamaño del conductor neutro.",
       "related_ids": [
@@ -5310,7 +5866,112 @@
       "verified": true,
       "prev_id": "C2-220.55",
       "next_id": "C2-220.82",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios del 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "En un sistema balanceado, las corrientes del neutro se cancelan, así que el neutro solo lleva lo que no se cancela. Dimensionarlo para la carga completa de fase desperdicia cobre; dimensionarlo por debajo del desbalance real lo sobrecalienta. Los pasos de demanda reconocen la diversidad que aparece en acometidas grandes, y las prohibiciones de (C) existen porque las corrientes armónicas de las cargas no lineales se suman en el neutro en lugar de cancelarse.",
+      "inspection_fails": [
+        "Neutro reducido al 70 por ciento en toda la carga en lugar de solo la porción sobre 200A.",
+        "Reducción del neutro tomada en un alimentador estrella de 4 hilos que sirve cargas no lineales — alumbrado LED de oficina y cargas de computadoras (220.61(C)(2)).",
+        "Neutro menor instalado sin ningún cálculo de carga en el archivo del trabajo que muestre los pasos de 200A y del 70 por ciento.",
+        "Neutro de un circuito de 3 hilos tomado de un sistema estrella de 4 hilos reducido por debajo del límite de (C)(1)."
+      ],
+      "exam_trap": "La respuesta incorrecta común toma el 70 por ciento de toda la carga del neutro. El 70 por ciento aplica solo a la porción sobre 200A — los primeros 200A siempre cuentan al 100 por ciento. La segunda trampa es aplicar la reducción al neutro de un sistema estrella que alimenta controladores LED y computadoras: 220.61(C) lo prohíbe.",
+      "tables": [
+        {
+          "caption": "Pasos de demanda del neutro (220.61)",
+          "headers": [
+            "Porción de la carga del neutro",
+            "Cuenta al",
+            "Regla"
+          ],
+          "rows": [
+            [
+              "Primeros 200A de carga desbalanceada",
+              "100%",
+              "220.61(B)"
+            ],
+            [
+              "Porción sobre 200A",
+              "70%",
+              "220.61(B)(2)"
+            ],
+            [
+              "Porciones del neutro de estufa y secadora",
+              "70%",
+              "Valores de 220.55 / 220.54"
+            ],
+            [
+              "Porción no lineal, estrella de 4 hilos",
+              "Sin reducción",
+              "220.61(C)(2)"
+            ],
+            [
+              "Circuito de 3 hilos de un estrella de 4 hilos",
+              "Sin reducción",
+              "220.61(C)(1)"
+            ]
+          ],
+          "note": "La carga del neutro en sí es el desbalance máximo: la carga mayor entre el neutro y cualquier conductor no puesto a tierra."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-220.61-neutral-bar.svg",
+          "alt": "Barra que muestra una carga desbalanceada del neutro de 300 A dividida en 200 A: los primeros 200 A cuentan al 100 por ciento, los 100 A siguientes al 70 por ciento, dando una carga del neutro de 270 A, con notas rojas para los dos casos donde no se permite reducción.",
+          "caption": "El paso de 200 A: 100% primero, 70% solo en el excedente.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "La carga desbalanceada del neutro de un alimentador calcula 300A. Después de los pasos de demanda de 220.61, el neutro se dimensiona para:",
+          "choices": [
+            "300A",
+            "210A",
+            "270A",
+            "200A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Primeros 200A al 100 por ciento, 100A restantes al 70 por ciento = 70A; 200 + 70 = 270A.",
+          "nec_ref": "220.61(B)(2)"
+        },
+        {
+          "question": "¿Qué carga del neutro NO puede reducirse bajo 220.61?",
+          "choices": [
+            "Porción del neutro de la estufa",
+            "Porción del neutro de la secadora",
+            "Porción de cargas no lineales en un estrella de 4 hilos",
+            "Porción sobre 200A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "220.61(C)(2) no permite reducción para la porción formada por cargas no lineales en un sistema estrella trifásico de 4 hilos.",
+          "nec_ref": "220.61(C)(2)"
+        },
+        {
+          "question": "La carga del neutro de un alimentador se basa en:",
+          "choices": [
+            "La suma de todas las cargas de fase",
+            "La carga mayor entre el neutro y cualquier conductor no puesto a tierra",
+            "El 70 por ciento de la capacidad de la acometida",
+            "La carga de fase menor"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El neutro solo lleva la carga desbalanceada — la máxima conectada entre el neutro y un conductor no puesto a tierra.",
+          "nec_ref": "220.61(A)"
+        }
+      ],
+      "code_refs": [
+        "220.61(A)",
+        "220.61(B)(2)",
+        "220.61(C)(1)",
+        "220.61(C)(2)",
+        "220.54",
+        "220.55"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-220.82",
@@ -5472,7 +6133,7 @@
       "article": "220",
       "section": "220.82(C)",
       "title": "Método opcional — calefacción y enfriamiento",
-      "plain_explanation": "La calefacción y el enfriamiento no funcionan a carga completa juntos, así que esta parte agrega solo la mayor de seis selecciones, en kVA: (1) aire acondicionado y enfriamiento al 100 por ciento de la placa; (2) una bomba de calor sin calefacción eléctrica suplementaria, al 100 por ciento; (3) una bomba de calor al 100 por ciento del compresor más el 65 por ciento de la calefacción eléctrica suplementaria — el compresor se omite si se le impide funcionar al mismo tiempo que esa calefacción; (4) calefacción eléctrica de espacio al 65 por ciento con menos de cuatro unidades controladas por separado; (5) calefacción eléctrica de espacio al 40 por ciento con cuatro o más unidades controladas por separado; y (6) almacenamiento térmico eléctrico y otra calefacción que se espera que funcione continuamente a placa completa, al 100 por ciento — un sistema contado bajo (6) no se cuenta de nuevo bajo otra selección.",
+      "plain_explanation": "La calefacción y el enfriamiento no funcionan a carga completa juntos, así que esta parte agrega solo la mayor de seis selecciones, en kVA:\n• (1) Aire acondicionado y enfriamiento al 100 por ciento de la placa.\n• (2) Una bomba de calor sin calefacción eléctrica suplementaria, al 100 por ciento.\n• (3) Una bomba de calor al 100 por ciento del compresor más el 65 por ciento de la calefacción eléctrica suplementaria — el compresor se omite si se le impide funcionar al mismo tiempo que esa calefacción.\n• (4) Calefacción eléctrica de espacio al 65 por ciento con menos de cuatro unidades controladas por separado.\n• (5) Calefacción eléctrica de espacio al 40 por ciento con cuatro o más unidades controladas por separado.\n• (6) Almacenamiento térmico eléctrico y otra calefacción que se espera que funcione continuamente a placa completa, al 100 por ciento — un sistema contado bajo (6) no se cuenta de nuevo bajo otra selección.",
       "on_the_job": "En Florida, la cifra del aire acondicionado normalmente gana esta comparación, pero una casa con calefacción de tiras (strip heat) o una bomba de calor con calefacción auxiliar igual necesita que la comparación se haga y se anote. Tome las cifras del compresor y del manejador de aire de las placas, no de reglas prácticas de tonelaje.",
       "sharma_note": "",
       "figure_idea": "Un gráfico de balanza: carga de AC en un lado, carga de calefacción en el otro, y solo el lado más pesado pasa al total.",
@@ -5484,7 +6145,114 @@
       "verified": true,
       "prev_id": "C2-220.82(B)",
       "next_id": "C2-220.83",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "CAMBIO NEC 2023: No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Una acometida dimensionada para calefacción y enfriamiento a plena carga a la vez quedaría dimensionada para un día que nunca llega — el compresor y la calefacción de tiras cargan la casa en temporadas distintas. Los porcentajes reconocen cómo funciona el equipo en realidad: la calefacción suplementaria entra por etapas bajo el compresor, y los calefactores de espacio controlados por separado ciclan en lugar de funcionar todos a la vez. La regla mantiene la acometida honesta sin pagar por capacidad que nada usa.",
+      "inspection_fails": [
+        "El cálculo de carga suma la carga de aire acondicionado y la carga completa de calefacción de tiras — 220.82(C) toma solo la selección mayor.",
+        "Calefacción suplementaria calculada al 100 por ciento en lugar del 65 por ciento bajo (C)(3), sobredimensionando la acometida en papel.",
+        "Compresor eliminado de la cifra de (C)(3) sin nada que le impida funcionar al mismo tiempo que las tiras.",
+        "Cifras de calefacción y enfriamiento tomadas de reglas prácticas de tonelaje en lugar de las placas.",
+        "Almacenamiento térmico contado bajo (C)(6) y contado otra vez bajo una selección de calefacción de espacio."
+      ],
+      "exam_trap": "La trampa es sumar las cifras del aire acondicionado y de la bomba de calor con tiras «para estar seguro». 220.82(C) agrega solo la selección individual mayor. La segunda trampa es tomar la bomba de calor al 100 por ciento de todo — compresor más calefacción de tiras completa. La selección (3) toma las tiras al 65 por ciento, no al 100.",
+      "tables": [
+        {
+          "caption": "Las seis selecciones de 220.82(C) — agregue solo la mayor",
+          "headers": [
+            "Selección",
+            "Sistema",
+            "Cómo cuenta"
+          ],
+          "rows": [
+            [
+              "(1)",
+              "Aire acondicionado y enfriamiento",
+              "100% de la placa"
+            ],
+            [
+              "(2)",
+              "Bomba de calor, sin calefacción suplementaria",
+              "100%"
+            ],
+            [
+              "(3)",
+              "Bomba de calor + calefacción suplementaria",
+              "Compresor 100% + tiras 65%"
+            ],
+            [
+              "(4)",
+              "Calefacción eléctrica de espacio, menos de 4 unidades",
+              "65%"
+            ],
+            [
+              "(5)",
+              "Calefacción eléctrica de espacio, 4 o más unidades",
+              "40%"
+            ],
+            [
+              "(6)",
+              "Almacenamiento térmico, calefacción continua",
+              "100%"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-220.82C-heating-cooling.svg",
+          "alt": "Gráfico de las seis selecciones de calefacción y enfriamiento de 220.82(C) con sus factores de demanda, y un ejemplo resuelto de una bomba de calor de Florida donde la selección (3), con 19.75 kVA, supera la selección de enfriamiento de 12.0 kVA.",
+          "caption": "Seis selecciones, seis factores — solo la mayor entra al total.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Una bomba de calor tiene un compresor de 10 kVA y 15 kVA de calefacción suplementaria de tiras. ¿Qué da la selección (C)(3)?",
+          "choices": [
+            "25 kVA",
+            "19.75 kVA",
+            "15 kVA",
+            "9.75 kVA"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Compresor al 100 por ciento (10 kVA) más el 65 por ciento de las tiras (9.75 kVA) = 19.75 kVA.",
+          "nec_ref": "220.82(C)(3)"
+        },
+        {
+          "question": "Bajo 220.82(C), ¿cuántas de las seis selecciones entran a la carga total?",
+          "choices": [
+            "Las seis, sumadas",
+            "Las dos mayores",
+            "Solo la mayor",
+            "Solo las de calefacción"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La calefacción y el enfriamiento no funcionan a plena carga juntos, así que solo se agrega la selección individual mayor.",
+          "nec_ref": "220.82(C)"
+        },
+        {
+          "question": "Cuatro o más calefactores eléctricos de espacio controlados por separado se toman a qué porcentaje?",
+          "choices": [
+            "100%",
+            "65%",
+            "40%",
+            "25%"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Cuatro o más unidades controladas por separado reciben el factor del 40 por ciento de la selección (5); menos de cuatro reciben el 65 por ciento.",
+          "nec_ref": "220.82(C)(5)"
+        }
+      ],
+      "code_refs": [
+        "220.82(C)",
+        "220.82(C)(1)–(6)",
+        "220.82"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-220.83",
@@ -5935,7 +6703,95 @@
       "verified": true,
       "prev_id": "C2-225.31",
       "next_id": "C2-ART-230",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "CAMBIO NEC 2023: No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Los conductores antes del interruptor del edificio no tienen corte local. Si una falla comienza en ese tramo interior, la única protección es el breaker del alimentador allá en el edificio principal — y nadie en el garaje puede cortarlo. Mantener el interruptor en el punto de entrada mantiene el tramo interior sin protección tan corto como sea posible y pone el corte donde una persona que entra al edificio puede alcanzarlo.",
+      "inspection_fails": [
+        "Interruptor o tablero colocado al otro lado del edificio desde la entrada del alimentador, con un tramo largo de conductores dentro antes de él.",
+        "Interruptor dentro del edificio pero no fácilmente accesible — detrás de material almacenado o en un cuarto con llave.",
+        "El alimentador entra bajo tierra por un lado del edificio y el tablero se instaló en la pared opuesta.",
+        "Ningún medio de desconexión en el edificio separado — la cuadrilla depende del breaker en la casa principal.",
+        "Excepción de sitio industrial o institucional reclamada para un garaje separado común."
+      ],
+      "exam_trap": "La trampa es tratar el edificio separado como un subtablero en el mismo edificio y colocar el interruptor donde quepa en el diseño. 225.32 lo quiere fuera, o dentro en el punto más cercano a la entrada. Segunda trampa: citar una bomba contra incendios como excepción de ubicación de 225.32. Una bomba contra incendios es un permiso de alimentación adicional bajo 225.30, no una excepción a esta sección.",
+      "tables": [
+        {
+          "caption": "Qué decide la ubicación del interruptor",
+          "headers": [
+            "Situación",
+            "Regla"
+          ],
+          "rows": [
+            [
+              "Alimentador o circuito derivado a un edificio separado",
+              "Interruptor fácilmente accesible — fuera, o dentro en el punto más cercano a la entrada"
+            ],
+            [
+              "Conductores que corren dentro o bajo la envolvente del edificio",
+              "Las reglas de 230.6 deciden cuándo los conductores cuentan como fuera del edificio"
+            ],
+            [
+              "Sitio industrial o institucional grande, una sola administración",
+              "Pueden aplicar las excepciones listadas — léalas en el texto impreso antes de apoyarse en una"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-225.32-disconnect-entry.svg",
+          "alt": "Plano de un garaje separado: el alimentador entra por la pared inferior y el interruptor está justo en la entrada, mientras un tramo rojo punteado cruza el edificio hasta un tablero lejano, la ubicación que la sección rechaza.",
+          "caption": "Interruptor en la entrada — no al otro lado del edificio.",
+          "w": 900,
+          "h": 1260
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un alimentador entra a un garaje separado por la pared este. ¿Dónde va el interruptor?",
+          "choices": [
+            "En la pared oeste, junto al banco de trabajo",
+            "Fuera, o dentro en el punto más cercano a la entrada de la pared este",
+            "De vuelta en el tablero de la casa principal",
+            "En cualquier lugar del garaje que sea fácilmente accesible"
+          ],
+          "answer_index": 1,
+          "explain_plain": "225.32: fuera del edificio, o dentro en el punto más cercano a donde entran los conductores.",
+          "nec_ref": "225.32"
+        },
+        {
+          "question": "Para 225.32, ¿qué reglas deciden cuándo se considera que los conductores están fuera del edificio?",
+          "choices": [
+            "230.6",
+            "225.30",
+            "240.4",
+            "110.26"
+          ],
+          "answer_index": 0,
+          "explain_plain": "La sección remite a las reglas de 230.6 para decidir cuándo los conductores cuentan como fuera de un edificio.",
+          "nec_ref": "225.32 / 230.6"
+        },
+        {
+          "question": "Una bomba contra incendios alimentada en un edificio separado se maneja bajo…",
+          "choices": [
+            "225.30, como alimentación adicional — no una excepción de 225.32",
+            "225.32, como excepción de ubicación",
+            "210.52",
+            "220.82"
+          ],
+          "answer_index": 0,
+          "explain_plain": "Las bombas contra incendios son un permiso de alimentación adicional bajo 225.30. No son una excepción de ubicación en 225.32.",
+          "nec_ref": "225.30 / 225.32"
+        }
+      ],
+      "code_refs": [
+        "225.32",
+        "225.30",
+        "230.6"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-ART-230",
@@ -6185,7 +7041,105 @@
       "verified": true,
       "prev_id": "C2-230.24",
       "next_id": "C2-230.42",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "El mástil es el punto de anclaje de la acometida de la empresa eléctrica, y la acometida tira de él todos los días — más en una tormenta de Florida. Cualquier otra cosa sujeta al mástil agrega carga de viento y tensión para la que el mástil nunca fue dimensionado, y pone cableado ajeno en el único lugar reservado para la acometida. Si el mástil se dobla o se suelta, arrastra con él conductores de acometida vivos y sin fusible.",
+      "inspection_fails": [
+        "Cable de TV o antena sujetos al mástil de acometida.",
+        "Alimentación de luz de patio subida por el mástil junto a los conductores de acometida.",
+        "Acometida fijada entre el weatherhead y un acoplamiento por encima del último soporte del conduit (230.28(B)).",
+        "Hub del mástil no identificado para uso con equipo de entrada de acometida (230.28(A)).",
+        "Mástil sin arriostrar en un tramo largo — doblado o separándose de la pared."
+      ],
+      "exam_trap": "La trampa: «el cable de TV puede ir en el mástil si está unido a él». No — la unión no lo convierte en conductor de acometida. Solo los conductores de la acometida (service drop) o de la acometida aérea pueden fijarse al mástil; las antenas y cualquier otro conductor quedan fuera, con unión o sin ella.",
+      "tables": [
+        {
+          "caption": "Qué puede ir en el mástil",
+          "headers": [
+            "Elemento",
+            "¿Permitido?"
+          ],
+          "rows": [
+            [
+              "Conductores de la acometida (service drop)",
+              "Sí"
+            ],
+            [
+              "Conductores de acometida aérea",
+              "Sí"
+            ],
+            [
+              "Antena de TV o cable de TV",
+              "No"
+            ],
+            [
+              "Alimentación de luz de patio",
+              "No"
+            ],
+            [
+              "Cualquier otro equipo",
+              "No — solo la acometida"
+            ]
+          ],
+          "note": "230.28(A): los hubs del mástil deben estar identificados para uso con equipo de entrada de acometida."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-230.28-service-mast.svg",
+          "alt": "Elevación de un mástil de acometida a través de un techo: cabezal contra intemperie y bucle de goteo arriba, la acometida de la empresa llegando, un tirante arriostrando el mástil, el medidor-principal abajo, y una antena de TV y un cable de luz de patio tachados en rojo en el mismo mástil.",
+          "caption": "Solo la acometida va en el mástil — todo lo demás queda fuera.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Cuál de estos puede fijarse a un mástil de acometida?",
+          "choices": [
+            "Una antena de TV, si está unida",
+            "Una alimentación de luz de patio",
+            "Solo los conductores de la acometida o de la acometida aérea",
+            "Cualquier conductor en conduit"
+          ],
+          "answer_index": 2,
+          "explain_plain": "El mástil es parte de la acometida. Nada más que los propios conductores de la acometida puede ir en él.",
+          "nec_ref": "230.28"
+        },
+        {
+          "question": "Los hubs usados con un mástil de acometida de conduit deben estar…",
+          "choices": [
+            "Pintados a juego",
+            "Identificados para uso con equipo de entrada de acometida",
+            "Sin rosca",
+            "De plástico"
+          ],
+          "answer_index": 1,
+          "explain_plain": "230.28(A) exige hubs de mástil identificados para uso con equipo de entrada de acometida.",
+          "nec_ref": "230.28(A)"
+        },
+        {
+          "question": "Los conductores de acometida no pueden fijarse al mástil…",
+          "choices": [
+            "Debajo del medidor",
+            "Entre el weatherhead y un acoplamiento por encima del último soporte",
+            "A menos de 3 ft del techo",
+            "Del lado de la calle"
+          ],
+          "answer_index": 1,
+          "explain_plain": "230.28(B) prohíbe la fijación entre el weatherhead (o el extremo del conduit) y un acoplamiento por encima del último soporte del conduit o del edificio.",
+          "nec_ref": "230.28(B)"
+        }
+      ],
+      "code_refs": [
+        "230.28",
+        "230.28(A)",
+        "230.28(B)",
+        "230.54"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-230.42",
@@ -6312,8 +7266,8 @@
       "article": "230",
       "section": "230.54",
       "title": "Conexiones aéreas de acometida — fijación y bucle de goteo",
-      "plain_explanation": "Donde llega una acometida aérea, tres cosas deben estar bien en la parte alta de la acometida. El punto de fijación se ubica de modo que los espacios libres de las páginas de 230.24 y 230.9 puedan cumplirse en realidad, y el cabezal de acometida (weatherhead) queda a la altura del punto de fijación o por encima de él siempre que sea practicable, para que el agua corra alejándose de la canalización en vez de entrar en ella. Los conductores forman un bucle de goteo debajo del cabezal: cada conductor baja en curva y vuelve a subir, de modo que la lluvia gotea desde el fondo del bucle en vez de seguir el cable hasta dentro del cabezal. Los cabezales de acometida deben tener los conductores de diferente potencial saliendo a través de aberturas con bujes separados (230.54(E))., y los empalmes en los conductores de acometida se hacen solo por los métodos que permite 230.46. Donde no es practicable poner el cabezal de acometida por encima del punto de fijación, debe estar dentro de 24 in. del punto de fijación (excepción de 230.54(C)). Los bucles de goteo y los conductores de entrada de acometida deben disponerse de modo que el agua no entre en la canalización o el equipo (230.54(F), (G)).",
-      "on_the_job": "Forme el bucle de goteo lo bastante largo para que gotee de verdad — una pequeña torcedura junto al cabezal no es un bucle. Deje a la empresa eléctrica las colas de trabajo con el largo que piden sus normas, y no ponga cinta ni empalmes en el cabezal que la empresa tenga que deshacer.",
+      "plain_explanation": "Donde llega una acometida aérea, tres cosas deben estar bien en la parte alta de la acometida. El punto de fijación se ubica de modo que los espacios libres de las páginas de 230.24 y 230.9 puedan cumplirse en realidad, y el cabezal de acometida (weatherhead) queda a la altura del punto de fijación o por encima de él siempre que sea practicable, para que el agua corra alejándose de la canalización en vez de entrar en ella. Los conductores forman un bucle de goteo debajo del cabezal: cada conductor baja en curva y vuelve a subir, de modo que la lluvia gotea desde el fondo del bucle en vez de seguir el cable hasta dentro del cabezal. Los cabezales de acometida deben tener los conductores de diferente potencial saliendo a través de aberturas con bujes separados (230.54(E)), y los empalmes en los conductores de acometida se hacen solo por los métodos que permite 230.46. Donde no es practicable poner el cabezal de acometida por encima del punto de fijación, debe estar dentro de 24 in. del punto de fijación (excepción de 230.54(C)). Los bucles de goteo y los conductores de entrada de acometida deben disponerse de modo que el agua no entre en la canalización o el equipo (230.54(F), (G)).",
+      "on_the_job": "Forme el bucle de goteo lo bastante largo para que gotee de verdad — una pequeña torcedura junto al cabezal no es un bucle. Deje a la empresa eléctrica las colas de trabajo con el largo que piden sus normas, y no ponga cinta ni empalmes en el cabezal que la empresa tenga que deshacer. En una acometida aérea de Sharma, ubique la fijación de modo que los espacios libres funcionen, coloque el cabezal por encima de la fijación y forme cada bucle debajo del cabezal antes de que la empresa eléctrica haga sus conexiones. Si la pared obliga a poner el cabezal debajo del punto de fijación, manténgalo dentro de 24 in. — y espere que el inspector lo mida.",
       "sharma_note": "",
       "figure_idea": "Detalle del cabezal: punto de fijación, cabezal por encima de él, bucle de goteo colgando debajo con una gota cayendo del fondo del bucle.",
       "related_ids": [
@@ -6326,7 +7280,110 @@
       "verified": true,
       "prev_id": "C2-230.42",
       "next_id": "C2-230.67",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "La lluvia es el enemigo en la parte alta de una acometida. El agua que sigue a un conductor hasta dentro del cabezal baja por dentro de la canalización, corroe las terminales y los extremos de los conductores, y puede llegar al medidor y al tablero. Las tormentas de Florida empujan la lluvia de lado, así que la geometría debe botar el agua por gravedad: cabezal alto, bucle bajo, goteo desde el fondo. Las aberturas con bujes separados también evitan que conductores de diferente potencial rocen un mismo borde compartido.",
+      "inspection_fails": [
+        "Cabezal de acometida debajo del punto de fijación sin que exista una condición impracticable — y a más de 24 in. de él.",
+        "Sin bucle de goteo: los conductores entran rectos al cabezal, o el bucle está pegado con cinta contra el mástil.",
+        "Conductores de diferente potencial saliendo del cabezal por una sola abertura compartida en vez de aberturas con bujes separados (230.54(E)).",
+        "Empalme en los conductores de acometida junto al cabezal hecho por un método que 230.46 no permite."
+      ],
+      "exam_trap": "La respuesta trampa: el cabezal de acometida puede quedar debajo del punto de fijación mientras los empalmes estén bien encintados. No puede. Debajo de la fijación se permite solo donde poner el cabezal por encima es impracticable — y entonces el cabezal debe estar dentro de 24 in. del punto de fijación. La cinta tampoco es un bucle de goteo: el bucle debe colgar debajo del cabezal para que el agua gotee desde su fondo.",
+      "tables": [
+        {
+          "caption": "En la parte alta de la acometida — lo que debe estar bien",
+          "headers": [
+            "Parte",
+            "Regla"
+          ],
+          "rows": [
+            [
+              "Punto de fijación",
+              "Ubicado de modo que los espacios libres de 230.24 y 230.9 puedan cumplirse"
+            ],
+            [
+              "Cabezal de acometida",
+              "A la altura del punto de fijación o por encima, siempre que sea practicable"
+            ],
+            [
+              "Cabezal debajo de la fijación",
+              "Solo si es impracticable — y dentro de 24 in. de ella"
+            ],
+            [
+              "Bucle de goteo",
+              "Debajo del cabezal; el agua gotea desde el fondo del bucle"
+            ],
+            [
+              "Aberturas del cabezal",
+              "Potenciales diferentes por aberturas con bujes separados"
+            ],
+            [
+              "Empalmes",
+              "Solo los métodos que permite 230.46"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-230.54-weatherhead.svg",
+          "alt": "Detalle en elevación de la parte alta de una acometida aérea: la acometida de la empresa eléctrica llegando al punto de fijación, el cabezal por encima del punto de fijación, los bucles de goteo colgando debajo del cabezal con una gota cayendo del fondo de un bucle, y la excepción de 24 in. anotada.",
+          "caption": "Cabezal por encima de la fijación, bucles debajo del cabezal: el agua gotea hacia afuera, no hacia adentro.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Dónde debe quedar el cabezal de acometida respecto al punto de fijación?",
+          "choices": [
+            "Debajo de él, para que la acometida llegue fácil",
+            "A su altura o por encima, siempre que sea practicable",
+            "En cualquier parte del mástil",
+            "Dentro de la base del medidor"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El cabezal queda a la altura del punto de fijación o por encima de él siempre que sea practicable, para que el agua corra alejándose de la canalización en vez de entrar en ella.",
+          "nec_ref": "230.54(C)"
+        },
+        {
+          "question": "Donde es impracticable poner el cabezal por encima del punto de fijación, ¿a qué distancia máxima debe estar?",
+          "choices": [
+            "6 in.",
+            "12 in.",
+            "24 in.",
+            "48 in."
+          ],
+          "answer_index": 2,
+          "explain_plain": "La excepción permite el cabezal debajo de la fijación solo dentro de 24 in. del punto de fijación.",
+          "nec_ref": "Excepción de 230.54(C)"
+        },
+        {
+          "question": "Los conductores de diferente potencial salen del cabezal de acometida a través de:",
+          "choices": [
+            "Una abertura común",
+            "Un solo buje, si lleva cinta",
+            "Aberturas con bujes separados",
+            "Cualquier abertura con un conector"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Los cabezales de acometida deben tener los conductores de diferente potencial saliendo a través de aberturas con bujes separados.",
+          "nec_ref": "230.54(E)"
+        }
+      ],
+      "code_refs": [
+        "230.54",
+        "230.54(C)",
+        "230.54(E)",
+        "230.54(F)",
+        "230.46",
+        "230.24",
+        "230.9"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-230.67",
@@ -7671,8 +8728,8 @@
       "article": "240",
       "section": "240.6",
       "title": "Capacidades estándar para breakers y fusibles",
-      "plain_explanation": "Los dispositivos contra sobrecorriente vienen en capacidades estándar en amperios, y esta sección las lista — los pasos conocidos desde las capacidades pequeñas de circuitos ramales hasta las capacidades grandes de acometida, además de las capacidades estándar adicionales que nombra para fusibles. Las capacidades no estándar existen solo en los casos limitados que permite el Código. Un cálculo que cae entre dos capacidades estándar se resuelve con las reglas de protección, no pidiendo un breaker del tamaño calculado.\n\nLas capacidades estándar (240.6(A)):\n• 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100\n• 110, 125, 150, 175, 200, 225, 250, 300, 350, 400, 450, 500, 600\n• 700, 800, 1000, 1200, 1600, 2000, 2500, 3000, 4000, 5000, 6000\nLos fusibles también tienen capacidades estándar adicionales de 1, 3, 6, 10 y 601 amperios. Note los huecos en los que tropiezan las cuadrillas: no hay dispositivo estándar de 105A, 130A ni 275A — un cálculo que cae ahí se resuelve a una capacidad estándar bajo las reglas de protección.\n\nCAMBIO NEC 2023:\n• 240.6: Diez amps se trasladaron a la tabla de capacidades estándar, así que los breakers de 10-amp ahora son estándar junto con los fusibles. El nuevo 240.6(D) cubre los breakers cuyo ajuste de disparo puede cambiarse de forma remota. La Tabla 240.6(A) ahora comienza en 10 amps, lo que hace que 10 sea un tamaño estándar tanto para breakers de tiempo inverso como para fusibles.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Cuando un cálculo de carga cae en un número no estándar, anote el paso siguiente como una elección entre las capacidades estándar de uno y otro lado y registre qué regla usó. No anote un tamaño de breaker no estándar en una lista de materiales.",
+      "plain_explanation": "Los dispositivos contra sobrecorriente vienen en capacidades estándar en amperios, y esta sección las lista — los pasos conocidos desde las capacidades pequeñas de circuitos ramales hasta las capacidades grandes de acometida, además de las capacidades estándar adicionales que nombra para fusibles. Las capacidades no estándar existen solo en los casos limitados que permite el Código. Un cálculo que cae entre dos capacidades estándar se resuelve con las reglas de protección, no pidiendo un breaker del tamaño calculado.\n\nLas capacidades estándar (240.6(A)):\n• 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100\n• 110, 125, 150, 175, 200, 225, 250, 300, 350, 400, 450, 500, 600\n• 700, 800, 1000, 1200, 1600, 2000, 2500, 3000, 4000, 5000, 6000\nLos fusibles también tienen capacidades estándar adicionales de 1, 3, 6, 10 y 601 amperios. Note los huecos en los que tropiezan las cuadrillas: no hay dispositivo estándar de 105A, 130A ni 275A — un cálculo que cae ahí se resuelve a una capacidad estándar bajo las reglas de protección.",
+      "on_the_job": "Cuando un cálculo de carga cae en un número no estándar, anote el paso siguiente como una elección entre las capacidades estándar de uno y otro lado y registre qué regla usó. No anote un tamaño de breaker no estándar en una lista de materiales. Ejemplo: el cálculo por el método opcional de una casa de Marion Oaks cae en 130 A. No existe un breaker estándar de 130 A — la lista de materiales lleva el tamaño estándar que indican las reglas de protección, y la hoja de cálculo muestra el paso que se tomó.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -7692,7 +8749,110 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/240-6",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 240.6: Diez amps se trasladaron a la tabla de capacidades estándar, así que los breakers de 10-amp ahora son estándar junto con los fusibles. El nuevo 240.6(D) cubre los breakers cuyo ajuste de disparo puede cambiarse de forma remota. La Tabla 240.6(A) ahora comienza en 10 amps, lo que hace que 10 sea un tamaño estándar tanto para breakers de tiempo inverso como para fusibles.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Los breakers y fusibles se fabrican, se listan y se almacenan en los pasos estándar. Si cada cálculo produjera su propio tamaño de dispositivo, los tableros no podrían planificarse, los breakers no podrían intercambiarse y un inspector no podría verificar una capacidad de un vistazo. Los pasos también dejan espacio para que funcionen las reglas de protección: una carga que cae entre dos pasos se resuelve por regla, no inventando un tamaño.",
+      "inspection_fails": [
+        "Horario de tablero o lista de materiales que pide un tamaño de breaker no estándar — 105 A, 130 A o 275 A.",
+        "Breaker instalado que no corresponde al tamaño mostrado en el cálculo de carga aprobado.",
+        "Fusible reemplazado por el siguiente tamaño estándar mayor «porque era el que había en el camión».",
+        "Carga calculada anotada en el horario como si fuera el tamaño del breaker, en lugar de la capacidad estándar que seleccionan las reglas."
+      ],
+      "exam_trap": "La trampa es responder con el número calculado — un «breaker» de 105 A o 130 A. Ninguno existe como capacidad estándar en el NEC 2020. La segunda trampa es poner 10 A en la tabla estándar del 2020: en 2020, 10 A es solo una capacidad estándar adicional para fusibles. Entra a la tabla principal en 2023 (vea el cuadro 2020 vs 2023).",
+      "tables": [
+        {
+          "caption": "Sin dispositivo estándar en estos tamaños (NEC 2020)",
+          "headers": [
+            "El cálculo cae en",
+            "Qué pasa"
+          ],
+          "rows": [
+            [
+              "105 A",
+              "Sin capacidad estándar — se resuelve a un tamaño estándar bajo las reglas de protección"
+            ],
+            [
+              "130 A",
+              "Sin capacidad estándar — se resuelve a un tamaño estándar bajo las reglas de protección"
+            ],
+            [
+              "275 A",
+              "Sin capacidad estándar — se resuelve a un tamaño estándar bajo las reglas de protección"
+            ]
+          ]
+        },
+        {
+          "caption": "Capacidades estándar adicionales — solo fusibles (NEC 2020)",
+          "headers": [
+            "Dispositivo",
+            "Capacidades extra (A)"
+          ],
+          "rows": [
+            [
+              "Fusibles",
+              "1, 3, 6, 10, 601"
+            ],
+            [
+              "Breakers de tiempo inverso",
+              "Solo la lista de 240.6(A)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-240.6-standard-ratings.svg",
+          "alt": "Las capacidades estándar en amperios de 240.6(A) como una escalera de pasos, con los huecos de 105, 130 y 275 amperios marcados como sin dispositivo estándar, y las capacidades adicionales solo para fusibles en una franja separada.",
+          "caption": "Los pasos estándar — y los huecos donde tropiezan las cuadrillas.",
+          "w": 900,
+          "h": 1180
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un cálculo de carga cae en 130 A. ¿Qué va en la lista de materiales?",
+          "choices": [
+            "Un breaker de 130 A",
+            "La capacidad estándar que seleccionan las reglas de protección",
+            "Dos breakers de 65 A en paralelo",
+            "Un fusible de 130 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "No existe un dispositivo estándar de 130 A. El cálculo se resuelve a una capacidad estándar bajo las reglas de protección.",
+          "nec_ref": "240.6(A)"
+        },
+        {
+          "question": "¿Cuál de estas NO es una capacidad estándar en el NEC 2020?",
+          "choices": [
+            "175 A",
+            "225 A",
+            "275 A",
+            "450 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Los pasos de 240.6(A) saltan de 250 a 300. No hay dispositivo estándar de 275 A.",
+          "nec_ref": "240.6(A)"
+        },
+        {
+          "question": "En el NEC 2020, 10 A es una capacidad estándar para…",
+          "choices": [
+            "Breakers y fusibles por igual",
+            "Solo fusibles, como capacidad adicional",
+            "Ningún dispositivo",
+            "Solo interruptores de acometida"
+          ],
+          "answer_index": 1,
+          "explain_plain": "En 2020 la tabla principal comienza en 15 A; 10 A aparece solo en las capacidades estándar adicionales para fusibles. El NEC 2023 lo traslada a la tabla.",
+          "nec_ref": "240.6(A)"
+        }
+      ],
+      "code_refs": [
+        "240.6",
+        "240.6(A)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-240.21",
@@ -7853,8 +9013,8 @@
       "article": "240",
       "section": "240.83 / 240.85",
       "title": "Marcas de los breakers — y la trampa de la capacidad dividida (slash)",
-      "plain_explanation": "Las marcas de un breaker son información de trabajo: la capacidad en amperios y la capacidad de voltaje están marcadas por el fabricante, la capacidad de interrupción está marcada en los breakers con una capacidad de interrupción distinta de 5,000A (240.83(C))., y las marcas de servicio especial le dicen dónde puede aplicarse el breaker — SWD para breakers usados para conmutar cargas de alumbrado fluorescente o HID, HACR para equipo de calefacción, aire acondicionado y refrigeración. Las marcas de voltaje vienen en dos formas. Un breaker de capacidad plena (p. ej., 240V) puede aplicarse donde el voltaje nominal entre dos conductores cualesquiera no excede su capacidad. Un breaker de capacidad dividida (120/240V, 480Y/277V) puede aplicarse solo en un circuito sólidamente puesto a tierra donde el voltaje nominal a tierra de ningún conductor excede el valor menor y el voltaje entre dos conductores cualesquiera no excede el valor mayor — por eso un breaker de capacidad dividida no pertenece a la pata alta (high leg) de un sistema delta de 240V (208V a tierra) ni a un sistema con una esquina puesta a tierra.",
-      "on_the_job": "En un tablero delta de pata alta, lea la marca de voltaje del breaker antes de conectar la pata alta: un breaker dividido 120/240 es el breaker equivocado ahí aunque la capacidad en amperios coincida. Revise la marca en el breaker que tiene en la mano, no en el que esperaba encontrar en la caja.",
+      "plain_explanation": "Las marcas de un breaker son información de trabajo: la capacidad en amperios y la capacidad de voltaje están marcadas por el fabricante, la capacidad de interrupción está marcada en los breakers con una capacidad de interrupción distinta de 5,000A (240.83(C)), y las marcas de servicio especial le dicen dónde puede aplicarse el breaker — SWD para breakers usados para conmutar cargas de alumbrado fluorescente o HID, HACR para equipo de calefacción, aire acondicionado y refrigeración. Las marcas de voltaje vienen en dos formas. Un breaker de capacidad plena (p. ej., 240V) puede aplicarse donde el voltaje nominal entre dos conductores cualesquiera no excede su capacidad. Un breaker de capacidad dividida (120/240V, 480Y/277V) puede aplicarse solo en un circuito sólidamente puesto a tierra donde el voltaje nominal a tierra de ningún conductor excede el valor menor y el voltaje entre dos conductores cualesquiera no excede el valor mayor — por eso un breaker de capacidad dividida no pertenece a la pata alta (high leg) de un sistema delta de 240V (208V a tierra) ni a un sistema con una esquina puesta a tierra.",
+      "on_the_job": "En un tablero delta de pata alta, lea la marca de voltaje del breaker antes de conectar la pata alta: un breaker dividido 120/240 es el breaker equivocado ahí aunque la capacidad en amperios coincida. Revise la marca en el breaker que tiene en la mano, no en el que esperaba encontrar en la caja. En una llamada de servicio comercial pequeña en Winter Park, el breaker de 20A dañado en la pata alta se reemplaza con un breaker Siemens de capacidad plena de 240V, no con el breaker dividido de 120/240V que venía en el inventario de la camioneta.",
       "sharma_note": "S-02: el equipo nuevo es Siemens. La revisión de la marca aplica a cualquier breaker que en realidad se instale — un breaker sustituido con la capacidad de voltaje equivocada sigue siendo el breaker equivocado.",
       "figure_idea": "Dos etiquetas de breaker lado a lado: una capacidad plena «240V» aprobada para la pata alta, una capacidad dividida «120/240V» tachada para la pata alta, con las marcas SWD y HACR señaladas.",
       "related_ids": [
@@ -7868,7 +9028,99 @@
       "next_id": "C2-ART-250",
       "sharma_rule_ids": [
         "S-02"
-      ]
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Un breaker tiene que interrumpir el arco dentro de sí mismo cuando abre ante una falla. Si el voltaje entre los contactos abiertos es mayor que aquel para el que el breaker fue probado, el arco puede volver a encenderse o atravesar la caja en lugar de despejarse. La regla de la capacidad dividida existe porque una pata alta queda a 208V a tierra — muy por encima de los 120V que un breaker de 120/240V está construido para soportar a tierra — aunque el voltaje de la carga se vea como un 240V ordinario.",
+      "inspection_fails": [
+        "Breaker dividido de 120/240V conectado en la pata alta de un tablero delta de 240V.",
+        "Breaker que conmuta una carga de alumbrado fluorescente sin la marca SWD.",
+        "Breaker de reemplazo instalado con una capacidad de voltaje menor que el voltaje del sistema.",
+        "Marcas del breaker pintadas o ilegibles — ya no se puede verificar la capacidad."
+      ],
+      "exam_trap": "La trampa: un breaker de 120/240V «coincide» con un delta de pata alta de 240V porque 240 es el número mayor de la etiqueta. Incorrecto — en la pata alta el voltaje a tierra es 208V, que supera el número menor de 120V de la capacidad dividida. El número menor es el que decide dónde puede ir un breaker de capacidad dividida.",
+      "tables": [
+        {
+          "caption": "Capacidades de voltaje plenas vs divididas",
+          "headers": [
+            "Marca",
+            "La prueba",
+            "¿Pata alta?"
+          ],
+          "rows": [
+            [
+              "240V (plena)",
+              "Ningún par de conductores sobre 240V",
+              "Sí"
+            ],
+            [
+              "120/240V (dividida)",
+              "≤120V a tierra, ≤240V entre conductores",
+              "No — 208V a tierra"
+            ],
+            [
+              "480Y/277V (dividida)",
+              "≤277V a tierra, ≤480V entre conductores",
+              "Solo en un sistema 480Y/277V"
+            ]
+          ],
+          "note": "Una capacidad dividida funciona solo en un sistema sólidamente puesto a tierra que cumpla ambos números."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-240.83-slash-rating.svg",
+          "alt": "Panel comparativo de dos etiquetas de breaker: un breaker de capacidad plena de 240V aprobado para la pata alta de un delta, y un breaker dividido de 120/240V tachado para la pata alta porque la pata queda a 208V a tierra.",
+          "caption": "Plena vs dividida: en la pata alta manda el número menor.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un breaker dividido de 120/240V puede instalarse en la pata alta de un sistema delta de 240V cuando…",
+          "choices": [
+            "La carga es monofásica de 240V",
+            "Nunca — la pata alta está a 208V a tierra, sobre el límite menor de 120V",
+            "El tablero está etiquetado para ello",
+            "El breaker tiene marca HACR"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La capacidad dividida limita el voltaje a tierra al número menor. La pata alta queda a 208V a tierra.",
+          "nec_ref": "240.85"
+        },
+        {
+          "question": "La capacidad de interrupción debe estar marcada en un breaker cuando es…",
+          "choices": [
+            "5,000A",
+            "Distinta de 5,000A",
+            "De capacidad dividida",
+            "De marca SWD"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Los breakers con capacidad de interrupción distinta de 5,000A llevan la marca; 5,000A es el piso supuesto.",
+          "nec_ref": "240.83(C)"
+        },
+        {
+          "question": "Un breaker usado para conmutar cargas de alumbrado HID debe estar marcado…",
+          "choices": [
+            "HACR",
+            "SWD",
+            "GFCI",
+            "AFCI"
+          ],
+          "answer_index": 1,
+          "explain_plain": "SWD es la marca de servicio especial para conmutar cargas de alumbrado fluorescente y HID.",
+          "nec_ref": "240.83"
+        }
+      ],
+      "code_refs": [
+        "240.83",
+        "240.83(C)",
+        "240.85"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-ART-250",
@@ -8546,8 +9798,8 @@
       "article": "250",
       "section": "250.28",
       "title": "Puentes de unión principales y de sistema",
-      "plain_explanation": "El puente de unión es el conductor o la conexión que une el conductor puesto a tierra (neutro), el sistema de puesta a tierra de equipos y el gabinete en la acometida, y el puente de unión de sistema hace el mismo trabajo para un sistema derivado por separado. Esta sección cubre su material y cómo se dimensionan — para el puente de unión principal, por referencia a la misma tabla de dimensionamiento usada para el conductor del electrodo de puesta a tierra, con los límites que indica la sección. Un puente que está presente pero es de tamaño insuficiente o está mal conectado no hace el trabajo.\n\nLos números de dimensionamiento: un puente de unión principal se dimensiona desde la Tabla 250.102(C)(1) según el tamaño del conductor de acometida no puesto a tierra más grande (250.28(D)(1)).. Donde los conductores de acometida son mayores de 1100 kcmil de cobre (1750 kcmil de aluminio), la tabla se detiene y el puente debe ser no menor del 12-1/2 por ciento del área de sección transversal del conductor de fase más grande. En acometidas ordinarias de casa, las filas de la tabla son toda la respuesta: 8 AWG de cobre detrás de una acometida de 100A con conductores de cobre de 4 AWG, 4 AWG de cobre detrás de una acometida de 200A con conductores de cobre de 2/0.",
-      "on_the_job": "Las correas y tornillos instalados de fábrica cuentan solo cuando son el medio listado para ese equipo y están realmente instalados. En un cambio de acometida, verifique que el puente existe antes de llamar a inspección — es una pieza pequeña con todo un artículo apoyado en ella.",
+      "plain_explanation": "El puente de unión es el conductor o la conexión que une el conductor puesto a tierra (neutro), el sistema de puesta a tierra de equipos y el gabinete en la acometida, y el puente de unión de sistema hace el mismo trabajo para un sistema derivado por separado. Esta sección cubre su material y cómo se dimensionan — para el puente de unión principal, por referencia a la misma tabla de dimensionamiento usada para el conductor del electrodo de puesta a tierra, con los límites que indica la sección. Un puente que está presente pero es de tamaño insuficiente o está mal conectado no hace el trabajo.\n\nLos números de dimensionamiento: un puente de unión principal se dimensiona desde la Tabla 250.102(C)(1) según el tamaño del conductor de acometida no puesto a tierra más grande (250.28(D)(1)). Donde los conductores de acometida son mayores de 1100 kcmil de cobre (1750 kcmil de aluminio), la tabla se detiene y el puente debe ser no menor del 12-1/2 por ciento del área de sección transversal del conductor de fase más grande. En acometidas ordinarias de casa, las filas de la tabla son toda la respuesta: 8 AWG de cobre detrás de una acometida de 100A con conductores de cobre de 4 AWG, 4 AWG de cobre detrás de una acometida de 200A con conductores de cobre de 2/0.",
+      "on_the_job": "Las correas y tornillos instalados de fábrica cuentan solo cuando son el medio listado para ese equipo y están realmente instalados. En un cambio de acometida, verifique que el puente existe antes de llamar a inspección — es una pieza pequeña con todo un artículo apoyado en ella. En un medidor-principal Siemens de 200 A con conductores de acometida de cobre de 2/0, la respuesta de la tabla es un puente de cobre de 4 AWG — confirme que la correa de fábrica es el medio listado para ese gabinete y que está realmente conectada, no todavía en la bolsa de piezas.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -8558,7 +9810,94 @@
       "verified": true,
       "prev_id": "C2-250.24",
       "next_id": "C2-250.30",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "El puente de unión principal es el eslabón que une el gabinete, el sistema de puesta a tierra de equipos y el conductor puesto a tierra en un solo punto — la acometida. Cuando un conductor vivo hace falla con el gabinete, ese puente es parte del camino que lleva la falla de vuelta a la fuente para que el dispositivo de sobrecorriente abra. Un puente que falta o es de tamaño insuficiente es un cuello de botella en ese camino: el gabinete puede quedar energizado mientras el breaker nunca dispara.",
+      "inspection_fails": [
+        "Sin puente de unión principal instalado en la acometida — la correa de fábrica o el tornillo de unión nunca se conectó.",
+        "Puente de unión de tamaño insuficiente para los conductores de acometida (Tabla 250.102(C)(1)).",
+        "Tablero cambiado en un cambio de acometida y la correa de unión quedó fuera del gabinete nuevo.",
+        "Puente de unión presente pero conectado flojo, así que la conexión no hace el trabajo."
+      ],
+      "exam_trap": "La respuesta trampa dimensiona el puente de unión principal desde la capacidad del breaker de la acometida — o, en una acometida mayor de 1100 kcmil de cobre, toma la fila mayor de la tabla. La tabla se basa en el conductor de acometida no puesto a tierra más grande, no en el breaker. Y pasados 1100 kcmil de cobre (1750 kcmil de aluminio) la tabla se detiene: el puente debe ser no menor del 12-1/2 por ciento del área de sección transversal del conductor de fase más grande.",
+      "tables": [
+        {
+          "caption": "Puente de unión principal — las filas que usa una acometida de casa",
+          "headers": [
+            "Acometida",
+            "Conductor mayor, Cu",
+            "Puente, Cu"
+          ],
+          "rows": [
+            [
+              "100 A",
+              "4 AWG",
+              "8 AWG"
+            ],
+            [
+              "200 A",
+              "2/0",
+              "4 AWG"
+            ]
+          ],
+          "note": "De la Tabla 250.102(C)(1). Mayores de 1100 kcmil de cobre (1750 kcmil de aluminio), la tabla se detiene: el puente es no menor del 12-1/2% del área del conductor de fase más grande (250.28(D)(1))."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-250.28-bonding-jumper.svg",
+          "alt": "Detalle de un tablero de acometida que muestra el conductor puesto a tierra conectado en la barra de neutro, el puente de unión principal uniendo la barra de neutro con el gabinete y la barra de puesta a tierra de equipos en la acometida, dimensionado desde la Tabla 250.102(C)(1), con el conductor del electrodo de puesta a tierra saliendo de la barra de tierra.",
+          "caption": "Un solo punto lo une todo: neutro, gabinete y sistema de puesta a tierra se encuentran en la acometida.",
+          "w": 900,
+          "h": 1450
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Una acometida de 200 A tiene conductores de acometida de cobre de 2/0. ¿Qué tamaño de puente de unión principal de cobre lleva?",
+          "choices": [
+            "8 AWG",
+            "6 AWG",
+            "4 AWG",
+            "2 AWG"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La Tabla 250.102(C)(1) lee conductores de acometida de cobre de 2/0 a un puente de unión de cobre de 4 AWG.",
+          "nec_ref": "Tabla 250.102(C)(1)"
+        },
+        {
+          "question": "Los conductores de acometida son mayores de 1100 kcmil de cobre. ¿Cómo se dimensiona el puente de unión principal?",
+          "choices": [
+            "Por la fila mayor de la tabla",
+            "No menor del 12-1/2% del área del conductor de fase más grande",
+            "Del mismo tamaño que el conductor de fase más grande",
+            "Un fijo de 250 kcmil"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Pasados 1100 kcmil de cobre (1750 kcmil de aluminio) la tabla se detiene, y el puente debe ser al menos el 12-1/2 por ciento del área de sección transversal del conductor de fase más grande.",
+          "nec_ref": "250.28(D)(1)"
+        },
+        {
+          "question": "En la acometida, el puente de unión principal une el conductor puesto a tierra, el gabinete y:",
+          "choices": [
+            "Solo el neutro de la empresa eléctrica",
+            "El sistema de puesta a tierra de equipos",
+            "Solo el electrodo de tubería de agua",
+            "El protector contra sobretensiones"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El puente de unión une el conductor puesto a tierra, el sistema de puesta a tierra de equipos y el gabinete en la acometida.",
+          "nec_ref": "250.28"
+        }
+      ],
+      "code_refs": [
+        "250.28",
+        "250.28(D)(1)",
+        "Table 250.102(C)(1)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-250.30",
@@ -8566,7 +9905,7 @@
       "article": "250",
       "section": "250.30",
       "title": "Sistemas derivados separadamente — generadores y transformadores",
-      "plain_explanation": "Un sistema derivado separadamente (SDS) es una fuente — un transformador, o un generador cuyo neutro se conmuta — que no tiene conexión eléctrica directa con los conductores de circuito del sistema de alimentación; los dos sistemas se tocan solo a través de la puesta a tierra y la unión. Como es su propio sistema, necesita su propio arreglo de puesta a tierra: un puente de unión del sistema que conecte el neutro derivado con las tierras de equipo y el gabinete, hecho en la fuente o en el primer medio de desconexión — en un punto; ambos están permitidos solo donde hacerlo no crea un camino paralelo para la corriente del neutro (250.30(A)(1) Excepción N.º 2). — y un conductor del electrodo de puesta a tierra tendido hasta el sistema de electrodos de puesta a tierra del edificio o la estructura, tan cerca como sea practicable del punto donde el GEC se conecta al sistema (250.30(A)(4)). Una varilla nueva solo se necesita donde el edificio no tiene sistema de electrodos., dimensionado según los conductores derivados con la misma tabla usada en una acometida (250.66). Una varilla clavada junto a un generador, sin el puente de unión y el conductor de electrodo, es decoración, no puesta a tierra.\n\nCAMBIO NEC 2023:\n• 250.30(C): Se eliminó la palabra \"neutral'' de 250.30(C) para ser coherente con otros lugares dentro del NEC y con el lenguaje que se encuentra en 250.36 y 250.187.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "plain_explanation": "Un sistema derivado separadamente (SDS) es una fuente — un transformador, o un generador cuyo neutro se conmuta — que no tiene conexión eléctrica directa con los conductores de circuito del sistema de alimentación; los dos sistemas se tocan solo a través de la puesta a tierra y la unión. Como es su propio sistema, necesita su propio arreglo de puesta a tierra:\n• Un puente de unión del sistema que conecte el neutro derivado con las tierras de equipo y el gabinete, hecho en la fuente o en el primer medio de desconexión — en un solo punto; ambos lugares están permitidos solo donde hacerlo no crea un camino paralelo para la corriente del neutro (250.30(A)(1) Excepción N.º 2)\n• Un conductor del electrodo de puesta a tierra tendido hasta el sistema de electrodos de puesta a tierra del edificio o la estructura, tan cerca como sea practicable del punto donde el puente de unión del sistema se conecta (250.30(A)(4)), dimensionado según los conductores derivados con la misma tabla usada en una acometida (250.66)\nUna varilla nueva solo se necesita donde el edificio no tiene sistema de electrodos. Una varilla clavada junto a un generador, sin el puente de unión y el conductor de electrodo, es decoración, no puesta a tierra.",
       "on_the_job": "El interruptor de transferencia decide el diseño. Si el interruptor no conmuta el neutro, el generador por lo general NO es derivado separadamente, y el neutro permanece unido solo en la acometida. Si sí conmuta el neutro, el generador es un SDS y recibe su puente de unión en el extremo del generador. Confirme qué diseño tiene el trabajo antes de que alguien una el neutro de un generador — dos puntos de unión ponen corriente del neutro en el camino de tierra.",
       "sharma_note": "",
       "figure_idea": "Diagrama unifilar de generador e interruptor de transferencia en ambas formas: neutro no conmutado (unión solo en la acometida) y neutro conmutado (SDS — unión en el generador), con el conductor de electrodo mostrado en la fuente.",
@@ -8590,7 +9929,101 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 250.30(C): Se eliminó la palabra \"neutral'' de 250.30(C) para ser coherente con otros lugares dentro del NEC y con el lenguaje que se encuentra en 250.36 y 250.187.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Un sistema derivado no tiene camino metálico de regreso a la fuente de la compañía eléctrica, así que una falla a tierra dentro de él no tiene forma de disparar nada hasta que el sistema recibe su propia unión y conexión de electrodo. Esa unión también es un peligro cuando se duplica: dos uniones de neutro a tierra dividen la corriente del neutro sobre las tierras de equipo y los gabinetes, donde calienta conexiones y da descargas a quien toca el metal.",
+      "inspection_fails": [
+        "Neutro del generador unido en el generador y otra vez en la acometida — corriente paralela del neutro en el camino de tierra.",
+        "Transformador derivado separadamente sin puente de unión del sistema, o el puente hecho en la fuente y en el primer medio de desconexión con un camino paralelo.",
+        "Varilla clavada en el generador sin conductor del electrodo de puesta a tierra al sistema de electrodos del edificio.",
+        "GEC del sistema derivado dimensionado a ojo en lugar de la Tabla 250.66 según los conductores derivados."
+      ],
+      "exam_trap": "La trampa es «todo generador es derivado separadamente». Un generador alimentado a través de un interruptor de transferencia que no conmuta el neutro por lo general NO es derivado separadamente, y unir su neutro crea la segunda unión que la regla prohíbe. El equipo de conmutación decide, no el generador.",
+      "tables": [
+        {
+          "caption": "Unión de un sistema derivado separadamente (250.30(A))",
+          "headers": [
+            "Pieza",
+            "Regla"
+          ],
+          "rows": [
+            [
+              "Puente de unión del sistema",
+              "En la fuente O en el primer medio de desconexión — un solo punto"
+            ],
+            [
+              "Ambos lugares",
+              "Solo si no resulta un camino paralelo del neutro (Exc. N.º 2)"
+            ],
+            [
+              "Conductor del electrodo de puesta a tierra",
+              "Al sistema de electrodos del edificio, cerca del punto de unión"
+            ],
+            [
+              "Tamaño del GEC",
+              "Tabla 250.66, según los conductores derivados"
+            ]
+          ],
+          "note": "Las fuentes exteriores tienen su propia regla en 250.30(C); los generadores portátiles y montados en vehículos se cubren en la página de 250.34."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-250.30-sds-panels.svg",
+          "alt": "Dos diagramas unifilares: un generador cuyo neutro no se conmuta en el interruptor de transferencia no es derivado separadamente y el neutro permanece unido solo en la acometida; un generador con neutro conmutado es derivado separadamente y recibe su puente de unión del sistema en el generador y un conductor del electrodo de puesta a tierra al sistema de electrodos del edificio.",
+          "caption": "El interruptor de transferencia decide: neutro conmutado o no.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un generador es derivado separadamente cuando:",
+          "choices": [
+            "Es mayor de 15 kW",
+            "Su neutro se conmuta en el interruptor de transferencia",
+            "Está al aire libre",
+            "Tiene su propia varilla de tierra"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Sin conexión directa con los conductores de la alimentación — el neutro conmutado es lo que hace que un generador sea derivado separadamente.",
+          "nec_ref": "250.30"
+        },
+        {
+          "question": "El puente de unión del sistema de un SDS se hace:",
+          "choices": [
+            "En cada medio de desconexión",
+            "En la fuente o en el primer medio de desconexión, en un solo punto",
+            "Solo en la varilla de tierra",
+            "En el medidor de la compañía"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Un solo punto: en la fuente o en el primer medio de desconexión; ambos solo donde no resulte un camino paralelo del neutro.",
+          "nec_ref": "250.30(A)(1)"
+        },
+        {
+          "question": "El GEC de un sistema derivado separadamente se dimensiona de:",
+          "choices": [
+            "La Tabla 250.66, usando los conductores derivados",
+            "Solo la placa del generador",
+            "La Tabla 250.102(C)(1)",
+            "Un 6 AWG fijo"
+          ],
+          "answer_index": 0,
+          "explain_plain": "La misma tabla que una acometida: la Tabla 250.66, según el conductor derivado mayor.",
+          "nec_ref": "250.30(A)(4)"
+        }
+      ],
+      "code_refs": [
+        "250.30(A)(1)",
+        "250.30(A)(4)",
+        "250.30(C)",
+        "250.66",
+        "250.34"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-250.32",
@@ -9034,7 +10467,7 @@
       "section": "250.52",
       "title": "Electrodos permitidos — y los que no lo están",
       "plain_explanation": "Esta sección lista lo que puede servir como electrodo de puesta a tierra, desde la tubería subterránea de agua con sus condiciones, pasando por el acero del edificio y los electrodos empotrados en concreto — al menos 20 ft de la varilla indicada o del conductor de cobre desnudo empotrado en la cimentación — hasta varillas, tubos y placas. También lista lo que no puede usarse, lo que incluye la tubería metálica subterránea de gas y los electrodos de aluminio. Un electrodo de tubería de agua tiene su propia regla complementaria, cubierta con la sección de instalación.\n\nLas especificaciones de los electrodos en números:\n• Tubería metálica subterránea de agua — al menos 10 ft de tubería en contacto directo con la tierra\n• Electrodo empotrado en concreto — al menos 20 ft de varilla de 1/2 in o mayor, o al menos 20 ft de conductor de cobre desnudo de 4 AWG, empotrado en al menos 2 in de concreto en la zapata o cimentación\n• Anillo de tierra — al menos 20 ft de cobre desnudo de 2 AWG, enterrado al menos 30 in bajo el nivel del suelo\n• Electrodos de varilla y tubo — al menos 8 ft de largo en contacto con el suelo; tubo no menor de 3/4 in de tamaño comercial; varillas no menores de 5/8 in de diámetro a menos que estén listadas para el uso\n• Electrodos de placa — al menos 2 sq ft de superficie expuesta al suelo circundante",
-      "on_the_job": "El electrodo empotrado en concreto es el que hay que coordinar con el constructor: 20 ft de varilla o conductor que califique, empotrado como exige la sección, con una conexión accesible. Confírmelo con el equipo de concreto antes del vaciado, por escrito en las notas del trabajo.",
+      "on_the_job": "El electrodo empotrado en concreto es el que hay que coordinar con el constructor: 20 ft de varilla o conductor que califique, empotrado como exige la sección, con una conexión accesible. Confírmelo con el equipo de concreto antes del vaciado, por escrito en las notas del trabajo. En una casa de losa de Florida, el conjunto por defecto del equipo es el electrodo empotrado en concreto en la zapata más las varillas que espera la autoridad local; las acometidas de agua de Florida suelen ser de PVC o PEX, así que no cuente una tubería de agua que no sea metálica enterrada por 10 ft.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -9046,7 +10479,105 @@
       "verified": true,
       "prev_id": "C2-250.50",
       "next_id": "C2-250.53",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios del 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "El electrodo es la única conexión del edificio con la tierra para rayos, sobretensiones de la compañía eléctrica y fallas de línea a tierra del lado de la alimentación. Cada tipo permitido tiene un tamaño mínimo probado y contacto con el suelo; por debajo de ese mínimo la conexión es demasiado débil o se corroe demasiado rápido para confiar en ella. La lista de prohibidos es igual de importante: una tubería de gas nunca debe llevar energía eléctrica de falla, y el aluminio se corroe en el suelo y en el concreto.",
+      "inspection_fails": [
+        "Electrodo empotrado en concreto de menos de 20 ft, o la salida cortada antes de que llegue el GEC.",
+        "Tubería metálica de gas unida como electrodo de puesta a tierra — prohibido por 250.52(B).",
+        "Varilla de tierra clavada menos de 8 ft, o una varilla menor de 5/8 in que no está listada.",
+        "Electrodo de tubería de agua sin electrodo complementario (250.53(D)).",
+        "Electrodo de aluminio, o un GEC de aluminio en contacto directo con concreto o tierra."
+      ],
+      "exam_trap": "Dos trampas: contar una tubería metálica subterránea de gas como electrodo — está prohibido, no solo desaconsejado — y aceptar 10 ft de varilla como electrodo empotrado en concreto. El Ufer necesita 20 ft; 10 ft es el número de la tubería de agua.",
+      "tables": [
+        {
+          "caption": "Electrodos permitidos y sus mínimos (250.52(A))",
+          "headers": [
+            "Electrodo",
+            "Mínimo"
+          ],
+          "rows": [
+            [
+              "Tubería metálica subterránea de agua",
+              "10 ft en contacto directo con la tierra; debe complementarse"
+            ],
+            [
+              "Empotrado en concreto",
+              "20 ft de varilla de 1/2 in o Cu desnudo de 4 AWG, en 2 in de concreto"
+            ],
+            [
+              "Anillo de tierra",
+              "20 ft de Cu desnudo de 2 AWG, 30 in de profundidad"
+            ],
+            [
+              "Varilla y tubo",
+              "8 ft en el suelo; varilla mín. 5/8 in, tubo mín. 3/4 in comercial"
+            ],
+            [
+              "Placa",
+              "2 sq ft expuestos al suelo"
+            ]
+          ],
+          "note": "No se permiten como electrodos: la tubería metálica subterránea de gas y los electrodos de aluminio (250.52(B))."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-250.52-electrodes.svg",
+          "alt": "Cinco electrodos de puesta a tierra permitidos con sus tamaños mínimos: tubería metálica de agua 10 ft en la tierra, electrodo empotrado en concreto 20 ft de varilla o cobre de 4 AWG, anillo de tierra 20 ft de cobre de 2 AWG a 30 in de profundidad, electrodos de varilla y tubo de 8 ft, electrodos de placa de 2 sq ft, y una franja roja que nombra los dos electrodos nunca permitidos.",
+          "caption": "Los electrodos permitidos y sus mínimos — gas y aluminio nunca cuentan.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Longitud mínima de un electrodo empotrado en concreto?",
+          "choices": [
+            "8 ft",
+            "10 ft",
+            "20 ft",
+            "30 ft"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Al menos 20 ft de varilla de 1/2 in o mayor, o 20 ft de cobre desnudo de 4 AWG, empotrado en al menos 2 in de concreto.",
+          "nec_ref": "250.52(A)(3)"
+        },
+        {
+          "question": "¿Cuál de estos NO puede usarse como electrodo de puesta a tierra?",
+          "choices": [
+            "Tubería metálica subterránea de agua",
+            "Anillo de tierra",
+            "Tubería metálica subterránea de gas",
+            "Electrodo de placa"
+          ],
+          "answer_index": 2,
+          "explain_plain": "250.52(B) prohíbe la tubería metálica subterránea de gas — y los electrodos de aluminio.",
+          "nec_ref": "250.52(B)"
+        },
+        {
+          "question": "Un anillo de tierra debe enterrarse al menos:",
+          "choices": [
+            "12 in",
+            "18 in",
+            "24 in",
+            "30 in"
+          ],
+          "answer_index": 3,
+          "explain_plain": "Al menos 20 ft de cobre desnudo de 2 AWG enterrado al menos 30 in bajo el nivel del suelo.",
+          "nec_ref": "250.52(A)(4)"
+        }
+      ],
+      "code_refs": [
+        "250.52(A)",
+        "250.52(B)",
+        "250.53(D)",
+        "250.53(H)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-250.53",
@@ -9055,7 +10586,7 @@
       "section": "250.53",
       "title": "Instalación de electrodos — varillas, profundidad y la segunda varilla",
       "plain_explanation": "Los electrodos deben instalarse como exige esta sección: clavados o enterrados a las profundidades que indica, mantenidos tan cerca como sea práctico entre sí y de la acometida, y complementados donde una sola varilla, tubo o placa no cumpla la resistencia a tierra indicada — 25 ohms o menos — o no se pruebe en absoluto. En la práctica, eso significa una segunda varilla, espaciada al menos 6 ft de la primera, en casi cada trabajo. Las conexiones de las varillas deben ser accesibles o del tipo irreversible o exotérmico que permite el artículo donde estén enterradas.\n\nLos números de instalación:\n• Electrodos de varilla, tubo y placa — al menos 8 ft del electrodo en contacto con el suelo, con el extremo superior a ras del nivel del suelo o por debajo, a menos que la conexión esté protegida\n• Dos varillas — espaciadas al menos 6 ft entre sí; los 6 ft son un piso, y un espaciamiento mayor hace que el par funcione mejor\n• Una sola varilla, tubo o placa puede quedar sola solo con una resistencia a tierra medida de 25 ohms o menos — sin esa medición en el archivo, el segundo electrodo es obligatorio, no opcional",
-      "on_the_job": "Clave dos varillas separadas al menos 6 ft, a menos que tenga en el archivo del trabajo un resultado probado de 25 ohms o menos. Mantenga el tramo del conductor del electrodo de puesta a tierra corto, recto y protegido donde esté expuesto.",
+      "on_the_job": "Clave dos varillas separadas al menos 6 ft, a menos que tenga en el archivo del trabajo un resultado probado de 25 ohms o menos. Mantenga el tramo del conductor del electrodo de puesta a tierra corto, recto y protegido donde esté expuesto. En una casa de losa de 200A en Marion Oaks, planee dos varillas de 8 ft desde el inicio: clave la primera, sujete el conductor del electrodo de puesta a tierra, luego clave la segunda al menos a 6 ft y conecte el mismo tramo en ella — sin instrumento de prueba, sin discusión en la inspección.",
       "sharma_note": "",
       "figure_idea": "Dos varillas de tierra clavadas a ras, espaciadas con una cinta de 6 ft entre ellas, y el conductor sujetado a cada una por turno en su camino hacia la acometida.",
       "related_ids": [
@@ -9070,7 +10601,97 @@
       "verified": true,
       "prev_id": "C2-250.52",
       "next_id": "C2-250.64",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "El sistema de electrodos le da a la energía de rayos y sobretensiones un camino hacia la tierra y mantiene la acometida cerca del potencial de tierra. Una sola varilla en arena seca puede medir muy por encima de 25 ohms — la conexión a tierra es entonces más un deseo que un hecho. Dos varillas, separadas para que sus áreas de resistencia no se traslapen, bajan el par a donde una sola varilla no pudo.",
+      "inspection_fails": [
+        "Una sola varilla de tierra sin resultado de prueba de 25 ohms en el archivo del trabajo.",
+        "Dos varillas clavadas a 3 ft — por debajo del espaciamiento mínimo de 6 ft.",
+        "Varilla dejada sobresaliendo del nivel del suelo con la conexión de la abrazadera sin proteger.",
+        "Conexión de varilla enterrada hecha con una abrazadera no listada para ese uso — no accesible, irreversible ni exotérmica."
+      ],
+      "exam_trap": "La trampa: «una varilla de 8 ft siempre basta — la segunda varilla es solo un extra». Incorrecto. Una sola varilla, tubo o placa queda sola solo con una resistencia a tierra medida de 25 ohms o menos. Sin medición en el archivo, el electrodo suplementario es obligatorio.",
+      "tables": [
+        {
+          "caption": "¿Una varilla o dos?",
+          "headers": [
+            "Situación",
+            "Lo que se requiere"
+          ],
+          "rows": [
+            [
+              "Medido 25 Ω o menos, en archivo",
+              "Una varilla, tubo o placa puede quedar sola"
+            ],
+            [
+              "Sin medición de resistencia",
+              "Agregue un electrodo suplementario"
+            ],
+            [
+              "Dos varillas instaladas",
+              "Sepárelas al menos 6 ft"
+            ],
+            [
+              "Varilla clavada",
+              "Al menos 8 ft en contacto con el suelo"
+            ]
+          ],
+          "note": "Un espaciamiento mayor funciona mejor — 6 ft es el piso, no la meta."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-250.53-two-rods.svg",
+          "alt": "Dos varillas de tierra de 8 ft clavadas a ras del suelo y separadas 6 ft, con el conductor del electrodo de puesta a tierra sujetado a cada varilla por turno en su camino hacia el equipo de acometida.",
+          "caption": "Dos varillas, 6 ft mínimo entre sí — una sola necesita la prueba de 25 Ω.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Una sola varilla de tierra puede quedar sola solo cuando…",
+          "choices": [
+            "Mide 10 ft de largo",
+            "Su resistencia a tierra medida es de 25 ohms o menos",
+            "El suelo está mojado",
+            "Es revestida de cobre"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Sin una medición de 25 Ω o menos en el archivo, se requiere un electrodo suplementario.",
+          "nec_ref": "250.53"
+        },
+        {
+          "question": "Dos electrodos de varilla deben separarse al menos…",
+          "choices": [
+            "3 ft",
+            "6 ft",
+            "8 ft",
+            "25 ft"
+          ],
+          "answer_index": 1,
+          "explain_plain": "6 ft es el espaciamiento mínimo — y más ancho funciona mejor.",
+          "nec_ref": "250.53"
+        },
+        {
+          "question": "¿Cuánto de un electrodo de varilla debe estar en contacto con el suelo?",
+          "choices": [
+            "6 ft",
+            "8 ft",
+            "10 ft",
+            "Toda la varilla sobre el nivel del suelo"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Los electrodos de varilla, tubo y placa necesitan al menos 8 ft en contacto con el suelo, con el extremo a ras o bajo el nivel del suelo a menos que esté protegido.",
+          "nec_ref": "250.53"
+        }
+      ],
+      "code_refs": [
+        "250.53"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-250.64",
@@ -9078,7 +10699,7 @@
       "article": "250",
       "section": "250.64",
       "title": "Instalación del conductor del electrodo de puesta a tierra",
-      "plain_explanation": "El conductor del electrodo de puesta a tierra se dimensiona en la página de 250.66; esta sección es cómo debe tenderse:\n• Continuo, en un solo tramo sin romper, sin empalmes ni juntas — excepto empalmes hechos con conectores de compresión irreversibles listados como equipo de puesta a tierra y unión, o por soldadura exotérmica\n• Los GEC de aluminio o aluminio revestido de cobre, desnudos o cubiertos, sin una cubierta polimérica extruida no pueden instalarse donde estén sujetos a condiciones corrosivas o en contacto directo con concreto; las terminaciones dentro de gabinetes listados identificados para el entorno se permiten dentro de 18 in. de la parte inferior del gabinete; fuera de edificios o gabinetes, no pueden terminarse dentro de 18 in. de la tierra\n• Donde está expuesto, un conductor de 6 AWG o mayor puede seguir la superficie de la construcción del edificio sin canalización donde esté firmemente sujetado y no esté sujeto a daño físico; los conductores menores, y cualquier tramo expuesto a daño, deben protegerse — en conduit metálico rígido, IMC, EMT, PVC cédula 80, RTRC-XW, o armadura de cable, u otro método que lista esta sección\n• Una canalización o armadura metálica ferrosa que encierra el conductor debe ser eléctricamente continua y estar unida al conductor en ambos extremos — una manga de acero sin unir ahoga el camino de falla que debía proteger\n\nCAMBIO NEC 2023:\n• 250.64: Nuevo 250.64(G): un conductor del electrodo de puesta a tierra (GEC) no puede pasar a través de las aberturas de ventilación de un gabinete. Introdúzcalo a través de un knockout, un hub u otra abertura adecuada. Un GEC no puede pasar a través de una abertura de ventilación en un gabinete (250.64(G)). Introdúzcalo a través de un knockout, un hub u otra abertura adecuada.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "plain_explanation": "El conductor del electrodo de puesta a tierra se dimensiona en la página de 250.66; esta sección es cómo debe tenderse:\n• Continuo, en un solo tramo sin romper, sin empalmes ni juntas — excepto empalmes hechos con conectores de compresión irreversibles listados como equipo de puesta a tierra y unión, o por soldadura exotérmica\n• Los GEC de aluminio o aluminio revestido de cobre, desnudos o cubiertos, sin una cubierta polimérica extruida no pueden instalarse donde estén sujetos a condiciones corrosivas o en contacto directo con concreto; las terminaciones dentro de gabinetes listados identificados para el entorno se permiten dentro de 18 in. de la parte inferior del gabinete; fuera de edificios o gabinetes, no pueden terminarse dentro de 18 in. de la tierra\n• Donde está expuesto, un conductor de 6 AWG o mayor puede seguir la superficie de la construcción del edificio sin canalización donde esté firmemente sujetado y no esté sujeto a daño físico; los conductores menores, y cualquier tramo expuesto a daño, deben protegerse — en conduit metálico rígido, IMC, EMT, PVC cédula 80, RTRC-XW, o armadura de cable, u otro método que lista esta sección\n• Una canalización o armadura metálica ferrosa que encierra el conductor debe ser eléctricamente continua y estar unida al conductor en ambos extremos — una manga de acero sin unir ahoga el camino de falla que debía proteger",
       "on_the_job": "Planifique el tramo como una sola pieza desde la acometida hasta el electrodo antes de cortar nada. Un conductor del electrodo de puesta a tierra que queda corto se reemplaza o se extiende con un empalme irreversible — nunca con un conector partido (split bolt) que terminará enterrado en una pared o una zanja.",
       "sharma_note": "",
       "figure_idea": "Un conductor del electrodo de puesta a tierra tendido del tablero a la varilla en una línea sin romper, con una nota en una manga de acero mostrando uniones en ambos extremos.",
@@ -9099,7 +10720,107 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/250-64",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 250.64: Nuevo 250.64(G): un conductor del electrodo de puesta a tierra (GEC) no puede pasar a través de las aberturas de ventilación de un gabinete. Introdúzcalo a través de un knockout, un hub u otra abertura adecuada. Un GEC no puede pasar a través de una abertura de ventilación en un gabinete (250.64(G)). Introdúzcalo a través de un knockout, un hub u otra abertura adecuada.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "El GEC es el camino que une el sistema de electrodos con la acometida. Un empalme que se corroe, un conector partido que se afloja, o una manga de acero que ahoga el conductor rompen ese camino en silencio — nada se dispara y nada se ve mal hasta que un rayo o una falla encuentran el punto débil. Un tramo único, sin romper, protegido y bien unido es lo que mantiene la conexión real durante la vida del edificio.",
+      "inspection_fails": [
+        "GEC empalmado con un conector partido dentro de una pared o una zanja.",
+        "Manga de acero o canalización ferrosa alrededor del GEC sin uniones en los extremos.",
+        "GEC de 8 AWG tendido expuesto sobre la superficie del edificio sin canalización ni armadura (250.64(B)).",
+        "GEC de aluminio desnudo terminado dentro de 18 in de la tierra fuera del edificio.",
+        "GEC cortado corto y extendido con un conector mecánico en lugar de un empalme irreversible."
+      ],
+      "exam_trap": "Las respuestas trampa nombran el conector partido (split bolt) como un empalme aceptable del GEC. No lo es: los empalmes deben ser conectores de compresión irreversibles listados como equipo de puesta a tierra y unión, o soldadura exotérmica. La segunda trampa es olvidar que una canalización ferrosa alrededor del GEC debe unirse en ambos extremos.",
+      "tables": [
+        {
+          "caption": "Tendido del GEC (250.64)",
+          "headers": [
+            "Situación",
+            "Regla"
+          ],
+          "rows": [
+            [
+              "Empalme o junta",
+              "Solo compresión irreversible (listada) o soldadura exotérmica"
+            ],
+            [
+              "6 AWG o mayor, expuesto",
+              "Puede seguir la superficie del edificio si está sujetado y no está sujeto a daño"
+            ],
+            [
+              "Menor, o sujeto a daño",
+              "RMC, IMC, EMT, PVC cédula 80, RTRC-XW, o armadura"
+            ],
+            [
+              "Canalización o armadura ferrosa",
+              "Eléctricamente continua, unida al GEC en ambos extremos"
+            ],
+            [
+              "Terminaciones de GEC desnudo de Al/CCA",
+              "No dentro de 18 in de la tierra al exterior; no en contacto con concreto"
+            ]
+          ],
+          "note": "Los GEC de aluminio o aluminio revestido de cobre sin cubierta polimérica extruida están prohibidos donde estén sujetos a condiciones corrosivas o en contacto directo con concreto (250.64(A))."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-250.64-gec-run.svg",
+          "alt": "Un conductor del electrodo de puesta a tierra tiende en una sola línea dorada sin romper desde un tablero de acometida, a través de una manga de acero unida en ambos extremos, hasta una varilla de tierra en el suelo, con notas numeradas para la regla de un solo tramo, la manga unida, y la conexión al electrodo.",
+          "caption": "Un solo tramo sin romper: del tablero al electrodo, manga unida en ambos extremos.",
+          "w": 900,
+          "h": 1750
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Un GEC solo puede empalmarse con:",
+          "choices": [
+            "Un conector partido (split bolt)",
+            "Un conector de compresión irreversible listado o soldadura exotérmica",
+            "Un conector de cable del tamaño adecuado",
+            "Soldadura blanda"
+          ],
+          "answer_index": 1,
+          "explain_plain": "250.64(C): conectores de compresión irreversibles listados como equipo de puesta a tierra y unión, o soldadura exotérmica — nada más.",
+          "nec_ref": "250.64(C)"
+        },
+        {
+          "question": "Un GEC de cobre de 6 AWG expuesto puede seguir la superficie del edificio sin canalización cuando:",
+          "choices": [
+            "Está pintado",
+            "Está firmemente sujetado y no está sujeto a daño físico",
+            "Mide menos de 10 ft",
+            "Nunca — siempre se exige canalización"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El de 6 AWG o mayor puede seguir la superficie si está firmemente sujetado y no está sujeto a daño; los conductores menores necesitan protección.",
+          "nec_ref": "250.64(B)"
+        },
+        {
+          "question": "Una canalización metálica ferrosa que encierra un GEC debe:",
+          "choices": [
+            "Pintarse a juego",
+            "Unirse al conductor en ambos extremos",
+            "Quedar flotante para evitar lazos",
+            "Rellenarse con sellador"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Debe ser eléctricamente continua y estar unida en ambos extremos, o ahoga el camino de falla.",
+          "nec_ref": "250.64(E)"
+        }
+      ],
+      "code_refs": [
+        "250.64(A)",
+        "250.64(B)",
+        "250.64(C)",
+        "250.64(E)",
+        "250.66",
+        "250.68"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-250.66",
@@ -9383,7 +11104,96 @@
       "verified": true,
       "prev_id": "C2-250.94",
       "next_id": "C2-250.118",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Cualquier tubería metálica que pueda energizarse se convierte en un camino de choque para todo el edificio — cada llave, válvula y manija de aparato está conectada a ella. Una falla, un neutro fallado o un rayo puede poner voltaje en tuberías que llegan a cada cuarto. La unión conecta la tubería al sistema de puesta a tierra, de modo que ese voltaje se mantiene bajo y una falla obtiene el camino de baja impedancia que necesita para abrir el dispositivo de sobrecorriente.",
+      "inspection_fails": [
+        "Tubería metálica de agua sin unir en la acometida.",
+        "Sin puente de unión sobre el medidor de agua o el filtro, así que la unión se abre cuando se retira el medidor.",
+        "Tubería de gas sin puente de unión dimensionado para el circuito que podría energizarla.",
+        "Abrazadera de unión conectada sobre tubería pintada o corroída, sin contacto con metal limpio."
+      ],
+      "exam_trap": "La respuesta trampa trata unir la tubería de agua y usar la tubería de agua como electrodo de puesta a tierra como un solo trabajo — o dimensiona la unión de la tubería de gas desde la tabla de la acometida. Son trabajos diferentes con tablas diferentes: la tubería de agua en una acometida se une según la Tabla 250.102(C)(1), mientras otras tuberías, como la de gas, se unen según la Tabla 250.122 por la capacidad del circuito que probablemente la energice.",
+      "tables": [
+        {
+          "caption": "Qué tabla dimensiona qué unión (250.104)",
+          "headers": [
+            "Tubería",
+            "Puente dimensionado desde"
+          ],
+          "rows": [
+            [
+              "Tubería de agua, en una acometida",
+              "Tabla 250.102(C)(1), según los conductores de entrada de acometida"
+            ],
+            [
+              "Tubería de agua, edificio alimentado por alimentador",
+              "250.102(D) — Tabla 250.122, según la capacidad del OCPD del alimentador"
+            ],
+            [
+              "Otras tuberías, como la de gas",
+              "Tabla 250.122, según el circuito que probablemente la energice"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-250.104-piping-bonds.svg",
+          "alt": "Elevación de la tubería de una casa que muestra el puente de unión desde el equipo de acometida hasta la tubería metálica de agua con la unión llevada sobre el medidor de agua para que el camino se mantenga continuo, y un puente de unión separado a la tubería de gas, cada uno dimensionado desde la tabla a la que remite 250.104.",
+          "caption": "Una la tubería, mantenga el camino continuo, dimensione cada puente desde su propia tabla.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "El puente de unión para la tubería metálica de agua en una acometida se dimensiona desde:",
+          "choices": [
+            "La Tabla 250.122, según el breaker mayor",
+            "La Tabla 250.102(C)(1), según los conductores de entrada de acometida",
+            "El diámetro de la tubería de agua",
+            "Un fijo de 6 AWG para toda casa"
+          ],
+          "answer_index": 1,
+          "explain_plain": "250.104(A)(1) dimensiona la unión de la tubería de agua desde la Tabla 250.102(C)(1), según el tamaño de los conductores de entrada de acometida — la misma tabla que dimensiona el conductor del electrodo de puesta a tierra.",
+          "nec_ref": "250.104(A)(1)"
+        },
+        {
+          "question": "El puente de unión para la tubería de gas se dimensiona de la Tabla 250.122 según:",
+          "choices": [
+            "El tamaño de la acometida",
+            "La capacidad del circuito que probablemente energice la tubería",
+            "Un circuito por defecto de 20 A",
+            "El tamaño de la tubería de gas"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Otras tuberías metálicas se unen con un puente dimensionado según la capacidad del circuito que probablemente energice la tubería.",
+          "nec_ref": "250.104"
+        },
+        {
+          "question": "Unir una tubería metálica de agua y usarla como electrodo de puesta a tierra son:",
+          "choices": [
+            "El mismo trabajo — una conexión hace ambos",
+            "Trabajos diferentes — una tubería puede necesitar ambos tratamientos en lugares diferentes",
+            "Intercambiables — cualquiera reemplaza al otro",
+            "Ambos cubiertos dimensionando desde la Tabla 250.122"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Unir una tubería es un trabajo diferente de usarla como electrodo, y una tubería puede necesitar ambos tratamientos en lugares diferentes.",
+          "nec_ref": "250.104"
+        }
+      ],
+      "code_refs": [
+        "250.104(A)(1)",
+        "250.104(A)(3)",
+        "250.102(D)",
+        "Table 250.102(C)(1)",
+        "Table 250.122"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-250.118",
@@ -9391,8 +11201,8 @@
       "article": "250",
       "section": "250.118",
       "title": "Conductores de puesta a tierra de equipos — qué cuenta como uno",
-      "plain_explanation": "El camino de falla de regreso a la fuente puede ser un cable, o puede ser uno de los métodos de cableado que esta sección reconoce como conductor de puesta a tierra de equipos:\n• Un conductor tipo cable — cobre, aluminio o aluminio revestido de cobre, desnudo, cubierto o aislado, tendido con los conductores del circuito\n• Conduit metálico rígido, conduit metálico intermedio y tubería metálica eléctrica (EMT) — la propia canalización es el camino de tierra, por lo que sus accesorios deben estar listados y bien apretados\n• La armadura del cable Tipo AC, con su correa interna de unión; y el cable Tipo MC donde la armadura, sola o combinada con su conductor de puesta a tierra contenido, está listada como el camino de tierra\n• Conduit metálico flexible y conduit metálico flexible hermético a líquidos — solo dentro de los límites de esta sección en longitud (6 ft combinados en el camino de retorno a tierra), listado de accesorios y capacidad de sobrecorriente; fuera de esos límites debe tenderse una tierra tipo cable con el circuito\nUn método que no está en la lista de esta sección no es un camino de tierra, por sólido que se vea.\n\nCAMBIO NEC 2023:\n• 250.118: El conduit metálico flexible (FMC) de acero inoxidable, y el flexible hermético a líquidos (LFMC) con núcleo de acero inoxidable, ya no pueden servir como conductor de puesta a tierra de equipos (EGC). Agregue un EGC tipo cable o un puente de unión. El FMC de acero inoxidable no cuenta como el EGC. Instale un EGC tipo cable, o un puente de unión que cumpla 250.102(E)(2) (250.118(A)(5)(f)).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Un tramo de EMT con accesorios listados y apretados es su propia tierra; un acoplamiento de tornillo flojo es una ruptura en esa tierra. En un látigo flexible largo hacia un motor o una unidad de techo, tienda el cable verde en lugar de pedirle al flexible que sea el camino.",
+      "plain_explanation": "El camino de falla de regreso a la fuente puede ser un cable, o puede ser uno de los métodos de cableado que esta sección reconoce como conductor de puesta a tierra de equipos:\n• Un conductor tipo cable — cobre, aluminio o aluminio revestido de cobre, desnudo, cubierto o aislado, tendido con los conductores del circuito\n• Conduit metálico rígido, conduit metálico intermedio y tubería metálica eléctrica (EMT) — la propia canalización es el camino de tierra, por lo que sus accesorios deben estar listados y bien apretados\n• La armadura del cable Tipo AC, con su correa interna de unión; y el cable Tipo MC donde la armadura, sola o combinada con su conductor de puesta a tierra contenido, está listada como el camino de tierra\n• Conduit metálico flexible y conduit metálico flexible hermético a líquidos — solo dentro de los límites de esta sección en longitud (6 ft combinados en el camino de retorno a tierra), listado de accesorios y capacidad de sobrecorriente; fuera de esos límites debe tenderse una tierra tipo cable con el circuito\nUn método que no está en la lista de esta sección no es un camino de tierra, por sólido que se vea.",
+      "on_the_job": "Un tramo de EMT con accesorios listados y apretados es su propia tierra; un acoplamiento de tornillo flojo es una ruptura en esa tierra. En un látigo flexible largo hacia un motor o una unidad de techo, tienda el cable verde en lugar de pedirle al flexible que sea el camino. Cuente el flexible en el camino de tierra, no solo la pieza que tiene en la mano: dos látigos de 4 ft unidos en un mismo tramo ponen 8 ft de flexible en el camino de retorno — sobre el límite combinado de 6 ft — así que se tiende un EGC tipo cable con los conductores del circuito.",
       "sharma_note": "",
       "figure_idea": "Cuatro caminos de tierra dibujados lado a lado: un cable verde en conduit, un tramo de EMT con accesorios apretados, armadura AC con su correa de unión, y un látigo flexible con una tierra tipo cable tendida por dentro.",
       "related_ids": [
@@ -9412,7 +11222,107 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/250-118",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 250.118: El conduit metálico flexible (FMC) de acero inoxidable, y el flexible hermético a líquidos (LFMC) con núcleo de acero inoxidable, ya no pueden servir como conductor de puesta a tierra de equipos (EGC). Agregue un EGC tipo cable o un puente de unión. El FMC de acero inoxidable no cuenta como el EGC. Instale un EGC tipo cable, o un puente de unión que cumpla 250.102(E)(2) (250.118(A)(5)(f)).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "El conductor de puesta a tierra de equipos es el camino que lleva la corriente de falla de regreso a la fuente para que el breaker dispare en una fracción de segundo. Ese camino tiene que ser permanente y de baja impedancia. Una canalización solo funciona como camino mientras cada accesorio se mantenga listado y apretado — un acoplamiento flojo o una unión corroída eleva la impedancia, la corriente de falla cae, el breaker nunca dispara, y la caja metálica del equipo queda energizada esperando una mano.",
+      "inspection_fails": [
+        "Acoplamiento EMT de tornillo flojo dejado en el camino de tierra — la tierra de la canalización queda rota en la unión.",
+        "Látigo flexible de más de 6 ft en el camino de retorno a tierra sin un EGC tipo cable tendido.",
+        "Armadura MC usada como única tierra donde el cable no está listado para ello.",
+        "EGC tipo cable tendido fuera de la canalización en lugar de ir con los conductores del circuito."
+      ],
+      "exam_trap": "La trampa: «el EMT es la tierra, así que el cable verde es opcional — y un látigo flexible es lo mismo». Incorrecto dos veces. El flexible solo cuenta dentro de sus límites — 6 ft combinados en el camino de retorno a tierra, accesorios listados y los límites de sobrecorriente de la sección. Pasados esos límites, el flexible es solo una canalización, y debe tenderse un EGC tipo cable con el circuito.",
+      "tables": [
+        {
+          "caption": "Qué cuenta como conductor de puesta a tierra de equipos",
+          "headers": [
+            "Método",
+            "¿Cuenta?",
+            "Condición"
+          ],
+          "rows": [
+            [
+              "Conductor tipo cable",
+              "Sí",
+              "Tendido con los conductores del circuito"
+            ],
+            [
+              "RMC, IMC, EMT",
+              "Sí",
+              "Accesorios listados y bien apretados"
+            ],
+            [
+              "Armadura Tipo AC",
+              "Sí",
+              "Con su correa interna de unión"
+            ],
+            [
+              "Armadura Tipo MC",
+              "Solo donde esté listada",
+              "Armadura listada como camino de tierra"
+            ],
+            [
+              "FMC / LFMC",
+              "Dentro de límites",
+              "6 ft combinados máx. en el camino de tierra"
+            ]
+          ],
+          "note": "Un método que no está listado en 250.118 no es un camino de tierra, por sólido que se vea."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-250.118-egc-types.svg",
+          "alt": "Cuatro paneles que muestran qué cuenta como conductor de puesta a tierra de equipos: un conductor tipo cable en conduit, un tramo de EMT con accesorios listados y apretados, armadura Tipo AC con su correa de unión, y un látigo flexible con una tierra tipo cable tendida por dentro.",
+          "caption": "Cuatro caminos de tierra reconocidos — y el límite del flexible que viene con el cuarto.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Cuál es la longitud combinada máxima del conduit flexible permitida en el camino de retorno a tierra?",
+          "choices": [
+            "3 ft",
+            "6 ft",
+            "10 ft",
+            "Sin límite"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El FMC y el LFMC cuentan como EGC solo dentro de los límites de la sección — 6 ft combinados en el camino de retorno a tierra, con accesorios listados.",
+          "nec_ref": "250.118"
+        },
+        {
+          "question": "Un tramo de EMT sirve como conductor de puesta a tierra de equipos cuando…",
+          "choices": [
+            "Está pintado",
+            "Sus accesorios están listados y bien apretados",
+            "También se tiende un cable verde",
+            "Mide menos de 6 ft"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La propia canalización es el camino, así que las uniones llevan la falla — los accesorios deben estar listados y apretados.",
+          "nec_ref": "250.118"
+        },
+        {
+          "question": "¿Cuál de estos NO es, por sí solo, un conductor de puesta a tierra de equipos según 250.118?",
+          "choices": [
+            "Cable de cobre tendido con el circuito",
+            "Conduit metálico intermedio",
+            "Un método de canalización no listado en la sección",
+            "Armadura Tipo AC con correa de unión"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Si el método no está en la lista de 250.118, no es un camino de tierra, por sólido que se vea.",
+          "nec_ref": "250.118"
+        }
+      ],
+      "code_refs": [
+        "250.118"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C2-250.119",
@@ -9559,8 +11469,8 @@
       "article": "250",
       "section": "250.140",
       "title": "Marcos de estufas y secadoras en circuitos existentes",
-      "plain_explanation": "El trabajo nuevo es de 4 cables: los marcos de estufas, hornos de pared, unidades de cocción de tope, secadoras de ropa, y las cajas de salida o de conexiones en sus circuitos se conectan al conductor de puesta a tierra de equipos. Esta sección mantiene el arreglo antiguo de 3 cables como legal solo para un circuito ramal existente donde no hay conductor de puesta a tierra de equipos presente en la caja de salida o de conexiones, y solo si se cumplen las cuatro condiciones: la alimentación es 120/240 voltios, monofásica, de 3 cables, o 208Y/120 voltios de un sistema estrella trifásico de 4 cables; el conductor puesto a tierra no es menor de 10 AWG de cobre u 8 AWG de aluminio; ese conductor está aislado, o sin aislar solo como parte de un cable Tipo SE en un circuito que se origina en el equipo de acometida; y los contactos de puesta a tierra de los tomacorrientes suministrados como parte del equipo están unidos al equipo.\n\nCAMBIO NEC 2023:\n• 250.140: Los circuitos antiguos de 3 cables de estufas y secadoras alimentados con cable de entrada de acometida (SE) desde un tablero que no es la acometida pueden seguir usando el neutro para el marco, una vez que el neutro desnudo está cubierto. Nuevo 250.140(B)(5): el cable SE existente de un equipo distinto de la acometida puede unir el marco a través de su neutro, si ese neutro está aislado o cubierto.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "En una llamada de servicio, identifique lo que en realidad hay en la pared antes de cotizar un cambio de tomacorriente. Si el circuito se está reemplazando o extendiendo como trabajo nuevo, tienda 4 cables y coloque un tomacorriente y un cordón de 4 cables; nunca cree una instalación nueva de 3 cables y nunca deje la correa en su lugar en una conexión de 4 cables.",
+      "plain_explanation": "El trabajo nuevo es de 4 cables: los marcos de estufas, hornos de pared, unidades de cocción de tope, secadoras de ropa, y las cajas de salida o de conexiones en sus circuitos se conectan al conductor de puesta a tierra de equipos. Esta sección mantiene el arreglo antiguo de 3 cables como legal solo para un circuito ramal existente donde no hay conductor de puesta a tierra de equipos presente en la caja de salida o de conexiones, y solo si se cumplen las cuatro condiciones:\n• La alimentación es 120/240 voltios, monofásica, de 3 cables, o 208Y/120 voltios de un sistema estrella trifásico de 4 cables.\n• El conductor puesto a tierra no es menor de 10 AWG de cobre u 8 AWG de aluminio.\n• Ese conductor está aislado, o sin aislar solo como parte de un cable Tipo SE en un circuito que se origina en el equipo de acometida.\n• Los contactos de puesta a tierra de los tomacorrientes suministrados como parte del equipo están unidos al equipo.",
+      "on_the_job": "En una llamada de servicio, identifique lo que en realidad hay en la pared antes de cotizar un cambio de tomacorriente. Si el circuito se está reemplazando o extendiendo como trabajo nuevo, tienda 4 cables y coloque un tomacorriente y un cordón de 4 cables; nunca cree una instalación nueva de 3 cables y nunca deje la correa en su lugar en una conexión de 4 cables. En un cambio de secadora en una casa antigua de Kissimmee, revise primero la caja: un tramo SE de 3 cables desde el tablero de acometida, con un neutro de cobre de 10 AWG y los contactos de puesta a tierra del tomacorriente unidos al marco, cumple las cuatro condiciones, así que el circuito existente puede quedarse. El mismo tramo desde un subtablero con un neutro SE desnudo no cumple la tercera condición — eso es una conversación de recableado, no un cambio de tomacorriente.",
       "sharma_note": "",
       "figure_idea": "Un panel trasero de secadora que muestra la correa de unión retirada y el cable verde de un cordón de 4 cables conectado en el tornillo del marco.",
       "related_ids": [
@@ -9580,7 +11490,97 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/250-140",
           "confirmed": true
         }
-      ]
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 250.140: Los circuitos antiguos de 3 cables de estufas y secadoras alimentados con cable de entrada de acometida (SE) desde un tablero que no es la acometida pueden seguir usando el neutro para el marco, una vez que el neutro desnudo está cubierto. Nuevo 250.140(B)(5): el cable SE existente de un equipo distinto de la acometida puede unir el marco a través de su neutro, si ese neutro está aislado o cubierto.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "En una conexión de 3 cables, el marco está unido al neutro, así que la caja metálica de la secadora queda al potencial del neutro. Si ese neutro alguna vez se abre o presenta alta resistencia, el marco puede subir hacia el voltaje de línea a través del elemento calefactor — y la persona que toca la secadora y una llave de agua al mismo tiempo se convierte en el camino. El cableado de 4 cables le da al marco su propio conductor de puesta a tierra, así que una falla dispara el breaker en lugar de energizar la caja.",
+      "inspection_fails": [
+        "Correa de unión dejada en su lugar en una conexión de secadora o estufa de 4 cables — el marco sigue atado al neutro.",
+        "Tomacorriente y cordón nuevos de 3 cables instalados en un circuito de remodelación.",
+        "Arreglo de 3 cables mantenido en un circuito alimentado desde un subtablero con neutro SE sin aislar — no cumple la condición de originarse en la acometida.",
+        "Conductor puesto a tierra menor de 10 AWG de cobre (u 8 AWG de aluminio) en un circuito de 3 cables mantenido.",
+        "Marco de estufa o secadora sin conectar al conductor de puesta a tierra de equipos en trabajo nuevo de 4 cables."
+      ],
+      "exam_trap": "La respuesta trampa es que los circuitos de 3 cables de estufas y secadoras simplemente están «protegidos por antigüedad». No lo están: 250.140 permite el arreglo solo en un circuito existente, sin conductor de puesta a tierra de equipos en la caja, y con las cuatro condiciones cumplidas. La segunda trampa es dejar la correa de unión en su lugar cuando se instala un cordón de 4 cables — la correa vuelve a atar el marco al neutro y anula el nuevo conductor de puesta a tierra.",
+      "tables": [
+        {
+          "caption": "Las cuatro condiciones para mantener una conexión de 3 cables (250.140)",
+          "headers": [
+            "#",
+            "Condición"
+          ],
+          "rows": [
+            [
+              "1",
+              "Alimentación 120/240 V monofásica de 3 cables, o 208Y/120 V de un sistema estrella"
+            ],
+            [
+              "2",
+              "Conductor puesto a tierra no menor de 10 AWG de cobre u 8 AWG de aluminio"
+            ],
+            [
+              "3",
+              "Conductor aislado, o desnudo solo en cable Tipo SE desde el equipo de acometida"
+            ],
+            [
+              "4",
+              "Contactos de puesta a tierra de los tomacorrientes suministrados con el equipo unidos al equipo"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c2/C2-250.140-dryer-panel.svg",
+          "alt": "Parte trasera de una secadora de ropa conectada con un cordón de 4 cables: la correa de unión está retirada y el cable verde de puesta a tierra llega al tornillo del marco, junto a paneles que contrastan el arreglo de 3 cables solo para circuitos existentes y los tamaños mínimos del neutro.",
+          "caption": "La conexión de 4 cables: correa fuera, cable verde en el tornillo del marco.",
+          "w": 900,
+          "h": 1200
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Se instala un cordón de 4 cables en una secadora. ¿Qué pasa con la correa de unión?",
+          "choices": [
+            "Se deja — no hace daño",
+            "Se retira; el marco se une a través del conductor verde",
+            "Se mueve al terminal del neutro",
+            "Se corta el conductor verde en su lugar"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Con un cordón de 4 cables el marco se conecta al conductor de puesta a tierra de equipos. Una correa dejada en su lugar vuelve a atar el marco al neutro.",
+          "nec_ref": "250.140"
+        },
+        {
+          "question": "¿Cuál es el conductor puesto a tierra más pequeño permitido en un circuito de estufa de 3 cables mantenido?",
+          "choices": [
+            "12 AWG de cobre",
+            "10 AWG de cobre",
+            "8 AWG de cobre",
+            "Sin mínimo"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Una de las cuatro condiciones: el conductor puesto a tierra no debe ser menor de 10 AWG de cobre u 8 AWG de aluminio.",
+          "nec_ref": "250.140"
+        },
+        {
+          "question": "Un circuito de secadora de 3 cables puede seguir en servicio solo cuando…",
+          "choices": [
+            "El propietario lo pide",
+            "Es un circuito existente, no hay conductor de puesta a tierra en la caja y se cumplen las cuatro condiciones",
+            "La secadora tiene menos de 10 años",
+            "El tramo mide menos de 25 ft"
+          ],
+          "answer_index": 1,
+          "explain_plain": "250.140 es un permiso para circuitos existentes con cuatro condiciones — nunca autoriza una instalación nueva de 3 cables.",
+          "nec_ref": "250.140"
+        }
+      ],
+      "code_refs": [
+        "250.140"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     }
   ],
   "toc": [
