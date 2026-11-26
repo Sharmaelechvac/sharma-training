@@ -36,8 +36,8 @@
       "article": "600",
       "section": "600.5",
       "title": "Sign branch circuits — 20A, signs only",
-      "plain_explanation": "600.5(A) requires at least one receptacle outlet in an accessible location at EACH ENTRANCE of each commercial building or occupancy that is accessible to pedestrians, supplied by a branch circuit rated at least 20A that serves no other load. The sign circuit itself is the same family of rule: a sign or outline lighting system is supplied by a branch circuit rated at least 20A that serves no other loads, other than signs and outline lighting tied to the same work.\n\nNEC 2023 CHANGE:\n• 600.5: The sign circuit can now also feed equipment that controls the sign, and the delivery-door and service-corridor exemption became a formal exception. The dedicated sign circuit can now also carry loads that control the sign, such as a time clock or photocell (Exception No. 2).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Don't hang storefront lighting or receptacles on the sign circuit.",
+      "plain_explanation": "600.5 puts a dedicated circuit behind every storefront sign, in two parts:\n• 600.5(A) requires at least one receptacle outlet in an accessible location at EACH ENTRANCE of each commercial building or occupancy that is accessible to pedestrians, supplied by a branch circuit rated at least 20A that serves no other load. That outlet is there for the sign and outline lighting at that entrance.\n• The sign circuit itself is the same family of rule: a sign or outline lighting system is supplied by a branch circuit rated at least 20A that serves no other loads, other than signs and outline lighting tied to the same work.\n• Service hallways and corridors are not considered accessible to pedestrians, and delivery doors are not pedestrian entrances — the entrance-outlet rule does not reach them.\n• In feeder and service load calculations, each required sign branch circuit is figured at not less than 1,200 VA.",
+      "on_the_job": "Don't hang storefront lighting or receptacles on the sign circuit. On a strip-center storefront in Kissimmee with two pedestrian entrances, the layout is: one receptacle outlet at each entrance, and the sign on its own 20A home run back to the new Siemens panel, breaker labeled SIGN, with nothing else on it — not the display lighting, not the window receptacles. The service calculation carries that circuit at 1,200 VA. Sharma's S-01 already sets a 20A minimum on commercial branch circuits, so the code and company practice land in the same place here.",
       "sharma_note": "S-01 already sets a 20A minimum on commercial branch circuits — the code and company practice land in the same place here.",
       "figure_idea": "Storefront sign on its own labeled 20A circuit.",
       "related_ids": [
@@ -59,7 +59,97 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/600-5",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "The sign is the one load every storefront has to run, service, and relamp — often by a sign contractor who is not the tenant's electrician. A dedicated 20A circuit means the sign never shares with whatever gets plugged in beside it, and the entrance outlet means the sign crew is not running cords through a doorway or tapping a circuit that was never meant for them.",
+      "exam_trap": "The trap is tapping the sign circuit for the storefront display lighting because the sign circuit is right there and 'only half loaded.' Under the 2020 rule the 20A circuit serves signs and outline lighting only. Feeding the sign's own control gear — a time clock or photocell — off that circuit is a 2023 change, not the 2020 rule.",
+      "inspection_fails": [
+        "Storefront or display lighting tapped off the sign circuit.",
+        "No receptacle outlet at a pedestrian entrance of a commercial occupancy.",
+        "Sign circuit rated under 20A, or shared with another tenant's loads.",
+        "Sign circuit figured below 1,200 VA in the service load calculation."
+      ],
+      "tables": [
+        {
+          "caption": "600.5 at a glance",
+          "headers": [
+            "Item",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "Entrance outlet",
+              "One at each pedestrian entrance, accessible"
+            ],
+            [
+              "Entrance circuit",
+              "20A minimum, no other load"
+            ],
+            [
+              "Sign circuit",
+              "20A minimum, signs and outline lighting only"
+            ],
+            [
+              "Load calculation",
+              "Not less than 1,200 VA per required circuit"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c6/C6-600.5-sign-circuit.svg",
+          "alt": "Storefront elevation with a sign band over two pedestrian entrances, a receptacle outlet at each entrance, and the sign fed from a panel by a dedicated 20 ampere breaker labeled SIGN that serves no other load, with storefront display lighting on the sign circuit shown as a fail.",
+          "caption": "One outlet at each entrance; the sign on its own 20A circuit.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A sign branch circuit under 600.5 must be rated at least ___ and serve ___.",
+          "choices": [
+            "15A; any storefront load",
+            "20A; signs and outline lighting only",
+            "20A; signs and display lighting",
+            "30A; signs only"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The sign circuit is rated at least 20A and serves no other loads besides signs and outline lighting.",
+          "nec_ref": "600.5"
+        },
+        {
+          "question": "Entrance receptacle outlets are required at:",
+          "choices": [
+            "The main entrance only",
+            "Each entrance accessible to pedestrians",
+            "Every door, including delivery doors",
+            "Only entrances that have a sign"
+          ],
+          "answer_index": 1,
+          "explain_plain": "600.5(A) requires an outlet in an accessible location at each entrance of each commercial building or occupancy accessible to pedestrians.",
+          "nec_ref": "600.5(A)"
+        },
+        {
+          "question": "Under the NEC 2020 rule, which load may share the sign circuit?",
+          "choices": [
+            "A photocell controlling the sign",
+            "Outline lighting tied to the same work",
+            "Storefront display lighting",
+            "Another tenant's receptacles"
+          ],
+          "answer_index": 1,
+          "explain_plain": "In 2020 the circuit serves signs and outline lighting only. Letting it feed sign-control gear is a 2023 change — see the edition note.",
+          "nec_ref": "600.5"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 600.5: The sign circuit can now also feed equipment that controls the sign, and the delivery-door and service-corridor exemption became a formal exception. The dedicated sign circuit can now also carry loads that control the sign, such as a time clock or photocell (Exception No. 2).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "600.5",
+        "600.5(A)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C6-600.6",
@@ -67,8 +157,8 @@
       "article": "600",
       "section": "600.6",
       "title": "Sign disconnecting means",
-      "plain_explanation": "The conductors feeding a sign, outline lighting system, or skeleton tubing are controlled by an externally operable switch or breaker that opens all ungrounded conductors. The disconnect sits where the circuit enters the sign enclosure, body, or pole; the 2020 rules in 600.6(A) also cover within-sight, lockable, and remote-location marking situations so service people and first responders can find and kill it.",
-      "on_the_job": "Stand at the sign — can you see and reach its disconnect? If it's remote, it must be marked at the sign.",
+      "plain_explanation": "Every circuit that feeds a sign, an outline lighting system, or skeleton tubing gets a real disconnect — not just a breaker back at the panel.\n• The control is an externally operable switch or circuit breaker that opens all ungrounded conductors at the same time.\n• Location: at the point where the circuit enters the sign enclosure, the sign body, or the pole the sign is mounted on.\n• The 2020 rules in 600.6(A) also cover the within-sight, lockable, and remote-location marking situations: a disconnect that is not within sight of the sign must be capable of being locked in the open position, and a disconnect in a remote location must be marked at the sign, so service people and first responders can find and kill it.",
+      "on_the_job": "Pylon sign at a Winter Garden shopping center: the sign circuit comes out of the tenant panel on a dedicated 20 A Siemens breaker (the sign circuit family in 600.5), runs up the pole, and lands first on an externally operable disconnect mounted at the point where the circuit enters the sign structure — one switch opening all ungrounded conductors. The sign tech kills it, locks it, and opens the cabinet with nobody able to re-energize from the panel. On a monument sign whose disconnect ends up remote, inside the building, the sign itself gets a placard telling the tech where that disconnect lives.",
       "sharma_note": "",
       "figure_idea": "Sign disconnect at the point of entry into the sign body, placard for a remote disconnect beside it.",
       "related_ids": [
@@ -78,7 +168,102 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C6-600.5",
-      "next_id": "C6-600.35"
+      "next_id": "C6-600.35",
+      "rich": 1,
+      "why_it_exists": "Sign work happens on ladders, on rooftops, and inside metal cabinets full of ballasts, drivers, and high-voltage neon secondaries. The person servicing the sign has to know the circuit is dead — and stay sure of it while both hands are in the cabinet. A disconnect at the point of entry, opening every ungrounded conductor, is the one control that does that; the lockable and marking rules keep it true when the disconnect has to live somewhere else.",
+      "inspection_fails": [
+        "No disconnect at the sign — when the inspector asked, the crew pointed at the panel breaker.",
+        "Disconnect opens only one ungrounded conductor; the second hot stays live inside the cabinet.",
+        "Disconnect mounted remotely with no marking at the sign telling anyone where it is.",
+        "Disconnect not within sight of the sign and not capable of being locked in the open position."
+      ],
+      "exam_trap": "The trap answer is 'the breaker in the panel is the disconnect.' A panel breaker is overcurrent protection and a control, but 600.6 puts the disconnecting means at the point where the circuit enters the sign enclosure, body, or pole — and if it is not within sight, it must be lockable in the open position and marked. Naming the panel breaker leaves the sign tech with no local, lockable kill point.",
+      "tables": [
+        {
+          "caption": "The disconnect, piece by piece",
+          "headers": [
+            "Piece",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "Type",
+              "Externally operable switch or circuit breaker"
+            ],
+            [
+              "Opens",
+              "All ungrounded conductors, at the same time"
+            ],
+            [
+              "Location",
+              "Where the circuit enters the enclosure, body, or pole"
+            ],
+            [
+              "Not within sight",
+              "Capable of being locked in the open position"
+            ],
+            [
+              "Remote location",
+              "Marked at the sign so it can be found"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c6/C6-600.6-disconnect.svg",
+          "alt": "Elevation of a pole sign: the sign circuit leaves the tenant panel and an externally operable disconnect sits at the point where the circuit enters the sign structure, opening all ungrounded conductors; a remote disconnect must be lockable and marked at the sign.",
+          "caption": "The disconnect lives where the circuit enters the sign.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Where does 600.6 put the sign disconnect?",
+          "choices": [
+            "In the electrical panel only",
+            "At the point where the circuit enters the sign enclosure, body, or pole",
+            "Anywhere within 25 ft of the sign",
+            "On the utility pole"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The disconnecting means sits at the point of entry into the enclosure, body, or pole — not back at the panel.",
+          "nec_ref": "600.6"
+        },
+        {
+          "question": "The sign disconnect must open…",
+          "choices": [
+            "The grounded conductor first",
+            "All ungrounded conductors",
+            "Only the conductor feeding the ballast",
+            "The neutral and one hot"
+          ],
+          "answer_index": 1,
+          "explain_plain": "One externally operable switch or breaker opens every ungrounded conductor at the same time.",
+          "nec_ref": "600.6"
+        },
+        {
+          "question": "A sign disconnect is in a remote location. What does the sign itself need?",
+          "choices": [
+            "Nothing extra",
+            "A second disconnect",
+            "Marking at the sign identifying where the disconnect is",
+            "A GFCI receptacle"
+          ],
+          "answer_index": 2,
+          "explain_plain": "A remote disconnect is marked at the sign so service people and first responders can find and kill it.",
+          "nec_ref": "600.6(A)"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "600.6",
+        "600.6(A)",
+        "600.5"
+      ],
+      "uncertain": [],
+      "rich_sources": []
     },
     {
       "id": "C6-600.35",
@@ -169,8 +354,8 @@
       "article": "620",
       "section": "620",
       "title": "Article 620 — Elevators, Dumbwaiters, Escalators, Moving Walks, Platform Lifts, and Stairway Chairlifts",
-      "plain_explanation": "This article covers the electrical installation for elevators and similar equipment: the machine-room disconnect, the branch circuits that serve the car and the machine space, GFCI protection in pits and hoistways, and selective coordination where several machines share a feeder. Elevator work is always coordinated with the elevator contractor and ASME A17.1 — the electrical scope is defined here, the machine scope is theirs.\n\nNEC 2023 CHANGE:\n• 620.36: Received substantiation specifies which cable types may be installed in elevator raceway or traveling cable. Shielded pair cables, coaxial cables, and communication cables complying with 800.179 are now specifically permitted in Section 620.36. 620.Sl(A) Type. Ex. No.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "On a job with an elevator, Sharma's piece is typically the disconnect, the car and machine-room circuits, and pit/hoistway receptacles — confirm that split in the bid, not on site.",
+      "plain_explanation": "Article 620 covers the electrical installation for elevators, dumbwaiters, escalators, moving walks, platform lifts, and stairway chairlifts. Sharma's scope is the electrical side; the machine itself belongs to the elevator contractor under ASME A17.1.\n• Each driving machine gets its own disconnecting means — an enclosed, externally operable fused switch or circuit breaker — and it must be lockable in the open position only, never lockable closed (620.51).\n• The disconnect kills the driving machine only. Car lighting, receptacle, and ventilation circuits (620.22, 620.23, 620.24) are arranged to stay energized, so service work in the car is not done in the dark.\n• GFCI protection: every 125-volt, single-phase, 15- and 20-ampere receptacle in pits, hoistways, on cars, and in wellways and machinery spaces is GFCI type, and machine-room receptacles carry GFCI protection too (620.6).\n• Where several machines share one feeder, the disconnect overcurrent devices are selectively coordinated with the supply-side devices, selected and documented by a licensed professional engineer or other qualified person (620.62, 620.65).",
+      "on_the_job": "On a Central Florida medical-office job with two hydraulic elevators, Sharma's piece is the two machine-room disconnects, the car light and receptacle circuits tapped ahead of them, the pit GFCI receptacles, and the machine-room circuits — the elevator contractor sets the machines and traveling cables. Confirm that split in the bid, not on site: where one feeder serves both machines, the coordination selection and its documentation are a line item too, not a free extra. One disconnect per machine, lockable open only, and the car circuits stay live when it is off.",
       "sharma_note": "",
       "figure_idea": "Machine room: one labeled disconnect per unit, car circuits tapped ahead of it.",
       "related_ids": [
@@ -188,12 +373,108 @@
       "nec2023_change": [
         {
           "section": "620.36",
-          "change": "Received substantiation specifies which cable types may be installed in elevator raceway or traveling cable. Shielded pair cables, coaxial cables, and communication cables complying with 800.179 are now specifically permitted in Section 620.36. 620.Sl(A) Type. Ex. No.",
+          "change": "Received substantiation specifies which cable types may be installed in elevator raceway or traveling cable. Shielded pair cables, coaxial cables, and communication cables complying with 800.179 are now specifically permitted in Section 620.36. 620.51(A) Type. Ex. No.",
           "source": "Carosella/NFPA-based 2023 NEC change workbook: 620.36 Different Systems in One Raceway or Traveling Cable",
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "A mechanic working in a hoistway with a machine that can still move, or in a car gone dark because the disconnect killed the lights too, is how people get hurt on elevator work. These rules split machine power from the service circuits: the machine can be locked out dead while the car stays lit, and the receptacles a mechanic plugs into are GFCI protected.",
+      "exam_trap": "The trap is treating the elevator disconnect like an ordinary motor disconnect and feeding the car lights through it. It feels tidy and it is wrong twice: the disconnect must not kill the 620.22, 620.23, and 620.24 car circuits, and it must be lockable in the open position only. A disconnect that can be locked closed fails even if everything else on the job is right.",
+      "tables": [
+        {
+          "caption": "Article 620 — the pieces Sharma installs",
+          "headers": [
+            "Piece",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "Driving machine",
+              "Own disconnect, lockable open only (620.51)"
+            ],
+            [
+              "Car light / receptacle / vent",
+              "Stays energized — not through the machine disconnect (620.22–620.24)"
+            ],
+            [
+              "Pit and hoistway receptacles",
+              "GFCI type, 125V, 15A and 20A (620.6)"
+            ],
+            [
+              "Several machines, one feeder",
+              "Selective coordination, documented (620.62)"
+            ]
+          ]
+        }
+      ],
+      "inspection_fails": [
+        "Car lighting fed through the machine disconnect — disconnect off, car dark (620.51, 620.22).",
+        "Disconnect lockable in the closed position — 620.51 permits lockable open only.",
+        "Plain receptacle in the pit — 125V pit receptacles must be GFCI type (620.6).",
+        "Two machines on one feeder with no selective-coordination documentation (620.62)."
+      ],
+      "page_quiz": [
+        {
+          "question": "The elevator driving-machine disconnect must be lockable in which position?",
+          "choices": [
+            "Closed only",
+            "Open only",
+            "Either position",
+            "It must not lock at all"
+          ],
+          "answer_index": 1,
+          "explain_plain": "620.51 requires the disconnect to be lockable in the open position only — it is not permitted to be lockable closed.",
+          "nec_ref": "620.51"
+        },
+        {
+          "question": "The machine disconnect is opened for service. The car lighting circuit should be:",
+          "choices": [
+            "Off with the machine",
+            "Still energized",
+            "Fed from the pit receptacle",
+            "Locked out with the machine"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The disconnect must not disconnect the car lighting, receptacle, and ventilation circuits of 620.22, 620.23, and 620.24 — they stay energized for service work.",
+          "nec_ref": "620.51"
+        },
+        {
+          "question": "A 125-volt, 20-ampere receptacle installed in an elevator pit must be:",
+          "choices": [
+            "A standard duplex",
+            "Twist-lock type",
+            "GFCI type",
+            "Isolated ground type"
+          ],
+          "answer_index": 2,
+          "explain_plain": "620.6 requires GFCI-type receptacles for 125V, single-phase, 15A and 20A receptacles in pits, hoistways, on cars, and in wellways and machinery spaces.",
+          "nec_ref": "620.6"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 620.36: Received substantiation specifies which cable types may be installed in elevator raceway or traveling cable. Shielded pair cables, coaxial cables, and communication cables complying with 800.179 are now specifically permitted in Section 620.36. 620.51(A) Type. Ex. No.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "figures": [
+        {
+          "src": "fig/c6/C6-ART-620-machine-room.svg",
+          "alt": "One-line diagram of an elevator machine room: one feeder splitting to two labeled machine disconnects, with the car lighting, receptacle and ventilation circuits tapped ahead of the disconnects so they stay energized, and GFCI receptacles shown in the pit and machine room.",
+          "caption": "One disconnect per machine; car circuits tapped ahead of it.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "code_refs": [
+        "620.51",
+        "620.6",
+        "620.22",
+        "620.23",
+        "620.24",
+        "620.62",
+        "620.65",
+        "620.36"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C6-620.6",
@@ -499,8 +780,94 @@
       "article": "625",
       "section": "625.43",
       "title": "Disconnecting means — over 60A or 150V to ground",
-      "plain_explanation": "EV charging equipment rated more than 60A, or more than 150V to ground, must have a disconnecting means that is readily accessible and capable of being locked in the open position, with the locking provision remaining in place as 110.25 requires. Equipment at or under both thresholds does not need the separate disconnect under this section.\n\nNEC 2023 CHANGE:\n• 625.43: When the disconnect for larger EV equipment (over 60 amps, or more than 150 volts to ground) is remote, the equipment now needs a plaque telling where it is. New: if the disconnect sits away from the EVSE or wireless power transfer equipment (WPTE), a plaque on that equipment must show its location.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Big commercial chargers and DC fast-charge equipment cross the threshold — plan the disconnect location at rough-in, not at the final.",
+      "plain_explanation": "EV charging equipment rated more than 60 A, or more than 150 V to ground, needs its own disconnecting means under this section:\n• The disconnect must be readily accessible — reachable quickly, without climbing over or moving anything.\n• It must be capable of being locked in the open position, and the locking provision stays in place whether the lock is on it or not, as 110.25 requires.\n• Equipment rated at or under both thresholds — 60 A or less and 150 V or less to ground — does not need the separate disconnect under 625.43.\nThe rating that counts is the equipment's rating, not the size of the breaker feeding it. A 48 A charger on a 60 A circuit is still 48 A equipment.",
+      "why_it_exists": "Big chargers move enough energy to hurt someone fast, and their electronics can leave parts energized after the vehicle is unplugged. A lockable disconnect within reach lets a technician, a firefighter, or the building owner kill the equipment for certain and keep it dead while hands are inside it. The lock is what turns “somebody switched it off” into “it stays off until I say so.”",
+      "on_the_job": "Fleet depot in Lakeland: two DC fast chargers rated 100 A each. Both are over the 60 A threshold, so each gets a lockable disconnect on the wall beside it, readily accessible from the drive aisle — planned at rough-in, while the wall is open and the gear layout can still move, not discovered at the final. Across the lot, the employee chargers are 48 A wall units on 60 A circuits: the equipment rating is under 60 A, so 625.43 does not force a separate disconnect for them. Same article, two answers — the nameplate decides.",
+      "exam_trap": "The trap is rating the circuit instead of the equipment: a 48 A charger on a 60 A breaker does not trip this rule, and a charger rated exactly 60 A does not either — the section starts at MORE THAN 60 A. The second trap is a disconnect that can only be locked with a removable hasp kept in the truck: 110.25 wants the locking provision to remain in place with the lock removed.",
+      "tables": [
+        {
+          "caption": "When 625.43 requires the disconnect",
+          "headers": [
+            "Equipment rating",
+            "Disconnect?"
+          ],
+          "rows": [
+            [
+              "More than 60 A",
+              "Yes — lockable, readily accessible"
+            ],
+            [
+              "More than 150 V to ground",
+              "Yes — lockable, readily accessible"
+            ],
+            [
+              "60 A or less and 150 V or less to ground",
+              "Not required by 625.43"
+            ]
+          ],
+          "note": "The 2023 plaque rule for remote disconnects is in the 2020 vs 2023 box."
+        }
+      ],
+      "inspection_fails": [
+        "100 A fast charger with no disconnect at the equipment — the panel breaker two rooms away offered as the disconnect.",
+        "Disconnect fitted with a locking hasp that lives in the gang box; nothing left to lock to once it walks off (110.25).",
+        "Disconnect mounted behind the charger's bollards, where nobody can stand in front of it and reach the handle.",
+        "Lockable disconnect installed, but on the far side of a locked fence the service technician cannot open."
+      ],
+      "page_quiz": [
+        {
+          "question": "Under NEC 2020, which EV charger needs a disconnecting means under 625.43?",
+          "choices": [
+            "A 40 A wall charger in a home garage",
+            "A 48 A charger fed by a 60 A circuit",
+            "A 100 A DC fast charger",
+            "A 32 A plug-in charger"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The trigger is the equipment rating: more than 60 A, or more than 150 V to ground.",
+          "nec_ref": "625.43"
+        },
+        {
+          "question": "A charger's 625.43 disconnecting means must be:",
+          "choices": [
+            "Inside the charger enclosure only",
+            "Readily accessible and capable of being locked in the open position",
+            "In sight of the service panel",
+            "A GFCI breaker"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Readily accessible, lockable in the open position, and the locking provision remains in place per 110.25.",
+          "nec_ref": "625.43; 110.25"
+        },
+        {
+          "question": "Under NEC 2023, if the disconnect for larger EV equipment is located remote from the charger, what else is required?",
+          "choices": [
+            "A second disconnect at the charger",
+            "A plaque on the equipment showing where the disconnect is",
+            "A shunt-trip breaker",
+            "Nothing changes"
+          ],
+          "answer_index": 1,
+          "explain_plain": "2023 added the plaque so the next person can find a remote disconnect without hunting.",
+          "nec_ref": "625.43 (2023)"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 625.43: When the disconnect for larger EV equipment (over 60 amps, or more than 150 volts to ground) is remote, the equipment now needs a plaque telling where it is. New: if the disconnect sits away from the EVSE or wireless power transfer equipment (WPTE), a plaque on that equipment must show its location.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "figures": [
+        {
+          "src": "fig/c6/C6-625.43-disconnect.svg",
+          "alt": "Comparison panel: a 48 A wall charger on a 60 A circuit needs no 625.43 disconnect, while a 100 A fast charger needs a lockable, readily accessible disconnect beside it.",
+          "caption": "The equipment rating decides whether 625.43 requires a disconnect.",
+          "w": 900,
+          "h": 1250
+        }
+      ],
+      "code_refs": [
+        "625.43",
+        "110.25"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
       "sharma_note": "",
       "figure_idea": "Wall-mounted lockable disconnect beside a high-output charger.",
       "related_ids": [
@@ -508,9 +875,9 @@
       ],
       "florida_note": "",
       "verified": true,
-      "sharma_rule_ids": [],
       "prev_id": "C6-625.42",
       "next_id": "C6-625.44",
+      "sharma_rule_ids": [],
       "nec2023_change": [
         {
           "section": "625.43",
@@ -519,7 +886,8 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/625-43",
           "confirmed": true
         }
-      ]
+      ],
+      "rich": 1
     },
     {
       "id": "C6-625.44",
@@ -767,8 +1135,99 @@
       "article": "625",
       "section": "625.54",
       "title": "GFCI protection for personnel — every EV receptacle",
-      "plain_explanation": "All receptacles installed for the connection of electric vehicle charging must be provided with GFCI protection for personnel. The requirement is in addition to the dwelling garage rules in 210.8 — a 240V charging receptacle is not exempt, and indoor locations are not exempt. The charger receptacle is the outlet being protected; the EVSE's own internal personnel protection system does not substitute for it.",
-      "on_the_job": "Treat every EV receptacle as a GFCI point, 120V or 240V, indoor or out.",
+      "plain_explanation": "All receptacles installed for the connection of electric vehicle charging must be provided with GFCI protection for personnel:\n• The requirement is in addition to the dwelling garage rules in 210.8 — it stands on its own.\n• A 240 V charging receptacle is not exempt.\n• Indoor locations are not exempt.\n• The charger receptacle is the outlet being protected. The EVSE's own internal personnel protection system does not substitute for the required GFCI protection.\nIf a receptacle exists to plug in a charger, 625.54 protects it — the voltage and the room do not matter.",
+      "why_it_exists": "A charge cord lives a hard life: driven over, kinked, rained on, and plugged in with wet hands on a concrete slab. A ground fault through a damaged cord or a wet connector puts current through the person holding it, and a 50 A breaker will never notice a few milliamperes going the wrong way. GFCI protection watches for current leaking where it should not go and opens the circuit fast — that is the difference between a scare and a fatality.",
+      "on_the_job": "Spec home in Ocala: the garage gets a 240 V, 50 A receptacle for the buyer's charger, fed from the Siemens panel on a 2-pole GFCI breaker — 50 A because the 40 A charger is a continuous load under 625.41. The receptacle itself is a standard heavy-duty 14-50; the protection lives in the breaker, and the crew labels the receptacle “EV charging — GFCI protected” so the inspector and the homeowner both see it. Per the Sharma note on this page, the 240 V circuit is not an S-07 dual-function point — S-07 is a 120 V device rule — so nobody specs a dual-function breaker here; the listed 2-pole GFCI breaker is the protection method for this job.",
+      "exam_trap": "Two traps. First: “the EVSE already has personnel protection built in, so the receptacle needs nothing.” 625.54 protects the receptacle, and the charger's internal system does not substitute for it. Second: “GFCI is only for 120 V receptacles.” This section covers every receptacle installed for EV charging, 240 V included, indoors or out.",
+      "tables": [
+        {
+          "caption": "625.54 — what gets protected",
+          "headers": [
+            "Receptacle",
+            "GFCI?"
+          ],
+          "rows": [
+            [
+              "240 V garage receptacle for a plug-in charger",
+              "Yes"
+            ],
+            [
+              "120 V receptacle installed for EV charging",
+              "Yes"
+            ],
+            [
+              "Outdoor receptacle for EV charging",
+              "Yes"
+            ],
+            [
+              "Hard-wired EVSE, no receptacle",
+              "Outside 625.54 — the rule protects receptacles"
+            ]
+          ],
+          "note": "The protected point is the receptacle, whatever feeds the charger through it."
+        }
+      ],
+      "inspection_fails": [
+        "14-50 EV receptacle on a standard 2-pole breaker — no GFCI protection anywhere on the circuit.",
+        "Crew pointed at the EVSE's internal protection when the inspector asked where the GFCI protection was.",
+        "Indoor charging receptacle left unprotected because the garage “stays dry.”",
+        "240 V receptacle written up on the work order as exempt from GFCI."
+      ],
+      "page_quiz": [
+        {
+          "question": "Which EV charging receptacle needs GFCI protection for personnel under 625.54?",
+          "choices": [
+            "Only 120 V receptacles",
+            "Only outdoor receptacles",
+            "Every receptacle installed for EV charging",
+            "Only receptacles in dwelling garages"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Voltage and location do not matter; if the receptacle is installed for EV charging, it is protected.",
+          "nec_ref": "625.54"
+        },
+        {
+          "question": "The EVSE has a built-in personnel protection system. The receptacle it plugs into:",
+          "choices": [
+            "Needs no further protection",
+            "Still needs GFCI protection",
+            "Needs AFCI protection instead",
+            "Is exempt when indoors"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The receptacle is the outlet being protected; the charger's internal system does not substitute for 625.54.",
+          "nec_ref": "625.54"
+        },
+        {
+          "question": "Per the Sharma note on this page, a 240 V EV charger circuit is:",
+          "choices": [
+            "An S-07 dual-function point",
+            "Not an S-07 point — S-07 is a 120 V device; use the listed protection method specified for the job",
+            "Exempt from 625.54",
+            "Protected only at the receptacle device"
+          ],
+          "answer_index": 1,
+          "explain_plain": "S-07's dual-function device is a 120 V point. A 240 V charger circuit meets 625.54 with the listed method the job specifies.",
+          "nec_ref": "625.54"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "figures": [
+        {
+          "src": "fig/c6/C6-625.54-gfci.svg",
+          "alt": "Panel with a 2-pole GFCI breaker feeding a 14-50 receptacle labeled EV charging, GFCI protected, and a red warning panel stating the EVSE internal protection does not replace 625.54.",
+          "caption": "A 14-50 receptacle on a 2-pole GFCI breaker, labeled at the receptacle.",
+          "w": 900,
+          "h": 1120
+        }
+      ],
+      "code_refs": [
+        "625.54",
+        "210.8",
+        "625.41"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
       "sharma_note": "Sharma note: S-07's dual-function point is a 120V device. A 240V EV circuit is not an S-07 point — meet 625.54 with the listed protection method specified for the job (Mike/Sanjay decide the device per job), and never describe a 240V charger circuit as a DFN point.",
       "figure_idea": "14-50 receptacle on a 2-pole GFCI breaker, labeled 'EV charging — GFCI protected.'",
       "related_ids": [
@@ -779,11 +1238,12 @@
       ],
       "florida_note": "",
       "verified": true,
+      "prev_id": "C6-625.52",
+      "next_id": "C6-625.56",
       "sharma_rule_ids": [
         "S-07"
       ],
-      "prev_id": "C6-625.52",
-      "next_id": "C6-625.56"
+      "rich": 1
     },
     {
       "id": "C6-625.56",
@@ -896,16 +1356,144 @@
       "article": "626",
       "section": "626",
       "title": "Article 626 — Electrified Truck Parking Spaces",
-      "plain_explanation": "Intro: shore-power connections at truck parking spaces — pedestals, receptacles, and disconnects that let a parked truck run its cab loads without idling. Commercial/industrial work; recognize the article when a truck-stop or warehouse job specs electrified spaces.",
-      "on_the_job": "Price electrified spaces from the pedestal schedule: count the spaces, confirm the receptacle type and the disconnect for each space, and treat each pedestal like a small service with its own grounding — not like a receptacle add on a site-lighting circuit.",
+      "plain_explanation": "Article 626 covers electrified truck parking spaces: the pedestals, receptacles, and disconnects that let a parked truck run cab heat, air conditioning, and appliances — and a refrigerated trailer keep its load cold — without idling the engine. The article covers the equipment external to the truck. The numbers that drive a bid:\n• 626.11(A) — every space is figured at not less than 11 kVA in feeder and service load calculations, before the climate-zone demand factors of 626.11(B). The 11 kVA is built from the receptacles each space must have: two 20 A, 120 V receptacles plus one 30 A, 208 V circuit.\n• 626.24(B) — each space's connection means provides at least three receptacles, on at least two different branch circuits, and the receptacles get GFCI protection (626.24(D)).\n• 626.22 — supply equipment on a pedestal or raised pad mounts at least 2 ft above grade, or above the high-water mark where flooding reaches, and a remote disconnecting means that can be locked in the open position kills the supply to one or more spaces.\n• 626.10 — each stand is supplied from a 208Y/120 V or 480Y/277 V system.\nWhere Article 626 conflicts with another article, 626.3 says Article 626 applies.",
+      "why_it_exists": "A diesel idling all night burns fuel, makes noise, and wears the engine — shore power is the clean answer, but it puts a serious continuous load in a parking lot full of fuel, water, and road salt. Pedestals get hit, cords get driven over, and drivers plug in during rainstorms. The receptacle, GFCI, mounting-height, and lockable-disconnect rules are written for equipment that lives outdoors and gets abused.",
+      "on_the_job": "Distribution warehouse in Polk County adds six electrified spaces for overnight tractors. The load math starts at 6 × 11 kVA = 66 kVA before the 626.11(B) climate-zone demand factors — a real feeder, not a site-lighting tap — so the pedestals get their own panel and a disconnect that locks open for the row. Each pedestal mounts at least 2 ft above grade (the lot ponds in summer storms), carries the 626.24(B) receptacle set with GFCI protection, and is priced from the pedestal schedule: spaces counted, receptacle types confirmed, disconnect per the layout. Treat each pedestal like a small service with its own grounding, exactly as the old note on this page said — now with the article's numbers filled in.",
+      "exam_trap": "The trap is sizing a space like a 20 A convenience receptacle. 626.11(A) fixes the floor at 11 kVA per space before demand factors, and the branch-circuit loads are continuous. Second trap: applying another article over 626 where the two conflict — 626.3 gives the tie to Article 626 on its own turf.",
+      "tables": [
+        {
+          "caption": "One electrified space, by the numbers",
+          "headers": [
+            "Item",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "Load per space, before demand factors",
+              "11 kVA min — 626.11(A)"
+            ],
+            [
+              "Receptacles per space",
+              "3 min, on 2 or more branch circuits — 626.24(B)"
+            ],
+            [
+              "Receptacle protection",
+              "GFCI — 626.24(D)"
+            ],
+            [
+              "Pedestal mounting height",
+              "2 ft min above grade — 626.22"
+            ],
+            [
+              "Supply system",
+              "208Y/120 V or 480Y/277 V — 626.10"
+            ]
+          ],
+          "note": "Demand factors by climate zone are in 626.11(B); branch-circuit loads are continuous under 626.11(D)."
+        }
+      ],
+      "inspection_fails": [
+        "Feeder sized from the receptacle count at face value — no 11 kVA per space in the load calculation.",
+        "Pedestal receptacles with no GFCI protection (626.24(D)).",
+        "Supply equipment mounted at grade on a lot that floods; 626.22 wants it at least 2 ft up.",
+        "No lockable remote disconnecting means for the row of spaces.",
+        "All three receptacles for a space landed on a single branch circuit."
+      ],
+      "page_quiz": [
+        {
+          "question": "In feeder and service load calculations, each electrified truck parking space counts as not less than:",
+          "choices": [
+            "5 kVA",
+            "7.5 kVA",
+            "11 kVA",
+            "20 kVA"
+          ],
+          "answer_index": 2,
+          "explain_plain": "11 kVA per space, built from two 20 A, 120 V receptacles plus one 30 A, 208 V circuit, before demand factors.",
+          "nec_ref": "626.11(A)"
+        },
+        {
+          "question": "Pedestal supply equipment at an electrified truck parking space must be mounted:",
+          "choices": [
+            "At grade, on a concrete pad",
+            "At least 2 ft above grade",
+            "At least 6 ft above grade",
+            "Only indoors"
+          ],
+          "answer_index": 1,
+          "explain_plain": "2 ft minimum above grade — or above the high-water mark where the lot is subject to flooding.",
+          "nec_ref": "626.22"
+        },
+        {
+          "question": "Where Article 626 conflicts with another NEC article on a truck parking job:",
+          "choices": [
+            "The other article wins",
+            "Article 626 applies",
+            "The AHJ picks either one",
+            "Article 90 decides"
+          ],
+          "answer_index": 1,
+          "explain_plain": "626.3 is the tiebreaker: on electrified truck parking spaces, Article 626 governs.",
+          "nec_ref": "626.3"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "figures": [
+        {
+          "src": "fig/c6/C6-ART-626-pedestal.svg",
+          "alt": "Elevation of an electrified truck parking pedestal beside a parked truck, with markers for the three GFCI receptacles, the lockable disconnect, and the underground feeder, plus a dimension showing the 2 ft minimum mounting height above grade.",
+          "caption": "One space: pedestal receptacles, a lockable disconnect, 2 ft up from grade.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "code_refs": [
+        "626.1",
+        "626.3",
+        "626.10",
+        "626.11(A)",
+        "626.11(B)",
+        "626.22",
+        "626.24(B)",
+        "626.24(D)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "626.11(A): each space is figured at not less than 11 kVA, built from two 20 A, 120 V receptacles plus one 30 A, 208 V circuit (2 × 120 × 20 + 208 × 30)",
+          "source": "McGraw-Hill's National Electrical Code 2020 Handbook, Article 626 commentary (Access Engineering)",
+          "url": "https://www.accessengineeringlibrary.com/index.php/binary/mheaeworks/5b72eb3cc202b775/ebab737da8ff011c79dbeb76956c1f6db11a14fa14a3fd19d5540b5d5ac6a737/electrified-truck-parking-spaces.pdf"
+        },
+        {
+          "claim": "626.22: pedestal or raised-pad supply equipment mounts at least 2 ft above grade (or above the high-water mark), with a remote disconnecting means capable of being locked in the open position",
+          "source": "McGraw-Hill's National Electrical Code 2020 Handbook, Article 626 commentary (Access Engineering)",
+          "url": "https://www.accessengineeringlibrary.com/index.php/binary/mheaeworks/5b72eb3cc202b775/ebab737da8ff011c79dbeb76956c1f6db11a14fa14a3fd19d5540b5d5ac6a737/electrified-truck-parking-spaces.pdf"
+        },
+        {
+          "claim": "626.24(B) and (D): at least three receptacles per space on at least two branch circuits, with GFCI protection for the receptacles",
+          "source": "McGraw-Hill's National Electrical Code 2020 Handbook, Article 626 commentary (Access Engineering)",
+          "url": "https://www.accessengineeringlibrary.com/index.php/binary/mheaeworks/5b72eb3cc202b775/ebab737da8ff011c79dbeb76956c1f6db11a14fa14a3fd19d5540b5d5ac6a737/electrified-truck-parking-spaces.pdf"
+        },
+        {
+          "claim": "626.10: each stand is supplied from a 208Y/120 V or 480Y/277 V system",
+          "source": "McGraw-Hill's National Electrical Code 2020 Handbook, Article 626 commentary (Access Engineering)",
+          "url": "https://www.accessengineeringlibrary.com/index.php/binary/mheaeworks/5b72eb3cc202b775/ebab737da8ff011c79dbeb76956c1f6db11a14fa14a3fd19d5540b5d5ac6a737/electrified-truck-parking-spaces.pdf"
+        },
+        {
+          "claim": "626.3: where Article 626 conflicts with other articles, Article 626 applies; 626.11(D): branch-circuit loads are considered continuous",
+          "source": "CodeBookCity, NEC Article 626 tips (based on the 2020 NEC)",
+          "url": "https://www.codebookcity.com/codearticles/nec/necarticle626.htm"
+        }
+      ],
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
       "florida_note": "",
       "verified": true,
-      "sharma_rule_ids": [],
       "prev_id": "C6-625.56",
-      "next_id": "C6-ART-630"
+      "next_id": "C6-ART-630",
+      "sharma_rule_ids": [],
+      "rich": 1
     },
     {
       "id": "C6-ART-630",
@@ -913,8 +1501,8 @@
       "article": "630",
       "section": "630",
       "title": "Article 630 — Electric Welders",
-      "plain_explanation": "Intro: duty-cycle-based conductor and overcurrent rules for arc and resistance welders — using the welder's rated duty cycle (630.11 multipliers). Shop work: get the duty cycle off the nameplate before sizing.\n\nNEC 2023 CHANGE:\n• 630.8: Created a new Section 630.8 requiring ground-fault circuit-interrupter (GFCI) protection for personnel involved with electric welder applications.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Worked example: a welder with a 50 A rated primary current at a 60 percent duty cycle takes the 630.11(A) multiplier of 0.78 for a nonmotor-generator arc welder (motor-generator welders use a different column), so its supply conductors need an ampacity of at least 50 × 0.78 = 39 A. Read the duty cycle off the nameplate every time, not guessed.",
+      "plain_explanation": "Article 630 gives electric welders their own conductor and overcurrent rules, because a welder welds in bursts and rests between welds. The whole article runs on one nameplate number: the duty cycle.\n• Duty cycle is the share of time the machine can weld at rated output — 60 percent means about 6 minutes welding out of every 10 at that output.\n• Supply conductors: ampacity not less than the I1eff value on the rating plate. If the plate gives no I1eff, multiply the rated primary current by the Table 630.11(A) factor for that duty cycle (630.11(A)).\n• Motor-generator arc welders use their own column of Table 630.11(A). Resistance welders follow Part III instead (630.31).\n• A group of welders on one feeder: 100 percent of the two largest, plus 85 percent of the third largest, plus 70 percent of the fourth, plus 60 percent of all the rest (630.11(B)).\n• Overcurrent protection is generous on purpose: not more than 200 percent of the rated primary current, and not more than 200 percent of the conductor ampacity (630.12).\n• Shop work: get the duty cycle off the nameplate before sizing anything. Never guess it.",
+      "on_the_job": "Worked example: a welder with a 50 A rated primary current at a 60 percent duty cycle takes the 630.11(A) multiplier of 0.78 for a nonmotor-generator arc welder (motor-generator welders use a different column), so its supply conductors need an ampacity of at least 50 × 0.78 = 39 A. Read the duty cycle off the nameplate every time, not guessed. On a fabrication-shop job off OBT adding a welder bay, that one calculation sets the whole circuit: conductors at 39 A minimum ampacity, and a breaker that may run well above the conductor size, up to the 630.12 ceiling of 200 percent of 50 A — 100 A. Show the duty-cycle math on the panel schedule so the inspector sees Article 630, not a mistake.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -931,7 +1519,127 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Conductor heating follows the current squared times the time it flows. A machine that rests between welds never heats its supply conductors the way a continuous load of the same nameplate current would. Sizing to full nameplate current wastes copper; sizing by guesswork cooks insulation. The duty-cycle table splits the difference with physics, and the 200 percent breaker ceiling exists so striking an arc does not nuisance-trip — the welder's own thermal protection guards the machine.",
+      "exam_trap": "The trap is protecting the welder circuit like an ordinary load: a breaker matched to the 39 A conductor ampacity, or conductors sized at the full 50 A nameplate. 630.12 keys the breaker ceiling to the rated primary current — up to 200 percent — not to the derated conductor size, and 630.11 keys the conductors to the duty cycle, not the nameplate.",
+      "inspection_fails": [
+        "Welder circuit sized off the machine's output current (the 225 A on the front of a stick welder) instead of its rated primary current.",
+        "Breaker above 200 percent of the rated primary current — past the 630.12 ceiling.",
+        "Duty cycle guessed or taken from the sales sheet instead of the rating plate, leaving conductors undersized for the machine's actual cycle.",
+        "Welder tapped onto a general shop circuit with lighting and receptacles, with no 630.11 calculation behind it."
+      ],
+      "tables": [
+        {
+          "caption": "Table 630.11(A): duty-cycle multipliers for arc welders (common steps)",
+          "headers": [
+            "Duty cycle",
+            "Nonmotor-gen",
+            "Motor-gen"
+          ],
+          "rows": [
+            [
+              "100%",
+              "1.00",
+              "1.00"
+            ],
+            [
+              "80%",
+              "0.89",
+              "0.91"
+            ],
+            [
+              "60%",
+              "0.78",
+              "0.81"
+            ],
+            [
+              "40%",
+              "0.63",
+              "0.69"
+            ],
+            [
+              "20% or less",
+              "0.45",
+              "0.55"
+            ]
+          ],
+          "note": "The printed table has a row for every 10 percent step from 20 to 100. Multiply the rated primary current by the factor to get the minimum conductor ampacity."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c6/C6-ART-630-duty-cycle.svg",
+          "alt": "Flowchart for sizing a welder circuit: read the nameplate rated primary current of 50 A and the 60 percent duty cycle, take the Table 630.11(A) multiplier 0.78, size conductors at 39 A minimum ampacity, and cap the breaker at 100 A under 630.12, with a bar chart of Table 630.11(A) multipliers.",
+          "caption": "Welder sizing: nameplate, duty-cycle factor, conductors, breaker ceiling.",
+          "w": 900,
+          "h": 1520
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A nonmotor-generator arc welder is rated 50 A primary at a 60 percent duty cycle. Minimum supply conductor ampacity?",
+          "choices": [
+            "50 A",
+            "39 A",
+            "30 A",
+            "25 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Table 630.11(A) gives 0.78 at 60 percent for a nonmotor-generator welder: 50 × 0.78 = 39 A.",
+          "nec_ref": "Table 630.11(A)"
+        },
+        {
+          "question": "What is the largest overcurrent device 630.12 allows for that same 50 A welder?",
+          "choices": [
+            "50 A",
+            "60 A",
+            "100 A",
+            "200 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "630.12 caps protection at 200 percent of the rated primary current: 2 × 50 A = 100 A.",
+          "nec_ref": "630.12"
+        },
+        {
+          "question": "Where does the duty cycle used for sizing come from?",
+          "choices": [
+            "The panel schedule",
+            "The welder's rating plate",
+            "The conductor size",
+            "The breaker size"
+          ],
+          "answer_index": 1,
+          "explain_plain": "630.11(A) works from the rating plate: its I1eff if given, otherwise its rated primary current and duty cycle.",
+          "nec_ref": "630.11(A)"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 630.8: Created a new Section 630.8 requiring ground-fault circuit-interrupter (GFCI) protection for personnel involved with electric welder applications.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "630.11(A)",
+        "Table 630.11(A)",
+        "630.11(B)",
+        "630.12",
+        "630.31"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "Table 630.11(A) duty-cycle multipliers for nonmotor-generator and motor-generator arc welders (1.00 at 100% down to 0.45 / 0.55 at 20%)",
+          "source": "Solar365 NEC text mirror, Article 630 (Table 630.11(A))",
+          "url": "https://www.solar365.com/green-homes/national-electric-code-2008/electric-welders"
+        },
+        {
+          "claim": "Table 630.11(A) multipliers and the 630.12 ceiling of 200 percent of rated primary current (50 A welder, 100 A device)",
+          "source": "ElectroCalculators, Welder Circuit Calculator — NEC 630 Duty Cycle",
+          "url": "https://www.electrocalculators.com/welder-circuit"
+        },
+        {
+          "claim": "Group-of-welders demand: 100 percent of the two largest, 85 percent of the third, 70 percent of the fourth, 60 percent of the rest (630.11(B))",
+          "source": "Solar365 NEC text mirror, Article 630 (630.11(B))",
+          "url": "https://www.solar365.com/green-homes/national-electric-code-2008/electric-welders"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C6-ART-640",
@@ -1433,8 +2141,8 @@
       "article": "660",
       "section": "660",
       "title": "Article 660 — X-Ray Equipment",
-      "plain_explanation": "Intro: disconnect, control, and transformer rules for medical, dental, and industrial X-ray equipment, including the momentary-rating allowances for diagnostic equipment. Healthcare work coordinates with Article 517.",
-      "on_the_job": "On a dental or medical fit-out, get the X-ray equipment's momentary and long-time ratings from the manufacturer before sizing its branch circuit — diagnostic equipment demand is figured on the momentary rating, and sizing from the tube's headline number alone undersizes the circuit. Confirm the disconnect location with the operator's position, not just the panel schedule.",
+      "plain_explanation": "Article 660 covers X-ray equipment — medical, dental, and industrial — and its field core is how the equipment is rated, disconnected, and fed.\n• Two ratings run the article (660.2): the momentary rating is based on an operating interval of 5 seconds or less; the long-time rating on an interval of 5 minutes or longer.\n• Disconnect (660.5): a disconnecting means in the supply circuit, rated at not less than 50 percent of the input required for the momentary rating or 100 percent of the input required for the long-time rating, whichever is greater — and operable from a location readily accessible from the X-ray control.\n• Branch circuits (660.6(A)): conductor ampacity and overcurrent protection at not less than 50 percent of the momentary rating or 100 percent of the long-time rating, whichever is greater.\n• Feeders (660.6(B)): a feeder supplying two or more X-ray branch circuits is figured at 100 percent of the momentary demand of the two largest units, plus 20 percent of the momentary ratings of the rest.\n• Connection (660.4): fixed and stationary equipment is wired with a Chapter 3 method; equipment on a branch circuit of 30 A or less may be cord-and-plug connected.\n• Healthcare work coordinates with Article 517, which carries parallel X-ray rules for health care facilities.",
+      "on_the_job": "Dental fit-out in Winter Park: the manufacturer's sheet for the panoramic unit gives a momentary rating of 100 A and a long-time rating of 20 A. The branch-circuit math is 50 percent of 100 A = 50 A against 100 percent of 20 A = 20 A — the bigger number governs, so the unit gets a 50 A branch circuit and a disconnect rated at least 50 A, mounted where the operator stands at the control. Sized off the 100 A headline alone, the circuit would be double what the Code asks; off the long-time rating alone, it would fail 660.6(A).",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -1442,7 +2150,125 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C6-ART-650",
-      "next_id": "C6-ART-665"
+      "next_id": "C6-ART-665",
+      "rich": 1,
+      "why_it_exists": "An X-ray tube draws its load in violent bursts — full power for a fraction of a second, then nothing. Sized like an ordinary load, the circuit is copper nobody needs; sized off the wrong rating, the breaker trips mid-exposure or conductors run hot during long fluoroscopy work. The two-rating system matches the wire to how the machine actually draws, and the disconnect by the control lets the operator kill the equipment from where it is run.",
+      "inspection_fails": [
+        "Disconnect for the X-ray unit placed at the panel, out of reach of the operator's position at the control.",
+        "Branch circuit sized from the long-time rating only — 50 percent of the momentary rating was the greater number.",
+        "Feeder supplying two X-ray branch circuits sized with the branch-circuit 50 percent rule instead of 660.6(B).",
+        "Cord-and-plug connection used as the disconnect for equipment fed above 30 A."
+      ],
+      "exam_trap": "The trap is sizing from the nameplate's biggest number — or from the small one. A unit marked 100 A momentary does not need a 100 A branch circuit: 660.6(A) asks for 50 percent of the momentary rating or 100 percent of the long-time rating, whichever is greater. Picking 100 percent of momentary oversizes; picking long-time alone undersizes. Run both numbers and take the greater.",
+      "tables": [
+        {
+          "caption": "The two ratings (660.2)",
+          "headers": [
+            "Rating",
+            "Interval"
+          ],
+          "rows": [
+            [
+              "Momentary",
+              "5 seconds or less"
+            ],
+            [
+              "Long-time",
+              "5 minutes or longer"
+            ]
+          ]
+        },
+        {
+          "caption": "Sizing rules at a glance",
+          "headers": [
+            "Piece",
+            "Minimum"
+          ],
+          "rows": [
+            [
+              "Branch circuit + OCPD (660.6(A))",
+              "50% of momentary or 100% of long-time, whichever is greater"
+            ],
+            [
+              "Disconnecting means (660.5)",
+              "The same 50% / 100% test, on the input required"
+            ],
+            [
+              "Feeder, 2+ units (660.6(B))",
+              "100% of the two largest momentary demands + 20% of the rest"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c6/C6-ART-660-sizing.svg",
+          "alt": "Bar chart for X-ray equipment sizing: a 100 A momentary rating counts at 50 percent (50 A) and a 20 A long-time rating counts at 100 percent (20 A); conductors, overcurrent protection, and the disconnect are sized to the greater number, 50 A.",
+          "caption": "Two ratings, one test: size to the greater number.",
+          "w": 900,
+          "h": 1480
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A diagnostic unit has a momentary rating of 80 A and a long-time rating of 30 A. Minimum branch-circuit ampacity?",
+          "choices": [
+            "30 A",
+            "40 A",
+            "80 A",
+            "110 A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "50 percent of 80 A is 40 A, which is greater than 100 percent of the 30 A long-time rating.",
+          "nec_ref": "660.6(A)"
+        },
+        {
+          "question": "The momentary rating is based on an operating interval of not more than…",
+          "choices": [
+            "5 seconds",
+            "30 seconds",
+            "5 minutes",
+            "1 hour"
+          ],
+          "answer_index": 0,
+          "explain_plain": "Momentary means an interval that does not exceed 5 seconds; long-time is 5 minutes or longer.",
+          "nec_ref": "660.2"
+        },
+        {
+          "question": "Where must the X-ray disconnect be operable from?",
+          "choices": [
+            "The main service only",
+            "A location readily accessible from the X-ray control",
+            "Inside a locked electrical closet",
+            "Anywhere on the same floor"
+          ],
+          "answer_index": 1,
+          "explain_plain": "660.5 puts the disconnect within the operator's reach at the control position.",
+          "nec_ref": "660.5"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "660.2",
+        "660.4",
+        "660.5",
+        "660.6(A)",
+        "660.6(B)",
+        "517"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "660.2 ratings: momentary = operating interval of 5 seconds or less, long-time = 5 minutes or longer; 660.5 disconnect capacity and 660.6(A) branch-circuit sizing at not less than 50 percent of the momentary rating or 100 percent of the long-time rating, whichever is greater; 660.4 cord-and-plug connection permitted at 30 A or less",
+          "source": "Solar365 mirror of NEC Article 660 text",
+          "url": "https://www.solar365.com/node/13177"
+        },
+        {
+          "claim": "660.6(B) feeders: ampacity not less than 100 percent of the momentary demand rating of the two largest X-ray apparatus plus 20 percent of the momentary ratings of the other X-ray apparatus",
+          "source": "Mike Holt forum, quoting 660.6",
+          "url": "https://forums.mikeholt.com/threads/x-ray-service-calculation.12253/"
+        }
+      ]
     },
     {
       "id": "C6-ART-665",
@@ -1899,16 +2725,132 @@
       "article": "675",
       "section": "675",
       "title": "Article 675 — Electrically Driven or Controlled Irrigation Machines",
-      "plain_explanation": "Intro: center-pivot and similar irrigation machines — collector rings, grounding, and the disconnect that must be able to stop the whole machine. Agricultural work across Sharma's rural counties.",
-      "on_the_job": "On a center-pivot call, open and lock the machine disconnect before touching collector rings or span wiring — a pivot can be started remotely by the farm's controls. Then check the grounding and bonding at the pivot point; lightning damage and a cut ground are the usual Florida service finds.",
+      "plain_explanation": "Article 675 covers electrically driven or controlled irrigation machines that are not portable by hand — center pivots, linear-move machines, and similar farm equipment. It does not cover the pumps that bring water to the machine. The parts a Sharma crew actually touches:\n• 675.8 — the machine needs a main disconnecting means with overcurrent protection, at the point where power connects to the machine, or in view of the machine and not more than 50 ft away, readily accessible and capable of being locked in the open position.\n• 675.11 — collector rings at the pivot carry power and control across the rotating joint. The rings are sized for the loads they carry, and the grounding ring is sized to the same rating as the power rings.\n• 675.12 — all electrical equipment and enclosures on the machine are grounded, with the grounding path run to every motor and control on the spans.\n• The irrigation cable interconnecting enclosures on the machine is an armored cable built for wet, flexing service, supported at least every 4 ft.",
+      "why_it_exists": "A center pivot is hundreds of feet of steel pipe and motors standing in a wet field, and it can start moving on a timer or a remote command while someone is working on a span. Workers have been hurt by pivots that started on their own, and by machine frames made live by a fault with no ground path back. The lockable disconnect and the full grounding are what make the machine safe to touch.",
+      "on_the_job": "Service call on a center pivot outside Ocala: before anyone touches the collector rings or the span wiring, the crew opens the machine disconnect at the pivot point, locks it, and tags it — the farm's controls can start a pivot remotely, so “the panel said off” is not enough. Then the checks: the disconnect sits in view of the machine and inside the 50 ft limit, the grounding conductor runs unbroken out the spans, and the grounding ring at the pivot is intact. The usual Florida finds are lightning damage at the pivot and a ground conductor cut at a span box.",
+      "exam_trap": "The trap answer puts the main disconnect “anywhere on the farm panel.” 675.8(B) is specific: at the point of connection, or visible from the machine and not more than 50 ft away — with overcurrent protection included, and it must lock open. Second trap: the article does not cover the well pump that feeds the pivot; the pump is ordinary motor work under Article 430.",
+      "tables": [
+        {
+          "caption": "Article 675 — the parts that decide a service call",
+          "headers": [
+            "Part",
+            "What it requires"
+          ],
+          "rows": [
+            [
+              "675.8(B)",
+              "Main disconnect with overcurrent protection; at the machine, or in view within 50 ft; lockable open"
+            ],
+            [
+              "675.11",
+              "Collector rings sized for their loads; grounding ring at the same rating"
+            ],
+            [
+              "675.12",
+              "Every enclosure and motor on the machine grounded"
+            ],
+            [
+              "675.1",
+              "Machines not portable by hand; supply pumps are not covered"
+            ]
+          ],
+          "note": "Center-pivot equivalent current ratings are figured under 675.22."
+        }
+      ],
+      "inspection_fails": [
+        "Main disconnect 200 ft away at the barn panel, not in view of the machine (675.8(B)).",
+        "Disconnect with no overcurrent protection and no way to lock it in the open position.",
+        "Grounding conductor cut at a span junction box, leaving the far spans floating.",
+        "Collector-ring enclosure open to the weather, with the grounding ring undersized.",
+        "Ordinary cord substituted for armored irrigation cable along the span."
+      ],
+      "page_quiz": [
+        {
+          "question": "Where must the main disconnecting means for an irrigation machine be located?",
+          "choices": [
+            "Anywhere on the premises",
+            "At the point of connection, or in view and within 50 ft of the machine",
+            "Only at the utility pole",
+            "Inside the farmhouse panel"
+          ],
+          "answer_index": 1,
+          "explain_plain": "It must also include overcurrent protection, be readily accessible, and be capable of being locked in the open position.",
+          "nec_ref": "675.8(B)"
+        },
+        {
+          "question": "The grounding collector ring on a center pivot must be:",
+          "choices": [
+            "One size smaller than the power rings",
+            "Sized to the same rating as the power rings",
+            "Omitted where the pivot point has a ground rod",
+            "Plastic-insulated"
+          ],
+          "answer_index": 1,
+          "explain_plain": "675.11 sizes the grounding ring fully, to the same rating as the power rings it serves with.",
+          "nec_ref": "675.11"
+        },
+        {
+          "question": "Article 675 does NOT cover:",
+          "choices": [
+            "Center-pivot irrigation machines",
+            "Linear-move irrigation machines",
+            "The pumps that bring water to the machines",
+            "Collector rings"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The scope stops at the machine itself; supply pumps fall under the general motor rules.",
+          "nec_ref": "675.1"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "figures": [
+        {
+          "src": "fig/c6/C6-ART-675-pivot.svg",
+          "alt": "Side elevation of a center-pivot irrigation machine with numbered markers for the collector rings at the pivot, the lockable main disconnect, grounding at the pivot point, and the grounded span drive motors.",
+          "caption": "A center pivot: the disconnect and the grounding live at the pivot point.",
+          "w": 900,
+          "h": 1400
+        }
+      ],
+      "code_refs": [
+        "675.1",
+        "675.8(B)",
+        "675.11",
+        "675.12",
+        "675.22"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "675.8(B): the main disconnect includes overcurrent protection and sits at the point of connection, or in view and not more than 50 ft away, readily accessible and lockable in the open position",
+          "source": "McGraw-Hill's National Electrical Code Handbook, Article 675 commentary (Access Engineering)",
+          "url": "https://www.accessengineeringlibrary.com/binary/mheaeworks/968fa7ca8e0dc094/a7d85df355adb7c3936c94df902687689599543b6251d0dd4f710b8e76660e87/article-675-electrically-driven-or-controlled-irrigation-machines.pdf"
+        },
+        {
+          "claim": "675.11: collector rings are sized for the loads they carry and the grounding ring is fully sized to the same rating",
+          "source": "McGraw-Hill's National Electrical Code Handbook, Article 675 commentary (Access Engineering)",
+          "url": "https://www.accessengineeringlibrary.com/binary/mheaeworks/968fa7ca8e0dc094/a7d85df355adb7c3936c94df902687689599543b6251d0dd4f710b8e76660e87/article-675-electrically-driven-or-controlled-irrigation-machines.pdf"
+        },
+        {
+          "claim": "Irrigation cable interconnecting machine enclosures is supported at least every 4 ft",
+          "source": "McGraw-Hill's National Electrical Code Handbook, Article 675 commentary (Access Engineering)",
+          "url": "https://www.accessengineeringlibrary.com/binary/mheaeworks/968fa7ca8e0dc094/a7d85df355adb7c3936c94df902687689599543b6251d0dd4f710b8e76660e87/article-675-electrically-driven-or-controlled-irrigation-machines.pdf"
+        },
+        {
+          "claim": "675.1: the article covers machines not portable by hand and does not cover pumps that bring water to the machines",
+          "source": "McGraw-Hill's National Electrical Code Handbook, Article 675 commentary (Access Engineering)",
+          "url": "https://www.accessengineeringlibrary.com/binary/mheaeworks/968fa7ca8e0dc094/a7d85df355adb7c3936c94df902687689599543b6251d0dd4f710b8e76660e87/article-675-electrically-driven-or-controlled-irrigation-machines.pdf"
+        }
+      ],
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
       "florida_note": "",
       "verified": true,
-      "sharma_rule_ids": [],
       "prev_id": "C6-ART-670",
-      "next_id": "C6-ART-680"
+      "next_id": "C6-ART-680",
+      "sharma_rule_ids": [],
+      "rich": 1
     },
     {
       "id": "C6-ART-680",
@@ -2290,8 +3232,8 @@
       "article": "680",
       "section": "680.21(C)",
       "title": "GFCI protection for pool motors — re-checked",
-      "plain_explanation": "GFCI protection is required for outlets supplying pool motors on branch circuits rated 150V or less to ground and 60A or less, single-phase or three-phase — by receptacle or by direct connection. This was one of the figures re-checked against 2020-based sources before this chapter was written, and the v1 lookup (L-088) states it correctly: the scope is all pool motors inside those ratings, not just cord-and-plug pumps.\n\nNEC 2023 CHANGE:\n• 680.21: Repairing a pool pump motor now triggers ground-fault protection, just like replacing one. The device matches the circuit: a GFCI, or a special purpose GFCI (SPGFCI) above 150 volts to ground. Repair now counts: a pump motor covered by 680.21(C) that's repaired, not only one that's replaced, needs ground-fault protection on its circuit (680.21(D)).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "A hardwired 240V pool pump needs GFCI protection just as much as a plug-in one — plan the protection device at design, not at the final walk.",
+      "plain_explanation": "GFCI protection is required for outlets supplying pool motors on branch circuits rated 150 volts or less to ground and 60 amperes or less, single-phase or three-phase.\n• The protection covers the outlet — by receptacle or by direct connection. A hardwired pump is inside the rule, not outside it.\n• The scope is all pool motors inside those ratings, not just cord-and-plug pumps. This page was re-checked against 2020-based sources before the chapter was written, and the v1 lookup (L-088) states the scope the same way.\n• The motor circuit still needs its insulated copper equipment grounding conductor under 680.21(A), sized from Table 250.122 and never smaller than 12 AWG.\nThe protection device is planned at design and chosen for the job — see the Sharma note below.",
+      "on_the_job": "A hardwired 240V pool pump needs GFCI protection just as much as a plug-in one — plan the protection device at design, not at the final walk. On a Florida pool-equipment job, a 240-volt, 20-ampere pump circuit gets its GFCI protection arranged at the panel, the insulated copper equipment grounding conductor is 12 AWG minimum, and the protection is tested with the pump running before the final. Finding out at the final walk that the circuit is unprotected means a return trip and a failed inspection.",
       "sharma_note": "Sharma note: like 625.54, a 240V pool circuit is not an S-07 120V DFN point. Meet 680.21(C) with the listed method specified for the job; device choice is Mike/Sanjay's per job.",
       "figure_idea": "Pump circuit showing GFCI protection device ahead of a hardwired motor.",
       "related_ids": [
@@ -2314,7 +3256,98 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/680-21",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "A pool motor works within reach of the water, bonded into a system swimmers touch. A ground fault in a pump winding can put voltage on the equipment pad and into the water instead of tripping anything. GFCI protection watches for that leakage current and opens the circuit in milliseconds, before the fault becomes a shock in the pool.",
+      "exam_trap": "The trap answer is that only cord-and-plug pool pumps need GFCI protection — the word 'outlet' fools people into picturing a receptacle. 680.21(C) covers outlets supplying pool motors by receptacle or by direct connection, so the hardwired 240-volt pump is covered. The second trap is stretching the scope: above 150 volts to ground or above 60 amperes, this subsection ends — check which rule applies instead of stretching this one.",
+      "tables": [
+        {
+          "caption": "680.21(C) scope — is the outlet covered?",
+          "headers": [
+            "Circuit",
+            "Covered?"
+          ],
+          "rows": [
+            [
+              "240V, 20A hardwired pump (120V to ground)",
+              "Yes — direct connection"
+            ],
+            [
+              "120V cord-and-plug pump",
+              "Yes — receptacle"
+            ],
+            [
+              "Three-phase motor, ≤150V to ground, ≤60A",
+              "Yes"
+            ],
+            [
+              "Motor circuit over 150V to ground or 60A",
+              "Outside (C)'s scope"
+            ]
+          ]
+        }
+      ],
+      "inspection_fails": [
+        "Hardwired 240V pump on a standard breaker — no GFCI protection on the outlet (680.21(C)).",
+        "Protection arranged for a receptacle that is not there — the direct-connected outlet left unprotected.",
+        "Pool motor equipment grounding conductor smaller than 12 AWG, or bare in the raceway (680.21(A)).",
+        "Replacement pump motor left running on the old unprotected circuit (680.21(D))."
+      ],
+      "page_quiz": [
+        {
+          "question": "Which pool motor outlet requires GFCI protection under 680.21(C)?",
+          "choices": [
+            "Only cord-and-plug pumps",
+            "A hardwired 240V pump on a 20A circuit",
+            "Only pumps with a receptacle in the equipment pad",
+            "Only single-phase motors"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The rule covers outlets by receptacle or by direct connection, on circuits rated 150V or less to ground and 60A or less — a hardwired 240V pump is covered.",
+          "nec_ref": "680.21(C)"
+        },
+        {
+          "question": "The two scope limits in 680.21(C) are:",
+          "choices": [
+            "120V and 20A",
+            "150V to ground and 60A",
+            "250V and 100A",
+            "No limits — all pool motors"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Branch circuits rated 150 volts or less to ground and 60 amperes or less, single-phase or three-phase.",
+          "nec_ref": "680.21(C)"
+        },
+        {
+          "question": "A pool pump motor is replaced on an existing unprotected circuit. Under 680.21(D), the job:",
+          "choices": [
+            "May leave the circuit as it was",
+            "Must add the GFCI protection 680.21(C) requires",
+            "Only needs protection if the pool is new",
+            "Needs protection only for cord-and-plug motors"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The replacement duty rides with the motor change — an old unprotected circuit is not grandfathered once the motor is replaced.",
+          "nec_ref": "680.21(D)"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 680.21: Repairing a pool pump motor now triggers ground-fault protection, just like replacing one. The device matches the circuit: a GFCI, or a special purpose GFCI (SPGFCI) above 150 volts to ground. Repair now counts: a pump motor covered by 680.21(C) that's repaired, not only one that's replaced, needs ground-fault protection on its circuit (680.21(D)).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "figures": [
+        {
+          "src": "fig/c6/C6-680.21C-pump-circuit.svg",
+          "alt": "One-line diagram of a pool pump circuit: panel feeding a GFCI protection device ahead of a hardwired 240-volt pool pump motor, with the 680.21(C) scope limits shown — 150 volts or less to ground, 60 amperes or less, receptacle or direct connection.",
+          "caption": "Hardwired or plug-in, the pump outlet gets GFCI protection.",
+          "w": 900,
+          "h": 1400
+        }
+      ],
+      "code_refs": [
+        "680.21(C)",
+        "680.21(A)",
+        "680.21(D)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C6-680.21(D)",
@@ -2643,8 +3676,8 @@
       "article": "680",
       "section": "680.26(C)",
       "title": "Pool water bonding — 9 square inches",
-      "plain_explanation": "The pool water itself must be bonded. Where a bonded part (a ladder rail, a light niche, a fitting) is already in direct contact with the water, that contact does the job. Where nothing bonded touches the water, an approved corrosion-resistant conductive surface of at least 9 sq in. must be in contact with it — the familiar listed water-bonding fitting in the skimmer or pump line.",
-      "on_the_job": "All-plastic pools with vinyl liners and no metal in the water are the trap — check for the 9 sq in. contact on every job.",
+      "plain_explanation": "680.26 builds one equipotential bonding system around a pool, and (C) covers the hardest part of it: the pool water itself must be bonded.\n• Where a bonded part — a ladder rail, a light niche, a metal fitting — is already in direct contact with the water, that contact does the job. No extra fitting is required.\n• Where nothing bonded touches the water, an approved corrosion-resistant conductive surface of at least 9 sq in. must be in contact with it — the familiar listed water-bonding fitting in the skimmer or in the pump line.\n• The fitting is not a stand-alone part: it ties back into the equipotential bonding system with the 680.26 bonding conductor, solid copper not smaller than 8 AWG.\n• The math is simple: a 3 in. by 3 in. plate is exactly 9 sq in. Anything smaller does not comply.",
+      "on_the_job": "All-plastic pools with vinyl liners and no metal in the water are the trap — check for the 9 sq in. contact on every job. On a vinyl-liner pool in Ocala, the shell is plastic, the ladder is plastic, and the light is a plastic niche: nothing bonded touches the water. The fix is the listed water-bond fitting in the skimmer, its plate giving the full 9 sq in. of contact, tied back to the bonding grid with 8 AWG solid copper. Check it at the bonding inspection, while the fitting can still be reached — after the deck is poured and the pool is filled, nobody wants to drain it to prove a plate size.",
       "sharma_note": "",
       "figure_idea": "Skimmer with a listed water-bond plate, 9 sq in. dimensioned.",
       "related_ids": [
@@ -2654,7 +3687,91 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C6-680.26(B)(2)",
-      "next_id": "C6-680.30"
+      "next_id": "C6-680.30",
+      "why_it_exists": "A swimmer is immersed in the water, holding the ladder, standing on the deck. If the water sits at a different voltage than the metal around it, the swimmer's body becomes the path between the two. Bonding the parts in 680.26(B) is not enough by itself — on an all-plastic pool, every listed part can be bonded and the water can still float at its own potential, because nothing bonded ever touches it. Paragraph (C) closes that last gap.",
+      "exam_trap": "The trap is answering that the pump motor's equipment grounding conductor bonds the water. It does not. 680.26(C) wants a bonded, corrosion-resistant conductive surface of at least 9 sq in. actually in contact with the water — or a bonded part that already touches it.",
+      "inspection_fails": [
+        "All-plastic or vinyl-liner pool with no water-bond fitting — nothing bonded touches the water.",
+        "Water-bond plate with less than 9 sq in. of contact area in the water.",
+        "Fitting set in the skimmer but never tied into the equipotential bonding system.",
+        "Contact surface painted, scaled, or corroded — no longer conductive contact with the water."
+      ],
+      "tables": [
+        {
+          "caption": "Two ways the water gets bonded (680.26(C))",
+          "headers": [
+            "Situation",
+            "What bonds the water"
+          ],
+          "rows": [
+            [
+              "Bonded ladder, niche, or fitting in the water",
+              "That contact itself"
+            ],
+            [
+              "Nothing bonded touches the water",
+              "Listed fitting, 9 sq in. or more in contact"
+            ]
+          ],
+          "note": "Either way, the parts tie together with solid copper not smaller than 8 AWG (680.26(B))."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c6/C6-680.26C-water-bond.svg",
+          "alt": "Section through a pool and its skimmer showing a listed water-bond fitting with a plate 3 inches by 3 inches, giving 9 square inches of contact with the pool water, a bonding conductor of 8 AWG solid copper back to the equipotential bonding system, and a bonded ladder that also bonds the water.",
+          "caption": "The water is bonded by contact: a bonded part in it, or a 9 sq in. fitting.",
+          "w": 900,
+          "h": 1480
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "What is the minimum contact area for a pool water-bonding surface under 680.26(C)?",
+          "choices": [
+            "4 sq in.",
+            "6 sq in.",
+            "9 sq in.",
+            "12 sq in."
+          ],
+          "answer_index": 2,
+          "explain_plain": "At least 9 sq in. of approved corrosion-resistant conductive surface in contact with the water — a 3 in. by 3 in. plate exactly makes it.",
+          "nec_ref": "680.26(C)"
+        },
+        {
+          "question": "A vinyl-liner pool has no bonded part touching the water. What does 680.26(C) require?",
+          "choices": [
+            "Nothing — plastic pools are exempt",
+            "A listed water-bond fitting with at least 9 sq in. in contact with the water",
+            "A ground rod driven at the skimmer",
+            "Bonding the pump motor case only"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Where no bonded part touches the water, the listed fitting with 9 sq in. or more of contact is the required path.",
+          "nec_ref": "680.26(C)"
+        },
+        {
+          "question": "The conductor tying the pool bonding parts together must be at least:",
+          "choices": [
+            "12 AWG stranded copper",
+            "10 AWG solid copper",
+            "8 AWG solid copper",
+            "6 AWG stranded copper"
+          ],
+          "answer_index": 2,
+          "explain_plain": "680.26(B) bonds the parts together with a solid copper conductor not smaller than 8 AWG.",
+          "nec_ref": "680.26(B)"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "680.26",
+        "680.26(B)",
+        "680.26(C)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C6-680.30",
@@ -2681,8 +3798,8 @@
       "article": "680",
       "section": "680.40",
       "title": "Spas and hot tubs — Parts I and IV (outdoor adds Part II)",
-      "plain_explanation": "Spas and hot tubs are governed by Parts I and IV, and an outdoor spa also picks up the Part II rules that Part IV references (680.42) — receptacle distances, GFCI, and bonding arrive through that door. A self-contained factory spa package still lands on an installation that must meet the article; the listing doesn't waive the field wiring rules.",
-      "on_the_job": "Outdoor spa on a lanai: run the Part II checklist (distances, GFCI, bonding) even though the tub arrived as one box.",
+      "plain_explanation": "Article 680 sorts its water by what the installation is, and spas and hot tubs land in Part IV.\n• Part I (general rules) rides with every spa and hot tub.\n• Part IV is the part written for spas and hot tubs.\n• An outdoor spa or hot tub also picks up the Part II rules that Part IV points to through 680.42 — receptacle distances, GFCI protection, and equipotential bonding arrive through that door.\n• An indoor spa follows Parts I and IV; the 680.42 door to Part II is written for outdoor installations.\n• A self-contained factory spa package still lands on an installation that must meet the article. The listing covers the tub as built; it does not waive the field wiring rules.",
+      "on_the_job": "Outdoor spa on a lanai in Orlando: the tub arrives as one factory box, but the job is still a Part II checklist — receptacle distances and GFCI protection checked before trim, the equipotential bonding run in solid copper, 8 AWG minimum, and the pump circuit's equipment grounding conductor insulated copper, never smaller than 12 AWG. An indoor spa in a sunroom the following week gets Parts I and IV only: the same care with the circuit and its protection, but the 680.42 door to Part II stays closed.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -2693,7 +3810,116 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C6-680.30",
-      "next_id": "C6-680.41"
+      "next_id": "C6-680.41",
+      "rich": 1,
+      "why_it_exists": "A spa puts a bather's whole body in warm, moving water, in direct contact with jets, lights, and metal fittings. Wet skin and full contact drop body resistance, so a small fault that would only tingle on dry skin can drive dangerous current through a person in the tub. The layered parts exist so the protection written for pools follows the same water when it shows up in a smaller vessel outdoors.",
+      "inspection_fails": [
+        "Outdoor spa wired as a plain appliance circuit — no bonding conductor run to the tub's bonding lug.",
+        "Receptacle inside the Part II distance limits because 'the tub is only a spa, not a pool.'",
+        "GFCI protection omitted on the spa circuit — the factory listing was treated as covering the field wiring.",
+        "Pump equipment grounding conductor run bare, or in 14 AWG; 680.21(A) wants insulated copper, 12 AWG minimum."
+      ],
+      "exam_trap": "The trap is treating the factory package as a finished installation: 'It is listed and self-contained, so we just set it and plug it in.' The listing covers the equipment as manufactured. It does not cover the branch circuit, the receptacle location, GFCI protection, or bonding in the field — outdoors, those arrive through 680.42's reference into Part II, and skipping them is the fail.",
+      "tables": [
+        {
+          "caption": "Which spa, which parts",
+          "headers": [
+            "Installation",
+            "Parts that apply"
+          ],
+          "rows": [
+            [
+              "Any spa or hot tub",
+              "Part I + Part IV"
+            ],
+            [
+              "Outdoor spa or hot tub",
+              "Part I + Part IV + the Part II rules 680.42 references"
+            ],
+            [
+              "Indoor spa or hot tub",
+              "Part I + Part IV"
+            ]
+          ]
+        },
+        {
+          "caption": "What walks through the 680.42 door (outdoor)",
+          "headers": [
+            "Part II item",
+            "Why it matters"
+          ],
+          "rows": [
+            [
+              "Receptacle distances",
+              "Keeps cords and plugs off the water's edge"
+            ],
+            [
+              "GFCI protection",
+              "Personnel protection where body contact is total"
+            ],
+            [
+              "Equipotential bonding (680.26)",
+              "Everything touchable at one potential; 8 AWG solid Cu minimum"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c6/C6-680.40-parts-map.svg",
+          "alt": "Map diagram of Article 680 parts for a spa or hot tub: Part I and Part IV always apply, and an outdoor installation adds the Part II rules through 680.42 - receptacle distances, GFCI protection, and equipotential bonding.",
+          "caption": "Classification first: Parts I + IV always, Part II joins outdoors.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "An outdoor hot tub on a lanai is governed by which parts of Article 680?",
+          "choices": [
+            "Part IV only",
+            "Parts I and IV only",
+            "Parts I and IV, plus the Part II rules 680.42 references",
+            "Part III, like a storable pool"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Part I rides with everything, Part IV is the spa part, and 680.42 pulls the referenced Part II rules in for outdoor spas.",
+          "nec_ref": "680.40, 680.42"
+        },
+        {
+          "question": "The spa arrived as a listed, self-contained factory package. What does the listing cover?",
+          "choices": [
+            "The whole installation, including the field wiring",
+            "The equipment as manufactured — the field wiring still meets the article",
+            "Nothing until the AHJ approves the site",
+            "Only the pumps and jets"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The listing covers the tub as built. The branch circuit, receptacle location, GFCI, and bonding on site are still Code work.",
+          "nec_ref": "680.40"
+        },
+        {
+          "question": "Minimum size of the solid copper conductor in the equipotential bonding system around the water?",
+          "choices": [
+            "14 AWG",
+            "12 AWG",
+            "10 AWG",
+            "8 AWG"
+          ],
+          "answer_index": 3,
+          "explain_plain": "The equipotential bonding system is solid copper, not smaller than 8 AWG.",
+          "nec_ref": "680.26"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "680.40",
+        "680.42",
+        "680.26",
+        "680.21(A)"
+      ],
+      "uncertain": [],
+      "rich_sources": []
     },
     {
       "id": "C6-680.41",
@@ -2701,8 +3927,8 @@
       "article": "680",
       "section": "680.41",
       "title": "Spa emergency shutoff — 5 ft, in sight, labeled",
-      "plain_explanation": "Spas and hot tubs (other than at one-family dwellings) must have an emergency shutoff for the recirculation and jet system: readily accessible, adjacent to and within sight of the tub, at least 5 ft away from it, and clearly labeled as the emergency shutoff. The 5 ft floor keeps a person in the water from reaching it; the in-sight rule lets a bystander find it.\n\nNEC 2023 CHANGE:\n• 680.41: Spas and hot tubs get an equipment setback in new 680.41(B): gear above the low-voltage contact limit needs 5 ft of horizontal distance from the inside wall unless a permanent barrier stands between. Anything above the low-voltage contact limit stays 5 ft or more, measured horizontally, from the inside wall of the spa or hot tub (680.41(B)).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Hotels, condos, and amenity centers need the shutoff; a single-family backyard spa does not — know which job you're on before omitting it.",
+      "plain_explanation": "Spas and hot tubs anywhere other than one-family dwellings must have an emergency shutoff for the recirculation and jet system.\n• Readily accessible — a bystander can get to it without climbing, moving obstacles, or opening a locked gate.\n• Adjacent to and within sight of the tub — the person using it can see the water it protects.\n• At least 5 ft away from the tub — close enough to reach fast, far enough that a person in the water cannot touch it.\n• Clearly labeled as the emergency shutoff.",
+      "on_the_job": "Amenity-center spa at a Kissimmee condo project: the recirculation and jet pumps get an emergency shutoff on the wall facing the tub, 8 ft from the inside wall — past the 5 ft minimum — in plain sight of anyone standing at the water, with a label that reads EMERGENCY SHUTOFF. The inspector paced the distance and read the label from the deck. The same tub model installed at a single-family home the next month needs no 680.41 shutoff at all — the section does not reach one-family dwellings — so the crew's first question on any spa job is which occupancy they are in.",
       "sharma_note": "",
       "figure_idea": "Amenity-center spa with the labeled shutoff on the wall 5 ft away, in sight.",
       "related_ids": [
@@ -2721,7 +3947,120 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/680-41",
           "confirmed": true
         }
-      ]
+      ],
+      "rich": 1,
+      "why_it_exists": "Entrapment and medical emergencies in a spa are measured in seconds: hair or a limb caught on a suction fitting, a bather in distress with the jets driving the water. The shutoff has to be findable by a stranger — a hotel guest, a lifeguard, a parent — without instructions. The 5 ft floor keeps the person in trouble from being the only one who can reach it, and the label removes the guessing about which switch on the wall it is.",
+      "inspection_fails": [
+        "Emergency shutoff mounted 3 ft from the tub's inside wall — inside the 5 ft minimum.",
+        "Shutoff present but unlabeled, one of four identical switches on the amenity wall.",
+        "Hotel spa with no emergency shutoff at all — the crew applied the one-family dwelling carve-out to an amenity installation.",
+        "Shutoff behind the locked equipment gate: not readily accessible, and not within sight of the tub."
+      ],
+      "exam_trap": "Two traps share this section. The first: mounting the shutoff within arm's reach of the water 'so it is handy' — inside 5 ft it fails, because a person in the tub must not be able to reach it. The second: skipping the shutoff at a hotel or condo spa because the backyard version did not need one — the one-family dwelling carve-out does not travel to amenity work.",
+      "tables": [
+        {
+          "caption": "The shutoff, tested four ways",
+          "headers": [
+            "Test",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "Who",
+              "Spas and hot tubs other than at one-family dwellings"
+            ],
+            [
+              "Access",
+              "Readily accessible, adjacent to and within sight of the tub"
+            ],
+            [
+              "Distance",
+              "At least 5 ft from the tub"
+            ],
+            [
+              "Label",
+              "Clearly labeled as the emergency shutoff"
+            ]
+          ]
+        },
+        {
+          "caption": "The term the 2023 setback leans on (680.2)",
+          "headers": [
+            "Low-voltage contact limit",
+            "Ceiling"
+          ],
+          "rows": [
+            [
+              "Sinusoidal AC",
+              "15 V RMS"
+            ],
+            [
+              "Nonsinusoidal AC",
+              "21.2 V peak"
+            ],
+            [
+              "Continuous DC",
+              "30 V"
+            ]
+          ],
+          "note": "The 680.2 definition, as carried on the verified 680.23 page. The 2023 equipment setback itself is a 2023 change only — see the 2020 vs 2023 box."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c6/C6-680.41-shutoff.svg",
+          "alt": "Plan view of an amenity-center spa: the labeled emergency shutoff for the recirculation and jet system sits on the wall within sight of the tub, dimensioned at least 5 ft from the inside wall so a person in the water cannot reach it.",
+          "caption": "In sight, labeled, and at least 5 ft from the water.",
+          "w": 900,
+          "h": 1400
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Minimum distance from the tub for the emergency shutoff?",
+          "choices": [
+            "3 ft",
+            "5 ft",
+            "6 ft",
+            "10 ft"
+          ],
+          "answer_index": 1,
+          "explain_plain": "At least 5 ft away — close enough to reach fast, too far for a person in the water to touch.",
+          "nec_ref": "680.41"
+        },
+        {
+          "question": "Which spa does NOT need the 680.41 emergency shutoff?",
+          "choices": [
+            "A hotel spa",
+            "A condo amenity spa",
+            "A spa at a one-family dwelling",
+            "A therapy spa at a gym"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The shutoff duty applies to spas and hot tubs other than at one-family dwellings.",
+          "nec_ref": "680.41"
+        },
+        {
+          "question": "The emergency shutoff controls…",
+          "choices": [
+            "The spa lighting",
+            "The recirculation and jet system",
+            "The water heater only",
+            "All power to the amenity deck"
+          ],
+          "answer_index": 1,
+          "explain_plain": "It is the emergency shutoff for the recirculation and jet system.",
+          "nec_ref": "680.41"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 680.41: Spas and hot tubs get an equipment setback in new 680.41(B): gear above the low-voltage contact limit needs 5 ft of horizontal distance from the inside wall unless a permanent barrier stands between. Anything above the low-voltage contact limit stays 5 ft or more, measured horizontally, from the inside wall of the spa or hot tub (680.41(B)).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "680.41",
+        "680.2",
+        "680.42"
+      ],
+      "uncertain": [],
+      "rich_sources": []
     },
     {
       "id": "C6-680.42",
@@ -2906,8 +4245,8 @@
       "article": "680",
       "section": "680.51",
       "title": "Fountains — GFCI for submersible equipment",
-      "plain_explanation": "Under 680.51(A), GFCI protection is required for fountain luminaires, submersible pumps, and other submersible equipment, unless the equipment is a listed low-voltage system supplied through the 680.23(A)(2) path. If it lives under fountain water and runs on line voltage, it is GFCI protected — no exceptions by habit.",
-      "on_the_job": "At rough-in, land every line-voltage fountain pump and luminaire on its GFCI device, and test the protection at startup with water in the basin. A fountain circuit that trips only when wet is a find-it-now problem — do not leave it as a callback or, worse, defeat the device to keep the water feature running.",
+      "plain_explanation": "Under 680.51(A), GFCI protection is required for fountain luminaires, submersible pumps, and other submersible equipment.\n• The one path out: equipment that is part of a listed low-voltage system supplied through the 680.23(A)(2) path.\n• If it lives under fountain water and runs on line voltage, it is GFCI protected — no exceptions by habit.\n• Fountains are Part V work. A decorative fountain nobody enters runs under Parts I and V; an interactive fountain people can enter pulls in the pool-type rules the article points to as well (680.50).",
+      "on_the_job": "At rough-in, land every line-voltage fountain pump and luminaire on its GFCI device, and test the protection at startup with water in the basin. A fountain circuit that trips only when wet is a find-it-now problem — do not leave it as a callback or, worse, defeat the device to keep the water feature running. On a Florida decorative fountain at a community entrance, that test happens with the basin full and the pumps running, because a dry test misses the fault that only shows up submerged.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -2917,7 +4256,98 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C6-680.50",
-      "next_id": "C6-680.71"
+      "next_id": "C6-680.71",
+      "why_it_exists": "Fountain equipment lives submerged, in a basin people lean over, reach into, and — on interactive features — wade in. A fault in a submersible pump or luminaire puts voltage into the water itself, and the water spreads it to everyone touching it. GFCI protection is the device that sees that leakage and shuts the circuit off before the basin becomes the hazard.",
+      "exam_trap": "The trap is treating fountain gear like landscape lighting — line-voltage submersible equipment on an ordinary circuit because 'it is only a fountain.' 680.51(A) requires GFCI protection for the luminaires, submersible pumps, and other submersible equipment. The trap in the other direction: the listed low-voltage path through 680.23(A)(2) is a real exception, but only for equipment that is actually part of that listed low-voltage system — not for line-voltage gear with a transformer somewhere upstream.",
+      "tables": [
+        {
+          "caption": "680.51 — what gets GFCI protection",
+          "headers": [
+            "Equipment",
+            "GFCI?"
+          ],
+          "rows": [
+            [
+              "Submersible fountain pump, line voltage",
+              "Yes — 680.51(A)"
+            ],
+            [
+              "Fountain luminaire, line voltage",
+              "Yes — 680.51(A)"
+            ],
+            [
+              "Listed low-voltage system via 680.23(A)(2)",
+              "The exception path"
+            ],
+            [
+              "Interactive fountain people can enter",
+              "Part II rules also apply (680.50)"
+            ]
+          ]
+        }
+      ],
+      "inspection_fails": [
+        "Submersible fountain pump on a standard breaker — no GFCI protection (680.51(A)).",
+        "GFCI device defeated or jumpered out after trips, instead of finding the wet fault.",
+        "Landscape-lighting luminaires installed as fountain luminaires — not fountain-grade listed equipment (680.50).",
+        "Line-voltage equipment claimed under the low-voltage exception without the listed 680.23(A)(2) system."
+      ],
+      "page_quiz": [
+        {
+          "question": "Under 680.51(A), GFCI protection is required for:",
+          "choices": [
+            "Only fountain luminaires",
+            "Fountain luminaires, submersible pumps, and other submersible equipment",
+            "Only equipment over 150 volts",
+            "No fountain equipment — fountains are exempt"
+          ],
+          "answer_index": 1,
+          "explain_plain": "680.51(A) covers the luminaires, the submersible pumps, and the other submersible equipment — unless the listed low-voltage path applies.",
+          "nec_ref": "680.51(A)"
+        },
+        {
+          "question": "The exception to 680.51(A) GFCI protection is equipment that is:",
+          "choices": [
+            "Installed by the fountain manufacturer",
+            "Part of a listed low-voltage system supplied through 680.23(A)(2)",
+            "On a dedicated circuit",
+            "Bonded to the basin steel"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The path out is the listed low-voltage system supplied through 680.23(A)(2) — not a habit, and not line-voltage gear with a transformer upstream.",
+          "nec_ref": "680.51(A)"
+        },
+        {
+          "question": "The right time to prove a fountain GFCI installation is:",
+          "choices": [
+            "At rough-in, dry",
+            "At startup, with water in the basin and pumps running",
+            "At the one-year warranty visit",
+            "Fountain circuits are never tested wet"
+          ],
+          "answer_index": 1,
+          "explain_plain": "A fault that only appears submerged only shows up wet — test the protection at startup with the basin full.",
+          "nec_ref": "680.51(A)"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "figures": [
+        {
+          "src": "fig/c6/C6-680.51-fountain.svg",
+          "alt": "Section view of a fountain basin with water: a submersible pump and a fountain luminaire under the water line, both fed through a GFCI protection device shown ahead of them, with the listed low-voltage exception path noted separately.",
+          "caption": "Under the water on line voltage means GFCI protection.",
+          "w": 900,
+          "h": 1400
+        }
+      ],
+      "code_refs": [
+        "680.51(A)",
+        "680.23(A)(2)",
+        "680.50"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C6-680.71",
@@ -3062,8 +4492,8 @@
       "article": "682",
       "section": "682",
       "title": "Article 682 — Natural and Artificially Made Bodies of Water",
-      "plain_explanation": "Intro: electrical installations in and around lakes, ponds, and similar natural or artificial bodies of water that are not pools or fountains — floating structures, docks outside Article 555's scope, and equipment near the water's edge. Florida lakefront work lands here; the shock-hazard logic follows Article 680's thinking.\n\nNEC 2023 CHANGE:\n• 682.11: Distribution equipment on land, feeder equipment included, now falls under the shoreline location rule that once covered only service equipment: 5 ft back, live parts 12 in above the datum plane. The location rules now cover distribution equipment on land, feeder equipment included, not just the service equipment.\n• 682.12: Floating structures can now have splices between the waterline and the datum plane if they're submersion-rated, and replacement connections in that zone must be listed and identified for submersion. Floating structures: splices can now sit below the datum plane, as long as they stay above the waterline.\n• 682.31: Near natural and man-made bodies of water, every metal enclosure, equipment frame and receptacle grounding terminal ties to an equipment grounding conductor run with the circuit conductors. Metal boxes, cabinets and enclosures, metal frames of utilization equipment, and receptacle grounding terminals all connect to the equipment grounding conductor (EGC).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "On lakefront work, treat every receptacle and piece of equipment near the waterline as shock-hazard work: GFCI protection, bonding of the metal parts, and heights above the water figured before anything is set. Where a dock is involved, Article 555 may govern instead of or alongside this article — ask Mike which one controls before rough-in.",
+      "plain_explanation": "Article 682 covers electrical installations in and around natural and artificially made bodies of water that are not pools or fountains — lakes, ponds, and similar bodies of water.\n• In scope: floating structures, equipment near the water's edge, and docks that fall outside Article 555's scope.\n• Out of scope: pools, spas, and fountains — those stay in Article 680.\n• The 2020 shoreline location rule puts service equipment 5 ft back from the water, with live parts 12 in above the datum plane — the reference level the article measures heights from.\n• The shock-hazard logic follows Article 680's thinking: GFCI protection, grounding and bonding discipline, and heights above the water figured before anything is set.\nFlorida lakefront work lands here.",
+      "on_the_job": "On lakefront work, treat every receptacle and piece of equipment near the waterline as shock-hazard work: GFCI protection, bonding of the metal parts, and heights above the water figured before anything is set. On a Florida lake house, that means the shoreline equipment is laid out 5 ft back with live parts 12 in above the datum plane before the trench is dug — not adjusted after the pad is poured. Where a dock is involved, Article 555 may govern instead of or alongside this article — ask Mike which one controls before rough-in.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -3094,7 +4524,104 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/682-31",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Open water has no walls, no floor, and no safe edge — a person in a lake touches the water, the dock, and the boat at the same time, and a fault anywhere in that system has all of them to travel through. The article exists because the pool rules stop at the pool wall, but the shock hazard does not.",
+      "exam_trap": "The trap is reaching for Article 680 because there is water. A lake is not a pool: 682 covers natural and artificially made bodies of water, and its shoreline rules are measured from the datum plane, not from the deck or the seawall cap. The second trap is assuming a dock is always 682 work — a marina or boatyard dock can be Article 555 work instead, and the two articles do not ask for the same installation.",
+      "tables": [
+        {
+          "caption": "682 or not — which article runs the job",
+          "headers": [
+            "Installation",
+            "Article"
+          ],
+          "rows": [
+            [
+              "Lake or pond shoreline equipment",
+              "682"
+            ],
+            [
+              "Floating structure on a lake",
+              "682"
+            ],
+            [
+              "Permanently installed pool",
+              "680, Part II"
+            ],
+            [
+              "Fountain",
+              "680, Part V"
+            ],
+            [
+              "Marina or boatyard dock",
+              "Check 555 first"
+            ]
+          ]
+        }
+      ],
+      "inspection_fails": [
+        "Shoreline service equipment set at the water's edge — inside the 5 ft setback (682.11).",
+        "Live parts mounted below 12 in above the datum plane at the shoreline (682.11).",
+        "Metal enclosures and equipment frames near the water with no equipment grounding conductor run with the circuit (682.31).",
+        "Dock wired under 682 without checking whether Article 555 controls the job."
+      ],
+      "page_quiz": [
+        {
+          "question": "Electrical work at a natural lake (not a pool or fountain) is covered by:",
+          "choices": [
+            "Article 680, Part II",
+            "Article 682",
+            "Article 555, always",
+            "No article — lakes are unregulated"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Article 682 covers natural and artificially made bodies of water that are not pools or fountains.",
+          "nec_ref": "682.1"
+        },
+        {
+          "question": "Under the 2020 rule, shoreline service equipment sits:",
+          "choices": [
+            "At the water's edge, on the dock",
+            "5 ft back, live parts 12 in above the datum plane",
+            "10 ft back, live parts at any height",
+            "Wherever the pad fits"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The 2020 shoreline location rule: 5 ft back, live parts 12 in above the datum plane. (2023 extends the rule to distribution and feeder equipment — see the 2020 vs 2023 box.)",
+          "nec_ref": "682.11"
+        },
+        {
+          "question": "Before rough-in on a job with a dock, the first check is:",
+          "choices": [
+            "The water depth at the dock",
+            "Whether Article 555 governs instead of or alongside 682",
+            "The boat lift horsepower",
+            "Nothing — docks are always 682"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Docks outside Article 555's scope fall to 682; marina and boatyard docks can be 555 work. Confirm which article controls before rough-in.",
+          "nec_ref": "682.1"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 682.11: Distribution equipment on land, feeder equipment included, now falls under the shoreline location rule that once covered only service equipment: 5 ft back, live parts 12 in above the datum plane. The location rules now cover distribution equipment on land, feeder equipment included, not just the service equipment.\n• 682.12: Floating structures can now have splices between the waterline and the datum plane if they're submersion-rated, and replacement connections in that zone must be listed and identified for submersion. Floating structures: splices can now sit below the datum plane, as long as they stay above the waterline.\n• 682.31: Near natural and man-made bodies of water, every metal enclosure, equipment frame and receptacle grounding terminal ties to an equipment grounding conductor run with the circuit conductors. Metal boxes, cabinets and enclosures, metal frames of utilization equipment, and receptacle grounding terminals all connect to the equipment grounding conductor (EGC).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "figures": [
+        {
+          "src": "fig/c6/C6-ART-682-shoreline.svg",
+          "alt": "Elevation of a lake shoreline: water and a dashed datum plane line, shoreline equipment set 5 feet back from the water with a dimension line, live parts dimensioned 12 inches above the datum plane, and a red strip noting the 2023 extension of the rule to distribution and feeder equipment.",
+          "caption": "Shoreline rule (2020): 5 ft back, live parts 12 in above the datum plane.",
+          "w": 900,
+          "h": 1400
+        }
+      ],
+      "code_refs": [
+        "682.11",
+        "682.12",
+        "682.31",
+        "Article 555",
+        "Article 680"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C6-ART-685",
@@ -3267,8 +4794,95 @@
       "article": "690",
       "section": "690.41(B)",
       "title": "Ground-fault protection (690.41(B) in 2020; the old 690.5 was deleted)",
-      "plain_explanation": "PV systems must be provided with ground-fault protection meeting this section: the system detects a ground fault in the DC circuits, interrupts the faulted circuit, and indicates the fault, using equipment listed for PV ground-fault protection. It is the DC-side companion to 690.11's arc-fault protection — ground faults and series arcs are different failures and one device does not cover both.",
-      "on_the_job": "On a service call, a tripped ground-fault indication inside the inverter is a find-the-fault call, not a reset-and-leave call.",
+      "plain_explanation": "PV systems must be provided with ground-fault protection that meets 690.41(B). The protection has three jobs:\n• Detect a ground fault in the DC circuits.\n• Interrupt the faulted circuit.\n• Indicate that the fault happened.\nThe equipment must be listed for PV ground-fault protection. In 2020 this protection lives at 690.41(B) — the old 690.5 address was deleted, so a spec or plan note that still cites 690.5 is citing a dead number. This is the DC-side companion to 690.11's arc-fault protection: a ground fault is current leaking out of the circuit to ground, while a series arc is a break arcing inside the circuit. They are different failures, and one device does not cover both.",
+      "why_it_exists": "A PV array is current-limited: a ground fault on a roof may never draw enough current to open an overcurrent device, so it can sit there heating for weeks. Wet mornings make it worse — dew gives the fault a path it does not have at noon. Detection, interruption, and a visible indication are what turn a silent roof-fire risk into a service call.",
+      "on_the_job": "Service call on a rooftop system in Winter Garden: the inverter shows a ground-fault indication and has shut down. That indication is 690.41(B) doing its third job, so the crew treats it as a find-the-fault call, not a reset-and-leave call. They work the DC circuits string by string until the faulted string shows itself — chafed insulation where a conductor leaves the array is the usual Florida find, with sun and roof heat doing the damage. The fault gets repaired and the insulation verified; only then does the system go back in service. Resetting without finding it just schedules the fire for later.",
+      "exam_trap": "The trap answer cites 690.5 — deleted in 2020; ground-fault protection moved to 690.41(B). Second trap: swapping in arc-fault protection. 690.11 answers series arcs in DC circuits operating at 80 V dc or more; it does not detect a ground fault, and ground-fault protection does not interrupt a series arc. Each section is owed on its own.",
+      "tables": [
+        {
+          "caption": "Two DC protections, two different failures",
+          "headers": [
+            "",
+            "Ground fault — 690.41(B)",
+            "Arc fault — 690.11"
+          ],
+          "rows": [
+            [
+              "What fails",
+              "Insulation fails; current leaks to ground",
+              "A loose connection or break arcs in series"
+            ],
+            [
+              "The answer",
+              "Listed PV ground-fault protection",
+              "Listed PV arc-fault protection, 80 V dc and up"
+            ]
+          ],
+          "note": "Both live on the DC side. A complete system answers both sections."
+        }
+      ],
+      "inspection_fails": [
+        "Plan set and spec still cite 690.5 for ground-fault protection — a section deleted in 2020.",
+        "Inverter ground-fault indication reset at the service call with no fault found or repaired.",
+        "PV system with no means of indicating a ground fault — a fault would sit silent on the roof.",
+        "Arc-fault device offered as the system's ground-fault protection."
+      ],
+      "page_quiz": [
+        {
+          "question": "In NEC 2020, PV ground-fault protection is required by:",
+          "choices": [
+            "690.5",
+            "690.41(B)",
+            "690.11",
+            "705.12"
+          ],
+          "answer_index": 1,
+          "explain_plain": "690.5 was deleted in 2020; the ground-fault protection requirement moved to 690.41(B).",
+          "nec_ref": "690.41(B)"
+        },
+        {
+          "question": "PV ground-fault protection must do all of these EXCEPT:",
+          "choices": [
+            "Detect the ground fault",
+            "Interrupt the faulted circuit",
+            "Indicate the fault",
+            "Replace the arc-fault protection of 690.11"
+          ],
+          "answer_index": 3,
+          "explain_plain": "Ground faults and series arcs are different failures; 690.11 arc-fault protection is still owed where it applies.",
+          "nec_ref": "690.41(B)"
+        },
+        {
+          "question": "An inverter is found showing an active ground-fault indication. The right service response is:",
+          "choices": [
+            "Reset it and leave",
+            "Disable the indication",
+            "Find and repair the fault in the DC circuits",
+            "Install a larger fuse"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The indication is the protection doing its job. A fault that is only reset is still there.",
+          "nec_ref": "690.41(B)"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "figures": [
+        {
+          "src": "fig/c6/C6-690.41B-gfp.svg",
+          "alt": "One-line diagram of a PV array feeding an inverter with listed ground-fault protection marked detect, interrupt, indicate, and a red dashed ground-fault path leaking from the DC circuit to ground.",
+          "caption": "Ground-fault protection on the DC side: detect, interrupt, indicate.",
+          "w": 900,
+          "h": 1180
+        }
+      ],
+      "code_refs": [
+        "690.41(B)",
+        "690.11"
+      ],
+      "uncertain": [
+        "The ground-fault device arrangement inside a listed inverter varies by model. Confirm the installed equipment is listed for PV ground-fault protection in its listing and installation instructions."
+      ],
+      "rich_sources": [],
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -3276,9 +4890,10 @@
       ],
       "florida_note": "",
       "verified": true,
-      "sharma_rule_ids": [],
       "prev_id": "C6-ART-690",
-      "next_id": "C6-690.7"
+      "next_id": "C6-690.7",
+      "sharma_rule_ids": [],
+      "rich": 1
     },
     {
       "id": "C6-690.7",
@@ -3325,8 +4940,8 @@
       "article": "690",
       "section": "690.9",
       "title": "Overcurrent protection",
-      "plain_explanation": "Where overcurrent protection is required for a PV circuit, the device rating is not less than 125% of the maximum current figured under 690.8(A). The section also states the two-condition case in which no overcurrent device is required at all — conductors sized for the full available current and no external source able to backfeed beyond their ampacity. String fusing questions are answered by applying those conditions, not by habit.\n\nNEC 2023 CHANGE:\n• 690.9(D): Revised language in Section 690.9(D), providing a pointer to 705.30(F), where specific requirements applicable to interconnected systems are addressed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Three or more parallel strings is where the backfeed condition usually starts to bite — check it before deciding fuses are 'never needed' or 'always needed.'",
+      "plain_explanation": "Where overcurrent protection is required for a PV circuit, the device rating is not less than 125% of the maximum current figured under 690.8(A) — the sum of the parallel module short-circuit currents multiplied by 125%.\n• No overcurrent device is required at all where two conditions both hold: the conductors are sized for the full available current, and no external source can backfeed current beyond their ampacity.\n• Parallel strings are the usual external source. One string cannot overdrive its own conductors; two or more strings can drive current backward into a faulted third string.\n• String fusing questions are answered by applying those two conditions, not by habit — 'we always fuse' and 'we never fuse' are both wrong answers.",
+      "on_the_job": "Three or more parallel strings is where the backfeed condition usually starts to bite — check it before deciding fuses are 'never needed' or 'always needed.' On a Florida rooftop with three strings of modules at 9.8 amperes short-circuit current each: one string's maximum current is 9.8 × 125% = 12.25 amperes. If that string faults, the other two strings can backfeed about 24.5 amperes into it — beyond what conductors sized for one string can carry — so the strings get fuses, each rated not less than 125% of the 690.8(A) current.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -3345,7 +4960,99 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "A PV module is current-limited — a shorted string does not make big fault current by itself. The danger is the rest of the array: parallel strings, and any interconnected source, will drive current backward into a faulted string's conductors, past what those conductors can carry, for as long as the sun shines. The fuse is there to open that backfeed path before the conductor becomes the fuse.",
+      "exam_trap": "The trap is answering string-fuse questions from habit. 'PV never needs fuses because modules are current-limited' forgets the backfeed from the parallel strings. 'Every string always gets a fuse' ignores the two-condition case where no device is required at all. The exam wants the conditions applied: conductors sized for the full available current, and no external source able to backfeed beyond their ampacity.",
+      "tables": [
+        {
+          "caption": "690.9 — the two-condition test for no overcurrent device",
+          "headers": [
+            "Condition",
+            "What it means"
+          ],
+          "rows": [
+            [
+              "Conductors sized for full available current",
+              "Ampacity covers every current the circuit can see"
+            ],
+            [
+              "No external backfeed beyond ampacity",
+              "No parallel strings or other source can push current back in"
+            ],
+            [
+              "Both hold",
+              "No overcurrent device required"
+            ],
+            [
+              "Either fails",
+              "Provide the device — rated ≥ 125% of the 690.8(A) current"
+            ]
+          ]
+        }
+      ],
+      "inspection_fails": [
+        "Three parallel strings combined with no string fuses and conductors sized for one string — backfeed path unprotected (690.9).",
+        "Overcurrent device rated below 125% of the maximum current figured under 690.8(A).",
+        "Fuses omitted because 'modules are current-limited,' where parallel strings can backfeed the faulted string.",
+        "A fuse installed by habit on a circuit that meets both no-device conditions, then blamed for nuisance openings — the conditions were never checked either way."
+      ],
+      "page_quiz": [
+        {
+          "question": "Where overcurrent protection is required for a PV circuit, the device rating must be not less than:",
+          "choices": [
+            "100% of the module short-circuit current",
+            "125% of the maximum current figured under 690.8(A)",
+            "150% of the conductor ampacity",
+            "The next size above the conductor size"
+          ],
+          "answer_index": 1,
+          "explain_plain": "690.9 ties the device rating to the 690.8(A) maximum current — not less than 125% of it.",
+          "nec_ref": "690.9"
+        },
+        {
+          "question": "No overcurrent device is required for a PV circuit when:",
+          "choices": [
+            "The array has only one string, always",
+            "Conductors are sized for the full available current AND no external source can backfeed beyond their ampacity",
+            "The modules are listed",
+            "The circuit is under 600 volts"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Both conditions must hold together — conductor ampacity for the full available current, and no external source able to backfeed beyond that ampacity.",
+          "nec_ref": "690.9"
+        },
+        {
+          "question": "Why do three parallel strings change the fuse answer?",
+          "choices": [
+            "Three strings exceed 600 volts",
+            "The healthy strings can backfeed a faulted string beyond its conductor ampacity",
+            "Fuses are required by the module warranty",
+            "They do not — string count never matters"
+          ],
+          "answer_index": 1,
+          "explain_plain": "One string cannot overdrive its own conductors, but the other parallel strings drive current backward into a fault — that backfeed is what the fuse opens.",
+          "nec_ref": "690.9"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 690.9(D): Revised language in Section 690.9(D), providing a pointer to 705.30(F), where specific requirements applicable to interconnected systems are addressed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "figures": [
+        {
+          "src": "fig/c6/C6-690.9-backfeed.svg",
+          "alt": "Diagram of three parallel PV strings feeding a combiner: the two healthy strings drive current backward into a faulted third string, showing why string fuses are provided when the backfeed condition fails, with the 125 percent device-rating rule noted.",
+          "caption": "Backfeed from the healthy strings is what the fuse opens.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "code_refs": [
+        "690.9",
+        "690.8(A)",
+        "690.9(D)",
+        "705.30(F)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C6-690.11",
@@ -3404,8 +5111,8 @@
       "article": "690",
       "section": "690.12(C)",
       "title": "Rapid shutdown initiation device",
-      "plain_explanation": "The initiation device must be readily accessible, must clearly indicate whether it is in the off (shutdown initiated) or on position, and may be the service disconnect, the PV system disconnect, or another listed switch. For one- and two-family dwellings, the initiation device must be located at a readily accessible location outside the building — the fire crew does not enter the house to shut the array down.",
-      "on_the_job": "On dwelling jobs, walk out front and find the initiation point the way a firefighter would — if you can't, neither can they.",
+      "plain_explanation": "The initiation device is the switch that starts rapid shutdown (690.12). It has to pass three checks:\n• Readily accessible — reachable fast, without a ladder, a locked gate, or a trip through the building.\n• It clearly indicates whether it is in the off position (shutdown initiated) or the on position.\n• It may be the service disconnect, the PV system disconnect, or another listed switch — no special device is required.\nFor one- and two-family dwellings, the initiation device must be located at a readily accessible location outside the building — the fire crew does not enter the house to shut the array down. What initiation buys, per 690.12: outside the array boundary, controlled conductors are limited to not more than 30 V within 30 seconds; inside the boundary, not more than 80 V within 30 seconds, unless a listed PV hazard control system is used.",
+      "on_the_job": "On dwelling jobs, walk out front and find the initiation point the way a firefighter would — if you can't, neither can they. Sharma's standard layout puts the PV disconnect beside the Siemens meter-main on the exterior wall and makes that disconnect the initiation device: one throw, ON and OFF positions marked, and the reflective red RAPID SHUTDOWN label on or within 3 ft of it, with letters at least 3/8 in. high (690.56(C)). After initiation, the conductors leaving the array boundary must be down to 30 V or less within 30 seconds — that is the number the fire crew is counting on.",
       "sharma_note": "",
       "figure_idea": "Initiation switch beside the meter on an exterior wall, placard visible from the driveway.",
       "related_ids": [
@@ -3416,7 +5123,95 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C6-690.12",
-      "next_id": "C6-690.13"
+      "next_id": "C6-690.13",
+      "why_it_exists": "Sunlight keeps a PV array energized even with the utility service off, and firefighters work on and around those roofs. Rapid shutdown only protects them if the first firefighter on scene can find and throw the initiation device in seconds, from outside, and tell at a glance whether shutdown is on. A device hidden in a garage or an unlabeled switch fails the whole purpose of 690.12.",
+      "exam_trap": "The trap is naming the inverter's built-in switch, or a disconnect inside the garage, as the initiation device on a dwelling. Both fail the rule: for one- and two-family dwellings the device must be at a readily accessible location outside the building, and it must show its position clearly.",
+      "inspection_fails": [
+        "Initiation device inside the garage or the house on a one- or two-family dwelling.",
+        "Switch with no clear ON/OFF indication of the shutdown state.",
+        "No reflective rapid-shutdown label at the device, or label letters under 3/8 in. high.",
+        "Device behind a locked gate, a fence, or landscaping — not readily accessible."
+      ],
+      "tables": [
+        {
+          "caption": "What initiation must deliver (690.12)",
+          "headers": [
+            "Where",
+            "Limit",
+            "Time"
+          ],
+          "rows": [
+            [
+              "Outside array boundary",
+              "Not over 30 V",
+              "Within 30 s"
+            ],
+            [
+              "Inside array boundary",
+              "Not over 80 V",
+              "Within 30 s"
+            ]
+          ],
+          "note": "Inside the boundary, a listed PV hazard control system (PVHCS) is the other path. The array boundary is 1 ft from the array in all directions."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c6/C6-690.12C-initiation.svg",
+          "alt": "Exterior wall elevation of a one-family dwelling with the meter and a rapid shutdown initiation switch beside it, a reflective red RAPID SHUTDOWN placard within 3 ft of the switch, and a comparison showing a switch inside the garage as a fail.",
+          "caption": "Dwelling initiation device: outside, at the meter, labeled, ON/OFF shown.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "On a one-family dwelling, where must the rapid shutdown initiation device be?",
+          "choices": [
+            "Inside the garage, near the inverter",
+            "At a readily accessible location outside the building",
+            "In the attic, next to the array",
+            "Anywhere, if it is labeled"
+          ],
+          "answer_index": 1,
+          "explain_plain": "690.12(C) puts the dwelling device outside the building, readily accessible, so the fire crew never enters to shut the array down.",
+          "nec_ref": "690.12(C)"
+        },
+        {
+          "question": "After initiation, conductors outside the array boundary must be limited to what, and how fast?",
+          "choices": [
+            "80 V within 30 seconds",
+            "50 V within 10 seconds",
+            "30 V within 30 seconds",
+            "0 V instantly"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Outside the boundary the limit is not more than 30 V within 30 seconds of initiation; 80 V within 30 seconds is the inside-the-boundary figure.",
+          "nec_ref": "690.12(B)"
+        },
+        {
+          "question": "Which of these may serve as the initiation device?",
+          "choices": [
+            "Only a special red rapid-shutdown switch",
+            "The inverter's setup menu",
+            "The service disconnect, the PV disconnect, or another listed switch",
+            "Any breaker in the panel"
+          ],
+          "answer_index": 2,
+          "explain_plain": "690.12(C) allows the service disconnect, the PV system disconnect, or another listed switch, as long as it is readily accessible and shows its position.",
+          "nec_ref": "690.12(C)"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "690.12",
+        "690.12(B)",
+        "690.12(C)",
+        "690.56(C)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C6-690.13",
@@ -3767,8 +5562,8 @@
       "article": "691",
       "section": "691",
       "title": "Article 691 — Large-Scale Photovoltaic (PV) Electric Supply Stations",
-      "plain_explanation": "Intro: utility-scale PV plants of 5 MW and up — engineered installations with their own access, fencing, and documentation rules. Added in the 2017 edition, not new in 2020. Sharma does not build these; recognize the article so a plant job is never priced from residential 690 habits.",
-      "on_the_job": "Recognition only: a plant of 5 MW and up is an engineered, fenced, access-controlled installation with its own documentation rules. If a developer asks Sharma to 'hook up' a solar field, the conversation starts with the plant's engineered drawings — never with residential 690 habits.",
+      "plain_explanation": "Article 691 covers large-scale photovoltaic (PV) electric supply stations — utility-scale PV plants, not building systems.\n• The line is capacity: stations with an aggregate capacity of 5 MW and up are 691 work.\n• Everything below that line — rooftop arrays, commercial building PV, ground-mounts serving a building — stays under Article 690.\n• A 691 station is an engineered installation, with its own access, fencing, and documentation rules, and access limited to qualified persons.\n• The article was added in the 2017 edition; it is not new in 2020.\nSharma does not build these. The skill this page teaches is recognition: know the article exists, so a plant job is never priced from residential 690 habits.",
+      "on_the_job": "Recognition only: a plant of 5 MW and up is an engineered, fenced, access-controlled installation with its own documentation rules. If a developer asks Sharma to 'hook up' a solar field outside Ocala, the first move is the capacity math on the plant's one-line: at 5 MW and up, this is a 691 station, and the conversation starts with the plant's engineered drawings — never with residential 690 habits, never with a rooftop takeoff, and never with a price built from 690 material lists.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -3776,7 +5571,102 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C6-690.56",
-      "next_id": "C6-ART-692"
+      "next_id": "C6-ART-692",
+      "why_it_exists": "A 5 MW plant is a power station, not a big rooftop. Its fault energy, its switching, its access control, and its documentation are engineered the way a utility facility is engineered, and the consequences of treating it like a large residential array land on whoever priced it that way. Article 691 exists so the threshold is unmistakable: cross 5 MW and the job changes articles, changes design method, and changes who may work on it.",
+      "exam_trap": "The trap is treating the threshold as a size detail: 'a big array is still Article 690.' At 5 MW aggregate capacity the job leaves 690. Article 691 takes over, and its engineered-design, fencing, access, and documentation rules come with it.",
+      "inspection_fails": [
+        "Plant priced and permitted from a residential 690 takeoff — no engineered design package behind it.",
+        "Fencing and controlled access treated as site extras instead of part of the station's installation rules.",
+        "Documentation and directories missing at turnover on a plant that requires them.",
+        "Unqualified crew working inside the fence — 691 stations are qualified-persons territory."
+      ],
+      "tables": [
+        {
+          "caption": "Article 690 or Article 691?",
+          "headers": [
+            "Question",
+            "690",
+            "691"
+          ],
+          "rows": [
+            [
+              "Capacity",
+              "Below 5 MW",
+              "5 MW and up"
+            ],
+            [
+              "Kind of job",
+              "Building and rooftop PV",
+              "Utility-scale station"
+            ],
+            [
+              "Design basis",
+              "Prescriptive Code rules",
+              "Engineered installation"
+            ],
+            [
+              "Access",
+              "Building rules",
+              "Fenced, qualified persons"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c6/C6-ART-691-scale.svg",
+          "alt": "Scale bar running from a 10 kW house array and building PV under Article 690 to a gold 5 MW line where Article 691 takes over for utility-scale PV stations, with a comparison panel of the two articles covering design basis, fencing, access, and documentation.",
+          "caption": "5 MW is the line: 690 below it, 691 at and above it.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Article 691 begins at what aggregate PV capacity?",
+          "choices": [
+            "500 kW",
+            "1 MW",
+            "5 MW",
+            "50 MW"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Large-scale PV electric supply stations — 5 MW and up — are Article 691 work; below that, Article 690 governs.",
+          "nec_ref": "Article 691"
+        },
+        {
+          "question": "A developer's 6 MW solar field is wired under:",
+          "choices": [
+            "Article 690, like a big rooftop",
+            "Article 691",
+            "Article 705 only",
+            "No article — it is utility exempt by size alone"
+          ],
+          "answer_index": 1,
+          "explain_plain": "At 6 MW the plant is over the 5 MW line: an engineered 691 station with its own access, fencing, and documentation rules.",
+          "nec_ref": "Article 691"
+        },
+        {
+          "question": "A 691 job starts with:",
+          "choices": [
+            "A residential 690 takeoff",
+            "The plant's engineered drawings",
+            "A bigger service calculation",
+            "A rooftop material list"
+          ],
+          "answer_index": 1,
+          "explain_plain": "A 691 station is an engineered installation. Its engineered drawings and documentation lead; 690 habits do not price it.",
+          "nec_ref": "Article 691"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "Article 691",
+        "Article 690"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C6-ART-692",
@@ -3784,8 +5674,8 @@
       "article": "692",
       "section": "692",
       "title": "Article 692 — Fuel Cell Systems",
-      "plain_explanation": "Intro: fuel cell power systems — output circuits, disconnects, and interconnection of a chemical generator that runs whenever fuel is present. Specialty work; the disconnect and marking pages matter when one appears on a commercial job.",
-      "on_the_job": "A fuel cell keeps making power for as long as fuel reaches it — treat its output as a live source until the fuel supply is shut off and the unit is isolated the way its listing directs. Confirm the disconnect and the interconnection point from the manufacturer's documents before touching the output circuit.",
+      "plain_explanation": "Article 692 covers fuel cell power systems — a chemical generator that makes electricity while fuel reaches it. A system may be stand-alone or interactive with other sources, with or without battery storage (692.1).\n• Listing (692.6): the fuel cell system is evaluated and listed for its intended application before it is installed.\n• Output sizing (692.8(B)): feeder conductors from the fuel cell to the premises wiring are sized at not less than the greater of the nameplate rated circuit current or the rating of the fuel cell's own overcurrent device.\n• Disconnects (692.13, 692.14): a means disconnects all current-carrying conductors of the source from every other conductor in the building; it follows 225.31 and 225.33 through 225.40, and need not be suitable as service equipment.\n• Identification (692.4(B)): a permanent plaque or directory at each service location lists the fuel cell with every other power source on site.\n• Marking: the power source is marked at its disconnecting means (692.50), the manual fuel shut-off valve's location is marked at the building's primary disconnect (692.51), and a stored-energy warning goes at the service disconnect where the system stores energy (692.52).\n• Interactive systems also meet Article 705, and the transfer equipment keeps the fuel cell isolated from the utility network (692.61).",
+      "on_the_job": "A 10 kW fuel cell on a small commercial job in Orlando: the nameplate rated current is 42 A and the unit's overcurrent device is 50 A, so 692.8(B) sizes the output feeder at the greater number — conductors with at least 50 A ampacity, not the 42 A the nameplate headline suggests. The disconnect beside the unit opens all current-carrying conductors, the service equipment gets a plaque listing the utility service and the fuel cell side by side, and the manual fuel shut-off valve's location is marked at the building's primary disconnect, so a fire crew can find it without a site walk.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -3793,7 +5683,117 @@
       "verified": true,
       "sharma_rule_ids": [],
       "prev_id": "C6-ART-691",
-      "next_id": "C6-ART-694"
+      "next_id": "C6-ART-694",
+      "rich": 1,
+      "why_it_exists": "A fuel cell is a generator with no off switch on the machine: while fuel flows, the stack makes power, and stored-energy systems keep terminals live after that. Crews and firefighters trained on 'open the breaker and it is dead' get hurt by quiet backfeed. The disconnect, plaque, and fuel-valve marking rules exist so anyone can find every source on the site, isolate it, and stop the fuel that keeps it alive.",
+      "inspection_fails": [
+        "Output feeder sized to the nameplate current where the fuel cell's overcurrent device was rated higher — 692.8(B) takes the greater.",
+        "No plaque or directory at the service equipment identifying the fuel cell as a second power source.",
+        "Disconnect opens the ungrounded conductors only; a current-carrying conductor of the source stays connected.",
+        "Manual fuel shut-off valve location not marked at the building's primary disconnecting means.",
+        "Unlisted fuel cell system set in place — 692.6 requires evaluation and listing for the application before installation."
+      ],
+      "exam_trap": "The trap is sizing the output feeder from the nameplate current alone. 692.8(B) takes the greater of the nameplate rated circuit current and the rating of the fuel cell's overcurrent device — when the unit's device is the bigger number, it governs. And 'disconnect open' is not 'dead': with fuel still flowing, the stack is still a source — which is why the fuel shut-off marking is part of the same job.",
+      "tables": [
+        {
+          "caption": "Article 692 field core",
+          "headers": [
+            "Piece",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "Listing (692.6)",
+              "Evaluated and listed for the application before installation"
+            ],
+            [
+              "Output feeder (692.8(B))",
+              "Ampacity at least the greater of nameplate rated current or the unit's OCPD rating"
+            ],
+            [
+              "Disconnect (692.13)",
+              "Opens all current-carrying conductors of the source"
+            ],
+            [
+              "At the service (692.4(B))",
+              "Plaque or directory listing every power source"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c6/C6-ART-692-one-line.svg",
+          "alt": "One-line diagram of a fuel cell system: a fuel supply with a manual shut-off valve feeds a listed fuel cell, and its output circuit runs through a disconnect that opens all current-carrying conductors to the service, where a plaque lists every power source on the site.",
+          "caption": "Isolate the source, then stop the fuel that keeps it alive.",
+          "w": 900,
+          "h": 1520
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Fuel cell output feeder conductors are sized at not less than…",
+          "choices": [
+            "The nameplate rated circuit current only",
+            "The greater of the nameplate rated circuit current or the fuel cell OCPD rating",
+            "125 percent of the building load",
+            "The service conductor size"
+          ],
+          "answer_index": 1,
+          "explain_plain": "692.8(B) takes the greater of the two numbers — the nameplate rated current or the unit's overcurrent device rating.",
+          "nec_ref": "692.8(B)"
+        },
+        {
+          "question": "The fuel cell disconnect must disconnect…",
+          "choices": [
+            "The ungrounded conductors only",
+            "All current-carrying conductors of the fuel cell source",
+            "The fuel supply only",
+            "The utility service"
+          ],
+          "answer_index": 1,
+          "explain_plain": "692.13 requires a means to disconnect all current-carrying conductors of the source from everything else in the building.",
+          "nec_ref": "692.13"
+        },
+        {
+          "question": "Before installation, a fuel cell system must be…",
+          "choices": [
+            "Field-assembled from listed parts",
+            "Evaluated and listed for its intended application",
+            "Registered with the utility",
+            "Bonded to the water pipe"
+          ],
+          "answer_index": 1,
+          "explain_plain": "692.6 requires the system to be evaluated and listed for its intended application prior to installation.",
+          "nec_ref": "692.6"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "692.1",
+        "692.4(B)",
+        "692.6",
+        "692.8(B)",
+        "692.13",
+        "692.14",
+        "692.50",
+        "692.51",
+        "692.52",
+        "705"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "692.8(B): feeder conductor ampacity not less than the greater of the nameplate rated circuit current or the rating of the fuel cell overcurrent device; 692.6: the fuel cell system shall be evaluated and listed for its intended application prior to installation",
+          "source": "Solar365 mirror of NEC Article 692 text",
+          "url": "https://www.solar365.com/green-homes/national-electric-code-2008/fuel-cell-systems"
+        },
+        {
+          "claim": "692.13 disconnect opens all current-carrying conductors of the fuel cell source; 692.4(B) plaque or directory of power sources at each service equipment location; 692.50 / 692.51 / 692.52 markings for the power source, the manual fuel shut-off valve location, and stored energy; interactive systems follow Article 705 and 692.61 transfer isolation",
+          "source": "CodeBookCity, NEC Article 692 tips",
+          "url": "http://www.codebookcity.com/codearticles/nec/necarticle692.htm"
+        }
+      ]
     },
     {
       "id": "C6-ART-694",
