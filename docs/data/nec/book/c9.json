@@ -181,8 +181,8 @@
       "florida_note": "Reference aid only; the AHJ and the printed NEC govern. Florida work in this book is NEC 2020 as adopted by the FBC 8th Edition (2023), for permits applied for through Dec 30, 2026; NEC 2023 applies under the FBC 9th Edition from Dec 31, 2026.",
       "id": "C9-ART-9",
       "next_id": "C9-Table1",
-      "on_the_job": "Come here in this order: Table 1 for the allowed percentage, Table 4 for the raceway, Table 5 for insulated conductors, and Table 8 when a voltage-drop check needs resistance. Do not size conduit from a memorized count you heard on another job — raceway type, insulation type, and conductor count all change the answer.",
-      "plain_explanation": "Chapter 9 is not a set of wiring rules for one kind of job. It is the data the rest of the book points back to: how much of a raceway conductors may occupy, how big each raceway and each insulated conductor actually is, and what a conductor's resistance is. Behind the tables sit the informative annexes, which show worked ways to use the rules. Annex material explains and illustrates; it does not add mandatory requirements on its own.",
+      "on_the_job": "Come here in this order: Table 1 for the allowed percentage, Table 4 for the raceway, Table 5 for insulated conductors, and Table 8 when a voltage-drop check needs resistance. One pass through a real check: three or more conductors means 40 percent from Table 1; 1/2 in EMT allows 0.122 sq in at that percentage from Table 4; the conductors on the list — two 6 AWG THHN and one 10 AWG THHN — total 0.1225 sq in from Table 5, so the run goes up to 3/4 in EMT. Do not size conduit from a memorized count you heard on another job — raceway type, insulation type, and conductor count all change the answer.",
+      "plain_explanation": "Chapter 9 is not a set of wiring rules for one kind of job. It is the data the rest of the book points back to:\n• Table 1 — the percentage of a raceway conductors may occupy\n• Table 2 — minimum radius of conduit bends\n• Table 4 — raceway inside diameters and usable areas\n• Table 5 and Table 5A — insulated and compact conductor dimensions and areas\n• Table 8 — conductor properties and DC resistance, the voltage-drop input\n• Table 9 — AC resistance and reactance, for finer voltage-drop work\n• Tables 11(A) and 11(B) — how much power a Class 2 or Class 3 source may deliver\nBehind the tables sit the informative annexes — Annex B on ampacity calculation under engineering supervision, Annex C's same-size fill tables, Annex D's worked load-calculation examples, Annex I's recommended torque values. Annex material explains and illustrates; it does not add mandatory requirements on its own.",
       "prev_id": null,
       "related_ids": [
         "Ch9-T4",
@@ -195,7 +195,106 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Chapter 9 — the table room",
-      "verified": true
+      "verified": true,
+      "why_it_exists": "Every sizing answer in the trade is only as good as the table it came from. Chapter 9 keeps the numbers in one printed place, so a fill percentage, a raceway area and a resistance all trace to the same source instead of memory and habit. The annexes sit behind a fence for a reason: a worked example shows one way through a calculation, and treating an example as a rule is how a legal installation gets failed — or an illegal one gets built.",
+      "inspection_fails": [
+        "Mixed-size pull sized from an Annex C count table, which only works when every conductor is the same size and type.",
+        "Fill figured from the EMT row of Table 4 for a PVC Schedule 40 run — the raceway installed is smaller inside than the raceway calculated.",
+        "Voltage-drop check run on a resistance remembered from another conductor size instead of the Table 8 row for the conductor in hand.",
+        "Annex example cited to the inspector as if it were a Code requirement."
+      ],
+      "exam_trap": "The trap answer treats Annex C like a requirement table: 'Annex C says nine fit, so nine are legal.' Annex C is an informative shortcut built from Tables 1, 4 and 5 for same-size conductors only. It cannot bless a mixed-size pull, and no annex overrides the tables it was built from.",
+      "tables": [
+        {
+          "caption": "The working tables, in the order a fill check uses them",
+          "headers": [
+            "Table",
+            "Gives you",
+            "Used for"
+          ],
+          "rows": [
+            [
+              "Table 1",
+              "Percent fill",
+              "How much may be filled"
+            ],
+            [
+              "Table 4",
+              "Raceway areas",
+              "What the raceway allows"
+            ],
+            [
+              "Table 5",
+              "Conductor areas",
+              "What each wire takes"
+            ],
+            [
+              "Table 8",
+              "Resistance",
+              "Voltage-drop checks"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-ART-9-table-room.svg",
+          "alt": "Four table cards stacked in calculation order — Table 1 percent fill, Table 4 raceway area, Table 5 conductor area, Table 8 resistance — with the chapter's other tables listed below and the informative annexes in a gold strip.",
+          "caption": "Start at Table 1, finish at Table 8. Annexes explain; they do not require.",
+          "w": 900,
+          "h": 1600
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "First stop in a fill calculation — which table gives the allowed percentage?",
+          "choices": [
+            "Table 4",
+            "Table 1",
+            "Table 8",
+            "Annex C"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Table 1 sets the percentage by conductor count: 53, 31 or 40 percent. Then Table 4 gives the raceway area and Table 5 the conductor areas.",
+          "nec_ref": "Table 1"
+        },
+        {
+          "question": "An informative annex in Chapter 9 is:",
+          "choices": [
+            "A mandatory requirement",
+            "Explanatory material — it illustrates, it does not require",
+            "A Florida-only rule",
+            "A Sharma standard"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Informative annexes are explanatory material. They show worked ways to use the rules; they are not enforceable as requirements.",
+          "nec_ref": "90.5(C)"
+        },
+        {
+          "question": "The resistance for a voltage-drop check comes from:",
+          "choices": [
+            "Table 5",
+            "Table 1",
+            "Table 8",
+            "Table 11(A)"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Table 8 lists conductor properties, including DC resistance in ohms per thousand feet — the R in the voltage-drop formula.",
+          "nec_ref": "Table 8"
+        }
+      ],
+      "code_refs": [
+        "Chapter 9",
+        "Table 1",
+        "Table 4",
+        "Table 5",
+        "Table 8",
+        "90.5(C)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "article": "9",
@@ -204,8 +303,8 @@
       "florida_note": "",
       "id": "C9-Table1",
       "next_id": "C9-Table1-Nipples",
-      "on_the_job": "Count every conductor in the run, including the equipment grounding conductor, then pick the percentage for that count before you open Tables 4 and 5. The most common house and light-commercial case is three or more conductors, so 40 percent is the column you will use most — but never use it for a one- or two-conductor pull.",
-      "plain_explanation": "Table 1 sets the share of a raceway's inside cross-section that conductors may take up. One conductor may occupy 53 percent. Two conductors may occupy 31 percent. Three or more conductors together may occupy 40 percent. Those percentages already allow for the fact that conductors do not pack like water — two round conductors side by side waste more of the circle, which is why the two-conductor number is the lowest of the three.",
+      "on_the_job": "Count every conductor in the run, including the equipment grounding conductor, then pick the percentage for that count before you open Tables 4 and 5. The most common house and light-commercial case is three or more conductors, so 40 percent is the column you will use most — but never use it for a one- or two-conductor pull. Short stubs earn their own number: a 1/2 in EMT nipple has a 60 percent area of 0.182 sq in in Table 4, which at 0.0133 sq in for one 12 AWG THHN is 13 conductors by fill alone.",
+      "plain_explanation": "Table 1 sets the share of a raceway's inside cross-section that conductors may take up:\n• 1 conductor — 53 percent\n• 2 conductors — 31 percent\n• 3 or more conductors — 40 percent\n• A nipple 24 in or less between enclosures — 60 percent, covered on the nipple page\nThe percentage is taken against the raceway's total inside area in Table 4, and the conductor areas come from Table 5. Those percentages already allow for the fact that conductors do not pack like water — two round conductors side by side waste more of the circle, which is why the two-conductor number is the lowest of the three.",
       "prev_id": "C9-ART-9",
       "related_ids": [
         "Q-067",
@@ -219,7 +318,105 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Table 1 — how much of a raceway you may fill",
-      "verified": true
+      "verified": true,
+      "why_it_exists": "A raceway filled past its percentage cannot be pulled without a fight: conductors jam at the bends, insulation skins against the raceway wall, and a damaged jacket is a fault waiting for a damp day. The limits also leave the breathing room a bundled run needs. The odd dip at two conductors is geometry, not a typo — two circles side by side waste more of the pipe than one large conductor or a bundle of three or more.",
+      "inspection_fails": [
+        "Two-conductor pull figured at 40 percent instead of 31 — the raceway is overfilled on the approved calculation itself.",
+        "Equipment ground left out of the conductor count, so a three-conductor run was figured as two — wrong percentage and the ground's own area missing.",
+        "The 60 percent nipple allowance applied to a full-length run between panels.",
+        "Percentage read off one raceway's Table 4 row and applied to another — an EMT answer used for a PVC run."
+      ],
+      "exam_trap": "The trap is reaching for 40 percent every time because it is the familiar number. Two conductors get only 31 percent — a two-wire pull figured at 40 is overfilled before it starts. The reverse trap: 53 percent is not a bonus rate for three conductors. It belongs to a single conductor only.",
+      "tables": [
+        {
+          "caption": "Table 1 percentages, and what they allow in 1/2 in EMT (Table 4)",
+          "headers": [
+            "Conductors",
+            "Max fill",
+            "Usable area"
+          ],
+          "rows": [
+            [
+              "1",
+              "53%",
+              "0.161 sq in"
+            ],
+            [
+              "2",
+              "31%",
+              "0.094 sq in"
+            ],
+            [
+              "3 or more",
+              "40%",
+              "0.122 sq in"
+            ],
+            [
+              "Nipple ≤ 24 in",
+              "60%",
+              "0.182 sq in"
+            ]
+          ],
+          "note": "1/2 in EMT total inside area is 0.304 sq in; Table 4 prints the usable area at each percentage."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-Table1-fill-pcts.svg",
+          "alt": "Three raceway circles of the same size showing one conductor filling 53 percent of the area, two conductors 31 percent, and three conductors 40 percent, with the conductor circles drawn to scale by area.",
+          "caption": "Same raceway, three counts: 53, 31 and 40 percent.",
+          "w": 900,
+          "h": 1000
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Two conductors in one raceway. Maximum fill under Table 1?",
+          "choices": [
+            "53%",
+            "40%",
+            "31%",
+            "60%"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Two conductors get 31 percent — the lowest of the three, because two round conductors side by side waste the most of the circle.",
+          "nec_ref": "Table 1"
+        },
+        {
+          "question": "A raceway nipple 18 in long between two boxes may be filled to:",
+          "choices": [
+            "40%",
+            "53%",
+            "31%",
+            "60%"
+          ],
+          "answer_index": 3,
+          "explain_plain": "A nipple 24 in or less may be filled to 60 percent. The allowance belongs to the nipple only, not to the runs on either side of it.",
+          "nec_ref": "Table 1, Note 4"
+        },
+        {
+          "question": "The equipment ground is the third conductor in the count. Which percentage applies?",
+          "choices": [
+            "31%, grounds do not change the count",
+            "53%",
+            "40%",
+            "60%"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Grounds count in the count. Three conductors puts the run in the 3-or-more row: 40 percent.",
+          "nec_ref": "Table 1; Ch. 9, Notes to Table 1"
+        }
+      ],
+      "code_refs": [
+        "Table 1",
+        "Table 1, Note 4",
+        "Table 4",
+        "Table 5"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "article": "9",
@@ -344,8 +541,8 @@
       "florida_note": "",
       "id": "C9-FILL-METHOD",
       "next_id": "C9-FILL-SAME",
-      "on_the_job": "Say the steps out loud on a mixed pull before you order material. Most failed fills come from a skipped step — a ground left out of the list, an EMT row used for a PVC run, or the 40 percent column used for a two-conductor pull that only gets 31 percent.",
-      "plain_explanation": "Every fill problem is the same four steps. First, list every conductor in the raceway, including equipment grounds, with its size and insulation type. Second, take each conductor's area from Table 5 (Table 8 area for a bare conductor) and add them. Third, pick the Table 1 percentage from the conductor count — 53, 31, 40, or 60 for a short nipple. Fourth, open Table 4 for your raceway type and take the first trade size whose usable area at that percentage is equal to or larger than your conductor total. If the total is even slightly over, go up a trade size; close does not count.",
+      "on_the_job": "Worked example, Sharma commercial: three 20 A branch circuits share one EMT — six 12 AWG THHN plus one 12 AWG THHN equipment ground. Seven conductors at 0.0133 sq in each total 0.0931 sq in. Seven conductors take the 40 percent column, and 1/2 in EMT allows 0.122 sq in at 40 percent, so it fits. If the lead picks CCA, one AWG larger under S-10, the same run is seven 10 AWG at 0.0211 — 0.1477 sq in, over 0.122 — and the raceway goes to 3/4 in EMT at 0.213. Say the steps out loud on a mixed pull before you order material. Most failed fills come from a skipped step — a ground left out of the list, an EMT row used for a PVC run, or the 40 percent column used for a two-conductor pull that only gets 31 percent.",
+      "plain_explanation": "Every fill problem is the same four steps:\n• Step 1 — List every conductor in the raceway, including equipment grounds, with its size and insulation type.\n• Step 2 — Take each conductor's area from Table 5 (the Table 8 area for a bare conductor) and add them.\n• Step 3 — Pick the Table 1 percentage from the conductor count: 53 for one conductor, 31 for two, 40 for three or more, and 60 for a nipple 24 in or less.\n• Step 4 — Open Table 4 for your raceway type and take the first trade size whose usable area at that percentage is equal to or larger than your conductor total. If the total is even slightly over, go up a trade size; close does not count.",
       "prev_id": "C9-Table5A",
       "related_ids": [
         "Ch9-T4",
@@ -363,7 +560,110 @@
         "S-10"
       ],
       "title": "The conduit-fill method, step by step",
-      "verified": true
+      "verified": true,
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Conductors need room. In an overfilled raceway the pull jams, insulation scrapes and stretches, and a conductor can be damaged before it ever carries a load. The percentages sit well under the raceway's full area because round conductors do not pack like water — the air between them is part of the math, and two conductors side by side waste the most space, which is why two get the lowest share, 31 percent. Four steps, done in order, make the answer come from the tables instead of from how the pull feels.",
+      "inspection_fails": [
+        "Equipment ground left off the fill list; the pull jams mid-run and insulation comes back scraped.",
+        "EMT row of Table 4 used for a PVC run — same trade size name, smaller inside area.",
+        "40 percent column used for a two-conductor pull that Table 1 limits to 31 percent.",
+        "Conductor total a hair over the Table 4 allowance and the crew pulled it anyway — close does not count."
+      ],
+      "exam_trap": "The trap is the two-conductor percentage. Three or more conductors get 40 percent, so 40 feels like the default — but two conductors get only 31 percent, the lowest number in Table 1. The second trap on this page: leaving the equipment ground off the list because 'it carries no current.' Fill does not care what a conductor carries. If it is in the raceway, its area is in the total.",
+      "tables": [
+        {
+          "caption": "Worked example — three 20 A circuits in one EMT",
+          "headers": [
+            "Step",
+            "Copper, 12 AWG",
+            "CCA picked, 10 AWG"
+          ],
+          "rows": [
+            [
+              "Conductors in the list",
+              "6 circuit + 1 ground = 7",
+              "Same count, one AWG larger (S-10)"
+            ],
+            [
+              "Table 5 area, each",
+              "0.0133 sq in",
+              "0.0211 sq in"
+            ],
+            [
+              "Total conductor area",
+              "0.0931 sq in",
+              "0.1477 sq in"
+            ],
+            [
+              "Table 1 percent (7 conductors)",
+              "40%",
+              "40%"
+            ],
+            [
+              "Table 4 answer, EMT",
+              "1/2 in (0.122 sq in) — fits",
+              "3/4 in (0.213 sq in)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-FILL-METHOD-four-steps.svg",
+          "alt": "Four-step flow strip for conduit fill — list the conductors including the ground, add the Table 5 areas, pick the Table 1 percentage, compare against Table 4 — worked through with seven 12 AWG THHN conductors totaling 0.0931 square inches in 1/2 inch EMT.",
+          "caption": "The four steps, worked: seven 12 AWG THHN in 1/2 in EMT.",
+          "w": 900,
+          "h": 1700
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Two conductors in a raceway may fill what percent of its inside area?",
+          "choices": [
+            "53%",
+            "40%",
+            "31%",
+            "60%"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Table 1: one conductor 53%, two conductors 31%, three or more 40%. Two is the lowest — two round conductors waste the most of the circle.",
+          "nec_ref": "Ch. 9, Table 1"
+        },
+        {
+          "question": "The area of a bare equipment grounding conductor, for fill, comes from:",
+          "choices": [
+            "Table 5",
+            "Table 8",
+            "It is not counted in fill",
+            "Annex C"
+          ],
+          "answer_index": 1,
+          "explain_plain": "A bare conductor has no insulation to measure, so its area comes from the conductor-properties data in Table 8. It still counts.",
+          "nec_ref": "Ch. 9, Tables 5 and 8"
+        },
+        {
+          "question": "A nipple 24 in or less between two boxes may be filled to:",
+          "choices": [
+            "40%",
+            "53%",
+            "31%",
+            "60%"
+          ],
+          "answer_index": 3,
+          "explain_plain": "Short nipples get 60% — a short, straight stub pulls far easier than a long run. The runs on either side still use Table 1.",
+          "nec_ref": "Ch. 9, Table 1"
+        }
+      ],
+      "code_refs": [
+        "Ch. 9 Table 1",
+        "Ch. 9 Table 4",
+        "Ch. 9 Table 5",
+        "Ch. 9 Table 5A",
+        "Ch. 9 Table 8"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "article": "9",
@@ -397,8 +697,8 @@
       "florida_note": "",
       "id": "C9-FILL-MIXED",
       "next_id": "C9-FILL-EGC-AND-BARE",
-      "on_the_job": "Write each conductor's area on the takeoff, not just the sum. When a run fails by a hair — like the 0.1225 example, over by five ten-thousandths — the written list is how you prove the next trade size was required and not a guess.",
-      "plain_explanation": "Mixed sizes cannot be divided; each conductor contributes its own Table 5 area and the total is compared with Table 4. Worked example one: two 6 AWG THHN plus one 10 AWG THHN total 2 x 0.0507 + 0.0211 = 0.1225 sq in — just over the 0.122 sq in that 1/2 in EMT allows at 40 percent, so the run goes to 3/4 in EMT at 0.213. Worked example two: three 1/0 THHN plus a 6 AWG THHN ground total 3 x 0.1855 + 0.0507 = 0.6072 sq in; 1-1/4 in EMT allows 0.598 and is too small, so 1-1/2 in EMT at 0.814 is the answer.",
+      "on_the_job": "Write each conductor's area on the takeoff, not just the sum. When a run fails by a hair — like the 0.1225 example, over by five ten-thousandths — the written list is how you prove the next trade size was required and not a guess. It is also how the next electrician, adding a circuit to that raceway next year, knows exactly how much room is left: in the 3/4 in EMT from example one, 0.213 - 0.1225 = 0.0905 sq in of the 40 percent allowance is still open.",
+      "plain_explanation": "Mixed sizes cannot be divided; each conductor contributes its own Table 5 area and the total is compared with the Table 4 area for the raceway, at the Table 1 percentage for the count.\n• Worked example one: two 6 AWG THHN plus one 10 AWG THHN total 2 x 0.0507 + 0.0211 = 0.1225 sq in — just over the 0.122 sq in that 1/2 in EMT allows at 40 percent, so the run goes to 3/4 in EMT at 0.213.\n• Worked example two: three 1/0 THHN plus a 6 AWG THHN ground total 3 x 0.1855 + 0.0507 = 0.6072 sq in; 1-1/4 in EMT allows 0.598 and is too small, so 1-1/2 in EMT at 0.814 is the answer.\nThere is no rounding a mixed total down to fit. Over is over, even by 0.0005 sq in.",
       "prev_id": "C9-FILL-SAME",
       "related_ids": [
         "C9-L-019",
@@ -412,7 +712,121 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Mixed-size fill — add the areas",
-      "verified": true
+      "verified": true,
+      "why_it_exists": "A mixed pull is where the same-size shortcuts break. One large conductor eats area that a division method assumes is shared evenly, and a total that lands a hair over the limit does not pull like one that lands a hair under — it jams at the bend and skins insulation. Adding the areas one conductor at a time is slower, and it is the only arithmetic that matches what is physically in the pipe.",
+      "inspection_fails": [
+        "Mixed-size pull figured by dividing the raceway area by the largest conductor's area — the smaller conductors' real areas never entered the calculation.",
+        "Conductor total rounded down to the raceway allowance on the fill schedule — 0.1225 shown as 0.122.",
+        "Ground left off the mixed list; the total passes without it and fails with it.",
+        "Annex C count used for a mixed-size pull."
+      ],
+      "exam_trap": "The trap answer rounds: '0.1225 is basically 0.122 — it fits.' Fill has no 'basically.' The only round-up in Chapter 9 belongs to same-size division that leaves a remainder of 0.8 or more, and it never applies to a mixed-size total. 0.1225 sq in of conductor in a 0.122 sq in allowance is an overfilled raceway.",
+      "tables": [
+        {
+          "caption": "Example one — add each conductor (Table 5 areas)",
+          "headers": [
+            "Conductor",
+            "Area each",
+            "Running total"
+          ],
+          "rows": [
+            [
+              "6 AWG THHN",
+              "0.0507",
+              "0.0507"
+            ],
+            [
+              "6 AWG THHN",
+              "0.0507",
+              "0.1014"
+            ],
+            [
+              "10 AWG THHN",
+              "0.0211",
+              "0.1225"
+            ]
+          ],
+          "note": "1/2 in EMT allows 0.122 at 40 percent — over. 3/4 in EMT allows 0.213 — the answer."
+        },
+        {
+          "caption": "Example two — with the ground on the list",
+          "headers": [
+            "Conductor",
+            "Area each",
+            "Running total"
+          ],
+          "rows": [
+            [
+              "1/0 THHN x 3",
+              "0.1855",
+              "0.5565"
+            ],
+            [
+              "6 AWG THHN ground",
+              "0.0507",
+              "0.6072"
+            ]
+          ],
+          "note": "1-1/4 in EMT allows 0.598 — too small. 1-1/2 in EMT allows 0.814 — the answer."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-FILL-MIXED-bars.svg",
+          "alt": "Stacked bar charts for two mixed-size pulls: example one totals 0.1225 square inches against the 0.122 allowed in 1/2 inch EMT and 0.213 in 3/4 inch; example two totals 0.6072 against 0.598 in 1-1/4 inch EMT and 0.814 in 1-1/2 inch.",
+          "caption": "Add the areas, then compare — a hair over is still over.",
+          "w": 900,
+          "h": 1340
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Two 6 AWG THHN (0.0507 sq in each) and one 10 AWG THHN (0.0211). Total conductor area?",
+          "choices": [
+            "0.0718 sq in",
+            "0.1014 sq in",
+            "0.1225 sq in",
+            "0.1521 sq in"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Mixed sizes are added, not divided: 0.0507 + 0.0507 + 0.0211 = 0.1225 sq in.",
+          "nec_ref": "Tables 4 and 5"
+        },
+        {
+          "question": "That 0.1225 sq in total goes in EMT at 40 percent. Smallest trade size?",
+          "choices": [
+            "1/2 in (0.122)",
+            "3/4 in (0.213)",
+            "1 in (0.346)",
+            "1-1/4 in (0.598)"
+          ],
+          "answer_index": 1,
+          "explain_plain": "0.1225 is over the 0.122 that 1/2 in EMT allows — by 0.0005, and over is over. 3/4 in EMT at 0.213 is the first size that fits.",
+          "nec_ref": "Table 4"
+        },
+        {
+          "question": "A mixed-size total lands 0.0005 sq in over the raceway allowance. The Code answer is:",
+          "choices": [
+            "Round it down — close enough",
+            "Go up one trade size",
+            "Drop the ground from the list",
+            "Use the 0.8 round-up"
+          ],
+          "answer_index": 1,
+          "explain_plain": "There is no rounding a mixed total down to fit, and the 0.8 round-up belongs only to same-size division. Over the allowance means the next trade size.",
+          "nec_ref": "Tables 1, 4 and 5"
+        }
+      ],
+      "code_refs": [
+        "Table 1",
+        "Table 4",
+        "Table 5",
+        "Annex C"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "article": "9",
@@ -421,8 +835,8 @@
       "florida_note": "",
       "id": "C9-FILL-EGC-AND-BARE",
       "next_id": "C9-ANNEXB",
-      "on_the_job": "On every fill list, write the ground as its own line with its own area before you add. If the ground is bare, say so on the list and take the Table 8 area; if it is insulated, take the Table 5 area for that insulation.",
-      "plain_explanation": "An equipment grounding conductor takes up room in the raceway like any other conductor, so it is counted in fill — the v1 table notes state this directly. An insulated ground uses its Table 5 area for its insulation type. A bare conductor has no insulation to measure, so its area comes from the conductor-properties data in Table 8 instead. Leaving the ground out is the single most common reason a fill calculation passes on paper and jams in the field.",
+      "on_the_job": "On every fill list, write the ground as its own line with its own area before you add. A Florida home run in 1/2 in EMT: three 12 AWG THHN circuit conductors at 0.0133 sq in each total 0.0399 sq in. With an insulated 12 AWG THHN ground the list totals 0.0532 sq in; with a bare 12 AWG ground it totals 0.0450 sq in. Both fit the 0.122 sq in that 1/2 in EMT allows at 40 percent — but on a tight pull the ground's line is the difference between passing and going up a trade size. Say on the list whether the ground is bare or insulated, and take its area from the right table.",
+      "plain_explanation": "An equipment grounding conductor takes up room in the raceway like any other conductor, so it counts in fill — a note to Table 1 says so directly, and says to use the conductor's actual dimensions.\n• Insulated ground: take its area from Table 5, in the column for its insulation type. A 12 AWG THHN ground is 0.0133 sq in, the same as any 12 AWG THHN.\n• Bare ground: there is no insulation to measure, so Table 5 has no row for it. Take its diameter from Table 8 and use the area of that circle — a bare 12 AWG is 0.081 in across, about 0.0051 sq in.\n• One ground, counted once: a shared equipment ground serving several circuits in one raceway still gets its one line on the list.\nLeaving the ground out is the most common reason a fill calculation passes on paper and jams in the field.",
       "prev_id": "C9-FILL-MIXED",
       "related_ids": [
         "C9-L-021",
@@ -435,7 +849,126 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Grounds count, and bare conductors use Table 8",
-      "verified": true
+      "verified": true,
+      "why_it_exists": "Fill is physical, not electrical. The ground carries no load current, but the pull does not care — every conductor in the pipe adds friction on the bends and one more chance to skin insulation. A calculation that leaves the ground out approves a raceway the wire cannot actually get through, and the crew finds out halfway through the pull, with the insulation paying for it.",
+      "inspection_fails": [
+        "Fill calculation on the permit set omits the equipment grounding conductor — the raceway is over its Table 1 percentage once the ground is counted.",
+        "Bare ground figured at the insulated Table 5 area, or an insulated ground figured as bare — wrong table for the conductor as installed.",
+        "Pull jammed mid-run and insulation damaged on a raceway that only passed because the ground was left off the list.",
+        "Fill schedule shows no ground line at all for a raceway that contains one."
+      ],
+      "exam_trap": "The trap answer: 'The ground does not count — it carries no current.' That mixes up two different checks. Current-carrying status matters for the ampacity adjustment in 310.15(C)(1); fill is about space, and the ground takes space. Count it, at its real area: Table 5 if it is insulated, Table 8 if it is bare.",
+      "tables": [
+        {
+          "caption": "One 12 AWG ground, two ways to figure it",
+          "headers": [
+            "Ground",
+            "Area from",
+            "Area"
+          ],
+          "rows": [
+            [
+              "Insulated, THHN",
+              "Table 5",
+              "0.0133 sq in"
+            ],
+            [
+              "Bare",
+              "Table 8, dia 0.081 in",
+              "0.0051 sq in"
+            ]
+          ],
+          "note": "Same copper, different area — the insulation is what Table 5 measures."
+        },
+        {
+          "caption": "Worked list — three 12 AWG THHN plus the ground, 1/2 in EMT",
+          "headers": [
+            "Conductor",
+            "Area each",
+            "Running total"
+          ],
+          "rows": [
+            [
+              "12 AWG THHN × 3",
+              "0.0133",
+              "0.0399"
+            ],
+            [
+              "Bare 12 AWG ground",
+              "0.0051",
+              "0.0450"
+            ],
+            [
+              "1/2 in EMT at 40%",
+              "—",
+              "0.122 allowed"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-FILL-EGC-AND-BARE-ground-line.svg",
+          "alt": "A fill list with three 12 AWG THHN conductors and the equipment ground on its own highlighted line, showing an insulated ground at its Table 5 area and a bare ground at its Table 8 diameter area.",
+          "caption": "The ground gets its own line — Table 5 if insulated, Table 8 if bare.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "A bare 12 AWG equipment ground goes in the raceway. Where does its fill area come from?",
+          "choices": [
+            "Table 5, the THHN column",
+            "Table 8, from its diameter",
+            "It is not counted",
+            "Annex C"
+          ],
+          "answer_index": 1,
+          "explain_plain": "A bare conductor has no insulation for Table 5 to measure. Table 8 gives its diameter — 0.081 in for 12 AWG — and the area is the circle that diameter makes, about 0.0051 sq in.",
+          "nec_ref": "Ch. 9, Notes to Table 1; Table 8"
+        },
+        {
+          "question": "Three 12 AWG THHN (0.0133 sq in each) plus one bare 12 AWG ground (0.0051) in 1/2 in EMT, which allows 0.122 sq in at 40 percent. Total conductor area?",
+          "choices": [
+            "0.0399 sq in",
+            "0.0450 sq in",
+            "0.0532 sq in",
+            "0.1225 sq in"
+          ],
+          "answer_index": 1,
+          "explain_plain": "3 × 0.0133 = 0.0399 for the circuit conductors, plus 0.0051 for the bare ground = 0.0450 sq in. It fits — with the ground counted.",
+          "nec_ref": "Tables 4, 5 and 8"
+        },
+        {
+          "question": "Why does the ground count in fill if it carries no load current?",
+          "choices": [
+            "It does not count",
+            "Fill is space, not current — it takes room in the raceway",
+            "Only in raceways over 2 in",
+            "Only when it is insulated"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Fill measures physical room. Current-carrying status is the derating question in 310.15(C)(1), not the fill question.",
+          "nec_ref": "Ch. 9, Notes to Table 1"
+        }
+      ],
+      "code_refs": [
+        "Ch. 9 Table 1 and its notes",
+        "Table 5",
+        "Table 8",
+        "310.15(C)(1)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "12 AWG solid copper is 0.0808 in in diameter, so a bare 12 AWG conductor occupies about 0.0051 sq in",
+          "source": "Convertwell, AWG Wire Gauge Chart: Diameter, Area, Resistance",
+          "url": "https://www.rapidtwo.com/reference/awg-wire-gauge-chart/"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "article": "9",
@@ -444,8 +977,8 @@
       "florida_note": "Annex B is informative. The mandatory ampacity rules are the Chapter 3 articles as adopted in Florida; an annex calculation supports an engineered design, it does not replace the adopted tables on its own.",
       "id": "C9-ANNEXB",
       "next_id": "C9-ANNEXC",
-      "on_the_job": "Sharma crews size conductors from Table 310.16 and the Chapter 3 pages, full stop. If a plan shows an ampacity that only works 'per Annex B' or 'per engineering supervision,' that is a Mike-and-the-engineer item: do not match it with a field guess, and do not downsize a conductor on an annex number nobody calculated for this job.",
-      "plain_explanation": "Informative Annex B is the Code's application information for calculating conductor ampacity under engineering supervision — the formula route that accounts for load diversity, conductor arrangement, duct banks and ambient conditions instead of reading a single table cell. Its own tables give ampacities for specific free-air and underground electrical duct arrangements that Table 310.16 does not cover. Two limits define it: it is informative, not mandatory, and it is engineering work — the calculation has to be performed and documented for the actual installation by a qualified person, not estimated in the field.",
+      "on_the_job": "The plans for a small commercial job show a feeder sized smaller than Table 310.16 gives for the load, noted 'ampacity per Annex B — engineering supervision.' Nobody on the crew re-runs that math, and nobody talks it away either. Sharma crews size conductors from Table 310.16 and the Chapter 3 pages, full stop. If a plan shows an ampacity that only works 'per Annex B' or 'per engineering supervision,' that is a Mike-and-the-engineer item: do not match it with a field guess, and do not downsize a conductor on an annex number nobody calculated for this job.",
+      "plain_explanation": "Informative Annex B is the Code's application information for calculating conductor ampacity under engineering supervision — the formula route that accounts for load diversity, conductor arrangement, duct banks and ambient conditions instead of reading a single table cell. Its own tables give ampacities for specific free-air and underground electrical duct arrangements that Table 310.16 does not cover. Two limits define it:\n• It is informative, not mandatory. No annex number is a requirement an inspector can cite the way a Chapter 3 section can be cited.\n• It is engineering work. The calculation has to be performed and documented for the actual installation by a qualified person — never estimated in the field.\nField sizing stays on the adopted tables: Table 310.16, with the correction and adjustment factors of 310.15. An Annex B number belongs to the design that produced it, with that design's duct spacing, soil conditions and loading assumptions attached.",
       "prev_id": "C9-FILL-EGC-AND-BARE",
       "related_ids": [
         "C9-ANNEXES-INFORMATIVE",
@@ -455,7 +988,102 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Annex B — ampacity calculation under engineering supervision",
-      "verified": true
+      "verified": true,
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Table 310.16 is built on standard assumptions about conductor count, ambient and arrangement. A real duct bank or an unusual grouping does not always match those assumptions, and one table cell cannot know your soil or your spacing. The formula route exists so an engineer can model the installation that is actually being built. The supervision requirement is the guardrail: an ampacity nobody calculated is just a smaller conductor with a story attached, and an undersized conductor runs hot for the life of the building.",
+      "inspection_fails": [
+        "Feeder installed one size under Table 310.16 with 'per Annex B' written on the takeoff and no engineering calculation on file.",
+        "Duct bank built with different conduit spacing than the engineered design the ampacity was figured from — the calculation no longer matches the installation.",
+        "Annex B ampacity claimed at inspection with no documentation of who calculated it, or for what conditions."
+      ],
+      "exam_trap": "The trap answer: 'Annex B permits a smaller conductor than Table 310.16 whenever the load calculation shows diversity.' Wrong twice. Annex B is informative, so by itself it permits nothing, and its numbers come from an engineering calculation performed and documented for the actual installation — not from a diversity note in a load calc, and never from a field estimate. Without the documented calculation behind it, the table size stands.",
+      "tables": [
+        {
+          "caption": "Two routes to an ampacity",
+          "headers": [
+            "",
+            "Table 310.16 route",
+            "Annex B route"
+          ],
+          "rows": [
+            [
+              "Basis",
+              "One table cell, standard conditions",
+              "Formulas for the actual installation"
+            ],
+            [
+              "Who runs it",
+              "The installer, in the field",
+              "A qualified person, documented"
+            ],
+            [
+              "Status",
+              "Mandatory (Ch. 3, as adopted)",
+              "Informative — not a requirement"
+            ],
+            [
+              "Covers",
+              "The runs the table lists",
+              "Free-air and duct arrangements the table does not cover"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-ANNEXB-two-routes.svg",
+          "alt": "Two panels side by side: on the left a Table 310.16 cell labeled field sizing, on the right a duct-bank cross-section with a calculation sheet labeled engineering supervision.",
+          "caption": "Two routes to an ampacity: the table cell, or the documented calculation.",
+          "w": 900,
+          "h": 1240
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "What makes an Annex B ampacity usable on a real job?",
+          "choices": [
+            "It appears in the NEC, so it is mandatory",
+            "A qualified person calculated and documented it for that installation",
+            "The foreman checked the load diversity",
+            "Annex B overrides Table 310.16"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Annex B is the engineering-supervision route: the number is only as good as the documented calculation behind it.",
+          "nec_ref": "Informative Annex B"
+        },
+        {
+          "question": "Annex B is best described as:",
+          "choices": [
+            "A mandatory replacement for Table 310.16",
+            "Informative application information for ampacity under engineering supervision",
+            "A Florida amendment to Chapter 3",
+            "A field shortcut for duct banks"
+          ],
+          "answer_index": 1,
+          "explain_plain": "It is informative annex material — application information, not a requirement.",
+          "nec_ref": "Informative Annex B"
+        },
+        {
+          "question": "A plan shows a feeder size that only works 'per engineering supervision.' The crew should:",
+          "choices": [
+            "Downsize the rest of the run to match",
+            "Treat the calculation as an engineer item — flag it, do not re-figure it in the field",
+            "Ignore the note and pull the table size without telling anyone",
+            "Estimate the diversity and match the plan size"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Engineering-supervision numbers are performed and documented by a qualified person; the field does not guess them.",
+          "nec_ref": "Informative Annex B"
+        }
+      ],
+      "code_refs": [
+        "Informative Annex B",
+        "Table 310.16",
+        "310.15"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "article": "9",
@@ -548,8 +1176,8 @@
       "florida_note": "",
       "id": "C9-VD-METHOD",
       "next_id": "C9-VD-WORKED",
-      "on_the_job": "Use the real load current, not the breaker size, unless the load truly is the breaker size. A 20A circuit carrying a 12A load drops voltage as a 12A circuit, and using 20A will send you upsizing wire the job does not need.",
-      "plain_explanation": "Voltage drop is the voltage used up pushing current through the conductor's resistance, out and back. For a single-phase circuit the approximation used in v1 is VD = 2 x L x R x I / 1000, where L is the one-way length in feet, R is the Table 8 resistance in ohm per thousand feet, and I is the actual load current in amps. The 2 is the round trip — current travels the length twice — and it is the most-forgotten factor in the whole calculation. Finish by turning volts into a percentage: VD divided by the system voltage, times 100.",
+      "on_the_job": "Use the real load current, not the breaker size, unless the load truly is the breaker size. A 20A circuit carrying a 12A load drops voltage as a 12A circuit, and using 20A will send you upsizing wire the job does not need. Worked check on a Florida house: a 120V workshop receptacle run, 100 ft one-way, actually loaded at 12A, on 12 AWG copper (R = 1.98). VD = 2 x 100 x 1.98 x 12 / 1000 = 4.75V, which is 3.96 percent of 120V — over the 3 percent branch-circuit recommendation. On 10 AWG (R = 1.24) the same run drops 2.98V, 2.48 percent, and passes. The wire changed; nothing else did.",
+      "plain_explanation": "Voltage drop is the voltage used up pushing current through the conductor's resistance, out and back. For a single-phase circuit the approximation used here is:\nVD = 2 x L x R x I / 1000\n• 2 — the round trip. Current travels the length twice, out on one conductor and back on the other. It is the most-forgotten factor in the whole calculation.\n• L — the one-way length in feet, as the run is actually routed.\n• R — the conductor's resistance from Table 8, in ohms per thousand feet. Stranded copper: 12 AWG is 1.98, 10 AWG is 1.24, 8 AWG is 0.778.\n• I — the actual load current in amps, not the breaker size.\n• / 1000 — Table 8 is priced per thousand feet, so the division puts the answer in volts.\nFinish by turning volts into a percentage: VD divided by the system voltage, times 100. Percent is what the 3 percent and 5 percent recommendations are measured against.",
       "prev_id": "C9-Table8-CCA",
       "related_ids": [
         "Ch9-T8",
@@ -565,7 +1193,108 @@
         "S-01"
       ],
       "title": "Voltage drop — the single-phase method",
-      "verified": true
+      "verified": true,
+      "why_it_exists": "Voltage lost in the wire is voltage the load never sees. Motors start hard and run hot on low voltage, lights dim, electronics complain — and the lost energy heats the conductor run instead of doing work at the load. The drop grows with length, current and resistance, which is why a circuit that is fine at 30 ft can be a problem at 130 ft on the same breaker.",
+      "inspection_fails": [
+        "Voltage-drop calculation submitted without the round-trip factor — the approved set shows half the drop the run will actually have.",
+        "Resistance taken from the aluminum column of Table 8 for a copper run.",
+        "Drop reported in volts and compared straight to the 3 percent recommendation, without converting to a percentage of system voltage.",
+        "Drop figured at the breaker rating for a load drawing half that, with the wire upsized two sizes past what the load needs."
+      ],
+      "exam_trap": "The classic trap drops the 2: VD = L x R x I / 1000. That figures only the trip out and reports half the real drop — a run that truly drops 6.34V 'passes' at 3.17V on paper. If a voltage-drop answer looks too good for a long run, check for the missing round trip first.",
+      "tables": [
+        {
+          "caption": "The formula, piece by piece",
+          "headers": [
+            "Part",
+            "Meaning",
+            "Comes from"
+          ],
+          "rows": [
+            [
+              "2",
+              "Round trip, out and back",
+              "The circuit itself"
+            ],
+            [
+              "L",
+              "One-way length, ft",
+              "The routed run"
+            ],
+            [
+              "R",
+              "Resistance, ohm/1000 ft",
+              "Table 8"
+            ],
+            [
+              "I",
+              "Actual load current, A",
+              "The load, not the breaker"
+            ],
+            [
+              "/ 1000",
+              "Puts the answer in volts",
+              "Table 8 is per 1000 ft"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-VD-METHOD-loop.svg",
+          "alt": "A single-phase circuit drawn as a loop from a 120V panel to a 12A load and back, the one-way length dimensioned at 100 ft, with the formula VD equals 2 times L times R times I divided by 1000 and the worked result for 12 AWG and 10 AWG.",
+          "caption": "Out and back: the 2 is the round trip.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "100 ft one-way, 16A load, 12 AWG copper at 1.98 ohm/kft. Voltage drop?",
+          "choices": [
+            "3.17V",
+            "6.34V",
+            "12.68V",
+            "1.98V"
+          ],
+          "answer_index": 1,
+          "explain_plain": "2 x 100 x 1.98 x 16 / 1000 = 6.34V. Forget the round-trip 2 and you get the trap answer, 3.17V.",
+          "nec_ref": "Table 8"
+        },
+        {
+          "question": "The 2 in the single-phase voltage-drop formula stands for:",
+          "choices": [
+            "Two conductors in every conduit",
+            "The round trip — out and back",
+            "A 2 percent allowance",
+            "The two hot legs"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Current travels the one-way length twice, once out and once back, so the length enters the formula doubled.",
+          "nec_ref": "Table 8"
+        },
+        {
+          "question": "A 20A circuit actually carries a 12A load. Figure its voltage drop at:",
+          "choices": [
+            "20A",
+            "12A",
+            "32A",
+            "15A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Voltage drop follows the current that actually flows. Figure it at 12A; using the 20A breaker size oversizes wire the job does not need.",
+          "nec_ref": "Table 8"
+        }
+      ],
+      "code_refs": [
+        "Table 8",
+        "210.19(A) Informational Note",
+        "215.2(A) Informational Note"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "article": "9",
@@ -589,7 +1318,100 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Voltage drop worked — fail, then upsize",
-      "verified": true
+      "verified": true,
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Every foot of conductor is a small resistance in series with the load, and the current crosses it twice — out and back. Drop grows with length and with current, so a run that serves a load fine at 20 ft can starve the same load at 100 ft. The missing volts never reach the load: lights run dim, and a motor draws more current to make the same power and runs hotter doing it. Working the formula one size at a time is how you land on the smallest conductor that actually serves the load — no guessing, no wasted copper.",
+      "inspection_fails": [
+        "Long 120V branch run left at 12 AWG; voltage measured at the load sits well under the nameplate and the motor starts hard.",
+        "Takeoff sized by the breaker alone — voltage drop never calculated on a 100 ft run.",
+        "Percent drop figured against 240V on a 120V circuit, halving the apparent drop on paper."
+      ],
+      "exam_trap": "The trap is answering with the breaker: 'it is a 20 A circuit, so 12 AWG is fine.' That mixes up two different checks. Ampacity says the conductor will not overheat; voltage drop says the load still gets its voltage at the end of the run. On this page's run, 12 AWG passes ampacity and fails the job at 5.28 percent. The second trap is guessing the jump — going two sizes up 'to be safe' without rerunning the formula, when one variable changed and the same math gives the answer.",
+      "tables": [
+        {
+          "caption": "One run, three sizes — 16 A, 100 ft one-way, 120 V",
+          "headers": [
+            "Size, Cu stranded",
+            "R (ohm/kft)",
+            "VD",
+            "% of 120 V"
+          ],
+          "rows": [
+            [
+              "12 AWG",
+              "1.98",
+              "6.34 V",
+              "5.28% — over"
+            ],
+            [
+              "10 AWG",
+              "1.24",
+              "3.97 V",
+              "3.31% — still over"
+            ],
+            [
+              "8 AWG",
+              "0.778",
+              "2.49 V",
+              "2.07% — meets it"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-VD-WORKED-three-bars.svg",
+          "alt": "Bar chart of percent voltage drop for 12, 10 and 8 AWG copper on the same 100 foot, 16 amp, 120 volt run: 5.28 percent and 3.31 percent above a dashed 3 percent line, and 8 AWG at 2.07 percent below it.",
+          "caption": "Fail, fail, pass: the same run at 12, 10 and 8 AWG against the 3% recommendation.",
+          "w": 900,
+          "h": 1380
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "16 A at 100 ft one-way on 12 AWG copper (1.98 ohm/kft), 120 V. Voltage drop?",
+          "choices": [
+            "3.17 V",
+            "6.34 V — 5.28%",
+            "1.98 V",
+            "12.7 V"
+          ],
+          "answer_index": 1,
+          "explain_plain": "VD = 2 x 100 x 1.98 x 16 / 1000 = 6.34 V. The 2 is the round trip — out and back.",
+          "nec_ref": "Ch. 9, Table 8"
+        },
+        {
+          "question": "What fixes the drop on that run?",
+          "choices": [
+            "A larger breaker",
+            "Upsizing to 8 AWG — resistance falls to 0.778 ohm/kft and the drop to 2.07%",
+            "Figuring the percent against 240 V",
+            "Nothing — the ampacity passed, so the job is done"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Change one thing — the resistance — and rerun the same formula. At 8 AWG the drop is 2.49 V, 2.07 percent.",
+          "nec_ref": "Ch. 9, Table 8"
+        },
+        {
+          "question": "A 40 A load at 150 ft on 6 AWG copper drops 5.89 V. Figured at 240 V, that is:",
+          "choices": [
+            "5.89%",
+            "4.91%",
+            "2.46%",
+            "1.23%"
+          ],
+          "answer_index": 2,
+          "explain_plain": "5.89 / 240 = 2.46 percent. The same current travels better at higher voltage because the percent is figured against twice the volts.",
+          "nec_ref": "Ch. 9, Table 8"
+        }
+      ],
+      "code_refs": [
+        "Ch. 9 Table 8",
+        "210.19(A) Informational Note"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "article": "9",
@@ -598,8 +1420,8 @@
       "florida_note": "",
       "id": "C9-VD-3PH",
       "next_id": "C9-VD-LIMITS",
-      "on_the_job": "Label any three-phase result from Table 8 as an approximation when you write it on a takeoff or submittal. If the result lands close to the limit, or the conductors are large, say so and flag it for a Table 9 check by Mike instead of presenting the approximation as exact.",
-      "plain_explanation": "For a balanced three-phase circuit, the round-trip factor of 2 is replaced by 1.732, the square root of 3: VD = 1.732 x L x R x I / 1000, with L still one-way feet, R still Table 8 resistance, and I the load current. Stated plainly, this is an approximation — it borrows DC resistance from Table 8 for an AC system, and larger conductors, steel raceways, and power factor can move the real answer, which is the work Table 9 exists for. Worked approximation: 40A at 150 ft on 6 AWG copper, 208V three-phase: 1.732 x 150 x 0.491 x 40 / 1000 = 5.10V, about 2.45 percent.",
+      "on_the_job": "Small commercial tenant job: a 208V three-phase load drawing 40A sits 150 ft from the panel, and the 6 AWG copper approximation gives 5.10V — about 2.45 percent, inside the 3 percent recommendation, so no upsize. Label any three-phase result from Table 8 as an approximation when you write it on a takeoff or submittal. If the result lands close to the limit, or the conductors are large, say so and flag it for a Table 9 check by Mike instead of presenting the approximation as exact.",
+      "plain_explanation": "For a balanced three-phase circuit, the round-trip factor of 2 is replaced by 1.732, the square root of 3: VD = 1.732 x L x R x I / 1000.\n• L is still the one-way length in feet.\n• R is still the Table 8 resistance, in ohms per thousand feet.\n• I is the load current.\nStated plainly, this is an approximation — it borrows DC resistance from Table 8 for an AC system, and larger conductors, steel raceways, and power factor can move the real answer, which is the work Table 9 exists for. Worked approximation: 40A at 150 ft on 6 AWG copper, 208V three-phase: 1.732 x 150 x 0.491 x 40 / 1000 = 5.10V, about 2.45 percent.",
       "prev_id": "C9-VD-WORKED",
       "related_ids": [
         "Ch9-T8",
@@ -611,7 +1433,105 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Three-phase voltage drop — same idea, 1.732 factor",
-      "verified": true
+      "verified": true,
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Three-phase power rides on three conductors sharing the load, so the drop works out to the square root of 3 times the one-way drop instead of twice it. Using the single-phase factor of 2 overstates the drop by about 15 percent and can push an upsize nobody needed. Treating the shortcut as exact runs the other way: on large conductors the real AC impedance moves away from the Table 8 resistance, and a feeder can come up short. The 1.732 method exists for a fast, honest estimate; Table 9 exists for the exact answer.",
+      "inspection_fails": [
+        "Three-phase feeder figured with the single-phase factor 2 — the submittal shows an upsize the load never needed.",
+        "A Table 8 approximation written on a submittal as an exact value for a large-conductor feeder, with no Table 9 check.",
+        "Percent drop figured against 120V on a 208V three-phase run, making a good run look like a failure on paper."
+      ],
+      "exam_trap": "The trap is running a three-phase feeder through the single-phase formula untouched, factor 2 and all. That overstates the drop by about 15 percent and can talk you into wire the load never needed. The mirror-image trap is worse: quoting the 1.732 result as exact on large conductors in steel conduit, where AC resistance and reactance move the real number. Balanced three-phase takes 1.732 — and the answer stays an approximation.",
+      "tables": [
+        {
+          "caption": "Worked approximation — 40 A, 150 ft, 6 AWG Cu, 208 V three-phase",
+          "headers": [
+            "Step",
+            "Value"
+          ],
+          "rows": [
+            [
+              "Factor, balanced three-phase",
+              "1.732"
+            ],
+            [
+              "One-way length L",
+              "150 ft"
+            ],
+            [
+              "Table 8 resistance R, 6 AWG Cu",
+              "0.491 ohm/kft"
+            ],
+            [
+              "Load current I",
+              "40 A"
+            ],
+            [
+              "VD = 1.732 x 150 x 0.491 x 40 / 1000",
+              "5.10 V"
+            ],
+            [
+              "Percent of 208 V",
+              "2.45%"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-VD-3PH-factor.svg",
+          "alt": "Three conductors running from a panel to a balanced three-phase load, with the single-phase factor 2 crossed out in red and replaced by 1.732, the worked example result of 5.10 volts, and an approximation stamp pointing to Table 9 for the exact route.",
+          "caption": "Balanced three-phase: swap the round-trip 2 for 1.732 — and label the answer an approximation.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Balanced three-phase voltage drop by the Table 8 method uses the factor:",
+          "choices": [
+            "2",
+            "1.732",
+            "1.5",
+            "3"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The round-trip factor of 2 is replaced by the square root of 3, 1.732, for a balanced three-phase circuit.",
+          "nec_ref": "Ch. 9, Table 8"
+        },
+        {
+          "question": "The 1.732 result on a large-conductor feeder in steel conduit is:",
+          "choices": [
+            "Exact",
+            "An approximation — Table 9 is the AC impedance route",
+            "A code violation",
+            "Valid for aluminum only"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Table 8 lends DC resistance to an AC system. Larger conductors, steel raceways and power factor move the real answer; that is Table 9's work.",
+          "nec_ref": "Ch. 9, Table 9"
+        },
+        {
+          "question": "40 A at 150 ft on 6 AWG copper (0.491 ohm/kft), 208 V three-phase. Approximate drop?",
+          "choices": [
+            "10.2 V",
+            "5.10 V — about 2.45%",
+            "2.95 V",
+            "5.89 V"
+          ],
+          "answer_index": 1,
+          "explain_plain": "1.732 x 150 x 0.491 x 40 / 1000 = 5.10 V, and 5.10 / 208 is about 2.45 percent.",
+          "nec_ref": "Ch. 9, Table 8"
+        }
+      ],
+      "code_refs": [
+        "Ch. 9 Table 8",
+        "Ch. 9 Table 9",
+        "210.19(A) Informational Note"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "article": "9",
@@ -623,8 +1543,8 @@
       "florida_note": "Florida DOES turn one of them into a mandate for commercial work — through the energy code, not the NEC: FBC Energy Conservation §C405.5.3 requires conductors for feeders and branch circuits in commercial buildings to be sized for a maximum of 5% voltage drop COMBINED. The NEC's own 3%/5% figures remain recommendations; on a Florida commercial job the 5% total is enforceable. Residential work and project specifications are separate questions — check the job documents and the AHJ.",
       "id": "C9-VD-LIMITS",
       "next_id": "C9-Table9",
-      "on_the_job": "Never tell a customer, a builder, or an inspector that 'the Code requires 3 percent.' Say it the true way: the Code recommends it in an informational note, Sharma designs to it because it keeps equipment happy, and the AHJ and the printed NEC govern. Keep that label on every voltage-drop answer, quiz, and estimate note you write.",
-      "plain_explanation": "The familiar figures — size a branch circuit so its voltage drop stays near 3 percent, and a feeder plus the branch circuit it supplies near 5 percent total — come from Informational Notes to 210.19(A) and 215.2(A). Informational Notes are guidance, not enforceable requirements, and v1 labels these figures exactly that way. A circuit over 3 percent is not automatically a code violation; it is a circuit that may run its load poorly — dim lights, a motor that starts hard, equipment that complains — and that a good installer fixes by upsizing, shortening the run, or moving the load.",
+      "on_the_job": "Never tell a customer, a builder, or an inspector that 'the Code requires 3 percent.' Say it the true way: the Code recommends it in an informational note, Sharma designs to it because it keeps equipment happy, and the AHJ and the printed NEC govern. Keep that label on every voltage-drop answer, quiz, and estimate note you write. One exception to keep straight: on a Florida commercial job the combined 5 percent is enforceable through the energy code (see the Florida note) — there the number is a requirement, just not an NEC one.",
+      "plain_explanation": "The familiar figures — size a branch circuit so its voltage drop stays near 3 percent, and a feeder plus the branch circuit it supplies near 5 percent total — come from Informational Notes to 210.19(A) and 215.2(A). Informational Notes are guidance, not enforceable requirements, and v1 labels these figures exactly that way.\n• Branch circuit: about 3 percent.\n• Feeder plus the branch circuit it supplies: about 5 percent total.\n• Both figures are recommendations where the NEC states them. Florida commercial work is the exception — see the Florida note.\nA circuit over 3 percent is not automatically a code violation; it is a circuit that may run its load poorly — dim lights, a motor that starts hard, equipment that complains — and that a good installer fixes by upsizing, shortening the run, or moving the load.",
       "prev_id": "C9-VD-3PH",
       "related_ids": [
         "C9-L-040",
@@ -639,7 +1559,98 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "3 percent and 5 percent — recommendations, not requirements",
-      "verified": true
+      "verified": true,
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "why_it_exists": "Voltage drop is energy burned as heat in the wire instead of delivered to the load, and the load at the far end lives with what is left: lights dim, motors start hard and run hot, electronics reset. The notes exist to give designers a target that keeps equipment working the way its nameplate expects — reasonable operating efficiency and performance — without turning a design judgment into a citation. Sharma designs to the figures because they work, not because an inspector can write them up.",
+      "inspection_fails": [
+        "Florida commercial job: feeder and branch conductors sized so the combined drop exceeds 5 percent — written up under FBC Energy Conservation §C405.5.3, not the NEC.",
+        "Submittal or estimate states '3% max per NEC' and the installed run does not meet it — the standard the shop wrote becomes the standard it is held to.",
+        "Drop so large the equipment cannot reach its nameplate minimum voltage — a 110.3(B) listing-and-instructions problem, not a percentage problem."
+      ],
+      "exam_trap": "The trap is the sentence 'the Code requires voltage drop not to exceed 3 percent on a branch circuit.' It sounds like a rule, and it is the wrong answer: in the NEC those figures live in Informational Notes, which are explanatory material, not requirements (90.5(C)). Choose the answer that calls 3 percent and 5 percent recommendations — and save the word 'requirement' for Florida's energy-code 5 percent on commercial work.",
+      "tables": [
+        {
+          "caption": "The 3% and 5% figures — and the one Florida mandate",
+          "headers": [
+            "Figure",
+            "Where it lives",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Branch circuit ≈ 3%",
+              "Informational Note to 210.19(A)",
+              "Recommendation"
+            ],
+            [
+              "Feeder + branch ≈ 5% total",
+              "Informational Note to 215.2(A)",
+              "Recommendation"
+            ],
+            [
+              "Commercial feeder + branch ≤ 5% combined",
+              "FBC Energy Conservation §C405.5.3",
+              "Enforceable — FL commercial"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-VD-LIMITS-stacked-5.svg",
+          "alt": "Stacked bar showing a 2 percent feeder segment and a 3 percent branch segment adding to 5 percent total, tagged as recommended by Informational Note, with a Florida commercial strip noting the 5 percent combined limit is enforceable under the energy code.",
+          "caption": "Feeder plus branch stacks to 5% — recommended in the NEC, enforceable on Florida commercial work.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "In the NEC, the 3% branch-circuit voltage-drop figure is:",
+          "choices": [
+            "A mandatory requirement",
+            "An Informational Note recommendation",
+            "A Florida amendment",
+            "A footnote to Table 8"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The 3% figure comes from an Informational Note to 210.19(A). Informational Notes are guidance, not enforceable requirements.",
+          "nec_ref": "210.19(A), Informational Note"
+        },
+        {
+          "question": "On a Florida commercial job, the combined feeder-plus-branch drop is enforceable at:",
+          "choices": [
+            "3%, through NEC 210.19",
+            "5%, through NEC 215.2",
+            "5%, through FBC Energy Conservation §C405.5.3",
+            "It is never enforceable anywhere"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The NEC figures stay recommendations; Florida's energy code makes the 5% combined limit a mandate for commercial buildings.",
+          "nec_ref": "FBC Energy Conservation §C405.5.3"
+        },
+        {
+          "question": "A house branch circuit calculates at 4% voltage drop. Under the NEC that is:",
+          "choices": [
+            "An automatic violation",
+            "Over the recommendation — fix it by upsizing, shortening the run, or moving the load",
+            "Impossible, because houses are exempt from voltage drop",
+            "A Table 9 failure"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Over 3% is over a recommendation, not a violation — but the load will feel it, and a good installer fixes it.",
+          "nec_ref": "210.19(A), Informational Note"
+        }
+      ],
+      "code_refs": [
+        "210.19(A) Informational Note",
+        "215.2(A) Informational Note",
+        "90.5(C)",
+        "FBC Energy Conservation §C405.5.3"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "article": "9",

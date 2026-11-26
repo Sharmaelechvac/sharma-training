@@ -181,8 +181,8 @@
       "florida_note": "Solo una ayuda de referencia; lo que gobierna es la AHJ y el NEC impreso. El trabajo de Florida en este libro es el NEC 2020, tal como lo adoptó el FBC 8th Edition (2023), para los permisos solicitados hasta el 30 de diciembre de 2026; el NEC 2023 aplica bajo el FBC 9th Edition a partir del 31 de diciembre de 2026.",
       "id": "C9-ART-9",
       "next_id": "C9-Table1",
-      "on_the_job": "Ven aquí en este orden: la Tabla 1 para el porcentaje permitido, la Tabla 4 para la canalización, la Tabla 5 para los conductores aislados, y la Tabla 8 cuando una revisión de caída de voltaje necesita la resistencia. No dimensiones la tubería con un conteo memorizado que escuchaste en otro trabajo — el tipo de canalización, el tipo de aislamiento y la cantidad de conductores cambian la respuesta.",
-      "plain_explanation": "El Capítulo 9 no es un conjunto de reglas de cableado para un tipo de trabajo. Es la información a la que el resto del libro hace referencia: cuánto de una canalización pueden ocupar los conductores, qué tan grande es en realidad cada canalización y cada conductor aislado, y cuál es la resistencia de un conductor. Detrás de las tablas están los anexos informativos, que muestran formas trabajadas de aplicar las reglas. El material de los anexos explica e ilustra; por sí solo no añade requisitos obligatorios.",
+      "on_the_job": "Venga aquí en este orden: la Tabla 1 para el porcentaje permitido, la Tabla 4 para la canalización, la Tabla 5 para los conductores aislados, y la Tabla 8 cuando una revisión de caída de voltaje necesita la resistencia. Un paso por una revisión real: tres o más conductores significa 40 por ciento de la Tabla 1; el EMT de 1/2 in permite 0.122 sq in a ese porcentaje según la Tabla 4; los conductores de la lista — dos THHN de 6 AWG y un THHN de 10 AWG — suman 0.1225 sq in según la Tabla 5, así que el tramo sube a EMT de 3/4 in. No dimensione la tubería con un conteo memorizado que escuchó en otro trabajo — el tipo de canalización, el tipo de aislamiento y la cantidad de conductores cambian la respuesta.",
+      "plain_explanation": "El Capítulo 9 no es un conjunto de reglas de cableado para un tipo de trabajo. Es la información a la que el resto del libro hace referencia:\n• Tabla 1 — el porcentaje de una canalización que los conductores pueden ocupar\n• Tabla 2 — el radio mínimo de las curvas de conduit\n• Tabla 4 — diámetros interiores y áreas útiles de las canalizaciones\n• Tabla 5 y Tabla 5A — dimensiones y áreas de conductores aislados y compactos\n• Tabla 8 — propiedades del conductor y resistencia en DC, el dato de entrada de la caída de voltaje\n• Tabla 9 — resistencia y reactancia en AC, para trabajos de caída de voltaje más finos\n• Tablas 11(A) y 11(B) — cuánta potencia puede entregar una fuente Clase 2 o Clase 3\nDetrás de las tablas están los anexos informativos — el Anexo B sobre cálculo de ampacidad bajo supervisión de ingeniería, las tablas de llenado de un mismo calibre del Anexo C, los ejemplos trabajados de cálculo de carga del Anexo D, los valores de torque recomendados del Anexo I. El material de los anexos explica e ilustra; por sí solo no añade requisitos obligatorios.",
       "prev_id": null,
       "related_ids": [
         "Ch9-T4",
@@ -195,7 +195,106 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Capítulo 9 — el cuarto de las tablas",
-      "verified": true
+      "verified": true,
+      "why_it_exists": "Cada respuesta de dimensionamiento en el oficio vale solo lo que vale la tabla de donde salió. El Capítulo 9 guarda los números en un solo lugar impreso, para que un porcentaje de llenado, un área de canalización y una resistencia salgan de la misma fuente en vez de la memoria y la costumbre. Los anexos están detrás de una cerca por una razón: un ejemplo trabajado muestra un camino por un cálculo, y tratar un ejemplo como regla es como se reprueba una instalación legal — o se construye una ilegal.",
+      "inspection_fails": [
+        "Tramo de calibres mixtos dimensionado con una tabla de conteo del Anexo C, que solo funciona cuando cada conductor es del mismo calibre y tipo.",
+        "Llenado calculado con la fila de EMT de la Tabla 4 para un tramo de PVC Schedule 40 — la canalización instalada es más chica por dentro que la calculada.",
+        "Revisión de caída de voltaje hecha con una resistencia recordada de otro calibre en vez de la fila de la Tabla 8 del conductor en mano.",
+        "Un ejemplo de anexo citado al inspector como si fuera un requisito del Código."
+      ],
+      "exam_trap": "La respuesta trampa trata el Anexo C como una tabla de requisitos: «El Anexo C dice que caben nueve, así que nueve son legales». El Anexo C es un atajo informativo construido desde las Tablas 1, 4 y 5 solo para conductores de un mismo calibre. No puede bendecir un jalado de calibres mixtos, y ningún anexo está por encima de las tablas de las que fue construido.",
+      "tables": [
+        {
+          "caption": "Las tablas de trabajo, en el orden en que las usa una revisión de llenado",
+          "headers": [
+            "Tabla",
+            "Le da",
+            "Sirve para"
+          ],
+          "rows": [
+            [
+              "Tabla 1",
+              "Porcentaje de llenado",
+              "Cuánto se puede llenar"
+            ],
+            [
+              "Tabla 4",
+              "Áreas de canalización",
+              "Lo que la tubería permite"
+            ],
+            [
+              "Tabla 5",
+              "Áreas de conductores",
+              "Lo que cada cable ocupa"
+            ],
+            [
+              "Tabla 8",
+              "Resistencia",
+              "Revisiones de caída de voltaje"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-ART-9-table-room.svg",
+          "alt": "Cuatro tarjetas de tablas apiladas en orden de cálculo — Tabla 1 porcentaje de llenado, Tabla 4 área de canalización, Tabla 5 área de conductores, Tabla 8 resistencia — con las demás tablas del capítulo listadas abajo y los anexos informativos en una franja dorada.",
+          "caption": "Empiece en la Tabla 1 y termine en la Tabla 8. Los anexos explican; no exigen.",
+          "w": 900,
+          "h": 1600
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Primera parada en un cálculo de llenado — ¿qué tabla da el porcentaje permitido?",
+          "choices": [
+            "Tabla 4",
+            "Tabla 1",
+            "Tabla 8",
+            "Anexo C"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La Tabla 1 fija el porcentaje según la cantidad de conductores: 53, 31 o 40 por ciento. Después la Tabla 4 da el área de la canalización y la Tabla 5 las áreas de los conductores.",
+          "nec_ref": "Table 1"
+        },
+        {
+          "question": "Un anexo informativo del Capítulo 9 es:",
+          "choices": [
+            "Un requisito obligatorio",
+            "Material explicativo — ilustra, no exige",
+            "Una regla solo de Florida",
+            "Un estándar de Sharma"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Los anexos informativos son material explicativo. Muestran maneras trabajadas de aplicar las reglas; no son exigibles como requisitos.",
+          "nec_ref": "90.5(C)"
+        },
+        {
+          "question": "La resistencia para una revisión de caída de voltaje viene de:",
+          "choices": [
+            "Tabla 5",
+            "Tabla 1",
+            "Tabla 8",
+            "Tabla 11(A)"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La Tabla 8 lista las propiedades del conductor, incluida la resistencia en DC en ohms por mil pies — la R de la fórmula de caída de voltaje.",
+          "nec_ref": "Table 8"
+        }
+      ],
+      "code_refs": [
+        "Chapter 9",
+        "Table 1",
+        "Table 4",
+        "Table 5",
+        "Table 8",
+        "90.5(C)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich": 1
     },
     {
       "article": "9",
@@ -204,8 +303,8 @@
       "florida_note": "",
       "id": "C9-Table1",
       "next_id": "C9-Table1-Nipples",
-      "on_the_job": "Cuenta cada conductor del tramo, incluido el conductor de puesta a tierra del equipo, y luego escoge el porcentaje para esa cantidad antes de abrir las Tablas 4 y 5. El caso más común en casas y comercio ligero es tres o más conductores, así que el 40 por ciento es la columna que más usarás — pero nunca la uses para un tendido de uno o dos conductores.",
-      "plain_explanation": "La Tabla 1 fija la parte de la sección transversal interior de una canalización que los conductores pueden ocupar. Un conductor puede ocupar el 53 por ciento. Dos conductores pueden ocupar el 31 por ciento. Tres o más conductores juntos pueden ocupar el 40 por ciento. Esos porcentajes ya toman en cuenta que los conductores no se acomodan como el agua — dos conductores redondos uno al lado del otro desperdician más del círculo, y por eso el número para dos conductores es el más bajo de los tres.",
+      "on_the_job": "Cuente cada conductor del tramo, incluido el conductor de puesta a tierra del equipo, y luego escoja el porcentaje para esa cantidad antes de abrir las Tablas 4 y 5. El caso más común en casas y comercio ligero es tres o más conductores, así que el 40 por ciento es la columna que más usará — pero nunca la use para un tendido de uno o dos conductores. Los tramos cortos ganan su propio número: un niple de EMT de 1/2 in tiene un área al 60 por ciento de 0.182 sq in en la Tabla 4, lo que a 0.0133 sq in por un THHN de 12 AWG da 13 conductores solo por llenado.",
+      "plain_explanation": "La Tabla 1 fija la parte de la sección transversal interior de una canalización que los conductores pueden ocupar:\n• 1 conductor — 53 por ciento\n• 2 conductores — 31 por ciento\n• 3 o más conductores — 40 por ciento\n• Un niple de 24 in o menos entre gabinetes — 60 por ciento, tratado en la página del niple\nEl porcentaje se toma contra el área interior total de la canalización de la Tabla 4, y las áreas de los conductores vienen de la Tabla 5. Esos porcentajes ya toman en cuenta que los conductores no se acomodan como el agua — dos conductores redondos uno al lado del otro desperdician más del círculo, y por eso el número para dos conductores es el más bajo de los tres.",
       "prev_id": "C9-ART-9",
       "related_ids": [
         "Q-067",
@@ -219,7 +318,105 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Tabla 1 — cuánto de una canalización puedes llenar",
-      "verified": true
+      "verified": true,
+      "why_it_exists": "Una canalización llenada más allá de su porcentaje no se puede jalar sin pelear: los conductores se atascan en las curvas, el aislamiento se pela contra la pared de la tubería, y una cubierta dañada es una falla esperando un día húmedo. Los límites también dejan el espacio de respiro que un tramo agrupado necesita. La caída rara en dos conductores es geometría, no un error de imprenta — dos círculos lado a lado desperdician más de la tubería que un conductor grande o un grupo de tres o más.",
+      "inspection_fails": [
+        "Tendido de dos conductores calculado al 40 por ciento en vez del 31 — la canalización queda sobrellenada en el propio cálculo aprobado.",
+        "La tierra del equipo quedó fuera del conteo de conductores, así que un tramo de tres conductores se calculó como de dos — porcentaje equivocado y el área de la tierra ausente.",
+        "El permiso del 60 por ciento para niples aplicado a un tramo completo entre paneles.",
+        "Porcentaje leído de la fila de una canalización en la Tabla 4 y aplicado a otra — una respuesta de EMT usada para un tramo de PVC."
+      ],
+      "exam_trap": "La trampa es agarrar el 40 por ciento siempre porque es el número familiar. Dos conductores solo reciben el 31 por ciento — un tendido de dos cables calculado al 40 ya nace sobrellenado. La trampa al revés: el 53 por ciento no es una tarifa extra para tres conductores. Pertenece a un solo conductor.",
+      "tables": [
+        {
+          "caption": "Porcentajes de la Tabla 1, y lo que permiten en EMT de 1/2 in (Tabla 4)",
+          "headers": [
+            "Conductores",
+            "Llenado máx",
+            "Área útil"
+          ],
+          "rows": [
+            [
+              "1",
+              "53%",
+              "0.161 sq in"
+            ],
+            [
+              "2",
+              "31%",
+              "0.094 sq in"
+            ],
+            [
+              "3 o más",
+              "40%",
+              "0.122 sq in"
+            ],
+            [
+              "Niple ≤ 24 in",
+              "60%",
+              "0.182 sq in"
+            ]
+          ],
+          "note": "El área interior total del EMT de 1/2 in es 0.304 sq in; la Tabla 4 imprime el área útil a cada porcentaje."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-Table1-fill-pcts.svg",
+          "alt": "Tres círculos de canalización del mismo tamaño que muestran un conductor llenando el 53 por ciento del área, dos conductores el 31 por ciento y tres conductores el 40 por ciento, con los círculos de los conductores dibujados a escala por área.",
+          "caption": "La misma canalización, tres conteos: 53, 31 y 40 por ciento.",
+          "w": 900,
+          "h": 1000
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Dos conductores en una canalización. ¿Llenado máximo según la Tabla 1?",
+          "choices": [
+            "53%",
+            "40%",
+            "31%",
+            "60%"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Dos conductores reciben el 31 por ciento — el más bajo de los tres, porque dos conductores redondos lado a lado desperdician más del círculo.",
+          "nec_ref": "Table 1"
+        },
+        {
+          "question": "Un niple de canalización de 18 in de largo entre dos cajas puede llenarse hasta:",
+          "choices": [
+            "40%",
+            "53%",
+            "31%",
+            "60%"
+          ],
+          "answer_index": 3,
+          "explain_plain": "Un niple de 24 in o menos puede llenarse al 60 por ciento. El permiso es solo del niple, no de los tramos a cada lado.",
+          "nec_ref": "Table 1, Note 4"
+        },
+        {
+          "question": "La tierra del equipo es el tercer conductor del conteo. ¿Qué porcentaje aplica?",
+          "choices": [
+            "31%, las tierras no cambian el conteo",
+            "53%",
+            "40%",
+            "60%"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Las tierras cuentan en el conteo. Tres conductores ponen el tramo en la fila de 3 o más: 40 por ciento.",
+          "nec_ref": "Table 1; Ch. 9, Notes to Table 1"
+        }
+      ],
+      "code_refs": [
+        "Table 1",
+        "Table 1, Note 4",
+        "Table 4",
+        "Table 5"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich": 1
     },
     {
       "article": "9",
@@ -344,8 +541,8 @@
       "florida_note": "",
       "id": "C9-FILL-METHOD",
       "next_id": "C9-FILL-SAME",
-      "on_the_job": "Di los pasos en voz alta en un tendido mixto antes de pedir el material. La mayoría de los llenados fallidos vienen de un paso saltado — una tierra que quedó fuera de la lista, una fila de EMT usada para un tramo de PVC, o la columna del 40 por ciento usada para un tendido de dos conductores que solo recibe el 31 por ciento.",
-      "plain_explanation": "Todo problema de llenado sigue los mismos cuatro pasos. Primero, enumera cada conductor de la canalización, incluidos los de puesta a tierra del equipo, con su calibre y tipo de aislamiento. Segundo, toma el área de cada conductor de la Tabla 5 (el área de la Tabla 8 para un conductor desnudo) y súmalas. Tercero, escoge el porcentaje de la Tabla 1 según la cantidad de conductores — 53, 31, 40, o 60 para un niple corto. Cuarto, abre la Tabla 4 para tu tipo de canalización y toma el primer tamaño comercial cuya área utilizable a ese porcentaje sea igual o mayor que tu total de conductores. Si el total se pasa aunque sea por poco, sube un tamaño comercial; casi no cuenta.",
+      "on_the_job": "Ejemplo trabajado, comercial Sharma: tres circuitos ramales de 20 A comparten un EMT — seis THHN de 12 AWG más una tierra de equipo THHN de 12 AWG. Siete conductores a 0.0133 sq in cada uno totalizan 0.0931 sq in. Siete conductores toman la columna del 40 por ciento, y el EMT de 1/2 in permite 0.122 sq in al 40 por ciento, así que cabe. Si el líder escoge CCA, un calibre AWG más grande bajo S-10, el mismo tramo es siete de 10 AWG a 0.0211 — 0.1477 sq in, por encima de 0.122 — y la canalización pasa a EMT de 3/4 in a 0.213. Di los pasos en voz alta en un tendido mixto antes de pedir el material. La mayoría de los llenados fallidos vienen de un paso saltado — una tierra que quedó fuera de la lista, una fila de EMT usada para un tramo de PVC, o la columna del 40 por ciento usada para un tendido de dos conductores que solo recibe el 31 por ciento.",
+      "plain_explanation": "Todo problema de llenado sigue los mismos cuatro pasos:\n• Paso 1 — Enumere cada conductor de la canalización, incluidos los de puesta a tierra del equipo, con su calibre y tipo de aislamiento.\n• Paso 2 — Tome el área de cada conductor de la Tabla 5 (el área de la Tabla 8 para un conductor desnudo) y súmelas.\n• Paso 3 — Escoja el porcentaje de la Tabla 1 según la cantidad de conductores: 53 para un conductor, 31 para dos, 40 para tres o más, y 60 para un niple de 24 in o menos.\n• Paso 4 — Abra la Tabla 4 para su tipo de canalización y tome el primer tamaño comercial cuya área utilizable a ese porcentaje sea igual o mayor que su total de conductores. Si el total se pasa aunque sea por poco, suba un tamaño comercial; casi no cuenta.",
       "prev_id": "C9-Table5A",
       "related_ids": [
         "Ch9-T4",
@@ -363,7 +560,110 @@
         "S-10"
       ],
       "title": "El método de llenado de tubería, paso a paso",
-      "verified": true
+      "verified": true,
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Los conductores necesitan espacio. En una canalización sobrellenada el tendido se atasca, el aislamiento se raspa y se estira, y un conductor puede dañarse antes de cargar corriente por primera vez. Los porcentajes quedan muy por debajo del área completa de la canalización porque los conductores redondos no se empacan como el agua — el aire entre ellos es parte del cálculo, y dos conductores lado a lado desperdician más espacio, por eso dos reciben la parte menor, el 31 por ciento. Cuatro pasos, en orden, hacen que la respuesta venga de las tablas y no de cómo se siente el tendido.",
+      "inspection_fails": [
+        "Tierra de equipo fuera de la lista de llenado; el tendido se atasca a mitad de camino y el aislamiento vuelve raspado.",
+        "Fila de EMT de la Tabla 4 usada para un tramo de PVC — mismo nombre de tamaño comercial, área interior menor.",
+        "Columna del 40 por ciento usada para un tendido de dos conductores que la Tabla 1 limita al 31 por ciento.",
+        "Total de conductores un pelo por encima del permiso de la Tabla 4 y la cuadrilla lo tendió de todos modos — casi no cuenta."
+      ],
+      "exam_trap": "La trampa es el porcentaje de dos conductores. Tres o más conductores reciben el 40 por ciento, así que el 40 se siente como el valor por defecto — pero dos conductores reciben solo el 31 por ciento, el número más bajo de la Tabla 1. La segunda trampa de esta página: dejar la tierra de equipo fuera de la lista porque 'no lleva corriente'. Al llenado no le importa lo que un conductor lleva. Si está en la canalización, su área está en el total.",
+      "tables": [
+        {
+          "caption": "Ejemplo trabajado — tres circuitos de 20 A en un EMT",
+          "headers": [
+            "Paso",
+            "Cobre, 12 AWG",
+            "CCA escogido, 10 AWG"
+          ],
+          "rows": [
+            [
+              "Conductores en la lista",
+              "6 de circuito + 1 tierra = 7",
+              "La misma cantidad, un AWG más grande (S-10)"
+            ],
+            [
+              "Área Tabla 5, cada uno",
+              "0.0133 sq in",
+              "0.0211 sq in"
+            ],
+            [
+              "Área total de conductores",
+              "0.0931 sq in",
+              "0.1477 sq in"
+            ],
+            [
+              "Porcentaje Tabla 1 (7 conductores)",
+              "40%",
+              "40%"
+            ],
+            [
+              "Respuesta Tabla 4, EMT",
+              "1/2 in (0.122 sq in) — cabe",
+              "3/4 in (0.213 sq in)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-FILL-METHOD-four-steps.svg",
+          "alt": "Tira de flujo de cuatro pasos para el llenado de tubería — enumerar los conductores incluida la tierra, sumar las áreas de la Tabla 5, escoger el porcentaje de la Tabla 1, comparar contra la Tabla 4 — trabajada con siete conductores THHN de 12 AWG que totalizan 0.0931 pulgadas cuadradas en EMT de 1/2 pulgada.",
+          "caption": "Los cuatro pasos, trabajados: siete THHN de 12 AWG en EMT de 1/2 in.",
+          "w": 900,
+          "h": 1700
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Qué porcentaje del área interior de una canalización pueden llenar dos conductores?",
+          "choices": [
+            "53%",
+            "40%",
+            "31%",
+            "60%"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Tabla 1: un conductor 53%, dos conductores 31%, tres o más 40%. Dos es el más bajo — dos conductores redondos desperdician más del círculo.",
+          "nec_ref": "Ch. 9, Table 1"
+        },
+        {
+          "question": "El área de un conductor desnudo de puesta a tierra del equipo, para llenado, viene de:",
+          "choices": [
+            "La Tabla 5",
+            "La Tabla 8",
+            "No se cuenta en el llenado",
+            "El Anexo C"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Un conductor desnudo no tiene aislamiento que medir, así que su área viene de los datos de propiedades del conductor en la Tabla 8. Y sí cuenta.",
+          "nec_ref": "Ch. 9, Tables 5 and 8"
+        },
+        {
+          "question": "Un niple de 24 in o menos entre dos cajas puede llenarse hasta:",
+          "choices": [
+            "40%",
+            "53%",
+            "31%",
+            "60%"
+          ],
+          "answer_index": 3,
+          "explain_plain": "Los niples cortos reciben el 60% — un tramo corto y recto se tiende mucho más fácil que un tramo largo. Los tramos a cada lado siguen usando la Tabla 1.",
+          "nec_ref": "Ch. 9, Table 1"
+        }
+      ],
+      "code_refs": [
+        "Ch. 9 Table 1",
+        "Ch. 9 Table 4",
+        "Ch. 9 Table 5",
+        "Ch. 9 Table 5A",
+        "Ch. 9 Table 8"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "article": "9",
@@ -397,8 +697,8 @@
       "florida_note": "",
       "id": "C9-FILL-MIXED",
       "next_id": "C9-FILL-EGC-AND-BARE",
-      "on_the_job": "Escribe el área de cada conductor en el takeoff, no solo la suma. Cuando un tramo falla por un pelo — como el ejemplo del 0.1225, pasado por cinco diezmilésimas — la lista escrita es como pruebas que el siguiente tamaño comercial era necesario y no una adivinanza.",
-      "plain_explanation": "Los calibres mixtos no se pueden dividir; cada conductor aporta su propia área de la Tabla 5 y el total se compara con la Tabla 4. Ejemplo trabajado uno: dos THHN de 6 AWG más un THHN de 10 AWG suman 2 x 0.0507 + 0.0211 = 0.1225 sq in — apenas por encima de los 0.122 sq in que el EMT de 1/2 in permite al 40 por ciento, así que el tramo va a EMT de 3/4 in con 0.213. Ejemplo trabajado dos: tres THHN de 1/0 más una tierra THHN de 6 AWG suman 3 x 0.1855 + 0.0507 = 0.6072 sq in; el EMT de 1-1/4 in permite 0.598 y es muy chico, así que la respuesta es EMT de 1-1/2 in con 0.814.",
+      "on_the_job": "Escriba el área de cada conductor en el takeoff, no solo la suma. Cuando un tramo falla por un pelo — como el ejemplo del 0.1225, pasado por cinco diezmilésimas — la lista escrita es como prueba que el siguiente tamaño comercial era necesario y no una adivinanza. También es como el próximo electricista, que añada un circuito a esa canalización el año que viene, sabe exactamente cuánto espacio queda: en el EMT de 3/4 in del ejemplo uno, 0.213 - 0.1225 = 0.0905 sq in del permiso del 40 por ciento sigue abierto.",
+      "plain_explanation": "Los calibres mixtos no se pueden dividir; cada conductor aporta su propia área de la Tabla 5 y el total se compara con el área de la Tabla 4 para la canalización, al porcentaje de la Tabla 1 según la cantidad.\n• Ejemplo trabajado uno: dos THHN de 6 AWG más un THHN de 10 AWG suman 2 x 0.0507 + 0.0211 = 0.1225 sq in — apenas por encima de los 0.122 sq in que el EMT de 1/2 in permite al 40 por ciento, así que el tramo va a EMT de 3/4 in con 0.213.\n• Ejemplo trabajado dos: tres THHN de 1/0 más una tierra THHN de 6 AWG suman 3 x 0.1855 + 0.0507 = 0.6072 sq in; el EMT de 1-1/4 in permite 0.598 y es muy chico, así que la respuesta es EMT de 1-1/2 in con 0.814.\nNo hay redondeo que baje un total mixto hasta que quepa. Pasado es pasado, aunque sea por 0.0005 sq in.",
       "prev_id": "C9-FILL-SAME",
       "related_ids": [
         "C9-L-019",
@@ -412,7 +712,121 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Llenado con calibres mixtos — suma las áreas",
-      "verified": true
+      "verified": true,
+      "why_it_exists": "Un jalado mixto es donde se rompen los atajos de un mismo calibre. Un conductor grande se come un área que un método de división supone repartida por igual, y un total que cae un pelo sobre el límite no se jala como uno que cae un pelo debajo — se atasca en la curva y pela el aislamiento. Sumar las áreas conductor por conductor es más lento, y es la única aritmética que coincide con lo que físicamente va en la tubería.",
+      "inspection_fails": [
+        "Jalado de calibres mixtos calculado dividiendo el área de la canalización entre el área del conductor más grande — las áreas reales de los conductores menores nunca entraron en el cálculo.",
+        "Total de conductores redondeado hacia abajo hasta el permiso de la canalización en la tabla de llenado — 0.1225 mostrado como 0.122.",
+        "La tierra quedó fuera de la lista mixta; el total pasa sin ella y falla con ella.",
+        "Conteo del Anexo C usado para un jalado de calibres mixtos."
+      ],
+      "exam_trap": "La respuesta trampa redondea: «0.1225 es básicamente 0.122 — cabe». El llenado no tiene «básicamente». El único redondeo hacia arriba del Capítulo 9 pertenece a la división de un mismo calibre que deja un residuo de 0.8 o más, y nunca aplica a un total de calibres mixtos. 0.1225 sq in de conductor en un permiso de 0.122 sq in es una canalización sobrellenada.",
+      "tables": [
+        {
+          "caption": "Ejemplo uno — sume cada conductor (áreas de la Tabla 5)",
+          "headers": [
+            "Conductor",
+            "Área c/u",
+            "Total parcial"
+          ],
+          "rows": [
+            [
+              "THHN 6 AWG",
+              "0.0507",
+              "0.0507"
+            ],
+            [
+              "THHN 6 AWG",
+              "0.0507",
+              "0.1014"
+            ],
+            [
+              "THHN 10 AWG",
+              "0.0211",
+              "0.1225"
+            ]
+          ],
+          "note": "El EMT de 1/2 in permite 0.122 al 40 por ciento — pasado. El EMT de 3/4 in permite 0.213 — la respuesta."
+        },
+        {
+          "caption": "Ejemplo dos — con la tierra en la lista",
+          "headers": [
+            "Conductor",
+            "Área c/u",
+            "Total parcial"
+          ],
+          "rows": [
+            [
+              "THHN 1/0 x 3",
+              "0.1855",
+              "0.5565"
+            ],
+            [
+              "Tierra THHN 6 AWG",
+              "0.0507",
+              "0.6072"
+            ]
+          ],
+          "note": "El EMT de 1-1/4 in permite 0.598 — muy chico. El EMT de 1-1/2 in permite 0.814 — la respuesta."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-FILL-MIXED-bars.svg",
+          "alt": "Gráficas de barras apiladas para dos jalados de calibres mixtos: el ejemplo uno suma 0.1225 pulgadas cuadradas contra las 0.122 permitidas en EMT de 1/2 in y las 0.213 en 3/4 in; el ejemplo dos suma 0.6072 contra 0.598 en EMT de 1-1/4 in y 0.814 en 1-1/2 in.",
+          "caption": "Sume las áreas y luego compare — pasado por un pelo sigue siendo pasado.",
+          "w": 900,
+          "h": 1340
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Dos THHN de 6 AWG (0.0507 sq in cada uno) y un THHN de 10 AWG (0.0211). ¿Área total de conductores?",
+          "choices": [
+            "0.0718 sq in",
+            "0.1014 sq in",
+            "0.1225 sq in",
+            "0.1521 sq in"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Los calibres mixtos se suman, no se dividen: 0.0507 + 0.0507 + 0.0211 = 0.1225 sq in.",
+          "nec_ref": "Tables 4 and 5"
+        },
+        {
+          "question": "Ese total de 0.1225 sq in va en EMT al 40 por ciento. ¿El tamaño comercial más chico?",
+          "choices": [
+            "1/2 in (0.122)",
+            "3/4 in (0.213)",
+            "1 in (0.346)",
+            "1-1/4 in (0.598)"
+          ],
+          "answer_index": 1,
+          "explain_plain": "0.1225 está sobre las 0.122 que el EMT de 1/2 in permite — por 0.0005, y pasado es pasado. El EMT de 3/4 in con 0.213 es el primer tamaño que cabe.",
+          "nec_ref": "Table 4"
+        },
+        {
+          "question": "Un total de calibres mixtos cae 0.0005 sq in sobre el permiso de la canalización. La respuesta del Código es:",
+          "choices": [
+            "Redondearlo hacia abajo — es casi igual",
+            "Subir un tamaño comercial",
+            "Quitar la tierra de la lista",
+            "Usar el redondeo de 0.8"
+          ],
+          "answer_index": 1,
+          "explain_plain": "No hay redondeo que baje un total mixto hasta que quepa, y el redondeo de 0.8 pertenece solo a la división de un mismo calibre. Sobre el permiso significa el siguiente tamaño comercial.",
+          "nec_ref": "Tables 1, 4 and 5"
+        }
+      ],
+      "code_refs": [
+        "Table 1",
+        "Table 4",
+        "Table 5",
+        "Annex C"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich": 1
     },
     {
       "article": "9",
@@ -421,8 +835,8 @@
       "florida_note": "",
       "id": "C9-FILL-EGC-AND-BARE",
       "next_id": "C9-ANNEXB",
-      "on_the_job": "En cada lista de llenado, escribe la tierra como su propia línea con su propia área antes de sumar. Si la tierra es desnuda, dilo en la lista y toma el área de la Tabla 8; si es aislada, toma el área de la Tabla 5 para ese aislamiento.",
-      "plain_explanation": "Un conductor de puesta a tierra del equipo ocupa espacio en la canalización como cualquier otro conductor, así que cuenta en el llenado — las notas de la tabla en v1 lo dicen directamente. Una tierra aislada usa su área de la Tabla 5 para su tipo de aislamiento. Un conductor desnudo no tiene aislamiento que medir, así que su área viene de los datos de propiedades del conductor de la Tabla 8. Dejar la tierra fuera es la razón más común por la que un cálculo de llenado pasa en papel y se atasca en el campo.",
+      "on_the_job": "En cada lista de llenado, escriba la tierra como su propia línea con su propia área antes de sumar. Un tramo de casa en Florida en EMT de 1/2 in: tres conductores de circuito THHN de 12 AWG, a 0.0133 sq in cada uno, suman 0.0399 sq in. Con una tierra THHN aislada de 12 AWG la lista suma 0.0532 sq in; con una tierra desnuda de 12 AWG suma 0.0450 sq in. Ambas caben en las 0.122 sq in que el EMT de 1/2 in permite al 40 por ciento — pero en un jalado apretado la línea de la tierra es la diferencia entre pasar y subir un tamaño comercial. Diga en la lista si la tierra es desnuda o aislada, y tome su área de la tabla correcta.",
+      "plain_explanation": "Un conductor de puesta a tierra del equipo ocupa espacio en la canalización como cualquier otro conductor, así que cuenta en el llenado — una nota de la Tabla 1 lo dice directamente, y dice que use las dimensiones reales del conductor.\n• Tierra aislada: tome su área de la Tabla 5, en la columna de su tipo de aislamiento. Una tierra THHN de 12 AWG mide 0.0133 sq in, igual que cualquier 12 AWG THHN.\n• Tierra desnuda: no hay aislamiento que medir, así que la Tabla 5 no tiene fila para ella. Tome su diámetro de la Tabla 8 y use el área de ese círculo — una de 12 AWG desnuda mide 0.081 in de diámetro, unas 0.0051 sq in.\n• Una tierra, contada una vez: una tierra de equipo compartida que sirve a varios circuitos en una misma canalización igual lleva su propia línea en la lista.\nDejar la tierra fuera es la razón más común por la que un cálculo de llenado pasa en papel y se atasca en el campo.",
       "prev_id": "C9-FILL-MIXED",
       "related_ids": [
         "C9-L-021",
@@ -435,7 +849,126 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Las tierras cuentan, y los conductores desnudos usan la Tabla 8",
-      "verified": true
+      "verified": true,
+      "why_it_exists": "El llenado es físico, no eléctrico. La tierra no lleva corriente de carga, pero al jalado eso no le importa — cada conductor en la tubería añade fricción en las curvas y una oportunidad más de pelar el aislamiento. Un cálculo que deja la tierra fuera aprueba una canalización por la que el cable en realidad no puede pasar, y la cuadrilla se entera a mitad del jalado, con el aislamiento pagando el precio.",
+      "inspection_fails": [
+        "El cálculo de llenado del juego de permisos omite el conductor de puesta a tierra del equipo — la canalización queda sobre su porcentaje de la Tabla 1 una vez que se cuenta la tierra.",
+        "Tierra desnuda calculada con el área aislada de la Tabla 5, o una tierra aislada calculada como desnuda — la tabla equivocada para el conductor instalado.",
+        "Jalado atascado a mitad del tramo y aislamiento dañado en una canalización que solo pasaba porque la tierra quedó fuera de la lista.",
+        "La tabla de llenado no muestra ninguna línea de tierra para una canalización que sí contiene una."
+      ],
+      "exam_trap": "La respuesta trampa: «La tierra no cuenta — no lleva corriente». Eso mezcla dos revisiones distintas. Que un conductor lleve corriente importa para el ajuste de ampacidad de 310.15(C)(1); el llenado es cuestión de espacio, y la tierra ocupa espacio. Cuéntela, con su área real: Tabla 5 si es aislada, Tabla 8 si es desnuda.",
+      "tables": [
+        {
+          "caption": "Una tierra de 12 AWG, dos maneras de calcularla",
+          "headers": [
+            "Tierra",
+            "Área de",
+            "Área"
+          ],
+          "rows": [
+            [
+              "Aislada, THHN",
+              "Tabla 5",
+              "0.0133 sq in"
+            ],
+            [
+              "Desnuda",
+              "Tabla 8, diá 0.081 in",
+              "0.0051 sq in"
+            ]
+          ],
+          "note": "El mismo cobre, otra área — el aislamiento es lo que mide la Tabla 5."
+        },
+        {
+          "caption": "Lista trabajada — tres THHN de 12 AWG más la tierra, EMT de 1/2 in",
+          "headers": [
+            "Conductor",
+            "Área c/u",
+            "Total parcial"
+          ],
+          "rows": [
+            [
+              "THHN 12 AWG × 3",
+              "0.0133",
+              "0.0399"
+            ],
+            [
+              "Tierra desnuda 12 AWG",
+              "0.0051",
+              "0.0450"
+            ],
+            [
+              "EMT de 1/2 in al 40%",
+              "—",
+              "0.122 permitido"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-FILL-EGC-AND-BARE-ground-line.svg",
+          "alt": "Una lista de llenado con tres conductores THHN de 12 AWG y la tierra del equipo en su propia línea resaltada, mostrando una tierra aislada con su área de la Tabla 5 y una tierra desnuda con su área por diámetro de la Tabla 8.",
+          "caption": "La tierra lleva su propia línea — Tabla 5 si es aislada, Tabla 8 si es desnuda.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Una tierra de equipo desnuda de 12 AWG va en la canalización. ¿De dónde sale su área de llenado?",
+          "choices": [
+            "De la Tabla 5, columna THHN",
+            "De la Tabla 8, por su diámetro",
+            "No se cuenta",
+            "Del Anexo C"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Un conductor desnudo no tiene aislamiento que la Tabla 5 pueda medir. La Tabla 8 da su diámetro — 0.081 in para 12 AWG — y el área es el círculo que ese diámetro forma, unas 0.0051 sq in.",
+          "nec_ref": "Ch. 9, Notes to Table 1; Table 8"
+        },
+        {
+          "question": "Tres THHN de 12 AWG (0.0133 sq in cada uno) más una tierra desnuda de 12 AWG (0.0051) en EMT de 1/2 in, que permite 0.122 sq in al 40 por ciento. ¿Área total de conductores?",
+          "choices": [
+            "0.0399 sq in",
+            "0.0450 sq in",
+            "0.0532 sq in",
+            "0.1225 sq in"
+          ],
+          "answer_index": 1,
+          "explain_plain": "3 × 0.0133 = 0.0399 por los conductores de circuito, más 0.0051 por la tierra desnuda = 0.0450 sq in. Cabe — con la tierra contada.",
+          "nec_ref": "Tables 4, 5 and 8"
+        },
+        {
+          "question": "¿Por qué la tierra cuenta en el llenado si no lleva corriente de carga?",
+          "choices": [
+            "No cuenta",
+            "El llenado es espacio, no corriente — ocupa lugar en la canalización",
+            "Solo en canalizaciones mayores de 2 in",
+            "Solo cuando es aislada"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El llenado mide el espacio físico. Que un conductor lleve corriente es la pregunta de reducción de ampacidad de 310.15(C)(1), no la del llenado.",
+          "nec_ref": "Ch. 9, Notes to Table 1"
+        }
+      ],
+      "code_refs": [
+        "Ch. 9 Table 1 and its notes",
+        "Table 5",
+        "Table 8",
+        "310.15(C)(1)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "El cobre sólido de 12 AWG mide 0.0808 in de diámetro, así que un conductor desnudo de 12 AWG ocupa unas 0.0051 sq in",
+          "source": "Convertwell, AWG Wire Gauge Chart: Diameter, Area, Resistance",
+          "url": "https://www.rapidtwo.com/reference/awg-wire-gauge-chart/"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich": 1
     },
     {
       "article": "9",
@@ -444,8 +977,8 @@
       "florida_note": "El Anexo B es informativo. Las reglas obligatorias de ampacidad son los artículos del Capítulo 3 tal como fueron adoptados en Florida; un cálculo de anexo respalda un diseño de ingeniería, no reemplaza por sí solo las tablas adoptadas.",
       "id": "C9-ANNEXB",
       "next_id": "C9-ANNEXC",
-      "on_the_job": "Las cuadrillas de Sharma dimensionan los conductores desde la Tabla 310.16 y las páginas del Capítulo 3, punto. Si un plano muestra una ampacidad que solo funciona 'según el Anexo B' o 'según supervisión de ingeniería', eso es un asunto de Mike y el ingeniero: no lo iguales con una suposición de campo, y no bajes el calibre de un conductor con un número de anexo que nadie calculó para este trabajo.",
-      "plain_explanation": "El Anexo Informativo B es la información de aplicación del Código para calcular la ampacidad de conductores bajo supervisión de ingeniería — la ruta de fórmulas que toma en cuenta la diversidad de carga, la disposición de los conductores, los bancos de ductos y las condiciones ambientales en vez de leer una sola celda de una tabla. Sus propias tablas dan ampacidades para disposiciones específicas de ductos eléctricos en aire libre y subterráneos que la Tabla 310.16 no cubre. Dos límites lo definen: es informativo, no obligatorio, y es trabajo de ingeniería — el cálculo tiene que hacerlo y documentarlo una persona calificada para la instalación real, no estimarse en el campo.",
+      "on_the_job": "Los planos de un trabajo comercial pequeño muestran un alimentador dimensionado más pequeño de lo que la Tabla 310.16 da para la carga, con la nota 'ampacidad según el Anexo B — supervisión de ingeniería'. Nadie en la cuadrilla vuelve a correr ese cálculo, y nadie lo discute hasta hacerlo desaparecer tampoco. Las cuadrillas de Sharma dimensionan los conductores desde la Tabla 310.16 y las páginas del Capítulo 3, punto. Si un plano muestra una ampacidad que solo funciona 'según el Anexo B' o 'según supervisión de ingeniería', eso es un asunto de Mike y el ingeniero: no lo iguales con una suposición de campo, y no bajes el calibre de un conductor con un número de anexo que nadie calculó para este trabajo.",
+      "plain_explanation": "El Anexo Informativo B es la información de aplicación del Código para calcular la ampacidad de conductores bajo supervisión de ingeniería — la ruta de fórmulas que toma en cuenta la diversidad de carga, la disposición de los conductores, los bancos de ductos y las condiciones ambientales en vez de leer una sola celda de una tabla. Sus propias tablas dan ampacidades para disposiciones específicas de ductos eléctricos en aire libre y subterráneos que la Tabla 310.16 no cubre. Dos límites lo definen:\n• Es informativo, no obligatorio. Ningún número del anexo es un requisito que un inspector pueda citar como cita una sección del Capítulo 3.\n• Es trabajo de ingeniería. El cálculo tiene que hacerlo y documentarlo una persona calificada para la instalación real — nunca se estima en el campo.\nEl dimensionamiento de campo se queda en las tablas adoptadas: la Tabla 310.16, con los factores de corrección y ajuste de 310.15. Un número del Anexo B pertenece al diseño que lo produjo, con el espaciamiento de ductos, las condiciones del suelo y los supuestos de carga de ese diseño.",
       "prev_id": "C9-FILL-EGC-AND-BARE",
       "related_ids": [
         "C9-ANNEXES-INFORMATIVE",
@@ -455,7 +988,102 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Anexo B — cálculo de ampacidad bajo supervisión de ingeniería",
-      "verified": true
+      "verified": true,
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "La Tabla 310.16 está construida sobre supuestos estándar de cantidad de conductores, ambiente y disposición. Un banco de ductos real o una agrupación inusual no siempre coincide con esos supuestos, y una sola celda de tabla no puede conocer su suelo ni su espaciamiento. La ruta de fórmulas existe para que un ingeniero modele la instalación que realmente se está construyendo. El requisito de supervisión es la baranda: una ampacidad que nadie calculó es solo un conductor más pequeño con una historia encima, y un conductor subdimensionado trabaja caliente durante toda la vida del edificio.",
+      "inspection_fails": [
+        "Alimentador instalado un calibre por debajo de la Tabla 310.16 con 'según el Anexo B' escrito en el takeoff y ningún cálculo de ingeniería en el expediente.",
+        "Banco de ductos construido con un espaciamiento de tuberías distinto del diseño de ingeniería con el que se calculó la ampacidad — el cálculo ya no coincide con la instalación.",
+        "Ampacidad del Anexo B reclamada en la inspección sin documentación de quién la calculó, ni para qué condiciones."
+      ],
+      "exam_trap": "La respuesta trampa: 'El Anexo B permite un conductor más pequeño que la Tabla 310.16 siempre que el cálculo de carga muestre diversidad'. Mal dos veces. El Anexo B es informativo, así que por sí solo no permite nada, y sus números vienen de un cálculo de ingeniería hecho y documentado para la instalación real — no de una nota de diversidad en un cálculo de carga, y nunca de una estimación de campo. Sin el cálculo documentado que lo respalde, el calibre de la tabla es el que manda.",
+      "tables": [
+        {
+          "caption": "Dos rutas hacia una ampacidad",
+          "headers": [
+            "",
+            "Ruta de la Tabla 310.16",
+            "Ruta del Anexo B"
+          ],
+          "rows": [
+            [
+              "Base",
+              "Una celda de tabla, condiciones estándar",
+              "Fórmulas para la instalación real"
+            ],
+            [
+              "Quién la corre",
+              "El instalador, en el campo",
+              "Una persona calificada, documentado"
+            ],
+            [
+              "Estatus",
+              "Obligatoria (Cap. 3, según adoptado)",
+              "Informativa — no es un requisito"
+            ],
+            [
+              "Cubre",
+              "Los tendidos que lista la tabla",
+              "Disposiciones en aire libre y de ductos que la tabla no cubre"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-ANNEXB-two-routes.svg",
+          "alt": "Dos paneles lado a lado: a la izquierda una celda de la Tabla 310.16 rotulada dimensionamiento de campo; a la derecha una sección transversal de un banco de ductos con una hoja de cálculo rotulada supervisión de ingeniería.",
+          "caption": "Dos rutas hacia una ampacidad: la celda de la tabla, o el cálculo documentado.",
+          "w": 900,
+          "h": 1240
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Qué hace utilizable una ampacidad del Anexo B en un trabajo real?",
+          "choices": [
+            "Aparece en el NEC, así que es obligatoria",
+            "Una persona calificada la calculó y la documentó para esa instalación",
+            "El líder verificó la diversidad de carga",
+            "El Anexo B prevalece sobre la Tabla 310.16"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El Anexo B es la ruta de supervisión de ingeniería: el número solo vale lo que vale el cálculo documentado que lo respalda.",
+          "nec_ref": "Anexo Informativo B"
+        },
+        {
+          "question": "El Anexo B se describe mejor como:",
+          "choices": [
+            "Un reemplazo obligatorio de la Tabla 310.16",
+            "Información informativa de aplicación para ampacidad bajo supervisión de ingeniería",
+            "Una enmienda de Florida al Capítulo 3",
+            "Un atajo de campo para bancos de ductos"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Es material informativo de anexo — información de aplicación, no un requisito.",
+          "nec_ref": "Anexo Informativo B"
+        },
+        {
+          "question": "Un plano muestra un calibre de alimentador que solo funciona 'según supervisión de ingeniería'. La cuadrilla debe:",
+          "choices": [
+            "Bajar el resto del tendido para igualarlo",
+            "Tratar el cálculo como asunto del ingeniero — marcarlo, no volver a calcularlo en el campo",
+            "Ignorar la nota e instalar el calibre de tabla sin decirle a nadie",
+            "Estimar la diversidad e igualar el calibre del plano"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Los números de supervisión de ingeniería los hace y los documenta una persona calificada; el campo no los adivina.",
+          "nec_ref": "Anexo Informativo B"
+        }
+      ],
+      "code_refs": [
+        "Informative Annex B",
+        "Table 310.16",
+        "310.15"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "article": "9",
@@ -548,8 +1176,8 @@
       "florida_note": "",
       "id": "C9-VD-METHOD",
       "next_id": "C9-VD-WORKED",
-      "on_the_job": "Usa la corriente real de la carga, no el tamaño del interruptor, a menos que la carga de verdad sea el tamaño del interruptor. Un circuito de 20A que lleva una carga de 12A cae voltaje como un circuito de 12A, y usar 20A te mandará a subir un calibre de cable que el trabajo no necesita.",
-      "plain_explanation": "La caída de voltaje es el voltaje que se consume empujando la corriente a través de la resistencia del conductor, ida y vuelta. Para un circuito monofásico, la aproximación usada en v1 es VD = 2 x L x R x I / 1000, donde L es la longitud de ida en pies, R es la resistencia de la Tabla 8 en ohms por mil pies, e I es la corriente real de la carga en amperes. El 2 es el viaje redondo — la corriente recorre la longitud dos veces — y es el factor más olvidado de todo el cálculo. Termina convirtiendo los voltios en porcentaje: VD dividido entre el voltaje del sistema, por 100.",
+      "on_the_job": "Use la corriente real de la carga, no el tamaño del interruptor, a menos que la carga de verdad sea el tamaño del interruptor. Un circuito de 20A que lleva una carga de 12A cae voltaje como un circuito de 12A, y usar 20A le mandará a subir un calibre de cable que el trabajo no necesita. Revisión trabajada en una casa de Florida: un tramo de receptáculos de taller a 120V, 100 ft de ida, cargado en realidad a 12A, con cobre de 12 AWG (R = 1.98). VD = 2 x 100 x 1.98 x 12 / 1000 = 4.75V, que es el 3.96 por ciento de 120V — sobre la recomendación del 3 por ciento para circuitos ramales. Con 10 AWG (R = 1.24) el mismo tramo cae 2.98V, 2.48 por ciento, y pasa. Cambió el cable; nada más cambió.",
+      "plain_explanation": "La caída de voltaje es el voltaje que se consume empujando la corriente a través de la resistencia del conductor, ida y vuelta. Para un circuito monofásico, la aproximación usada aquí es:\nVD = 2 x L x R x I / 1000\n• 2 — el viaje redondo. La corriente recorre la longitud dos veces, ida por un conductor y vuelta por el otro. Es el factor más olvidado de todo el cálculo.\n• L — la longitud de ida en pies, tal como el tramo va enrutado en realidad.\n• R — la resistencia del conductor de la Tabla 8, en ohms por mil pies. Cobre trenzado: 12 AWG es 1.98, 10 AWG es 1.24, 8 AWG es 0.778.\n• I — la corriente real de la carga en amperes, no el tamaño del interruptor.\n• / 1000 — la Tabla 8 viene por mil pies, así que la división deja la respuesta en voltios.\nTermine convirtiendo los voltios en porcentaje: VD dividido entre el voltaje del sistema, por 100. El porcentaje es contra lo que se miden las recomendaciones del 3 por ciento y el 5 por ciento.",
       "prev_id": "C9-Table8-CCA",
       "related_ids": [
         "Ch9-T8",
@@ -565,7 +1193,108 @@
         "S-01"
       ],
       "title": "Caída de voltaje — el método monofásico",
-      "verified": true
+      "verified": true,
+      "why_it_exists": "El voltaje perdido en el cable es voltaje que la carga nunca ve. Los motores arrancan con dificultad y se calientan con voltaje bajo, las luces se atenúan, la electrónica se queja — y la energía perdida calienta el tramo del conductor en vez de hacer trabajo en la carga. La caída crece con la longitud, la corriente y la resistencia, y por eso un circuito que está bien a 30 ft puede ser un problema a 130 ft con el mismo interruptor.",
+      "inspection_fails": [
+        "Cálculo de caída de voltaje entregado sin el factor del viaje redondo — el juego aprobado muestra la mitad de la caída que el tramo tendrá en realidad.",
+        "Resistencia tomada de la columna de aluminio de la Tabla 8 para un tramo de cobre.",
+        "Caída reportada en voltios y comparada directo contra la recomendación del 3 por ciento, sin convertirla a porcentaje del voltaje del sistema.",
+        "Caída calculada con la capacidad del interruptor para una carga que consume la mitad, con el cable subido dos calibres más allá de lo que la carga necesita."
+      ],
+      "exam_trap": "La trampa clásica se come el 2: VD = L x R x I / 1000. Eso calcula solo el viaje de ida y reporta la mitad de la caída real — un tramo que en verdad cae 6.34V «pasa» con 3.17V en papel. Si una respuesta de caída de voltaje se ve demasiado buena para un tramo largo, busque primero el viaje redondo que falta.",
+      "tables": [
+        {
+          "caption": "La fórmula, pieza por pieza",
+          "headers": [
+            "Parte",
+            "Significado",
+            "Viene de"
+          ],
+          "rows": [
+            [
+              "2",
+              "Viaje redondo, ida y vuelta",
+              "El propio circuito"
+            ],
+            [
+              "L",
+              "Longitud de ida, ft",
+              "El tramo enrutado"
+            ],
+            [
+              "R",
+              "Resistencia, ohm/1000 ft",
+              "Tabla 8"
+            ],
+            [
+              "I",
+              "Corriente real de carga, A",
+              "La carga, no el interruptor"
+            ],
+            [
+              "/ 1000",
+              "Deja la respuesta en voltios",
+              "La Tabla 8 es por 1000 ft"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-VD-METHOD-loop.svg",
+          "alt": "Un circuito monofásico dibujado como un lazo desde un panel de 120V hasta una carga de 12A y de vuelta, con la longitud de ida dimensionada en 100 ft, la fórmula VD igual a 2 por L por R por I entre 1000 y el resultado trabajado para 12 AWG y 10 AWG.",
+          "caption": "Ida y vuelta: el 2 es el viaje redondo.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "100 ft de ida, carga de 16A, cobre de 12 AWG a 1.98 ohm/kft. ¿Caída de voltaje?",
+          "choices": [
+            "3.17V",
+            "6.34V",
+            "12.68V",
+            "1.98V"
+          ],
+          "answer_index": 1,
+          "explain_plain": "2 x 100 x 1.98 x 16 / 1000 = 6.34V. Olvide el 2 del viaje redondo y obtiene la respuesta trampa, 3.17V.",
+          "nec_ref": "Table 8"
+        },
+        {
+          "question": "El 2 en la fórmula monofásica de caída de voltaje representa:",
+          "choices": [
+            "Dos conductores en cada tubería",
+            "El viaje redondo — ida y vuelta",
+            "Un permiso del 2 por ciento",
+            "Las dos fases calientes"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La corriente recorre la longitud de ida dos veces, una de ida y una de vuelta, así que la longitud entra duplicada en la fórmula.",
+          "nec_ref": "Table 8"
+        },
+        {
+          "question": "Un circuito de 20A en realidad lleva una carga de 12A. Calcule su caída de voltaje a:",
+          "choices": [
+            "20A",
+            "12A",
+            "32A",
+            "15A"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La caída de voltaje sigue la corriente que en realidad fluye. Calcúlela a 12A; usar el tamaño del interruptor de 20A sobredimensiona un cable que el trabajo no necesita.",
+          "nec_ref": "Table 8"
+        }
+      ],
+      "code_refs": [
+        "Table 8",
+        "210.19(A) Informational Note",
+        "215.2(A) Informational Note"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "CAMBIO NEC 2023:\nNo se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich": 1
     },
     {
       "article": "9",
@@ -589,7 +1318,100 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Caída de voltaje trabajada — falla, luego sube el calibre",
-      "verified": true
+      "verified": true,
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "Cada pie de conductor es una pequeña resistencia en serie con la carga, y la corriente la cruza dos veces — ida y vuelta. La caída crece con el largo y con la corriente, así que un tramo que sirve bien una carga a 20 ft puede dejarla corta a 100 ft. Los voltios que faltan nunca llegan a la carga: las luces se atenúan, y un motor consume más corriente para hacer la misma potencia y trabaja más caliente haciéndolo. Correr la fórmula calibre por calibre es como se llega al conductor más pequeño que realmente sirve a la carga — sin adivinar, sin desperdiciar cobre.",
+      "inspection_fails": [
+        "Tramo ramal largo de 120V dejado en 12 AWG; el voltaje medido en la carga queda muy por debajo de la placa y el motor arranca con dificultad.",
+        "Takeoff dimensionado solo por el breaker — la caída de voltaje nunca se calculó en un tramo de 100 ft.",
+        "Porcentaje de caída calculado contra 240V en un circuito de 120V, reduciendo a la mitad la caída aparente en el papel."
+      ],
+      "exam_trap": "La trampa es responder con el breaker: 'es un circuito de 20 A, así que 12 AWG está bien'. Eso mezcla dos revisiones distintas. La ampacidad dice que el conductor no se sobrecalentará; la caída de voltaje dice que la carga todavía recibe su voltaje al final del tramo. En el tramo de esta página, el 12 AWG pasa la ampacidad y falla el trabajo con 5.28 por ciento. La segunda trampa es adivinar el salto — subir dos calibres 'por seguridad' sin volver a correr la fórmula, cuando cambió una sola variable y el mismo cálculo da la respuesta.",
+      "tables": [
+        {
+          "caption": "Un tramo, tres calibres — 16 A, 100 ft de ida, 120 V",
+          "headers": [
+            "Calibre, Cu cableado",
+            "R (ohm/kft)",
+            "VD",
+            "% de 120 V"
+          ],
+          "rows": [
+            [
+              "12 AWG",
+              "1.98",
+              "6.34 V",
+              "5.28% — se pasa"
+            ],
+            [
+              "10 AWG",
+              "1.24",
+              "3.97 V",
+              "3.31% — todavía se pasa"
+            ],
+            [
+              "8 AWG",
+              "0.778",
+              "2.49 V",
+              "2.07% — cumple"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-VD-WORKED-three-bars.svg",
+          "alt": "Gráfico de barras del porcentaje de caída de voltaje para cobre de 12, 10 y 8 AWG en el mismo tramo de 100 pies, 16 amperios y 120 voltios: 5.28 por ciento y 3.31 por ciento por encima de una línea punteada del 3 por ciento, y el 8 AWG con 2.07 por ciento por debajo de ella.",
+          "caption": "Falla, falla, pasa: el mismo tramo en 12, 10 y 8 AWG contra la recomendación del 3%.",
+          "w": 900,
+          "h": 1380
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "16 A a 100 ft de ida en cobre de 12 AWG (1.98 ohm/kft), 120 V. ¿Caída de voltaje?",
+          "choices": [
+            "3.17 V",
+            "6.34 V — 5.28%",
+            "1.98 V",
+            "12.7 V"
+          ],
+          "answer_index": 1,
+          "explain_plain": "VD = 2 x 100 x 1.98 x 16 / 1000 = 6.34 V. El 2 es el viaje redondo — ida y vuelta.",
+          "nec_ref": "Ch. 9, Table 8"
+        },
+        {
+          "question": "¿Qué arregla la caída en ese tramo?",
+          "choices": [
+            "Un breaker más grande",
+            "Subir a 8 AWG — la resistencia baja a 0.778 ohm/kft y la caída a 2.07%",
+            "Calcular el porcentaje contra 240 V",
+            "Nada — la ampacidad pasó, así que el trabajo está hecho"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Cambie una sola cosa — la resistencia — y vuelva a correr la misma fórmula. Con 8 AWG la caída es 2.49 V, 2.07 por ciento.",
+          "nec_ref": "Ch. 9, Table 8"
+        },
+        {
+          "question": "Una carga de 40 A a 150 ft en cobre de 6 AWG cae 5.89 V. Calculado a 240 V, eso es:",
+          "choices": [
+            "5.89%",
+            "4.91%",
+            "2.46%",
+            "1.23%"
+          ],
+          "answer_index": 2,
+          "explain_plain": "5.89 / 240 = 2.46 por ciento. La misma corriente viaja mejor a mayor voltaje porque el porcentaje se calcula contra el doble de voltios.",
+          "nec_ref": "Ch. 9, Table 8"
+        }
+      ],
+      "code_refs": [
+        "Ch. 9 Table 8",
+        "210.19(A) Informational Note"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "article": "9",
@@ -598,8 +1420,8 @@
       "florida_note": "",
       "id": "C9-VD-3PH",
       "next_id": "C9-VD-LIMITS",
-      "on_the_job": "Etiqueta cualquier resultado trifásico de la Tabla 8 como una aproximación cuando lo escribas en un takeoff o una submittal. Si el resultado cae cerca del límite, o los conductores son grandes, dilo y márcalo para una revisión con la Tabla 9 por Mike, en vez de presentar la aproximación como exacta.",
-      "plain_explanation": "Para un circuito trifásico balanceado, el factor de viaje redondo de 2 se reemplaza por 1.732, la raíz cuadrada de 3: VD = 1.732 x L x R x I / 1000, con L todavía en pies de ida, R todavía la resistencia de la Tabla 8, e I la corriente de la carga. Dicho claro, esto es una aproximación — toma prestada la resistencia en DC de la Tabla 8 para un sistema de AC, y los conductores más grandes, las canalizaciones de acero y el factor de potencia pueden mover la respuesta real, que es el trabajo para el que existe la Tabla 9. Aproximación trabajada: 40A a 150 ft en cobre de 6 AWG, 208V trifásico: 1.732 x 150 x 0.491 x 40 / 1000 = 5.10V, alrededor del 2.45 por ciento.",
+      "on_the_job": "Trabajo comercial pequeño de tenant: una carga trifásica de 208V que consume 40A está a 150 ft del panel, y la aproximación con cobre de 6 AWG da 5.10V — alrededor del 2.45 por ciento, dentro de la recomendación del 3 por ciento, así que no hay que subir el calibre. Etiqueta cualquier resultado trifásico de la Tabla 8 como una aproximación cuando lo escribas en un takeoff o una submittal. Si el resultado cae cerca del límite, o los conductores son grandes, dilo y márcalo para una revisión con la Tabla 9 por Mike, en vez de presentar la aproximación como exacta.",
+      "plain_explanation": "Para un circuito trifásico balanceado, el factor de viaje redondo de 2 se reemplaza por 1.732, la raíz cuadrada de 3: VD = 1.732 x L x R x I / 1000.\n• L sigue siendo el largo de ida en pies.\n• R sigue siendo la resistencia de la Tabla 8, en ohms por cada mil pies.\n• I es la corriente de la carga.\nDicho claro, esto es una aproximación — toma prestada la resistencia en DC de la Tabla 8 para un sistema de AC, y los conductores más grandes, las canalizaciones de acero y el factor de potencia pueden mover la respuesta real, que es el trabajo para el que existe la Tabla 9. Aproximación trabajada: 40A a 150 ft en cobre de 6 AWG, 208V trifásico: 1.732 x 150 x 0.491 x 40 / 1000 = 5.10V, alrededor del 2.45 por ciento.",
       "prev_id": "C9-VD-WORKED",
       "related_ids": [
         "Ch9-T8",
@@ -611,7 +1433,105 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "Caída de voltaje trifásica — la misma idea, factor 1.732",
-      "verified": true
+      "verified": true,
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "La energía trifásica viaja en tres conductores que comparten la carga, así que la caída resulta ser la raíz cuadrada de 3 veces la caída de ida, en vez del doble. Usar el factor monofásico de 2 sobreestima la caída en alrededor de un 15 por ciento y puede empujar una subida de calibre que nadie necesitaba. Tratar el atajo como exacto corre en la otra dirección: en conductores grandes la impedancia real de AC se aleja de la resistencia de la Tabla 8, y un alimentador puede quedarse corto. El método del 1.732 existe para una estimación rápida y honesta; la Tabla 9 existe para la respuesta exacta.",
+      "inspection_fails": [
+        "Alimentador trifásico calculado con el factor monofásico 2 — la submittal muestra una subida de calibre que la carga nunca necesitó.",
+        "Una aproximación de la Tabla 8 escrita en una submittal como valor exacto para un alimentador de conductores grandes, sin revisión con la Tabla 9.",
+        "Porcentaje de caída calculado contra 120V en un tramo trifásico de 208V, haciendo que un buen tramo parezca una falla en el papel."
+      ],
+      "exam_trap": "La trampa es correr un alimentador trifásico por la fórmula monofásica sin tocarla, con su factor 2 y todo. Eso sobreestima la caída en alrededor de un 15 por ciento y puede convencerlo de instalar cable que la carga nunca necesitó. La trampa en espejo es peor: citar el resultado del 1.732 como exacto en conductores grandes en tubería de acero, donde la resistencia de AC y la reactancia mueven el número real. El trifásico balanceado lleva 1.732 — y la respuesta sigue siendo una aproximación.",
+      "tables": [
+        {
+          "caption": "Aproximación trabajada — 40 A, 150 ft, 6 AWG Cu, 208 V trifásico",
+          "headers": [
+            "Paso",
+            "Valor"
+          ],
+          "rows": [
+            [
+              "Factor, trifásico balanceado",
+              "1.732"
+            ],
+            [
+              "Largo de ida L",
+              "150 ft"
+            ],
+            [
+              "Resistencia Tabla 8 R, 6 AWG Cu",
+              "0.491 ohm/kft"
+            ],
+            [
+              "Corriente de carga I",
+              "40 A"
+            ],
+            [
+              "VD = 1.732 x 150 x 0.491 x 40 / 1000",
+              "5.10 V"
+            ],
+            [
+              "Porcentaje de 208 V",
+              "2.45%"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-VD-3PH-factor.svg",
+          "alt": "Tres conductores que corren de un panel a una carga trifásica balanceada, con el factor monofásico 2 tachado en rojo y reemplazado por 1.732, el resultado del ejemplo trabajado de 5.10 voltios, y un sello de aproximación que apunta a la Tabla 9 como la ruta exacta.",
+          "caption": "Trifásico balanceado: cambie el 2 del viaje redondo por 1.732 — y etiquete la respuesta como aproximación.",
+          "w": 900,
+          "h": 1420
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "La caída de voltaje trifásica balanceada por el método de la Tabla 8 usa el factor:",
+          "choices": [
+            "2",
+            "1.732",
+            "1.5",
+            "3"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El factor de viaje redondo de 2 se reemplaza por la raíz cuadrada de 3, 1.732, para un circuito trifásico balanceado.",
+          "nec_ref": "Ch. 9, Table 8"
+        },
+        {
+          "question": "El resultado del 1.732 en un alimentador de conductores grandes en tubería de acero es:",
+          "choices": [
+            "Exacto",
+            "Una aproximación — la Tabla 9 es la ruta de la impedancia de AC",
+            "Una violación del código",
+            "Válido solo para aluminio"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La Tabla 8 presta la resistencia en DC a un sistema de AC. Los conductores más grandes, las canalizaciones de acero y el factor de potencia mueven la respuesta real; ese es el trabajo de la Tabla 9.",
+          "nec_ref": "Ch. 9, Table 9"
+        },
+        {
+          "question": "40 A a 150 ft en cobre de 6 AWG (0.491 ohm/kft), 208 V trifásico. ¿Caída aproximada?",
+          "choices": [
+            "10.2 V",
+            "5.10 V — alrededor del 2.45%",
+            "2.95 V",
+            "5.89 V"
+          ],
+          "answer_index": 1,
+          "explain_plain": "1.732 x 150 x 0.491 x 40 / 1000 = 5.10 V, y 5.10 / 208 es alrededor del 2.45 por ciento.",
+          "nec_ref": "Ch. 9, Table 8"
+        }
+      ],
+      "code_refs": [
+        "Ch. 9 Table 8",
+        "Ch. 9 Table 9",
+        "210.19(A) Informational Note"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "article": "9",
@@ -623,8 +1543,8 @@
       "florida_note": "Florida SÍ convierte una de ellas en mandato para el trabajo comercial — a través del código de energía, no del NEC: el FBC Energy Conservation §C405.5.3 requiere que los conductores de alimentadores y circuitos ramales en edificios comerciales se dimensionen para un máximo de 5% de caída de voltaje COMBINADA. Las cifras propias del NEC de 3%/5% siguen siendo recomendaciones; en un trabajo comercial de Florida el 5% total es exigible. El trabajo residencial y las especificaciones del proyecto son preguntas separadas — revisa los documentos del trabajo y la AHJ.",
       "id": "C9-VD-LIMITS",
       "next_id": "C9-Table9",
-      "on_the_job": "Nunca le digas a un cliente, a un constructor o a un inspector que 'el Código requiere el 3 por ciento'. Dilo de la manera verdadera: el Código lo recomienda en una nota informativa, Sharma diseña con él porque mantiene contento al equipo, y lo que gobierna es la AHJ y el NEC impreso. Mantén esa etiqueta en cada respuesta de caída de voltaje, quiz y nota de estimado que escribas.",
-      "plain_explanation": "Las cifras conocidas — dimensiona un circuito ramal para que su caída de voltaje se quede cerca del 3 por ciento, y un alimentador más el circuito ramal que suministra cerca del 5 por ciento en total — vienen de las Notas Informativas de 210.19(A) y 215.2(A). Las Notas Informativas son guía, no requisitos exigibles, y v1 etiqueta estas cifras exactamente así. Un circuito por encima del 3 por ciento no es automáticamente una violación del código; es un circuito que puede hacer funcionar mal su carga — luces tenues, un motor que arranca con dificultad, equipo que se queja — y que un buen instalador arregla subiendo el calibre, acortando el tramo o moviendo la carga.",
+      "on_the_job": "Nunca le digas a un cliente, a un constructor o a un inspector que 'el Código requiere el 3 por ciento'. Dilo de la manera verdadera: el Código lo recomienda en una nota informativa, Sharma diseña con él porque mantiene contento al equipo, y lo que gobierna es la AHJ y el NEC impreso. Mantén esa etiqueta en cada respuesta de caída de voltaje, quiz y nota de estimado que escribas. Una excepción que debes tener clara: en un trabajo comercial de Florida el 5 por ciento combinado es exigible a través del código de energía (vea la nota de Florida) — ahí el número sí es un requisito, solo que no del NEC.",
+      "plain_explanation": "Las cifras conocidas — dimensiona un circuito ramal para que su caída de voltaje se quede cerca del 3 por ciento, y un alimentador más el circuito ramal que suministra cerca del 5 por ciento en total — vienen de las Notas Informativas de 210.19(A) y 215.2(A). Las Notas Informativas son guía, no requisitos exigibles, y v1 etiqueta estas cifras exactamente así.\n• Circuito ramal: cerca del 3 por ciento.\n• Alimentador más el circuito ramal que suministra: cerca del 5 por ciento en total.\n• Ambas cifras son recomendaciones donde el NEC las enuncia. El trabajo comercial de Florida es la excepción — vea la nota de Florida.\nUn circuito por encima del 3 por ciento no es automáticamente una violación del código; es un circuito que puede hacer funcionar mal su carga — luces tenues, un motor que arranca con dificultad, equipo que se queja — y que un buen instalador arregla subiendo el calibre, acortando el tramo o moviendo la carga.",
       "prev_id": "C9-VD-3PH",
       "related_ids": [
         "C9-L-040",
@@ -639,7 +1559,98 @@
       "sharma_note": "",
       "sharma_rule_ids": [],
       "title": "3 por ciento y 5 por ciento — recomendaciones, no requisitos",
-      "verified": true
+      "verified": true,
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "why_it_exists": "La caída de voltaje es energía quemada como calor en el cable en vez de entregarse a la carga, y la carga del extremo lejano vive con lo que queda: las luces se atenúan, los motores arrancan con dificultad y trabajan calientes, la electrónica se reinicia. Las notas existen para dar a los diseñadores una meta que mantiene el equipo trabajando como espera su placa — eficiencia y desempeño razonables de operación — sin convertir un criterio de diseño en una citación. Sharma diseña con las cifras porque funcionan, no porque un inspector pueda citarlas.",
+      "inspection_fails": [
+        "Trabajo comercial de Florida: alimentador y ramales dimensionados de modo que la caída combinada supera el 5 por ciento — citado bajo FBC Energy Conservation §C405.5.3, no el NEC.",
+        "La submittal o el estimado dice '3% máx según el NEC' y el tramo instalado no lo cumple — el estándar que la empresa escribió se convierte en el estándar con el que la miden.",
+        "Caída tan grande que el equipo no puede alcanzar el voltaje mínimo de su placa — un problema de 110.3(B), de listado e instrucciones, no un problema de porcentaje."
+      ],
+      "exam_trap": "La trampa es la frase 'el Código requiere que la caída de voltaje no supere el 3 por ciento en un circuito ramal'. Suena a regla, y es la respuesta incorrecta: en el NEC esas cifras viven en Notas Informativas, que son material explicativo, no requisitos (90.5(C)). Escoja la respuesta que llama recomendaciones al 3 por ciento y al 5 por ciento — y reserve la palabra 'requisito' para el 5 por ciento del código de energía de Florida en trabajo comercial.",
+      "tables": [
+        {
+          "caption": "Las cifras del 3% y 5% — y el único mandato de Florida",
+          "headers": [
+            "Cifra",
+            "Dónde vive",
+            "Estatus"
+          ],
+          "rows": [
+            [
+              "Circuito ramal ≈ 3%",
+              "Nota Informativa de 210.19(A)",
+              "Recomendación"
+            ],
+            [
+              "Alimentador + ramal ≈ 5% total",
+              "Nota Informativa de 215.2(A)",
+              "Recomendación"
+            ],
+            [
+              "Comercial: alimentador + ramal ≤ 5% combinado",
+              "FBC Energy Conservation §C405.5.3",
+              "Exigible — comercial FL"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c9/C9-VD-LIMITS-stacked-5.svg",
+          "alt": "Barra apilada que muestra un segmento de alimentador del 2 por ciento y un segmento de ramal del 3 por ciento sumando un 5 por ciento total, etiquetada como recomendado por Nota Informativa, con una franja de Florida que indica que el límite combinado del 5 por ciento es exigible en trabajo comercial bajo el código de energía.",
+          "caption": "Alimentador más ramal se apilan hasta el 5% — recomendado en el NEC, exigible en el trabajo comercial de Florida.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "En el NEC, la cifra del 3% de caída de voltaje para circuitos ramales es:",
+          "choices": [
+            "Un requisito obligatorio",
+            "Una recomendación de Nota Informativa",
+            "Una enmienda de Florida",
+            "Una nota al pie de la Tabla 8"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La cifra del 3% viene de una Nota Informativa de 210.19(A). Las Notas Informativas son guía, no requisitos exigibles.",
+          "nec_ref": "210.19(A), Informational Note"
+        },
+        {
+          "question": "En un trabajo comercial de Florida, la caída combinada de alimentador más ramal es exigible a:",
+          "choices": [
+            "3%, por el NEC 210.19",
+            "5%, por el NEC 215.2",
+            "5%, por FBC Energy Conservation §C405.5.3",
+            "Nunca es exigible en ningún lugar"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Las cifras del NEC siguen siendo recomendaciones; el código de energía de Florida convierte el límite combinado del 5% en mandato para edificios comerciales.",
+          "nec_ref": "FBC Energy Conservation §C405.5.3"
+        },
+        {
+          "question": "Un circuito ramal de una casa calcula al 4% de caída de voltaje. Bajo el NEC eso es:",
+          "choices": [
+            "Una violación automática",
+            "Por encima de la recomendación — se arregla subiendo el calibre, acortando el tramo o moviendo la carga",
+            "Imposible, porque las casas están exentas de la caída de voltaje",
+            "Una falla de la Tabla 9"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Pasar del 3% es pasar una recomendación, no una violación — pero la carga lo va a sentir, y un buen instalador lo arregla.",
+          "nec_ref": "210.19(A), Informational Note"
+        }
+      ],
+      "code_refs": [
+        "210.19(A) Informational Note",
+        "215.2(A) Informational Note",
+        "90.5(C)",
+        "FBC Energy Conservation §C405.5.3"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "article": "9",
