@@ -12,8 +12,8 @@
       "article": "500",
       "section": "500",
       "title": "Hazardous (classified) locations — the starting point",
-      "plain_explanation": "Some areas hold enough flammable gas or vapor, combustible dust, or ignitible fibers in the air that a normal spark or hot surface could start a fire or explosion. Article 500 is the foundation for those areas: it explains how a location gets classified, how materials are grouped, which protection methods exist, and what equipment markings mean. Articles 501 through 516 then give the working rules for each kind of location.\n\nNEC 2023 CHANGE:\n• 500.4: Hazardous (classified) areas, and areas judged unclassified, now go on an area classification drawing, and the authority having jurisdiction (AHJ) gets access to the documentation. Areas classified as hazardous, and areas determined to be unclassified, now get documented on an area classification drawing backed by related documents.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Before any work in a suspect area, find the classification drawing or ask the engineer and the AHJ what the classification is. If nobody can tell you the class, division or zone, and group, stop — that answer decides every wiring method and every fitting that follows.",
+      "plain_explanation": "Some areas hold enough flammable gas or vapor, combustible dust, or ignitible fibers in the air that a normal spark or hot surface could start a fire or explosion. Article 500 is the foundation for those areas: it explains how a location gets classified, how materials are grouped, which protection methods exist, and what equipment markings mean. Articles 501 through 516 then give the working rules for each kind of location.\nBefore anyone picks a fitting, three questions have to be answered for the exact area:\n• What is in the air? That sets the class — Class I gases and vapors, Class II combustible dusts, Class III ignitible fibers and flyings\n• How often is it there in an ignitible amount? That sets the division — Division 1 for normal operation, Division 2 for abnormal conditions\n• What is the material, exactly? That sets the group — Class I Groups A through D, Class II Groups E through G\nArticle 500 also covers the protection techniques in 500.7 — explosionproof and dust-ignitionproof enclosures, purging and pressurizing, intrinsic safety, and others — and the equipment marking rules in 500.8, including the temperature code that must stay below the ignition temperature of the material present.",
+      "on_the_job": "Before any work in a suspect area, find the classification drawing or ask the engineer and the AHJ what the classification is. If nobody can tell you the class, division or zone, and group, stop — that answer decides every wiring method and every fitting that follows. On Sharma jobs this comes up at fueling and paint work: a dispenser island (Article 514), a spray application area (Article 516), a bulk storage plant (Article 515). The classification drawing is part of the bid documents — if it is missing, that is an open question for the packet, not a field decision.",
       "sharma_note": "Sharma does not design hazardous-location classifications. When a job touches a classified area, the classification comes from the plans or the AHJ, and Mike Holt reviews the method before anyone roughs it in.",
       "figure_idea": "Simple three-box diagram: what is in the air (class), how often it is there (division), and what the material is (group), with an arrow to 'then open Articles 501-503'.",
       "related_ids": [
@@ -36,7 +36,107 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/500-4",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Ordinary electrical gear makes sparks and hot surfaces in normal use — contacts open, motors run, lamps get hot. In a classified area the air itself is fuel, so one ordinary device can be the ignition source for the whole room. Article 500 exists to force the classification question first: once class, division and group are fixed, every later choice — wiring method, seals, enclosures, temperature marking — has a right answer instead of a guess.",
+      "exam_trap": "The trap is jumping straight to a wiring article — 'just use explosionproof boxes' — without a classification. Explosionproof is one protection technique for one kind of location; dust locations, fiber locations and Zone-system locations each have their own rules, and Division 2 is not Division 1. No class, division and group means no right answer.",
+      "inspection_fails": [
+        "Work roughed in inside a classified area with no classification drawing on file.",
+        "Ordinary-location fittings installed inside a classified boundary.",
+        "Equipment identified for the class but not for the group of the material actually present.",
+        "Equipment temperature marking hotter than the ignition temperature of the gas or dust present (500.8).",
+        "A classified boundary moved in the field without the engineer or AHJ revising the documents."
+      ],
+      "tables": [
+        {
+          "caption": "The three questions Article 500 makes you answer",
+          "headers": [
+            "Question",
+            "Answer called",
+            "Where it leads"
+          ],
+          "rows": [
+            [
+              "What is in the air?",
+              "Class I, II or III",
+              "Articles 501–503 (zones: 505/506)"
+            ],
+            [
+              "How often is it there?",
+              "Division 1 or 2",
+              "Wiring methods and seals"
+            ],
+            [
+              "What is the material?",
+              "Group A–D or E–G",
+              "Equipment identification (500.6)"
+            ],
+            [
+              "How hot can gear get?",
+              "T-code T1–T6",
+              "Marking check (500.8)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-500-three-questions.svg",
+          "alt": "Flow diagram of the three classification questions — what is in the air (class), how often it is there (division), and what the material is (group) — leading to Articles 501 through 516 for the working rules.",
+          "caption": "Class, division, group — answer all three before opening a wiring article.",
+          "w": 900,
+          "h": 1460
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Where does the classification Sharma works from come from?",
+          "choices": [
+            "The foreman's judgment",
+            "The plans or the AHJ",
+            "The supply house counter",
+            "The equipment catalog"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Sharma does not design classifications; the classification comes from the plans or the AHJ.",
+          "nec_ref": "500.4"
+        },
+        {
+          "question": "A location's classification is the combination of what?",
+          "choices": [
+            "Class, division and group",
+            "Voltage, amperage and phase",
+            "Article, section and table",
+            "Zone, group and T-code only"
+          ],
+          "answer_index": 0,
+          "explain_plain": "What is in the air (class), how often it is there (division), and the exact material (group).",
+          "nec_ref": "500.5"
+        },
+        {
+          "question": "What do Articles 501 through 516 give?",
+          "choices": [
+            "The classification definitions",
+            "The working rules for each kind of classified location",
+            "Grounding electrode rules",
+            "Service sizing rules"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Article 500 is the foundation; Articles 501–516 carry the working rules for each kind of location.",
+          "nec_ref": "Article 500"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 500.4: Hazardous (classified) areas, and areas judged unclassified, now go on an area classification drawing, and the authority having jurisdiction (AHJ) gets access to the documentation. Areas classified as hazardous, and areas determined to be unclassified, now get documented on an area classification drawing backed by related documents.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "500.4",
+        "500.5",
+        "500.6",
+        "500.7",
+        "500.8",
+        "Articles 501–516"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-500.5",
@@ -44,8 +144,8 @@
       "article": "500",
       "section": "500.5",
       "title": "How locations are classified — class and division",
-      "plain_explanation": "Classification starts with what the hazardous material is and how likely it is to be present in an ignitible amount. Class I covers gases and vapors from flammable or combustible liquids, Class II covers combustible dusts, and Class III covers easily ignitible fibers and flyings. Division 1 means the hazard can be present during normal operation, while Division 2 means it is normally contained and shows up only when something fails or operates abnormally.\n\nNEC 2023 CHANGE:\n• 500.5: Class III now splits fibers and flyings into combustible ones that can explode as a cloud and ignitible ones that mainly burn as a layer. Metal combustible fibers are Class II, Division 1, Group E. Class III now sorts fibers/flyings two ways: combustible ones that can form an explosive cloud, and ignitible ones that mainly burn as a settled layer.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Read the class and division off the classification documents for the exact room or area, not the whole building — one bay can be classified while the next is not. Treat a Division 1 boundary line on the drawing as a hard wall for wiring methods and seals.",
+      "plain_explanation": "Classification starts with what the hazardous material is and how likely it is to be present in an ignitible amount. Class I covers gases and vapors from flammable or combustible liquids, Class II covers combustible dusts, and Class III covers easily ignitible fibers and flyings. Division 1 means the hazard can be present during normal operation, while Division 2 means it is normally contained and shows up only when something fails or operates abnormally.\n• Class I — flammable gases and vapors, and vapors from flammable or combustible liquids; gasoline and propane vapors are the everyday examples\n• Class II — combustible dusts, such as grain dust, coal dust and metal dusts\n• Class III — easily ignitible fibers and flyings, such as textile lint, that are handled, made or stored in the area\nClass and division are read together: Class I Division 1 and Class II Division 1 are different locations with different wiring articles (501 and 502), and the group in 500.6 then narrows the classification to the exact material.",
+      "on_the_job": "Read the class and division off the classification documents for the exact room or area, not the whole building — one bay can be classified while the next is not. Treat a Division 1 boundary line on the drawing as a hard wall for wiring methods and seals. Worked example from the group page: gasoline vapor is Class I, Group D. Around an open transfer point it is Division 1; in the sealed-tank room next door, the same vapor is Division 2. Same building, same material, two different wiring jobs.",
       "sharma_note": "",
       "figure_idea": "Cross-section of a room with a Division 1 pocket near a source, a Division 2 ring around it, and unclassified space beyond, labeled in plain words.",
       "related_ids": [
@@ -67,7 +167,115 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/500-5",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "The class tells you what can burn; the division tells you how much of the time the fuel is actually in the air. That pairing keeps the rules proportionate: gear where vapor is present every day (Division 1) is built to contain an explosion, while gear where the same vapor appears only when a seal fails (Division 2) gets a lighter — but still deliberate — set of methods. Classify wrong in either direction and you either leave an ignition source sitting in fuel or gold-plate a room that never needed it.",
+      "exam_trap": "The trap is classifying the whole building by its worst room — or the reverse, calling a Division 1 pocket 'Division 2 because the door is usually shut.' Classification is by the exact area and by how the material behaves in normal operation, not by convenience. A second trap: fibers and flyings are Class III, not Class II. Dust is Class II; fibers that settle and burn as a layer are Class III.",
+      "inspection_fails": [
+        "Whole building classified from its worst room instead of the exact area on the documents.",
+        "Division 1 boundary on the drawing ignored — ordinary-location fittings inside it.",
+        "Fibers and flyings area wired as a Class II dust location instead of Class III.",
+        "Classification copied from the last job instead of this job's classification documents."
+      ],
+      "tables": [
+        {
+          "caption": "The three classes (500.5)",
+          "headers": [
+            "Class",
+            "Material",
+            "Everyday example"
+          ],
+          "rows": [
+            [
+              "I",
+              "Gases and vapors",
+              "Gasoline, propane vapor"
+            ],
+            [
+              "II",
+              "Combustible dusts",
+              "Grain dust, coal dust"
+            ],
+            [
+              "III",
+              "Ignitible fibers and flyings",
+              "Textile lint, wood flyings"
+            ]
+          ]
+        },
+        {
+          "caption": "The two divisions (500.5)",
+          "headers": [
+            "Division",
+            "When the hazard is there"
+          ],
+          "rows": [
+            [
+              "1",
+              "Present under normal operation"
+            ],
+            [
+              "2",
+              "Normally contained — present only on failure or abnormal operation"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-500.5-class-division.svg",
+          "alt": "Section view of one room with a Division 1 pocket around a tank, a Division 2 ring around the pocket, and unclassified space beyond, with the three classes — gases and vapors, combustible dusts, and ignitible fibers and flyings — listed below.",
+          "caption": "One room, three zones: Division 1 pocket, Division 2 ring, unclassified beyond.",
+          "w": 900,
+          "h": 1620
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Combustible dust belongs to which class?",
+          "choices": [
+            "Class I",
+            "Class II",
+            "Class III",
+            "Class IV"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Class II covers combustible dusts; Class I is gases and vapors, Class III is fibers and flyings.",
+          "nec_ref": "500.5"
+        },
+        {
+          "question": "Division 2 means the hazard is…",
+          "choices": [
+            "Present during normal operation",
+            "Normally contained, and present only when something fails or operates abnormally",
+            "Never present",
+            "Present only outdoors"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Division 2 material is normally contained and shows up only on a failure or abnormal operation.",
+          "nec_ref": "500.5"
+        },
+        {
+          "question": "Easily ignitible fibers and flyings belong to which class?",
+          "choices": [
+            "Class I",
+            "Class II",
+            "Class III",
+            "They are not classified"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Class III covers easily ignitible fibers and flyings.",
+          "nec_ref": "500.5"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 500.5: Class III now splits fibers and flyings into combustible ones that can explode as a cloud and ignitible ones that mainly burn as a layer. Metal combustible fibers are Class II, Division 1, Group E. Class III now sorts fibers/flyings two ways: combustible ones that can form an explosive cloud, and ignitible ones that mainly burn as a settled layer.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "500.5",
+        "500.6",
+        "Articles 501–503"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-500.6",
@@ -95,8 +303,8 @@
       "article": "500",
       "section": "500.7",
       "title": "Protection techniques",
-      "plain_explanation": "This section lists the accepted ways to keep electrical equipment from igniting the surrounding atmosphere. The familiar ones are explosionproof enclosures that contain an internal explosion, dust-ignitionproof enclosures that keep dust out, purging and pressurizing that hold clean air inside, intrinsic safety that limits circuit energy below ignition level, oil immersion, and nonincendive designs for the less severe division. Each technique only counts where the section and the equipment marking allow it.\n\nNEC 2023 CHANGE:\n• 500.7: Five protection techniques, (P) through (T), joined 500.7 in 2023: two heating methods, enclosed-break and nonsparking devices, and sealed equipment. A new Chapter 9 table matches protection types to each area. Five techniques were added at 500.7(P) through (T). A new table in Chapter 9 (Table 13) shows which protection types suit each area classification.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Match the technique on the equipment to the technique the design calls for — do not substitute a dust-ignitionproof box for an explosionproof one because it looks similar. Keep enclosure bolts, covers, and flame paths complete and undamaged, or the technique is defeated.",
+      "plain_explanation": "500.7 lists the accepted ways to keep electrical equipment from igniting the surrounding atmosphere. Each technique only counts where the section and the equipment marking allow it:\n• Explosionproof enclosures, 500.7(A): built to contain an internal explosion and cool the escaping gases. Permitted in the Class I locations the equipment is identified for.\n• Dust-ignitionproof enclosures, 500.7(B): keep dust out, and keep arcs, sparks, and heat inside from igniting dust outside. A Class II technique.\n• Dusttight enclosures, 500.7(C): keep dust out. Permitted in Class II, Division 2 and in Class III locations.\n• Purged and pressurized systems, 500.7(D): clean air or inert gas held inside the enclosure keeps the hazardous atmosphere out. Permitted in any classified location the system is identified for.\n• Intrinsic safety, 500.7(E): the circuit's energy is limited below ignition level, even under fault conditions. Permitted across Class I, II, and III, Division 1 and 2 — the standard technique for instrumentation.\n• Nonincendive circuits, equipment, and components, 500.7(F)–(H): cannot ignite the atmosphere under normal operation. Division 2 techniques.\n• Oil immersion, 500.7(I): current-interrupting contacts under oil. Class I, Division 2.\n• Hermetically sealed equipment, 500.7(J): sealed against the surrounding atmosphere. Permitted in Class I, Division 2; Class II, Division 2; and Class III.\n• Combustible gas detection systems, 500.7(K): a protection method only in industrial establishments with restricted public access, where qualified persons service the installation.",
+      "on_the_job": "Match the technique on the equipment to the technique the design calls for — do not substitute a dust-ignitionproof box for an explosionproof one because it looks similar. Keep enclosure bolts, covers, and flame paths complete and undamaged, or the technique is defeated. On a fleet fueling area with a Class I, Division 1 location at the dispenser, the starter and disconnect must carry a technique permitted for that exact class and division — a similar-looking dust box off the shelf is a failed inspection and a real hazard.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -116,7 +324,148 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/500-7",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Classified air is fuel waiting for a spark. Every technique on this list breaks the same triangle a different way: contain the explosion, keep the atmosphere away from the arc, or keep the energy too low to ignite anything. Pick the wrong one and the enclosure itself becomes the ignition source it was hired to prevent.",
+      "exam_trap": "The trap is the look-alike swap. Dust-ignitionproof sounds like explosionproof, but it is a Class II dust technique — it does not belong in a Class I, Division 1 vapor area. In Division 1 vapor, the short list is explosionproof, intrinsic safety, or a purged and pressurized system identified for the location.",
+      "inspection_fails": [
+        "Dust-ignitionproof enclosure installed in a Class I, Division 1 vapor area.",
+        "Explosionproof enclosure with bolts missing and the cover not fully engaged — the flame path is defeated and the technique with it.",
+        "Nonincendive equipment installed in a Division 1 location.",
+        "General-purpose enclosure substituted where the design calls for a 500.7 protection technique."
+      ],
+      "tables": [
+        {
+          "caption": "Protection techniques — 500.7 (NEC 2020)",
+          "headers": [
+            "Technique",
+            "500.7",
+            "Permitted in"
+          ],
+          "rows": [
+            [
+              "Explosionproof",
+              "(A)",
+              "Class I, Div 1 or 2, as identified"
+            ],
+            [
+              "Dust-ignitionproof",
+              "(B)",
+              "Class II, Div 1 or 2"
+            ],
+            [
+              "Dusttight",
+              "(C)",
+              "Class II Div 2; Class III"
+            ],
+            [
+              "Purged / pressurized",
+              "(D)",
+              "Any classified location, as identified"
+            ],
+            [
+              "Intrinsic safety",
+              "(E)",
+              "Class I, II, III — Div 1 or 2"
+            ],
+            [
+              "Nonincendive",
+              "(F)–(H)",
+              "Division 2 locations"
+            ],
+            [
+              "Oil immersion",
+              "(I)",
+              "Class I Div 2, contacts"
+            ],
+            [
+              "Hermetically sealed",
+              "(J)",
+              "Div 2; Class III Div 1 or 2"
+            ],
+            [
+              "Gas detection system",
+              "(K)",
+              "Restricted-access industrial only"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-500.7-techniques.svg",
+          "alt": "Three panels showing the protection technique families of 500.7: explosionproof enclosures contain an internal explosion, purged and pressurized systems keep vapor out with clean air, and intrinsic safety limits circuit energy below ignition.",
+          "caption": "Contain it, keep it out, or starve it — the technique families of 500.7.",
+          "w": 900,
+          "h": 1450
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Which protection technique limits circuit energy below the ignition level, even under fault conditions?",
+          "choices": [
+            "Oil immersion",
+            "Intrinsic safety",
+            "Dusttight enclosures",
+            "Hermetically sealed contacts"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Intrinsic safety limits the circuit's electrical and thermal energy so it cannot ignite the atmosphere, faults included.",
+          "nec_ref": "500.7(E)"
+        },
+        {
+          "question": "A dust-ignitionproof enclosure installed in a Class I, Division 1 location is:",
+          "choices": [
+            "Permitted",
+            "Permitted if all bolts are tight",
+            "Not permitted — it is a Class II technique",
+            "Permitted in Division 1 only"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Dust-ignitionproof is the Class II dust technique. Class I, Division 1 calls for explosionproof, intrinsic safety, or an identified purged/pressurized system.",
+          "nec_ref": "500.7(B)"
+        },
+        {
+          "question": "Purged and pressurized systems are permitted:",
+          "choices": [
+            "Only in Class I, Division 2",
+            "In any classified location the system is identified for",
+            "Only outdoors",
+            "Only as a backup to explosionproof equipment"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Purging and pressurizing works across classes and divisions where the system is identified for the location.",
+          "nec_ref": "500.7(D)"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 500.7: Five protection techniques, (P) through (T), joined 500.7 in 2023: two heating methods, enclosed-break and nonsparking devices, and sealed equipment. A new Chapter 9 table matches protection types to each area. Five techniques were added at 500.7(P) through (T). A new table in Chapter 9 (Table 13) shows which protection types suit each area classification.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "500.7",
+        "500.7(A)",
+        "500.7(B)",
+        "500.7(C)",
+        "500.7(D)",
+        "500.7(E)",
+        "500.7(F)–(H)",
+        "500.7(I)",
+        "500.7(J)",
+        "500.7(K)"
+      ],
+      "uncertain": [
+        "The 500.7 list continues past (K) with additional techniques tied to the Zone system of Article 505. Their exact letters and wording were not confirmed for this page — check the printed 500.7 list before citing them."
+      ],
+      "rich_sources": [
+        {
+          "claim": "500.7(A)–(D) and where each is permitted: explosionproof equipment in the Class I locations it is identified for, dust-ignitionproof enclosures in Class II locations, dusttight enclosures in Class II, Division 2 and Class III locations, and purged and pressurized systems in any classified location they are identified for.",
+          "source": "Mike Holt, NEC Questions and Answers based on the 2020 NEC — 500.7 protection techniques",
+          "url": "https://www.mikeholt.com/newsletters.php?action=display&letterID=2477&srsltid=AfmBOorC7cFlujI9Q0IjKCJ_eujjp2zeq3A-AyBtTRkNZCU5qFvqbpET"
+        },
+        {
+          "claim": "500.7(E)–(K): intrinsic safety is permitted in Class I, II, and III, Division 1 or 2; nonincendive techniques in Division 2 locations; oil immersion for current-interrupting contacts in Class I, Division 2; hermetically sealed in Class I Division 2, Class II Division 2, and Class III Division 1 or 2; a combustible gas detection system only in industrial establishments with restricted public access serviced by qualified persons.",
+          "source": "DDPS, Control Systems Pt. 2 — Component Ratings in Hazardous Areas (NEC 500.7)",
+          "url": "https://www.ddpsinc.com/blog/control-systems-part-2-defining-component-ratings-for-use-in-hazardous-areas"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C5-500.8",
@@ -420,8 +769,8 @@
       "article": "503",
       "section": "503",
       "title": "Class III locations — fibers and flyings",
-      "plain_explanation": "Article 503 covers Class III locations, where easily ignitible fibers or flyings are handled or stored but are not normally suspended in the air in ignitible amounts — textile and woodworking style hazards are the classic examples. Rules focus on keeping fibers away from hot or arcing parts and on enclosures that limit entry. It is the least severe of the three classes, but it is still a classified location with its own wiring rules.",
-      "on_the_job": "Treat lint and fiber buildup around motors and luminaires as a code problem, not housekeeping. Use only the wiring methods and equipment the article permits inside the classified boundary.",
+      "plain_explanation": "Article 503 covers Class III locations: places where easily ignitible fibers or flyings are handled, made, or stored, but do not normally float in the air in ignitible amounts. Textile mills, clothing plants, and woodworking shops that make sawdust and flyings are the classic cases.\n• Division 1: the fibers or flyings are manufactured, handled, or used — the saw room and the mill floor.\n• Division 2: the fibers are stored, or handled outside the process itself — the bale warehouse.\n• Heat is the main enemy. Equipment must run cool enough not to dry out and carbonize fibers piled against it: no more than 165°C (329°F) for equipment not subject to overloading, and 120°C (248°F) for equipment that can be overloaded, like motors and power transformers (503.5). Carbonized fiber can ignite by itself.\n• Wiring methods (503.10) are the same in both divisions: rigid metal conduit, rigid nonmetallic conduit, RTRC, IMC, EMT, dusttight wireways, or Type MC or MI cable with listed fittings. Every box and fitting is dusttight. One Division 2 exception: a storage-only area with no machinery may use open wiring on insulators (Article 398).\n• No sealing fittings are required in Class III — the seals of Articles 501 and 502 do not carry over.\n• Luminaires (503.130) keep fibers and flyings out and sparks and hot metal in, under the same 165°C (329°F) surface cap.",
+      "on_the_job": "Cabinet shop outside Ocala: the saw and sanding room is Class III, Division 1, and the lumber racks next door are Division 2. The takeoff runs EMT with dusttight boxes inside the boundary, enclosed and gasketed luminaires over the line, and a totally enclosed motor on the dust collector. Receptacle circuits are 20-ampere — Sharma's commercial minimum. Before any cover comes off, the crew blows the lint off the motor and fixtures — that layer is part of the hazard, not dirt.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -431,7 +780,124 @@
       "verified": true,
       "prev_id": "C5-ART-502",
       "next_id": "C5-ART-504",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Fibers do not need a cloud to burn. Lint settles on a hot motor or luminaire, the heat dries it and chars it, and charred fiber can smolder and ignite with no spark at all. The blanket also insulates the motor, so it runs hotter and chars the layer faster. The answer is cool surfaces, dusttight enclosures that keep fibers off live parts, and luminaires that cannot drop sparks or hot metal.",
+      "exam_trap": "The trap is wiring Class III like Class I: sealing fittings within 18 in of every enclosure. Class III has no seal requirement at all — the enclosures are dusttight, not explosionproof, and 503.10 is the whole wiring rule. The second trap is the reverse: treating Class III as ordinary space because 'it is only lint.' The classification is real, and the 503.5 temperature caps are the write-up when a hot standard luminaire goes in.",
+      "inspection_fails": [
+        "Open luminaire over the saw line, its lens packed with lint.",
+        "Standard (not dusttight) box and fittings inside the classified boundary.",
+        "Type NM cable run through the Class III area.",
+        "Open drip-proof motor installed where a totally enclosed motor is required.",
+        "Luminaire surface temperature over the 165°C (329°F) limit for the fibers present."
+      ],
+      "tables": [
+        {
+          "caption": "Class III at a glance",
+          "headers": [
+            "Feature",
+            "Division 1",
+            "Division 2"
+          ],
+          "rows": [
+            [
+              "Fibers are",
+              "Made, handled, or used",
+              "Stored, or handled outside the process"
+            ],
+            [
+              "Wiring methods",
+              "503.10 list",
+              "Same list as Division 1"
+            ],
+            [
+              "Boxes and fittings",
+              "Dusttight",
+              "Dusttight"
+            ],
+            [
+              "Open wiring on insulators",
+              "Not permitted",
+              "Storage-only areas, no machinery"
+            ]
+          ],
+          "note": "Surface temperature caps in both divisions: 165°C (329°F), or 120°C (248°F) for equipment that can be overloaded (503.5)."
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "What is the highest surface temperature allowed for a motor in a Class III location?",
+          "choices": [
+            "165°C (329°F)",
+            "120°C (248°F)",
+            "200°C (392°F)",
+            "85°C (185°F)"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Motors can be overloaded, so 503.5 caps them at 120°C (248°F). The 165°C (329°F) cap is for equipment not subject to overloading.",
+          "nec_ref": "503.5"
+        },
+        {
+          "question": "Which wiring method is permitted in Class III, Division 1?",
+          "choices": [
+            "Type NM cable",
+            "Open wiring on insulators",
+            "EMT with dusttight boxes and fittings",
+            "Type AC cable"
+          ],
+          "answer_index": 2,
+          "explain_plain": "503.10 permits EMT — and RMC, rigid nonmetallic conduit, RTRC, IMC, dusttight wireways, and Type MC or MI cable — with dusttight boxes and fittings.",
+          "nec_ref": "503.10(A)"
+        },
+        {
+          "question": "Are sealing fittings required in Class III locations?",
+          "choices": [
+            "Yes, within 18 in of each enclosure",
+            "Yes, at every boundary",
+            "No — boxes and fittings must be dusttight, but no seals are required",
+            "Only in Division 1"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Class III has no seal requirement. The enclosures are dusttight, not explosionproof; the seal rules of Articles 501 and 502 do not carry over.",
+          "nec_ref": "503.10"
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-503-fiber-room.svg",
+          "alt": "Plan view of a Class III Division 1 saw room: enclosed and gasketed dusttight luminaire, totally enclosed motor, dusttight boxes on the raceway run, a lint buildup flagged in red, and the 165 and 120 degree C surface temperature caps.",
+          "caption": "Inside the boundary: dusttight everything, cool surfaces, no seals.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "code_refs": [
+        "500.5(D)",
+        "503.5",
+        "503.10",
+        "503.30",
+        "503.125",
+        "503.130"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "503.10 wiring methods, dusttight boxes and fittings, Division 2 follows Division 1, and no seal requirements in Class III locations",
+          "source": "McGraw-Hill's National Electrical Code 2020 Handbook, Article 503 commentary (Access Engineering)",
+          "url": "https://www.accessengineeringlibrary.com/binary/mheaeworks/e4dd0ac562270b37/91f26eca5d7c82842fb042571495ed31645a68f57c3f54a5d5617fb3dd675ce5/-class-iii-locations.pdf"
+        },
+        {
+          "claim": "503.5 maximum surface temperatures: 165°C (329°F) for equipment not subject to overloading and 120°C (248°F) for equipment that may be overloaded; 503.130 luminaire construction",
+          "source": "NEC Article 503 text, reproduced at PubHTML5",
+          "url": "https://pubhtml5.com/gsxp/kgwf/basic/51-100"
+        },
+        {
+          "claim": "503.10(A) method list and the Division 2 storage-only exception for open wiring on insulators",
+          "source": "Solar365, NEC Article 503 text",
+          "url": "https://www.solar365.com/green-homes/national-electric-code-2008/class-dde-locations"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C5-ART-504",
@@ -565,8 +1031,8 @@
       "article": "505",
       "section": "505",
       "title": "Zone 0, 1, and 2 locations — the zone system for gases and vapors",
-      "plain_explanation": "Article 505 is the alternative zone classification system for gas and vapor hazards, used more in industrial and international-style designs. Zone 0 is where an ignitible atmosphere is present continuously or for long periods, Zone 1 where it is likely in normal operation, and Zone 2 where it is unlikely and short-lived. Equipment carries zone-specific markings and protection types that do not read the same as class and division markings.\n\nNEC 2023 CHANGE:\n• 505.9(C): Created a new Table 13 in Chapter 9 entitled Equipment Suitable for Hazardous (Classified) Locations. The text was deleted at 505.9(C)(2)(4) referencing Table 505.9(C)(2)(4) with new text added to reference Chapter 9 Table 13.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Do not assume a Division-rated fitting and a Zone-rated fitting are interchangeable — read the marking for the system the design uses. When the plans classify by zone, this article, not 501, is the rulebook.",
+      "plain_explanation": "Article 505 is the zone system for Class I gas and vapor hazards — the alternative to the class-and-division system of Article 501, used more in industrial and international-style designs.\n• Zone 0: an ignitible atmosphere is present continuously, or for long periods — inside a tank, above a liquid surface.\n• Zone 1: the atmosphere is likely to be present in normal operation — around vents and open handling points.\n• Zone 2: the atmosphere is not likely in normal operation, and if it shows up it lasts only a short time.\n• Material groups (505.6) replace the division groups: IIA covers propane, gasoline, and methane; IIB covers ethylene; IIC covers hydrogen and acetylene and is the most severe. Equipment marked IIC also suits IIB and IIA areas.\n• Protection techniques live at 505.8 — flameproof, pressurized, intrinsic safety, oil immersion, increased safety, encapsulation, powder filling, type 'n', and gas detection. Zone 0 takes only the most restrictive: intrinsic safety and oil immersion are the techniques that reach it.\n• Wiring follows the zone (505.15). Zone 0 permits only intrinsically safe wiring installed under Article 504. Zone 1 adds the heavy methods — threaded rigid and intermediate conduit, Type MI, and listed cable systems — and Zone 2 relaxes the list one step further.\n• Equipment is marked for the system: zone, material group, and a temperature class, T1 through T6, running from a 450°C maximum surface down to 85°C (505.9).",
+      "on_the_job": "Industrial job with an engineer-sealed classification drawing: the area around a process vent is Class I, Zone 1, Group IIB, and the takeoff prices threaded rigid conduit and checks every fixture submittal for a nameplate that reads Zone 1, IIB, with a temperature class at or under the gas ignition temperature — T3, a 200°C maximum surface, on this design. A Division 1 fixture with the right look does not get substituted, and Mike Holt reviews the method before anything is ordered.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -585,7 +1051,119 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "The zone system grades the hazard by how often the ignitible cloud is actually there, then matches the protection to the exposure. Zone 0 gear lives in the cloud, so only techniques that cannot release ignition energy at all are allowed in. The marking system is the safety system: a fixture certified under the division rules was tested to a different standard, and its nameplate says nothing about zones, II groups, or T classes.",
+      "exam_trap": "The trap: 'Zone 1 is just Division 1 with a new name, so Division 1 equipment is fine.' It is not. The two systems run side by side, but the markings are not interchangeable — 505 equipment is marked with the zone, the II material group, and a T class. Ordering off the division nameplate is the classic fail on a zone-classified job.",
+      "inspection_fails": [
+        "Division-rated fixture installed in a Zone 1 area; its nameplate carries no zone marking.",
+        "Threaded entries not made up wrenchtight, or fewer than five threads engaged into flameproof equipment.",
+        "Group IIA equipment installed where the gas is Group IIC.",
+        "Temperature class hotter than the ignition temperature of the gas present.",
+        "Ordinary wiring methods run into a Zone 0 space that allows only intrinsically safe wiring."
+      ],
+      "tables": [
+        {
+          "caption": "The three zones",
+          "headers": [
+            "Zone",
+            "The atmosphere is there",
+            "Wiring headline"
+          ],
+          "rows": [
+            [
+              "0",
+              "Continuously, or for long periods",
+              "Intrinsically safe only (Art. 504)"
+            ],
+            [
+              "1",
+              "Likely in normal operation",
+              "Threaded RMC/IMC, MI, listed cable systems"
+            ],
+            [
+              "2",
+              "Unlikely, and only briefly",
+              "Zone 1 methods, plus one step of relief"
+            ]
+          ],
+          "note": "Extents come from the classification drawing for the job — the article grades the zones, the engineer draws them."
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "In which zone is an ignitible atmosphere present continuously or for long periods?",
+          "choices": [
+            "Zone 2",
+            "Zone 1",
+            "Zone 0",
+            "Division 2"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Zone 0 is the most severe grade: the ignitible atmosphere is there continuously or for long periods, like inside a tank.",
+          "nec_ref": "505.5"
+        },
+        {
+          "question": "Which material group is the most severe in the zone system?",
+          "choices": [
+            "IIA — propane",
+            "IIB — ethylene",
+            "IIC — hydrogen and acetylene",
+            "All three are equal"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Group IIC covers hydrogen and acetylene, the hardest gases to contain. IIC-marked equipment also suits IIB and IIA areas.",
+          "nec_ref": "505.6"
+        },
+        {
+          "question": "What wiring is permitted in a Class I, Zone 0 location?",
+          "choices": [
+            "Threaded rigid conduit",
+            "Type MC cable",
+            "Only intrinsically safe wiring under Article 504",
+            "Any Division 1 method"
+          ],
+          "answer_index": 2,
+          "explain_plain": "505.15(A) permits only intrinsically safe wiring methods, installed in accordance with Article 504, in Zone 0.",
+          "nec_ref": "505.15(A)"
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-505-zone-map.svg",
+          "alt": "Concentric zone plan around a tank: Zone 0 inside the tank, Zone 1 in the ring around it, Zone 2 in the outer ring, and unclassified space beyond, with the IIA, IIB and IIC material groups listed.",
+          "caption": "Zones grade how often the ignitible cloud is present.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "code_refs": [
+        "505.5",
+        "505.6",
+        "505.8",
+        "505.9",
+        "505.15",
+        "Article 504"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "505.6 material groups: IIA (propane, gasoline, methane), IIB (ethylene), IIC (hydrogen, acetylene); IIC equipment also suits IIB and IIA",
+          "source": "HSM University, ELEC-220 Lesson 5: Hazardous locations",
+          "url": "https://www.hsmuniversity.org/us/course/elec-220-national-electrical-code-ii/lesson-5-hazardous-locations"
+        },
+        {
+          "claim": "505.15(A): in Class I, Zone 0 locations, only intrinsically safe wiring methods in accordance with Article 504 are permitted",
+          "source": "NEC Article 505 text, reproduced at Yumpu",
+          "url": "https://www.yumpu.com/fr/document/view/62991948/nfpa2005/373"
+        },
+        {
+          "claim": "505.8 lists nine protection techniques; intrinsic safety and oil immersion are the techniques that also apply in Zone 0",
+          "source": "EC&M, Article 505: Zone Locations",
+          "url": "https://www.ecmweb.com/national-electrical-code/article/20898035/article-505-zone-locations?page=2"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 505.9(C): Created a new Table 13 in Chapter 9 entitled Equipment Suitable for Hazardous (Classified) Locations. The text was deleted at 505.9(C)(2)(4) referencing Table 505.9(C)(2)(4) with new text added to reference Chapter 9 Table 13.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C5-ART-506",
@@ -726,8 +1304,8 @@
       "article": "510",
       "section": "510",
       "title": "Hazardous locations — specific occupancies gateway",
-      "plain_explanation": "Article 510 is the short gateway article that points from the general classified-location rules to the specific occupancies that follow it in this chapter. Commercial garages, aircraft hangars, fuel dispensing, bulk storage, and spray operations each get their own article because each one pre-decides common classifications for that occupancy. When one of those articles applies, it works together with Articles 500 through 503.\n\nNEC 2023 CHANGE:\n• 512: New Article 512, Cannabis Oil Equipment and Cannabis Oil Systems Using Flammable Materials: covers preparatory, extraction and post-processing equipment and booths using flammable solvents; equipment and systems must be listed for the location (512.20); fixed wiring above classified areas in metal raceway, PVC, RTRC, ENT or MI/TC/MC cable (512.13).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "When a job is one of the named occupancies, start with its own article to see what classification has already been decided for you. Then use 500 through 503 for the wiring and equipment rules inside the classified parts.",
+      "plain_explanation": "Article 510 is the short gateway article that points from the general classified-location rules to the specific occupancies that follow it in this chapter. Commercial garages, aircraft hangars, fuel dispensing, bulk storage, and spray operations each get their own article because each one pre-decides common classifications for that occupancy. When one of those articles applies, it works together with Articles 500 through 503:\n• Article 511 — commercial garages, repair and storage.\n• Article 513 — aircraft hangars.\n• Article 514 — motor fuel dispensing facilities.\n• Article 515 — bulk storage plants.\n• Article 516 — spray application, dipping, coating and printing processes.\nThe general articles still do the heavy lifting inside the classified parts — 500 for the classification framework, 501 for Class I, 502 for Class II, 503 for Class III. The occupancy article tells you where the classified areas are; 500 through 503 tell you how to wire inside them.",
+      "on_the_job": "When a job is one of the named occupancies, start with its own article to see what classification has already been decided for you. Then use 500 through 503 for the wiring and equipment rules inside the classified parts. On a repair-garage bid in Belleview, the takeoff opened at 511, not 501: the 511 pages had already settled the floor band, the pits, and the GFCI scope, and 501 only came out for the seal and raceway rules inside those pockets. Starting at 500 would have meant re-deciding classifications the book had already decided.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -746,7 +1324,110 @@
           "url": "https://www.electricallicenserenewal.com/Electrical-Continuing-Education-Courses/NEC-Content.php?sectionID=1519",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Every one of these occupancies has the same argument waiting to happen: how much of the building is really classified? Article 510 ends the argument before it starts, by sending each occupancy to an article where the common answers — the pit, the floor band, the dispenser island — are already decided. That keeps five estimators and five inspectors from drawing five different maps of the same garage.",
+      "exam_trap": "The trap is treating Article 510 as if it held rules of its own to memorize, or skipping it and wiring a hangar straight out of Article 501. 510 is a signpost: the occupancy article first, because it pre-decides the classification, then 500 through 503 for the methods inside. An answer that classifies a garage pit from the general rules alone has taken the long way to the wrong map.",
+      "tables": [
+        {
+          "caption": "The gateway map (NEC 2020)",
+          "headers": [
+            "Article",
+            "Covers"
+          ],
+          "rows": [
+            [
+              "511",
+              "Commercial garages"
+            ],
+            [
+              "513",
+              "Aircraft hangars"
+            ],
+            [
+              "514",
+              "Motor fuel dispensing"
+            ],
+            [
+              "515",
+              "Bulk storage plants"
+            ],
+            [
+              "516",
+              "Spray application and coating"
+            ],
+            [
+              "500–503",
+              "General classified-location rules"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-510-gateway-flow.svg",
+          "alt": "Flow chart for Article 510: a named occupancy leads to its own article (511 garages, 513 hangars, 514 fuel dispensing, 515 bulk plants, 516 spray work), which pre-decides where the classified areas are, then Articles 500 through 503 supply the wiring, sealing and equipment rules.",
+          "caption": "Start with the occupancy article; finish with 500–503.",
+          "w": 900,
+          "h": 1450
+        }
+      ],
+      "inspection_fails": [
+        "Hangar floor-band receptacles wired with ordinary commercial methods — the takeoff never opened Article 513.",
+        "Garage classified pockets priced from Article 501 alone, missing the classifications 511 had already decided.",
+        "Spray booth wired as ordinary industrial space; Article 516 never applied.",
+        "Fuel dispensing disconnects laid out without Article 514’s placement rules."
+      ],
+      "page_quiz": [
+        {
+          "question": "A bid comes in for a bulk storage plant. Which article do you open first?",
+          "choices": [
+            "500",
+            "515",
+            "501",
+            "300"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Article 510 sends each named occupancy to its own article first; bulk storage plants are Article 515.",
+          "nec_ref": "Article 510; 515"
+        },
+        {
+          "question": "What does the occupancy article decide that Articles 500–503 do not?",
+          "choices": [
+            "The wiring methods inside classified areas",
+            "Where the classified areas are for that occupancy",
+            "The seal fitting rules",
+            "Equipment listing requirements"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The occupancy article pre-decides the common classifications for that occupancy; 500–503 supply the rules inside them.",
+          "nec_ref": "Article 510"
+        },
+        {
+          "question": "Inside a classified pocket in a commercial garage, the wiring methods come from:",
+          "choices": [
+            "Article 511 alone",
+            "Article 501, working together with 511",
+            "Article 300",
+            "The garage article only, for GFCI"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The occupancy article works together with Articles 500 through 503; Class I methods are in 501.",
+          "nec_ref": "Article 510; 501"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 512: New Article 512, Cannabis Oil Equipment and Cannabis Oil Systems Using Flammable Materials: covers preparatory, extraction and post-processing equipment and booths using flammable solvents; equipment and systems must be listed for the location (512.20); fixed wiring above classified areas in metal raceway, PVC, RTRC, ENT or MI/TC/MC cable (512.13).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "Article 510",
+        "Articles 500–503",
+        "Article 511",
+        "Article 513",
+        "Article 514",
+        "Article 515",
+        "Article 516"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-ART-511",
@@ -754,8 +1435,8 @@
       "article": "511",
       "section": "511",
       "title": "Commercial garages — repair and storage",
-      "plain_explanation": "Article 511 covers places that service or repair self-propelled vehicles that run on flammable liquids or gases — auto repair shops, dealership service bays, and similar light-commercial work Sharma actually bids. Gasoline vapor is heavier than air, so the classification story is mostly about the floor, pits, and the space just above them. Parking-only garages are treated differently from repair garages, and if fuel is dispensed on site, Article 514 joins in.",
-      "on_the_job": "First question on any garage bid: is it repair or parking only, major or minor repair, and is there a pit or fuel dispensing? Those answers set the classification before anyone prices conduit and fittings.",
+      "plain_explanation": "Article 511 covers places that service or repair self-propelled vehicles that run on flammable liquids or gases — auto repair shops, dealership service bays, and similar light-commercial work Sharma bids.\n• Scope, 511.1: covers service and repair operations for self-propelled vehicles using volatile flammable liquids or flammable gases as fuel.\n• Major or minor, 511.2: a major repair garage is where engine overhauls, painting, body and fender work, and repairs that require draining the fuel tank are performed. A minor repair garage handles lubrication, inspection, tune-ups, and routine fluid changes.\n• Parking is not repair, 511.3(A): parking or storage garages are not required to be classified.\n• Where the class lands, 511.3(C): gasoline vapor is heavier than air and pools at the floor. In a major repair garage without the required ventilation, the entire floor area is Class I, Division 2 up to 18 in above the floor, and a pit with no ventilation is Class I, Division 1 up to the floor level. Mechanical ventilation at a minimum of four air changes per hour leaves the floor area unclassified. Lighter-than-air fuels (natural gas, hydrogen) flip the problem to the ceiling: the band within 18 in of the ceiling is classified the same way without that ventilation.\n• Fuel dispensing, 511.3(B): if fuel is dispensed on site, the dispensing functions are classified from Table 514.3(B)(1), and Article 514 joins in.\nInside classified areas, wiring and equipment follow the Class I rules of Article 501 (511.4); above the band, 511.7 allows a defined list of fixed wiring methods.",
+      "on_the_job": "First question on any garage bid: is it repair or parking only, major or minor repair, and is there a pit or fuel dispensing? Those answers set the classification before anyone prices conduit and fittings. On a six-bay dealership service department in Orlando — major repair, no pit, ventilation not yet on the drawings — price the floor band as Class I, Division 2 to 18 in: keep receptacles and drops above the band, and run 20 A minimum branch circuits on 12 AWG copper per S-01, with Siemens gear per S-02.",
       "sharma_note": "S-01: commercial branch circuits are 20 ampere minimum on 12 AWG copper. S-02 and S-03: new gear is Siemens, and breakers in an existing panel match that panel's listing.",
       "figure_idea": "Bay elevation sketch: floor band, pit, and ceiling zone shaded differently, showing why height decides the rules.",
       "related_ids": [
@@ -771,7 +1452,125 @@
         "S-01",
         "S-02",
         "S-03"
-      ]
+      ],
+      "why_it_exists": "Gasoline vapor sinks and spreads across the floor, and a pit collects it like a bowl. One spark from an ordinary switch, motor, or drop light inside that layer can light the whole floor. The classification draws the boundary where the fuel actually gathers, so the equipment inside it is built not to be that spark.",
+      "exam_trap": "The trap is treating every garage the same. A parking-only garage is unclassified, and an oil-change shop is minor repair — neither prices like a major repair garage. The other direction fails too: the floor band in a major repair garage is 18 in, not the 12 in or 24 in the exam offers.",
+      "inspection_fails": [
+        "Receptacles and a drop light installed inside the 18 in floor band of a major repair garage, wired and equipped as an ordinary location.",
+        "Pit lighting and receptacles wired with general-purpose devices — the unventilated pit is Class I, Division 1 up to the floor.",
+        "The floor band classified only around the workbenches — without the required ventilation, the entire floor area is Division 2 up to 18 in.",
+        "A fuel dispensing area inside the shop classified under Article 511 alone — dispensing functions classify from Table 514.3(B)(1)."
+      ],
+      "tables": [
+        {
+          "caption": "Classification at a glance — 511.3 (NEC 2020)",
+          "headers": [
+            "Area",
+            "Condition",
+            "Class"
+          ],
+          "rows": [
+            [
+              "Parking / storage only",
+              "No repair work",
+              "Unclassified"
+            ],
+            [
+              "Major repair floor",
+              "Ventilation not provided",
+              "Class I Div 2 to 18 in"
+            ],
+            [
+              "Major repair floor",
+              "4 air changes per hour",
+              "Unclassified"
+            ],
+            [
+              "Pit, major repair",
+              "Ventilation not provided",
+              "Class I Div 1 to floor"
+            ],
+            [
+              "Ceiling, gas fuels",
+              "Ventilation not provided",
+              "Class I Div 2 within 18 in"
+            ]
+          ],
+          "note": "Pit and ventilation details: 511.3(C). Dispensing areas classify from Table 514.3(B)(1)."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-511-bay-zones.svg",
+          "alt": "Elevation of a major repair garage bay: a Class I Division 2 ceiling band within 18 in for gas fuels, a Class I Division 2 floor band up to 18 in, and a pit classified Class I Division 1.",
+          "caption": "Where the classification lands in a repair bay: floor, pit, ceiling.",
+          "w": 900,
+          "h": 1360
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "In a major repair garage with no ventilation provided, the entire floor area is classified:",
+          "choices": [
+            "6 in above the floor, Class I Div 1",
+            "18 in above the floor, Class I Div 2",
+            "24 in above the floor, Class I Div 2",
+            "It is unclassified"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Without the ventilation 511.3 requires, the whole floor area is Class I, Division 2 up to 18 in above the floor.",
+          "nec_ref": "511.3(C)"
+        },
+        {
+          "question": "An unventilated pit in a major repair garage is classified:",
+          "choices": [
+            "Unclassified",
+            "Class I, Division 2",
+            "Class I, Division 1 up to the floor level",
+            "Class II, Division 1"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Vapor collects in the pit, so an unventilated pit is Class I, Division 1 up to the floor level.",
+          "nec_ref": "511.3(C)"
+        },
+        {
+          "question": "A parking-only garage under 511.3(A) is:",
+          "choices": [
+            "Class I, Division 2 at the floor",
+            "Not required to be classified",
+            "Class I, Division 1 in any pit",
+            "Classified from Table 514.3(B)(1)"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Parking and storage garages are not required to be classified — classification starts with repair work.",
+          "nec_ref": "511.3(A)"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "511.1",
+        "511.2",
+        "511.3(A)",
+        "511.3(B)",
+        "511.3(C)",
+        "511.4",
+        "511.7",
+        "Table 514.3(B)(1)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "Major repair garage means engine overhauls, painting, body and fender work, and repairs requiring draining of the fuel tank; minor repair means lubrication, inspection, tune-ups, and routine parts and fluid changes. In a major repair garage without ventilation, the entire floor area is Class I, Division 2 up to 18 in above the floor; mechanical ventilation at a minimum of four air changes per hour leaves it unclassified; the band within 18 in of the ceiling is classified for lighter-than-air gaseous fuels without ventilation.",
+          "source": "Mike Holt, Illustrated Guide to Understanding the NEC — Article 511, Commercial Garages (sample)",
+          "url": "https://mikeholt.com/instructor2/img/product/pdf/14UND2-1251-sample.pdf?srsltid=AU7gw4Xtc2KwGWj4Fj6ybL29t_E4Uk4HvmaO2apWSLsz9FltGTT_4mcl"
+        },
+        {
+          "claim": "Any pit or depression below floor level in a repair garage that is not ventilated is Class I, Division 1 up to the floor level.",
+          "source": "ExamFinch, AK Electrician study guide — Article 511, Commercial Garages (2020 NEC)",
+          "url": "https://examfinch.com/study-guides/ak-electrician/ch11/ch11-sec04?exam=ak-electrician"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C5-511.3",
@@ -803,8 +1602,8 @@
       "article": "511",
       "section": "511.4",
       "title": "Wiring and equipment inside the classified areas",
-      "plain_explanation": "Inside the parts of a garage that 511.3 classifies, wiring and equipment follow the Class I rules of Article 501. Portable lighting used in those areas has to be identified for the location or arranged so it cannot be used inside the classified space. The practical message is that the classified pocket is wired like any other Class I, Division location, even though the rest of the shop is ordinary.",
-      "on_the_job": "Price and rough classified pockets with Article 501 methods — threaded metal raceway, seals, and listed fittings — not with shop-standard materials. Keep portable trouble lights for classified areas in the identified type only.",
+      "plain_explanation": "Inside the parts of a garage that 511.3 classifies, wiring and equipment follow the Class I rules of Article 501:\n• Division 1 pockets, 501.10(A): threaded rigid metal conduit or threaded steel IMC is the everyday method; Type MI cable, and Type MC-HL cable where its conditions are met, are also permitted. Ordinary-location methods — NM cable, EMT with set-screw fittings, unsealed conduit — stop at the boundary.\n• Seals, 501.15: a seal fitting goes within 18 in of an explosionproof enclosure that holds arcing or hot parts, and seals are also required where conduit leaves the classified area.\n• Portable lighting: portable lighting used in those areas has to be identified for the location or arranged so it cannot be used inside the classified space.\nThe practical message is that the classified pocket is wired like any other Class I, Division location, even though the rest of the shop is ordinary.",
+      "on_the_job": "Price and rough classified pockets with Article 501 methods — threaded metal raceway, seals, and listed fittings — not with shop-standard materials. Keep portable trouble lights for classified areas in the identified type only. On a repair garage in Ocala, the pit and floor-band work ran in threaded rigid with a seal within 18 in of every explosionproof box, while the bays above the band roughed in the shop's normal methods. The material split is the whole bid: price the pocket like a gas station, not like a garage, or the job loses money at the first fitting order.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -815,7 +1614,95 @@
       "verified": true,
       "prev_id": "C5-511.3",
       "next_id": "C5-511.7",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "The pocket exists because fuel vapor collects there. Vapor also travels — it creeps along conduit runs and pools inside enclosures. Threaded metal raceway contains it, and seals stop the raceway from becoming a pipe that carries vapor, or a flame front, into the clean part of the building. One set-screw fitting is all it takes to break that chain.",
+      "exam_trap": "The trap is 'the garage is a commercial building, so commercial methods apply throughout.' Inside the classified pocket they do not. The boundary is the whole game: the same conduit run is ordinary on one side of it and threaded, sealed Class I work on the other — and an answer that carries EMT and set-screw fittings through the pocket is wrong.",
+      "tables": [
+        {
+          "caption": "At the boundary (NEC 2020)",
+          "headers": [
+            "Side",
+            "Wiring"
+          ],
+          "rows": [
+            [
+              "Inside the classified pocket",
+              "Threaded RMC or threaded steel IMC; MI or MC-HL where permitted — 501.10(A)"
+            ],
+            [
+              "At an explosionproof enclosure",
+              "Seal fitting within 18 in — 501.15"
+            ],
+            [
+              "Rest of the shop",
+              "Ordinary commercial methods"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-511.4-classified-pocket.svg",
+          "alt": "Garage section showing threaded rigid conduit and an explosionproof box inside the classified pocket, a seal fitting within 18 inches of the box, the classified boundary, and a portable light that must be identified for the location.",
+          "caption": "The boundary is the whole game: Class I methods inside, ordinary outside.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "inspection_fails": [
+        "EMT with set-screw fittings run through the classified floor pocket.",
+        "Explosionproof enclosure in the pit with no seal fitting within 18 in.",
+        "Ordinary shop trouble light used inside the classified area; not identified for the location.",
+        "Conduit leaving the classified area unsealed at the boundary."
+      ],
+      "page_quiz": [
+        {
+          "question": "Wiring inside a garage’s Class I classified pocket must follow:",
+          "choices": [
+            "Article 300",
+            "Article 501",
+            "Article 334",
+            "The same methods as the rest of the shop"
+          ],
+          "answer_index": 1,
+          "explain_plain": "511.4 sends wiring and equipment inside the classified areas to the Class I rules of Article 501.",
+          "nec_ref": "511.4; 501.10(A)"
+        },
+        {
+          "question": "A seal fitting at an explosionproof enclosure holding arcing parts goes within:",
+          "choices": [
+            "10 ft",
+            "5 ft",
+            "18 in",
+            "24 in"
+          ],
+          "answer_index": 2,
+          "explain_plain": "501.15 puts the seal within 18 in of the enclosure.",
+          "nec_ref": "501.15"
+        },
+        {
+          "question": "A portable trouble light used inside the classified area must be:",
+          "choices": [
+            "Any heavy-duty type",
+            "Identified for the location, or arranged so it cannot be used inside the classified space",
+            "GFCI protected only",
+            "LED"
+          ],
+          "answer_index": 1,
+          "explain_plain": "511.4 requires portable lighting in the classified areas to be identified for the location, or arranged so it cannot be used there.",
+          "nec_ref": "511.4"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "511.4",
+        "501.10(A)",
+        "501.15",
+        "511.3"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-511.7",
@@ -1232,8 +2119,8 @@
       "article": "513",
       "section": "513",
       "title": "Aircraft hangars",
-      "plain_explanation": "Article 513 classifies and wires aircraft hangars, where fuel vapors gather near the floor and in pits much as they do in garages, but around aircraft instead of cars. The floor band and pit classifications, and the wiring rules that follow them, are the core of the article. Sharma sees this rarely, but a hangar bid is never priced with ordinary commercial methods.",
-      "on_the_job": "Recognize the occupancy on the bid walk and route the takeoff to Mike Holt. The classification tables in this article decide the methods before any labor number makes sense.",
+      "plain_explanation": "Article 513 classifies and wires aircraft hangars, where fuel vapors gather near the floor and in pits much as they do in garages, but around aircraft instead of cars. The classification is decided by height above the floor and by distance from the aircraft:\n• Pits, 513.3(B): any pit or depression below the hangar floor is Class I, Division 1, up to the level of the floor.\n• Floor band, 513.3(A): the entire floor area up to 18 in above the floor is Class I, Division 2. Adjacent areas that are not suitably cut off from the hangar share that classification.\n• Around the aircraft, 513.3(C): within 5 ft horizontally of aircraft power plants or fuel tanks, the Division 2 area runs from the floor up to 5 ft above the upper surface of the wings and engine enclosures.\n• Adjacent areas, 513.3(D): an area next to the hangar can stay unclassified where it is suitably cut off, or ventilated at not less than four air changes per hour.\nInside the classified parts, wiring and equipment follow Article 501, and the rest of the article adds hangar-specific equipment and grounding rules. Sharma sees this rarely, but a hangar bid is never priced with ordinary commercial methods.",
+      "on_the_job": "Recognize the occupancy on the bid walk and route the takeoff to Mike Holt. The classification tables in this article decide the methods before any labor number makes sense. On a hangar service call in Ocala, price the floor-level work as classified work: a receptacle added at 12 in above the floor sits inside the Division 2 band, so it is threaded rigid conduit, seals, and listed fittings — not the EMT and set-screw fittings a normal commercial job would take. The same receptacle at 24 in, above the band and away from the aircraft, is ordinary work. Height is money on this article.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1243,7 +2130,122 @@
       "verified": true,
       "prev_id": "C5-511.12",
       "next_id": "C5-ART-514",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Aircraft fuel vapor is heavier than air. It sinks, spreads across the floor, and pools in pits — exactly where a dropped tool, a receptacle, or a motor can spark. The floor band and the pit rules put the strictest wiring where the vapor actually sits, instead of treating the whole tall hangar like a bomb.",
+      "exam_trap": "The trap is calling the whole hangar Division 1, or the whole hangar ordinary. Both are wrong. Division 1 is the pit. The floor band up to 18 in is Division 2, the zone around the aircraft reaches 5 ft above the wing, and above those zones the space is generally unclassified.",
+      "tables": [
+        {
+          "caption": "Hangar classification at a glance (NEC 2020)",
+          "headers": [
+            "Where",
+            "Classification",
+            "Section"
+          ],
+          "rows": [
+            [
+              "Pit or depression below the floor",
+              "Class I, Division 1",
+              "513.3(B)"
+            ],
+            [
+              "Floor area, up to 18 in above the floor",
+              "Class I, Division 2",
+              "513.3(A)"
+            ],
+            [
+              "Within 5 ft of a power plant or fuel tank",
+              "Division 2, to 5 ft above the wing",
+              "513.3(C)"
+            ],
+            [
+              "Adjacent area, cut off or ventilated",
+              "Unclassified",
+              "513.3(D)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-513-hangar-zones.svg",
+          "alt": "Hangar section showing a Class I Division 1 pit below the floor, the Class I Division 2 floor band up to 18 inches, and the Division 2 zone around an aircraft extending 5 feet above the wing.",
+          "caption": "The hangar zones: pit, floor band, and the column around the aircraft.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "inspection_fails": [
+        "Receptacle roughed in EMT with set-screw fittings at 12 in above the hangar floor, inside the Division 2 band.",
+        "Pit lighting and devices wired with ordinary-location methods in a Class I, Division 1 pit.",
+        "Equipment not identified for the location used down in the floor band instead of above the 18 in line.",
+        "Conduit run through the floor slab left unsealed where it leaves the classified floor area."
+      ],
+      "page_quiz": [
+        {
+          "question": "A pit below the hangar floor is classified as:",
+          "choices": [
+            "Class I, Division 2",
+            "Class I, Division 1",
+            "Unclassified",
+            "Class II, Division 1"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Pits and depressions below the floor are Division 1, up to the level of the floor.",
+          "nec_ref": "513.3(B)"
+        },
+        {
+          "question": "The general floor band in a hangar is Division 2 up to what height above the floor?",
+          "choices": [
+            "12 in",
+            "18 in",
+            "24 in",
+            "5 ft"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The entire floor area up to 18 in above the floor is Class I, Division 2.",
+          "nec_ref": "513.3(A)"
+        },
+        {
+          "question": "Near an aircraft fuel tank, the Division 2 area extends up to:",
+          "choices": [
+            "18 in above the floor",
+            "5 ft above the upper surface of the wings and engine enclosures",
+            "The ceiling",
+            "7 ft 6 in above the floor"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Within 5 ft horizontally of power plants or fuel tanks, Division 2 runs from the floor to 5 ft above the wings and engine enclosures.",
+          "nec_ref": "513.3(C)"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "513.3",
+        "513.3(A)",
+        "513.3(B)",
+        "513.3(C)",
+        "513.3(D)",
+        "Article 501"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "513.3 classification: pits Class I, Division 1; floor area to 18 in Class I, Division 2; within 5 ft of power plants or fuel tanks, Division 2 up to 5 ft above the wings and engine enclosures",
+          "source": "EC&M, 'Hangar Stakes Are Higher' (Article 513 walk-through)",
+          "url": "https://www.ecmag.com/magazine/articles/article-detail/codes-standards-hangar-stakes-are-higher"
+        },
+        {
+          "claim": "2020 NEC 513.3(A) and (B): floor band up to 18 in is Class I, Division 2; a pit is Class I, Division 1 up to floor level",
+          "source": "JCR Productions, NC Unlimited Electrical Exam Practice Test",
+          "url": "https://www.jcrproductions.com/blogs/news/nc-unlimited-electrical-exam-practice-test"
+        },
+        {
+          "claim": "513.3(D): adjacent areas stay unclassified where ventilated at four or more air changes per hour, pressurized, or effectively separated",
+          "source": "e-Hazard, 'NEC 513: It's Time for Electrical Hangar Talk'",
+          "url": "https://e-hazard.com/nec-513-its-time-for-electrical-hangar-talk/"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C5-ART-514",
@@ -1815,8 +2817,8 @@
       "article": "517",
       "section": "517.16",
       "title": "Isolated ground receptacles in health care",
-      "plain_explanation": "Isolated ground receptacles are tightly limited in health care work because a receptacle whose ground is isolated from the local grounding system can defeat the redundant grounding that 517.13 builds. No isolated ground receptacle is permitted inside a patient care vicinity. Outside that vicinity, an isolated ground receptacle may be used only with its own insulated grounding conductor run as this section directs, in addition to the normal grounding path.",
-      "on_the_job": "If a clinic plan shows an isolated ground receptacle, check where it sits relative to the patient care vicinity before rough-in. Inside the vicinity is a stop-and-ask, not a field fix.",
+      "plain_explanation": "Isolated ground receptacles are tightly limited in health care work because a receptacle whose ground is isolated from the local grounding system can defeat the redundant grounding that 517.13 builds. The section draws one hard line and one narrow door:\n• Inside the patient care vicinity, 517.16(A): no isolated ground receptacle is permitted at all. The vicinity is the space extending 6 ft beyond the normal location of the bed, chair, table or other device that supports the patient during examination and treatment, and up to 7 ft 6 in above the floor.\n• Outside the vicinity, 517.16(B): an isolated ground receptacle may be used in the patient care space only when both grounding paths are kept straight.\n• Its grounding terminal connects to its own insulated equipment grounding conductor, run per 250.146(D) in addition to the 517.13 paths, identified green with one or more yellow stripes along its entire length.\n• The 517.13(B) insulated conductor — green, with no yellow stripes — is never connected to that grounding terminal. It grounds the metal box and the fixed equipment, as it does everywhere else in the space.",
+      "on_the_job": "If a clinic plan shows an isolated ground receptacle, check where it sits relative to the patient care vicinity before rough-in. Inside the vicinity is a stop-and-ask, not a field fix. On a dental buildout in Winter Garden, the plans showed an orange IG receptacle on the operatory wall 4 ft from the chair — inside the 6 ft vicinity, so it came out, and a hospital-grade receptacle on the normal redundant grounds went in. The imaging room receptacle 9 ft from the chair stayed IG, wired with its own green-with-yellow-striped conductor run back with the circuit, and its box grounded by the plain green 517.13(B) conductor.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1827,7 +2829,106 @@
       "verified": true,
       "prev_id": "C5-517.13",
       "next_id": "C5-517.18",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "A patient in the vicinity is connected to equipment and cannot move away from a fault. 517.13 gives every receptacle two independent ground paths, so one broken path never leaves the patient holding the difference. An isolated ground terminal throws one of those paths away on purpose — fine for noise control down the hall, not acceptable at the bed.",
+      "exam_trap": "The trap answer is that an isolated ground receptacle is fine anywhere in a clinic as long as it gets its own insulated ground. 517.16(A) bans it inside the patient care vicinity outright — no wiring method fixes that. And outside the vicinity, landing the plain green 517.13(B) conductor on the IG terminal is also wrong: that conductor grounds the box, never the isolated terminal.",
+      "tables": [
+        {
+          "caption": "The two green conductors outside the vicinity (NEC 2020)",
+          "headers": [
+            "Conductor",
+            "Identification",
+            "Lands on"
+          ],
+          "rows": [
+            [
+              "IG conductor, 250.146(D)",
+              "Green with yellow stripe(s)",
+              "The IG receptacle grounding terminal only"
+            ],
+            [
+              "517.13(B) conductor",
+              "Green, no stripes",
+              "The metal box and fixed equipment — never the IG terminal"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-517.16-vicinity-plan.svg",
+          "alt": "Plan of a patient room with the patient care vicinity extending 6 feet beyond the bed: an isolated ground receptacle inside the vicinity is marked prohibited, and one outside the vicinity is marked permitted when wired per 517.16(B).",
+          "caption": "The vicinity decides: no IG receptacles inside it, strict wiring outside it.",
+          "w": 900,
+          "h": 1450
+        }
+      ],
+      "inspection_fails": [
+        "Isolated ground receptacle installed 4 ft from the patient chair, inside the patient care vicinity.",
+        "IG receptacle grounding terminal landed on the plain green 517.13(B) conductor instead of its own green-with-yellow-striped conductor.",
+        "The 517.13(B) insulated ground connected to the isolated ground terminal, defeating both the isolation and the box ground.",
+        "Isolated ground receptacle installed with no insulated equipment grounding conductor run with the circuit conductors."
+      ],
+      "page_quiz": [
+        {
+          "question": "A plan shows an IG receptacle 4 ft from a dental chair. Correct action?",
+          "choices": [
+            "Install it with its own insulated ground",
+            "Install it, but bond the box to the terminal",
+            "Do not install it — IG receptacles are prohibited in the vicinity",
+            "Install it if it is hospital grade"
+          ],
+          "answer_index": 2,
+          "explain_plain": "517.16(A) permits no isolated ground receptacle inside the patient care vicinity, however it is wired.",
+          "nec_ref": "517.16(A)"
+        },
+        {
+          "question": "Outside the vicinity, the IG receptacle’s own grounding conductor is identified:",
+          "choices": [
+            "Green",
+            "Green with one or more yellow stripes",
+            "Yellow",
+            "Bare"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The insulated EGC for the IG receptacle is green with one or more yellow stripes along its entire length.",
+          "nec_ref": "517.16(B)"
+        },
+        {
+          "question": "The patient care vicinity extends how far beyond the bed, and how high?",
+          "choices": [
+            "6 ft beyond, up to 7 ft 6 in above the floor",
+            "6 ft beyond, up to 6 ft above the floor",
+            "4 ft beyond, up to 7 ft 6 in above the floor",
+            "10 ft beyond, up to the ceiling"
+          ],
+          "answer_index": 0,
+          "explain_plain": "The vicinity reaches 6 ft beyond the normal location of the patient support device and 7 ft 6 in up.",
+          "nec_ref": "517.2; 517.16(A)"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "517.16(A)",
+        "517.16(B)",
+        "517.13",
+        "250.146(D)",
+        "517.2"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "Patient care vicinity extends 6 ft beyond the patient support device and vertically to 7 ft 6 in above the floor; 517.16(B) requires the IG insulated EGC per 250.146(D), green with one or more yellow stripes, in addition to the 517.13 paths, and the 517.13(B) conductor (green, no stripes) must not connect to the IG grounding terminal",
+          "source": "Mike Holt, Article 517 — Health Care Facilities",
+          "url": "https://www.mikeholt.com/newsletters.php?action=display&letterID=1782&email"
+        },
+        {
+          "claim": "517.16(A) prohibits isolated ground receptacles within the patient care vicinity; (B) covers IG receptacles outside it, wired per 517.13(A) and (B) plus the 250.146(D) insulated conductor",
+          "source": "EC&M, 2017 NEC Significant Changes, Part 8 (Article 517)",
+          "url": "https://www.ecmag.com/magazine/articles/article-detail/codes-standards-2017-nec-special-occupancies-significant-changes-2017-nec-part-8"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C5-517.18",
@@ -2081,8 +3182,8 @@
       "article": "518",
       "section": "518.6",
       "title": "Illumination of working space",
-      "plain_explanation": "Added in the 2020 edition, this short section requires illumination for the working spaces about electrical equipment installed outdoors that serves assembly occupancies. The lighting cannot be controlled by automatic means only, so a person servicing the gear is not left in the dark by a timer or sensor. Where nearby lighting already illuminates the working space adequately, no extra luminaire is required.",
-      "on_the_job": "Add a switched luminaire at outdoor service and distribution gear on assembly jobs, and check it at trim rather than discovering it at final inspection. Put the control on a manual switch, not a photocell or timer alone.",
+      "plain_explanation": "Added in the 2020 edition, this short section requires illumination for the working spaces about electrical equipment installed outdoors that serves assembly occupancies. It works as three short rules:\n• Light the working space: the clear box in front of the outdoor service and distribution equipment — the 110.26(A) space, 3 ft deep at house and small-commercial voltages, 30 in wide or the width of the equipment, 6½ ft high — has to be lit well enough to work in.\n• Not automatic only: the lighting cannot be controlled by automatic means only, so a person servicing the gear is not left in the dark by a timer or sensor.\n• Already lit is lit: where nearby lighting already illuminates the working space adequately, no extra luminaire is required.\n110.26(D) asks the same of working spaces generally; 518.6 makes it explicit for outdoor gear on assembly jobs.",
+      "on_the_job": "Add a switched luminaire at outdoor service and distribution gear on assembly jobs, and check it at trim rather than discovering it at final inspection. Put the control on a manual switch, not a photocell or timer alone. On a fellowship hall addition in Ocala, the 400 A outdoor service sat under the eave with a photocell wall pack above it — dusk-to-dawn, no switch. That fails 518.6 on paper before it fails in person: we swapped the control to a manual switch inside the electrical room, kept the wall pack, and the working space — 3 ft out from the gear — stayed lit on demand.",
       "sharma_note": "Cross-link: working space itself is 110.26 in Chapter 1; this section only adds the light to see it by.",
       "figure_idea": "",
       "related_ids": [
@@ -2093,7 +3194,95 @@
       "verified": true,
       "prev_id": "C5-518.4",
       "next_id": "C5-ART-520",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Outdoor gear gets serviced at night, in the rain, under time pressure — a tripped main at a full church hall on a Saturday evening. Working on live equipment you cannot see is how a slipped screwdriver becomes an arc flash. A manual control guarantees the light stays on as long as the person working does.",
+      "exam_trap": "The trap is 'the photocell wall pack over the panel satisfies it — the space is lit every night.' Lit is not the test; control is. Automatic-only control fails even when the light works perfectly, because a sensor or timer can still drop the light while someone is in the gear.",
+      "tables": [
+        {
+          "caption": "The working space the light must cover (110.26(A))",
+          "headers": [
+            "Dimension",
+            "2020 rule"
+          ],
+          "rows": [
+            [
+              "Depth, 0–150 V to ground",
+              "3 ft"
+            ],
+            [
+              "Width",
+              "30 in or the width of the equipment, whichever is greater"
+            ],
+            [
+              "Height",
+              "6½ ft or the height of the equipment"
+            ]
+          ],
+          "note": "518.6 adds the illumination; the space itself is 110.26(A). The control may not be automatic only."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-518.6-working-space-light.svg",
+          "alt": "Section of an outdoor panelboard showing the working space 3 feet deep and 6 feet 6 inches high, lit by a wall luminaire on a manual switch, with a photocell-only control marked as not enough.",
+          "caption": "Light the 110.26 working space — and keep a manual control on it.",
+          "w": 900,
+          "h": 1400
+        }
+      ],
+      "inspection_fails": [
+        "Outdoor service for a church hall lit only by a photocell wall pack — no manual control.",
+        "Timer-controlled luminaire over the outdoor distribution gear, timed off during evening events.",
+        "No illumination at all at the outdoor working space; the crew is working by flashlight at final.",
+        "Luminaire present but aimed at the parking lot, leaving the working space itself in shadow."
+      ],
+      "page_quiz": [
+        {
+          "question": "An outdoor panelboard serving a banquet hall has its working-space light on a photocell only. Compliant?",
+          "choices": [
+            "Yes, if the light is bright enough",
+            "No — the control may not be automatic only",
+            "Yes, if the photocell is listed",
+            "Only fails if there is no light at all"
+          ],
+          "answer_index": 1,
+          "explain_plain": "518.6 requires the illumination and forbids automatic-only control, so a timer or sensor cannot leave a worker in the dark.",
+          "nec_ref": "518.6"
+        },
+        {
+          "question": "When is no added luminaire required at outdoor gear on an assembly job?",
+          "choices": [
+            "Never — one is always required",
+            "When the gear is under a roof",
+            "When nearby lighting already illuminates the working space adequately",
+            "When the panel is under 200 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "If existing nearby lighting already illuminates the working space adequately, 518.6 does not require another luminaire.",
+          "nec_ref": "518.6"
+        },
+        {
+          "question": "The working space that 518.6 lights is the space defined by:",
+          "choices": [
+            "518.4",
+            "110.26(A)",
+            "210.52",
+            "300.5"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The working space is the 110.26(A) clear space about the equipment; 518.6 adds the light to see it by.",
+          "nec_ref": "110.26(A)"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "518.6",
+        "110.26(A)",
+        "110.26(D)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-ART-520",
@@ -2774,8 +3963,8 @@
       "article": "547",
       "section": "547",
       "title": "Agricultural buildings",
-      "plain_explanation": "Article 547 covers agricultural buildings and areas where excessive dust, dust with water, or a corrosive atmosphere is present — livestock confinement, dairies, poultry houses, and similar Florida rural work. Animals are far more sensitive to small voltages than people, so the article adds equipotential planes, a special site distribution arrangement, and wiring methods that survive corrosion. It modifies the normal chapters; it does not replace them.\n\nNEC 2023 CHANGE:\n• 547.26: Nonmetallic cable can no longer be concealed in walls or above ceilings of buildings attached to livestock confinement areas. Rodents chewing hidden cable is the reason. In any building, or portion of one, that adjoins a livestock confinement area, nonmetallic cable can't be concealed inside walls or run above ceilings.\n• 547.44: Article 547 was regrouped into parts in 2023, carrying the plane rules for livestock areas from 547.10 to 547.44. The plane's bonding connection point is now spelled out. The 2023 renumbering of Article 547 moved the livestock plane rules from 547.10 over to 547.44.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "On any barn or confinement bid, ask early whether livestock will be confined on concrete — that answer pulls in equipotential planes and the distribution point. Price corrosion-resistant methods from the start instead of discovering them at inspection.",
+      "plain_explanation": "Article 547 covers agricultural buildings and areas with excessive dust, dust mixed with water, or a corrosive atmosphere — livestock confinement, dairies, and poultry houses are the Florida cases. It modifies the normal chapters, not replaces them.\n• Animals are far more sensitive to small voltages than people — a cow on wet concrete feels differences a person would never notice — so this article fights stray voltage as hard as corrosion.\n• Equipotential planes (547.10): where livestock are confined on concrete, a bonded wire mesh plane goes in the floor so the animal's feet and the metal it touches stay at the same voltage. It bonds to the building grounding system with solid copper, 8 AWG or larger, on listed pressure connectors or clamps. The pour is the deadline — the plane cannot be added after.\n• Distribution point (547.9): livestock buildings on the same premises are fed from a distribution point in a four-wire grounded arrangement, which keeps neutral current from returning through the earth and the buildings' grounding. More than one point is permitted, and the underground feeders and branch circuits leaving it get overcurrent protection.\n• Wiring methods (547.5) must survive damp, wet, and corrosive conditions, with an insulated equipment grounding conductor where the ground runs underground outside a listed cable assembly. GFCI protection covers 125-volt, single-phase, 15- and 20-ampere receptacles at equipotential planes, outdoors, in damp or wet locations, and in dirt confinement areas (547.5(G)).",
+      "on_the_job": "Horse barn and wash rack outside Ocala: the bid asks on day one whether horses will be confined on the concrete aisle. They will, so the takeoff prices the bonded mesh plane and its 8 AWG solid copper bond before the slab pour, one distribution point feeding barn and wash rack in a four-wire run, and GFCI protection on the 125-volt receptacles at the plane and outdoors. Corrosion-resistant methods are priced from the start, not discovered at inspection.",
       "sharma_note": "",
       "figure_idea": "Barn cross-section sketch: concrete confinement floor with a bonded mesh plane, animals above, and a distribution point feeding several buildings.",
       "related_ids": [
@@ -2803,7 +3992,105 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/547-44",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Two killers share this article. Corrosion eats ordinary boxes, cables, and ground paths until equipment metal sits live in a wet barn. And stray voltage — a volt or two between a waterer and the floor — stresses livestock, cuts production, and is nearly impossible to chase later. The plane, the distribution arrangement, and corrosion-proof methods are one system aimed at both.",
+      "exam_trap": "The trap: giving every barn its own service drop and its own neutral-to-ground bond because it looks simpler. That is the classic stray-voltage layout — neutral current splits between wire, earth, and grounding systems. 547.9 feeds livestock buildings from a distribution point in a four-wire grounded arrangement instead. Second trap: treating the plane as optional on a concrete confinement floor. Where 547.10 applies, the plane and its 8 AWG solid copper bond are the installation, installed before the pour.",
+      "inspection_fails": [
+        "Equipotential plane missing under a concrete livestock confinement floor — or poured in without its bond.",
+        "Each barn on its own service with its own neutral bond; stray voltage at the waterers.",
+        "Indoor-rated boxes and cable corroded through in a damp confinement area.",
+        "No GFCI protection on 125-volt receptacles at the plane, outdoors, or in dirt confinement areas.",
+        "Plane bonding conductor undersized, stranded, or landed with unlisted connectors."
+      ],
+      "tables": [
+        {
+          "caption": "Article 547 working map",
+          "headers": [
+            "Element",
+            "Rule",
+            "Section"
+          ],
+          "rows": [
+            [
+              "Equipotential plane",
+              "Bonded mesh in concrete confinement floors",
+              "547.10"
+            ],
+            [
+              "Plane bond",
+              "Solid copper, 8 AWG min, listed connectors",
+              "547.10"
+            ],
+            [
+              "Building supply",
+              "Distribution point, four-wire grounded",
+              "547.9"
+            ],
+            [
+              "GFCI",
+              "125 V, 15/20 A receptacles at planes, outdoors, damp or wet areas, dirt confinement",
+              "547.5(G)"
+            ]
+          ]
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "What is the minimum bonding conductor for an equipotential plane in a livestock confinement area?",
+          "choices": [
+            "8 AWG solid copper",
+            "6 AWG stranded copper",
+            "10 AWG solid copper",
+            "Any leftover copper on the truck"
+          ],
+          "answer_index": 0,
+          "explain_plain": "547.10: the plane bonds to the building grounding system with a solid copper conductor not smaller than 8 AWG, using listed pressure connectors or clamps.",
+          "nec_ref": "547.10"
+        },
+        {
+          "question": "How are livestock buildings on the same premises supplied?",
+          "choices": [
+            "Each with its own service and neutral bond",
+            "From a distribution point, in a four-wire grounded arrangement",
+            "Two-wire, to keep the neutral off the earth",
+            "From the nearest panel, any arrangement"
+          ],
+          "answer_index": 1,
+          "explain_plain": "547.9 supplies the buildings from a distribution point so neutral current returns on the wire, not through the earth and grounding systems.",
+          "nec_ref": "547.9"
+        },
+        {
+          "question": "Which receptacles need GFCI protection under 547.5(G)?",
+          "choices": [
+            "All receptacles on the farm",
+            "Only the office receptacles",
+            "125-volt, 15- and 20-ampere receptacles at equipotential planes, outdoors, and in damp, wet, or dirt confinement areas",
+            "None — barns are exempt"
+          ],
+          "answer_index": 2,
+          "explain_plain": "547.5(G) lists exactly those locations: planes, outdoors, damp or wet locations, and dirt confinement areas.",
+          "nec_ref": "547.5(G)"
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-547-barn-plane.svg",
+          "alt": "Cross-section of a livestock confinement barn showing a bonded wire mesh equipotential plane in the concrete floor, its 8 AWG solid copper bond to the grounding system, a metal waterer, and a distribution point feeding the panel.",
+          "caption": "The plane goes in before the pour — feet and metal at one voltage.",
+          "w": 900,
+          "h": 1620
+        }
+      ],
+      "code_refs": [
+        "547.5",
+        "547.5(G)",
+        "547.9",
+        "547.10"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "NEC 2023 CHANGE:\n• 547.26: Nonmetallic cable can no longer be concealed in walls or above ceilings of buildings attached to livestock confinement areas. Rodents chewing hidden cable is the reason. In any building, or portion of one, that adjoins a livestock confinement area, nonmetallic cable can't be concealed inside walls or run above ceilings.\n• 547.44: Article 547 was regrouped into parts in 2023, carrying the plane rules for livestock areas from 547.10 to 547.44. The plane's bonding connection point is now spelled out. The 2023 renumbering of Article 547 moved the livestock plane rules from 547.10 over to 547.44.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C5-547.5",
@@ -2834,8 +4121,8 @@
       "article": "547",
       "section": "547.9",
       "title": "Supply from a distribution point — livestock buildings",
-      "plain_explanation": "Livestock agricultural buildings on the same premises are supplied from a distribution point using a four-wire grounded distribution arrangement — and 547.9 expressly permits more than one distribution point on the same premises. The point of the layout is to keep neutral current from returning through the earth and through building grounding systems, which is a classic source of the stray voltage that bothers livestock. Overcurrent protection is required for the underground branch circuits and feeders leaving the distribution point.",
-      "on_the_job": "On a multi-building farm service, draw the distribution point on the site sketch and price the four-wire runs and underground protection as shown. Do not serve each barn with its own improvised service drop and neutral bond.",
+      "plain_explanation": "On a farm with several livestock buildings, the buildings do not each get their own service. They are supplied from a distribution point — the supply point, often the center yard pole or meter pole, from which feeders, service drops or laterals run to the agricultural buildings and the farm dwelling under one management. The rules that make the layout work:\n• The supply from the distribution point is a four-wire grounded arrangement: ungrounded conductors, an insulated grounded (neutral) conductor, and a separate equipment grounding conductor\n• More than one distribution point is expressly permitted on the same premises\n• A site-isolating device at the distribution point disconnects the premises from the utility; it is not the service disconnect for the individual buildings\n• The neutral is bonded to the grounding system at the distribution point — and nowhere else downstream\n• Each building still gets its own grounding electrode system and disconnecting means under 250.32\n• Overcurrent protection is required for the underground branch circuits and feeders leaving the distribution point",
+      "on_the_job": "On a multi-building farm service, draw the distribution point on the site sketch and price the four-wire runs and underground protection as shown. Do not serve each barn with its own improvised service drop and neutral bond. On a Hardee County cattle operation with a dairy barn, a calf barn and the farmhouse on one meter pole, that means three four-wire feeders from the pole, a grounding electrode at the pole and at each building, and neutral and ground bars kept separate in every barn panel — one bond, at the pole, serves the whole farm.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -2846,7 +4133,111 @@
       "verified": true,
       "prev_id": "C5-547.5",
       "next_id": "C5-547.10",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "On an old three-wire farm system, the neutral and the equipment ground share one path, so normal neutral current divides between the wire, the earth, and every bonded water line and stanchion on the place. That shared current is the main on-farm source of stray voltage — the small voltage between two things a cow touches at the same time. The four-wire layout gives neutral current its own insulated road home and keeps it off the earth and the grounding system, so building metal stays at earth potential.",
+      "exam_trap": "The trap answer is one service per barn, each with its own neutral-to-ground bond. Every extra bond puts neutral current back on the earth and the grounding system — exactly what 547.9 exists to stop. The second trap is 'only one distribution point is ever allowed on a farm.' The section expressly permits more than one distribution point on the same premises.",
+      "inspection_fails": [
+        "Neutral bonded again in a barn panel fed from the distribution point.",
+        "Three-wire feeder — no separate equipment grounding conductor — run to a livestock building.",
+        "Underground feeder leaving the distribution point with no overcurrent protection.",
+        "Building fed from the distribution point with no grounding electrode system at the building (250.32).",
+        "No site-isolating device at the distribution point, or the pole switch treated as each building's service disconnect."
+      ],
+      "tables": [
+        {
+          "caption": "Three-wire vs four-wire farm supply",
+          "headers": [
+            "Feature",
+            "3-wire (old way)",
+            "4-wire per 547.9"
+          ],
+          "rows": [
+            [
+              "Neutral return path",
+              "Shared with earth and grounding",
+              "Its own insulated conductor"
+            ],
+            [
+              "Neutral-to-ground bond",
+              "At every building",
+              "At the distribution point only"
+            ],
+            [
+              "Equipment grounding conductor",
+              "Combined with the neutral",
+              "Separate conductor to each building"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-547.9-distribution-point.svg",
+          "alt": "Site plan of a farm with a distribution point at a center pole with meter and site-isolating device, four-wire feeders fanning out to a dairy barn, a farmhouse and a calf barn, and the neutral bonded only at the pole.",
+          "caption": "One distribution point, four-wire feeders, one neutral bond — at the pole.",
+          "w": 900,
+          "h": 1580
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "How are livestock buildings on the same premises supplied under 547.9?",
+          "choices": [
+            "Each with its own service and neutral bond",
+            "From a distribution point, with a four-wire grounded arrangement",
+            "By a three-wire feeder with a shared neutral/ground",
+            "From the farmhouse panel"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Buildings are supplied from a distribution point using a four-wire grounded distribution arrangement.",
+          "nec_ref": "547.9"
+        },
+        {
+          "question": "How many distribution points may one premises have?",
+          "choices": [
+            "Exactly one",
+            "One per building, maximum",
+            "More than one is permitted",
+            "None — distribution points were deleted"
+          ],
+          "answer_index": 2,
+          "explain_plain": "547.9 expressly permits more than one distribution point on the same premises.",
+          "nec_ref": "547.9"
+        },
+        {
+          "question": "Where is the neutral bonded to the grounding system in this layout?",
+          "choices": [
+            "At every building disconnect",
+            "At the largest barn only",
+            "At the distribution point only",
+            "Nowhere — farms float the neutral"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The neutral-to-ground connection is made at the distribution point (site-isolating device), keeping neutral current off the earth and building grounding systems.",
+          "nec_ref": "547.9"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "547.9",
+        "547.2",
+        "250.32",
+        "547.9(A)(2)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "The neutral-to-ground connection is made only at the site-isolating device at the distribution point; each agricultural building must meet 250.32, and the site-isolating device is pole-mounted and is not the service disconnecting means.",
+          "source": "EC&M, Taking Care of the Farm: Protecting livestock from stray voltages",
+          "url": "https://www.ecmag.com/magazine/articles/article-detail/taking-care-of-the-farm-protecting-livestock-from-stray-voltages"
+        },
+        {
+          "claim": "The distribution point is typically the central (meter) pole, which is both the metering point and the service point for the utility, with a grounding electrode conductor to an electrode at the pole base.",
+          "source": "McGraw-Hill's NEC Handbook, Article 547 discussion (Access Engineering)",
+          "url": "https://www.accessengineeringlibrary.com/index.php/binary/mheaeworks/7b341b909c5c22e3/ee16b21ce7657d0c5cae1cc3305765567fe4c84c23757ca01474beafd0039663/article-547-agricultural-buildings.pdf"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C5-547.10",
@@ -2854,8 +4245,8 @@
       "article": "547",
       "section": "547.10",
       "title": "Equipotential planes in livestock confinement areas",
-      "plain_explanation": "Where livestock are confined on concrete and metal equipment they can touch may become energized, an equipotential plane is installed in the floor so the animal's feet and the equipment it touches stay at the same voltage. The plane is bonded to the building's electrical grounding system with a solid copper bonding conductor of at least 8 AWG, connected with listed pressure connectors or clamps. It is required indoors and outdoors in the confinement areas the section describes.",
-      "on_the_job": "Coordinate the plane with the concrete crew before the pour — retrofitting a bonded plane after slab placement is not a real option. Keep the 8 AWG solid copper bond and its connections inspectable until they are approved.",
+      "plain_explanation": "An equipotential plane is a grid of wire mesh or other conductive elements embedded in, or placed under, the concrete floor of a livestock confinement area, bonded together and connected to the building's electrical grounding system. It is required where all of these are true:\n• The area confines livestock (the term does not include poultry)\n• The floor is concrete — an indoor confinement floor, or an outdoor concrete slab\n• Metal equipment that may become energized — waterers, stanchions, feeders, gates — is within the animals' reach\nOutdoors, the plane must cover the ground where the animal stands while it touches that equipment. The bonding conductor is solid copper, insulated, covered or bare, not smaller than 8 AWG. Connections to the mesh or conductive elements are made with pressure connectors or clamps of brass, copper, copper alloy, or an equally substantial approved means. Slatted floors supported by a structure that is part of the plane do not need separate bonding.",
+      "on_the_job": "Coordinate the plane with the concrete crew before the pour — retrofitting a bonded plane after slab placement is not a real option. Keep the 8 AWG solid copper bond and its connections inspectable until they are approved. On a Polk County dairy addition the sequence is: mesh tied, the 8 AWG solid copper bond clamped to the mesh with listed pressure connectors and run to the barn panel's grounding terminal, and a photo of every connection before the pour is scheduled. Remember the companion rule in 547.5(G): 125-volt, single-phase, 15- and 20-ampere receptacles in the plane area need GFCI protection.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -2866,7 +4257,106 @@
       "verified": true,
       "prev_id": "C5-547.9",
       "next_id": "C5-ART-550",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "A cow standing on wet concrete is in near-perfect contact with the earth, and livestock feel voltages a person in boots never notices. If a fault or neutral current raises a metal waterer even a few volts above the floor under the animal's feet, current passes through the animal every time it drinks — the classic tingle voltage that cuts feed intake and milk production and can kill. The plane removes the difference: floor, waterer and stanchions are held at one voltage, so nothing drives current through the animal.",
+      "exam_trap": "The trap is treating the plane like a ground rod: drive a separate rod at the pen and call it done. A rod by itself equalizes nothing — the rule is a bonded plane tied to the building grounding system, with a solid copper bonding conductor of at least 8 AWG. The second wrong answer is stranded conductor or a hose clamp on the mesh: the conductor must be solid, and the connections must be pressure connectors or clamps.",
+      "inspection_fails": [
+        "Plane mesh placed in the slab but never bonded to the building grounding system.",
+        "Bonding conductor is 8 AWG stranded — 547.10(B) requires solid copper.",
+        "Connections to the mesh made with unlisted hose clamps instead of listed pressure connectors or clamps.",
+        "Concrete poured before the plane connections were inspected, leaving nothing to verify.",
+        "125-volt, 15- and 20-ampere receptacles in the confinement area without the GFCI protection 547.5(G) requires."
+      ],
+      "tables": [
+        {
+          "caption": "Where the equipotential plane is required (547.10(A))",
+          "headers": [
+            "Case",
+            "Plane?"
+          ],
+          "rows": [
+            [
+              "Indoor confinement, concrete floor, metal equipment in reach",
+              "Required"
+            ],
+            [
+              "Outdoor concrete slab, metal equipment in reach",
+              "Required — covers where the animal stands"
+            ],
+            [
+              "Dirt confinement area, no concrete floor",
+              "Not required by 547.10"
+            ],
+            [
+              "Poultry confinement",
+              "Not livestock under this section"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-547.10-equipotential-plane.svg",
+          "alt": "Section view of a livestock confinement pen: wire mesh embedded in a concrete slab, a metal waterer and stanchion rails on the slab, and an 8 AWG solid copper bonding conductor tying the mesh to the building grounding system.",
+          "caption": "The plane: mesh in the slab, everything the animal touches bonded to one voltage.",
+          "w": 900,
+          "h": 1620
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "What is the minimum bonding conductor for an equipotential plane?",
+          "choices": [
+            "8 AWG solid copper",
+            "8 AWG stranded copper",
+            "10 AWG solid copper",
+            "6 AWG aluminum"
+          ],
+          "answer_index": 0,
+          "explain_plain": "Solid copper, insulated, covered or bare, not smaller than 8 AWG.",
+          "nec_ref": "547.10(B)"
+        },
+        {
+          "question": "Outdoors, how much ground must the plane cover?",
+          "choices": [
+            "The whole lot",
+            "The area where the livestock stands while accessing metal equipment that may become energized",
+            "A 6 ft strip at the gate",
+            "Only the slab under the waterer"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The plane must encompass where the animal stands while it touches equipment that may become energized.",
+          "nec_ref": "547.10(A)(2)"
+        },
+        {
+          "question": "How are bonding connections to the wire mesh made?",
+          "choices": [
+            "Hose clamps",
+            "Solder only",
+            "Pressure connectors or clamps of brass, copper or copper alloy",
+            "Wire nuts"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Pressure connectors or clamps of brass, copper, copper alloy, or an equally substantial approved means.",
+          "nec_ref": "547.10(B)"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "547.10(A)",
+        "547.10(B)",
+        "547.5(G)",
+        "547.2"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "The plane is wire mesh or other conductive elements embedded in or under the concrete, bonded to metal structures and fixed equipment that may become energized and connected to the building grounding system; dirt confinement areas may omit the plane.",
+          "source": "EC&M, Taking Care of the Farm: Protecting livestock from stray voltages",
+          "url": "https://www.ecmag.com/magazine/articles/article-detail/taking-care-of-the-farm-protecting-livestock-from-stray-voltages"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C5-ART-550",
@@ -3234,8 +4724,8 @@
       "article": "555",
       "section": "555.3",
       "title": "Electrical datum plane — heights above the water",
-      "plain_explanation": "The electrical datum plane is the reference height above the water below which certain equipment, connections, and receptacles may not be installed. For floating piers and floating facilities it is 30 inches above the water level and at least 12 inches above the deck level. Fixed facilities use their own datum definitions tied to high water and deck level in this section, so read the exact case that matches the structure before setting equipment.",
-      "on_the_job": "Establish the datum line on site with the marina operator and mark it on the pier before rough-in — then set nothing the article restricts below it. Re-check after any deck or float work that changes deck height.",
+      "plain_explanation": "The electrical datum plane is the reference height above the water below which certain equipment, connections, and receptacles may not be installed. 555.3 sets the plane by the kind of structure:\n• Floating piers and floating facilities, 555.3(A): the plane is 30 in above the water level, and at least 12 in above the deck level.\n• Land areas subject to tidal fluctuation, 555.3(B): the plane is 2 ft above the highest tide level for the area, under normal circumstances.\n• Land areas not subject to tidal fluctuation, 555.3(C): the plane is 2 ft above the highest water level for the area, under normal circumstances.\nNormal circumstances is the key phrase. The plane is figured from ordinary high water — not from the water level on the day of the install, and not from storm surge.",
+      "on_the_job": "Establish the datum line on site with the marina operator and mark it on the pier before rough-in — then set nothing the article restricts below it. Re-check after any deck or float work that changes deck height. On a floating dock on a Central Florida lake, work both numbers — 30 in above the water and at least 12 in above the deck — and hold the higher line. The same line controls the shore power receptacles: 555.33 keeps them at least 12 in above the deck and never below the datum plane.",
       "sharma_note": "",
       "figure_idea": "Pier elevation sketch with water level, deck, and a datum line 30 inches above the water and 12 inches above the deck, equipment shown above the line.",
       "related_ids": [
@@ -3246,7 +4736,103 @@
       "verified": true,
       "prev_id": "C5-ART-555",
       "next_id": "C5-555.4",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Water rises. Equipment set by eye on a calm day sits under water at the next ordinary high tide, and energized equipment in the water is a shock hazard for everyone in it. The datum plane turns 'high enough' into a number the whole job can measure against.",
+      "exam_trap": "The trap is using the floating-pier numbers everywhere. Thirty inches above the water is the floating case, 555.3(A). A fixed installation on tidal land uses 2 ft above the highest tide level, and the measurement starts from the highest normal level — not from the water you see at low tide on rough-in day.",
+      "inspection_fails": [
+        "Shore power receptacle mounted below the electrical datum plane.",
+        "Datum plane figured from the water level on the day of rough-in instead of the highest level under normal circumstances.",
+        "Junction box left below the datum plane after new floats raised the deck — the line was never re-checked.",
+        "Floating-pier datum (30 in above the water) applied to a fixed installation in a tidal area."
+      ],
+      "tables": [
+        {
+          "caption": "Datum plane by structure — 555.3 (NEC 2020)",
+          "headers": [
+            "Structure",
+            "Datum plane"
+          ],
+          "rows": [
+            [
+              "Floating pier",
+              "30 in above water, at least 12 in above deck"
+            ],
+            [
+              "Land, tidal",
+              "2 ft above highest tide level"
+            ],
+            [
+              "Land, no tide",
+              "2 ft above highest water level"
+            ]
+          ],
+          "note": "Heights are under normal circumstances — ordinary high water, not storm extremes."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-555.3-datum-plane.svg",
+          "alt": "Floating pier elevation with the electrical datum plane drawn 30 in above the water level and at least 12 in above the deck, a pedestal standing above the plane, and a box below it marked not permitted.",
+          "caption": "The datum plane on a floating pier: 30 in above water, 12 in above deck.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "For a floating pier, the electrical datum plane is:",
+          "choices": [
+            "12 in above the water level",
+            "30 in above the water level and at least 12 in above the deck",
+            "2 ft above the deck",
+            "At deck level"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Floating piers use 30 in above the water, and the plane must also sit at least 12 in above the deck.",
+          "nec_ref": "555.3(A)"
+        },
+        {
+          "question": "For a land area subject to tidal fluctuation, the datum plane is:",
+          "choices": [
+            "30 in above the water",
+            "2 ft above the highest tide level",
+            "12 in above the deck",
+            "6 ft above mean water"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Tidal land areas use a plane 2 ft above the highest tide level under normal circumstances.",
+          "nec_ref": "555.3(B)"
+        },
+        {
+          "question": "The datum plane heights are figured from:",
+          "choices": [
+            "The water level on install day",
+            "The storm surge level",
+            "The highest level under normal circumstances",
+            "Mean low water"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The section works from the highest water or tide level occurring under normal circumstances — not install-day water and not disaster extremes.",
+          "nec_ref": "555.3"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "555.3",
+        "555.3(A)",
+        "555.3(B)",
+        "555.3(C)",
+        "555.33"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "555.3 datum plane distances: floating piers 30 in above the water level and a minimum of 12 in above the deck level; land areas subject to tidal fluctuation 2 ft above the highest tide level; land areas not subject to tidal fluctuation 2 ft above the highest water level, under normal circumstances.",
+          "source": "Electrical License Renewal, NEC 2020 content — 555.3 Electrical Datum Plane Distances",
+          "url": "https://www.electricallicenserenewal.com/Electrical-Continuing-Education-Courses/NEC-Content.php?sectionID=946.1"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C5-555.4",
@@ -3254,8 +4840,8 @@
       "article": "555",
       "section": "555.4",
       "title": "Location of service equipment — on land, not on the structure",
-      "plain_explanation": "The service equipment for a floating building, dock, or marina is installed on land, adjacent to the structure it serves — never on or in the floating structure itself. A floating structure rides up and down with the water, so the service stays on solid ground, where it can be reached and worked on like any other service. Everything downstream of it — the feeders out along the pier — is supplied from that shore-side point.\n\nNEC 2023 CHANGE:\n• 555.4: Service equipment for a marina, dock or floating building must now sit on land at least 5 ft horizontally from the structure it serves and at least 12 in. above the electrical datum plane. Set service equipment for a floating building, docking facility or marina on land, at least 5 ft back from the structure it serves, measured horizontally.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Set the service on land next to the dock or marina it serves and run the feeder out to the pier from there. If a plan or an existing installation shows the service mounted on a floating dock, flag it before rough-in — that location fails this section.",
+      "plain_explanation": "The service equipment for a floating building, dock, or marina is installed on land, adjacent to the structure it serves — never on or in the floating structure itself. A floating structure rides up and down with the water, so the service stays on solid ground, where it can be reached and worked on like any other service. Everything downstream of it — the feeders out along the pier — is supplied from that shore-side point.\n• The service equipment sits on land, adjacent to the structure it serves\n• It is never installed on or in a floating building or a floating dock\n• Feeders run from that shore-side service out along the pier to the shore-power pedestals and dock loads\n• Heights near the water still have to respect the electrical datum plane in 555.3 — for floating piers, 30 in above the water level and at least 12 in above the deck level",
+      "on_the_job": "Set the service on land next to the dock or marina it serves and run the feeder out to the pier from there. If a plan or an existing installation shows the service mounted on a floating dock, flag it before rough-in — that location fails this section. At a Lake County marina re-power, the pattern is the meter and main disconnect on land by the seawall, with feeders in conduit along the fixed pier to the floating slips. If the existing service is found on the floating dock, price the relocation to land in the bid — leaving it there is not something an inspector can pass.",
       "sharma_note": "",
       "figure_idea": "Site sketch: service equipment on shore beside the pier, feeder running out along the pier to the pedestals, the floating dock shown without service equipment on it.",
       "related_ids": [],
@@ -3272,7 +4858,97 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/555-4",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "A floating dock is a moving platform. It rises and falls with tide and wake, flexes every conductor attached to it, and can swamp, break loose or sink in a storm. Service equipment belongs where it stays put: on land, where the utility connection is stable, the disconnect is reachable in an emergency, and nobody has to work on live service equipment while standing on a wet, moving platform.",
+      "exam_trap": "The trap answer puts the service on the floating building because 'that is what it serves.' 555.4 is blunt: on land, adjacent to the structure — never on or in the floating structure itself. The feeder goes out to the dock; the service does not.",
+      "inspection_fails": [
+        "Service equipment mounted on a floating dock or floating building.",
+        "Service disconnect not reachable from land in an emergency.",
+        "A panel on the floating section used as the service equipment for the dock.",
+        "Receptacles or equipment set below the electrical datum plane (555.3)."
+      ],
+      "tables": [
+        {
+          "caption": "Where things go at a marina (555.4, 555.3)",
+          "headers": [
+            "Item",
+            "Location"
+          ],
+          "rows": [
+            [
+              "Service equipment",
+              "On land, adjacent to the structure served"
+            ],
+            [
+              "Main disconnect",
+              "With the service equipment, on land"
+            ],
+            [
+              "Shore-power pedestals",
+              "Out on the pier or dock, fed from shore"
+            ],
+            [
+              "Equipment heights",
+              "At or above the electrical datum plane (555.3)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-555.4-service-on-land.svg",
+          "alt": "Site plan of a marina: service equipment on land beside the seawall, a feeder running along the fixed pier to a shore-power pedestal, and a floating dock that rides the water with no service equipment on it.",
+          "caption": "The service stays on land; only feeders go out over the water.",
+          "w": 900,
+          "h": 1580
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Service equipment for a floating building must be installed where?",
+          "choices": [
+            "On the floating structure, near the load",
+            "Inside the floating building",
+            "On land, adjacent to the structure it serves",
+            "On the floating section of the pier"
+          ],
+          "answer_index": 2,
+          "explain_plain": "On land, adjacent to the structure — never on or in the floating structure itself.",
+          "nec_ref": "555.4"
+        },
+        {
+          "question": "What runs from the shore-side service out to the dock loads?",
+          "choices": [
+            "The service conductors",
+            "Feeders",
+            "The grounding electrode conductor only",
+            "Nothing — docks have their own services"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Everything downstream of the shore-side service — the feeders out along the pier — is supplied from that point.",
+          "nec_ref": "555.4"
+        },
+        {
+          "question": "Why does the service stay on land?",
+          "choices": [
+            "Land is cheaper",
+            "A floating structure rides up and down with the water, so the service stays on solid ground",
+            "The utility requires meters indoors",
+            "Feeders cannot cross water"
+          ],
+          "answer_index": 1,
+          "explain_plain": "The floating structure moves with the water; the service stays where it can be reached and worked on like any other service.",
+          "nec_ref": "555.4"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 555.4: Service equipment for a marina, dock or floating building must now sit on land at least 5 ft horizontally from the structure it serves and at least 12 in. above the electrical datum plane. Set service equipment for a floating building, docking facility or marina on land, at least 5 ft back from the structure it serves, measured horizontally.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "555.4",
+        "555.3"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-555.5",
@@ -3280,8 +4956,8 @@
       "article": "555",
       "section": "555.5",
       "title": "Pier power distribution — the 250-volt limit",
-      "plain_explanation": "Pier power distribution systems are limited to 250 volts phase to phase. The single exception is an engineered installation: where qualified personnel service the equipment under engineering supervision, the system may run above 250 volts, but never above 600 volts phase to phase. Ordinary marina and dock work is designed well under the cap, at the standard voltages — the higher band is not a field upgrade.",
-      "on_the_job": "Read the distribution voltage on the plans before ordering gear. If a pier design shows more than 250 volts phase to phase, stop and confirm the qualified-personnel and engineering-supervision conditions are actually part of the job — that call belongs to the engineer, not the crew.",
+      "plain_explanation": "Pier power distribution systems are limited to 250 volts phase to phase.\n• The cap is on the distribution system serving the pier — the feeders and branch circuits that run the docking facility.\n• The single exception is an engineered installation: where qualified personnel service the equipment under engineering supervision, the system may run above 250 volts, but never above 600 volts phase to phase.\n• Ordinary marina and dock work is designed well under the cap, at the standard voltages — the higher band is not a field upgrade.\n• The cap is measured phase to phase, so a three-phase pier system is judged on its phase-to-phase voltage, not phase to ground.",
+      "on_the_job": "Read the distribution voltage on the plans before ordering gear. If a pier design shows more than 250 volts phase to phase, stop and confirm the qualified-personnel and engineering-supervision conditions are actually part of the job — that call belongs to the engineer, not the crew. A residential dock or a small marina panel at the standard single-phase voltages never comes near the cap; the flag goes up when a plan set shows a three-phase feeder above 250 volts headed down the pier.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -3289,7 +4965,88 @@
       "verified": true,
       "prev_id": "C5-555.4",
       "next_id": "C5-555.9",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "A pier is a wet, public place. Boaters, kids, and dock hands — not electricians — plug in, unplug, and handle equipment standing in or beside the water. Capping the distribution voltage keeps the shock and fault energy on the pier at the level ordinary marine equipment and ordinary users are built around.",
+      "exam_trap": "The trap is reading the exception as a permission slip. 'Our shop has qualified electricians' is not enough — the exception needs qualified personnel servicing the equipment under engineering supervision as part of the installation, and 600 volts is the absolute ceiling, not a design target. For ordinary pier work the answer stays 250 volts phase to phase.",
+      "inspection_fails": [
+        "Pier distribution run above 250 volts phase to phase with no engineered installation behind it.",
+        "A higher-voltage feeder extended down the pier as a field change, with no engineering supervision on the job.",
+        "Distribution voltage on the pier exceeding the 555.5 limit, with no qualified-personnel or engineering-supervision conditions documented.",
+        "A marina distribution system designed at 600 volts as the standard voltage, treating the exception ceiling as the target."
+      ],
+      "tables": [
+        {
+          "caption": "The voltage cap — 555.5 (NEC 2020)",
+          "headers": [
+            "Installation",
+            "Max phase-to-phase"
+          ],
+          "rows": [
+            [
+              "Ordinary pier distribution",
+              "250 V"
+            ],
+            [
+              "Engineered: qualified personnel + engineering supervision",
+              "600 V"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-555.5-voltage-cap.svg",
+          "alt": "Voltage bar from 0 to 600 volts phase to phase: ordinary pier distribution capped at 250 volts, the band above 250 up to 600 open only to engineered installations, and nothing permitted above 600.",
+          "caption": "250 V for ordinary pier work; 600 V is the engineered ceiling.",
+          "w": 900,
+          "h": 1180
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Pier power distribution systems are limited to what voltage, phase to phase?",
+          "choices": [
+            "120 V",
+            "250 V",
+            "480 V",
+            "600 V"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Ordinary pier distribution is capped at 250 volts phase to phase.",
+          "nec_ref": "555.5"
+        },
+        {
+          "question": "Under the engineered-installation exception, the absolute ceiling is:",
+          "choices": [
+            "250 V",
+            "300 V",
+            "600 V",
+            "1000 V"
+          ],
+          "answer_index": 2,
+          "explain_plain": "With qualified personnel and engineering supervision the system may exceed 250 volts, but never 600 volts phase to phase.",
+          "nec_ref": "555.5"
+        },
+        {
+          "question": "A pier design shows distribution above 250 volts phase to phase. The first move is to:",
+          "choices": [
+            "Order the gear and build it",
+            "Refuse the job outright",
+            "Confirm the qualified-personnel and engineering-supervision conditions are part of the job",
+            "Add GFCI protection and proceed"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Above 250 volts is an engineered installation or it is a violation — confirm the conditions before anyone prices or builds it.",
+          "nec_ref": "555.5"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "555.5"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-555.9",
@@ -3331,8 +5088,8 @@
       "article": "555",
       "section": "555.13",
       "title": "Bonding at marinas and docking facilities",
-      "plain_explanation": "Metal parts that touch the water, metal piping, and non-current-carrying metal parts that could become energized have to be bonded back to the grounding bus in the panelboard. The bonding conductor is solid copper, insulated, covered, or bare, and at least 8 AWG. This equipotential bonding is what keeps dock metal, boat metal, and the water around them from sitting at different voltages.\n\nNEC 2023 CHANGE:\n• 555.13: Metal parts already grounded through a branch-circuit or feeder equipment grounding conductor no longer need their own 8 AWG bonding conductor. Everything else still bonds to the panelboard grounding bus. Metal parts already connected to a branch-circuit or feeder equipment grounding conductor (EGC) no longer need a separate bonding conductor.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Bond ladders, lifts, metal framing, and piping as one system, and keep the 8 AWG solid copper bond continuous and protected from dock damage. Test continuity at trim — a bonding jumper cut by later dock work is a silent failure.",
+      "plain_explanation": "555.13 is the bonding rule for marinas, boatyards, and docking facilities — including the private dock at a one-family dwelling.\n• What gets bonded: metal parts in contact with the water, metal piping, and non-current-carrying metal parts that are likely to become energized — ladders, lifts, hoists, and metal framing all read as one list.\n• Where it lands: every one of those parts bonds back to the grounding bus in the panelboard that serves the dock. Not to a rod driven at the pier, and not to the nearest green screw — to the panelboard grounding bus.\n• The conductor: solid copper, insulated, covered, or bare, and not smaller than 8 AWG.\n• The point is equipotential: dock metal, boat metal, and the water around them are held at the same voltage, so a fault raises everything together and the ground-fault protection trips, instead of leaving one ladder hot against the water.\n• Bonding is one layer of the marina system. Shore power receptacles get ground-fault protection of equipment at not more than 30 milliamperes, and feeders to the dock at not more than 100 milliamperes (555.35), and equipment heights are set off the electrical datum plane (555.3).",
+      "on_the_job": "Residential dock on a Marion County lake: the takeoff bonds the aluminum ladder, the boat lift frame, and the metal water piping back to the panelboard grounding bus with a continuous run of 8 AWG solid copper, protected where the run crosses the pier framing. At trim, the crew tests continuity from the farthest lift bolt back to the bus — a bonding jumper cut by later dock work is a silent failure, and continuity is the last thing checked before the job is called done.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -3352,7 +5109,104 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/555-13",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "The killer at a dock is electric shock drowning. A fault on a boat or lift puts current into the water, and the voltage gradient around the hull can paralyze a swimmer who never touches anything metal. Bonding every metal part back to the panelboard bus holds the dock, the boat, and the water at one potential and gives fault current a solid path back to trip the protection. An unbonded ladder next to an energized hull is the accident this section exists to prevent.",
+      "exam_trap": "The trap is driving a ground rod at the end of the pier and calling the dock 'bonded.' A rod connects the metal to the earth; 555.13 bonds it to the grounding bus in the panelboard, which is what makes the dock one equipotential system and gives a fault a path that trips the breaker. Second trap: grabbing stranded 8 AWG because it is on the truck. The 2020 text calls for solid copper.",
+      "inspection_fails": [
+        "Boat lift or ladder never bonded — no conductor back to the panelboard bus.",
+        "Bonding conductor cut during later dock work and never repaired.",
+        "Stranded or undersized conductor substituted for the 8 AWG solid copper.",
+        "Bond landed on a driven rod at the pier instead of the panelboard grounding bus.",
+        "Bonding run left unprotected where dock traffic and framing damage it."
+      ],
+      "tables": [
+        {
+          "caption": "Marina protection layers",
+          "headers": [
+            "Layer",
+            "Rule",
+            "Section"
+          ],
+          "rows": [
+            [
+              "Bonding",
+              "Metal parts bonded to the panelboard grounding bus, 8 AWG solid copper min",
+              "555.13"
+            ],
+            [
+              "Shore power ground-fault",
+              "Protection of equipment at not more than 30 mA",
+              "555.35"
+            ],
+            [
+              "Feeder ground-fault",
+              "Not more than 100 mA on dock feeders",
+              "555.35"
+            ],
+            [
+              "Equipment heights",
+              "Off the electrical datum plane: 30 in above water, 12 in above deck (floating)",
+              "555.3"
+            ]
+          ]
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "What is the minimum bonding conductor at a marina or docking facility?",
+          "choices": [
+            "10 AWG solid copper",
+            "8 AWG solid copper",
+            "8 AWG stranded copper",
+            "6 AWG bare aluminum"
+          ],
+          "answer_index": 1,
+          "explain_plain": "555.13: the bonding conductor is solid copper — insulated, covered, or bare — and not smaller than 8 AWG.",
+          "nec_ref": "555.13"
+        },
+        {
+          "question": "Where do the dock bonding conductors terminate?",
+          "choices": [
+            "A ground rod driven at the pier",
+            "The nearest receptacle ground screw",
+            "The grounding bus in the panelboard",
+            "The boat lift frame"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Everything bonds back to the grounding bus in the panelboard that serves the dock — that is what makes one equipotential system.",
+          "nec_ref": "555.13"
+        },
+        {
+          "question": "Which parts must be bonded at a docking facility?",
+          "choices": [
+            "Only the pedestal enclosure",
+            "Metal parts in contact with the water, metal piping, and metal parts likely to become energized",
+            "Only parts supplied over 250 volts",
+            "Wood framing and fiberglass hulls"
+          ],
+          "answer_index": 1,
+          "explain_plain": "555.13 lists all three: parts in contact with the water, metal piping, and non-current-carrying metal parts likely to become energized.",
+          "nec_ref": "555.13"
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-555.13-dock-bonding.svg",
+          "alt": "Plan of a dock with an 8 AWG solid copper bonding conductor tying the boat lift frame, boarding ladder, and metal piping back to the grounding bus of the panelboard on land.",
+          "caption": "Every dock metal part bonded back to the panelboard grounding bus.",
+          "w": 900,
+          "h": 1780
+        }
+      ],
+      "code_refs": [
+        "555.13",
+        "555.3",
+        "555.35"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "NEC 2023 CHANGE:\n• 555.13: Metal parts already grounded through a branch-circuit or feeder equipment grounding conductor no longer need their own 8 AWG bonding conductor. Everything else still bonds to the panelboard grounding bus. Metal parts already connected to a branch-circuit or feeder equipment grounding conductor (EGC) no longer need a separate bonding conductor.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C5-555.36",
@@ -3360,8 +5214,8 @@
       "article": "555",
       "section": "555.36",
       "title": "Disconnecting means for shore power connections (2020 section 555.36)",
-      "plain_explanation": "Each boat's shore power connection needs its own disconnecting means that isolates that boat from its supply. The disconnect is a circuit breaker, a switch, or both, identified to show which receptacle it controls, readily accessible, ahead of the receptacle in the circuit, and located not more than 30 inches from the receptacle it controls. Breakers or switches inside a marine power outlet can serve as this disconnect when they meet those conditions.\n\nNEC 2023 CHANGE:\n• 555.36: New in 2023: each marina power outlet or enclosure feeding shore power needs a listed emergency shutoff marked for that use, within sight of it. A breaker handle doesn't count. Each marina power outlet or enclosure that feeds boats needs its own listed emergency shutoff within sight, marked with the words \"Emergency Shutoff\" (555.36(C)).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
-      "on_the_job": "Label every pedestal disconnect with the slip and receptacle it controls, and measure the 30-inch limit before the pedestal is set. A boater in the dark needs to kill one connection, not the whole dock.",
+      "plain_explanation": "Each boat's shore power connection needs its own disconnecting means that isolates that boat from its supply.\n• The disconnect is a circuit breaker, a switch, or both.\n• It is identified to show which receptacle it controls.\n• It is readily accessible, and it sits ahead of the receptacle in the circuit.\n• It is located not more than 30 in from the receptacle it controls.\nBreakers or switches inside a marine power outlet can serve as this disconnect when they meet those conditions.\nThe disconnect belongs to the connection, not to the dock — that is the whole shape of the rule.",
+      "on_the_job": "Label every pedestal disconnect with the slip and receptacle it controls, and measure the 30-inch limit before the pedestal is set. A boater in the dark needs to kill one connection, not the whole dock. On a two-pedestal replacement, that means each pedestal carries its own breaker for its own receptacle — a shared disconnect at the head of the dock does not satisfy this section, even if it is labeled.",
       "sharma_note": "This is the 2020 section number, 555.36. The older number 555.17 is not the 2020 section, and 555.36 is not a 2023-only number.",
       "figure_idea": "",
       "related_ids": [
@@ -3381,7 +5235,100 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/555-36",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "When a boat has an electrical fire, a failed shore cord, or a fault near someone in the water, the power to that one boat has to die fast — by whoever is standing there, in the dark, without hunting through a dock full of pedestals. One identified disconnect within reach of the receptacle makes that a single motion.",
+      "exam_trap": "The trap answer is one main disconnect at the head of the dock for every boat. 555.36 wants a disconnect per connection, identified, within 30 in of its receptacle. The second trap runs the other way: breakers inside the marine power outlet are allowed to serve as the disconnect when they meet the conditions — 'the breaker doesn't count' is the 2023 emergency-shutoff rule, not the 2020 disconnect rule.",
+      "inspection_fails": [
+        "Disconnecting means located more than 30 in from the receptacle it controls.",
+        "Pedestal disconnect with no identification — nothing shows which receptacle or slip it controls.",
+        "One disconnect at the head of the dock killing every shore power connection on the run.",
+        "Receptacle wired ahead of its disconnect, so the receptacle stays live with the disconnect off."
+      ],
+      "tables": [
+        {
+          "caption": "The disconnect checklist — 555.36 (NEC 2020)",
+          "headers": [
+            "Item",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "Quantity",
+              "One disconnect per shore power connection"
+            ],
+            [
+              "Type",
+              "Circuit breaker, switch, or both"
+            ],
+            [
+              "Identification",
+              "Shows which receptacle it controls"
+            ],
+            [
+              "Location",
+              "Readily accessible, ahead of the receptacle"
+            ],
+            [
+              "Distance",
+              "Not more than 30 in from the receptacle"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-555.36-pedestal-disconnect.svg",
+          "alt": "Two marina pedestals on a dock, each with its own breaker disconnect beside its shore power receptacle, with the 30 in maximum distance between the disconnect and its receptacle dimensioned.",
+          "caption": "One identified disconnect per boat, within 30 in of its receptacle.",
+          "w": 900,
+          "h": 1260
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "What is the maximum distance between a shore power disconnect and the receptacle it controls?",
+          "choices": [
+            "12 in",
+            "24 in",
+            "30 in",
+            "6 ft"
+          ],
+          "answer_index": 2,
+          "explain_plain": "The disconnect must be located not more than 30 in from the receptacle it controls.",
+          "nec_ref": "555.36"
+        },
+        {
+          "question": "Can the breakers inside a marine power outlet serve as the disconnecting means?",
+          "choices": [
+            "No, never",
+            "Yes, when identified, readily accessible, ahead of the receptacle, and within 30 in",
+            "Only on floating piers",
+            "Only with a separate switch beside the outlet"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Breakers or switches inside the outlet can serve when they meet the same conditions as any other disconnect.",
+          "nec_ref": "555.36"
+        },
+        {
+          "question": "One disconnect feeding the shore power receptacles for three boats is:",
+          "choices": [
+            "Permitted if it is labeled",
+            "Permitted if within 30 in of all three",
+            "Not permitted — each connection needs its own disconnect",
+            "Permitted on fixed piers only"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Each boat's shore power connection needs its own disconnecting means isolating that boat.",
+          "nec_ref": "555.36"
+        }
+      ],
+      "edition_note": "NEC 2023 CHANGE:\n• 555.36: New in 2023: each marina power outlet or enclosure feeding shore power needs a listed emergency shutoff marked for that use, within sight of it. A breaker handle doesn't count. Each marina power outlet or enclosure that feeds boats needs its own listed emergency shutoff within sight, marked with the words \"Emergency Shutoff\" (555.36(C)).\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "code_refs": [
+        "555.36"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-555.33",
@@ -3553,8 +5500,8 @@
       "article": "590",
       "section": "590.3",
       "title": "Time constraints on temporary installations",
-      "plain_explanation": "Temporary installations are permitted only for the period the work actually lasts. Construction, remodeling, maintenance, repair, and demolition power stays for that work and comes out when the work is done, holiday and decorative installations are limited to 90 days, and testing, experiments, emergencies, and similar short uses have their own limits in this section. Temporary wiring that quietly becomes permanent is a violation, not a value add.",
-      "on_the_job": "Put a removal date on the temp service paperwork when it is set. When the permanent service is energized and accepted, schedule the temp removal instead of leaving it for the next trade to trip over.",
+      "plain_explanation": "590.3 is the clock on every temporary installation. Temporary wiring is permitted only for the period the work actually lasts — and each kind of use gets its own limit:\n• During the period of construction (590.3(A)): construction, remodeling, maintenance, repair, and demolition power stays for that work. There is no day count — the limit is the job itself.\n• 90 days (590.3(B)): holiday decorative lighting and similar decorative uses get a hard cap of 90 days, and then the temporary power comes out.\n• Emergencies and tests (590.3(C)): emergencies, tests, experiments, and developmental work may use temporary wiring for the duration the need actually lasts.\n• Removal (590.3(D)): whatever the use, temporary wiring must be removed immediately upon completion of the purpose it was installed for. Temporary wiring that quietly becomes permanent is a violation, not a value add.",
+      "on_the_job": "Sharma's standard temp pole on a Marion Oaks rough-in goes in with a removal date written on the temp service paperwork. The permanent service is energized and accepted, and the pole comes out that same week instead of lingering for the next trade to trip over. The mirror case is retail holiday lighting: a storefront display wired in early November hits its 90 days at the end of January, and the calendar — not the tenant's memory — says when it is removed.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -3565,7 +5512,115 @@
       "verified": true,
       "prev_id": "C5-ART-590",
       "next_id": "C5-590.4",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Article 590 trades method flexibility for time. Cords, temp panels, and relaxed methods survive a supervised construction site because everyone knows they are coming out. Left in place, they take permanent-service abuse with temporary-grade protection — cords get driven over, panels weather, and nobody owns the removal. The time limits are what keep the trade fair: the installation is only as safe as the promise that it ends.",
+      "exam_trap": "The trap is applying the 90-day cap to construction power. The 90 days in 590.3(B) belongs to holiday decorative lighting and similar uses only. Construction power under 590.3(A) lasts for the duration of the work — but the reverse trap is worse: 'the job is done, but the temp pole can stay until the next phase.' 590.3(D) requires removal immediately when the purpose ends.",
+      "inspection_fails": [
+        "Holiday decorative lighting still energized in March, long past 90 days.",
+        "Temp service left in place after the permanent service was energized and accepted.",
+        "Temporary wiring feeding an occupied building as a stand-in for permanent wiring.",
+        "Temp installation with no removal date on the paperwork and no owner for taking it out."
+      ],
+      "tables": [
+        {
+          "caption": "590.3 time constraints",
+          "headers": [
+            "Use",
+            "Limit",
+            "Section"
+          ],
+          "rows": [
+            [
+              "Construction, remodeling, maintenance, repair, demolition",
+              "Duration of the work",
+              "590.3(A)"
+            ],
+            [
+              "Holiday decorative lighting and similar",
+              "90 days maximum",
+              "590.3(B)"
+            ],
+            [
+              "Emergencies, tests, experiments, developmental work",
+              "Duration of the need",
+              "590.3(C)"
+            ],
+            [
+              "Every temporary installation",
+              "Remove immediately when the purpose ends",
+              "590.3(D)"
+            ]
+          ]
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "What is the maximum time for temporary power serving holiday decorative lighting?",
+          "choices": [
+            "The duration of the season, no cap",
+            "90 days",
+            "30 days",
+            "Until the decorations come down"
+          ],
+          "answer_index": 1,
+          "explain_plain": "590.3(B) caps holiday decorative lighting and similar purposes at 90 days.",
+          "nec_ref": "590.3(B)"
+        },
+        {
+          "question": "How long may construction temporary power remain in place?",
+          "choices": [
+            "90 days",
+            "1 year",
+            "For the duration of the construction work",
+            "Until the first inspection"
+          ],
+          "answer_index": 2,
+          "explain_plain": "590.3(A) permits temporary power during the period of construction — the limit is the work, not a day count.",
+          "nec_ref": "590.3(A)"
+        },
+        {
+          "question": "When must temporary wiring be removed?",
+          "choices": [
+            "At the next inspection",
+            "Within 90 days of completion",
+            "Immediately upon completion of the purpose it served",
+            "When the AHJ orders it"
+          ],
+          "answer_index": 2,
+          "explain_plain": "590.3(D): temporary wiring is removed immediately upon completion of the purpose for which it was installed.",
+          "nec_ref": "590.3(D)"
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-590.3-time-limits.svg",
+          "alt": "Four stacked panels listing the 590.3 time rules: construction for the duration of the work, holiday decorative lighting capped at 90 days, emergencies and tests for the duration of the need, and removal immediately when the purpose ends.",
+          "caption": "Four clocks, one ending: temporary wiring comes out.",
+          "w": 900,
+          "h": 1340
+        }
+      ],
+      "code_refs": [
+        "590.3(A)",
+        "590.3(B)",
+        "590.3(C)",
+        "590.3(D)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "590.3 subdivisions: (A) during the period of construction, (B) 90 days for holiday decorative lighting, (C) emergencies and tests, (D) removal immediately upon completion of the purpose",
+          "source": "Mike Holt, Temporary Installations, based on the 2020 NEC",
+          "url": "https://www.mikeholt.com/newsletters.php?action=display&letterID=2521&email"
+        },
+        {
+          "claim": "590.3(B)'s 90-day limit applies only to holiday decorative lighting and similar purposes; 590.3(A) permits construction power until the activities are complete",
+          "source": "EC&M, Time Constraints for Temporary Power (2020 NEC)",
+          "url": "https://www.ecmag.com/magazine/articles/article-detail/codes-standards-time-constraints-temporary-power-splash-pads-and-more"
+        }
+      ],
+      "edition_note": "No NEC 2023 change found for this page in the public 2023 change sources reviewed.\nFBC 9th Ed. adopts NEC 2023 for permits applied for on or after Dec 31, 2026; permits applied for through Dec 30, 2026 stay on the NEC 2020 rule above.",
+      "rich": 1
     },
     {
       "id": "C5-590.4",

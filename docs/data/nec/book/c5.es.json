@@ -12,8 +12,8 @@
       "article": "500",
       "section": "500",
       "title": "Ubicaciones peligrosas (clasificadas) — el punto de partida",
-      "plain_explanation": "Algunas áreas contienen suficiente gas o vapor inflamable, polvo combustible o fibras inflamables en el aire para que una chispa normal o una superficie caliente pueda iniciar un incendio o una explosión. El Artículo 500 es la base para esas áreas: explica cómo se clasifica una ubicación, cómo se agrupan los materiales, qué métodos de protección existen y qué significan las marcas del equipo. Los Artículos 501 a 516 luego dan las reglas de trabajo para cada tipo de ubicación.\n\nCAMBIO NEC 2023:\n• 500.4: Las áreas peligrosas (clasificadas), y las áreas consideradas no clasificadas, ahora van en un plano de clasificación de áreas, y la autoridad con jurisdicción (AHJ) tiene acceso a la documentación. Las áreas clasificadas como peligrosas, y las áreas determinadas como no clasificadas, ahora se documentan en un plano de clasificación de áreas respaldado por documentos relacionados.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Antes de cualquier trabajo en un área sospechosa, busque el plano de clasificación o pregunte al ingeniero y a la AHJ cuál es la clasificación. Si nadie puede decirle la clase, la división o zona, y el grupo, deténgase — esa respuesta decide cada método de cableado y cada accesorio que sigue.",
+      "plain_explanation": "Algunas áreas contienen suficiente gas o vapor inflamable, polvo combustible o fibras inflamables en el aire para que una chispa normal o una superficie caliente pueda iniciar un incendio o una explosión. El Artículo 500 es la base para esas áreas: explica cómo se clasifica una ubicación, cómo se agrupan los materiales, qué métodos de protección existen y qué significan las marcas del equipo. Los Artículos 501 a 516 luego dan las reglas de trabajo para cada tipo de ubicación.\nAntes de que alguien escoja un accesorio, hay que responder tres preguntas para el área exacta:\n• ¿Qué hay en el aire? Eso define la clase — Clase I gases y vapores, Clase II polvos combustibles, Clase III fibras y partículas volantes inflamables\n• ¿Con qué frecuencia está allí en cantidad inflamable? Eso define la división — División 1 para operación normal, División 2 para condiciones anormales\n• ¿Qué es el material, exactamente? Eso define el grupo — Clase I Grupos A a D, Clase II Grupos E a G\nEl Artículo 500 también cubre las técnicas de protección de 500.7 — envolventes a prueba de explosión y a prueba de ignición de polvo, purga y presurización, seguridad intrínseca, y otras — y las reglas de marcado del equipo de 500.8, incluido el código de temperatura que debe mantenerse por debajo de la temperatura de ignición del material presente.",
+      "on_the_job": "Antes de cualquier trabajo en un área sospechosa, busque el plano de clasificación o pregunte al ingeniero y a la AHJ cuál es la clasificación. Si nadie puede decirle la clase, la división o zona, y el grupo, deténgase — esa respuesta decide cada método de cableado y cada accesorio que sigue. En los trabajos de Sharma esto aparece en el trabajo de combustible y pintura: una isla de dispensadores (Artículo 514), un área de aplicación por aspersión (Artículo 516), una planta de almacenamiento a granel (Artículo 515). El plano de clasificación forma parte de los documentos de la licitación — si falta, eso es una pregunta abierta para el paquete, no una decisión de campo.",
       "sharma_note": "Sharma no diseña clasificaciones de ubicaciones peligrosas. Cuando un trabajo toca un área clasificada, la clasificación viene de los planos o de la AHJ, y Mike Holt revisa el método antes de que alguien haga la instalación en bruto.",
       "figure_idea": "Diagrama simple de tres cajas: qué hay en el aire (clase), con qué frecuencia está allí (división) y qué es el material (grupo), con una flecha hacia 'luego abra los Artículos 501-503'.",
       "related_ids": [
@@ -36,7 +36,107 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/500-4",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "El equipo eléctrico ordinario produce chispas y superficies calientes en su uso normal — los contactos se abren, los motores funcionan, las lámparas se calientan. En un área clasificada el aire mismo es combustible, de modo que un solo dispositivo ordinario puede ser la fuente de ignición de todo el cuarto. El Artículo 500 existe para forzar primero la pregunta de la clasificación: una vez fijados la clase, la división y el grupo, cada decisión posterior — método de cableado, sellos, envolventes, marcado de temperatura — tiene una respuesta correcta en lugar de una suposición.",
+      "exam_trap": "La trampa es saltar directo a un artículo de cableado — «solo use cajas a prueba de explosión» — sin una clasificación. A prueba de explosión es una técnica de protección para un tipo de ubicación; las ubicaciones de polvo, las de fibras y las del sistema de zonas tienen cada una sus propias reglas, y la División 2 no es la División 1. Sin clase, división y grupo no hay respuesta correcta.",
+      "inspection_fails": [
+        "Trabajo instalado en bruto dentro de un área clasificada sin plano de clasificación en archivo.",
+        "Accesorios de ubicación ordinaria instalados dentro de un límite clasificado.",
+        "Equipo identificado para la clase pero no para el grupo del material realmente presente.",
+        "Marcado de temperatura del equipo más caliente que la temperatura de ignición del gas o polvo presente (500.8).",
+        "Un límite de área clasificada movido en el campo sin que el ingeniero o la AHJ revisen los documentos."
+      ],
+      "tables": [
+        {
+          "caption": "Las tres preguntas que el Artículo 500 le obliga a responder",
+          "headers": [
+            "Pregunta",
+            "Respuesta",
+            "A dónde lleva"
+          ],
+          "rows": [
+            [
+              "¿Qué hay en el aire?",
+              "Clase I, II o III",
+              "Artículos 501–503 (zonas: 505/506)"
+            ],
+            [
+              "¿Con qué frecuencia está allí?",
+              "División 1 o 2",
+              "Métodos de cableado y sellos"
+            ],
+            [
+              "¿Qué es el material?",
+              "Grupo A–D o E–G",
+              "Identificación del equipo (500.6)"
+            ],
+            [
+              "¿Qué tan caliente puede estar el equipo?",
+              "Código T, T1–T6",
+              "Verificación de marcado (500.8)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-500-three-questions.svg",
+          "alt": "Diagrama de flujo de las tres preguntas de clasificación — qué hay en el aire (clase), con qué frecuencia está allí (división), y qué es el material (grupo) — que lleva a los Artículos 501 a 516 para las reglas de trabajo.",
+          "caption": "Clase, división, grupo — responda las tres antes de abrir un artículo de cableado.",
+          "w": 900,
+          "h": 1460
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿De dónde viene la clasificación con la que trabaja Sharma?",
+          "choices": [
+            "Del juicio del capataz",
+            "De los planos o de la AHJ",
+            "Del mostrador de la casa de suministro",
+            "Del catálogo del equipo"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Sharma no diseña clasificaciones; la clasificación viene de los planos o de la AHJ.",
+          "nec_ref": "500.4"
+        },
+        {
+          "question": "¿La clasificación de una ubicación es la combinación de qué?",
+          "choices": [
+            "Clase, división y grupo",
+            "Voltaje, amperaje y fase",
+            "Artículo, sección y tabla",
+            "Solo zona, grupo y código T"
+          ],
+          "answer_index": 0,
+          "explain_plain": "Qué hay en el aire (clase), con qué frecuencia está allí (división), y el material exacto (grupo).",
+          "nec_ref": "500.5"
+        },
+        {
+          "question": "¿Qué dan los Artículos 501 a 516?",
+          "choices": [
+            "Las definiciones de clasificación",
+            "Las reglas de trabajo para cada tipo de ubicación clasificada",
+            "Las reglas de electrodos de puesta a tierra",
+            "Las reglas de dimensionamiento de acometidas"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El Artículo 500 es la base; los Artículos 501–516 llevan las reglas de trabajo para cada tipo de ubicación.",
+          "nec_ref": "Article 500"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 500.4: Las áreas peligrosas (clasificadas), y las áreas consideradas no clasificadas, ahora van en un plano de clasificación de áreas, y la autoridad con jurisdicción (AHJ) tiene acceso a la documentación. Las áreas clasificadas como peligrosas, y las áreas determinadas como no clasificadas, ahora se documentan en un plano de clasificación de áreas respaldado por documentos relacionados.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "500.4",
+        "500.5",
+        "500.6",
+        "500.7",
+        "500.8",
+        "Articles 501–516"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-500.5",
@@ -44,8 +144,8 @@
       "article": "500",
       "section": "500.5",
       "title": "Cómo se clasifican las ubicaciones — clase y división",
-      "plain_explanation": "La clasificación empieza con qué es el material peligroso y qué tan probable es que esté presente en una cantidad inflamable. Clase I cubre gases y vapores de líquidos inflamables o combustibles, Clase II cubre polvos combustibles, y Clase III cubre fibras y partículas volantes fácilmente inflamables. División 1 significa que el peligro puede estar presente durante la operación normal, mientras que División 2 significa que está normalmente contenido y aparece solo cuando algo falla u opera de manera anormal.\n\nCAMBIO NEC 2023:\n• 500.5: La Clase III ahora divide las fibras y partículas volantes en combustibles que pueden explotar como una nube e inflamables que principalmente se queman como una capa. Las fibras combustibles metálicas son Clase II, División 1, Grupo E. La Clase III ahora ordena las fibras/partículas volantes de dos maneras: combustibles que pueden formar una nube explosiva, e inflamables que principalmente se queman como una capa asentada.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Lea la clase y la división en los documentos de clasificación para el cuarto o área exacta, no para todo el edificio — una bahía puede estar clasificada mientras la siguiente no. Trate una línea de límite de División 1 en el plano como una pared dura para los métodos de cableado y los sellos.",
+      "plain_explanation": "La clasificación empieza con qué es el material peligroso y qué tan probable es que esté presente en una cantidad inflamable. Clase I cubre gases y vapores de líquidos inflamables o combustibles, Clase II cubre polvos combustibles, y Clase III cubre fibras y partículas volantes fácilmente inflamables. División 1 significa que el peligro puede estar presente durante la operación normal, mientras que División 2 significa que está normalmente contenido y aparece solo cuando algo falla u opera de manera anormal.\n• Clase I — gases y vapores inflamables, y vapores de líquidos inflamables o combustibles; los vapores de gasolina y propano son los ejemplos cotidianos\n• Clase II — polvos combustibles, como el polvo de grano, el polvo de carbón y los polvos metálicos\n• Clase III — fibras y partículas volantes fácilmente inflamables, como la pelusa textil, que se manipulan, se fabrican o se almacenan en el área\nLa clase y la división se leen juntas: Clase I División 1 y Clase II División 1 son ubicaciones diferentes con artículos de cableado diferentes (501 y 502), y el grupo de 500.6 luego reduce la clasificación al material exacto.",
+      "on_the_job": "Lea la clase y la división en los documentos de clasificación para el cuarto o área exacta, no para todo el edificio — una bahía puede estar clasificada mientras la siguiente no. Trate una línea de límite de División 1 en el plano como una pared dura para los métodos de cableado y los sellos. Ejemplo trabajado de la página de grupos: el vapor de gasolina es Clase I, Grupo D. Alrededor de un punto abierto de transferencia es División 1; en el cuarto de tanques sellados de al lado, el mismo vapor es División 2. Mismo edificio, mismo material, dos trabajos de cableado diferentes.",
       "sharma_note": "",
       "figure_idea": "Corte transversal de un cuarto con una zona División 1 cerca de una fuente, un anillo División 2 alrededor de ella y espacio sin clasificar más allá, etiquetado en palabras sencillas.",
       "related_ids": [
@@ -67,7 +167,115 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/500-5",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "La clase le dice qué puede quemarse; la división le dice cuánto del tiempo el combustible está realmente en el aire. Ese par mantiene las reglas proporcionadas: el equipo donde el vapor está presente todos los días (División 1) se construye para contener una explosión, mientras que el equipo donde el mismo vapor aparece solo cuando falla un sello (División 2) recibe un conjunto de métodos más ligero — pero aún deliberado. Clasifique mal en cualquier dirección y deja una fuente de ignición sentada en combustible o sobredimensiona un cuarto que nunca lo necesitó.",
+      "exam_trap": "La trampa es clasificar todo el edificio por su peor cuarto — o al revés, llamar «División 2» a una zona División 1 «porque la puerta suele estar cerrada». La clasificación es por el área exacta y por cómo se comporta el material en operación normal, no por conveniencia. Una segunda trampa: las fibras y partículas volantes son Clase III, no Clase II. El polvo es Clase II; las fibras que se asientan y se queman como una capa son Clase III.",
+      "inspection_fails": [
+        "Todo el edificio clasificado por su peor cuarto en lugar del área exacta de los documentos.",
+        "Límite de División 1 en el plano ignorado — accesorios de ubicación ordinaria dentro de él.",
+        "Área de fibras y partículas volantes cableada como ubicación de polvo Clase II en lugar de Clase III.",
+        "Clasificación copiada del trabajo anterior en lugar de los documentos de clasificación de este trabajo."
+      ],
+      "tables": [
+        {
+          "caption": "Las tres clases (500.5)",
+          "headers": [
+            "Clase",
+            "Material",
+            "Ejemplo cotidiano"
+          ],
+          "rows": [
+            [
+              "I",
+              "Gases y vapores",
+              "Gasolina, vapor de propano"
+            ],
+            [
+              "II",
+              "Polvos combustibles",
+              "Polvo de grano, polvo de carbón"
+            ],
+            [
+              "III",
+              "Fibras y partículas volantes inflamables",
+              "Pelusa textil, partículas de madera"
+            ]
+          ]
+        },
+        {
+          "caption": "Las dos divisiones (500.5)",
+          "headers": [
+            "División",
+            "Cuándo está el peligro"
+          ],
+          "rows": [
+            [
+              "1",
+              "Presente en operación normal"
+            ],
+            [
+              "2",
+              "Normalmente contenido — presente solo por falla u operación anormal"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-500.5-class-division.svg",
+          "alt": "Vista en corte de un cuarto con una zona División 1 alrededor de un tanque, un anillo División 2 alrededor de la zona, y espacio sin clasificar más allá, con las tres clases — gases y vapores, polvos combustibles, y fibras y partículas volantes inflamables — listadas abajo.",
+          "caption": "Un cuarto, tres zonas: zona División 1, anillo División 2, sin clasificar más allá.",
+          "w": 900,
+          "h": 1620
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿El polvo combustible pertenece a qué clase?",
+          "choices": [
+            "Clase I",
+            "Clase II",
+            "Clase III",
+            "Clase IV"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Clase II cubre los polvos combustibles; Clase I es gases y vapores, Clase III es fibras y partículas volantes.",
+          "nec_ref": "500.5"
+        },
+        {
+          "question": "¿División 2 significa que el peligro está…?",
+          "choices": [
+            "Presente durante la operación normal",
+            "Normalmente contenido, y presente solo cuando algo falla u opera de manera anormal",
+            "Nunca presente",
+            "Presente solo en exteriores"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El material de División 2 está normalmente contenido y aparece solo por una falla u operación anormal.",
+          "nec_ref": "500.5"
+        },
+        {
+          "question": "¿Las fibras y partículas volantes fácilmente inflamables pertenecen a qué clase?",
+          "choices": [
+            "Clase I",
+            "Clase II",
+            "Clase III",
+            "No se clasifican"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Clase III cubre las fibras y partículas volantes fácilmente inflamables.",
+          "nec_ref": "500.5"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 500.5: La Clase III ahora divide las fibras y partículas volantes en combustibles que pueden explotar como una nube e inflamables que principalmente se queman como una capa. Las fibras combustibles metálicas son Clase II, División 1, Grupo E. La Clase III ahora ordena las fibras/partículas volantes de dos maneras: combustibles que pueden formar una nube explosiva, e inflamables que principalmente se queman como una capa asentada.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "500.5",
+        "500.6",
+        "Articles 501–503"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-500.6",
@@ -95,8 +303,8 @@
       "article": "500",
       "section": "500.7",
       "title": "Técnicas de protección",
-      "plain_explanation": "Esta sección lista las maneras aceptadas de evitar que el equipo eléctrico encienda la atmósfera que lo rodea. Las conocidas son los gabinetes a prueba de explosión que contienen una explosión interna, los gabinetes a prueba de ignición de polvo que mantienen el polvo fuera, la purga y presurización que mantienen aire limpio dentro, la seguridad intrínseca que limita la energía del circuito por debajo del nivel de ignición, la inmersión en aceite y los diseños no incendiarios para la división menos severa. Cada técnica solo cuenta donde la sección y la marca del equipo lo permiten.\n\nCAMBIO NEC 2023:\n• 500.7: Cinco técnicas de protección, (P) a (T), se unieron a 500.7 en 2023: dos métodos de calefacción, dispositivos de ruptura encerrada y sin chispas, y equipo sellado. Una nueva tabla del Capítulo 9 hace corresponder los tipos de protección con cada área. Se agregaron cinco técnicas en 500.7(P) a (T). Una nueva tabla en el Capítulo 9 (Tabla 13) muestra qué tipos de protección convienen a cada clasificación de área.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Haga coincidir la técnica del equipo con la técnica que pide el diseño — no sustituya una caja a prueba de ignición de polvo por una a prueba de explosión porque se parece. Mantenga completos y sin daños los pernos, las tapas y las trayectorias de flama de los gabinetes, o la técnica queda anulada.",
+      "plain_explanation": "500.7 lista las maneras aceptadas de evitar que el equipo eléctrico encienda la atmósfera que lo rodea. Cada técnica solo cuenta donde la sección y la marca del equipo lo permiten:\n• Gabinetes a prueba de explosión, 500.7(A): construidos para contener una explosión interna y enfriar los gases que escapan. Permitidos en las ubicaciones Clase I para las que el equipo está identificado.\n• Gabinetes a prueba de ignición de polvo, 500.7(B): mantienen el polvo fuera y evitan que los arcos, las chispas y el calor internos enciendan el polvo exterior. Una técnica de Clase II.\n• Gabinetes herméticos al polvo (dusttight), 500.7(C): mantienen el polvo fuera. Permitidos en Clase II, División 2 y en ubicaciones Clase III.\n• Sistemas de purga y presurización, 500.7(D): el aire limpio o gas inerte mantenido dentro del gabinete mantiene fuera la atmósfera peligrosa. Permitidos en cualquier ubicación clasificada para la que el sistema está identificado.\n• Seguridad intrínseca, 500.7(E): la energía del circuito se limita por debajo del nivel de ignición, incluso en condiciones de falla. Permitida en Clase I, II y III, División 1 y 2 — la técnica estándar para instrumentación.\n• Circuitos, equipo y componentes no incendiarios, 500.7(F)–(H): no pueden encender la atmósfera en operación normal. Técnicas de División 2.\n• Inmersión en aceite, 500.7(I): contactos interruptores de corriente bajo aceite. Clase I, División 2.\n• Equipo herméticamente sellado, 500.7(J): sellado contra la atmósfera que lo rodea. Permitido en Clase I, División 2; Clase II, División 2; y Clase III.\n• Sistemas de detección de gas combustible, 500.7(K): un método de protección solo en establecimientos industriales con acceso público restringido, donde personas calificadas dan servicio a la instalación.",
+      "on_the_job": "Haga coincidir la técnica del equipo con la técnica que pide el diseño — no sustituya una caja a prueba de ignición de polvo por una a prueba de explosión porque se parece. Mantenga completos y sin daños los pernos, las tapas y las trayectorias de flama de los gabinetes, o la técnica queda anulada. En un área de despacho de combustible para flotillas con una ubicación Clase I, División 1 en el dispensador, el arrancador y la desconexión deben llevar una técnica permitida para esa clase y división exactas — una caja de polvo parecida sacada del estante es una inspección fallida y un peligro real.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -116,7 +324,148 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/500-7",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "El aire clasificado es combustible esperando una chispa. Cada técnica de esta lista rompe el mismo triángulo de una manera distinta: contener la explosión, mantener la atmósfera lejos del arco, o mantener la energía demasiado baja para encender algo. Elija la equivocada y el gabinete mismo se convierte en la fuente de ignición que fue contratado para prevenir.",
+      "exam_trap": "La trampa es el cambio por parecido. A prueba de ignición de polvo suena como a prueba de explosión, pero es una técnica de polvo de Clase II — no pertenece en un área de vapor Clase I, División 1. En vapor División 1, la lista corta es a prueba de explosión, seguridad intrínseca, o un sistema de purga y presurización identificado para la ubicación.",
+      "inspection_fails": [
+        "Gabinete a prueba de ignición de polvo instalado en un área de vapor Clase I, División 1.",
+        "Gabinete a prueba de explosión con pernos faltantes y la tapa no completamente acoplada — la trayectoria de flama queda anulada y la técnica con ella.",
+        "Equipo no incendiario instalado en una ubicación División 1.",
+        "Gabinete de uso general sustituido donde el diseño pide una técnica de protección de 500.7."
+      ],
+      "tables": [
+        {
+          "caption": "Técnicas de protección — 500.7 (NEC 2020)",
+          "headers": [
+            "Técnica",
+            "500.7",
+            "Permitida en"
+          ],
+          "rows": [
+            [
+              "A prueba de explosión",
+              "(A)",
+              "Clase I, Div 1 o 2, según identificación"
+            ],
+            [
+              "A prueba de ignición de polvo",
+              "(B)",
+              "Clase II, Div 1 o 2"
+            ],
+            [
+              "Hermético al polvo",
+              "(C)",
+              "Clase II Div 2; Clase III"
+            ],
+            [
+              "Purga / presurización",
+              "(D)",
+              "Cualquier ubicación clasificada, según identificación"
+            ],
+            [
+              "Seguridad intrínseca",
+              "(E)",
+              "Clase I, II, III — Div 1 o 2"
+            ],
+            [
+              "No incendiario",
+              "(F)–(H)",
+              "Ubicaciones División 2"
+            ],
+            [
+              "Inmersión en aceite",
+              "(I)",
+              "Clase I Div 2, contactos"
+            ],
+            [
+              "Herméticamente sellado",
+              "(J)",
+              "Div 2; Clase III Div 1 o 2"
+            ],
+            [
+              "Sistema de detección de gas",
+              "(K)",
+              "Solo industrial de acceso restringido"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-500.7-techniques.svg",
+          "alt": "Tres paneles que muestran las familias de técnicas de protección de 500.7: los gabinetes a prueba de explosión contienen una explosión interna, los sistemas de purga y presurización mantienen el vapor fuera con aire limpio, y la seguridad intrínseca limita la energía del circuito por debajo de la ignición.",
+          "caption": "Contenerlo, mantenerlo fuera o quitarle la energía — las familias de técnicas de 500.7.",
+          "w": 900,
+          "h": 1450
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Qué técnica de protección limita la energía del circuito por debajo del nivel de ignición, incluso en condiciones de falla?",
+          "choices": [
+            "Inmersión en aceite",
+            "Seguridad intrínseca",
+            "Gabinetes herméticos al polvo",
+            "Contactos herméticamente sellados"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La seguridad intrínseca limita la energía eléctrica y térmica del circuito para que no pueda encender la atmósfera, fallas incluidas.",
+          "nec_ref": "500.7(E)"
+        },
+        {
+          "question": "Un gabinete a prueba de ignición de polvo instalado en una ubicación Clase I, División 1 es:",
+          "choices": [
+            "Permitido",
+            "Permitido si todos los pernos están apretados",
+            "No permitido — es una técnica de Clase II",
+            "Permitido solo en División 1"
+          ],
+          "answer_index": 2,
+          "explain_plain": "A prueba de ignición de polvo es la técnica de polvo de Clase II. Clase I, División 1 pide a prueba de explosión, seguridad intrínseca, o un sistema de purga y presurización identificado.",
+          "nec_ref": "500.7(B)"
+        },
+        {
+          "question": "Los sistemas de purga y presurización están permitidos:",
+          "choices": [
+            "Solo en Clase I, División 2",
+            "En cualquier ubicación clasificada para la que el sistema está identificado",
+            "Solo en exteriores",
+            "Solo como respaldo de equipo a prueba de explosión"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La purga y presurización funciona en todas las clases y divisiones donde el sistema está identificado para la ubicación.",
+          "nec_ref": "500.7(D)"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 500.7: Cinco técnicas de protección, (P) a (T), se unieron a 500.7 en 2023: dos métodos de calefacción, dispositivos de ruptura encerrada y sin chispas, y equipo sellado. Una nueva tabla del Capítulo 9 hace corresponder los tipos de protección con cada área. Se agregaron cinco técnicas en 500.7(P) a (T). Una nueva tabla en el Capítulo 9 (Tabla 13) muestra qué tipos de protección convienen a cada clasificación de área.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "500.7",
+        "500.7(A)",
+        "500.7(B)",
+        "500.7(C)",
+        "500.7(D)",
+        "500.7(E)",
+        "500.7(F)–(H)",
+        "500.7(I)",
+        "500.7(J)",
+        "500.7(K)"
+      ],
+      "uncertain": [
+        "La lista de 500.7 continúa después de (K) con técnicas adicionales ligadas al sistema de Zonas del Artículo 505. Sus letras y redacción exactas no se confirmaron para esta página — verifique la lista impresa de 500.7 antes de citarlas."
+      ],
+      "rich_sources": [
+        {
+          "claim": "500.7(A)–(D) and where each is permitted: explosionproof equipment in the Class I locations it is identified for, dust-ignitionproof enclosures in Class II locations, dusttight enclosures in Class II, Division 2 and Class III locations, and purged and pressurized systems in any classified location they are identified for.",
+          "source": "Mike Holt, NEC Questions and Answers based on the 2020 NEC — 500.7 protection techniques",
+          "url": "https://www.mikeholt.com/newsletters.php?action=display&letterID=2477&srsltid=AfmBOorC7cFlujI9Q0IjKCJ_eujjp2zeq3A-AyBtTRkNZCU5qFvqbpET"
+        },
+        {
+          "claim": "500.7(E)–(K): intrinsic safety is permitted in Class I, II, and III, Division 1 or 2; nonincendive techniques in Division 2 locations; oil immersion for current-interrupting contacts in Class I, Division 2; hermetically sealed in Class I Division 2, Class II Division 2, and Class III Division 1 or 2; a combustible gas detection system only in industrial establishments with restricted public access serviced by qualified persons.",
+          "source": "DDPS, Control Systems Pt. 2 — Component Ratings in Hazardous Areas (NEC 500.7)",
+          "url": "https://www.ddpsinc.com/blog/control-systems-part-2-defining-component-ratings-for-use-in-hazardous-areas"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C5-500.8",
@@ -420,8 +769,8 @@
       "article": "503",
       "section": "503",
       "title": "Ubicaciones Clase III — fibras y partículas volantes",
-      "plain_explanation": "El Artículo 503 cubre las ubicaciones Clase III, donde se manipulan o almacenan fibras o partículas volantes fácilmente inflamables pero que normalmente no están suspendidas en el aire en cantidades inflamables — los peligros estilo textil y carpintería son los ejemplos clásicos. Las reglas se concentran en mantener las fibras lejos de partes calientes o con arco y en gabinetes que limitan la entrada. Es la menos severa de las tres clases, pero sigue siendo una ubicación clasificada con sus propias reglas de cableado.",
-      "on_the_job": "Trate la acumulación de pelusa y fibra alrededor de motores y luminarias como un problema de código, no de limpieza. Use solo los métodos de cableado y el equipo que el artículo permite dentro del límite clasificado.",
+      "plain_explanation": "El Artículo 503 cubre las ubicaciones Clase III: lugares donde se manipulan, fabrican o almacenan fibras o partículas volantes fácilmente inflamables, pero que normalmente no flotan en el aire en cantidades inflamables. Los molinos textiles, las plantas de confección y los talleres de carpintería que producen aserrín y partículas volantes son los casos clásicos.\n• División 1: las fibras o partículas volantes se fabrican, manipulan o utilizan — el cuarto de sierras y el piso del molino.\n• División 2: las fibras se almacenan, o se manipulan en un lugar distinto del proceso mismo — el almacén de pacas.\n• El calor es el enemigo principal. El equipo debe funcionar sin temperaturas superficiales lo bastante altas para secar y carbonizar las fibras acumuladas contra él: no más de 165°C (329°F) para el equipo no sujeto a sobrecarga, y no más de 120°C (248°F) para el equipo que puede sobrecargarse, como motores y transformadores de potencia (503.5). La fibra carbonizada puede encenderse por sí sola.\n• Los métodos de cableado (503.10) son los mismos en ambas divisiones: conduit metálico rígido, conduit rígido no metálico, RTRC, IMC, EMT, canalizaciones herméticas al polvo, o cable Tipo MC o MI con accesorios listados. Cada caja y accesorio es hermético al polvo. Una excepción de la División 2: un área solo de almacenamiento y sin maquinaria puede usar cableado abierto sobre aisladores (Artículo 398).\n• No se requieren accesorios de sellado en ninguna parte de la Clase III — los sellos de los Artículos 501 y 502 no se trasladan.\n• Las luminarias (503.130) deben construirse para mantener fuera las fibras y partículas volantes y mantener dentro las chispas y el metal caliente, y sus superficies permanecen bajo el mismo límite de 165°C (329°F).",
+      "on_the_job": "Taller de gabinetes a las afueras de Ocala: el cuarto de sierras y lijado es Clase III, División 1, y las estanterías de madera de al lado son División 2. La estimación corre EMT con cajas herméticas al polvo dentro del límite, luminarias cerradas y con empaque sobre la línea, y un motor totalmente cerrado en el colector de polvo. Los circuitos de receptáculos son de 20 amperios, según el mínimo comercial de Sharma. La cuadrilla sopla la pelusa del motor y de las luminarias antes de retirar cualquier tapa — la capa sobre el equipo es parte del peligro, no suciedad.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -431,7 +780,124 @@
       "verified": true,
       "prev_id": "C5-ART-502",
       "next_id": "C5-ART-504",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Las fibras no necesitan una nube para arder. La pelusa se asienta sobre un motor o una luminaria caliente, el calor la seca y la carboniza poco a poco, y la fibra carbonizada puede arder sin llama y encenderse sin chispa alguna. La capa también aísla el motor, de modo que funciona más caliente y carboniza la capa más rápido. El Artículo 503 responde con superficies frías, gabinetes herméticos al polvo que mantienen las fibras lejos de las partes energizadas, y luminarias que no pueden dejar caer chispas ni metal caliente sobre la pila.",
+      "exam_trap": "La trampa es cablear la Clase III como la Clase I: accesorios de sellado a menos de 18 in de cada gabinete. La Clase III no tiene ningún requisito de sellos — los gabinetes son herméticos al polvo, no a prueba de explosión, y 503.10 es toda la regla de cableado. La segunda trampa es la inversa: tratar la Clase III como espacio ordinario porque «es solo pelusa». La clasificación es real, y los límites de temperatura de 503.5 son la observación cuando se instala una luminaria caliente estándar.",
+      "inspection_fails": [
+        "Luminaria abierta sobre la línea de sierras, con el lente lleno de pelusa.",
+        "Caja y accesorios estándar (no herméticos al polvo) dentro del límite clasificado.",
+        "Cable Tipo NM pasado por el área Clase III.",
+        "Motor abierto a prueba de goteo instalado donde se requiere un motor totalmente cerrado.",
+        "Temperatura superficial de la luminaria por encima del límite de 165°C (329°F) para las fibras presentes."
+      ],
+      "tables": [
+        {
+          "caption": "Clase III de un vistazo",
+          "headers": [
+            "Característica",
+            "División 1",
+            "División 2"
+          ],
+          "rows": [
+            [
+              "Las fibras",
+              "Se fabrican, manipulan o utilizan",
+              "Se almacenan, o se manipulan fuera del proceso"
+            ],
+            [
+              "Métodos de cableado",
+              "Lista de 503.10",
+              "La misma lista de la División 1"
+            ],
+            [
+              "Cajas y accesorios",
+              "Herméticos al polvo",
+              "Herméticos al polvo"
+            ],
+            [
+              "Cableado abierto sobre aisladores",
+              "No permitido",
+              "Áreas solo de almacenamiento, sin maquinaria"
+            ]
+          ],
+          "note": "Límites de temperatura superficial en ambas divisiones: 165°C (329°F), o 120°C (248°F) para el equipo que puede sobrecargarse (503.5)."
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Cuál es la temperatura superficial más alta permitida para un motor en una ubicación Clase III?",
+          "choices": [
+            "165°C (329°F)",
+            "120°C (248°F)",
+            "200°C (392°F)",
+            "85°C (185°F)"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Los motores pueden sobrecargarse, por lo que 503.5 los limita a 120°C (248°F). El límite de 165°C (329°F) es para el equipo no sujeto a sobrecarga.",
+          "nec_ref": "503.5"
+        },
+        {
+          "question": "¿Qué método de cableado se permite en Clase III, División 1?",
+          "choices": [
+            "Cable Tipo NM",
+            "Cableado abierto sobre aisladores",
+            "EMT con cajas y accesorios herméticos al polvo",
+            "Cable Tipo AC"
+          ],
+          "answer_index": 2,
+          "explain_plain": "503.10 permite EMT — y RMC, conduit rígido no metálico, RTRC, IMC, canalizaciones herméticas al polvo y cable Tipo MC o MI — con cajas y accesorios herméticos al polvo.",
+          "nec_ref": "503.10(A)"
+        },
+        {
+          "question": "¿Se requieren accesorios de sellado en las ubicaciones Clase III?",
+          "choices": [
+            "Sí, a menos de 18 in de cada gabinete",
+            "Sí, en cada límite",
+            "No — las cajas y accesorios deben ser herméticos al polvo, pero no se requieren sellos",
+            "Solo en la División 1"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La Clase III no tiene requisito de sellos. Los gabinetes son herméticos al polvo, no a prueba de explosión; las reglas de sellos de los Artículos 501 y 502 no se trasladan.",
+          "nec_ref": "503.10"
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-503-fiber-room.svg",
+          "alt": "Vista en planta de un cuarto de sierras Clase III División 1: luminaria hermética al polvo cerrada y con empaque, motor totalmente cerrado, cajas herméticas al polvo en la corrida de conduit, una acumulación de pelusa marcada en rojo, y los límites de temperatura superficial de 165 y 120 grados C.",
+          "caption": "Dentro del límite: todo hermético al polvo, superficies frías, sin sellos.",
+          "w": 900,
+          "h": 1560
+        }
+      ],
+      "code_refs": [
+        "500.5(D)",
+        "503.5",
+        "503.10",
+        "503.30",
+        "503.125",
+        "503.130"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "503.10 wiring methods, dusttight boxes and fittings, Division 2 follows Division 1, and no seal requirements in Class III locations",
+          "source": "McGraw-Hill's National Electrical Code 2020 Handbook, Article 503 commentary (Access Engineering)",
+          "url": "https://www.accessengineeringlibrary.com/binary/mheaeworks/e4dd0ac562270b37/91f26eca5d7c82842fb042571495ed31645a68f57c3f54a5d5617fb3dd675ce5/-class-iii-locations.pdf"
+        },
+        {
+          "claim": "503.5 maximum surface temperatures: 165°C (329°F) for equipment not subject to overloading and 120°C (248°F) for equipment that may be overloaded; 503.130 luminaire construction",
+          "source": "NEC Article 503 text, reproduced at PubHTML5",
+          "url": "https://pubhtml5.com/gsxp/kgwf/basic/51-100"
+        },
+        {
+          "claim": "503.10(A) method list and the Division 2 storage-only exception for open wiring on insulators",
+          "source": "Solar365, NEC Article 503 text",
+          "url": "https://www.solar365.com/green-homes/national-electric-code-2008/class-dde-locations"
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich": 1
     },
     {
       "id": "C5-ART-504",
@@ -565,8 +1031,8 @@
       "article": "505",
       "section": "505",
       "title": "Ubicaciones Zona 0, 1 y 2 — el sistema de zonas para gases y vapores",
-      "plain_explanation": "El Artículo 505 es el sistema alternativo de clasificación por zonas para peligros de gas y vapor, usado más en diseños industriales y de estilo internacional. Zona 0 es donde una atmósfera inflamable está presente de forma continua o por períodos largos, Zona 1 donde es probable en operación normal, y Zona 2 donde es improbable y de corta duración. El equipo lleva marcas y tipos de protección específicos de zona que no se leen igual que las marcas de clase y división.\n\nCAMBIO NEC 2023:\n• 505.9(C): Se creó una nueva Tabla 13 en el Capítulo 9 titulada Equipo Adecuado para Ubicaciones Peligrosas (Clasificadas). Se eliminó el texto en 505.9(C)(2)(4) que hacía referencia a la Tabla 505.9(C)(2)(4) y se agregó texto nuevo para hacer referencia a la Tabla 13 del Capítulo 9.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "No suponga que un accesorio clasificado por División y uno clasificado por Zona son intercambiables — lea la marca del sistema que usa el diseño. Cuando los planos clasifican por zona, este artículo, no el 501, es el reglamento.",
+      "plain_explanation": "El Artículo 505 es el sistema de zonas para peligros de gas y vapor Clase I — la alternativa al sistema de clase y división del Artículo 501, usado más en diseños industriales y de estilo internacional.\n• Zona 0: una atmósfera inflamable está presente de forma continua, o por períodos largos — dentro de un tanque, sobre la superficie de un líquido.\n• Zona 1: es probable que la atmósfera esté presente en operación normal — alrededor de venteos y puntos de manejo abierto.\n• Zona 2: no es probable que la atmósfera esté presente en operación normal, y si aparece dura solo un período corto.\n• Los grupos de materiales (505.6) reemplazan los grupos de división: IIA cubre propano, gasolina y metano; IIB cubre etileno; IIC cubre hidrógeno y acetileno y es el más severo. El equipo marcado IIC también sirve para áreas IIB y IIA.\n• Las técnicas de protección están en 505.8 — a prueba de llama, presurizado, seguridad intrínseca, inmersión en aceite, seguridad aumentada, encapsulado, relleno de polvo, tipo «n» y detección de gas. La Zona 0 acepta solo las más restrictivas: la seguridad intrínseca y la inmersión en aceite son las técnicas que llegan a ella.\n• El cableado sigue la zona (505.15). La Zona 0 permite solo cableado intrínsecamente seguro instalado según el Artículo 504. La Zona 1 agrega los métodos pesados — conduit rígido e intermedio roscado, Tipo MI y sistemas de cable listados — y la Zona 2 relaja la lista un paso más.\n• El equipo se marca para el sistema: zona, grupo de material y una clase de temperatura, T1 a T6, que va de una superficie máxima de 450°C hasta 85°C (505.9).",
+      "on_the_job": "Trabajo industrial con un plano de clasificación sellado por el ingeniero: el área alrededor de un venteo de proceso es Clase I, Zona 1, Grupo IIB, y la estimación cotiza conduit rígido roscado y verifica cada ficha de luminaria buscando una placa que diga Zona 1, IIB, con una clase de temperatura igual o menor que la temperatura de ignición del gas — T3, una superficie máxima de 200°C, en este diseño. Una luminaria de División 1 con el aspecto correcto no se sustituye, y Mike Holt revisa el método antes de ordenar cualquier cosa.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -585,7 +1051,119 @@
           "url": "https://afcarosella.com/uploads/3/4/0/5/34051045/2023_nec_book_carosella__completed_.pdf",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "El sistema de zonas clasifica el peligro según la frecuencia con que la nube inflamable está realmente presente, y luego ajusta la protección a la exposición. El equipo de Zona 0 vive dentro de la nube, así que solo se permiten técnicas que no pueden liberar energía de ignición en absoluto. El sistema de marcado es el sistema de seguridad: una luminaria certificada bajo las reglas de división fue probada con una norma distinta, y su placa no dice nada sobre zonas, grupos II ni clases T.",
+      "exam_trap": "La trampa: «La Zona 1 es solo la División 1 con un nombre nuevo, así que el equipo de División 1 sirve». No es así. Los dos sistemas corren lado a lado, pero las marcas no son intercambiables — el equipo de 505 se marca con la zona, el grupo de material II y una clase T. Ordenar desde la placa de división es la falla clásica en un trabajo clasificado por zonas.",
+      "inspection_fails": [
+        "Luminaria con clasificación de división instalada en un área Zona 1; su placa no lleva marca de zona.",
+        "Entradas roscadas sin apretar a llave, o con menos de cinco roscas enganchadas en equipo a prueba de llama.",
+        "Equipo del Grupo IIA instalado donde el gas es del Grupo IIC.",
+        "Clase de temperatura más caliente que la temperatura de ignición del gas presente.",
+        "Métodos de cableado ordinarios corridos a un espacio Zona 0 que solo permite cableado intrínsecamente seguro."
+      ],
+      "tables": [
+        {
+          "caption": "Las tres zonas",
+          "headers": [
+            "Zona",
+            "La atmósfera está presente",
+            "Cableado en resumen"
+          ],
+          "rows": [
+            [
+              "0",
+              "De forma continua, o por períodos largos",
+              "Solo seguridad intrínseca (Art. 504)"
+            ],
+            [
+              "1",
+              "Probable en operación normal",
+              "RMC/IMC roscado, MI, sistemas de cable listados"
+            ],
+            [
+              "2",
+              "Improbable, y solo por poco tiempo",
+              "Métodos de Zona 1, más un paso de alivio"
+            ]
+          ],
+          "note": "Las extensiones salen del plano de clasificación del trabajo — el artículo clasifica las zonas, el ingeniero las dibuja."
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿En qué zona está presente una atmósfera inflamable de forma continua o por períodos largos?",
+          "choices": [
+            "Zona 2",
+            "Zona 1",
+            "Zona 0",
+            "División 2"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La Zona 0 es el grado más severo: la atmósfera inflamable está presente de forma continua o por períodos largos, como dentro de un tanque.",
+          "nec_ref": "505.5"
+        },
+        {
+          "question": "¿Qué grupo de material es el más severo en el sistema de zonas?",
+          "choices": [
+            "IIA — propano",
+            "IIB — etileno",
+            "IIC — hidrógeno y acetileno",
+            "Los tres son iguales"
+          ],
+          "answer_index": 2,
+          "explain_plain": "El Grupo IIC cubre el hidrógeno y el acetileno, los gases más difíciles de contener. El equipo marcado IIC también sirve para áreas IIB y IIA.",
+          "nec_ref": "505.6"
+        },
+        {
+          "question": "¿Qué cableado se permite en una ubicación Clase I, Zona 0?",
+          "choices": [
+            "Conduit rígido roscado",
+            "Cable Tipo MC",
+            "Solo cableado intrínsecamente seguro según el Artículo 504",
+            "Cualquier método de División 1"
+          ],
+          "answer_index": 2,
+          "explain_plain": "505.15(A) permite solo métodos de cableado intrínsecamente seguros, instalados de acuerdo con el Artículo 504, en la Zona 0.",
+          "nec_ref": "505.15(A)"
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-505-zone-map.svg",
+          "alt": "Plano concéntrico de zonas alrededor de un tanque: Zona 0 dentro del tanque, Zona 1 en el anillo que lo rodea, Zona 2 en el anillo exterior y espacio no clasificado más allá, con los grupos de materiales IIA, IIB e IIC listados.",
+          "caption": "Las zonas clasifican la frecuencia con que la nube inflamable está presente.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "code_refs": [
+        "505.5",
+        "505.6",
+        "505.8",
+        "505.9",
+        "505.15",
+        "Article 504"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "505.6 material groups: IIA (propane, gasoline, methane), IIB (ethylene), IIC (hydrogen, acetylene); IIC equipment also suits IIB and IIA",
+          "source": "HSM University, ELEC-220 Lesson 5: Hazardous locations",
+          "url": "https://www.hsmuniversity.org/us/course/elec-220-national-electrical-code-ii/lesson-5-hazardous-locations"
+        },
+        {
+          "claim": "505.15(A): in Class I, Zone 0 locations, only intrinsically safe wiring methods in accordance with Article 504 are permitted",
+          "source": "NEC Article 505 text, reproduced at Yumpu",
+          "url": "https://www.yumpu.com/fr/document/view/62991948/nfpa2005/373"
+        },
+        {
+          "claim": "505.8 lists nine protection techniques; intrinsic safety and oil immersion are the techniques that also apply in Zone 0",
+          "source": "EC&M, Article 505: Zone Locations",
+          "url": "https://www.ecmweb.com/national-electrical-code/article/20898035/article-505-zone-locations?page=2"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 505.9(C): Se creó una nueva Tabla 13 en el Capítulo 9 titulada Equipo Adecuado para Ubicaciones Peligrosas (Clasificadas). Se eliminó el texto en 505.9(C)(2)(4) que hacía referencia a la Tabla 505.9(C)(2)(4) y se agregó texto nuevo para hacer referencia a la Tabla 13 del Capítulo 9.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich": 1
     },
     {
       "id": "C5-ART-506",
@@ -726,8 +1304,8 @@
       "article": "510",
       "section": "510",
       "title": "Ubicaciones peligrosas — puerta a las ocupaciones específicas",
-      "plain_explanation": "El Artículo 510 es el artículo puerta, corto, que apunta desde las reglas generales de ubicaciones clasificadas hacia las ocupaciones específicas que le siguen en este capítulo. Talleres comerciales, hangares de aeronaves, despacho de combustible, almacenamiento a granel y operaciones de rociado tienen cada uno su propio artículo porque cada uno decide de antemano las clasificaciones comunes para esa ocupación. Cuando uno de esos artículos aplica, trabaja junto con los Artículos 500 a 503.\n\nCAMBIO NEC 2023:\n• 512: Nuevo Artículo 512, Equipo de Aceite de Cannabis y Sistemas de Aceite de Cannabis que Usan Materiales Inflamables: cubre el equipo y las cabinas de preparación, extracción y posprocesamiento que usan solventes inflamables; el equipo y los sistemas deben estar listados para la ubicación (512.20); el cableado fijo por encima de las áreas clasificadas en canalización metálica, PVC, RTRC, ENT o cable MI/TC/MC (512.13).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Cuando un trabajo es una de las ocupaciones nombradas, empiece con su propio artículo para ver qué clasificación ya se decidió por usted. Luego use 500 a 503 para las reglas de cableado y equipo dentro de las partes clasificadas.",
+      "plain_explanation": "El Artículo 510 es el artículo puerta, corto, que apunta desde las reglas generales de ubicaciones clasificadas hacia las ocupaciones específicas que le siguen en este capítulo. Talleres comerciales, hangares de aeronaves, despacho de combustible, almacenamiento a granel y operaciones de rociado tienen cada uno su propio artículo porque cada uno decide de antemano las clasificaciones comunes para esa ocupación. Cuando uno de esos artículos aplica, trabaja junto con los Artículos 500 a 503:\n• Artículo 511 — talleres comerciales, reparación y almacenamiento.\n• Artículo 513 — hangares de aeronaves.\n• Artículo 514 — instalaciones de despacho de combustible para motores.\n• Artículo 515 — plantas de almacenamiento a granel.\n• Artículo 516 — procesos de aplicación por rociado, inmersión, recubrimiento e impresión.\nLos artículos generales todavía hacen el trabajo pesado dentro de las partes clasificadas — 500 para el marco de clasificación, 501 para Clase I, 502 para Clase II, 503 para Clase III. El artículo de la ocupación le dice dónde están las áreas clasificadas; 500 a 503 le dicen cómo cablear dentro de ellas.",
+      "on_the_job": "Cuando un trabajo es una de las ocupaciones nombradas, empiece con su propio artículo para ver qué clasificación ya se decidió por usted. Luego use 500 a 503 para las reglas de cableado y equipo dentro de las partes clasificadas. En una cotización de taller de reparación en Belleview, el metrado se abrió en 511, no en 501: las páginas de 511 ya habían resuelto la banda del piso, las fosas y el alcance de GFCI, y 501 solo se abrió para las reglas de sellos y canalizaciones dentro de esas zonas. Empezar en 500 habría significado volver a decidir clasificaciones que el libro ya había decidido.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -746,7 +1324,110 @@
           "url": "https://www.electricallicenserenewal.com/Electrical-Continuing-Education-Courses/NEC-Content.php?sectionID=1519",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Cada una de estas ocupaciones tiene la misma discusión esperando suceder: ¿cuánto del edificio está realmente clasificado? El Artículo 510 termina la discusión antes de que empiece, enviando cada ocupación a un artículo donde las respuestas comunes — la fosa, la banda del piso, la isla de despacho — ya están decididas. Eso evita que cinco estimadores y cinco inspectores dibujen cinco mapas distintos del mismo taller.",
+      "exam_trap": "La trampa es tratar el Artículo 510 como si tuviera reglas propias para memorizar, o saltarlo y cablear un hangar directamente desde el Artículo 501. 510 es una señal: primero el artículo de la ocupación, porque decide de antemano la clasificación, luego 500 a 503 para los métodos dentro. Una respuesta que clasifica la fosa de un taller solo desde las reglas generales tomó el camino largo hacia el mapa equivocado.",
+      "tables": [
+        {
+          "caption": "El mapa de la puerta (NEC 2020)",
+          "headers": [
+            "Artículo",
+            "Cubre"
+          ],
+          "rows": [
+            [
+              "511",
+              "Talleres comerciales"
+            ],
+            [
+              "513",
+              "Hangares de aeronaves"
+            ],
+            [
+              "514",
+              "Despacho de combustible"
+            ],
+            [
+              "515",
+              "Plantas de almacenamiento a granel"
+            ],
+            [
+              "516",
+              "Aplicación por rociado y recubrimiento"
+            ],
+            [
+              "500–503",
+              "Reglas generales de ubicaciones clasificadas"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-510-gateway-flow.svg",
+          "alt": "Diagrama de flujo del Artículo 510: una ocupación nombrada lleva a su propio artículo (511 talleres, 513 hangares, 514 despacho de combustible, 515 plantas a granel, 516 trabajo de rociado), que decide de antemano dónde están las áreas clasificadas, y luego los Artículos 500 a 503 suministran las reglas de cableado, sellos y equipo.",
+          "caption": "Empiece con el artículo de la ocupación; termine con 500–503.",
+          "w": 900,
+          "h": 1450
+        }
+      ],
+      "inspection_fails": [
+        "Tomacorrientes de la banda del piso de un hangar cableados con métodos comerciales ordinarios — el metrado nunca abrió el Artículo 513.",
+        "Zonas clasificadas de un taller cotizadas solo desde el Artículo 501, perdiendo las clasificaciones que 511 ya había decidido.",
+        "Cabina de rociado cableada como espacio industrial ordinario; el Artículo 516 nunca se aplicó.",
+        "Desconectadores de despacho de combustible ubicados sin las reglas de colocación del Artículo 514."
+      ],
+      "page_quiz": [
+        {
+          "question": "Llega una cotización para una planta de almacenamiento a granel. ¿Qué artículo abre primero?",
+          "choices": [
+            "500",
+            "515",
+            "501",
+            "300"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El Artículo 510 envía cada ocupación nombrada primero a su propio artículo; las plantas de almacenamiento a granel son el Artículo 515.",
+          "nec_ref": "Article 510; 515"
+        },
+        {
+          "question": "¿Qué decide el artículo de la ocupación que los Artículos 500–503 no deciden?",
+          "choices": [
+            "Los métodos de cableado dentro de las áreas clasificadas",
+            "Dónde están las áreas clasificadas para esa ocupación",
+            "Las reglas de accesorios de sellado",
+            "Los requisitos de listado del equipo"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El artículo de la ocupación decide de antemano las clasificaciones comunes para esa ocupación; 500–503 suministran las reglas dentro de ellas.",
+          "nec_ref": "Article 510"
+        },
+        {
+          "question": "Dentro de una zona clasificada en un taller comercial, los métodos de cableado vienen de:",
+          "choices": [
+            "El Artículo 511 solo",
+            "El Artículo 501, trabajando junto con 511",
+            "El Artículo 300",
+            "El artículo del taller solo, para GFCI"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El artículo de la ocupación trabaja junto con los Artículos 500 a 503; los métodos de Clase I están en 501.",
+          "nec_ref": "Article 510; 501"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 512: Nuevo Artículo 512, Equipo de Aceite de Cannabis y Sistemas de Aceite de Cannabis que Usan Materiales Inflamables: cubre el equipo y las cabinas de preparación, extracción y posprocesamiento que usan solventes inflamables; el equipo y los sistemas deben estar listados para la ubicación (512.20); el cableado fijo por encima de las áreas clasificadas en canalización metálica, PVC, RTRC, ENT o cable MI/TC/MC (512.13).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "Article 510",
+        "Articles 500–503",
+        "Article 511",
+        "Article 513",
+        "Article 514",
+        "Article 515",
+        "Article 516"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-ART-511",
@@ -754,8 +1435,8 @@
       "article": "511",
       "section": "511",
       "title": "Talleres comerciales — reparación y almacenamiento",
-      "plain_explanation": "El Artículo 511 cubre los lugares que dan servicio o reparan vehículos autopropulsados que funcionan con líquidos o gases inflamables — talleres de reparación de autos, bahías de servicio de concesionarios y trabajo comercial ligero similar que Sharma sí cotiza. El vapor de gasolina es más pesado que el aire, por lo que la historia de la clasificación trata sobre todo del piso, las fosas y el espacio justo encima de ellos. Los garajes solo de estacionamiento se tratan de manera diferente a los talleres de reparación, y si se despacha combustible en el sitio, se suma el Artículo 514.",
-      "on_the_job": "Primera pregunta en cualquier cotización de taller: ¿es reparación o solo estacionamiento, reparación mayor o menor, y hay una fosa o despacho de combustible? Esas respuestas establecen la clasificación antes de que alguien cotice tubería y accesorios.",
+      "plain_explanation": "El Artículo 511 cubre los lugares que dan servicio o reparan vehículos autopropulsados que funcionan con líquidos o gases inflamables — talleres de reparación de autos, bahías de servicio de concesionarios y trabajo comercial ligero similar que Sharma cotiza.\n• Alcance, 511.1: cubre las operaciones de servicio y reparación de vehículos autopropulsados que usan líquidos inflamables volátiles o gases inflamables como combustible.\n• Mayor o menor, 511.2: un taller de reparación mayor es donde se realizan reparaciones mayores de motor, pintura, trabajo de carrocería y guardabarros, y reparaciones que requieren drenar el tanque de combustible. Un taller de reparación menor se encarga de lubricación, inspección, afinaciones y cambios rutinarios de fluidos.\n• Estacionar no es reparar, 511.3(A): los garajes de estacionamiento o almacenamiento no tienen que ser clasificados.\n• Dónde cae la clasificación, 511.3(C): el vapor de gasolina es más pesado que el aire y se acumula en el piso. En un taller de reparación mayor sin la ventilación requerida, toda el área del piso es Clase I, División 2 hasta 18 pulgadas sobre el piso, y una fosa sin ventilación es Clase I, División 1 hasta el nivel del piso. La ventilación mecánica de un mínimo de cuatro cambios de aire por hora deja el área del piso sin clasificar. Los combustibles más livianos que el aire (gas natural, hidrógeno) voltean el problema al techo: la banda dentro de las 18 pulgadas del techo se clasifica de la misma manera sin esa ventilación.\n• Despacho de combustible, 511.3(B): si se despacha combustible en el sitio, las funciones de despacho se clasifican desde la Tabla 514.3(B)(1), y se suma el Artículo 514.\nDentro de las áreas clasificadas, el cableado y el equipo siguen las reglas de Clase I del Artículo 501 (511.4); por encima de la banda, 511.7 permite una lista definida de métodos de cableado fijos.",
+      "on_the_job": "Primera pregunta en cualquier cotización de taller: ¿es reparación o solo estacionamiento, reparación mayor o menor, y hay una fosa o despacho de combustible? Esas respuestas establecen la clasificación antes de que alguien cotice tubería y accesorios. En un departamento de servicio de concesionario de seis bahías en Orlando — reparación mayor, sin fosa, ventilación aún no en los planos — cotice la banda del piso como Clase I, División 2 hasta 18 pulgadas: mantenga los tomacorrientes y las lámparas colgantes por encima de la banda, y corra circuitos derivados de 20 A mínimo en cobre 12 AWG según S-01, con equipo Siemens según S-02.",
       "sharma_note": "S-01: los circuitos derivados comerciales son de 20 amperios mínimo en cobre 12 AWG. S-02 y S-03: el equipo nuevo es Siemens, y los interruptores termomagnéticos en un tablero existente coinciden con el listado de ese tablero.",
       "figure_idea": "Dibujo de elevación de una bahía: banda del piso, fosa y zona del techo sombreadas de manera diferente, mostrando por qué la altura decide las reglas.",
       "related_ids": [
@@ -771,7 +1452,125 @@
         "S-01",
         "S-02",
         "S-03"
-      ]
+      ],
+      "why_it_exists": "El vapor de gasolina se hunde y se extiende por el piso, y una fosa lo recoge como un tazón. Una chispa de un interruptor, motor o lámpara portátil común dentro de esa capa puede encender todo el piso. La clasificación dibuja el límite donde el combustible realmente se acumula, para que el equipo dentro de ella esté construido para no ser esa chispa.",
+      "exam_trap": "La trampa es tratar todos los talleres igual. Un garaje solo de estacionamiento no está clasificado, y un taller de cambio de aceite es reparación menor — ninguno se cotiza como un taller de reparación mayor. La otra dirección también falla: la banda del piso en un taller de reparación mayor es de 18 pulgadas, no las 12 o 24 pulgadas que ofrece el examen.",
+      "inspection_fails": [
+        "Tomacorrientes y una lámpara colgante instalados dentro de la banda del piso de 18 pulgadas de un taller de reparación mayor, cableados y equipados como una ubicación ordinaria.",
+        "Iluminación y tomacorrientes de la fosa cableados con dispositivos de uso general — la fosa sin ventilación es Clase I, División 1 hasta el piso.",
+        "La banda del piso clasificada solo alrededor de los bancos de trabajo — sin la ventilación requerida, toda el área del piso es División 2 hasta 18 pulgadas.",
+        "Un área de despacho de combustible dentro del taller clasificada solo bajo el Artículo 511 — las funciones de despacho se clasifican desde la Tabla 514.3(B)(1)."
+      ],
+      "tables": [
+        {
+          "caption": "La clasificación de un vistazo — 511.3 (NEC 2020)",
+          "headers": [
+            "Área",
+            "Condición",
+            "Clase"
+          ],
+          "rows": [
+            [
+              "Solo estacionamiento / almacenamiento",
+              "Sin trabajo de reparación",
+              "Sin clasificar"
+            ],
+            [
+              "Piso, reparación mayor",
+              "Ventilación no provista",
+              "Clase I Div 2 hasta 18 pulg"
+            ],
+            [
+              "Piso, reparación mayor",
+              "4 cambios de aire por hora",
+              "Sin clasificar"
+            ],
+            [
+              "Fosa, reparación mayor",
+              "Ventilación no provista",
+              "Clase I Div 1 hasta el piso"
+            ],
+            [
+              "Techo, combustibles gaseosos",
+              "Ventilación no provista",
+              "Clase I Div 2 dentro de 18 pulg"
+            ]
+          ],
+          "note": "Detalles de fosas y ventilación: 511.3(C). Las áreas de despacho se clasifican desde la Tabla 514.3(B)(1)."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-511-bay-zones.svg",
+          "alt": "Elevación de una bahía de taller de reparación mayor: una banda de techo Clase I División 2 dentro de 18 pulgadas para combustibles gaseosos, una banda de piso Clase I División 2 hasta 18 pulgadas, y una fosa clasificada Clase I División 1.",
+          "caption": "Dónde cae la clasificación en una bahía de reparación: piso, fosa, techo.",
+          "w": 900,
+          "h": 1360
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "En un taller de reparación mayor sin ventilación provista, toda el área del piso se clasifica:",
+          "choices": [
+            "6 pulgadas sobre el piso, Clase I Div 1",
+            "18 pulgadas sobre el piso, Clase I Div 2",
+            "24 pulgadas sobre el piso, Clase I Div 2",
+            "No está clasificada"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Sin la ventilación que requiere 511.3, toda el área del piso es Clase I, División 2 hasta 18 pulgadas sobre el piso.",
+          "nec_ref": "511.3(C)"
+        },
+        {
+          "question": "Una fosa sin ventilación en un taller de reparación mayor se clasifica:",
+          "choices": [
+            "Sin clasificar",
+            "Clase I, División 2",
+            "Clase I, División 1 hasta el nivel del piso",
+            "Clase II, División 1"
+          ],
+          "answer_index": 2,
+          "explain_plain": "El vapor se acumula en la fosa, así que una fosa sin ventilación es Clase I, División 1 hasta el nivel del piso.",
+          "nec_ref": "511.3(C)"
+        },
+        {
+          "question": "Un garaje solo de estacionamiento bajo 511.3(A) es:",
+          "choices": [
+            "Clase I, División 2 en el piso",
+            "No tiene que ser clasificado",
+            "Clase I, División 1 en cualquier fosa",
+            "Clasificado desde la Tabla 514.3(B)(1)"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Los garajes de estacionamiento y almacenamiento no tienen que ser clasificados — la clasificación empieza con el trabajo de reparación.",
+          "nec_ref": "511.3(A)"
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "511.1",
+        "511.2",
+        "511.3(A)",
+        "511.3(B)",
+        "511.3(C)",
+        "511.4",
+        "511.7",
+        "Table 514.3(B)(1)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "Major repair garage means engine overhauls, painting, body and fender work, and repairs requiring draining of the fuel tank; minor repair means lubrication, inspection, tune-ups, and routine parts and fluid changes. In a major repair garage without ventilation, the entire floor area is Class I, Division 2 up to 18 in above the floor; mechanical ventilation at a minimum of four air changes per hour leaves it unclassified; the band within 18 in of the ceiling is classified for lighter-than-air gaseous fuels without ventilation.",
+          "source": "Mike Holt, Illustrated Guide to Understanding the NEC — Article 511, Commercial Garages (sample)",
+          "url": "https://mikeholt.com/instructor2/img/product/pdf/14UND2-1251-sample.pdf?srsltid=AU7gw4Xtc2KwGWj4Fj6ybL29t_E4Uk4HvmaO2apWSLsz9FltGTT_4mcl"
+        },
+        {
+          "claim": "Any pit or depression below floor level in a repair garage that is not ventilated is Class I, Division 1 up to the floor level.",
+          "source": "ExamFinch, AK Electrician study guide — Article 511, Commercial Garages (2020 NEC)",
+          "url": "https://examfinch.com/study-guides/ak-electrician/ch11/ch11-sec04?exam=ak-electrician"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C5-511.3",
@@ -803,8 +1602,8 @@
       "article": "511",
       "section": "511.4",
       "title": "Cableado y equipo dentro de las áreas clasificadas",
-      "plain_explanation": "Dentro de las partes de un taller que clasifica 511.3, el cableado y el equipo siguen las reglas de Clase I del Artículo 501. La iluminación portátil usada en esas áreas tiene que estar identificada para la ubicación o dispuesta de modo que no pueda usarse dentro del espacio clasificado. El mensaje práctico es que la zona clasificada se cablea como cualquier otra ubicación Clase I, División, aunque el resto del taller sea ordinario.",
-      "on_the_job": "Cotice e instale en bruto las zonas clasificadas con los métodos del Artículo 501 — canalización metálica roscada, sellos y accesorios listados — no con materiales estándar de taller. Mantenga las luces portátiles de trabajo para áreas clasificadas solo en el tipo identificado.",
+      "plain_explanation": "Dentro de las partes de un taller que clasifica 511.3, el cableado y el equipo siguen las reglas de Clase I del Artículo 501:\n• Zonas de División 1, 501.10(A): la canalización metálica rígida roscada o el IMC de acero roscado es el método de todos los días; el cable Tipo MI, y el cable Tipo MC-HL donde se cumplen sus condiciones, también están permitidos. Los métodos de ubicación ordinaria — cable NM, EMT con accesorios de tornillo, canalización sin sellar — se detienen en el límite.\n• Sellos, 501.15: un accesorio de sellado va dentro de 18 in de una envolvente a prueba de explosión que contiene partes con arco o calientes, y también se requieren sellos donde la canalización sale del área clasificada.\n• Iluminación portátil: la iluminación portátil usada en esas áreas tiene que estar identificada para la ubicación o dispuesta de modo que no pueda usarse dentro del espacio clasificado.\nEl mensaje práctico es que la zona clasificada se cablea como cualquier otra ubicación Clase I, División, aunque el resto del taller sea ordinario.",
+      "on_the_job": "Cotice e instale en bruto las zonas clasificadas con los métodos del Artículo 501 — canalización metálica roscada, sellos y accesorios listados — no con materiales estándar de taller. Mantenga las luces portátiles de trabajo para áreas clasificadas solo en el tipo identificado. En un taller de reparación en Ocala, el trabajo de la fosa y la banda del piso corrió en rígida roscada con un sello dentro de 18 in de cada caja a prueba de explosión, mientras las bahías sobre la banda se instalaron con los métodos normales del taller. La división de materiales es toda la cotización: cotice la zona como una gasolinera, no como un taller, o el trabajo pierde dinero en la primera orden de accesorios.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -815,7 +1614,95 @@
       "verified": true,
       "prev_id": "C5-511.3",
       "next_id": "C5-511.7",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "La zona existe porque el vapor de combustible se acumula ahí. El vapor también viaja — se arrastra por las canalizaciones y se acumula dentro de las envolventes. La canalización metálica roscada lo contiene, y los sellos evitan que la canalización se convierta en un tubo que lleva vapor, o un frente de llama, a la parte limpia del edificio. Un solo accesorio de tornillo basta para romper esa cadena.",
+      "exam_trap": "La trampa es 'el taller es un edificio comercial, así que los métodos comerciales aplican en todas partes'. Dentro de la zona clasificada no aplican. El límite es todo el juego: la misma canalización es ordinaria a un lado de él y trabajo Clase I roscado y sellado al otro — y una respuesta que lleva EMT y accesorios de tornillo a través de la zona está mal.",
+      "tables": [
+        {
+          "caption": "En el límite (NEC 2020)",
+          "headers": [
+            "Lado",
+            "Cableado"
+          ],
+          "rows": [
+            [
+              "Dentro de la zona clasificada",
+              "RMC roscado o IMC de acero roscado; MI o MC-HL donde se permite — 501.10(A)"
+            ],
+            [
+              "En una envolvente a prueba de explosión",
+              "Accesorio de sellado dentro de 18 in — 501.15"
+            ],
+            [
+              "Resto del taller",
+              "Métodos comerciales ordinarios"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-511.4-classified-pocket.svg",
+          "alt": "Sección de un taller que muestra canalización rígida roscada y una caja a prueba de explosión dentro de la zona clasificada, un accesorio de sellado dentro de 18 pulgadas de la caja, el límite clasificado, y una luz portátil que debe estar identificada para la ubicación.",
+          "caption": "El límite es todo el juego: métodos Clase I dentro, ordinarios fuera.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "inspection_fails": [
+        "EMT con accesorios de tornillo instalado a través de la zona clasificada del piso.",
+        "Envolvente a prueba de explosión en la fosa sin accesorio de sellado dentro de 18 in.",
+        "Luz de trabajo ordinaria del taller usada dentro del área clasificada; no identificada para la ubicación.",
+        "Canalización que sale del área clasificada sin sellar en el límite."
+      ],
+      "page_quiz": [
+        {
+          "question": "El cableado dentro de una zona clasificada Clase I de un taller debe seguir:",
+          "choices": [
+            "El Artículo 300",
+            "El Artículo 501",
+            "El Artículo 334",
+            "Los mismos métodos que el resto del taller"
+          ],
+          "answer_index": 1,
+          "explain_plain": "511.4 envía el cableado y el equipo dentro de las áreas clasificadas a las reglas de Clase I del Artículo 501.",
+          "nec_ref": "511.4; 501.10(A)"
+        },
+        {
+          "question": "Un accesorio de sellado en una envolvente a prueba de explosión con partes con arco va dentro de:",
+          "choices": [
+            "10 ft",
+            "5 ft",
+            "18 in",
+            "24 in"
+          ],
+          "answer_index": 2,
+          "explain_plain": "501.15 pone el sello dentro de 18 in de la envolvente.",
+          "nec_ref": "501.15"
+        },
+        {
+          "question": "Una luz portátil de trabajo usada dentro del área clasificada debe ser:",
+          "choices": [
+            "Cualquier tipo de uso rudo",
+            "Identificada para la ubicación, o dispuesta de modo que no pueda usarse dentro del espacio clasificado",
+            "Solo protegida por GFCI",
+            "LED"
+          ],
+          "answer_index": 1,
+          "explain_plain": "511.4 requiere que la iluminación portátil en las áreas clasificadas esté identificada para la ubicación, o dispuesta de modo que no pueda usarse ahí.",
+          "nec_ref": "511.4"
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "511.4",
+        "501.10(A)",
+        "501.15",
+        "511.3"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-511.7",
@@ -1232,8 +2119,8 @@
       "article": "513",
       "section": "513",
       "title": "Hangares de aeronaves",
-      "plain_explanation": "El Artículo 513 clasifica y cablea los hangares de aeronaves, donde los vapores de combustible se acumulan cerca del piso y en las fosas, parecido a los talleres, pero alrededor de aeronaves en vez de autos. La banda del piso y las clasificaciones de fosas, y las reglas de cableado que les siguen, son el núcleo del artículo. Sharma ve esto rara vez, pero una cotización de hangar nunca se cotiza con métodos comerciales ordinarios.",
-      "on_the_job": "Reconozca la ocupación en la visita de cotización y pase el metrado a Mike Holt. Las tablas de clasificación de este artículo deciden los métodos antes de que cualquier cifra de mano de obra tenga sentido.",
+      "plain_explanation": "El Artículo 513 clasifica y cablea los hangares de aeronaves, donde los vapores de combustible se acumulan cerca del piso y en las fosas, parecido a los talleres, pero alrededor de aeronaves en vez de autos. La clasificación se decide por la altura sobre el piso y por la distancia a la aeronave:\n• Fosas, 513.3(B): toda fosa o depresión por debajo del piso del hangar es Clase I, División 1, hasta el nivel del piso.\n• Banda del piso, 513.3(A): toda el área del piso hasta 18 in sobre el piso es Clase I, División 2. Las áreas adyacentes que no están debidamente separadas del hangar comparten esa clasificación.\n• Alrededor de la aeronave, 513.3(C): dentro de 5 ft horizontales de las plantas motrices o los tanques de combustible de la aeronave, el área de División 2 va del piso hasta 5 ft sobre la superficie superior de las alas y las cubiertas del motor.\n• Áreas adyacentes, 513.3(D): un área junto al hangar puede permanecer sin clasificar donde está debidamente separada, o ventilada a no menos de cuatro cambios de aire por hora.\nDentro de las partes clasificadas, el cableado y el equipo siguen el Artículo 501, y el resto del artículo agrega reglas de equipo y puesta a tierra propias del hangar. Sharma ve esto rara vez, pero una cotización de hangar nunca se cotiza con métodos comerciales ordinarios.",
+      "on_the_job": "Reconozca la ocupación en la visita de cotización y pase el metrado a Mike Holt. Las tablas de clasificación de este artículo deciden los métodos antes de que cualquier cifra de mano de obra tenga sentido. En una llamada de servicio en un hangar de Ocala, cotice el trabajo a nivel del piso como trabajo clasificado: un tomacorriente agregado a 12 in sobre el piso queda dentro de la banda de División 2, así que es canalización rígida roscada, sellos y accesorios listados — no el EMT con accesorios de tornillo que tomaría un trabajo comercial normal. El mismo tomacorriente a 24 in, por encima de la banda y lejos de la aeronave, es trabajo ordinario. La altura es dinero en este artículo.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1243,7 +2130,122 @@
       "verified": true,
       "prev_id": "C5-511.12",
       "next_id": "C5-ART-514",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "El vapor de combustible de aeronaves es más pesado que el aire. Se hunde, se extiende por el piso y se acumula en las fosas — exactamente donde una herramienta caída, un tomacorriente o un motor pueden producir una chispa. La banda del piso y las reglas de las fosas ponen el cableado más estricto donde el vapor realmente se asienta, en vez de tratar todo el hangar alto como una bomba.",
+      "exam_trap": "La trampa es llamar a todo el hangar División 1, o a todo el hangar ordinario. Ambos están mal. División 1 es la fosa. La banda del piso hasta 18 in es División 2, la zona alrededor de la aeronave llega a 5 ft sobre el ala, y por encima de esas zonas el espacio generalmente no está clasificado.",
+      "tables": [
+        {
+          "caption": "Clasificación del hangar de un vistazo (NEC 2020)",
+          "headers": [
+            "Dónde",
+            "Clasificación",
+            "Sección"
+          ],
+          "rows": [
+            [
+              "Fosa o depresión bajo el piso",
+              "Clase I, División 1",
+              "513.3(B)"
+            ],
+            [
+              "Área del piso, hasta 18 in sobre el piso",
+              "Clase I, División 2",
+              "513.3(A)"
+            ],
+            [
+              "Dentro de 5 ft de una planta motriz o tanque",
+              "División 2, hasta 5 ft sobre el ala",
+              "513.3(C)"
+            ],
+            [
+              "Área adyacente, separada o ventilada",
+              "Sin clasificar",
+              "513.3(D)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-513-hangar-zones.svg",
+          "alt": "Sección de un hangar que muestra una fosa Clase I, División 1 bajo el piso, la banda del piso Clase I, División 2 hasta 18 pulgadas, y la zona de División 2 alrededor de una aeronave que se extiende 5 pies sobre el ala.",
+          "caption": "Las zonas del hangar: la fosa, la banda del piso y la columna alrededor de la aeronave.",
+          "w": 900,
+          "h": 1500
+        }
+      ],
+      "inspection_fails": [
+        "Tomacorriente instalado en EMT con accesorios de tornillo a 12 in sobre el piso del hangar, dentro de la banda de División 2.",
+        "Iluminación y dispositivos de la fosa cableados con métodos de ubicación ordinaria en una fosa Clase I, División 1.",
+        "Equipo no identificado para la ubicación usado abajo en la banda del piso en vez de por encima de la línea de 18 in.",
+        "Canalización que atraviesa la losa del piso sin sellar donde sale del área clasificada del piso."
+      ],
+      "page_quiz": [
+        {
+          "question": "Una fosa por debajo del piso del hangar se clasifica como:",
+          "choices": [
+            "Clase I, División 2",
+            "Clase I, División 1",
+            "Sin clasificar",
+            "Clase II, División 1"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Las fosas y depresiones bajo el piso son División 1, hasta el nivel del piso.",
+          "nec_ref": "513.3(B)"
+        },
+        {
+          "question": "La banda general del piso en un hangar es División 2 hasta qué altura sobre el piso?",
+          "choices": [
+            "12 in",
+            "18 in",
+            "24 in",
+            "5 ft"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Toda el área del piso hasta 18 in sobre el piso es Clase I, División 2.",
+          "nec_ref": "513.3(A)"
+        },
+        {
+          "question": "Cerca de un tanque de combustible de aeronave, el área de División 2 se extiende hasta:",
+          "choices": [
+            "18 in sobre el piso",
+            "5 ft sobre la superficie superior de las alas y las cubiertas del motor",
+            "El techo",
+            "7 ft 6 in sobre el piso"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Dentro de 5 ft horizontales de las plantas motrices o los tanques, la División 2 va del piso hasta 5 ft sobre las alas y las cubiertas del motor.",
+          "nec_ref": "513.3(C)"
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "513.3",
+        "513.3(A)",
+        "513.3(B)",
+        "513.3(C)",
+        "513.3(D)",
+        "Article 501"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "513.3 classification: pits Class I, Division 1; floor area to 18 in Class I, Division 2; within 5 ft of power plants or fuel tanks, Division 2 up to 5 ft above the wings and engine enclosures",
+          "source": "EC&M, 'Hangar Stakes Are Higher' (Article 513 walk-through)",
+          "url": "https://www.ecmag.com/magazine/articles/article-detail/codes-standards-hangar-stakes-are-higher"
+        },
+        {
+          "claim": "2020 NEC 513.3(A) and (B): floor band up to 18 in is Class I, Division 2; a pit is Class I, Division 1 up to floor level",
+          "source": "JCR Productions, NC Unlimited Electrical Exam Practice Test",
+          "url": "https://www.jcrproductions.com/blogs/news/nc-unlimited-electrical-exam-practice-test"
+        },
+        {
+          "claim": "513.3(D): adjacent areas stay unclassified where ventilated at four or more air changes per hour, pressurized, or effectively separated",
+          "source": "e-Hazard, 'NEC 513: It's Time for Electrical Hangar Talk'",
+          "url": "https://e-hazard.com/nec-513-its-time-for-electrical-hangar-talk/"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C5-ART-514",
@@ -1815,8 +2817,8 @@
       "article": "517",
       "section": "517.16",
       "title": "Tomacorrientes de tierra aislada en atención médica",
-      "plain_explanation": "Los tomacorrientes de tierra aislada están muy limitados en el trabajo de atención médica porque un tomacorriente cuya tierra está aislada del sistema local de puesta a tierra puede derrotar la puesta a tierra redundante que construye 517.13. No se permite ningún tomacorriente de tierra aislada dentro de la vecindad de atención al paciente. Fuera de esa vecindad, un tomacorriente de tierra aislada puede usarse solo con su propio conductor de puesta a tierra aislado instalado como indica esta sección, además de la trayectoria normal de puesta a tierra.",
-      "on_the_job": "Si un plano de clínica muestra un tomacorriente de tierra aislada, verifique dónde está respecto a la vecindad de atención al paciente antes de la instalación en bruto. Dentro de la vecindad es detenerse y preguntar, no una corrección en campo.",
+      "plain_explanation": "Los tomacorrientes de tierra aislada están muy limitados en el trabajo de atención médica porque un tomacorriente cuya tierra está aislada del sistema local de puesta a tierra puede derrotar la puesta a tierra redundante que construye 517.13. La sección traza una línea dura y una puerta estrecha:\n• Dentro de la vecindad de atención al paciente, 517.16(A): no se permite ningún tomacorriente de tierra aislada. La vecindad es el espacio que se extiende 6 ft más allá de la ubicación normal de la cama, la silla, la mesa u otro dispositivo que sostiene al paciente durante el examen y el tratamiento, y hasta 7 ft 6 in sobre el piso.\n• Fuera de la vecindad, 517.16(B): un tomacorriente de tierra aislada puede usarse en el espacio de atención al paciente solo cuando ambas trayectorias de puesta a tierra se mantienen correctas.\n• Su terminal de puesta a tierra se conecta a su propio conductor de puesta a tierra de equipo aislado, instalado según 250.146(D) además de las trayectorias de 517.13, identificado verde con una o más franjas amarillas en toda su longitud.\n• El conductor aislado de 517.13(B) — verde, sin franjas amarillas — nunca se conecta a ese terminal de puesta a tierra. Pone a tierra la caja metálica y el equipo fijo, como hace en todo el resto del espacio.",
+      "on_the_job": "Si un plano de clínica muestra un tomacorriente de tierra aislada, verifique dónde está respecto a la vecindad de atención al paciente antes de la instalación en bruto. Dentro de la vecindad es detenerse y preguntar, no una corrección en campo. En una obra dental en Winter Garden, los planos mostraban un tomacorriente IG anaranjado en la pared del operatorio a 4 ft de la silla — dentro de la vecindad de 6 ft, así que se eliminó, y se instaló un tomacorriente de grado hospitalario con las tierras redundantes normales. El tomacorriente de la sala de imágenes, a 9 ft de la silla, se mantuvo IG, cableado con su propio conductor verde con franja amarilla instalado con el circuito, y su caja puesta a tierra por el conductor verde liso de 517.13(B).",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -1827,7 +2829,106 @@
       "verified": true,
       "prev_id": "C5-517.13",
       "next_id": "C5-517.18",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Un paciente en la vecindad está conectado al equipo y no puede alejarse de una falla. 517.13 le da a cada tomacorriente dos trayectorias de tierra independientes, para que una trayectoria rota nunca deje al paciente sosteniendo la diferencia. Un terminal de tierra aislada descarta una de esas trayectorias a propósito — aceptable para controlar ruido al final del pasillo, no aceptable junto a la cama.",
+      "exam_trap": "La respuesta trampa es que un tomacorriente de tierra aislada está bien en cualquier parte de una clínica siempre que tenga su propia tierra aislada. 517.16(A) lo prohíbe dentro de la vecindad de atención al paciente por completo — ningún método de cableado arregla eso. Y fuera de la vecindad, conectar el conductor verde liso de 517.13(B) al terminal IG también está mal: ese conductor pone a tierra la caja, nunca el terminal aislado.",
+      "tables": [
+        {
+          "caption": "Los dos conductores verdes fuera de la vecindad (NEC 2020)",
+          "headers": [
+            "Conductor",
+            "Identificación",
+            "Se conecta a"
+          ],
+          "rows": [
+            [
+              "Conductor IG, 250.146(D)",
+              "Verde con franja(s) amarilla(s)",
+              "Solo el terminal de tierra del tomacorriente IG"
+            ],
+            [
+              "Conductor de 517.13(B)",
+              "Verde, sin franjas",
+              "La caja metálica y el equipo fijo — nunca el terminal IG"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-517.16-vicinity-plan.svg",
+          "alt": "Plano de una habitación de paciente con la vecindad de atención al paciente extendiéndose 6 pies más allá de la cama: un tomacorriente de tierra aislada dentro de la vecindad está marcado prohibido, y uno fuera de la vecindad está marcado permitido cuando se cablea según 517.16(B).",
+          "caption": "La vecindad decide: ningún tomacorriente IG dentro de ella, cableado estricto fuera de ella.",
+          "w": 900,
+          "h": 1450
+        }
+      ],
+      "inspection_fails": [
+        "Tomacorriente de tierra aislada instalado a 4 ft de la silla del paciente, dentro de la vecindad de atención al paciente.",
+        "Terminal de tierra del tomacorriente IG conectado al conductor verde liso de 517.13(B) en vez de a su propio conductor verde con franja amarilla.",
+        "La tierra aislada de 517.13(B) conectada al terminal de tierra aislada, derrotando tanto el aislamiento como la tierra de la caja.",
+        "Tomacorriente de tierra aislada instalado sin un conductor de puesta a tierra de equipo aislado instalado con los conductores del circuito."
+      ],
+      "page_quiz": [
+        {
+          "question": "Un plano muestra un tomacorriente IG a 4 ft de una silla dental. ¿Acción correcta?",
+          "choices": [
+            "Instalarlo con su propia tierra aislada",
+            "Instalarlo, pero unir la caja al terminal",
+            "No instalarlo — los IG están prohibidos en la vecindad",
+            "Instalarlo si es de grado hospitalario"
+          ],
+          "answer_index": 2,
+          "explain_plain": "517.16(A) no permite ningún tomacorriente de tierra aislada dentro de la vecindad de atención al paciente, sin importar cómo se cablee.",
+          "nec_ref": "517.16(A)"
+        },
+        {
+          "question": "Fuera de la vecindad, el conductor de tierra propio del tomacorriente IG se identifica:",
+          "choices": [
+            "Verde",
+            "Verde con una o más franjas amarillas",
+            "Amarillo",
+            "Desnudo"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El conductor de puesta a tierra aislado del tomacorriente IG es verde con una o más franjas amarillas en toda su longitud.",
+          "nec_ref": "517.16(B)"
+        },
+        {
+          "question": "La vecindad de atención al paciente se extiende cuánto más allá de la cama, y hasta qué altura?",
+          "choices": [
+            "6 ft más allá, hasta 7 ft 6 in sobre el piso",
+            "6 ft más allá, hasta 6 ft sobre el piso",
+            "4 ft más allá, hasta 7 ft 6 in sobre el piso",
+            "10 ft más allá, hasta el techo"
+          ],
+          "answer_index": 0,
+          "explain_plain": "La vecindad llega a 6 ft más allá de la ubicación normal del dispositivo que sostiene al paciente y a 7 ft 6 in de altura.",
+          "nec_ref": "517.2; 517.16(A)"
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "517.16(A)",
+        "517.16(B)",
+        "517.13",
+        "250.146(D)",
+        "517.2"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "Patient care vicinity extends 6 ft beyond the patient support device and vertically to 7 ft 6 in above the floor; 517.16(B) requires the IG insulated EGC per 250.146(D), green with one or more yellow stripes, in addition to the 517.13 paths, and the 517.13(B) conductor (green, no stripes) must not connect to the IG grounding terminal",
+          "source": "Mike Holt, Article 517 — Health Care Facilities",
+          "url": "https://www.mikeholt.com/newsletters.php?action=display&letterID=1782&email"
+        },
+        {
+          "claim": "517.16(A) prohibits isolated ground receptacles within the patient care vicinity; (B) covers IG receptacles outside it, wired per 517.13(A) and (B) plus the 250.146(D) insulated conductor",
+          "source": "EC&M, 2017 NEC Significant Changes, Part 8 (Article 517)",
+          "url": "https://www.ecmag.com/magazine/articles/article-detail/codes-standards-2017-nec-special-occupancies-significant-changes-2017-nec-part-8"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C5-517.18",
@@ -2081,8 +3182,8 @@
       "article": "518",
       "section": "518.6",
       "title": "Iluminación del espacio de trabajo",
-      "plain_explanation": "Agregada en la edición 2020, esta sección corta requiere iluminación para los espacios de trabajo alrededor del equipo eléctrico instalado al aire libre que sirve a ocupaciones de reunión. La iluminación no puede controlarse solo por medios automáticos, de modo que una persona que da servicio al equipo no quede a oscuras por un temporizador o un sensor. Donde la iluminación cercana ya ilumina el espacio de trabajo adecuadamente, no se requiere una luminaria extra.",
-      "on_the_job": "Agregue una luminaria con interruptor en el equipo exterior de acometida y distribución en trabajos de reunión, y verifíquela en los acabados en vez de descubrirla en la inspección final. Ponga el control en un interruptor manual, no solo en una fotocelda o un temporizador.",
+      "plain_explanation": "Agregada en la edición 2020, esta sección corta requiere iluminación para los espacios de trabajo alrededor del equipo eléctrico instalado al aire libre que sirve a ocupaciones de reunión. Funciona como tres reglas cortas:\n• Ilumine el espacio de trabajo: la caja despejada frente al equipo exterior de acometida y distribución — el espacio de 110.26(A), 3 ft de profundidad a los voltajes de casas y comercio pequeño, 30 in de ancho o el ancho del equipo, 6½ ft de alto — tiene que estar iluminada lo suficiente para trabajar en ella.\n• No solo automático: la iluminación no puede controlarse solo por medios automáticos, de modo que una persona que da servicio al equipo no quede a oscuras por un temporizador o un sensor.\n• Lo ya iluminado está iluminado: donde la iluminación cercana ya ilumina el espacio de trabajo adecuadamente, no se requiere una luminaria extra.\n110.26(D) pide lo mismo de los espacios de trabajo en general; 518.6 lo hace explícito para el equipo exterior en trabajos de reunión.",
+      "on_the_job": "Agregue una luminaria con interruptor en el equipo exterior de acometida y distribución en trabajos de reunión, y verifíquela en los acabados en vez de descubrirla en la inspección final. Ponga el control en un interruptor manual, no solo en una fotocelda o un temporizador. En una ampliación de salón social en Ocala, la acometida exterior de 400 A estaba bajo el alero con un paquete de pared de fotocelda encima — de anochecer a amanecer, sin interruptor. Eso no cumple 518.6 en papel antes de fallar en persona: cambiamos el control a un interruptor manual dentro del cuarto eléctrico, mantuvimos el paquete de pared, y el espacio de trabajo — 3 ft hacia afuera del equipo — quedó iluminado cuando se necesitaba.",
       "sharma_note": "Referencia cruzada: el espacio de trabajo mismo es 110.26 en el Capítulo 1; esta sección solo agrega la luz para poder verlo.",
       "figure_idea": "",
       "related_ids": [
@@ -2093,7 +3194,95 @@
       "verified": true,
       "prev_id": "C5-518.4",
       "next_id": "C5-ART-520",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "El equipo exterior se atiende de noche, bajo la lluvia, con presión de tiempo — un principal disparado en un salón de iglesia lleno un sábado por la noche. Trabajar en equipo energizado que usted no puede ver es como un destornillador resbalado se convierte en un arco eléctrico. Un control manual garantiza que la luz permanezca encendida mientras la persona que trabaja lo esté.",
+      "exam_trap": "La trampa es 'el paquete de pared con fotocelda sobre el tablero lo cumple — el espacio está iluminado cada noche'. Iluminado no es la prueba; el control lo es. El control solo automático no cumple aunque la luz funcione perfectamente, porque un sensor o un temporizador todavía puede apagar la luz mientras alguien está dentro del equipo.",
+      "tables": [
+        {
+          "caption": "El espacio de trabajo que la luz debe cubrir (110.26(A))",
+          "headers": [
+            "Dimensión",
+            "Regla 2020"
+          ],
+          "rows": [
+            [
+              "Profundidad, 0–150 V a tierra",
+              "3 ft"
+            ],
+            [
+              "Ancho",
+              "30 in o el ancho del equipo, el que sea mayor"
+            ],
+            [
+              "Altura",
+              "6½ ft o la altura del equipo"
+            ]
+          ],
+          "note": "518.6 agrega la iluminación; el espacio mismo es 110.26(A). El control no puede ser solo automático."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-518.6-working-space-light.svg",
+          "alt": "Sección de un tablero exterior que muestra el espacio de trabajo de 3 pies de profundidad y 6 pies 6 pulgadas de alto, iluminado por una luminaria de pared con interruptor manual, con un control solo por fotocelda marcado como insuficiente.",
+          "caption": "Ilumine el espacio de trabajo de 110.26 — y mantenga un control manual en él.",
+          "w": 900,
+          "h": 1400
+        }
+      ],
+      "inspection_fails": [
+        "Acometida exterior de un salón de iglesia iluminada solo por un paquete de pared con fotocelda — sin control manual.",
+        "Luminaria controlada por temporizador sobre el equipo exterior de distribución, programada para apagarse durante los eventos de la noche.",
+        "Ninguna iluminación en el espacio de trabajo exterior; el equipo trabaja con linterna en la inspección final.",
+        "Luminaria presente pero apuntando al estacionamiento, dejando el espacio de trabajo mismo en sombra."
+      ],
+      "page_quiz": [
+        {
+          "question": "Un tablero exterior que sirve a un salón de banquetes tiene la luz de su espacio de trabajo solo con fotocelda. ¿Cumple?",
+          "choices": [
+            "Sí, si la luz es lo bastante brillante",
+            "No — el control no puede ser solo automático",
+            "Sí, si la fotocelda está listada",
+            "Solo falla si no hay luz alguna"
+          ],
+          "answer_index": 1,
+          "explain_plain": "518.6 requiere la iluminación y prohíbe el control solo automático, para que un temporizador o un sensor no deje a un trabajador a oscuras.",
+          "nec_ref": "518.6"
+        },
+        {
+          "question": "¿Cuándo no se requiere una luminaria agregada en el equipo exterior de un trabajo de reunión?",
+          "choices": [
+            "Nunca — siempre se requiere una",
+            "Cuando el equipo está bajo techo",
+            "Cuando la iluminación cercana ya ilumina el espacio de trabajo adecuadamente",
+            "Cuando el tablero es menor de 200 A"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Si la iluminación cercana existente ya ilumina el espacio de trabajo adecuadamente, 518.6 no requiere otra luminaria.",
+          "nec_ref": "518.6"
+        },
+        {
+          "question": "El espacio de trabajo que ilumina 518.6 es el espacio definido por:",
+          "choices": [
+            "518.4",
+            "110.26(A)",
+            "210.52",
+            "300.5"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El espacio de trabajo es el espacio despejado de 110.26(A) alrededor del equipo; 518.6 agrega la luz para poder verlo.",
+          "nec_ref": "110.26(A)"
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "518.6",
+        "110.26(A)",
+        "110.26(D)"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-ART-520",
@@ -2774,8 +3963,8 @@
       "article": "547",
       "section": "547",
       "title": "Edificios agrícolas",
-      "plain_explanation": "El Artículo 547 cubre edificios y áreas agrícolas donde está presente polvo excesivo, polvo con agua o una atmósfera corrosiva — confinamiento de ganado, establos lecheros, edificios avícolas y trabajo rural similar de Florida. Los animales son mucho más sensibles a voltajes pequeños que las personas, por lo que el artículo agrega planos equipotenciales, un arreglo especial de distribución en el sitio y métodos de cableado que sobreviven a la corrosión. Modifica los capítulos normales; no los reemplaza.\n\nCAMBIO NEC 2023:\n• 547.26: El cable no metálico ya no puede ocultarse en paredes ni por encima de cielorrasos de edificios unidos a áreas de confinamiento de ganado. Los roedores que muerden el cable oculto son la razón. En cualquier edificio, o parte de uno, que colinda con un área de confinamiento de ganado, el cable no metálico no puede ocultarse dentro de las paredes ni pasarse por encima de los cielorrasos.\n• 547.44: El Artículo 547 se reagrupó en partes en 2023, llevando las reglas de planos para áreas de ganado de 547.10 a 547.44. El punto de conexión de unión del plano ahora se especifica. La renumeración de 2023 del Artículo 547 movió las reglas de planos de ganado de 547.10 a 547.44.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "En cualquier cotización de granero o confinamiento, pregunte temprano si el ganado estará confinado sobre concreto — esa respuesta hace entrar los planos equipotenciales y el punto de distribución. Cotice métodos resistentes a la corrosión desde el principio en vez de descubrirlos en la inspección.",
+      "plain_explanation": "El Artículo 547 cubre edificios agrícolas y áreas con polvo excesivo, polvo mezclado con agua o una atmósfera corrosiva — el confinamiento de ganado, los establos lecheros y los edificios avícolas son los casos de Florida. Modifica los capítulos normales; no los reemplaza.\n• Los animales son mucho más sensibles a los voltajes pequeños que las personas. Una vaca de pie sobre concreto mojado siente diferencias de voltaje que una persona jamás notaría, así que este artículo combate el voltaje parásito con la misma fuerza que la corrosión.\n• Planos equipotenciales (547.10): donde el ganado se confina sobre concreto, un plano de malla de alambre unida va en el piso para que las patas del animal y el metal que toca permanezcan al mismo voltaje. El plano se une al sistema de puesta a tierra del edificio con un conductor de cobre sólido, de 8 AWG o mayor, con conectores de presión o abrazaderas listados. El vaciado es la fecha límite — el plano no puede agregarse después.\n• Punto de distribución (547.9): los edificios de ganado en el mismo predio se alimentan desde un punto de distribución en un arreglo puesto a tierra de cuatro conductores, lo que evita que la corriente del neutro regrese por la tierra y por la puesta a tierra de los edificios. Se permite más de un punto de distribución, y los alimentadores y circuitos derivados subterráneos que salen de él reciben protección contra sobrecorriente.\n• Métodos de cableado (547.5): los métodos deben sobrevivir condiciones húmedas, mojadas y corrosivas, con un conductor de puesta a tierra de equipo aislado donde la tierra corre bajo tierra fuera de un conjunto de cable listado. La protección GFCI cubre los receptáculos de 125 voltios, monofásicos, de 15 y 20 amperios en planos equipotenciales, exteriores, lugares húmedos o mojados y áreas de confinamiento en tierra (547.5(G)).",
+      "on_the_job": "Establo de caballos y área de lavado a las afueras de Ocala, en el condado de Marion: la cotización pregunta el primer día si los caballos estarán confinados sobre el pasillo de concreto. Lo estarán, así que la estimación cotiza el plano de malla unida y su unión de cobre sólido de 8 AWG antes de vaciar la losa, un punto de distribución que alimenta el establo y el área de lavado en una corrida de cuatro conductores, y protección GFCI en los receptáculos de 125 voltios en el plano y en exteriores. Los métodos resistentes a la corrosión se cotizan desde el principio, no se descubren en la inspección.",
       "sharma_note": "",
       "figure_idea": "Dibujo en corte de un granero: piso de confinamiento de concreto con un plano de malla unida (bonding), los animales encima y un punto de distribución que alimenta varios edificios.",
       "related_ids": [
@@ -2803,7 +3992,105 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/547-44",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Dos peligros comparten este artículo. La corrosión destruye cajas, cables y caminos de tierra ordinarios hasta que el metal del equipo queda energizado en un establo mojado. Y el voltaje parásito — un voltio o dos entre un bebedero y el piso — estresa al ganado, reduce la producción y es casi imposible de rastrear después. El plano, el arreglo de distribución único y los métodos a prueba de corrosión son un solo sistema dirigido a ambos.",
+      "exam_trap": "La trampa: darle a cada establo su propia acometida y su propia unión de neutro a tierra porque parece más sencillo. Ese es el arreglo clásico del voltaje parásito — la corriente del neutro se divide entre el conductor, la tierra y los sistemas de puesta a tierra. 547.9 alimenta los edificios de ganado desde un punto de distribución en un arreglo puesto a tierra de cuatro conductores. Segunda trampa: tratar el plano equipotencial como opcional en un piso de confinamiento de concreto. Donde aplica 547.10, el plano y su unión de cobre sólido de 8 AWG son la instalación, y van antes del vaciado.",
+      "inspection_fails": [
+        "Plano equipotencial ausente bajo un piso de confinamiento de ganado de concreto — o vaciado sin su unión.",
+        "Cada establo con su propia acometida y su propia unión de neutro; voltaje parásito en los bebederos.",
+        "Cajas y cable con clasificación de interior, corroídos en un área de confinamiento húmeda.",
+        "Sin protección GFCI en los receptáculos de 125 voltios en el plano, en exteriores o en áreas de confinamiento en tierra.",
+        "Conductor de unión del plano de tamaño menor, trenzado o conectado con conectores no listados."
+      ],
+      "tables": [
+        {
+          "caption": "Mapa de trabajo del Artículo 547",
+          "headers": [
+            "Elemento",
+            "Regla",
+            "Sección"
+          ],
+          "rows": [
+            [
+              "Plano equipotencial",
+              "Malla unida en pisos de confinamiento de concreto",
+              "547.10"
+            ],
+            [
+              "Unión del plano",
+              "Cobre sólido, 8 AWG mín., conectores listados",
+              "547.10"
+            ],
+            [
+              "Suministro de edificios",
+              "Punto de distribución, cuatro conductores puesto a tierra",
+              "547.9"
+            ],
+            [
+              "GFCI",
+              "Receptáculos de 125 V, 15/20 A en planos, exteriores, áreas húmedas o mojadas, confinamiento en tierra",
+              "547.5(G)"
+            ]
+          ]
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Cuál es el conductor de unión mínimo para un plano equipotencial en un área de confinamiento de ganado?",
+          "choices": [
+            "Cobre sólido de 8 AWG",
+            "Cobre trenzado de 6 AWG",
+            "Cobre sólido de 10 AWG",
+            "Cualquier cobre sobrante en la camioneta"
+          ],
+          "answer_index": 0,
+          "explain_plain": "547.10: el plano se une al sistema de puesta a tierra del edificio con un conductor de cobre sólido no menor de 8 AWG, usando conectores de presión o abrazaderas listados.",
+          "nec_ref": "547.10"
+        },
+        {
+          "question": "¿Cómo se suministran los edificios de ganado en el mismo predio?",
+          "choices": [
+            "Cada uno con su propia acometida y unión de neutro",
+            "Desde un punto de distribución, en un arreglo puesto a tierra de cuatro conductores",
+            "Con dos conductores, para mantener el neutro fuera de la tierra",
+            "Desde el tablero más cercano, con cualquier arreglo"
+          ],
+          "answer_index": 1,
+          "explain_plain": "547.9 suministra los edificios desde un punto de distribución para que la corriente del neutro regrese por el conductor, no por la tierra ni por los sistemas de puesta a tierra.",
+          "nec_ref": "547.9"
+        },
+        {
+          "question": "¿Qué receptáculos necesitan protección GFCI según 547.5(G)?",
+          "choices": [
+            "Todos los receptáculos de la granja",
+            "Solo los receptáculos de la oficina",
+            "Receptáculos de 125 voltios, de 15 y 20 amperios, en planos equipotenciales, exteriores y lugares húmedos, mojados o de confinamiento en tierra",
+            "Ninguno — los establos están exentos"
+          ],
+          "answer_index": 2,
+          "explain_plain": "547.5(G) lista exactamente esos lugares: planos, exteriores, lugares húmedos o mojados y áreas de confinamiento en tierra.",
+          "nec_ref": "547.5(G)"
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-ART-547-barn-plane.svg",
+          "alt": "Corte transversal de un establo de confinamiento de ganado que muestra un plano equipotencial de malla de alambre unida en el piso de concreto, su unión de cobre sólido de 8 AWG al sistema de puesta a tierra, un bebedero metálico y un punto de distribución que alimenta el tablero.",
+          "caption": "El plano va antes del vaciado — patas y metal a un solo voltaje.",
+          "w": 900,
+          "h": 1620
+        }
+      ],
+      "code_refs": [
+        "547.5",
+        "547.5(G)",
+        "547.9",
+        "547.10"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "CAMBIO NEC 2023:\n• 547.26: El cable no metálico ya no puede ocultarse en paredes ni por encima de cielorrasos de edificios unidos a áreas de confinamiento de ganado. Los roedores que muerden el cable oculto son la razón. En cualquier edificio, o parte de uno, que colinda con un área de confinamiento de ganado, el cable no metálico no puede ocultarse dentro de las paredes ni pasarse por encima de los cielorrasos.\n• 547.44: El Artículo 547 se reagrupó en partes en 2023, llevando las reglas de planos para áreas de ganado de 547.10 a 547.44. El punto de conexión de unión del plano ahora se especifica. La renumeración de 2023 del Artículo 547 movió las reglas de planos de ganado de 547.10 a 547.44.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich": 1
     },
     {
       "id": "C5-547.5",
@@ -2834,8 +4121,8 @@
       "article": "547",
       "section": "547.9",
       "title": "Alimentación desde un punto de distribución — edificios para ganado",
-      "plain_explanation": "Los edificios agrícolas para ganado en el mismo predio se alimentan desde un punto de distribución usando un arreglo de distribución puesto a tierra de cuatro conductores — y 547.9 permite expresamente más de un punto de distribución en el mismo predio. El punto del diseño es evitar que la corriente del neutro regrese por la tierra y por los sistemas de puesta a tierra de los edificios, que es una fuente clásica del voltaje parásito que molesta al ganado. Se requiere protección contra sobrecorriente para los circuitos derivados y alimentadores subterráneos que salen del punto de distribución.",
-      "on_the_job": "En una acometida de granja con varios edificios, dibuje el punto de distribución en el croquis del sitio y cotice los recorridos de cuatro conductores y la protección subterránea como se muestra. No sirva cada granero con su propia acometida improvisada y su propia unión del neutro.",
+      "plain_explanation": "En una granja con varios edificios para ganado, los edificios no reciben cada uno su propia acometida. Se alimentan desde un punto de distribución — el punto de suministro, a menudo el poste central del patio o poste del medidor, desde el cual los alimentadores, las acometidas aéreas o las laterales llegan a los edificios agrícolas y a la vivienda de la granja bajo una sola administración. Las reglas que hacen funcionar el diseño:\n• La alimentación desde el punto de distribución es un arreglo puesto a tierra de cuatro conductores: conductores no puestos a tierra, un conductor puesto a tierra (neutro) aislado, y un conductor de puesta a tierra de equipos separado\n• Se permite expresamente más de un punto de distribución en el mismo predio\n• Un dispositivo de aislamiento del sitio en el punto de distribución desconecta el predio de la compañía eléctrica; no es el medio de desconexión de acometida de los edificios individuales\n• El neutro se une al sistema de puesta a tierra en el punto de distribución — y en ningún otro lugar aguas abajo\n• Cada edificio conserva su propio sistema de electrodos de puesta a tierra y su medio de desconexión según 250.32\n• Se requiere protección contra sobrecorriente para los circuitos derivados y alimentadores subterráneos que salen del punto de distribución",
+      "on_the_job": "En una acometida de granja con varios edificios, dibuje el punto de distribución en el croquis del sitio y cotice los recorridos de cuatro conductores y la protección subterránea como se muestra. No sirva cada granero con su propia acometida improvisada y su propia unión del neutro. En una operación ganadera del condado de Hardee con un establo lechero, un establo de terneros y la casa de la granja en un solo poste de medidor, eso significa tres alimentadores de cuatro conductores desde el poste, un electrodo de puesta a tierra en el poste y en cada edificio, y las barras de neutro y de tierra separadas en cada panel de los establos — una sola unión, en el poste, sirve a toda la granja.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -2846,7 +4133,111 @@
       "verified": true,
       "prev_id": "C5-547.5",
       "next_id": "C5-547.10",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "En un sistema de granja antiguo de tres conductores, el neutro y la tierra de equipos comparten un solo camino, de modo que la corriente normal del neutro se divide entre el conductor, la tierra, y cada tubería de agua y estabulación unidos en el lugar. Esa corriente compartida es la principal fuente en la granja del voltaje parásito — el pequeño voltaje entre dos cosas que una vaca toca al mismo tiempo. El diseño de cuatro conductores le da a la corriente del neutro su propio camino aislado de regreso y la mantiene fuera de la tierra y del sistema de puesta a tierra, de modo que el metal de los edificios se mantiene al potencial de tierra.",
+      "exam_trap": "La respuesta trampa es una acometida por establo, cada una con su propia unión de neutro a tierra. Cada unión adicional devuelve corriente del neutro a la tierra y al sistema de puesta a tierra — exactamente lo que 547.9 existe para detener. La segunda trampa es «solo se permite un punto de distribución en una granja». La sección permite expresamente más de un punto de distribución en el mismo predio.",
+      "inspection_fails": [
+        "El neutro unido de nuevo en un panel de un establo alimentado desde el punto de distribución.",
+        "Alimentador de tres conductores — sin conductor de puesta a tierra de equipos separado — llevado a un edificio para ganado.",
+        "Alimentador subterráneo que sale del punto de distribución sin protección contra sobrecorriente.",
+        "Edificio alimentado desde el punto de distribución sin sistema de electrodos de puesta a tierra en el edificio (250.32).",
+        "Sin dispositivo de aislamiento del sitio en el punto de distribución, o el interruptor del poste tratado como la desconexión de acometida de cada edificio."
+      ],
+      "tables": [
+        {
+          "caption": "Alimentación de granja de tres vs cuatro conductores",
+          "headers": [
+            "Característica",
+            "3 conductores (forma antigua)",
+            "4 conductores según 547.9"
+          ],
+          "rows": [
+            [
+              "Camino de retorno del neutro",
+              "Compartido con la tierra y la puesta a tierra",
+              "Su propio conductor aislado"
+            ],
+            [
+              "Unión de neutro a tierra",
+              "En cada edificio",
+              "Solo en el punto de distribución"
+            ],
+            [
+              "Conductor de puesta a tierra de equipos",
+              "Combinado con el neutro",
+              "Conductor separado a cada edificio"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-547.9-distribution-point.svg",
+          "alt": "Plano de sitio de una granja con un punto de distribución en un poste central con medidor y dispositivo de aislamiento del sitio, alimentadores de cuatro conductores que se abren hacia un establo lechero, una casa de granja y un establo de terneros, y el neutro unido solo en el poste.",
+          "caption": "Un punto de distribución, alimentadores de cuatro conductores, una sola unión del neutro — en el poste.",
+          "w": 900,
+          "h": 1580
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Cómo se alimentan los edificios para ganado en el mismo predio según 547.9?",
+          "choices": [
+            "Cada uno con su propia acometida y unión del neutro",
+            "Desde un punto de distribución, con un arreglo puesto a tierra de cuatro conductores",
+            "Con un alimentador de tres conductores con neutro/tierra compartido",
+            "Desde el panel de la casa de la granja"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Los edificios se alimentan desde un punto de distribución usando un arreglo de distribución puesto a tierra de cuatro conductores.",
+          "nec_ref": "547.9"
+        },
+        {
+          "question": "¿Cuántos puntos de distribución puede tener un predio?",
+          "choices": [
+            "Exactamente uno",
+            "Uno por edificio, como máximo",
+            "Se permite más de uno",
+            "Ninguno — los puntos de distribución se eliminaron"
+          ],
+          "answer_index": 2,
+          "explain_plain": "547.9 permite expresamente más de un punto de distribución en el mismo predio.",
+          "nec_ref": "547.9"
+        },
+        {
+          "question": "¿Dónde se une el neutro al sistema de puesta a tierra en este diseño?",
+          "choices": [
+            "En la desconexión de cada edificio",
+            "Solo en el establo más grande",
+            "Solo en el punto de distribución",
+            "En ningún lugar — las granjas dejan el neutro flotante"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La conexión de neutro a tierra se hace en el punto de distribución (dispositivo de aislamiento del sitio), manteniendo la corriente del neutro fuera de la tierra y de los sistemas de puesta a tierra de los edificios.",
+          "nec_ref": "547.9"
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "547.9",
+        "547.2",
+        "250.32",
+        "547.9(A)(2)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "La conexión de neutro a tierra se hace solo en el dispositivo de aislamiento del sitio en el punto de distribución; cada edificio agrícola debe cumplir 250.32, y el dispositivo de aislamiento del sitio se monta en el poste y no es el medio de desconexión de acometida.",
+          "source": "EC&M, Taking Care of the Farm: Protecting livestock from stray voltages",
+          "url": "https://www.ecmag.com/magazine/articles/article-detail/taking-care-of-the-farm-protecting-livestock-from-stray-voltages"
+        },
+        {
+          "claim": "El punto de distribución es típicamente el poste central (del medidor), que es a la vez el punto de medición y el punto de acometida de la compañía eléctrica, con un conductor de electrodo de puesta a tierra hasta un electrodo en la base del poste.",
+          "source": "McGraw-Hill's NEC Handbook, Article 547 discussion (Access Engineering)",
+          "url": "https://www.accessengineeringlibrary.com/index.php/binary/mheaeworks/7b341b909c5c22e3/ee16b21ce7657d0c5cae1cc3305765567fe4c84c23757ca01474beafd0039663/article-547-agricultural-buildings.pdf"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C5-547.10",
@@ -2854,8 +4245,8 @@
       "article": "547",
       "section": "547.10",
       "title": "Planos equipotenciales en áreas de confinamiento de ganado",
-      "plain_explanation": "Donde el ganado está confinado sobre concreto y el equipo metálico que puede tocar puede energizarse, se instala un plano equipotencial en el piso para que los pies del animal y el equipo que toca se mantengan al mismo voltaje. El plano se une al sistema de puesta a tierra eléctrica del edificio con un conductor de unión de cobre sólido de al menos 8 AWG, conectado con conectores o abrazaderas a presión listados. Se requiere en interiores y exteriores en las áreas de confinamiento que describe la sección.",
-      "on_the_job": "Coordine el plano con el equipo de concreto antes del vaciado — adaptar un plano unido después de colocar la losa no es una opción real. Mantenga inspeccionables la unión de cobre sólido 8 AWG y sus conexiones hasta que sean aprobadas.",
+      "plain_explanation": "Un plano equipotencial es una malla de alambre u otros elementos conductores incrustados en el piso de concreto de un área de confinamiento de ganado, o colocados debajo de él, unidos entre sí y conectados al sistema de puesta a tierra eléctrica del edificio. Se requiere cuando se cumple todo lo siguiente:\n• El área confina ganado (el término no incluye aves de corral)\n• El piso es de concreto — un piso de confinamiento interior, o una losa de concreto exterior\n• El equipo metálico que puede energizarse — bebederos, estabulaciones, comederos, puertas — está al alcance de los animales\nEn exteriores, el plano debe cubrir el suelo donde el animal se para mientras toca ese equipo. El conductor de unión es de cobre sólido, aislado, cubierto o desnudo, no menor de 8 AWG. Las conexiones a la malla o a los elementos conductores se hacen con conectores a presión o abrazaderas de latón, cobre, aleación de cobre, o un medio aprobado igualmente sustancial. Los pisos de rejilla sostenidos por una estructura que forma parte del plano no necesitan unión separada.",
+      "on_the_job": "Coordine el plano con el equipo de concreto antes del vaciado — adaptar un plano unido después de colocar la losa no es una opción real. Mantenga inspeccionables la unión de cobre sólido 8 AWG y sus conexiones hasta que sean aprobadas. En una ampliación lechera del condado de Polk, la secuencia es: la malla amarrada, la unión de cobre sólido 8 AWG fijada a la malla con conectores a presión listados y llevada hasta el terminal de puesta a tierra del panel del establo, y una foto de cada conexión antes de programar el vaciado. Recuerde la regla compañera de 547.5(G): los receptáculos de 125 voltios, monofásicos, de 15 y 20 amperios en el área del plano necesitan protección GFCI.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -2866,7 +4257,106 @@
       "verified": true,
       "prev_id": "C5-547.9",
       "next_id": "C5-ART-550",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Una vaca parada sobre concreto mojado está en contacto casi perfecto con la tierra, y el ganado siente voltajes que una persona con botas nunca nota. Si una falla o la corriente del neutro eleva un bebedero metálico aunque sea unos pocos voltios por encima del piso bajo los pies del animal, la corriente pasa a través del animal cada vez que bebe — el clásico voltaje de cosquilleo que reduce el consumo de alimento y la producción de leche y puede matar. El plano elimina la diferencia: el piso, el bebedero y las estabulaciones se mantienen a un solo voltaje, de modo que nada impulsa corriente a través del animal.",
+      "exam_trap": "La trampa es tratar el plano como una varilla de tierra: enterrar una varilla separada en el corral y darlo por terminado. Una varilla por sí sola no iguala nada — la regla es un plano unido conectado al sistema de puesta a tierra del edificio, con un conductor de unión de cobre sólido de al menos 8 AWG. La segunda respuesta incorrecta es conductor trenzado o una abrazadera de manguera sobre la malla: el conductor debe ser sólido, y las conexiones deben ser conectores a presión o abrazaderas.",
+      "inspection_fails": [
+        "La malla del plano se colocó en la losa pero nunca se unió al sistema de puesta a tierra del edificio.",
+        "El conductor de unión es 8 AWG trenzado — 547.10(B) requiere cobre sólido.",
+        "Conexiones a la malla hechas con abrazaderas de manguera no listadas en lugar de conectores a presión o abrazaderas listados.",
+        "El concreto se vació antes de inspeccionar las conexiones del plano, sin dejar nada que verificar.",
+        "Receptáculos de 125 voltios, de 15 y 20 amperios, en el área de confinamiento sin la protección GFCI que requiere 547.5(G)."
+      ],
+      "tables": [
+        {
+          "caption": "Dónde se requiere el plano equipotencial (547.10(A))",
+          "headers": [
+            "Caso",
+            "¿Plano?"
+          ],
+          "rows": [
+            [
+              "Confinamiento interior, piso de concreto, equipo metálico al alcance",
+              "Requerido"
+            ],
+            [
+              "Losa de concreto exterior, equipo metálico al alcance",
+              "Requerido — cubre donde se para el animal"
+            ],
+            [
+              "Área de confinamiento de tierra, sin piso de concreto",
+              "No lo requiere 547.10"
+            ],
+            [
+              "Confinamiento de aves de corral",
+              "No es ganado bajo esta sección"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-547.10-equipotential-plane.svg",
+          "alt": "Vista en corte de un corral de confinamiento de ganado: malla de alambre incrustada en una losa de concreto, un bebedero metálico y barandas de estabulación sobre la losa, y un conductor de unión de cobre sólido de 8 AWG que conecta la malla al sistema de puesta a tierra del edificio.",
+          "caption": "El plano: malla en la losa, todo lo que el animal toca unido a un solo voltaje.",
+          "w": 900,
+          "h": 1620
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Cuál es el conductor de unión mínimo para un plano equipotencial?",
+          "choices": [
+            "8 AWG de cobre sólido",
+            "8 AWG de cobre trenzado",
+            "10 AWG de cobre sólido",
+            "6 AWG de aluminio"
+          ],
+          "answer_index": 0,
+          "explain_plain": "Cobre sólido, aislado, cubierto o desnudo, no menor de 8 AWG.",
+          "nec_ref": "547.10(B)"
+        },
+        {
+          "question": "En exteriores, ¿cuánto suelo debe cubrir el plano?",
+          "choices": [
+            "Todo el lote",
+            "El área donde el ganado se para mientras accede al equipo metálico que puede energizarse",
+            "Una franja de 6 ft en la puerta",
+            "Solo la losa bajo el bebedero"
+          ],
+          "answer_index": 1,
+          "explain_plain": "El plano debe abarcar donde el animal se para mientras toca el equipo que puede energizarse.",
+          "nec_ref": "547.10(A)(2)"
+        },
+        {
+          "question": "¿Cómo se hacen las conexiones de unión a la malla de alambre?",
+          "choices": [
+            "Abrazaderas de manguera",
+            "Solo soldadura blanda",
+            "Conectores a presión o abrazaderas de latón, cobre o aleación de cobre",
+            "Tuercas para cables"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Conectores a presión o abrazaderas de latón, cobre, aleación de cobre, o un medio aprobado igualmente sustancial.",
+          "nec_ref": "547.10(B)"
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "547.10(A)",
+        "547.10(B)",
+        "547.5(G)",
+        "547.2"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "El plano es malla de alambre u otros elementos conductores incrustados en el concreto o colocados debajo de él, unidos a las estructuras metálicas y al equipo fijo que puede energizarse y conectados al sistema de puesta a tierra del edificio; las áreas de confinamiento de tierra pueden omitir el plano.",
+          "source": "EC&M, Taking Care of the Farm: Protecting livestock from stray voltages",
+          "url": "https://www.ecmag.com/magazine/articles/article-detail/taking-care-of-the-farm-protecting-livestock-from-stray-voltages"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C5-ART-550",
@@ -3234,8 +4724,8 @@
       "article": "555",
       "section": "555.3",
       "title": "Plano de referencia eléctrico (datum) — alturas sobre el agua",
-      "plain_explanation": "El plano de referencia eléctrico (datum) es la altura de referencia sobre el agua por debajo de la cual no pueden instalarse ciertos equipos, conexiones y tomacorrientes. Para muelles e instalaciones flotantes está a 30 pulgadas por encima del nivel del agua y al menos 12 pulgadas por encima del nivel de la cubierta. Las instalaciones fijas usan sus propias definiciones de datum ligadas a la marea alta y al nivel de la cubierta en esta sección, así que lea el caso exacto que coincide con la estructura antes de colocar equipo.",
-      "on_the_job": "Establezca la línea del datum en el sitio con el operador de la marina y márquela en el muelle antes de la instalación en bruto — luego no coloque nada de lo que el artículo restringe por debajo de ella. Vuelva a verificar después de cualquier trabajo de cubierta o flotadores que cambie la altura de la cubierta.",
+      "plain_explanation": "El plano de referencia eléctrico (datum) es la altura de referencia sobre el agua por debajo de la cual no pueden instalarse ciertos equipos, conexiones y tomacorrientes. 555.3 establece el plano según el tipo de estructura:\n• Muelles e instalaciones flotantes, 555.3(A): el plano está a 30 pulgadas por encima del nivel del agua y al menos 12 pulgadas por encima del nivel de la cubierta.\n• Áreas terrestres sujetas a fluctuación de marea, 555.3(B): el plano está a 2 pies por encima del nivel de marea más alto del área, en circunstancias normales.\n• Áreas terrestres no sujetas a fluctuación de marea, 555.3(C): el plano está a 2 pies por encima del nivel de agua más alto del área, en circunstancias normales.\nCircunstancias normales es la frase clave. El plano se calcula desde la marea alta ordinaria — no desde el nivel del agua el día de la instalación, ni desde la marejada ciclónica.",
+      "on_the_job": "Establezca la línea del datum en el sitio con el operador de la marina y márquela en el muelle antes de la instalación en bruto — luego no coloque nada de lo que el artículo restringe por debajo de ella. Vuelva a verificar después de cualquier trabajo de cubierta o flotadores que cambie la altura de la cubierta. En un muelle flotante en un lago de Florida Central, trabaje ambos números — 30 pulgadas sobre el agua y al menos 12 pulgadas sobre la cubierta — y mantenga la línea más alta. La misma línea controla los tomacorrientes de energía de muelle: 555.33 los mantiene al menos 12 pulgadas sobre la cubierta y nunca por debajo del plano de referencia.",
       "sharma_note": "",
       "figure_idea": "Dibujo de elevación de un muelle con el nivel del agua, la cubierta y una línea de datum a 30 pulgadas sobre el agua y 12 pulgadas sobre la cubierta, con el equipo mostrado por encima de la línea.",
       "related_ids": [
@@ -3246,7 +4736,103 @@
       "verified": true,
       "prev_id": "C5-ART-555",
       "next_id": "C5-555.4",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "El agua sube. El equipo colocado a ojo en un día calmado queda bajo el agua en la siguiente marea alta ordinaria, y el equipo energizado en el agua es un peligro de choque para todos los que están en ella. El plano de referencia convierte 'suficientemente alto' en un número contra el cual todo el trabajo puede medirse.",
+      "exam_trap": "La trampa es usar los números del muelle flotante en todas partes. Treinta pulgadas sobre el agua es el caso flotante, 555.3(A). Una instalación fija en tierra con marea usa 2 pies sobre el nivel de marea más alto, y la medición parte del nivel normal más alto — no del agua que usted ve en marea baja el día de la instalación en bruto.",
+      "inspection_fails": [
+        "Tomacorriente de energía de muelle montado por debajo del plano de referencia eléctrico.",
+        "Plano de referencia calculado desde el nivel del agua el día de la instalación en bruto en lugar del nivel más alto en circunstancias normales.",
+        "Caja de empalmes dejada por debajo del plano de referencia después de que flotadores nuevos subieron la cubierta — la línea nunca se volvió a verificar.",
+        "Datum de muelle flotante (30 pulgadas sobre el agua) aplicado a una instalación fija en un área con marea."
+      ],
+      "tables": [
+        {
+          "caption": "Plano de referencia por estructura — 555.3 (NEC 2020)",
+          "headers": [
+            "Estructura",
+            "Plano de referencia"
+          ],
+          "rows": [
+            [
+              "Muelle flotante",
+              "30 pulg sobre el agua, al menos 12 pulg sobre la cubierta"
+            ],
+            [
+              "Tierra, con marea",
+              "2 pies sobre el nivel de marea más alto"
+            ],
+            [
+              "Tierra, sin marea",
+              "2 pies sobre el nivel de agua más alto"
+            ]
+          ],
+          "note": "Las alturas son en circunstancias normales — marea alta ordinaria, no extremos de tormenta."
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-555.3-datum-plane.svg",
+          "alt": "Elevación de un muelle flotante con el plano de referencia eléctrico dibujado a 30 pulgadas sobre el nivel del agua y al menos 12 pulgadas sobre la cubierta, un pedestal por encima del plano, y una caja por debajo de él marcada como no permitida.",
+          "caption": "El plano de referencia en un muelle flotante: 30 pulgadas sobre el agua, 12 sobre la cubierta.",
+          "w": 900,
+          "h": 1300
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Para un muelle flotante, el plano de referencia eléctrico es:",
+          "choices": [
+            "12 pulgadas sobre el nivel del agua",
+            "30 pulgadas sobre el nivel del agua y al menos 12 pulgadas sobre la cubierta",
+            "2 pies sobre la cubierta",
+            "Al nivel de la cubierta"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Los muelles flotantes usan 30 pulgadas sobre el agua, y el plano también debe estar al menos 12 pulgadas sobre la cubierta.",
+          "nec_ref": "555.3(A)"
+        },
+        {
+          "question": "Para un área terrestre sujeta a fluctuación de marea, el plano de referencia es:",
+          "choices": [
+            "30 pulgadas sobre el agua",
+            "2 pies sobre el nivel de marea más alto",
+            "12 pulgadas sobre la cubierta",
+            "6 pies sobre el agua media"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Las áreas terrestres con marea usan un plano a 2 pies sobre el nivel de marea más alto en circunstancias normales.",
+          "nec_ref": "555.3(B)"
+        },
+        {
+          "question": "Las alturas del plano de referencia se calculan desde:",
+          "choices": [
+            "El nivel del agua el día de la instalación",
+            "El nivel de marejada ciclónica",
+            "El nivel más alto en circunstancias normales",
+            "La marea baja media"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La sección trabaja desde el nivel de agua o marea más alto que ocurre en circunstancias normales — no el agua del día de instalación ni extremos de desastre.",
+          "nec_ref": "555.3"
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "555.3",
+        "555.3(A)",
+        "555.3(B)",
+        "555.3(C)",
+        "555.33"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "555.3 datum plane distances: floating piers 30 in above the water level and a minimum of 12 in above the deck level; land areas subject to tidal fluctuation 2 ft above the highest tide level; land areas not subject to tidal fluctuation 2 ft above the highest water level, under normal circumstances.",
+          "source": "Electrical License Renewal, NEC 2020 content — 555.3 Electrical Datum Plane Distances",
+          "url": "https://www.electricallicenserenewal.com/Electrical-Continuing-Education-Courses/NEC-Content.php?sectionID=946.1"
+        }
+      ],
+      "rich": 1
     },
     {
       "id": "C5-555.4",
@@ -3254,8 +4840,8 @@
       "article": "555",
       "section": "555.4",
       "title": "Ubicación del equipo de acometida — en tierra, no en la estructura",
-      "plain_explanation": "El equipo de acometida de un edificio flotante, un muelle o una marina se instala en tierra, junto a la estructura a la que sirve — nunca sobre la estructura flotante misma ni dentro de ella. Una estructura flotante sube y baja con el agua, así que la acometida se queda en tierra firme, donde se puede llegar a ella y trabajarla como cualquier otra acometida. Todo lo que está aguas abajo de ella — los alimentadores que salen a lo largo del muelle — se alimenta desde ese punto del lado de la orilla.\n\nCAMBIO NEC 2023:\n• 555.4: El equipo de acometida de una marina, un muelle o un edificio flotante ahora debe estar en tierra, al menos 5 ft horizontalmente desde la estructura a la que sirve y al menos 12 in. por encima del plano de referencia eléctrico. Coloque el equipo de acometida de un edificio flotante, una instalación de amarre o una marina en tierra, al menos 5 ft retirado de la estructura a la que sirve, medido horizontalmente.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Coloque la acometida en tierra junto al muelle o la marina a la que sirve y lleve el alimentador hacia el muelle desde allí. Si un plano o una instalación existente muestra la acometida montada en un muelle flotante, márquelo antes de la instalación en bruto — esa ubicación falla esta sección.",
+      "plain_explanation": "El equipo de acometida de un edificio flotante, un muelle o una marina se instala en tierra, junto a la estructura a la que sirve — nunca sobre la estructura flotante misma ni dentro de ella. Una estructura flotante sube y baja con el agua, así que la acometida se queda en tierra firme, donde se puede llegar a ella y trabajarla como cualquier otra acometida. Todo lo que está aguas abajo de ella — los alimentadores que salen a lo largo del muelle — se alimenta desde ese punto del lado de la orilla.\n• El equipo de acometida se ubica en tierra, junto a la estructura a la que sirve\n• Nunca se instala sobre un edificio flotante ni dentro de él, ni sobre un muelle flotante\n• Los alimentadores salen desde esa acometida del lado de la orilla a lo largo del muelle hasta los pedestales de energía de muelle y las cargas del muelle\n• Las alturas cerca del agua aún deben respetar el plano de referencia eléctrico de 555.3 — para muelles flotantes, 30 in por encima del nivel del agua y al menos 12 in por encima del nivel de la cubierta",
+      "on_the_job": "Coloque la acometida en tierra junto al muelle o la marina a la que sirve y lleve el alimentador hacia el muelle desde allí. Si un plano o una instalación existente muestra la acometida montada en un muelle flotante, márquelo antes de la instalación en bruto — esa ubicación falla esta sección. En la repotenciación de una marina del condado de Lake, el patrón es el medidor y la desconexión principal en tierra junto al malecón, con alimentadores en conduit a lo largo del muelle fijo hasta los amarres flotantes. Si la acometida existente se encuentra sobre el muelle flotante, cotice la reubicación a tierra en la oferta — dejarla allí no es algo que un inspector pueda aprobar.",
       "sharma_note": "",
       "figure_idea": "Croquis del sitio: equipo de acometida en la orilla junto al muelle, alimentador que sale a lo largo del muelle hacia los pedestales, con el muelle flotante mostrado sin equipo de acometida sobre él.",
       "related_ids": [],
@@ -3272,7 +4858,97 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/555-4",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Un muelle flotante es una plataforma en movimiento. Sube y baja con la marea y el oleaje, flexiona cada conductor conectado a él, y puede inundarse, soltarse o hundirse en una tormenta. El equipo de acometida pertenece a donde se queda quieto: en tierra, donde la conexión de la compañía eléctrica es estable, la desconexión es alcanzable en una emergencia, y nadie tiene que trabajar equipo de acometida energizado parado sobre una plataforma mojada y en movimiento.",
+      "exam_trap": "La respuesta trampa coloca la acometida sobre el edificio flotante porque «eso es lo que sirve». 555.4 es directo: en tierra, junto a la estructura — nunca sobre la estructura flotante misma ni dentro de ella. El alimentador sale hacia el muelle; la acometida no.",
+      "inspection_fails": [
+        "Equipo de acometida montado sobre un muelle flotante o un edificio flotante.",
+        "Desconexión de acometida no alcanzable desde tierra en una emergencia.",
+        "Un panel en la sección flotante usado como el equipo de acometida del muelle.",
+        "Receptáculos o equipo colocados por debajo del plano de referencia eléctrico (555.3)."
+      ],
+      "tables": [
+        {
+          "caption": "Dónde va cada cosa en una marina (555.4, 555.3)",
+          "headers": [
+            "Elemento",
+            "Ubicación"
+          ],
+          "rows": [
+            [
+              "Equipo de acometida",
+              "En tierra, junto a la estructura servida"
+            ],
+            [
+              "Desconexión principal",
+              "Con el equipo de acometida, en tierra"
+            ],
+            [
+              "Pedestales de energía de muelle",
+              "Afuera en el muelle, alimentados desde la orilla"
+            ],
+            [
+              "Alturas del equipo",
+              "En el plano de referencia eléctrico o por encima de él (555.3)"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-555.4-service-on-land.svg",
+          "alt": "Plano de sitio de una marina: equipo de acometida en tierra junto al malecón, un alimentador que corre a lo largo del muelle fijo hasta un pedestal de energía de muelle, y un muelle flotante que se mueve con el agua sin equipo de acometida sobre él.",
+          "caption": "La acometida se queda en tierra; solo los alimentadores salen sobre el agua.",
+          "w": 900,
+          "h": 1580
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Dónde debe instalarse el equipo de acometida de un edificio flotante?",
+          "choices": [
+            "Sobre la estructura flotante, cerca de la carga",
+            "Dentro del edificio flotante",
+            "En tierra, junto a la estructura a la que sirve",
+            "En la sección flotante del muelle"
+          ],
+          "answer_index": 2,
+          "explain_plain": "En tierra, junto a la estructura — nunca sobre la estructura flotante misma ni dentro de ella.",
+          "nec_ref": "555.4"
+        },
+        {
+          "question": "¿Qué sale desde la acometida del lado de la orilla hasta las cargas del muelle?",
+          "choices": [
+            "Los conductores de acometida",
+            "Alimentadores",
+            "Solo el conductor del electrodo de puesta a tierra",
+            "Nada — los muelles tienen sus propias acometidas"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Todo lo que está aguas abajo de la acometida de la orilla — los alimentadores a lo largo del muelle — se alimenta desde ese punto.",
+          "nec_ref": "555.4"
+        },
+        {
+          "question": "¿Por qué la acometida se queda en tierra?",
+          "choices": [
+            "La tierra es más barata",
+            "Una estructura flotante sube y baja con el agua, así que la acometida se queda en suelo firme",
+            "La compañía eléctrica exige medidores en interiores",
+            "Los alimentadores no pueden cruzar el agua"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La estructura flotante se mueve con el agua; la acometida se queda donde se puede llegar a ella y trabajarla como cualquier otra acometida.",
+          "nec_ref": "555.4"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 555.4: El equipo de acometida de una marina, un muelle o un edificio flotante ahora debe estar en tierra, al menos 5 ft horizontalmente desde la estructura a la que sirve y al menos 12 in. por encima del plano de referencia eléctrico. Coloque el equipo de acometida de un edificio flotante, una instalación de amarre o una marina en tierra, al menos 5 ft retirado de la estructura a la que sirve, medido horizontalmente.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "555.4",
+        "555.3"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-555.5",
@@ -3280,8 +4956,8 @@
       "article": "555",
       "section": "555.5",
       "title": "Distribución de energía en muelles — el límite de 250 voltios",
-      "plain_explanation": "Los sistemas de distribución de energía en muelles están limitados a 250 voltios de fase a fase. La única excepción es una instalación de ingeniería: donde personal calificado da servicio al equipo bajo supervisión de ingeniería, el sistema puede operar por encima de 250 voltios, pero nunca por encima de 600 voltios de fase a fase. El trabajo ordinario de marina y muelle se diseña muy por debajo del tope, a los voltajes estándar — la banda más alta no es una mejora de campo.",
-      "on_the_job": "Lea el voltaje de distribución en los planos antes de ordenar equipo. Si un diseño de muelle muestra más de 250 voltios de fase a fase, deténgase y confirme que las condiciones de personal calificado y supervisión de ingeniería son realmente parte del trabajo — esa decisión pertenece al ingeniero, no al equipo.",
+      "plain_explanation": "Los sistemas de distribución de energía en muelles están limitados a 250 voltios de fase a fase.\n• El tope es sobre el sistema de distribución que sirve al muelle — los alimentadores y circuitos derivados que corren la instalación de amarre.\n• La única excepción es una instalación de ingeniería: donde personal calificado da servicio al equipo bajo supervisión de ingeniería, el sistema puede operar por encima de 250 voltios, pero nunca por encima de 600 voltios de fase a fase.\n• El trabajo ordinario de marina y muelle se diseña muy por debajo del tope, a los voltajes estándar — la banda más alta no es una mejora de campo.\n• El tope se mide de fase a fase, así que un sistema trifásico de muelle se juzga por su voltaje de fase a fase, no de fase a tierra.",
+      "on_the_job": "Lea el voltaje de distribución en los planos antes de ordenar equipo. Si un diseño de muelle muestra más de 250 voltios de fase a fase, deténgase y confirme que las condiciones de personal calificado y supervisión de ingeniería son realmente parte del trabajo — esa decisión pertenece al ingeniero, no al equipo. Un muelle residencial o un tablero de marina pequeña a los voltajes monofásicos estándar nunca se acerca al tope; la alerta salta cuando un juego de planos muestra un alimentador trifásico por encima de 250 voltios hacia el muelle.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [],
@@ -3289,7 +4965,88 @@
       "verified": true,
       "prev_id": "C5-555.4",
       "next_id": "C5-555.9",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "Un muelle es un lugar mojado y público. Navegantes, niños y personal del muelle — no electricistas — conectan, desconectan y manejan equipo parados en el agua o junto a ella. Limitar el voltaje de distribución mantiene la energía de choque y de falla en el muelle al nivel para el que están construidos el equipo marino ordinario y los usuarios ordinarios.",
+      "exam_trap": "La trampa es leer la excepción como un permiso. 'Nuestro taller tiene electricistas calificados' no basta — la excepción necesita personal calificado dando servicio al equipo bajo supervisión de ingeniería como parte de la instalación, y 600 voltios es el techo absoluto, no una meta de diseño. Para el trabajo ordinario de muelle la respuesta sigue siendo 250 voltios de fase a fase.",
+      "inspection_fails": [
+        "Distribución de muelle corrida por encima de 250 voltios de fase a fase sin una instalación de ingeniería detrás.",
+        "Un alimentador de mayor voltaje extendido por el muelle como cambio de campo, sin supervisión de ingeniería en el trabajo.",
+        "Voltaje de distribución en el muelle que excede el límite de 555.5, sin condiciones documentadas de personal calificado o supervisión de ingeniería.",
+        "Un sistema de distribución de marina diseñado a 600 voltios como voltaje estándar, tratando el techo de la excepción como la meta."
+      ],
+      "tables": [
+        {
+          "caption": "El tope de voltaje — 555.5 (NEC 2020)",
+          "headers": [
+            "Instalación",
+            "Máx. fase a fase"
+          ],
+          "rows": [
+            [
+              "Distribución ordinaria de muelle",
+              "250 V"
+            ],
+            [
+              "De ingeniería: personal calificado + supervisión de ingeniería",
+              "600 V"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-555.5-voltage-cap.svg",
+          "alt": "Barra de voltaje de 0 a 600 voltios de fase a fase: la distribución ordinaria de muelle limitada a 250 voltios, la banda por encima de 250 hasta 600 abierta solo a instalaciones de ingeniería, y nada permitido por encima de 600.",
+          "caption": "250 V para el trabajo ordinario de muelle; 600 V es el techo de ingeniería.",
+          "w": 900,
+          "h": 1180
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "Los sistemas de distribución de energía en muelles están limitados a qué voltaje, de fase a fase?",
+          "choices": [
+            "120 V",
+            "250 V",
+            "480 V",
+            "600 V"
+          ],
+          "answer_index": 1,
+          "explain_plain": "La distribución ordinaria de muelle está limitada a 250 voltios de fase a fase.",
+          "nec_ref": "555.5"
+        },
+        {
+          "question": "Bajo la excepción de instalación de ingeniería, el techo absoluto es:",
+          "choices": [
+            "250 V",
+            "300 V",
+            "600 V",
+            "1000 V"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Con personal calificado y supervisión de ingeniería el sistema puede exceder 250 voltios, pero nunca 600 voltios de fase a fase.",
+          "nec_ref": "555.5"
+        },
+        {
+          "question": "Un diseño de muelle muestra distribución por encima de 250 voltios de fase a fase. El primer paso es:",
+          "choices": [
+            "Ordenar el equipo y construirlo",
+            "Rechazar el trabajo de plano",
+            "Confirmar que las condiciones de personal calificado y supervisión de ingeniería son parte del trabajo",
+            "Agregar protección GFCI y proceder"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Por encima de 250 voltios es una instalación de ingeniería o es una violación — confirme las condiciones antes de que alguien cotice o construya.",
+          "nec_ref": "555.5"
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "555.5"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-555.9",
@@ -3331,8 +5088,8 @@
       "article": "555",
       "section": "555.13",
       "title": "Unión (bonding) en marinas e instalaciones de amarre",
-      "plain_explanation": "Las partes metálicas que tocan el agua, la tubería metálica y las partes metálicas que no conducen corriente y que podrían energizarse tienen que unirse de regreso al bus de puesta a tierra en el tablero. El conductor de unión es cobre sólido, aislado, cubierto o desnudo, y de al menos 8 AWG. Esta unión equipotencial es lo que evita que el metal del muelle, el metal del barco y el agua alrededor de ellos queden a voltajes diferentes.\n\nCAMBIO NEC 2023:\n• 555.13: Las partes metálicas ya puestas a tierra por medio de un conductor de puesta a tierra de equipo de circuito derivado o alimentador ya no necesitan su propio conductor de unión de 8 AWG. Todo lo demás sigue uniéndose al bus de puesta a tierra del tablero. Las partes metálicas ya conectadas a un conductor de puesta a tierra de equipo (EGC) de circuito derivado o alimentador ya no necesitan un conductor de unión separado.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Una escaleras, elevadores, estructura metálica y tubería como un solo sistema, y mantenga continua la unión de cobre sólido 8 AWG y protegida contra daños del muelle. Pruebe la continuidad en los acabados — un puente de unión cortado por trabajo posterior en el muelle es una falla silenciosa.",
+      "plain_explanation": "555.13 es la regla de unión (bonding) para marinas, astilleros e instalaciones de amarre — incluido el muelle privado de una vivienda unifamiliar.\n• Lo que se une: las partes metálicas en contacto con el agua, la tubería metálica y las partes metálicas que no conducen corriente y que probablemente se energicen — escaleras, elevadores, montacargas y estructura metálica se leen como una sola lista.\n• Dónde termina: cada una de esas partes se une de regreso al bus de puesta a tierra en el tablero que sirve al muelle. No a una varilla enterrada en el muelle, ni al tornillo verde más cercano — al bus de puesta a tierra del tablero.\n• El conductor: cobre sólido, aislado, cubierto o desnudo, y no menor de 8 AWG.\n• El objetivo es equipotencial: el metal del muelle, el metal del barco y el agua alrededor se mantienen al mismo voltaje, de modo que una falla eleva todo junto y la protección contra falla a tierra se dispara, en vez de dejar una escalera energizada contra el agua.\n• La unión es una capa del sistema de la marina. Los receptáculos de energía de muelle reciben protección contra falla a tierra de equipo a no más de 30 miliamperios, y los alimentadores al muelle a no más de 100 miliamperios (555.35), y las alturas del equipo se fijan desde el plano de referencia eléctrico (555.3).",
+      "on_the_job": "Muelle residencial en un lago del condado de Marion: la estimación une la escalera de aluminio, la estructura del elevador de barcos y la tubería metálica de agua de regreso al bus de puesta a tierra del tablero con una corrida continua de cobre sólido de 8 AWG, protegida donde la corrida cruza la estructura del muelle. En los acabados, la cuadrilla prueba la continuidad desde el perno más lejano del elevador hasta el bus — un puente de unión cortado por trabajo posterior en el muelle es una falla silenciosa, y la continuidad es lo último que se verifica antes de dar el trabajo por terminado.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -3352,7 +5109,104 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/555-13",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "El peligro mortal en un muelle es el ahogamiento por choque eléctrico. Una falla en un barco o un elevador pone corriente en el agua, y el gradiente de voltaje alrededor del casco puede paralizar a un nadador que nunca toca nada metálico. Unir cada parte metálica de regreso al bus del tablero mantiene el muelle, el barco y el agua a un solo potencial y le da a la corriente de falla un camino sólido de regreso para disparar la protección. Una escalera sin unir junto a un casco energizado es el accidente que esta sección existe para prevenir.",
+      "exam_trap": "La trampa es enterrar una varilla de tierra al final del muelle y llamar «unido» al muelle. Una varilla conecta el metal a la tierra; 555.13 lo une al bus de puesta a tierra en el tablero, que es lo que convierte el muelle en un solo sistema equipotencial y le da a una falla un camino que dispara el interruptor. Segunda trampa: tomar 8 AWG trenzado porque está en la camioneta. El texto de 2020 exige cobre sólido.",
+      "inspection_fails": [
+        "Elevador de barcos o escalera nunca unidos — sin conductor de regreso al bus del tablero.",
+        "Conductor de unión cortado durante trabajo posterior en el muelle y nunca reparado.",
+        "Conductor trenzado o de tamaño menor sustituido por el cobre sólido de 8 AWG.",
+        "Unión conectada a una varilla enterrada en el muelle en vez del bus de puesta a tierra del tablero.",
+        "Corrida de unión sin protección donde el tráfico del muelle y la estructura la dañan."
+      ],
+      "tables": [
+        {
+          "caption": "Capas de protección de la marina",
+          "headers": [
+            "Capa",
+            "Regla",
+            "Sección"
+          ],
+          "rows": [
+            [
+              "Unión",
+              "Partes metálicas unidas al bus de puesta a tierra del tablero, cobre sólido de 8 AWG mín.",
+              "555.13"
+            ],
+            [
+              "Falla a tierra de energía de muelle",
+              "Protección de equipo a no más de 30 mA",
+              "555.35"
+            ],
+            [
+              "Falla a tierra del alimentador",
+              "No más de 100 mA en alimentadores al muelle",
+              "555.35"
+            ],
+            [
+              "Alturas del equipo",
+              "Desde el plano de referencia eléctrico: 30 in sobre el agua, 12 in sobre la cubierta (flotante)",
+              "555.3"
+            ]
+          ]
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Cuál es el conductor de unión mínimo en una marina o instalación de amarre?",
+          "choices": [
+            "Cobre sólido de 10 AWG",
+            "Cobre sólido de 8 AWG",
+            "Cobre trenzado de 8 AWG",
+            "Aluminio desnudo de 6 AWG"
+          ],
+          "answer_index": 1,
+          "explain_plain": "555.13: el conductor de unión es cobre sólido — aislado, cubierto o desnudo — y no menor de 8 AWG.",
+          "nec_ref": "555.13"
+        },
+        {
+          "question": "¿Dónde terminan los conductores de unión del muelle?",
+          "choices": [
+            "En una varilla de tierra enterrada en el muelle",
+            "En el tornillo de tierra del receptáculo más cercano",
+            "En el bus de puesta a tierra en el tablero",
+            "En la estructura del elevador de barcos"
+          ],
+          "answer_index": 2,
+          "explain_plain": "Todo se une de regreso al bus de puesta a tierra en el tablero que sirve al muelle — eso es lo que forma un solo sistema equipotencial.",
+          "nec_ref": "555.13"
+        },
+        {
+          "question": "¿Qué partes deben unirse en una instalación de amarre?",
+          "choices": [
+            "Solo el gabinete de la pedestal",
+            "Las partes metálicas en contacto con el agua, la tubería metálica y las partes metálicas que probablemente se energicen",
+            "Solo las partes alimentadas con más de 250 voltios",
+            "La estructura de madera y los cascos de fibra de vidrio"
+          ],
+          "answer_index": 1,
+          "explain_plain": "555.13 lista las tres: partes en contacto con el agua, tubería metálica y partes metálicas que no conducen corriente y que probablemente se energicen.",
+          "nec_ref": "555.13"
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-555.13-dock-bonding.svg",
+          "alt": "Planta de un muelle con un conductor de unión de cobre sólido de 8 AWG que conecta la estructura del elevador de barcos, la escalera de abordaje y la tubería metálica de regreso al bus de puesta a tierra del tablero en tierra.",
+          "caption": "Cada parte metálica del muelle unida de regreso al bus de puesta a tierra del tablero.",
+          "w": 900,
+          "h": 1780
+        }
+      ],
+      "code_refs": [
+        "555.13",
+        "555.3",
+        "555.35"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "edition_note": "CAMBIO NEC 2023:\n• 555.13: Las partes metálicas ya puestas a tierra por medio de un conductor de puesta a tierra de equipo de circuito derivado o alimentador ya no necesitan su propio conductor de unión de 8 AWG. Todo lo demás sigue uniéndose al bus de puesta a tierra del tablero. Las partes metálicas ya conectadas a un conductor de puesta a tierra de equipo (EGC) de circuito derivado o alimentador ya no necesitan un conductor de unión separado.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich": 1
     },
     {
       "id": "C5-555.36",
@@ -3360,8 +5214,8 @@
       "article": "555",
       "section": "555.36",
       "title": "Medio de desconexión para conexiones de energía de muelle (sección 555.36 de 2020)",
-      "plain_explanation": "La conexión de energía de muelle de cada barco necesita su propio medio de desconexión que aísle ese barco de su alimentación. El medio de desconexión es un interruptor termomagnético, un interruptor, o ambos, identificado para mostrar qué tomacorriente controla, de fácil acceso, antes del tomacorriente en el circuito y ubicado a no más de 30 pulgadas del tomacorriente que controla. Los interruptores termomagnéticos o interruptores dentro de una salida de energía marina pueden servir como este medio de desconexión cuando cumplen esas condiciones.\n\nCAMBIO NEC 2023:\n• 555.36: Nuevo en 2023: cada salida de energía de marina o gabinete que alimenta energía de muelle necesita un corte de emergencia listado, marcado para ese uso, a la vista de ella. La manija de un interruptor termomagnético no cuenta. Cada salida de energía de marina o gabinete que alimenta barcos necesita su propio corte de emergencia listado a la vista, marcado con las palabras \"Emergency Shutoff\" (555.36(C)).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
-      "on_the_job": "Etiquete cada medio de desconexión de pedestal con el puesto de amarre y el tomacorriente que controla, y mida el límite de 30 pulgadas antes de colocar el pedestal. Un navegante en la oscuridad necesita cortar una conexión, no todo el muelle.",
+      "plain_explanation": "La conexión de energía de muelle de cada barco necesita su propio medio de desconexión que aísle ese barco de su alimentación.\n• El medio de desconexión es un interruptor termomagnético, un interruptor, o ambos.\n• Está identificado para mostrar qué tomacorriente controla.\n• Es de fácil acceso y está antes del tomacorriente en el circuito.\n• Está ubicado a no más de 30 pulgadas del tomacorriente que controla.\nLos interruptores termomagnéticos o interruptores dentro de una salida de energía marina pueden servir como este medio de desconexión cuando cumplen esas condiciones.\nEl medio de desconexión pertenece a la conexión, no al muelle — esa es la forma completa de la regla.",
+      "on_the_job": "Etiquete cada medio de desconexión de pedestal con el puesto de amarre y el tomacorriente que controla, y mida el límite de 30 pulgadas antes de colocar el pedestal. Un navegante en la oscuridad necesita cortar una conexión, no todo el muelle. En un reemplazo de dos pedestales, eso significa que cada pedestal lleva su propio interruptor para su propio tomacorriente — un medio de desconexión compartido en la cabecera del muelle no satisface esta sección, aunque esté etiquetado.",
       "sharma_note": "Este es el número de sección de 2020, 555.36. El número antiguo 555.17 no es la sección de 2020, y 555.36 no es un número solo de 2023.",
       "figure_idea": "",
       "related_ids": [
@@ -3381,7 +5235,100 @@
           "url": "https://www.electricalexamcoach.app/changes/2023/555-36",
           "confirmed": true
         }
-      ]
+      ],
+      "why_it_exists": "Cuando un barco tiene un incendio eléctrico, un cordón de muelle fallado o una falla cerca de alguien en el agua, la energía de ese barco tiene que cortarse rápido — por quien esté parado allí, en la oscuridad, sin buscar entre un muelle lleno de pedestales. Un medio de desconexión identificado al alcance del tomacorriente hace que eso sea un solo movimiento.",
+      "exam_trap": "La respuesta trampa es un medio de desconexión principal en la cabecera del muelle para todos los barcos. 555.36 pide un medio de desconexión por conexión, identificado, a no más de 30 pulgadas de su tomacorriente. La segunda trampa va en la otra dirección: los interruptores dentro de la salida de energía marina sí pueden servir como medio de desconexión cuando cumplen las condiciones — 'el interruptor no cuenta' es la regla del corte de emergencia de 2023, no la regla del medio de desconexión de 2020.",
+      "inspection_fails": [
+        "Medio de desconexión ubicado a más de 30 pulgadas del tomacorriente que controla.",
+        "Medio de desconexión de pedestal sin identificación — nada muestra qué tomacorriente o puesto de amarre controla.",
+        "Un solo medio de desconexión en la cabecera del muelle que corta todas las conexiones de energía de muelle del recorrido.",
+        "Tomacorriente cableado antes de su medio de desconexión, así que el tomacorriente queda energizado con la desconexión apagada."
+      ],
+      "tables": [
+        {
+          "caption": "La lista del medio de desconexión — 555.36 (NEC 2020)",
+          "headers": [
+            "Elemento",
+            "Regla"
+          ],
+          "rows": [
+            [
+              "Cantidad",
+              "Un medio de desconexión por conexión de energía de muelle"
+            ],
+            [
+              "Tipo",
+              "Interruptor termomagnético, interruptor, o ambos"
+            ],
+            [
+              "Identificación",
+              "Muestra qué tomacorriente controla"
+            ],
+            [
+              "Ubicación",
+              "De fácil acceso, antes del tomacorriente"
+            ],
+            [
+              "Distancia",
+              "A no más de 30 pulgadas del tomacorriente"
+            ]
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-555.36-pedestal-disconnect.svg",
+          "alt": "Dos pedestales de marina en un muelle, cada uno con su propio interruptor de desconexión junto a su tomacorriente de energía de muelle, con la distancia máxima de 30 pulgadas entre la desconexión y su tomacorriente dimensionada.",
+          "caption": "Un medio de desconexión identificado por barco, a no más de 30 pulgadas de su tomacorriente.",
+          "w": 900,
+          "h": 1260
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Cuál es la distancia máxima entre un medio de desconexión de energía de muelle y el tomacorriente que controla?",
+          "choices": [
+            "12 pulgadas",
+            "24 pulgadas",
+            "30 pulgadas",
+            "6 pies"
+          ],
+          "answer_index": 2,
+          "explain_plain": "El medio de desconexión debe estar ubicado a no más de 30 pulgadas del tomacorriente que controla.",
+          "nec_ref": "555.36"
+        },
+        {
+          "question": "¿Pueden los interruptores dentro de una salida de energía marina servir como medio de desconexión?",
+          "choices": [
+            "No, nunca",
+            "Sí, cuando están identificados, son de fácil acceso, están antes del tomacorriente y a no más de 30 pulgadas",
+            "Solo en muelles flotantes",
+            "Solo con un interruptor separado junto a la salida"
+          ],
+          "answer_index": 1,
+          "explain_plain": "Los interruptores termomagnéticos o interruptores dentro de la salida pueden servir cuando cumplen las mismas condiciones que cualquier otro medio de desconexión.",
+          "nec_ref": "555.36"
+        },
+        {
+          "question": "Un medio de desconexión que alimenta los tomacorrientes de energía de muelle de tres barcos es:",
+          "choices": [
+            "Permitido si está etiquetado",
+            "Permitido si está a no más de 30 pulgadas de los tres",
+            "No permitido — cada conexión necesita su propio medio de desconexión",
+            "Permitido solo en muelles fijos"
+          ],
+          "answer_index": 2,
+          "explain_plain": "La conexión de energía de muelle de cada barco necesita su propio medio de desconexión que aísle ese barco.",
+          "nec_ref": "555.36"
+        }
+      ],
+      "edition_note": "CAMBIO NEC 2023:\n• 555.36: Nuevo en 2023: cada salida de energía de marina o gabinete que alimenta energía de muelle necesita un corte de emergencia listado, marcado para ese uso, a la vista de ella. La manija de un interruptor termomagnético no cuenta. Cada salida de energía de marina o gabinete que alimenta barcos necesita su propio corte de emergencia listado a la vista, marcado con las palabras \"Emergency Shutoff\" (555.36(C)).\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "code_refs": [
+        "555.36"
+      ],
+      "uncertain": [],
+      "rich_sources": [],
+      "rich": 1
     },
     {
       "id": "C5-555.33",
@@ -3553,8 +5500,8 @@
       "article": "590",
       "section": "590.3",
       "title": "Límites de tiempo en las instalaciones temporales",
-      "plain_explanation": "Las instalaciones temporales se permiten solo por el período que el trabajo dura realmente. La energía de construcción, remodelación, mantenimiento, reparación y demolición permanece para ese trabajo y se retira cuando el trabajo termina; las instalaciones festivas y decorativas están limitadas a 90 días; y las pruebas, los experimentos, las emergencias y usos cortos similares tienen sus propios límites en esta sección. El cableado temporal que en silencio se vuelve permanente es una violación, no un valor agregado.",
-      "on_the_job": "Ponga una fecha de retiro en la documentación de la acometida temporal cuando se instale. Cuando la acometida permanente esté energizada y aceptada, programe el retiro de lo temporal en vez de dejarlo para que el siguiente oficio tropiece con él.",
+      "plain_explanation": "590.3 es el reloj de cada instalación temporal. El cableado temporal se permite solo por el período que el trabajo dura realmente — y cada tipo de uso recibe su propio límite:\n• Durante el período de construcción (590.3(A)): la energía de construcción, remodelación, mantenimiento, reparación y demolición permanece para ese trabajo. No hay conteo de días — el límite es el trabajo mismo.\n• 90 días (590.3(B)): la iluminación decorativa festiva y usos decorativos similares reciben un límite firme de 90 días, y después la energía temporal se retira.\n• Emergencias y pruebas (590.3(C)): las emergencias, pruebas, experimentos y trabajo de desarrollo pueden usar cableado temporal por la duración que la necesidad dure realmente.\n• Retiro (590.3(D)): sea cual sea el uso, el cableado temporal debe retirarse inmediatamente al completarse el propósito para el que se instaló. El cableado temporal que en silencio se vuelve permanente es una violación, no un valor agregado.",
+      "on_the_job": "El poste temporal estándar de Sharma en una obra de Marion Oaks entra con una fecha de retiro escrita en la documentación del servicio temporal. El servicio permanente se energiza y se acepta, y el poste sale esa misma semana en vez de quedarse para que el siguiente oficio tropiece con él. El caso espejo es la iluminación festiva comercial: un escaparate cableado a principios de noviembre llega a sus 90 días a fines de enero, y el calendario — no la memoria del inquilino — dice cuándo se retira.",
       "sharma_note": "",
       "figure_idea": "",
       "related_ids": [
@@ -3565,7 +5512,115 @@
       "verified": true,
       "prev_id": "C5-ART-590",
       "next_id": "C5-590.4",
-      "sharma_rule_ids": []
+      "sharma_rule_ids": [],
+      "why_it_exists": "El Artículo 590 intercambia flexibilidad de métodos por tiempo. Los cables, los tableros temporales y los métodos relajados sobreviven en una obra supervisada porque todos saben que van a salir. Dejados en su lugar, reciben el abuso de un servicio permanente con protección de grado temporal — los cables son atropellados, los tableros se deterioran con el clima y nadie es dueño del retiro. Los límites de tiempo son lo que mantiene justo el intercambio: la instalación es tan segura como la promesa de que termina.",
+      "exam_trap": "La trampa es aplicar el límite de 90 días a la energía de construcción. Los 90 días de 590.3(B) pertenecen solo a la iluminación decorativa festiva y usos similares. La energía de construcción según 590.3(A) dura lo que dura el trabajo — pero la trampa inversa es peor: «el trabajo terminó, pero el poste temporal puede quedarse hasta la siguiente fase». 590.3(D) exige el retiro inmediato cuando el propósito termina.",
+      "inspection_fails": [
+        "Iluminación decorativa festiva todavía energizada en marzo, mucho después de los 90 días.",
+        "Servicio temporal dejado en su lugar después de que el servicio permanente fue energizado y aceptado.",
+        "Cableado temporal alimentando un edificio ocupado como sustituto del cableado permanente.",
+        "Instalación temporal sin fecha de retiro en la documentación y sin responsable de retirarla."
+      ],
+      "tables": [
+        {
+          "caption": "Límites de tiempo de 590.3",
+          "headers": [
+            "Uso",
+            "Límite",
+            "Sección"
+          ],
+          "rows": [
+            [
+              "Construcción, remodelación, mantenimiento, reparación, demolición",
+              "La duración del trabajo",
+              "590.3(A)"
+            ],
+            [
+              "Iluminación decorativa festiva y similar",
+              "90 días máximo",
+              "590.3(B)"
+            ],
+            [
+              "Emergencias, pruebas, experimentos, trabajo de desarrollo",
+              "La duración de la necesidad",
+              "590.3(C)"
+            ],
+            [
+              "Toda instalación temporal",
+              "Retirar inmediatamente cuando el propósito termina",
+              "590.3(D)"
+            ]
+          ]
+        }
+      ],
+      "page_quiz": [
+        {
+          "question": "¿Cuál es el tiempo máximo para la energía temporal que sirve iluminación decorativa festiva?",
+          "choices": [
+            "La duración de la temporada, sin límite",
+            "90 días",
+            "30 días",
+            "Hasta que se quiten las decoraciones"
+          ],
+          "answer_index": 1,
+          "explain_plain": "590.3(B) limita la iluminación decorativa festiva y propósitos similares a 90 días.",
+          "nec_ref": "590.3(B)"
+        },
+        {
+          "question": "¿Cuánto tiempo puede permanecer la energía temporal de construcción?",
+          "choices": [
+            "90 días",
+            "1 año",
+            "Por la duración del trabajo de construcción",
+            "Hasta la primera inspección"
+          ],
+          "answer_index": 2,
+          "explain_plain": "590.3(A) permite la energía temporal durante el período de construcción — el límite es el trabajo, no un conteo de días.",
+          "nec_ref": "590.3(A)"
+        },
+        {
+          "question": "¿Cuándo debe retirarse el cableado temporal?",
+          "choices": [
+            "En la siguiente inspección",
+            "Dentro de los 90 días de completarse",
+            "Inmediatamente al completarse el propósito que sirvió",
+            "Cuando la AHJ lo ordene"
+          ],
+          "answer_index": 2,
+          "explain_plain": "590.3(D): el cableado temporal se retira inmediatamente al completarse el propósito para el que se instaló.",
+          "nec_ref": "590.3(D)"
+        }
+      ],
+      "figures": [
+        {
+          "src": "fig/c5/C5-590.3-time-limits.svg",
+          "alt": "Cuatro paneles apilados que listan las reglas de tiempo de 590.3: construcción por la duración del trabajo, iluminación decorativa festiva limitada a 90 días, emergencias y pruebas por la duración de la necesidad, y retiro inmediato cuando el propósito termina.",
+          "caption": "Cuatro relojes, un solo final: el cableado temporal se retira.",
+          "w": 900,
+          "h": 1340
+        }
+      ],
+      "code_refs": [
+        "590.3(A)",
+        "590.3(B)",
+        "590.3(C)",
+        "590.3(D)"
+      ],
+      "uncertain": [],
+      "rich_sources": [
+        {
+          "claim": "590.3 subdivisions: (A) during the period of construction, (B) 90 days for holiday decorative lighting, (C) emergencies and tests, (D) removal immediately upon completion of the purpose",
+          "source": "Mike Holt, Temporary Installations, based on the 2020 NEC",
+          "url": "https://www.mikeholt.com/newsletters.php?action=display&letterID=2521&email"
+        },
+        {
+          "claim": "590.3(B)'s 90-day limit applies only to holiday decorative lighting and similar purposes; 590.3(A) permits construction power until the activities are complete",
+          "source": "EC&M, Time Constraints for Temporary Power (2020 NEC)",
+          "url": "https://www.ecmag.com/magazine/articles/article-detail/codes-standards-time-constraints-temporary-power-splash-pads-and-more"
+        }
+      ],
+      "edition_note": "No se encontró ningún cambio del NEC 2023 para esta página en las fuentes públicas de cambios de 2023 revisadas.\nEl FBC 9.ª Ed. adopta el NEC 2023 para los permisos solicitados a partir del 31 de diciembre de 2026; los permisos solicitados hasta el 30 de diciembre de 2026 se rigen por la regla del NEC 2020 anterior.",
+      "rich": 1
     },
     {
       "id": "C5-590.4",
