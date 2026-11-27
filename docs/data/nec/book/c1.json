@@ -6913,7 +6913,7 @@
       "section": "110.14(C)",
       "title": "Temperature limits at terminations",
       "plain_explanation": "A termination is the lug or terminal where a conductor lands. The conductor's insulation may be rated 90 °C, but the ampacity you may use is capped by the temperature rating of the terminations at both ends of the run.\n• Circuits of 100 A or less, or conductors 14 through 1 AWG: use the 60 °C column of Table 310.16, unless the equipment is listed and marked for a higher temperature.\n• Circuits over 100 A, or conductors larger than 1 AWG: use the 75 °C column, unless the equipment is listed and marked otherwise.\n• The temperature rating of a conductor cannot be used above the lowest temperature rating of any termination it lands on. One 60 °C lug holds the whole run to 60 °C.\n• The 90 °C column still earns its keep: it is the starting point for temperature correction and conductor-count adjustment under 310.15. The final ampacity still cannot beat the termination column.",
-      "on_the_job": "New 200 A service on a Marion Oaks slab home, Siemens panel, 3/0 AWG THHN copper service conductors. The 90 °C column gives 3/0 a rating of 225 A, but the meter lugs and the panel main are both 75 °C terminations, so the run is sized from the 75 °C column: 200 A, exactly the service rating. The first pick, 2/0, reads 195 A at 90 °C — tempting, but only 175 A at 75 °C, short of a 200 A service. Same rule at the small end: 12 AWG THHN on a 20 A breaker starts at 30 A in the 90 °C column for correction math, but at the breaker the circuit is a 60 °C, 20 A circuit.",
+      "on_the_job": "A 200 A feeder on a small commercial job in Marion Oaks — Siemens panelboard, tenant space — run in 3/0 AWG THHN copper. The 90 °C column rates 3/0 at 225 A, but both ends land on 75 °C lugs, so the feeder sizes from the 75 °C column: 200 A, exactly the feeder rating. The first pick, 2/0, reads 195 A at 90 °C — tempting, but only 175 A at 75 °C, short of 200 A. Commercial on purpose: 310.12 sizes dwelling services and feeders on its own table, where 2/0 copper is a legal 200 A dwelling service. Same rule at the small end: 12 AWG THHN on a 20 A breaker starts at 30 A in the 90 °C column for correction math, but at the breaker the circuit is a 60 °C, 20 A circuit.",
       "sharma_note": "",
       "figure_idea": "A conductor run drawn as a chain — wire rated 90, breaker lug rated 75, equipment lug rated 60 — with the whole chain sized at the weakest link, 60.",
       "related_ids": [
@@ -7003,7 +7003,7 @@
       ],
       "inspection_fails": [
         "Conductor ampacity taken from the 90 °C column at terminations not marked for it — re-size from the 60 °C or 75 °C column.",
-        "2/0 AWG copper landed on a 200 A service: 195 A at 90 °C, but only 175 A at the 75 °C terminations.",
+        "2/0 AWG copper landed on a 200 A commercial feeder: 195 A at 90 °C, but only 175 A at the 75 °C terminations — and 310.12's dwelling sizes do not rescue a commercial feeder.",
         "Replacement breaker with 60 °C-only terminals installed where the conductors were sized at 75 °C values.",
         "Existing equipment with no legible temperature marking, wired as if 75 °C applied to a circuit of 100 A or less."
       ],
@@ -7050,6 +7050,7 @@
         "110.14(C)(1)",
         "110.14(C)(2)",
         "Table 310.16",
+        "310.12",
         "310.15",
         "240.4(D)",
         "334.80"

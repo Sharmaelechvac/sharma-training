@@ -2775,7 +2775,7 @@
       "article": "800",
       "section": "800.154",
       "title": "Where each cable type may be used — the application tables",
-      "plain_explanation": "The tables in this section are the permission slip for cable types: they match listed communications cables against the places each type may be installed — plenums, risers, general use, dwellings. A higher-rated cable may substitute for a lower one down the ladder; a lower-rated cable may never substitute upward.\n• CMP — plenum spaces, and anywhere a lower type may run\n• CMR — risers and general use; not plenums\n• CMG and CM — general use and dwellings; not plenums or risers\n• CMX — limited use in dwellings, and in raceways and short exposed runs within the conditions the table sets\nThe ladder order and the substitutions are the same ones stated on the cable-types page (800.179).",
+      "plain_explanation": "The tables in this section are the permission slip for cable types: they match listed communications cables against the places each type may be installed — plenums, risers, general use, dwellings. A higher-rated cable may substitute for a lower one down the ladder; a lower-rated cable may never substitute upward.\n• CMP — plenum spaces, and anywhere a lower type may run\n• CMR — risers and general use; not plenums\n• CMG and CM — general use and dwellings; not plenums or risers (one shared rung — either may stand in for the other)\n• CMX — limited use in dwellings, and in raceways and short exposed runs within the conditions the table sets\nThe ladder order and the substitutions are the same ones stated on the cable-types page (800.179).",
       "on_the_job": "When a supplier substitutes cable, check the jacket legend against the space, not against the purchase order. On a Lake Nona medical office rough-in, the delivered Cat 6A was CM where the ceiling was a return-air plenum; the CMP on the order was the right cable and the CM went back, because CMP can go almost anywhere communications cable can go and CM cannot go in that ceiling. CMX cannot leave its dwelling lane at all.",
       "sharma_note": "",
       "figure_idea": "",
@@ -2809,11 +2809,7 @@
               "Risers — vertical runs between floors"
             ],
             [
-              "CMG",
-              "General purpose, ordinary horizontal runs"
-            ],
-            [
-              "CM",
+              "CMG / CM",
               "General purpose, ordinary horizontal runs"
             ],
             [
@@ -2872,10 +2868,10 @@
       "figures": [
         {
           "src": "fig/c8/C8-800.154-cable-ladder.svg",
-          "alt": "Five-band ladder of communications cable types from CMP at the top to CMX at the bottom, each band naming where the type may run, with a green downward substitution arrow and a red crossed upward arrow.",
+          "alt": "Four-rung ladder of communications cable types: CMP at the top, CMR below it, CMG and CM sharing one general-use rung, and CMX at the bottom, each rung naming where the type may run, with a green downward substitution arrow and a red crossed upward arrow.",
           "caption": "The substitution ladder: down is allowed, up never is.",
           "w": 900,
-          "h": 1440
+          "h": 1300
         }
       ],
       "code_refs": [
@@ -2886,9 +2882,21 @@
       "uncertain": [
         "This page has not yet been checked against the printed NEC 2020. Whether the 2020 Table 800.154(a) also carries the coaxial (CATV) cable types could not be confirmed, so this page no longer states that coax has its own application table at Table 820.154 — check the 2020 table titles in print.",
         "The exact size and length limits the table sets for CMX could not be confirmed from public sources — check them in print before relying on a CMX run at the edge of its conditions.",
-        "The CMX conditions beyond dwellings (raceways and short exposed runs) follow the recheck note recorded for this page; confirm the exact table conditions in print."
+        "The CMX conditions beyond dwellings (raceways and short exposed runs) follow the recheck note recorded for this page; confirm the exact table conditions in print.",
+        "Confirm the CMG and CM positions in the Figure 800.154 substitution hierarchy."
       ],
-      "rich_sources": [],
+      "rich_sources": [
+        {
+          "claim": "CMG and CM sit on the same rung of the cable substitution hierarchy (fire-resistance level 2, general purpose), below CMR and above CMX; the chart note allows each to substitute for the other.",
+          "source": "Belden Cable Substitution Chart, Technical Information 16.18",
+          "url": "https://www.bestwirecable.com/wp-content/uploads/2026/07/Belden-Cable-Technical-Information.pdf"
+        },
+        {
+          "claim": "The substitution ladder runs CMP over CMR over CMG and CM over CMX.",
+          "source": "HSM University, LVT-330 Lesson 3 — Cable ratings, listings and markings",
+          "url": "https://www.hsmuniversity.org/us/course/lvt-330-codes-bonding-and-grounding-for-communications-nec/lesson-3-cable-ratings-listings-and-markings"
+        }
+      ],
       "rich": 1
     },
     {

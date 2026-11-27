@@ -663,7 +663,7 @@
             ],
             [
               "Tendido paralelo a menos de 1-1/4 in",
-              "Placa de acero, funda o equivalente de al menos 1/16 in de grosor (o una placa más delgada listada y marcada con protección igual o mejor)"
+              "Placa de acero/funda de 1/16 in mín., o placa listada más delgada con igual protección"
             ],
             [
               "RMC, IMC, conduit rígido no metálico o EMT",
@@ -671,7 +671,7 @@
             ],
             [
               "Trabajo oculto en un edificio terminado",
-              "Los cables pueden pescarse entre puntos de acceso donde el apoyo no es practicable"
+              "Cables pescados entre puntos de acceso si el apoyo no es practicable"
             ]
           ]
         }
@@ -2524,7 +2524,7 @@
       "title": "Tabla 310.16 — cómo leer la tabla de ampacidad",
       "plain_explanation": "La Tabla 310.16 da la ampacidad permitida de conductores aislados clasificados hasta 2000 V, con no más de tres conductores portadores de corriente en una canalización, cable o tierra, a una temperatura ambiente de 30 °C (86 °F). Léala en cuatro pasos:\n• Tamaño y metal. El cobre está a la izquierda. El aluminio y el aluminio revestido de cobre comparten las columnas de la derecha.\n• Columna de temperatura: 60, 75 o 90 °C. El aislamiento define la columna más alta desde la que puede empezar. Las terminaciones definen la columna en la que termina (110.14(C)): circuitos de 100 A o menos, o de 14 a 1 AWG, usan 60 °C a menos que el equipo esté listado y marcado para 75 °C; más de 100 A o mayor de 1 AWG, 75 °C.\n• Corrija y ajuste. ¿Más de 30 °C, o más de tres conductores portadores de corriente? Aplique 310.15(B) y 310.15(C)(1), normalmente empezando desde el valor de 90 °C.\n• Verifique el tope del breaker. 240.4(D) limita los conductores pequeños diga lo que diga la tabla: cobre 14, 12 y 10 AWG a 15, 20 y 30 A; aluminio o CCA 12 y 10 AWG a 15 y 25 A.",
       "on_the_job": "Una tirada de Sharma: dos circuitos de 20 A de cobre THHN de 12 AWG en un EMT por un espacio mecánico a 104 °F, o sea cuatro conductores portadores de corriente. 30 A (90 °C) × 0.91 × 0.80 = 21.8 A. Eso está por encima del breaker de 20 A y por debajo del valor de 25 A a 75 °C, así que el breaker de 20 A se mantiene. El mismo circuito en cable NM queda limitado al resultado de 60 °C (20 A) por 334.80. En un trabajo comercial de inquilino, un alimentador de 100 A con cobre THHN de 3 AWG funciona con terminales de 75 °C (100 A) pero no a 60 °C (85 A), así que lea el marcado de la terminal antes de tender el cable.",
-      "sharma_note": "S-10: los circuitos ramales son de cobre por defecto — 14 AWG en 15A, 12 AWG en 20A. Cuando se usa CCA, sube un AWG (12 en 15A, 10 en 20A) porque la Tabla 310.16 clasifica CCA en la columna de aluminio. Las terminaciones deben estar marcadas para el conductor (110.14); los conectores de cable y las terminales necesitan marcado AL-CU / CU-AL, los conectores solo CU no están clasificados para CCA, y los terminales de presión son solo para cobre sólido 14 AWG. Nunca uses conexión por presión trasera (backstab). El cable del circuito del microondas está PENDING según S-06 (12 AWG de cobre contra 10 AWG de CCA).",
+      "sharma_note": "S-10: los circuitos ramales son de cobre por defecto — 14 AWG en 15A, 12 AWG en 20A. Cuando se usa CCA, sube un AWG (12 en 15A, 10 en 20A) porque la Tabla 310.16 clasifica CCA en la columna de aluminio. Las terminaciones deben estar marcadas para el conductor (110.14); los conectores de cable y las terminales necesitan marcado AL-CU / CU-AL, los conectores solo CU no están clasificados para CCA, y los terminales de presión son solo para cobre sólido 14 AWG. Nunca use conexión por presión trasera (backstab). El cable del circuito del microondas está PENDING según S-06 (12 AWG de cobre contra 10 AWG de CCA).",
       "figure_idea": "Un extracto impreso de la Tabla 310.16 con las filas de 12 AWG y 10 AWG resaltadas, una flecha desde 'CCA' hacia las columnas de aluminio, y los topes de 240.4(D) escritos debajo de las filas.",
       "related_ids": [
         "L-038",
@@ -2848,7 +2848,7 @@
       "title": "CCA en cada cálculo — ampacidad, caída de voltaje, llenado, terminaciones, tamaño",
       "plain_explanation": "El aluminio revestido de cobre es una elección de material dentro de los mismos cálculos, no un código separado. Haga cada cálculo de la misma manera; elija la línea de CCA donde la tabla tenga una:\n• (1) Ampacidad — el CCA se lee en la columna de aluminio de la Tabla 310.16, con los topes de 240.4(D) para aluminio. Aplican los mínimos de los artículos de cables: el conductor ramal de CCA más pequeño en trabajo de 2020 es 12 AWG; no existe NM de CCA de 14 AWG.\n• (2) Caída de voltaje — la Tabla 8 del Capítulo 9 lista solo cobre y aluminio; no hay fila de CCA, así que esta página no da ninguna resistencia de CCA para uso en diseño. Una cifra de CCA debe venir de los datos del fabricante del cable para el producto real, a la temperatura de operación — nunca de un cálculo por clase de resistividad.\n• (3) Terminaciones — siga la identificación del cable real y el marcado y listado del dispositivo, conector o terminal que tiene en la mano. Las fuentes no dicen todas la misma regla de marcado, así que revise el marcado antes del empalme. Los terminales traseros de presión son solo para cobre sólido 14 AWG: el CCA nunca se conecta por presión trasera.\n• (4) Llenado — el llenado de caja (314.16) y el de conduit (Tablas 4 y 5 del Capítulo 9) van por tamaño y aislamiento, nunca por metal: el CCA de 10 AWG ocupa la misma asignación de caja de 2.50 cu in y la misma área de la Tabla 5 que el cobre de 10 AWG. La diferencia aparece un paso antes, en el AWG más grande que la regla de ampacidad eligió.\n• (5) Cargas y tamaños — el cálculo de carga (Artículo 220) no cambia con el metal; elija el conductor en el material escogido desde la Tabla 310.16. Si los tamaños de aluminio de la Tabla 310.12 pueden dimensionar una acometida de vivienda de CCA o un alimentador de carga total no está confirmado en el texto impreso — confírmelo antes de usarla.",
       "on_the_job": "Versión para el equipo: columna de aluminio, un tamaño arriba. En una casa de Marion Oaks cableada en CCA según S-10: los circuitos de 15 A se tienden en CCA de 12 AWG, los de 20 A en CCA de 10 AWG — revise el rollo antes de tenderlo, no en el panel. No use una resistencia de CCA de esta página en un cálculo de caída de voltaje: la calculadora no calculará una hasta que exista una fuente citada a 75°C. Revise el marcado del conector antes del empalme: si no dice AL/CU o CC, no toca CCA.",
-      "sharma_note": "S-10 en forma de cálculo: cobre por defecto; CCA un AWG arriba (12 en 15A, 10 en 20A); el cable del microondas está PENDING según S-06 (12 AWG de cobre contra 10 AWG de CCA). El CCA de Sharma es Copperweld NM-B; aprieta las terminaciones de CCA al valor impreso una sola vez — no vuelvas a apretar.",
+      "sharma_note": "S-10 en forma de cálculo: cobre por defecto; CCA un AWG arriba (12 en 15A, 10 en 20A); el cable del microondas está PENDING según S-06 (12 AWG de cobre contra 10 AWG de CCA). El CCA de Sharma es Copperweld NM-B; apriete las terminaciones de CCA al valor impreso una sola vez — no vuelva a apretar.",
       "figure_idea": "Un diagrama de flujo usado cinco veces: Carga → material (Cu / Al / CCA) → columna o fuente de resistencia → tamaño → revisión (tope de 240.4(D), llenado, caída de voltaje), con el camino de CCA resaltado y el hueco de la Tabla 8 'sin fila de CCA' marcado en la rama de caída de voltaje.",
       "related_ids": [
         "C3-310.16",
@@ -2866,7 +2866,7 @@
         "C3-Q-029",
         "C3-Q-030"
       ],
-      "florida_note": "Nada de cableado de circuito ramal de CCA de 14 AWG en trabajo de Florida de 2020: 310.3(A) fija el mínimo en 14 AWG de cobre o 12 AWG de aluminio o aluminio revestido de cobre. Ediciones posteriores debatieron circuitos ramales de 10 amperios y CCA de 14 AWG, y las fuentes publicadas no coinciden en lo que la edición de 2023 adoptó en realidad para CCA de 14 AWG — no te apoyes en ninguna regla de CCA de 14 AWG de una edición posterior en trabajo de 2020.",
+      "florida_note": "Nada de cableado de circuito ramal de CCA de 14 AWG en trabajo de Florida de 2020: 310.3(A) fija el mínimo en 14 AWG de cobre o 12 AWG de aluminio o aluminio revestido de cobre. Ediciones posteriores debatieron circuitos ramales de 10 amperios y CCA de 14 AWG, y las fuentes publicadas no coinciden en lo que la edición de 2023 adoptó en realidad para CCA de 14 AWG — no se apoye en ninguna regla de CCA de 14 AWG de una edición posterior en trabajo de 2020.",
       "verified": false,
       "unverified_reason": "Se mantuvo sin verificar después de la revisión de Mike Holt (2026-11-25): Mantenga verified=false. Partes confirmadas: el CCA se lee en la columna de Al/CCA de la Tabla 310.16; la Tabla 8 del Capítulo 9 no tiene fila de CCA; el llenado de caja (314.16(B), 2.50 in³ para 10 AWG) y las Tablas 4/5 del Capítulo 9 van por tamaño y aislamiento, no por metal; el mínimo de 310.3(A) es 12 AWG de Al/CCA; los conductores NM de 334.104 son de 12 AWG y mayores para Al/CCA. Sigue abierto: (1) no hay resistencia publicada a 75°C para el producto específico NM-B de Copperweld — obtenga la hoja de datos del fabricante; (2) la regla de marcado de terminaciones — vea la resolución sobre CCA/UL (los conectores marcados AL7CU/AL9CU, o CC/CU-CC según la guía de UL, son los que debe buscar; confírmelo en Product iQ para la categoría exacta de producto); (3) si la columna de aluminio de la Tabla 310.12 dice 'aluminum or copper-clad aluminum' necesita una revisión del texto impreso de 2020; (4) la cuestión del CCA de 14 AWG / circuitos ramales de 10A de 2023 necesita una revisión del texto impreso de 2023. Un cambio ahora: elimine la oración que cita \"2.46 and 1.55 ohm figures\" — la página ya dice que no se usen, así que no deben aparecer en absoluto.",
       "sharma_rule_ids": [
@@ -6888,6 +6888,9 @@
         "334.30(B)",
         "314.17(C)"
       ],
+      "uncertain": [
+        "Confirme la ubicación en 2020 de la excepción de 8 in para la caja no metálica sencilla (mostrada como Exc. de 314.17(C); la sección 314.17 fue reorganizada en 2020)."
+      ],
       "rich_sources": [
         {
           "claim": "334.30(A) los tramos horizontales por perforaciones y muescas cuentan como soportados dentro de los mismos límites de 4-1/2 ft / 12 in; 334.30(B) cable sin soporte: pescado en edificios terminados, y no más de 4-1/2 ft hasta la conexión de una luminaria o equipo en un techo accesible en viviendas",
@@ -7539,7 +7542,7 @@
             ],
             [
               "Tipo SE",
-              "Circuitos ramales/alimentadores exteriores que no cumplan la Parte I del Art. 225, el soporte de 334.30 o el soporte por mensajero de la Parte II del Art. 396"
+              "Exteriores sin cumplir 225 Parte I, 334.30 (soporte) o 396 Parte II (mensajero)"
             ],
             [
               "Tipo USE",
@@ -7547,7 +7550,7 @@
             ],
             [
               "Tipo USE",
-              "Sobre el suelo, excepto emergiendo del suelo hacia un gabinete exterior, protegido según 300.5(D)"
+              "Sobre el suelo, salvo salida a gabinete exterior, protegido según 300.5(D)"
             ]
           ]
         }
@@ -9866,8 +9869,8 @@
       "article": "358",
       "section": "358.42",
       "title": "Acoplamientos y conectores de EMT — apretados y listados para el lugar",
-      "plain_explanation": "Los acoplamientos y conectores de EMT deben apretarse bien para que la canalización sea mecánicamente continua y eléctricamente continua como camino de tierra. Donde se entierren en mampostería o concreto, deben ser del tipo hermético al concreto. Donde se instalen en lugares mojados, deben cumplir 314.15 — listados para uso en lugares mojados e instalados de modo que la humedad no entre ni se acumule en el gabinete. La regla del Código es el listado para el lugar, no el estilo del accesorio: usa el tipo, de compresión o de tornillo de fijación, que esté listado como hermético al concreto o listado para uso mojado para el trabajo que tienes enfrente.",
-      "on_the_job": "Ajusta el accesorio al lugar en la orden de compra, no en el camión: un accesorio listado hermético al concreto para mampostería o concreto, un accesorio listado para uso mojado para lugares mojados, y accesorios comunes solo donde el tramo se mantenga seco y no esté enterrado en mampostería o concreto.",
+      "plain_explanation": "Los acoplamientos y conectores de EMT deben apretarse bien para que la canalización sea mecánicamente continua y eléctricamente continua como camino de tierra. Donde se entierren en mampostería o concreto, deben ser del tipo hermético al concreto. Donde se instalen en lugares mojados, deben cumplir 314.15 — listados para uso en lugares mojados e instalados de modo que la humedad no entre ni se acumule en el gabinete. La regla del Código es el listado para el lugar, no el estilo del accesorio: use el tipo, de compresión o de tornillo de fijación, que esté listado como hermético al concreto o listado para uso mojado para el trabajo que usted tiene enfrente.",
+      "on_the_job": "Ajuste el accesorio al lugar en la orden de compra, no en el camión: un accesorio listado hermético al concreto para mampostería o concreto, un accesorio listado para uso mojado para lugares mojados, y accesorios comunes solo donde el tramo se mantenga seco y no esté enterrado en mampostería o concreto.",
       "sharma_note": "",
       "figure_idea": "Dos accesorios lado a lado: tornillo de fijación marcado 'seco', compresión marcada 'mojado / hermético al concreto'.",
       "related_ids": [
@@ -11299,7 +11302,7 @@
             ],
             [
               "¿Oculto?",
-              "No — el metálico puede estar rodeado por atrás/lados por el acabado; el no metálico puede empotrarse en un zócalo"
+              "No; metálico rodeado por atrás/lados por el acabado; no metálico empotrado en zócalo"
             ],
             [
               "A través de un tabique seco",

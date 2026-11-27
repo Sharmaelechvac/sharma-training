@@ -427,7 +427,7 @@
           "rows": [
             [
               "Punto de entrada",
-              "Donde el cable entra desde fuera: penetración de pared o piso, o el fin de una canalización metálica puesta a tierra que lo extiende",
+              "Donde entra el cable: penetración de pared/piso, o fin de canalización metálica a tierra",
               "Desde dónde se miden los protectores, la unión y el límite de 50 ft"
             ],
             [
@@ -1514,7 +1514,7 @@
         "C8-L-009",
         "C8-Q-007"
       ],
-      "florida_note": "Florida tiene más rayos que cualquier otro estado; las AHJ y los aseguradores aquí toman en serio la separación de los conductores de protección contra rayos. Confirma la posición local donde un edificio tiene un sistema de protección contra rayos existente.",
+      "florida_note": "Florida tiene más rayos que cualquier otro estado; las AHJ y los aseguradores aquí toman en serio la separación de los conductores de protección contra rayos. Confirme la posición local donde un edificio tiene un sistema de protección contra rayos existente.",
       "verified": true,
       "prev_id": "C8-800.49",
       "next_id": "C8-800.100",
@@ -2775,7 +2775,7 @@
       "article": "800",
       "section": "800.154",
       "title": "Dónde puede usarse cada tipo de cable — las tablas de aplicación",
-      "plain_explanation": "Las tablas en esta sección son el pase de permiso para los tipos de cable: emparejan los cables de comunicaciones listados contra los lugares donde cada tipo puede instalarse — plenums, risers, uso general, viviendas. Un cable de clasificación mayor puede sustituir a uno menor bajando la escalera; un cable de clasificación menor nunca puede sustituir hacia arriba.\n• CMP — espacios plenum, y donde sea que pueda correr un tipo menor\n• CMR — risers y uso general; no plenums\n• CMG y CM — uso general y viviendas; no plenums ni risers\n• CMX — uso limitado en viviendas, y en canalizaciones y tramos cortos expuestos dentro de las condiciones que fija la tabla\nEl orden de la escalera y las sustituciones son los mismos que se indican en la página de tipos de cable (800.179).",
+      "plain_explanation": "Las tablas en esta sección son el pase de permiso para los tipos de cable: emparejan los cables de comunicaciones listados contra los lugares donde cada tipo puede instalarse — plenums, risers, uso general, viviendas. Un cable de clasificación mayor puede sustituir a uno menor bajando la escalera; un cable de clasificación menor nunca puede sustituir hacia arriba.\n• CMP — espacios plenum, y donde sea que pueda correr un tipo menor\n• CMR — risers y uso general; no plenums\n• CMG y CM — uso general y viviendas; no plenums ni risers (un mismo peldaño — cualquiera puede reemplazar al otro)\n• CMX — uso limitado en viviendas, y en canalizaciones y tramos cortos expuestos dentro de las condiciones que fija la tabla\nEl orden de la escalera y las sustituciones son los mismos que se indican en la página de tipos de cable (800.179).",
       "on_the_job": "Cuando un suplidor sustituye cable, revise la leyenda de la cubierta contra el espacio, no contra la orden de compra. En un despiece de oficina médica en Lake Nona, el Cat 6A entregado era CM donde el techo era un plenum de aire de retorno; el CMP de la orden era el cable correcto y el CM se devolvió, porque CMP puede ir a casi cualquier parte donde el cable de comunicaciones puede ir y CM no puede ir en ese techo. CMX no puede salir de su carril de vivienda en absoluto.",
       "sharma_note": "",
       "figure_idea": "",
@@ -2809,11 +2809,7 @@
               "Risers — tramos verticales entre pisos"
             ],
             [
-              "CMG",
-              "Propósito general, tramos horizontales ordinarios"
-            ],
-            [
-              "CM",
+              "CMG / CM",
               "Propósito general, tramos horizontales ordinarios"
             ],
             [
@@ -2872,10 +2868,10 @@
       "figures": [
         {
           "src": "fig/c8/C8-800.154-cable-ladder.svg",
-          "alt": "Escalera de cinco bandas de tipos de cable de comunicaciones desde CMP arriba hasta CMX abajo, cada banda nombra dónde puede correr el tipo, con una flecha verde de sustitución hacia abajo y una flecha roja tachada hacia arriba.",
+          "alt": "Escalera de cuatro peldaños de tipos de cable de comunicaciones: CMP arriba, CMR debajo, CMG y CM compartiendo un mismo peldaño de uso general, y CMX abajo, cada peldaño nombra dónde puede correr el tipo, con una flecha verde de sustitución hacia abajo y una flecha roja tachada hacia arriba.",
           "caption": "La escalera de sustitución: hacia abajo se permite, hacia arriba nunca.",
           "w": 900,
-          "h": 1440
+          "h": 1300
         }
       ],
       "code_refs": [
@@ -2886,9 +2882,21 @@
       "uncertain": [
         "Esta página aún no se ha verificado contra el NEC 2020 impreso. No pudo confirmarse si la Tabla 800.154(a) de 2020 también incluye los tipos de cable coaxial (CATV), así que esta página ya no afirma que el coaxial tiene su propia tabla de aplicación en la Tabla 820.154 — revise los títulos de las tablas de 2020 en el impreso.",
         "Los límites exactos de tamaño y longitud que la tabla fija para CMX no pudieron confirmarse con fuentes públicas — revíselos en el impreso antes de confiar en un tramo de CMX al borde de sus condiciones.",
-        "Las condiciones del CMX más allá de las viviendas (canalizaciones y tramos cortos expuestos) siguen la nota de revisión registrada para esta página; confirme las condiciones exactas de la tabla en el impreso."
+        "Las condiciones del CMX más allá de las viviendas (canalizaciones y tramos cortos expuestos) siguen la nota de revisión registrada para esta página; confirme las condiciones exactas de la tabla en el impreso.",
+        "Confirme las posiciones de CMG y CM en la jerarquía de sustitución de la Figura 800.154."
       ],
-      "rich_sources": [],
+      "rich_sources": [
+        {
+          "claim": "CMG y CM ocupan el mismo peldaño de la jerarquía de sustitución de cables (nivel de resistencia al fuego 2, propósito general), debajo de CMR y encima de CMX; la nota de la tabla permite que cada uno sustituya al otro.",
+          "source": "Belden Cable Substitution Chart, Technical Information 16.18",
+          "url": "https://www.bestwirecable.com/wp-content/uploads/2026/07/Belden-Cable-Technical-Information.pdf"
+        },
+        {
+          "claim": "La escalera de sustitución corre CMP sobre CMR sobre CMG y CM sobre CMX.",
+          "source": "HSM University, LVT-330 Lesson 3 — Cable ratings, listings and markings",
+          "url": "https://www.hsmuniversity.org/us/course/lvt-330-codes-bonding-and-grounding-for-communications-nec/lesson-3-cable-ratings-listings-and-markings"
+        }
+      ],
       "rich": 1
     },
     {
@@ -4465,7 +4473,7 @@
             ],
             [
               "2",
-              "Punto accesible más cercano en el sistema de electrodos de puesta a tierra del edificio, u otro punto que la sección lista"
+              "Punto accesible más cercano del sistema de electrodos del edificio, u otro de la sección"
             ],
             [
               "3",
