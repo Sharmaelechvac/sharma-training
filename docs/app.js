@@ -93,14 +93,14 @@ function sectionHtml(sec) {
   if (sec.type === "never") return `<div class="tr-never"><b>${t("Never")}</b><ul>${sec.items.map(i => `<li>${$esc(i)}</li>`).join("")}</ul></div>`;
   if (sec.type === "table") {
     const head = `<thead><tr>${sec.headers.map(h => `<th>${$esc(h)}</th>`).join("")}</tr></thead>`;
-    const rows = `<tbody>${sec.rows.map(r => `<tr>${r.map(c => `<td>${$esc(c)}</td>`).join("")}</tr>`).join("")}</tbody>`;
+    const rows = `<tbody>${sec.rows.map(r => `<tr>${r.map((c, ci) => `<td data-th="${$esc(sec.headers[ci] || "")}">${$esc(c)}</td>`).join("")}</tr>`).join("")}</tbody>`;
     return `${sec.caption ? `<div class="tr-tablecap">${$esc(sec.caption)}</div>` : ""}<div class="tr-tablewrap"><table class="tr-grid">${head}${rows}</table></div>`;
   }
   return "";
 }
 const blocksHtml = (page) => (page.sections || []).map(sectionHtml).join("");
 const trimAt = (s, n) => { const t = String(s || ""); return t.length <= n ? t : t.slice(0, n).replace(/\s+\S*$/, "") + "…"; };
-const askCard = `<a class="tr-ask" href="#/ask"><b>${t("Ask the NEC")}</b><span>${t("Type a question or a section number — it searches the Field Book's 594 pages, the look-ups and the guides, right on this device.")}</span><div class="go">${t("Ask a question")}</div></a>`;
+const askCard = `<a class="tr-ask" href="#/ask"><b>${t("Ask the NEC")}</b><span>${t("Type a question or a section number — it searches the Field Book's 689 pages, the look-ups and the guides, right on this device.")}</span><div class="go">${t("Ask a question")}</div></a>`;
 /* SHARMA360 watermark (Sanjay 2026-11-25: every app carries the logo, small,
    on its first page). The kit stackview is position:fixed, so a shell footer
    can never show — the mark closes the landing views themselves: Course
@@ -155,7 +155,7 @@ async function codeRootFill(page) {
     const done = secs.filter(s => learned.has(s.id)).length;
     return `<a class="tr-card" href="#/code/ch/${e.book.chapter}"><span class="tr-card__t">${tf("Chapter {n} — {title}", { n: e.book.chapter, title: $esc(e.book.chapter_title) })}</span><span class="tr-card__s">${tf("{n} pages", { n: secs.length })}${done ? tf(" · {d} learned", { d: done }) : ""}</span></a>`;
   }).join("");
-  page.html(`<div class="tr-wrap"><div class="sk-pagehead"><div><h1 class="sk-title">${t("Code Lookup")}</h1><p class="sk-note">${t("NEC 2020 · Florida Building Code, 8th Edition — the Sharma Field Book, 594 pages")}</p></div></div>
+  page.html(`<div class="tr-wrap"><div class="sk-pagehead"><div><h1 class="sk-title">${t("Code Lookup")}</h1><p class="sk-note">${t("NEC 2020 · Florida Building Code, 8th Edition — the Sharma Field Book, 689 pages")}</p></div></div>
   ${askCard}
   <div class="tr-sec">${t("Field Book — chapter by chapter")}</div>${chCards}
   <div class="tr-sec">${t("Fast answers")}</div>
@@ -231,8 +231,24 @@ function figHtml(f) {
   if (!f || !FIG_OK.test(String(f.src || ""))) return "";
   const u = NEC_BASE + f.src + "?v=1";
   const wh = (+f.w > 0 && +f.h > 0) ? ` width="${+f.w}" height="${+f.h}"` : "";
+  if (LANG === "es") {
+    const uEs = NEC_BASE + String(f.src).replace(/\.svg$/, ".es.svg") + "?v=1";
+    return `<figure class="tr-fig"><a href="${$esc(uEs)}" target="_blank" rel="noopener"><img src="${$esc(uEs)}" onerror="this.onerror=null;this.src='${$esc(u)}'" alt="${$esc(f.alt || "")}"${wh} loading="lazy" decoding="async"></a>${f.caption ? `<figcaption>${$esc(f.caption)}<span class="tr-fig__zoom">${t("Tap to enlarge")}</span></figcaption>` : ""}</figure>`;
+  }
   return `<figure class="tr-fig"><a href="${$esc(u)}" target="_blank" rel="noopener"><img src="${$esc(u)}" alt="${$esc(f.alt || "")}"${wh} loading="lazy" decoding="async"></a>${f.caption ? `<figcaption>${$esc(f.caption)}<span class="tr-fig__zoom">${t("Tap to enlarge")}</span></figcaption>` : ""}</figure>`;
 }
+/* Phone-width table stacking (Sanjay, 2026-11-26): at <=480px, a book table
+   wider than its container renders as stacked cards (header label: value per
+   line, via the data-th attributes the table renderer emits) instead of
+   hiding columns behind a sideways swipe. Desktop rendering is unchanged. */
+function stackWideTables(root) {
+  if (!root || window.innerWidth > 480) return;
+  root.querySelectorAll(".tr-tablewrap").forEach(w => {
+    const tbl = w.querySelector("table.tr-grid");
+    if (tbl && tbl.scrollWidth > w.clientWidth + 2) w.classList.add("tr-stack");
+  });
+}
+window.addEventListener("resize", () => stackWideTables(document));
 function richTableHtml(tb) {
   if (!tb || !Array.isArray(tb.headers) || !Array.isArray(tb.rows)) return "";
   return sectionHtml({ type: "table", caption: tb.caption, headers: tb.headers, rows: tb.rows }) + (tb.note ? `<p class="tr-note">${$esc(tb.note)}</p>` : "");
@@ -278,6 +294,8 @@ async function bookPageFill(page, id) {
     ${s.prev_id ? `<a class="tr-btn tr-btn--ghost" href="#/code/page/${s.prev_id}">${t("Previous page")}</a>` : "<span style='flex:1'></span>"}
     ${s.next_id ? `<a class="tr-btn" href="#/code/page/${s.next_id}">${t("Next page")}</a>` : "<span style='flex:1'></span>"}
   </div></div>`);
+  stackWideTables(page.el);
+  requestAnimationFrame(() => stackWideTables(page.el));
   page.el.querySelectorAll("[data-learned]").forEach(b => b.onclick = () => { const k = b.dataset.learned; learned.has(k) ? learned.delete(k) : learned.add(k); saveLearned(); bookPageFill(page, id); });
   page.el.querySelectorAll("[data-fav]").forEach(b => b.onclick = () => { const k = b.dataset.fav; favs.has(k) ? favs.delete(k) : favs.add(k); saveFavs(); bookPageFill(page, id); });
 }
@@ -485,14 +503,20 @@ async function toolsFill(page) {
 /* ---------------- Ask the NEC — on-device search over the book's own data ----------------
    The old feature POSTed to /api/ask on a worker that no longer exists, so on
    the GitHub edition the route was stubbed off / dead. This version needs no
-   server: it searches the Field Book's 594 pages plus the look-up topics,
-   quick answers and guides (data/ask-index.json + the guide modules). */
+   server: it searches the Field Book's 689 pages plus the look-up topics,
+   quick answers and guides (data/ask-index.json + the guide modules).
+   v2 (2026-11-26, Sanjay): plain-English questions — stopwords dropped, trade
+   synonyms and amp values expanded, the best match presented as an answer
+   card with its NEC citation, and an honest not-covered gate (prices and
+   other non-code topics say so instead of returning junk matches). Book and
+   lookup index entries carry no href, so it is built here from the id. */
 let ASK_IDX = null;
 async function ensureAskIdx() {
   if (ASK_IDX) return ASK_IDX;
   let base = [];
   if (LANG === "es") { try { const r = await fetch("data/ask-index.es.json?v=3"); if (r.ok) base = await r.json(); } catch (e) {} }
   if (!base.length) { try { const r = await fetch("data/ask-index.json?v=3"); if (r.ok) base = await r.json(); } catch (e) {} }
+  base.forEach(e => { if (!e.h) e.h = e.k === "book" ? "#/code/page/" + e.id : e.k === "lookup" ? "#/code/lookup/" + e.id : "#/ask"; });
   const guide = [];
   TOPICS.forEach(t => guide.push({ k: "guide", id: t.id, t: t.title, r: LANG === "es" ? "Guía de instalación preliminar" : "Rough-In Guide", x: (t.blurb || "") + " " + (t.tags || []).join(" "), tags: t.tags || [], h: "#/howtos/topic/" + t.id }));
   ROUGHIN_PAGES.forEach(p => guide.push({ k: "guide", id: p.id, t: p.title, r: LANG === "es" ? "Curso de instalación preliminar" : "Rough-In Course", x: (p.blurb || "") + " " + (p.tags || []).join(" "), tags: p.tags || [], h: "#/course/page/" + p.id }));
@@ -500,29 +524,106 @@ async function ensureAskIdx() {
   ASK_IDX = base.concat(guide);
   return ASK_IDX;
 }
-function askSearch(idx, raw) {
+const ASK_STOP = new Set(("what whats do does did is are was were be been a an the of for to in on at by with from or and as it its this that i you me my your we they them he she his her our their how when where which who why can could should would shall will may might must have has had not no yes if then than so such into over under about there here any all each other more most only own same need needs needed requirement requirements far many much per nec code say says said").split(" "));
+const ASK_GENERIC = new Set(("size sized sizing wire wires cable conductor conductors ampacity circuit circuits breaker breakers load loads service panel panels receptacle receptacles outlet outlets plug plugs switch switches disconnect box boxes fill ground grounding neutral conduit pipe raceway").split(" "));
+const ASK_OUT = new Set(("cost costs price prices pricing buy buying purchase purchases order orders ordering cheap expensive quote quotes bid bids salary wage wages hire hiring phone email address hours appointment appointments schedule scheduling delivery ship shipping rent rental").split(" "));
+const ASK_SYN = {
+  wire: ["conductor", "ampacity"], wires: ["conductor", "ampacity"], cable: ["conductor", "raceway"],
+  size: ["sizing", "ampacity"], sized: ["sizing"], sizing: ["size", "ampacity"],
+  range: ["cooking", "220.55"], stove: ["range", "cooking", "220.55"], oven: ["range", "cooking"], cooktop: ["range", "cooking", "220.55"],
+  gfci: ["ground-fault", "ground fault", "210.8"], gfi: ["gfci", "ground-fault"],
+  afci: ["arc-fault", "210.12"],
+  garage: ["garages", "210.8"], garages: ["garage"],
+  bathroom: ["bathrooms", "210.8"], bathrooms: ["bathroom"],
+  kitchen: ["countertop", "210.52"], laundry: ["210.8", "dryer"],
+  dryer: ["laundry", "220.54"], washer: ["laundry"],
+  pool: ["680", "bonding"], spa: ["680"], tub: ["680", "bathtub"],
+  ev: ["electric vehicle", "625"], charger: ["625", "electric vehicle"], charging: ["625"],
+  smoke: ["detector"], detector: ["smoke alarm"],
+  panel: ["panelboard", "service"], breaker: ["overcurrent", "circuit breaker"],
+  outlet: ["receptacle"], outlets: ["receptacles", "receptacle"], plug: ["receptacle"],
+  apart: ["spacing", "210.52"], spacing: ["apart"],
+  disconnect: ["disconnecting"], grounding: ["250", "bonding"], bonding: ["250", "grounding"], ground: ["grounding", "250"],
+  neutral: ["grounded conductor"], box: ["314"], fill: ["314.16", "volume"],
+  conduit: ["raceway"], pipe: ["conduit", "raceway"],
+  motor: ["430"], hvac: ["440", "air conditioning"], condenser: ["440", "disconnect"],
+  generator: ["702", "445"], solar: ["690"], pv: ["690"],
+  service: ["230"], meter: ["230", "service"], receptacle: ["210.52", "outlet"]
+};
+function askRank(idx, raw) {
   const q = String(raw || "").toLowerCase().trim();
-  if (!q) return [];
-  const terms = q.replace(/[^a-z0-9.\s]/g, " ").split(/\s+/).filter(Boolean);
-  const refTerm = (q.match(/\d{3}(?:\.\d+)?/) || [])[0] || null;
+  if (!q) return { out: false, results: [] };
+  const toks = q.replace(/[^a-z0-9.\s]/g, " ").split(/\s+/).filter(Boolean);
+  const content = toks.filter(t => !ASK_STOP.has(t) && t.length >= 2);
+  const out = content.some(t => ASK_OUT.has(t));
+  const refTerm = (q.match(/\d{3}\.\d+/) || [])[0] || (content.length === 1 ? (q.match(/\d{3}/) || [])[0] : null);
+  const ampM = q.match(/(\d{2,3})\s*-?\s*(?:a|amp|amps|ampere|amperes)\b/);
+  const extra = new Set();
+  for (const t of content) { (ASK_SYN[t] || []).forEach(s => extra.add(s)); if (t.endsWith("s")) (ASK_SYN[t.slice(0, -1)] || []).forEach(s => extra.add(s)); }
+  if (ampM) { extra.add(ampM[1] + "-amp"); extra.add(ampM[1] + " amp"); extra.add(ampM[1] + " ampere"); extra.add(ampM[1] + "a"); }
+  const refHit = (ref, s) => ref === s || (/^\d+(\.\d+)*$/.test(s) && ref.startsWith(s));
+  const subjects = content.filter(t => !ASK_GENERIC.has(t) && !/\d/.test(t));
+  const variants = t => { const v = [t]; if (t.endsWith("e")) { v.push(t.slice(0, -1) + "ing"); v.push(t.slice(0, -1) + "ed"); } if (t.endsWith("s")) v.push(t.slice(0, -1)); else v.push(t + "s"); return v; };
+  const dwellQ = content.some(t => ["garage", "garages", "bathroom", "bathrooms", "kitchen", "laundry", "basement", "bedroom", "bedrooms", "dwelling", "house", "home", "residential"].includes(t))
+    && !content.some(t => ["commercial", "restaurant", "store", "shop", "business", "office", "warehouse", "retail"].includes(t));
   const scored = [];
   for (const e of idx) {
     const title = (e.t || "").toLowerCase(), text = (e.x || "").toLowerCase(), ref = String(e.r || "").toLowerCase();
     const tags = (e.tags || []).join(" ").toLowerCase();
-    let score = 0;
-    if (refTerm && (ref === refTerm || ref.startsWith(refTerm))) score += 40;
+    let score = 0, hits = 0, anchored = false;
+    if (refTerm && refHit(ref, refTerm)) { score += 40; anchored = true; }
     if (title.includes(q)) score += 25;
-    for (const t of terms) {
-      if (t.length < 2) continue;
-      if (title.includes(t)) score += 10;
-      if (tags.includes(t)) score += 6;
-      if (ref === t) score += 12;
-      if (text.includes(t)) score += 2;
+    for (const t of content) {
+      let f = false;
+      const vs = variants(t);
+      if (vs.some(v => title.includes(v))) { score += 10; f = true; anchored = true; }
+      if (vs.some(v => tags.includes(v))) { score += 6; f = true; }
+      if (refHit(ref, t)) { score += 12; f = true; anchored = true; }
+      if (vs.some(v => text.includes(v))) { score += 2; f = true; }
+      if (f) hits++;
     }
-    if (score > 0) scored.push({ e, score });
+    if (dwellQ) {
+      if (/dwelling|house|residential/.test(title) || /^210\.8\(a\)|^210\.12\(a\)|^210\.52/.test(ref)) score += 8;
+      if (title.includes("commercial")) score -= 8;
+    }
+    for (const s of extra) {
+      if (title.includes(s)) score += 6;
+      else if (refHit(ref, s)) score += 10;
+      else if (text.includes(s)) score += 1;
+    }
+    const coverage = content.length ? hits / content.length : 0;
+    if (coverage === 1 && content.length >= 2) score += 15;
+    else if (coverage >= 0.75 && content.length >= 3) score += 8;
+    let subjectHit = !subjects.length;
+    if (subjects.length) {
+      subjectHit = subjects.some(t => title.includes(t) || tags.includes(t) || text.includes(t) || refHit(ref, t)
+        || (ASK_SYN[t] || []).some(s => title.includes(s) || text.includes(s) || refHit(ref, s)));
+      if (!subjectHit) score = Math.round(score * 0.5);
+      else {
+        // The subject in the title is the strongest aboutness signal. A
+        // compound the question did not name (range HOOD vs range) earns half.
+        for (const t of subjects) {
+          const v = variants(t).find(x => title.includes(x));
+          if (!v) continue;
+          const after = title.slice(title.indexOf(v) + v.length).match(/^\s+([a-z]+)/);
+          score += (after && !content.includes(after[1])) ? 6 : 12;
+          break;
+        }
+      }
+    }
+    if (score > 0) scored.push({ e, score, coverage, anchored, subjectHit, hits });
   }
-  scored.sort((a, b) => b.score - a.score);
-  return scored.slice(0, 12).map(s => s.e);
+  scored.sort((a, b) => b.score - a.score || b.coverage - a.coverage);
+  return { out, results: scored.slice(0, 12) };
+}
+function askLead(e) {
+  const text = String(e.x || "").replace(/\s+/g, " ").trim();
+  if (!text) return "";
+  if (text.length <= 340) return $esc(text);
+  const cut = text.slice(0, 340);
+  const stop = Math.max(cut.lastIndexOf(". "), cut.lastIndexOf(" • "));
+  if (stop > 180) return $esc(cut.slice(0, stop + 1));
+  return $esc(trimAt(text, 320)) + "…";
 }
 function askSnippet(e, raw) {
   const text = e.x || ""; if (!text) return "";
@@ -536,7 +637,7 @@ function askSnippet(e, raw) {
 const KIND_LABEL = { book: "Field Book", lookup: "Look Up", topic: "Look Up", rule: "Sharma Rule", guide: "Guide", answer: "Quick answer" };
 async function buildAsk(page) {
   page.html(`<div class="tr-wrap"><h1 class="tr-h1">${t("Ask the NEC")}</h1>
-  <p class="tr-note">${t("Answers come from Sharma's own Field Book — all 594 pages — plus the look-ups, quick answers and guides. It runs on this device; nothing is sent anywhere. Always confirm against the official NEC, the plans and your foreman.")}</p>
+  <p class="tr-note">${t("Answers come from Sharma's own Field Book — all 689 pages — plus the look-ups, quick answers and guides. It runs on this device; nothing is sent anywhere. Always confirm against the official NEC, the plans and your foreman.")}</p>
   <input class="tr-search" id="ask-q" type="search" placeholder="${t("Try: GFCI bathroom, box fill, 210.52, smoke alarms…")}" autocomplete="off">
   <button class="tr-btn" id="ask-go">${t("Search the book")}</button>
   <div class="tr-chiprow">${(LANG === "es" ? ["GFCI baño", "llenado de caja", "310.16 ampacidad", "ubicación de detectores de humo", "desconectador del servicio", "unión equipotencial de piscina"] : ["GFCI bathroom", "box fill", "310.16 ampacity", "smoke alarm placement", "service disconnect", "pool bonding"]).map(x => `<button class="tr-chip" data-chip="${x}">${x}</button>`).join("")}</div>
@@ -546,10 +647,21 @@ async function buildAsk(page) {
   if (out) out.innerHTML = `<p class="tr-note">${tf("Ready — {n} pages and answers indexed.", { n: idx.length.toLocaleString() })}</p>`;
   const run = async () => {
     const v = page.el.querySelector("#ask-q").value;
-    const res = askSearch(idx, v);
-    out.innerHTML = res.length
-      ? res.map(e => `<a class="tr-card" href="${e.h}"><span class="tr-card__t">${$esc(e.t)}</span><span class="tr-card__s">${t(KIND_LABEL[e.k] || e.k)}${e.r ? " · " + $esc(e.r) : ""}</span><span class="tr-card__m">${askSnippet(e, v)}</span></a>`).join("")
-      : `<div class="tr-card"><span class="tr-card__t">${t("No match in the book")}</span><span class="tr-card__s">${t("Try a section number (like 210.52) or different words. If it is not in the book, check the printed NEC or ask your foreman — this search never guesses.")}</span></div>`;
+    const r = askRank(idx, v);
+    const card = e => `<a class="tr-card" href="${e.h}"><span class="tr-card__t">${$esc(e.t)}</span><span class="tr-card__s">${t(KIND_LABEL[e.k] || e.k)}${e.r ? " · NEC " + $esc(e.r) : ""}</span><span class="tr-card__m">${askSnippet(e, v)}</span></a>`;
+    if (r.out) {
+      out.innerHTML = `<div class="tr-card"><span class="tr-card__t">${t("Not in the book")}</span><span class="tr-card__s">${t("The Field Book covers code — not prices, buying or scheduling. For that, ask the office. For a code question, try a section number (like 210.52) or different words — this search never guesses.")}</span></div>`;
+      return;
+    }
+    const top = r.results[0];
+    const rescued = top && top.subjectHit && top.anchored && top.score >= 20 && top.hits >= 2;
+    if (!top || (top.score < 28 && !rescued) || (!top.anchored && top.coverage < 0.75) || (!top.subjectHit && top.coverage < 0.75)) {
+      out.innerHTML = `<div class="tr-card"><span class="tr-card__t">${t("No match in the book")}</span><span class="tr-card__s">${t("Try a section number (like 210.52) or different words. If it is not in the book, check the printed NEC or ask your foreman — this search never guesses.")}</span></div>`;
+      return;
+    }
+    const a = top.e, rest = r.results.slice(1).map(s => s.e);
+    out.innerHTML = `<a class="tr-answer" href="${a.h}"><span class="tr-answer__k">${t("Answer — from the Field Book")}${a.r ? " · NEC " + $esc(a.r) : ""} · ${t(KIND_LABEL[a.k] || a.k)}</span><span class="tr-answer__t">${$esc(a.t)}</span><span class="tr-answer__x">${askLead(a)}</span><span class="tr-answer__go">${t("Open the full page")} ›</span></a>`
+      + (rest.length ? `<div class="tr-sec">${t("Also in the book")}</div>` + rest.map(card).join("") : "");
   };
   page.el.querySelector("#ask-go").onclick = run;
   page.el.querySelector("#ask-q").addEventListener("keydown", (ev) => { if (ev.key === "Enter") run(); });

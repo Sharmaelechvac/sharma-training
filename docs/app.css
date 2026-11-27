@@ -34,6 +34,11 @@ a.tr-card:active{border-color:var(--tr-navy)}
 .tr-ask span{color:#cfdaf2;display:block;margin-top:4px}
 .tr-ask .go{color:var(--tr-gold);font-weight:700;margin-top:8px}
 [data-scheme="dark"] .tr-ask{background:#22355f}
+.tr-answer{display:block;background:var(--tr-card);border:1px solid var(--tr-line);border-left:6px solid var(--tr-gold);border-radius:14px;padding:16px 18px;margin:0 0 16px;text-decoration:none;color:var(--tr-ink)}
+.tr-answer__k{display:block;font-size:15px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--tr-navy)}
+.tr-answer__t{display:block;font-size:21px;font-weight:700;margin-top:6px;color:var(--tr-ink)}
+.tr-answer__x{display:block;font-size:18px;line-height:1.5;margin-top:8px;color:var(--tr-ink)}
+.tr-answer__go{display:block;font-size:18px;font-weight:700;margin-top:10px;color:var(--tr-navy)}
 .tr-lead{font-size:19px;margin:8px 0 14px}
 .tr-notebox{background:var(--tr-fill);border-radius:10px;padding:12px 14px;margin:12px 0}
 .tr-do,.tr-never{border-radius:12px;padding:14px 16px;margin:12px 0;border:1px solid var(--tr-line)}
@@ -48,6 +53,16 @@ a.tr-card:active{border-color:var(--tr-navy)}
 table.tr-grid{border-collapse:collapse;width:100%;font-size:18px;background:var(--tr-card)}
 table.tr-grid th{background:var(--tr-navy);color:#fff;text-align:left;padding:10px 12px;font-size:18px}
 table.tr-grid td{padding:10px 12px;border-top:1px solid var(--tr-line);vertical-align:top}
+@media (max-width:480px){
+.tr-tablewrap.tr-stack{overflow-x:visible}
+.tr-tablewrap.tr-stack table.tr-grid{display:block;width:100%}
+.tr-tablewrap.tr-stack thead{display:none}
+.tr-tablewrap.tr-stack tbody{display:block}
+.tr-tablewrap.tr-stack tr{display:block;padding:8px 0;border-top:1px solid var(--tr-line)}
+.tr-tablewrap.tr-stack tbody tr:first-child{border-top:none}
+.tr-tablewrap.tr-stack td{display:flex;gap:10px;padding:5px 12px;border-top:none}
+.tr-tablewrap.tr-stack td::before{content:attr(data-th);font-weight:700;color:var(--tr-navy);flex:0 0 38%}
+}
 .diagram{margin:12px 0;overflow-x:auto}
 .diagram svg{max-width:100%;height:auto;background:#fff;border-radius:10px}
 .tr-search{width:100%;min-height:56px;font:inherit;font-size:18px;padding:12px 14px;border-radius:12px;

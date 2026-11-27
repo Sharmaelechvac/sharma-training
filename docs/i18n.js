@@ -30,7 +30,7 @@ const ES = {
   "Do": "Hacer",
   "Never": "Nunca",
   "Ask the NEC": "Pregunte al NEC",
-  "Type a question or a section number — it searches the Field Book's 594 pages, the look-ups and the guides, right on this device.": "Escriba una pregunta o un número de sección — busca en las 594 páginas del Libro de Campo, las consultas y las guías, en este mismo dispositivo.",
+  "Type a question or a section number — it searches the Field Book's 689 pages, the look-ups and the guides, right on this device.": "Escriba una pregunta o un número de sección — busca en las 689 páginas del Libro de Campo, las consultas y las guías, en este mismo dispositivo.",
   "Ask a question": "Hacer una pregunta",
   "Read: ": "Leer: ",
   "Read more: ": "Leer más: ",
@@ -49,7 +49,7 @@ const ES = {
   "{p}% to pass. Scores save on this phone only.": "{p}% para aprobar. Las puntuaciones se guardan solo en este teléfono.",
 
   /* code root */
-  "NEC 2020 · Florida Building Code, 8th Edition — the Sharma Field Book, 594 pages": "NEC 2020 · Código de Construcción de Florida, 8.ª edición — el Libro de Campo de Sharma, 594 páginas",
+  "NEC 2020 · Florida Building Code, 8th Edition — the Sharma Field Book, 689 pages": "NEC 2020 · Código de Construcción de Florida, 8.ª edición — el Libro de Campo de Sharma, 689 páginas",
   "Field Book — chapter by chapter": "Libro de Campo — capítulo por capítulo",
   "Chapter {n} — {title}": "Capítulo {n} — {title}",
   "{n} pages": "{n} páginas",
@@ -127,7 +127,12 @@ const ES = {
   "Nothing saved yet — tap “Save page” on any Field Book page.": "Aún no hay nada guardado — toque «Guardar página» en cualquier página del Libro de Campo.",
 
   /* ask */
-  "Answers come from Sharma's own Field Book — all 594 pages — plus the look-ups, quick answers and guides. It runs on this device; nothing is sent anywhere. Always confirm against the official NEC, the plans and your foreman.": "Las respuestas vienen del propio Libro de Campo de Sharma — las 594 páginas — más las consultas, respuestas rápidas y guías. Funciona en este dispositivo; no se envía nada a ningún lado. Confirme siempre con el NEC oficial, los planos y su capataz.",
+  "Answers come from Sharma's own Field Book — all 689 pages — plus the look-ups, quick answers and guides. It runs on this device; nothing is sent anywhere. Always confirm against the official NEC, the plans and your foreman.": "Las respuestas vienen del propio Libro de Campo de Sharma — las 689 páginas — más las consultas, respuestas rápidas y guías. Funciona en este dispositivo; no se envía nada a ningún lado. Confirme siempre con el NEC oficial, los planos y su capataz.",
+  "Answer — from the Field Book": "Respuesta — del Libro de Campo",
+  "Also in the book": "También en el libro",
+  "Open the full page": "Abrir la página completa",
+  "Not in the book": "No está en el libro",
+  "The Field Book covers code — not prices, buying or scheduling. For that, ask the office. For a code question, try a section number (like 210.52) or different words — this search never guesses.": "El Libro de Campo cubre el código — no precios, compras ni programación. Para eso, pregunte en la oficina. Para una pregunta de código, pruebe un número de sección (como 210.52) u otras palabras — esta búsqueda nunca adivina.",
   "Try: GFCI bathroom, box fill, 210.52, smoke alarms…": "Pruebe: GFCI baño, llenado de caja, 210.52, detectores de humo…",
   "Search the book": "Buscar en el libro",
   "Loading the book index…": "Cargando el índice del libro…",
